@@ -1,26 +1,65 @@
 @import "tailwindcss";
 
+/**
+ * SkyRa design tokens
+ * Source: Figma file KFZImPx5Perim8H0rMtcFp (no Figma Variables/Styles are
+ * defined in this file — get_variable_defs returned empty — so these were
+ * derived by sampling raw values across Header, Hero, Problem, and Core
+ * Solutions sections).
+ *
+ * Finding: nearly every raw value in the design (spacing, radii, font
+ * sizes/line-heights, letter-spacing, most colors, most shadows) is an
+ * exact match for Tailwind v4's default theme — e.g. #f8fafc = slate-50,
+ * #0f172a = slate-900, 24px radius = rounded-3xl, -1.5px tracking on 60px
+ * text = tracking-tight. So component code should reach for Tailwind's
+ * default utilities (bg-slate-50, text-slate-600, rounded-2xl, text-6xl,
+ * tracking-tight, shadow-sm, shadow-2xl, ...) directly rather than custom
+ * classes wherever a default matches.
+ *
+ * Custom tokens below cover only what's genuinely brand-specific and has
+ * no Tailwind default equivalent: the two brand colors, the two dark
+ * "ink" surface colors, the brand font family, and the CTA glow shadow.
+ */
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  /* Brand colors */
+  --color-brand-teal: #0098a6; /* "Sky" wordmark, eyebrow accents, links, section kickers */
+  --color-brand-green: #00c896; /* primary CTA / WhatsApp action color */
+
+  /* Dark "ink" surfaces (hero, header, footer, dark sections) */
+  --color-ink: #05151d;
+  --color-ink-elevated: #0d1e26; /* raised elements on ink, e.g. dark pill buttons */
 }
 
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
+  --color-brand-teal: var(--color-brand-teal);
+  --color-brand-green: var(--color-brand-green);
+  --color-ink: var(--color-ink);
+  --color-ink-elevated: var(--color-ink-elevated);
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+  /* Brand typeface. Body copy and headings both use Plus Jakarta Sans at
+     varying weights (Regular/Medium/SemiBold/Bold/ExtraBold) — loaded via
+     next/font in layout.tsx as --font-jakarta. */
+  --font-sans: var(--font-jakarta), ui-sans-serif, system-ui, sans-serif;
+
+  /*
+   * The design uses a monospace face ("Liberation Mono") for exactly one
+   * element: the small uppercase "FROM SKY, TO LIFE" corner stamp on the
+   * Hero. That's a Linux/LibreOffice system font, not a deliberate
+   * webfont choice — treated as "use any monospace" and left on
+   * Tailwind's default generic mono stack rather than importing a face
+   * for one decorative label.
+   */
+
+  /* CTA glow shadow (colored, brand-green) — no Tailwind default covers
+     a tinted shadow, so this is a genuine custom token. */
+  --shadow-cta-glow: 0px 10px 15px -3px rgba(0, 200, 150, 0.2), 0px 4px 6px -4px rgba(0, 200, 150, 0.2);
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  /* Page background defaults to white; individual sections set their own
+     background (white / slate-50 / ink) per the Figma design — this is
+     just the fallback behind/between them. */
+  background: white;
+  color: #0f172a; /* slate-900 */
+  font-family: var(--font-sans);
 }
