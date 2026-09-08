@@ -81,7 +81,7 @@ export function ConsultationForm() {
                   className="object-cover transition-transform duration-700 group-hover:scale-105"
                 />
               </div>
-              <div className="absolute inset-0 flex items-end bg-gradient-to-t from-slate-950/80 via-transparent to-transparent p-6">
+              <div className="absolute inset-0 flex items-end bg-linear-to-t from-slate-950/80 via-transparent to-transparent p-6">
                 <div className="text-white">
                   <span className="mb-1 block font-mono text-xs uppercase tracking-wider text-teal-300">
                     R&amp;D &amp; Engineering Hub
@@ -239,7 +239,7 @@ export function ConsultationForm() {
                   <div className="flex flex-col items-center justify-between gap-4 pt-4 sm:flex-row">
                     <button
                       type="submit"
-                      className="inline-flex w-full items-center justify-center gap-2 rounded-full bg-gradient-to-r from-teal-600 to-brand-teal px-9 py-4 text-sm font-semibold text-white shadow-lg shadow-teal-600/25 transition-all hover:shadow-teal-600/40 sm:w-auto"
+                      className="inline-flex w-full items-center justify-center gap-2 rounded-full bg-linear-to-r from-teal-600 to-brand-teal px-9 py-4 text-sm font-semibold text-white shadow-lg shadow-teal-600/25 transition-all hover:shadow-teal-600/40 sm:w-auto"
                     >
                       Submit Request
                       <ArrowRightIcon className="size-4" />

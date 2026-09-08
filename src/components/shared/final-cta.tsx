@@ -17,7 +17,7 @@ const SOCIAL_LINKS = [
  */
 export function FinalCta() {
   return (
-    <section className="bg-gradient-to-b from-ink to-ink-elevated py-20 text-white" id="contact">
+    <section className="bg-linear-to-b from-ink to-ink-elevated py-20 text-white" id="contact">
       <Container>
         <div className="relative overflow-hidden rounded-3xl border border-white/15 bg-white/5 p-8 shadow-2xl backdrop-blur-md sm:p-12 lg:p-16">
           <div className="grid grid-cols-1 items-center gap-10 lg:grid-cols-12">

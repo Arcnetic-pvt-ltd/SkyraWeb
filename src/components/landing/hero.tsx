@@ -27,8 +27,8 @@ export function Hero() {
           sizes="100vw"
           className="scale-105 object-cover object-center brightness-75 contrast-125"
         />
-        <div className="absolute inset-0 bg-gradient-to-r from-ink via-ink/80 to-transparent" />
-        <div className="absolute inset-0 bg-gradient-to-t from-ink via-transparent to-ink/40" />
+        <div className="absolute inset-0 bg-linear-to-r from-ink via-ink/80 to-transparent" />
+        <div className="absolute inset-0 bg-linear-to-t from-ink via-transparent to-ink/40" />
       </div>
 
       <Container className="relative z-10 w-full py-12">

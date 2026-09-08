@@ -59,7 +59,7 @@ export function ProblemSection() {
                   sizes="(min-width: 640px) 25vw, 100vw"
                   className="object-cover transition-transform duration-500 group-hover:scale-105"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-black/20" />
+                <div className="absolute inset-0 bg-linear-to-t from-black/80 via-transparent to-black/20" />
                 <div className="absolute bottom-6 left-6 right-6">
                   <span className="rounded bg-sky-600/80 px-2.5 py-1 text-[11px] font-bold uppercase tracking-wider text-white">
                     Status Quo 1
@@ -78,7 +78,7 @@ export function ProblemSection() {
                   sizes="(min-width: 640px) 25vw, 100vw"
                   className="object-cover transition-transform duration-500 group-hover:scale-105"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-black/20" />
+                <div className="absolute inset-0 bg-linear-to-t from-black/80 via-transparent to-black/20" />
                 <div className="absolute bottom-6 left-6 right-6">
                   <span className="rounded bg-amber-600/80 px-2.5 py-1 text-[11px] font-bold uppercase tracking-wider text-white">
                     Status Quo 2

@@ -68,7 +68,7 @@ export function OurStory() {
                 sizes="(min-width: 1024px) 50vw, 100vw"
                 className="object-cover"
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-slate-950/90 via-slate-950/30 to-transparent" />
+              <div className="absolute inset-0 bg-linear-to-t from-slate-950/90 via-slate-950/30 to-transparent" />
 
               <div className="absolute left-4 top-4 flex items-center gap-2 rounded-full bg-white/95 px-4 py-1.5 shadow-md backdrop-blur-md">
                 <span aria-hidden="true" className="size-2.5 rounded-full bg-amber-600" />

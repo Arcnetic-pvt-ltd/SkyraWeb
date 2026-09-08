@@ -52,16 +52,23 @@ export function SiteHeader() {
           <Logo variant="header" />
 
           <nav aria-label="Primary" className="hidden md:flex items-center gap-8">
-            {NAV_LINKS.map((link) => (
-              <Link
-                key={link.href}
-                href={link.href}
-                aria-current={pathname === link.href ? "page" : undefined}
-                className="text-sm font-medium text-slate-300 transition-colors hover:text-white focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-brand-green"
-              >
-                {link.label}
-              </Link>
-            ))}
+            {NAV_LINKS.map((link) => {
+              const isActive = pathname === link.href;
+              return (
+                <Link
+                  key={link.href}
+                  href={link.href}
+                  aria-current={isActive ? "page" : undefined}
+                  className={`border-b-2 pb-1 text-sm font-medium transition-colors focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-brand-green ${
+                    isActive
+                      ? "border-brand-teal font-semibold text-white"
+                      : "border-transparent text-slate-300 hover:text-white"
+                  }`}
+                >
+                  {link.label}
+                </Link>
+              );
+            })}
           </nav>
 
           <a
@@ -93,17 +100,22 @@ export function SiteHeader() {
           className="fixed inset-x-0 top-20 bottom-0 z-40 flex flex-col items-center gap-8 overflow-y-auto bg-ink px-6 pt-12 pb-10 md:hidden"
         >
           <nav aria-label="Mobile" className="flex flex-col items-center gap-8">
-            {NAV_LINKS.map((link) => (
-              <Link
-                key={link.href}
-                href={link.href}
-                aria-current={pathname === link.href ? "page" : undefined}
-                onClick={() => setOpen(false)}
-                className="text-lg font-medium text-slate-100 hover:text-white"
-              >
-                {link.label}
-              </Link>
-            ))}
+            {NAV_LINKS.map((link) => {
+              const isActive = pathname === link.href;
+              return (
+                <Link
+                  key={link.href}
+                  href={link.href}
+                  aria-current={isActive ? "page" : undefined}
+                  onClick={() => setOpen(false)}
+                  className={`text-lg font-medium transition-colors ${
+                    isActive ? "font-semibold text-brand-teal" : "text-slate-100 hover:text-white"
+                  }`}
+                >
+                  {link.label}
+                </Link>
+              );
+            })}
           </nav>
           <a
             href={WHATSAPP_HREF}

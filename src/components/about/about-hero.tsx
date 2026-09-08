@@ -6,10 +6,16 @@ import { DropletIcon } from "@/components/icons/metric-icons";
 import { StormIcon } from "@/components/icons/service-icons";
 import { WHATSAPP_HREF } from "@/lib/nav";
 
-/** About Hero. Source: HTML reference build. */
+/**
+ * About Hero. Source: HTML reference build.
+ *
+ * Top padding (pt-28/pt-32) clears the fixed 80px header at every
+ * breakpoint — a cross-page diff pass caught the eyebrow badge sitting
+ * partially behind the header on mobile/tablet at the original py-16.
+ */
 export function AboutHero() {
   return (
-    <section className="relative overflow-hidden bg-ink py-16 lg:py-24">
+    <section className="relative overflow-hidden bg-ink pb-16 pt-28 lg:pb-24 lg:pt-32">
       <div aria-hidden="true" className="pointer-events-none absolute -top-48 left-1/2 h-[550px] w-[850px] -translate-x-1/2 rounded-full bg-brand-teal/10 blur-[140px]" />
       <div aria-hidden="true" className="pointer-events-none absolute right-0 top-1/3 h-[420px] w-[420px] rounded-full bg-brand-green/10 blur-[120px]" />
 
@@ -21,7 +27,7 @@ export function AboutHero() {
 
         <h1 className="mt-6 max-w-4xl text-3xl font-bold text-white sm:text-4xl lg:text-[56px] lg:leading-[64px]">
           Re-engineering Our Relationship with{" "}
-          <span className="bg-gradient-to-r from-brand-teal via-teal-300 to-brand-green bg-clip-text text-transparent">
+          <span className="bg-linear-to-r from-brand-teal via-teal-300 to-brand-green bg-clip-text text-transparent">
             Rain.
           </span>
         </h1>

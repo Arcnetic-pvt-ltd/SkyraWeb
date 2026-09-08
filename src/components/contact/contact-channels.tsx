@@ -102,7 +102,7 @@ export function ContactChannels() {
           href={WHATSAPP_HREF}
           target="_blank"
           rel="noopener noreferrer"
-          className="group relative flex flex-col justify-between overflow-hidden rounded-2xl border border-brand-green/50 bg-gradient-to-br from-ink-elevated to-emerald-950/50 p-6 transition-all duration-300 hover:-translate-y-1.5 hover:border-brand-green hover:shadow-[0_10px_35px_rgba(16,185,129,0.25)]"
+          className="group relative flex flex-col justify-between overflow-hidden rounded-2xl border border-brand-green/50 bg-linear-to-br from-ink-elevated to-emerald-950/50 p-6 transition-all duration-300 hover:-translate-y-1.5 hover:border-brand-green hover:shadow-[0_10px_35px_rgba(16,185,129,0.25)]"
         >
           <div aria-hidden="true" className="pointer-events-none absolute -bottom-8 -right-8 size-28 rounded-full bg-brand-green/15 blur-2xl transition-transform duration-500 group-hover:scale-150" />
           <div>

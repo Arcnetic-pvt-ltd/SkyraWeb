@@ -18,10 +18,16 @@ const METRICS = [
   { Icon: MedalIcon, label: "Engineering Quality", value: "100%", tone: "text-sky-600", description: "Turnkey design, hydro-geological survey, civil installation, and sensor deployment." },
 ] as const;
 
-/** Services Hero (Dark Oceanic Cinematic Anchor). Source: HTML reference build. */
+/**
+ * Services Hero (Dark Oceanic Cinematic Anchor). Source: HTML reference build.
+ *
+ * Top padding (pt-28/pt-32) clears the fixed 80px header at every
+ * breakpoint — a cross-page diff pass caught the eyebrow badge sitting
+ * partially behind the header on mobile/tablet at the original py-16.
+ */
 export function ServicesHero() {
   return (
-    <section className="relative overflow-hidden bg-ink py-16 lg:py-24">
+    <section className="relative overflow-hidden bg-ink pb-16 pt-28 lg:pb-24 lg:pt-32">
       <div aria-hidden="true" className="pointer-events-none absolute -top-40 left-1/2 h-96 w-[700px] -translate-x-1/2 rounded-full bg-brand-teal/10 blur-[130px]" />
       <div aria-hidden="true" className="pointer-events-none absolute right-0 top-1/3 h-80 w-80 rounded-full bg-brand-green/10 blur-[110px]" />
 
@@ -34,7 +40,7 @@ export function ServicesHero() {
 
           <h1 className="mb-4 text-3xl font-bold tracking-tight text-white sm:text-4xl lg:text-[56px] lg:leading-[64px]">
             Integrated Water Solutions for{" "}
-            <span className="bg-gradient-to-r from-brand-teal via-teal-400 to-brand-green bg-clip-text text-transparent">
+            <span className="bg-linear-to-r from-brand-teal via-teal-400 to-brand-green bg-clip-text text-transparent">
               Complete Resource Independence
             </span>
           </h1>

@@ -1,9 +1,15 @@
 import { Container } from "@/components/ui/container";
 
-/** Contact Hero. Source: HTML reference build. */
+/**
+ * Contact Hero. Source: HTML reference build.
+ *
+ * Top padding (pt-28/pt-38) clears the fixed 80px header at every
+ * breakpoint — a cross-page diff pass caught the eyebrow badge sitting
+ * partially behind the header on mobile/tablet at the original pt-12.
+ */
 export function ContactHero() {
   return (
-    <section className="relative overflow-hidden bg-ink pb-16 pt-12 lg:pt-38">
+    <section className="relative overflow-hidden bg-ink pb-16 pt-28 lg:pt-38">
       <div
         aria-hidden="true"
         className="pointer-events-none absolute left-1/2 top-1/4 size-96 -translate-x-1/2 rounded-full bg-brand-teal/10 blur-3xl"
@@ -24,10 +30,11 @@ export function ContactHero() {
 
         <h1 className="text-4xl font-bold leading-tight tracking-tight text-white md:text-5xl lg:text-6xl">
           Your water problem{" "}
-          <span className="bg-gradient-to-br from-brand-teal to-emerald-500 bg-clip-text text-transparent">
+          <span className="bg-linear-to-br from-brand-teal to-emerald-500 bg-clip-text text-transparent">
             has a solution.
           </span>
           <br className="hidden sm:inline" />
+          {" "}
           {"Let's find it together."}
         </h1>
 
