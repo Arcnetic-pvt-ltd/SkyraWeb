@@ -5,7 +5,7 @@ import { CoreSolutions } from "@/components/landing/core-solutions";
 import { HowItWorks } from "@/components/landing/how-it-works";
 import { ImpactMetrics } from "@/components/landing/impact-metrics";
 import { BiggerVision } from "@/components/landing/bigger-vision";
-import { FinalCta } from "@/components/landing/final-cta";
+import { FinalCta } from "@/components/shared/final-cta";
 
 /**
  * Landing page. Source: Figma node 1:2 (sections 1:3, 1:32, 1:90, 1:141,
