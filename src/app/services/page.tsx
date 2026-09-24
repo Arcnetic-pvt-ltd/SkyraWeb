@@ -53,6 +53,27 @@ export default function ServicesPage() {
                   <span>Potable-grade cistern storage</span>
                 </div>
               </div>
+
+              <div className="pt-4 flex flex-wrap items-center gap-4">
+                <Link
+                  href="/contact?service=rainwater-harvesting"
+                  className="inline-flex items-center gap-2.5 bg-deep-aquifer hover:bg-forest-slate text-light-aquifer-canvas font-button-text text-button-text px-6 py-3 rounded-full transition-all duration-300 shadow-sm hover:shadow-md group"
+                >
+                  <span>Get Quote &amp; Estimate</span>
+                  <span className="material-symbols-outlined text-[18px] group-hover:translate-x-0.5 transition-transform">
+                    request_quote
+                  </span>
+                </Link>
+                <Link
+                  href="/contact?query=rainwater-harvesting"
+                  className="inline-flex items-center gap-1.5 font-button-text text-button-text text-deep-aquifer hover:text-moss transition-colors py-2 px-3"
+                >
+                  <span>Send Query</span>
+                  <span className="material-symbols-outlined text-[18px]">
+                    help_outline
+                  </span>
+                </Link>
+              </div>
             </div>
 
             {/* SVG Line Illustration */}
@@ -161,6 +182,27 @@ export default function ServicesPage() {
                   <span>Bio-swale retention design</span>
                 </div>
               </div>
+
+              <div className="pt-4 flex flex-wrap items-center gap-4">
+                <Link
+                  href="/contact?service=stormwater-management"
+                  className="inline-flex items-center gap-2.5 bg-deep-aquifer hover:bg-forest-slate text-light-aquifer-canvas font-button-text text-button-text px-6 py-3 rounded-full transition-all duration-300 shadow-sm hover:shadow-md group"
+                >
+                  <span>Get Quote &amp; Estimate</span>
+                  <span className="material-symbols-outlined text-[18px] group-hover:translate-x-0.5 transition-transform">
+                    request_quote
+                  </span>
+                </Link>
+                <Link
+                  href="/contact?query=stormwater-management"
+                  className="inline-flex items-center gap-1.5 font-button-text text-button-text text-deep-aquifer hover:text-moss transition-colors py-2 px-3"
+                >
+                  <span>Send Query</span>
+                  <span className="material-symbols-outlined text-[18px]">
+                    help_outline
+                  </span>
+                </Link>
+              </div>
             </div>
           </div>
         </div>
@@ -192,6 +234,27 @@ export default function ServicesPage() {
                   <span className="material-symbols-outlined text-[18px] text-tertiary-fixed">yard</span>
                   <span>High-speed organic root penetration</span>
                 </div>
+              </div>
+
+              <div className="pt-4 flex flex-wrap items-center gap-4">
+                <Link
+                  href="/contact?service=afforestation"
+                  className="inline-flex items-center gap-2.5 bg-moss hover:bg-moss/90 text-deep-aquifer font-button-text text-button-text px-6 py-3 rounded-full transition-all duration-300 shadow-sm hover:shadow-md font-semibold group"
+                >
+                  <span>Get Quote &amp; Estimate</span>
+                  <span className="material-symbols-outlined text-[18px] group-hover:translate-x-0.5 transition-transform">
+                    request_quote
+                  </span>
+                </Link>
+                <Link
+                  href="/contact?query=afforestation"
+                  className="inline-flex items-center gap-1.5 font-button-text text-button-text text-light-aquifer-canvas/80 hover:text-white transition-colors py-2 px-3"
+                >
+                  <span>Send Query</span>
+                  <span className="material-symbols-outlined text-[18px]">
+                    help_outline
+                  </span>
+                </Link>
               </div>
             </div>
 
@@ -281,18 +344,30 @@ export default function ServicesPage() {
                 </p>
               </div>
 
-              <div className="bg-light-aquifer-canvas p-4 rounded-lg flex flex-col gap-2 border border-muted-aquifer/15">
-                <div className="flex justify-between items-baseline">
-                  <span className="font-body-sm text-[12px] text-muted-aquifer">Flow Capacity</span>
-                  <span className="font-metric-mono-lg text-body-primary font-bold text-deep-aquifer">
-                    120 <span className="text-moss text-[12px]">L/SEC</span>
-                  </span>
+              <div>
+                <div className="bg-light-aquifer-canvas p-4 rounded-lg flex flex-col gap-2 border border-muted-aquifer/15">
+                  <div className="flex justify-between items-baseline">
+                    <span className="font-body-sm text-[12px] text-muted-aquifer">Flow Capacity</span>
+                    <span className="font-metric-mono-lg text-body-primary font-bold text-deep-aquifer">
+                      120 <span className="text-moss text-[12px]">L/SEC</span>
+                    </span>
+                  </div>
+                  <div className="flex justify-between items-baseline">
+                    <span className="font-body-sm text-[12px] text-muted-aquifer">Material</span>
+                    <span className="font-technical-label text-body-sm text-deep-aquifer font-semibold">
+                      316L Stainless
+                    </span>
+                  </div>
                 </div>
-                <div className="flex justify-between items-baseline">
-                  <span className="font-body-sm text-[12px] text-muted-aquifer">Material</span>
-                  <span className="font-technical-label text-body-sm text-deep-aquifer font-semibold">
-                    316L Stainless
-                  </span>
+
+                <div className="mt-4 pt-3 border-t border-muted-aquifer/15">
+                  <Link
+                    href="/contact?product=vortex-chamber"
+                    className="w-full inline-flex items-center justify-center gap-2 bg-deep-aquifer hover:bg-forest-slate text-light-aquifer-canvas font-button-text text-[13px] py-2.5 px-4 rounded-lg transition-all duration-200 font-medium"
+                  >
+                    <span>Get Quote &amp; Estimate</span>
+                    <span className="material-symbols-outlined text-[16px]">request_quote</span>
+                  </Link>
                 </div>
               </div>
             </div>
@@ -328,18 +403,30 @@ export default function ServicesPage() {
                 </p>
               </div>
 
-              <div className="bg-light-aquifer-canvas p-4 rounded-lg flex flex-col gap-2 border border-muted-aquifer/15">
-                <div className="flex justify-between items-baseline">
-                  <span className="font-body-sm text-[12px] text-muted-aquifer">Void Ratio</span>
-                  <span className="font-metric-mono-lg text-body-primary font-bold text-deep-aquifer">
-                    95.4 <span className="text-moss text-[12px]">%</span>
-                  </span>
+              <div>
+                <div className="bg-light-aquifer-canvas p-4 rounded-lg flex flex-col gap-2 border border-muted-aquifer/15">
+                  <div className="flex justify-between items-baseline">
+                    <span className="font-body-sm text-[12px] text-muted-aquifer">Void Ratio</span>
+                    <span className="font-metric-mono-lg text-body-primary font-bold text-deep-aquifer">
+                      95.4 <span className="text-moss text-[12px]">%</span>
+                    </span>
+                  </div>
+                  <div className="flex justify-between items-baseline">
+                    <span className="font-body-sm text-[12px] text-muted-aquifer">Depth Rating</span>
+                    <span className="font-technical-label text-body-sm text-deep-aquifer font-semibold">
+                      Up to 60m BGL
+                    </span>
+                  </div>
                 </div>
-                <div className="flex justify-between items-baseline">
-                  <span className="font-body-sm text-[12px] text-muted-aquifer">Depth Rating</span>
-                  <span className="font-technical-label text-body-sm text-deep-aquifer font-semibold">
-                    Up to 60m BGL
-                  </span>
+
+                <div className="mt-4 pt-3 border-t border-muted-aquifer/15">
+                  <Link
+                    href="/contact?product=deep-aquifer-module"
+                    className="w-full inline-flex items-center justify-center gap-2 bg-deep-aquifer hover:bg-forest-slate text-light-aquifer-canvas font-button-text text-[13px] py-2.5 px-4 rounded-lg transition-all duration-200 font-medium"
+                  >
+                    <span>Get Quote &amp; Estimate</span>
+                    <span className="material-symbols-outlined text-[16px]">request_quote</span>
+                  </Link>
                 </div>
               </div>
             </div>
@@ -382,18 +469,30 @@ export default function ServicesPage() {
                 </p>
               </div>
 
-              <div className="bg-light-aquifer-canvas p-4 rounded-lg flex flex-col gap-2 border border-muted-aquifer/15">
-                <div className="flex justify-between items-baseline">
-                  <span className="font-body-sm text-[12px] text-muted-aquifer">Telemetry</span>
-                  <span className="font-technical-label text-body-sm text-deep-aquifer font-semibold">
-                    LoRaWAN / NB-IoT
-                  </span>
+              <div>
+                <div className="bg-light-aquifer-canvas p-4 rounded-lg flex flex-col gap-2 border border-muted-aquifer/15">
+                  <div className="flex justify-between items-baseline">
+                    <span className="font-body-sm text-[12px] text-muted-aquifer">Telemetry</span>
+                    <span className="font-technical-label text-body-sm text-deep-aquifer font-semibold">
+                      LoRaWAN / NB-IoT
+                    </span>
+                  </div>
+                  <div className="flex justify-between items-baseline">
+                    <span className="font-body-sm text-[12px] text-muted-aquifer">Autonomy</span>
+                    <span className="font-metric-mono-lg text-body-primary font-bold text-deep-aquifer">
+                      7 <span className="text-moss text-[12px]">YEARS</span>
+                    </span>
+                  </div>
                 </div>
-                <div className="flex justify-between items-baseline">
-                  <span className="font-body-sm text-[12px] text-muted-aquifer">Autonomy</span>
-                  <span className="font-metric-mono-lg text-body-primary font-bold text-deep-aquifer">
-                    7 <span className="text-moss text-[12px]">YEARS</span>
-                  </span>
+
+                <div className="mt-4 pt-3 border-t border-muted-aquifer/15">
+                  <Link
+                    href="/contact?product=scada-telemetry-node"
+                    className="w-full inline-flex items-center justify-center gap-2 bg-deep-aquifer hover:bg-forest-slate text-light-aquifer-canvas font-button-text text-[13px] py-2.5 px-4 rounded-lg transition-all duration-200 font-medium"
+                  >
+                    <span>Get Quote &amp; Estimate</span>
+                    <span className="material-symbols-outlined text-[16px]">request_quote</span>
+                  </Link>
                 </div>
               </div>
             </div>
