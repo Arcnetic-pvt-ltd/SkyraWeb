@@ -4,6 +4,7 @@ import { HeroMissionEngine } from "@/components/landing/hero-mission-engine";
 import { IndiaMapGraphic } from "@/components/landing/india-map-graphic";
 import { HowItWorks } from "@/components/landing/how-it-works";
 import { ImpactMetrics } from "@/components/landing/impact-metrics";
+import { SectorCapabilities } from "@/components/services/sector-capabilities";
 
 export default function Home() {
   return (
@@ -397,6 +398,9 @@ export default function Home() {
 
       {/* SECTION: HOW SKYRA WORKS */}
       <HowItWorks />
+
+      {/* SECTION: SECTOR CAPABILITIES */}
+      <SectorCapabilities />
 
       {/* SECTION: IMPACT METRICS */}
       <ImpactMetrics />
