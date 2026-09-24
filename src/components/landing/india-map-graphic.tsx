@@ -12,7 +12,7 @@ export function IndiaMapGraphic() {
         alt="Map of India - Deployment Network featuring Kochi, Bengaluru, and Hyderabad"
         fill
         sizes="(max-width: 768px) 100vw, 500px"
-        className="object-contain p-2 transition-transform duration-700 ease-out group-hover:scale-105"
+        className="object-contain p-2"
         priority
       />
 
@@ -25,7 +25,7 @@ export function IndiaMapGraphic() {
         <div className="absolute -translate-x-1/2 -translate-y-1/2" style={{ left: "37.2%", top: "78.2%" }}>
           <div className="relative flex items-center justify-center">
             <span className="absolute size-9 rounded-full bg-moss/70 animate-ping" />
-            <span className="size-2 rounded-full bg-moss/90" />
+            <span className="size-2 rounded-full bg-moss/20" />
           </div>
         </div>
 
