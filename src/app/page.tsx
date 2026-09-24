@@ -84,7 +84,7 @@ export default function Home() {
             <span className="w-1 h-1 rounded-full bg-secondary/40"></span>
             <span className="font-body-sm text-body-sm font-medium">Bengaluru</span>
             <span className="w-1 h-1 rounded-full bg-secondary/40"></span>
-            <span className="font-body-sm text-body-sm font-medium">New Delhi</span>
+            <span className="font-body-sm text-body-sm font-medium">Hyderabad</span>
           </div>
         </div>
       </section>

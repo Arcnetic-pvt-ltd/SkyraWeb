@@ -13,7 +13,7 @@ export function SiteFooter() {
               Pioneering closed-loop hydrology and ecological infrastructure across India. Quiet, regenerative systems built for generations.
             </p>
             <p className="font-body-sm text-[13px] text-light-aquifer-canvas/40">
-              Kochi • Bengaluru • New Delhi
+              Kochi • Bengaluru • Hyderabad
             </p>
           </div>
           <div className="md:col-span-3 flex flex-col gap-4">

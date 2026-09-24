@@ -89,22 +89,6 @@ export function IndiaMapGraphic() {
             Hyderabad
           </text>
         </g>
-
-        {/* 5. NEW DELHI (Delhi) */}
-        <g>
-          <line x1="240" y1="220" x2="275" y2="220" stroke="#0098a6" strokeWidth="1.5" strokeDasharray="3 2" />
-          <circle cx="240" cy="220" fill="none" r="16" stroke="#0098a6" strokeWidth="2">
-            <animate attributeName="r" begin="1.8s" dur="2.4s" repeatCount="indefinite" values="6;30" />
-            <animate attributeName="opacity" begin="1.8s" dur="2.4s" repeatCount="indefinite" values="0.9;0" />
-          </circle>
-          <circle cx="240" cy="220" fill="#0098a6" r="5.5" />
-          <circle cx="240" cy="220" fill="none" r="8.5" stroke="#ffffff" strokeWidth="1.8" />
-          {/* Label Pin */}
-          <rect x="277" y="207" width="82" height="26" rx="13" fill="#1D293B" stroke="#0098a6" strokeWidth="1" opacity="0.9" />
-          <text x="318" y="224" fill="#ffffff" fontFamily="Inter, sans-serif" fontSize="10" fontWeight="600" textAnchor="middle">
-            New Delhi
-          </text>
-        </g>
       </svg>
     </div>
   );
