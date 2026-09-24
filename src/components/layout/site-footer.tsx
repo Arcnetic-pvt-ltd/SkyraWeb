@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { CONTACT } from "@/lib/nav";
+import { SkyraLogo } from "@/components/layout/skyra-logo";
 
 export function SiteFooter() {
   return (
@@ -7,16 +8,7 @@ export function SiteFooter() {
       <div className="w-full max-w-5xl mx-auto px-6 lg:px-8 py-20 lg:py-24">
         <div className="grid grid-cols-1 md:grid-cols-12 gap-12 lg:gap-16 pb-16">
           <div className="md:col-span-5 flex flex-col gap-5">
-            <div className="flex items-center gap-3">
-              <img
-                alt="Skyra"
-                className="h-6 w-auto object-contain brightness-0 invert"
-                src="https://lh3.googleusercontent.com/aida/AEtjO1ULa5YF2NIp1DsPv3B6b4VaSQvvJccBwTBI3M5fMsQ0OikZTVADVgNjLVbAgvf6bOH3wcRGamqNztK8qoW_Z1_2SCZF53QiOj90vlogVD8MuJtREpUSVRoSBZwCWaIXEBLSytnMbjRMtbnEqlxd3N8hgL5aSLfLNSO_n8B9vmz31CfP_tAxtN1sINSB9Mq5hNB4Wdegs1yx8hb3-f3z1hlO8N3wM0Uun10OUATnLAFbyyyfiMSrO2xq5n5Vr-B7Ws62984IwAFR5NM"
-              />
-              <span className="font-headline-h3 text-[18px] font-medium tracking-tight text-white">
-                Skyra
-              </span>
-            </div>
+            <SkyraLogo variant="light" iconClass="h-7 w-7" textClass="font-headline-h3 text-[18px] font-medium tracking-tight" />
             <p className="font-body-sm text-body-sm text-light-aquifer-canvas/60 leading-relaxed max-w-sm">
               Pioneering closed-loop hydrology and ecological infrastructure across India. Quiet, regenerative systems built for generations.
             </p>

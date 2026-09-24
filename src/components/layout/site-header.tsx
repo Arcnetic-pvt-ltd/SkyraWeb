@@ -5,6 +5,8 @@ import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
 import { NAV_LINKS } from "@/lib/nav";
 
+import { SkyraLogo } from "@/components/layout/skyra-logo";
+
 export function SiteHeader() {
   const [open, setOpen] = useState(false);
   const pathname = usePathname();
@@ -30,17 +32,10 @@ export function SiteHeader() {
     <header className="fixed top-4 inset-x-0 z-50 px-4 sm:px-6 lg:px-8">
       <div className="h-16 max-w-5xl mx-auto rounded-full bg-white/80 backdrop-blur-xl shadow-[0_8px_30px_rgb(29,41,59,0.06)] border border-muted-aquifer/15 px-4 sm:px-6 flex items-center justify-between transition-all duration-300">
         <Link
-          className="flex items-center gap-3 transition-opacity hover:opacity-85"
+          className="flex items-center gap-3 transition-opacity hover:opacity-85 text-deep-aquifer"
           href="/"
         >
-          <img
-            alt="Skyra"
-            className="h-7 w-auto object-contain"
-            src="https://lh3.googleusercontent.com/aida/AEtjO1ULa5YF2NIp1DsPv3B6b4VaSQvvJccBwTBI3M5fMsQ0OikZTVADVgNjLVbAgvf6bOH3wcRGamqNztK8qoW_Z1_2SCZF53QiOj90vlogVD8MuJtREpUSVRoSBZwCWaIXEBLSytnMbjRMtbnEqlxd3N8hgL5aSLfLNSO_n8B9vmz31CfP_tAxtN1sINSB9Mq5hNB4Wdegs1yx8hb3-f3z1hlO8N3wM0Uun10OUATnLAFbyyyfiMSrO2xq5n5Vr-B7Ws62984IwAFR5NM"
-          />
-          <span className="font-headline-h3 text-[19px] font-semibold tracking-tight text-deep-aquifer">
-            Skyra
-          </span>
+          <SkyraLogo className="text-deep-aquifer" />
         </Link>
 
         <nav className="hidden md:flex items-center gap-7">
