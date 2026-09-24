@@ -2,6 +2,8 @@ import Link from "next/link";
 import { QuotesCarousel } from "@/components/landing/quotes-carousel";
 import { HeroMissionEngine } from "@/components/landing/hero-mission-engine";
 import { IndiaMapGraphic } from "@/components/landing/india-map-graphic";
+import { HowItWorks } from "@/components/landing/how-it-works";
+import { ImpactMetrics } from "@/components/landing/impact-metrics";
 
 export default function Home() {
   return (
@@ -390,8 +392,14 @@ export default function Home() {
         </div>
       </section>
 
-      {/* SECTION 4: VOICES OF AUTHORITY */}
+      {/* SECTION: VOICES OF AUTHORITY */}
       <QuotesCarousel />
+
+      {/* SECTION: HOW SKYRA WORKS */}
+      <HowItWorks />
+
+      {/* SECTION: IMPACT METRICS */}
+      <ImpactMetrics />
 
       {/* SECTION 5: CLOSING CTA */}
       <section className="py-28 sm:py-40 px-6 sm:px-10 lg:px-16 max-w-5xl mx-auto w-full text-center flex flex-col items-center relative">
