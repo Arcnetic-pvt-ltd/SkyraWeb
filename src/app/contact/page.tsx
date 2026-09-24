@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { ConsultationIntakeForm } from "@/components/contact/consultation-intake-form";
+import { WHATSAPP_HREF, CONTACT } from "@/lib/nav";
 
 export const metadata: Metadata = {
   title: "Start Your Water Resilience Journey | Skyra Contact",
@@ -67,7 +68,7 @@ export default function ContactPage() {
                       Kalamassery Engineering Labs
                     </span>
                     <span className="font-body-sm text-body-sm text-deep-aquifer/65">
-                      NH 544 Corridor, Kalamassery, Kochi, Kerala 682039
+                      {CONTACT.address}
                     </span>
                   </div>
                 </div>
@@ -81,14 +82,31 @@ export default function ContactPage() {
                       Priority Desk
                     </span>
                     <a
-                      className="font-body-sm text-body-sm text-forest-slate hover:text-deep-aquifer transition-colors"
-                      href="tel:+914842908400"
+                      className="font-body-sm text-body-sm text-forest-slate hover:text-deep-aquifer transition-colors font-medium"
+                      href={`tel:${CONTACT.phone}`}
                     >
-                      +91 (0484) 290 8400
+                      {CONTACT.phoneDisplay}
                     </a>
                     <span className="font-body-sm text-[12px] text-deep-aquifer/50 block mt-0.5">
                       Mon – Fri, 9:00 AM – 6:00 PM IST
                     </span>
+                  </div>
+                </div>
+
+                <div className="flex items-start gap-4">
+                  <div className="h-10 w-10 rounded-full bg-white shadow-sm flex items-center justify-center shrink-0 text-forest-slate border border-muted-aquifer/15">
+                    <span className="material-symbols-outlined text-[20px]">mail</span>
+                  </div>
+                  <div>
+                    <span className="font-headline-h3 text-[15px] font-semibold text-deep-aquifer block">
+                      Email Inquiries
+                    </span>
+                    <a
+                      className="font-body-sm text-body-sm text-forest-slate hover:text-deep-aquifer transition-colors font-medium"
+                      href={`mailto:${CONTACT.email}`}
+                    >
+                      {CONTACT.email}
+                    </a>
                   </div>
                 </div>
 
@@ -98,15 +116,15 @@ export default function ContactPage() {
                   </div>
                   <div>
                     <span className="font-headline-h3 text-[15px] font-semibold text-deep-aquifer block">
-                      Instant Architectural Plan Review
+                      Chat on WhatsApp
                     </span>
                     <a
                       className="inline-flex items-center gap-1.5 font-button-text text-body-sm text-moss hover:text-forest-slate transition-colors font-medium"
-                      href="https://wa.me/914842908400"
+                      href={WHATSAPP_HREF}
                       rel="noopener noreferrer"
                       target="_blank"
                     >
-                      Share blueprints directly on WhatsApp
+                      Connect directly on WhatsApp
                       <span className="material-symbols-outlined text-[15px]">arrow_outward</span>
                     </a>
                   </div>
