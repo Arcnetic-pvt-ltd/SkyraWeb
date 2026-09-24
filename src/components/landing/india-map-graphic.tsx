@@ -18,6 +18,33 @@ export function IndiaMapGraphic() {
 
       {/* Ambient gradient overlay */}
       <div className="absolute inset-0 bg-gradient-to-t from-deep-aquifer/10 via-transparent to-transparent pointer-events-none" />
+
+      {/* Pulsing Blinking Radar Animations Locked Directly Over Image Target Markers */}
+      <div className="absolute inset-0 z-20 pointer-events-none">
+        {/* 1. Kochi Blinking Radar Pulse */}
+        <div className="absolute -translate-x-1/2 -translate-y-1/2" style={{ left: "37.2%", top: "78.2%" }}>
+          <div className="relative flex items-center justify-center">
+            <span className="absolute size-9 rounded-full bg-moss/70 animate-ping" />
+            <span className="size-2 rounded-full bg-moss/90" />
+          </div>
+        </div>
+
+        {/* 2. Bengaluru Blinking Radar Pulse */}
+        <div className="absolute -translate-x-1/2 -translate-y-1/2" style={{ left: "41.3%", top: "70.8%" }}>
+          <div className="relative flex items-center justify-center">
+            <span className="absolute size-8 rounded-full bg-[#0098a6]/70 animate-ping" />
+            <span className="size-2 rounded-full bg-[#0098a6]/90" />
+          </div>
+        </div>
+
+        {/* 3. Hyderabad Blinking Radar Pulse */}
+        <div className="absolute -translate-x-1/2 -translate-y-1/2" style={{ left: "43.6%", top: "59%" }}>
+          <div className="relative flex items-center justify-center">
+            <span className="absolute size-8 rounded-full bg-moss/70 animate-ping" />
+            <span className="size-2 rounded-full bg-moss/90" />
+          </div>
+        </div>
+      </div>
     </div>
   );
 }
