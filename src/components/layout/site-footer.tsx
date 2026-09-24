@@ -1,69 +1,113 @@
 import Link from "next/link";
-import { Container } from "@/components/ui/container";
-import { Logo } from "@/components/layout/logo";
-import { NAV_LINKS } from "@/lib/nav";
+import { CONTACT } from "@/lib/nav";
 
-const LEGAL_LINKS = [
-  { label: "Privacy Policy", href: "#" },
-  { label: "Terms of Service", href: "#" },
-  { label: "KSPCB Compliance", href: "#" },
-] as const;
-
-/**
- * Global Footer. Source: Figma node 1:563.
- *
- * Legal links (Privacy/Terms/KSPCB Compliance) have no destination pages
- * in this design or in the four-page scope — left as "#" placeholders
- * rather than linking to pages that don't exist. TODO: wire these up once
- * those pages exist.
- *
- * Responsive assumption (Phase 4): both rows go from a 3-part horizontal
- * layout to a stacked, centered column below `md`.
- */
 export function SiteFooter() {
   return (
-    <footer className="border-t border-white/10 bg-ink py-12">
-      <Container>
-        <div className="flex flex-col items-center gap-8 border-b border-white/10 pb-8 md:flex-row md:items-center md:justify-between">
-          <Logo variant="footer" />
-
-          <nav aria-label="Footer" className="flex flex-wrap items-center justify-center gap-8">
-            {NAV_LINKS.map((link) => (
-              <Link
-                key={link.href}
-                href={link.href}
-                className="text-xs text-slate-300 transition-colors hover:text-white"
-              >
-                {link.label}
-              </Link>
-            ))}
-          </nav>
-
-          <div className="flex items-center gap-2">
-            <span aria-hidden="true" className="h-px w-6 bg-brand-green/60" />
-            <span className="font-mono text-[11px] tracking-widest text-slate-400">
-              FROM SKY, TO LIFE
+    <footer className="w-full bg-deep-aquifer text-light-aquifer-canvas">
+      <div className="w-full max-w-5xl mx-auto px-6 lg:px-8 py-20 lg:py-24">
+        <div className="grid grid-cols-1 md:grid-cols-12 gap-12 lg:gap-16 pb-16">
+          <div className="md:col-span-5 flex flex-col gap-5">
+            <div className="flex items-center gap-3">
+              <img
+                alt="Skyra"
+                className="h-6 w-auto object-contain brightness-0 invert"
+                src="https://lh3.googleusercontent.com/aida/AEtjO1ULa5YF2NIp1DsPv3B6b4VaSQvvJccBwTBI3M5fMsQ0OikZTVADVgNjLVbAgvf6bOH3wcRGamqNztK8qoW_Z1_2SCZF53QiOj90vlogVD8MuJtREpUSVRoSBZwCWaIXEBLSytnMbjRMtbnEqlxd3N8hgL5aSLfLNSO_n8B9vmz31CfP_tAxtN1sINSB9Mq5hNB4Wdegs1yx8hb3-f3z1hlO8N3wM0Uun10OUATnLAFbyyyfiMSrO2xq5n5Vr-B7Ws62984IwAFR5NM"
+              />
+              <span className="font-headline-h3 text-[18px] font-medium tracking-tight text-white">
+                Skyra
+              </span>
+            </div>
+            <p className="font-body-sm text-body-sm text-light-aquifer-canvas/60 leading-relaxed max-w-sm">
+              Pioneering closed-loop hydrology and ecological infrastructure across India. Quiet, regenerative systems built for generations.
+            </p>
+            <p className="font-body-sm text-[13px] text-light-aquifer-canvas/40">
+              Kochi • Bengaluru • New Delhi
+            </p>
+          </div>
+          <div className="md:col-span-3 flex flex-col gap-4">
+            <span className="font-button-text text-[13px] text-white/90 font-medium tracking-normal">
+              Solutions
             </span>
-          </div>
-        </div>
-
-        <div className="flex flex-col items-center gap-4 pt-8 md:flex-row md:items-center md:justify-between">
-          <p className="text-[11px] text-slate-300">
-            © 2026 SkyRa Water Technologies Private Limited. All rights reserved.
-          </p>
-          <div className="flex flex-wrap items-center justify-center gap-6">
-            {LEGAL_LINKS.map((link) => (
-              <a
-                key={link.label}
-                href={link.href}
-                className="text-[11px] text-slate-300 transition-colors hover:text-white"
+            <nav className="flex flex-col gap-3">
+              <Link
+                href="/services"
+                className="font-body-sm text-body-sm text-light-aquifer-canvas/60 hover:text-white transition-colors"
               >
-                {link.label}
+                Rainwater Harvesting
+              </Link>
+              <Link
+                href="/services"
+                className="font-body-sm text-body-sm text-light-aquifer-canvas/60 hover:text-white transition-colors"
+              >
+                Subterranean Infiltration
+              </Link>
+              <Link
+                href="/services"
+                className="font-body-sm text-body-sm text-light-aquifer-canvas/60 hover:text-white transition-colors"
+              >
+                Aquifer Replenishment
+              </Link>
+              <Link
+                href="/services"
+                className="font-body-sm text-body-sm text-light-aquifer-canvas/60 hover:text-white transition-colors"
+              >
+                Commercial Installations
+              </Link>
+            </nav>
+          </div>
+          <div className="md:col-span-4 flex flex-col gap-4">
+            <span className="font-button-text text-[13px] text-white/90 font-medium tracking-normal">
+              Company
+            </span>
+            <nav className="flex flex-col gap-3">
+              <Link
+                href="/about"
+                className="font-body-sm text-body-sm text-light-aquifer-canvas/60 hover:text-white transition-colors"
+              >
+                Our Philosophy
+              </Link>
+              <Link
+                href="/about"
+                className="font-body-sm text-body-sm text-light-aquifer-canvas/60 hover:text-white transition-colors"
+              >
+                Impact &amp; Ecology
+              </Link>
+              <Link
+                href="/contact"
+                className="font-body-sm text-body-sm text-light-aquifer-canvas/60 hover:text-white transition-colors"
+              >
+                Start a Conversation
+              </Link>
+              <a
+                href={`mailto:${CONTACT.email}`}
+                className="font-body-sm text-body-sm text-light-aquifer-canvas/60 hover:text-white transition-colors"
+              >
+                {CONTACT.email}
               </a>
-            ))}
+            </nav>
           </div>
         </div>
-      </Container>
+        <div className="pt-10 flex flex-col sm:flex-row items-center justify-between gap-4">
+          <p className="font-body-sm text-[13px] text-light-aquifer-canvas/40">
+            © 2025 Skyra Infrastructure. Thoughtful engineering for India’s water future.
+          </p>
+          <div className="flex items-center gap-6">
+            <a
+              href="#"
+              className="font-body-sm text-[13px] text-light-aquifer-canvas/40 hover:text-light-aquifer-canvas/80 transition-colors"
+            >
+              Privacy
+            </a>
+            <a
+              href="#"
+              className="font-body-sm text-[13px] text-light-aquifer-canvas/40 hover:text-light-aquifer-canvas/80 transition-colors"
+            >
+              Terms
+            </a>
+          </div>
+        </div>
+      </div>
     </footer>
   );
 }
+

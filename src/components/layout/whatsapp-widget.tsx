@@ -1,24 +1,28 @@
-import { WhatsAppIcon } from "@/components/icons/whatsapp-icon";
 import { WHATSAPP_HREF } from "@/lib/nav";
 
-/**
- * Floating WhatsApp link. Source: Figma node 1:610 — a standalone
- * "Floating WhatsApp link" section, not part of any page's normal flow,
- * so it's rendered fixed to the viewport corner (standard pattern for
- * this kind of persistent contact widget) rather than at a Figma-given
- * x/y, which the design doesn't specify for a floating element.
- */
 export function WhatsAppWidget() {
   return (
-    <a
-      href={WHATSAPP_HREF}
-      target="_blank"
-      rel="noopener noreferrer"
-      aria-label="Chat with an expert on WhatsApp"
-      className="fixed bottom-6 right-6 z-40 inline-flex items-center gap-2 rounded-full bg-emerald-500 px-4 py-3 text-xs font-bold text-white shadow-2xl transition-transform hover:scale-105 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white sm:bottom-8 sm:right-8"
-    >
-      <WhatsAppIcon className="size-6" />
-      Chat with an Expert
-    </a>
+    <div className="fixed bottom-6 right-6 z-40">
+      <div className="absolute -inset-1 rounded-full bg-moss/25 blur-sm animate-pulse"></div>
+      <a
+        aria-label="Connect on WhatsApp"
+        className="relative flex items-center gap-2.5 px-4 py-3 rounded-full bg-white text-deep-aquifer shadow-[0_12px_32px_rgba(29,41,59,0.12)] border border-muted-aquifer/15 hover:shadow-[0_16px_36px_rgba(125,157,61,0.25)] hover:border-moss/40 transition-all duration-300 group"
+        href={WHATSAPP_HREF}
+        rel="noopener noreferrer"
+        target="_blank"
+      >
+        <span className="relative flex h-2.5 w-2.5">
+          <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-moss opacity-75"></span>
+          <span className="relative inline-flex rounded-full h-2.5 w-2.5 bg-moss"></span>
+        </span>
+        <span className="font-button-text text-[13px] text-deep-aquifer font-medium tracking-tight group-hover:text-forest-slate transition-colors">
+          WhatsApp
+        </span>
+        <span className="material-symbols-outlined text-[17px] text-moss group-hover:translate-x-0.5 transition-transform">
+          arrow_forward
+        </span>
+      </a>
+    </div>
   );
 }
+
