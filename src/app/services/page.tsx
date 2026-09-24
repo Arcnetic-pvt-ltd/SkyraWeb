@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import { HarvestingCalculator } from "@/components/services/harvesting-calculator";
 
 export const metadata: Metadata = {
   title: "Core Water Management Solutions | Skyra",
@@ -301,6 +302,9 @@ export default function ServicesPage() {
           </div>
         </div>
       </section>
+
+      {/* Rainwater Harvesting Potential Estimate Calculator */}
+      <HarvestingCalculator />
 
       {/* Section 4: Product Integrations Catalog */}
       <section className="w-full bg-light-aquifer-canvas py-20 md:py-28">
