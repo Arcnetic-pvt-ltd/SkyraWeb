@@ -273,7 +273,7 @@ export default function AboutPage() {
                 <img
                   alt="Kalamassery Proving Grounds Prototype"
                   className="w-full h-full object-cover"
-                  src="https://lh3.googleusercontent.com/aida/AEtjO1Vzz2fBWrD03Mc2YZWeYhp7xaWrJXpWdBt0q_gEMh4Pn47tiQE9AT0fqFaDADlxf1yYvfcXEOvkD2SWuhgLM4Omuf7ujmqaXluAtRajObVInREPtrjxnKwMAukSw29oaESwxWJ1jseIXP402vrb0ya96pstpTBa0CAZULnd0XDRxtb1i0uMRnuCh_FAgZzA2eYn78zo6rRA0-9L4JW0N8zljUNgjXbM4Qn7jwN11jANqKYxm2RQ5SZvox8W"
+                  src="/images/kalamassery-proving-grounds.jpg"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-deep-aquifer/80 via-deep-aquifer/20 to-transparent"></div>
                 <div className="absolute bottom-6 left-6 right-6 flex items-end justify-between text-white">
