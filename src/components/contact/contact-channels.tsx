@@ -29,7 +29,7 @@ const CARDS: {
     LinkIcon: ExternalLinkIcon,
   },
   {
-    href: "tel:+919876543210",
+    href: `tel:${CONTACT.phone}`,
     external: false,
     Icon: PhoneIcon,
     tone: "bg-sky-950/40 border-sky-500/30 text-sky-400",

@@ -3,34 +3,17 @@
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
-import { Container } from "@/components/ui/container";
-import { Logo } from "@/components/layout/logo";
-import { WhatsAppIcon } from "@/components/icons/whatsapp-icon";
-import { MenuIcon, CloseIcon } from "@/components/icons/menu-icon";
-import { NAV_LINKS, WHATSAPP_HREF } from "@/lib/nav";
+import { NAV_LINKS } from "@/lib/nav";
 
-/**
- * Header / Navigation. Source: Figma node 1:591.
- *
- * Fixed + translucent + backdrop-blurred over the Hero, matching the
- * design's rgba(5,21,29,0.75) background and 6px blur — the Hero's own
- * 108px top padding (vs. the header's 80px height) already reserves space
- * for it, confirming it's meant to float over the hero rather than sit in
- * normal flow.
- *
- * Responsive assumption (Phase 4, not in the desktop-only Figma file):
- * nav links + CTA collapse to a hamburger below `md`, opening a
- * full-screen overlay menu.
- *
- * The blur/background/border live on an inner div, not on `<header>`
- * itself: `backdrop-filter` establishes a new containing block for
- * `position: fixed` descendants (same as `transform`/`filter`), which
- * would otherwise position the mobile overlay below relative to header's
- * own 80px box instead of the viewport, collapsing it to a sliver.
- */
+import { SkyraLogo } from "@/components/layout/skyra-logo";
+
 export function SiteHeader() {
   const [open, setOpen] = useState(false);
   const pathname = usePathname();
+
+  useEffect(() => {
+    setOpen(false);
+  }, [pathname]);
 
   useEffect(() => {
     if (!open) return;
@@ -46,70 +29,70 @@ export function SiteHeader() {
   }, [open]);
 
   return (
-    <header className="fixed inset-x-0 top-0 z-50">
-      <div className="border-b border-white/8 bg-ink/75 backdrop-blur-[6px]">
-        <Container className="flex h-20 items-center justify-between">
-          <Logo variant="header" />
+    <header className="fixed top-4 inset-x-0 z-50 px-4 sm:px-6 lg:px-8">
+      <div className="h-16 max-w-5xl mx-auto rounded-full bg-white/80 backdrop-blur-xl shadow-[0_8px_30px_rgb(29,41,59,0.06)] border border-muted-aquifer/15 px-4 sm:px-6 flex items-center justify-between transition-all duration-300">
+        <Link
+          className="flex items-center gap-3 transition-opacity hover:opacity-85 text-deep-aquifer"
+          href="/"
+        >
+          <SkyraLogo className="text-deep-aquifer" />
+        </Link>
 
-          <nav aria-label="Primary" className="hidden md:flex items-center gap-8">
-            {NAV_LINKS.map((link) => {
-              const isActive = pathname === link.href;
-              return (
-                <Link
-                  key={link.href}
-                  href={link.href}
-                  aria-current={isActive ? "page" : undefined}
-                  className={`border-b-2 pb-1 text-sm font-medium transition-colors focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-brand-green ${
-                    isActive
-                      ? "border-brand-teal font-semibold text-white"
-                      : "border-transparent text-slate-300 hover:text-white"
-                  }`}
-                >
-                  {link.label}
-                </Link>
-              );
-            })}
-          </nav>
+        <nav className="hidden md:flex items-center gap-7">
+          {NAV_LINKS.map((link) => {
+            const isActive = pathname === link.href;
+            return (
+              <Link
+                key={link.href}
+                href={link.href}
+                aria-current={isActive ? "page" : undefined}
+                className={
+                  isActive
+                    ? "transition-colors tracking-tight text-deep-aquifer font-medium"
+                    : "font-button-text text-body-sm text-deep-aquifer/65 hover:text-deep-aquifer transition-colors tracking-tight"
+                }
+              >
+                {link.label}
+              </Link>
+            );
+          })}
+        </nav>
 
-          <a
-            href={WHATSAPP_HREF}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="hidden md:inline-flex items-center gap-2 rounded-full border border-brand-green/40 bg-brand-green/20 px-4 py-2 text-sm font-semibold text-brand-green shadow-sm transition-colors hover:bg-brand-green/30 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand-green"
+        <div className="flex items-center gap-3">
+          <Link
+            className="hidden sm:inline-flex items-center justify-center bg-deep-aquifer hover:bg-forest-slate text-white font-button-text text-[13px] px-4 py-2.5 rounded-full transition-all duration-300 tracking-tight hover:shadow-[0_4px_20px_rgba(125,157,61,0.35)] active:scale-[0.98]"
+            href="/contact"
           >
-            <WhatsAppIcon className="size-4" />
-            Chat on WhatsApp
-          </a>
+            Start a Conversation
+          </Link>
 
           <button
             type="button"
             onClick={() => setOpen((v) => !v)}
-            aria-expanded={open}
-            aria-controls="mobile-nav"
             aria-label={open ? "Close menu" : "Open menu"}
-            className="md:hidden inline-flex size-10 items-center justify-center rounded-full text-slate-100 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand-green"
+            className="md:hidden inline-flex items-center justify-center p-2 rounded-full text-deep-aquifer hover:bg-surface-container/50 transition-colors"
           >
-            {open ? <CloseIcon className="size-6" /> : <MenuIcon className="size-6" />}
+            <span className="material-symbols-outlined text-[24px]">
+              {open ? "close" : "menu"}
+            </span>
           </button>
-        </Container>
+        </div>
       </div>
 
       {open && (
-        <div
-          id="mobile-nav"
-          className="fixed inset-x-0 top-20 bottom-0 z-40 flex flex-col items-center gap-8 overflow-y-auto bg-ink px-6 pt-12 pb-10 md:hidden"
-        >
-          <nav aria-label="Mobile" className="flex flex-col items-center gap-8">
+        <div className="md:hidden fixed inset-x-4 top-24 z-50 rounded-2xl bg-white/95 backdrop-blur-2xl p-6 shadow-2xl border border-muted-aquifer/20 flex flex-col gap-5">
+          <nav className="flex flex-col gap-4">
             {NAV_LINKS.map((link) => {
               const isActive = pathname === link.href;
               return (
                 <Link
                   key={link.href}
                   href={link.href}
-                  aria-current={isActive ? "page" : undefined}
                   onClick={() => setOpen(false)}
-                  className={`text-lg font-medium transition-colors ${
-                    isActive ? "font-semibold text-brand-teal" : "text-slate-100 hover:text-white"
+                  className={`text-base font-medium transition-colors ${
+                    isActive
+                      ? "text-deep-aquifer font-semibold"
+                      : "text-deep-aquifer/70 hover:text-deep-aquifer"
                   }`}
                 >
                   {link.label}
@@ -117,18 +100,18 @@ export function SiteHeader() {
               );
             })}
           </nav>
-          <a
-            href={WHATSAPP_HREF}
-            target="_blank"
-            rel="noopener noreferrer"
-            onClick={() => setOpen(false)}
-            className="inline-flex items-center gap-2 rounded-full border border-brand-green/40 bg-brand-green/20 px-6 py-3 text-sm font-semibold text-brand-green"
-          >
-            <WhatsAppIcon className="size-4" />
-            Chat on WhatsApp
-          </a>
+          <div className="pt-2 border-t border-muted-aquifer/15">
+            <Link
+              className="w-full inline-flex items-center justify-center bg-deep-aquifer hover:bg-forest-slate text-white font-button-text text-[14px] py-3 rounded-full transition-all"
+              href="/contact"
+              onClick={() => setOpen(false)}
+            >
+              Start a Conversation
+            </Link>
+          </div>
         </div>
       )}
     </header>
   );
 }
+
