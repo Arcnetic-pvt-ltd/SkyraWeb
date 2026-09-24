@@ -3,6 +3,7 @@ import "./globals.css";
 import { SiteHeader } from "@/components/layout/site-header";
 import { SiteFooter } from "@/components/layout/site-footer";
 import { WhatsAppWidget } from "@/components/layout/whatsapp-widget";
+import { SmoothScrollProvider } from "@/components/providers/smooth-scroll";
 
 export const metadata: Metadata = {
   title: "Skyra — Securing India's Water Future",
@@ -34,12 +35,14 @@ export default function RootLayout({
         />
       </head>
       <body className="min-h-full flex flex-col bg-light-aquifer-canvas font-body-primary text-deep-aquifer selection:bg-moss/20 selection:text-deep-aquifer">
-        <SiteHeader />
-        <main className="flex-1 w-full bg-light-aquifer-canvas min-h-screen">
-          {children}
-        </main>
-        <SiteFooter />
-        <WhatsAppWidget />
+        <SmoothScrollProvider>
+          <SiteHeader />
+          <main className="flex-1 w-full bg-light-aquifer-canvas min-h-screen">
+            {children}
+          </main>
+          <SiteFooter />
+          <WhatsAppWidget />
+        </SmoothScrollProvider>
       </body>
     </html>
   );
