@@ -35,7 +35,7 @@ export default function RootLayout({
       </head>
       <body className="min-h-full flex flex-col bg-light-aquifer-canvas font-body-primary text-deep-aquifer selection:bg-moss/20 selection:text-deep-aquifer">
         <SiteHeader />
-        <main className="flex-1 w-full pt-16 bg-light-aquifer-canvas min-h-screen">
+        <main className="flex-1 w-full bg-light-aquifer-canvas min-h-screen">
           {children}
         </main>
         <SiteFooter />

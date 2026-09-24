@@ -39,6 +39,12 @@
   --color-on-tertiary-container: #7a9a3a;
   --color-on-tertiary-fixed-variant: #374e00;
 
+  /* Brand Specific Colors */
+  --color-brand-teal: #0098a6;
+  --color-brand-green: #00c896;
+  --color-ink: #05151d;
+  --color-ink-elevated: #0d1e26;
+
   /* Outlines & Inverse */
   --color-inverse-surface: #1d3434;
   --color-inverse-on-surface: #dbf6f5;
@@ -48,6 +54,11 @@
 }
 
 @theme inline {
+  --color-brand-teal: var(--color-brand-teal);
+  --color-brand-green: var(--color-brand-green);
+  --color-ink: var(--color-ink);
+  --color-ink-elevated: var(--color-ink-elevated);
+
   --color-light-aquifer-canvas: var(--color-light-aquifer-canvas);
   --color-deep-aquifer: var(--color-deep-aquifer);
   --color-forest-slate: var(--color-forest-slate);

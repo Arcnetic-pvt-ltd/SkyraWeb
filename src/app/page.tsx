@@ -1,61 +1,67 @@
 import Link from "next/link";
 import { QuotesCarousel } from "@/components/landing/quotes-carousel";
+import { HeroMissionEngine } from "@/components/landing/hero-mission-engine";
+import { IndiaMapGraphic } from "@/components/landing/india-map-graphic";
 
 export default function Home() {
   return (
     <div className="flex flex-col w-full overflow-hidden relative">
-      {/* Ambient Atmospheric Floating Gradients */}
+      {/* Ambient Floating Gradients */}
       <div className="absolute top-0 inset-x-0 h-[100vh] pointer-events-none z-0 overflow-hidden">
-        {/* Top Right Primary Aqua-Teal Gradient Aura */}
-        <div className="absolute -top-[10%] right-[-5%] w-[750px] h-[750px] rounded-full bg-[#cde8e6]/85 blur-[100px] motion-safe:animate-pulse"></div>
-        {/* Secondary Soft Mint/Moss Glow */}
-        <div className="absolute top-[15%] right-[12%] w-[550px] h-[550px] rounded-full bg-[#ccebc8]/60 blur-[120px]"></div>
-        {/* Soft Aquifer Light Mesh */}
-        <div className="absolute top-[5%] right-[30%] w-[600px] h-[600px] rounded-full bg-[#d8f3f2]/70 blur-[110px]"></div>
+        <div className="absolute -top-[12%] right-[-5%] w-[850px] h-[850px] rounded-full bg-[#cde8e6]/90 blur-[120px]"></div>
+        <div className="absolute top-[15%] right-[12%] w-[550px] h-[550px] rounded-full bg-[#ccebc8]/50 blur-[130px]"></div>
       </div>
 
       {/* SECTION 1: HERO */}
-      <section className="relative z-10 min-h-[85vh] flex flex-col justify-between px-6 sm:px-10 lg:px-16 pt-20 pb-16 max-w-7xl mx-auto w-full">
-        <div className="flex flex-col max-w-4xl pt-6 sm:pt-10">
-          <div className="inline-flex items-center gap-2.5 mb-8">
-            <span className="inline-block w-2 h-2 rounded-full bg-moss animate-ping"></span>
-            <span className="font-body-sm text-body-sm text-secondary tracking-normal font-semibold">
-              Closed-Loop Hydrological Stewardship
-            </span>
+      <section className="relative z-10 min-h-screen flex flex-col justify-between px-6 sm:px-10 lg:px-16 pt-24 sm:pt-28 pb-8 max-w-7xl mx-auto w-full">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center pt-1 sm:pt-2">
+          {/* Left Column: Headline, Copy & CTAs */}
+          <div className="lg:col-span-6 flex flex-col">
+            <div className="inline-flex items-center gap-2.5 mb-4">
+              <span className="inline-block w-2 h-2 rounded-full bg-moss animate-ping"></span>
+              <span className="font-body-sm text-body-sm text-secondary tracking-normal font-semibold">
+                Closed-Loop Hydrological Stewardship
+              </span>
+            </div>
+
+            <h1 className="font-headline-hero text-headline-hero-mobile sm:text-headline-hero text-deep-aquifer tracking-tight leading-tight">
+              Securing India’s Water Future.
+            </h1>
+
+            <p className="font-body-large text-body-large text-deep-aquifer/85 mt-4 sm:mt-5 leading-relaxed">
+              Skyra turns every monsoon into something lasting — transforming rainfall into permanent aquifer resilience across India.
+            </p>
+
+            <div className="mt-6 flex flex-wrap items-center gap-4">
+              <div className="relative group inline-flex items-center">
+                <div className="absolute -inset-3 rounded-full bg-moss/20 blur-md opacity-0 group-hover:opacity-100 group-hover:scale-125 transition-all duration-700 ease-out"></div>
+                <Link
+                  href="/contact"
+                  className="relative inline-flex items-center justify-center bg-deep-aquifer hover:bg-forest-slate text-light-aquifer-canvas font-button-text text-button-text px-7 py-3.5 rounded-full transition-all duration-300 shadow-sm hover:shadow-md"
+                >
+                  Request a Consultation
+                </Link>
+              </div>
+              <a
+                href="#problem"
+                className="font-button-text text-button-text text-forest-slate hover:text-deep-aquifer transition-colors inline-flex items-center gap-2 py-3 px-4"
+              >
+                <span>Explore methodology</span>
+                <span className="material-symbols-outlined text-[18px]">
+                  arrow_downward
+                </span>
+              </a>
+            </div>
           </div>
 
-          <h1 className="font-headline-hero text-headline-hero-mobile sm:text-headline-hero text-deep-aquifer max-w-3xl tracking-tight leading-tight">
-            Securing India’s Water Future.
-          </h1>
-
-          <p className="font-body-large text-body-large text-deep-aquifer/80 max-w-2xl mt-8 leading-relaxed">
-            Skyra turns every monsoon into something lasting — transforming rainfall into water resilience, Pan India.
-          </p>
-
-          <div className="mt-10 flex flex-wrap items-center gap-6">
-            <div className="relative group inline-flex items-center">
-              <div className="absolute -inset-3 rounded-full bg-moss/20 blur-md opacity-0 group-hover:opacity-100 group-hover:scale-125 transition-all duration-700 ease-out"></div>
-              <Link
-                href="/contact"
-                className="relative inline-flex items-center justify-center bg-deep-aquifer hover:bg-forest-slate text-light-aquifer-canvas font-button-text text-button-text px-8 py-4 rounded-full transition-all duration-300 shadow-sm hover:shadow-md"
-              >
-                Request a Consultation
-              </Link>
-            </div>
-            <a
-              href="#problem"
-              className="font-button-text text-button-text text-forest-slate hover:text-deep-aquifer transition-colors inline-flex items-center gap-2 py-3 px-4"
-            >
-              <span>Explore our methodology</span>
-              <span className="material-symbols-outlined text-[18px]">
-                arrow_downward
-              </span>
-            </a>
+          {/* Right Column: Interactive Hydrological Mission Engine Window */}
+          <div className="lg:col-span-6 w-full">
+            <HeroMissionEngine />
           </div>
         </div>
 
         {/* Telemetry Metric Chip */}
-        <div className="mt-16 pt-8 flex items-center justify-between flex-wrap gap-6 border-t border-muted-aquifer/15">
+        <div className="mt-8 sm:mt-10 pt-4 flex items-center justify-between flex-wrap gap-6 border-t border-muted-aquifer/15">
           <div className="inline-flex items-center gap-4 py-3 px-5 rounded-full bg-white/70 backdrop-blur-md shadow-sm border border-muted-aquifer/20">
             <div className="relative flex h-3 w-3">
               <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-moss opacity-75"></span>
@@ -369,107 +375,7 @@ export default function Home() {
                 </span>
               </div>
 
-              <div className="relative w-full aspect-[4/5] flex items-center justify-center select-none">
-                <svg
-                  className="w-full h-full"
-                  fill="none"
-                  viewBox="0 0 320 400"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path
-                    d="M 160 30 C 175 40, 195 50, 205 75 C 215 95, 240 105, 260 115 C 275 125, 265 145, 250 155 C 240 162, 245 180, 240 195 C 230 220, 220 250, 195 285 C 180 310, 168 345, 160 365 C 152 345, 140 310, 125 285 C 100 250, 90 220, 80 195 C 75 180, 80 162, 70 155 C 55 145, 45 125, 60 115 C 80 105, 105 95, 115 75 C 125 50, 145 40, 160 30 Z"
-                    fill="#d8f3f2"
-                    opacity="0.85"
-                    stroke="#748D8C"
-                    strokeWidth="1.2"
-                  />
-
-                  <ellipse
-                    cx="160"
-                    cy="305"
-                    fill="none"
-                    rx="12"
-                    ry="7"
-                    stroke="#7D9D3D"
-                    strokeWidth="1.5"
-                  >
-                    <animate
-                      attributeName="rx"
-                      dur="3.6s"
-                      repeatCount="indefinite"
-                      values="6;65"
-                    />
-                    <animate
-                      attributeName="ry"
-                      dur="3.6s"
-                      repeatCount="indefinite"
-                      values="3;32"
-                    />
-                    <animate
-                      attributeName="opacity"
-                      dur="3.6s"
-                      repeatCount="indefinite"
-                      values="0.9;0"
-                    />
-                  </ellipse>
-
-                  <path
-                    d="M 125 285 C 140 310, 152 345, 160 365 C 168 345, 180 310, 195 285 C 180 280, 140 280, 125 285 Z"
-                    fill="#7D9D3D"
-                    opacity="0.35"
-                  />
-
-                  <circle cx="148" cy="335" fill="#1D293B" r="4.5" />
-                  <circle cx="148" cy="335" r="7" stroke="#7D9D3D" strokeWidth="1.5" />
-                  <text
-                    fill="#1D293B"
-                    fontFamily="Inter"
-                    fontSize="11"
-                    fontWeight="500"
-                    x="75"
-                    y="340"
-                  >
-                    Kochi Hub
-                  </text>
-
-                  <circle cx="164" cy="295" fill="#1D293B" r="4.5" />
-                  <circle cx="164" cy="295" r="7" stroke="#7D9D3D" strokeWidth="1.5" />
-                  <text
-                    fill="#1D293B"
-                    fontFamily="Inter"
-                    fontSize="11"
-                    fontWeight="500"
-                    x="180"
-                    y="299"
-                  >
-                    Bengaluru
-                  </text>
-
-                  <circle cx="168" cy="250" fill="#748D8C" opacity="0.8" r="3" />
-                  <text fill="#748D8C" fontFamily="Inter" fontSize="10" x="180" y="254">
-                    Hyderabad
-                  </text>
-
-                  <path
-                    d="M 160 210 L 160 140"
-                    opacity="0.6"
-                    stroke="#748D8C"
-                    strokeDasharray="3 3"
-                    strokeWidth="1.5"
-                  />
-                  <polygon fill="#748D8C" opacity="0.7" points="160,132 156,142 164,142" />
-                  <text
-                    fill="#748D8C"
-                    fontFamily="Inter"
-                    fontSize="10"
-                    letterSpacing="0.04em"
-                    x="170"
-                    y="165"
-                  >
-                    PAN INDIA HORIZON
-                  </text>
-                </svg>
-              </div>
+              <IndiaMapGraphic />
 
               <div className="w-full pt-4 mt-2 flex items-center justify-between text-deep-aquifer/75 border-t border-muted-aquifer/15">
                 <span className="font-body-sm text-body-sm">

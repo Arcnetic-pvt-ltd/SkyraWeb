@@ -48,7 +48,7 @@ export default function AboutPage() {
   return (
     <div className="flex flex-col w-full overflow-hidden relative">
       {/* SECTION 1: HERO */}
-      <section className="relative z-10 w-full pt-20 pb-24 sm:pb-32">
+      <section className="relative z-10 w-full pt-28 pb-24 sm:pb-32">
         <div className="max-w-5xl mx-auto px-6 sm:px-8">
           <div className="flex flex-col gap-8 max-w-3xl">
             <div className="inline-flex items-center gap-2.5">

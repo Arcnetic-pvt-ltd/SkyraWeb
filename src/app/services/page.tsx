@@ -11,7 +11,7 @@ export default function ServicesPage() {
   return (
     <div className="flex flex-col w-full">
       {/* Top Section: Editorial Header */}
-      <section className="w-full max-w-5xl mx-auto px-6 lg:px-8 pt-20 pb-16 md:pt-28 md:pb-24">
+      <section className="w-full max-w-5xl mx-auto px-6 lg:px-8 pt-28 pb-16 md:pt-32 md:pb-24">
         <div className="max-w-3xl flex flex-col gap-6">
           <span className="inline-flex items-center gap-2 font-technical-label text-body-sm uppercase tracking-wider text-moss font-semibold">
             <span className="w-2 h-2 rounded-full bg-moss animate-pulse"></span>

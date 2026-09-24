@@ -10,7 +10,7 @@ export const metadata: Metadata = {
 export default function ContactPage() {
   return (
     <div className="flex flex-col w-full">
-      <section className="relative w-full overflow-hidden bg-light-aquifer-canvas py-12 lg:py-20">
+      <section className="relative w-full overflow-hidden bg-light-aquifer-canvas pt-28 pb-12 lg:pt-32 lg:pb-20">
         {/* Ambient gentle drifting water atmosphere blobs */}
         <div aria-hidden="true" className="pointer-events-none absolute inset-0 overflow-hidden">
           <div className="absolute -top-32 -left-32 h-[520px] w-[520px] rounded-full bg-secondary-container/40 blur-[120px] animate-pulse"></div>
