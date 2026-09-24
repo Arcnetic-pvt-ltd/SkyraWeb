@@ -3,19 +3,23 @@ import { QuotesCarousel } from "@/components/landing/quotes-carousel";
 
 export default function Home() {
   return (
-    <div className="flex flex-col w-full overflow-hidden">
+    <div className="flex flex-col w-full overflow-hidden relative">
       {/* Ambient Atmospheric Floating Gradients */}
-      <div className="fixed inset-0 pointer-events-none -z-10 overflow-hidden">
-        <div className="absolute top-[8%] left-[15%] w-[680px] h-[680px] rounded-full bg-surface-variant/40 blur-[130px] transition-transform duration-[12000ms] ease-in-out motion-safe:animate-pulse"></div>
-        <div className="absolute top-[35%] right-[10%] w-[520px] h-[520px] rounded-full bg-secondary-fixed/20 blur-[150px] transition-transform duration-[16000ms] ease-in-out motion-safe:animate-pulse"></div>
+      <div className="absolute top-0 inset-x-0 h-[100vh] pointer-events-none z-0 overflow-hidden">
+        {/* Top Right Primary Aqua-Teal Gradient Aura */}
+        <div className="absolute -top-[10%] right-[-5%] w-[750px] h-[750px] rounded-full bg-[#cde8e6]/85 blur-[100px] motion-safe:animate-pulse"></div>
+        {/* Secondary Soft Mint/Moss Glow */}
+        <div className="absolute top-[15%] right-[12%] w-[550px] h-[550px] rounded-full bg-[#ccebc8]/60 blur-[120px]"></div>
+        {/* Soft Aquifer Light Mesh */}
+        <div className="absolute top-[5%] right-[30%] w-[600px] h-[600px] rounded-full bg-[#d8f3f2]/70 blur-[110px]"></div>
       </div>
 
       {/* SECTION 1: HERO */}
-      <section className="relative min-h-[85vh] flex flex-col justify-between px-6 sm:px-10 lg:px-16 pt-20 pb-16 max-w-7xl mx-auto w-full">
+      <section className="relative z-10 min-h-[85vh] flex flex-col justify-between px-6 sm:px-10 lg:px-16 pt-20 pb-16 max-w-7xl mx-auto w-full">
         <div className="flex flex-col max-w-4xl pt-6 sm:pt-10">
           <div className="inline-flex items-center gap-2.5 mb-8">
             <span className="inline-block w-2 h-2 rounded-full bg-moss animate-ping"></span>
-            <span className="font-body-sm text-body-sm text-secondary tracking-normal">
+            <span className="font-body-sm text-body-sm text-secondary tracking-normal font-semibold">
               Closed-Loop Hydrological Stewardship
             </span>
           </div>
@@ -24,7 +28,7 @@ export default function Home() {
             Securing India’s Water Future.
           </h1>
 
-          <p className="font-body-large text-body-large text-deep-aquifer/75 max-w-2xl mt-8 leading-relaxed">
+          <p className="font-body-large text-body-large text-deep-aquifer/80 max-w-2xl mt-8 leading-relaxed">
             Skyra turns every monsoon into something lasting — transforming rainfall into water resilience, Pan India.
           </p>
 
@@ -52,7 +56,7 @@ export default function Home() {
 
         {/* Telemetry Metric Chip */}
         <div className="mt-16 pt-8 flex items-center justify-between flex-wrap gap-6 border-t border-muted-aquifer/15">
-          <div className="inline-flex items-center gap-4 py-3 px-5 rounded-full bg-surface-container/60 backdrop-blur-md shadow-sm border border-muted-aquifer/20">
+          <div className="inline-flex items-center gap-4 py-3 px-5 rounded-full bg-white/70 backdrop-blur-md shadow-sm border border-muted-aquifer/20">
             <div className="relative flex h-3 w-3">
               <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-moss opacity-75"></span>
               <span className="relative inline-flex rounded-full h-3 w-3 bg-moss"></span>
@@ -68,14 +72,15 @@ export default function Home() {
           </div>
 
           <div className="flex items-center gap-6 sm:gap-8 text-secondary/70">
-            <span className="font-body-sm text-body-sm">Kochi</span>
+            <span className="font-body-sm text-body-sm font-medium">Kochi</span>
             <span className="w-1 h-1 rounded-full bg-secondary/40"></span>
-            <span className="font-body-sm text-body-sm">Bengaluru</span>
+            <span className="font-body-sm text-body-sm font-medium">Bengaluru</span>
             <span className="w-1 h-1 rounded-full bg-secondary/40"></span>
-            <span className="font-body-sm text-body-sm">New Delhi</span>
+            <span className="font-body-sm text-body-sm font-medium">New Delhi</span>
           </div>
         </div>
       </section>
+
 
       {/* SECTION 2: THE CORE PROBLEM */}
       <section
