@@ -47,16 +47,6 @@ const FOUNDERS = [
 export default function AboutPage() {
   return (
     <div className="flex flex-col w-full overflow-hidden relative">
-      {/* Ambient Atmospheric Floating Gradients (Same as Home Page) */}
-      <div className="absolute top-0 inset-x-0 h-[100vh] pointer-events-none z-0 overflow-hidden">
-        {/* Top Right Primary Aqua-Teal Gradient Aura */}
-        <div className="absolute -top-[10%] right-[-5%] w-[750px] h-[750px] rounded-full bg-[#cde8e6]/85 blur-[100px] motion-safe:animate-pulse"></div>
-        {/* Secondary Soft Mint/Moss Glow */}
-        <div className="absolute top-[15%] right-[12%] w-[550px] h-[550px] rounded-full bg-[#ccebc8]/60 blur-[120px]"></div>
-        {/* Soft Aquifer Light Mesh */}
-        <div className="absolute top-[5%] right-[30%] w-[600px] h-[600px] rounded-full bg-[#d8f3f2]/70 blur-[110px]"></div>
-      </div>
-
       {/* SECTION 1: HERO */}
       <section className="relative z-10 w-full pt-20 pb-24 sm:pb-32">
         <div className="max-w-5xl mx-auto px-6 sm:px-8">
