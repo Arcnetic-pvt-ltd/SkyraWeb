@@ -28,12 +28,20 @@ export function SiteHeader() {
     };
   }, [open]);
 
+  const scrollToTop = () => {
+    setOpen(false);
+    if (typeof window !== "undefined") {
+      window.scrollTo({ top: 0, left: 0, behavior: "instant" });
+    }
+  };
+
   return (
     <header className="fixed top-4 inset-x-0 z-50 px-4 sm:px-6 lg:px-8">
       <div className="h-16 max-w-5xl mx-auto rounded-full bg-white/80 backdrop-blur-xl shadow-[0_8px_30px_rgb(29,41,59,0.06)] border border-muted-aquifer/15 px-4 sm:px-6 flex items-center justify-between transition-all duration-300">
         <Link
           className="flex items-center gap-3 transition-opacity hover:opacity-85 text-deep-aquifer"
           href="/"
+          onClick={scrollToTop}
         >
           <SkyraLogo className="text-deep-aquifer" />
         </Link>
@@ -45,6 +53,7 @@ export function SiteHeader() {
               <Link
                 key={link.href}
                 href={link.href}
+                onClick={scrollToTop}
                 aria-current={isActive ? "page" : undefined}
                 className={
                   isActive
@@ -62,6 +71,7 @@ export function SiteHeader() {
           <Link
             className="hidden sm:inline-flex items-center justify-center bg-deep-aquifer hover:bg-forest-slate text-white font-button-text text-[13px] px-4 py-2.5 rounded-full transition-all duration-300 tracking-tight hover:shadow-[0_4px_20px_rgba(125,157,61,0.35)] active:scale-[0.98]"
             href="/contact"
+            onClick={scrollToTop}
           >
             Start a Conversation
           </Link>
@@ -88,7 +98,7 @@ export function SiteHeader() {
                 <Link
                   key={link.href}
                   href={link.href}
-                  onClick={() => setOpen(false)}
+                  onClick={scrollToTop}
                   className={`text-base font-medium transition-colors ${
                     isActive
                       ? "text-deep-aquifer font-semibold"
@@ -104,7 +114,7 @@ export function SiteHeader() {
             <Link
               className="w-full inline-flex items-center justify-center bg-deep-aquifer hover:bg-forest-slate text-white font-button-text text-[14px] py-3 rounded-full transition-all"
               href="/contact"
-              onClick={() => setOpen(false)}
+              onClick={scrollToTop}
             >
               Start a Conversation
             </Link>
