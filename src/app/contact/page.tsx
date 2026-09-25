@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { ConsultationIntakeForm } from "@/components/contact/consultation-intake-form";
 import { WHATSAPP_HREF, CONTACT } from "@/lib/nav";
+import { WhatsAppIcon } from "@/components/icons/whatsapp-icon";
 
 export const metadata: Metadata = {
   title: "Start Your Water Resilience Journey | Skyra Contact",
@@ -111,8 +112,8 @@ export default function ContactPage() {
                 </div>
 
                 <div className="flex items-start gap-4">
-                  <div className="h-10 w-10 rounded-full bg-secondary-container/60 shadow-sm flex items-center justify-center shrink-0 text-forest-slate border border-muted-aquifer/15">
-                    <span className="material-symbols-outlined text-[20px]">chat</span>
+                  <div className="h-10 w-10 rounded-full bg-white shadow-sm flex items-center justify-center shrink-0 text-forest-slate border border-muted-aquifer/15">
+                    <WhatsAppIcon className="size-[19px] text-forest-slate" />
                   </div>
                   <div>
                     <span className="font-headline-h3 text-[15px] font-semibold text-deep-aquifer block">

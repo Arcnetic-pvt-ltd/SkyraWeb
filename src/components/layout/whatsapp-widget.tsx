@@ -1,4 +1,5 @@
 import { WHATSAPP_HREF } from "@/lib/nav";
+import { WhatsAppIcon } from "@/components/icons/whatsapp-icon";
 
 export function WhatsAppWidget() {
   return (
@@ -11,10 +12,7 @@ export function WhatsAppWidget() {
         rel="noopener noreferrer"
         target="_blank"
       >
-        <span className="relative flex h-2.5 w-2.5">
-          <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-moss opacity-75"></span>
-          <span className="relative inline-flex rounded-full h-2.5 w-2.5 bg-moss"></span>
-        </span>
+        <WhatsAppIcon className="size-4 text-moss group-hover:scale-110 transition-transform" />
         <span className="font-button-text text-[13px] text-deep-aquifer font-medium tracking-tight group-hover:text-forest-slate transition-colors">
           WhatsApp
         </span>
