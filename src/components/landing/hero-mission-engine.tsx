@@ -139,7 +139,7 @@ export function HeroMissionEngine() {
                 )}
               </div>
               <span className="text-[11px] sm:text-xs font-semibold truncate w-full">
-                {st.title.split(" ")[0]}
+                {st.title}
               </span>
             </button>
           );

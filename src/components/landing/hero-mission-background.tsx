@@ -274,7 +274,7 @@ export function HeroMissionBackground() {
               <span className={`text-[10px] font-bold ${isActive ? "text-moss" : "text-slate-400"}`}>
                 {st.num}
               </span>
-              <span className="hidden md:inline">{st.title.split(" ")[0]}</span>
+              <span className="hidden md:inline">{st.title}</span>
             </button>
           );
         })}

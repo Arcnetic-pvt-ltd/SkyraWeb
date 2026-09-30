@@ -139,7 +139,7 @@ export function HeroMissionAnimation() {
                 )}
               </div>
               <span className="text-[11px] sm:text-xs font-semibold truncate w-full">
-                {stage.title.split(" ")[0]}
+                {stage.title}
               </span>
             </button>
           );
