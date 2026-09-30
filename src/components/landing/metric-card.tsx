@@ -64,7 +64,7 @@ export function MetricCard({
   return (
     <div
       ref={ref}
-      className="group relative flex flex-col justify-between overflow-hidden rounded-3xl border border-white/10 bg-white/5 p-8 shadow-xl backdrop-blur-md transition-colors hover:border-white/20"
+      className="group relative flex h-full flex-col justify-between overflow-hidden rounded-3xl border border-muted-aquifer/15 bg-white/80 p-8 sm:p-9 shadow-[0_8px_30px_rgb(29,41,59,0.06)] backdrop-blur-xl transition-all duration-500 hover:border-moss/40 hover:shadow-2xl"
     >
       <div className="absolute right-0 top-0 p-6 opacity-10 transition-opacity group-hover:opacity-20">
         {watermark}
@@ -77,25 +77,25 @@ export function MetricCard({
         </div>
         <div className="pt-2">
           <div
-            className="bg-clip-text text-5xl font-extrabold tracking-tight text-transparent sm:text-6xl"
+            className="bg-clip-text text-5xl font-extrabold font-metric-mono-lg tracking-tight text-transparent sm:text-6xl"
             style={{ backgroundImage: `linear-gradient(to right, ${gradientFrom}, ${gradientTo})` }}
           >
             {value}
             {suffix}
           </div>
-          <h3 className="mt-2 text-xl font-bold text-white">{title}</h3>
-          <p className="mt-1 text-xs leading-relaxed text-slate-400 sm:text-sm">{description}</p>
+          <h3 className="mt-2 text-xl font-bold font-headline-h3 text-deep-aquifer">{title}</h3>
+          <p className="mt-1 text-xs leading-relaxed font-body-sm text-deep-aquifer/75 sm:text-sm">{description}</p>
         </div>
       </div>
 
       <div className="relative z-10 pt-8">
-        <div className="mb-2 flex justify-between font-mono text-xs text-slate-400">
+        <div className="mb-2 flex justify-between font-mono text-xs text-secondary">
           <span>{progressLabel}</span>
           <span className={`font-bold ${progressTone}`}>{progressPercent}%</span>
         </div>
-        <div className="h-2 w-full overflow-hidden rounded-full bg-white/10">
+        <div className="h-2.5 w-full overflow-hidden rounded-full bg-muted-aquifer/15 p-0.5 border border-muted-aquifer/10">
           <motion.div
-            className="h-2 rounded-full"
+            className="h-full rounded-full"
             style={{ backgroundImage: `linear-gradient(to right, ${gradientFrom}, ${gradientTo})` }}
             initial={{ width: 0 }}
             animate={{ width: inView ? `${progressPercent}%` : 0 }}
