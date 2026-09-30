@@ -224,13 +224,13 @@ export function HarvestingCalculator() {
               </div>
 
               {/* Secondary Impact Metrics */}
-              <div className="grid grid-cols-2 gap-4 pt-4 border-t border-muted-aquifer/15">
+              <div className="grid grid-cols-2 gap-3 pt-4 border-t border-muted-aquifer/15">
                 <div className="flex flex-col gap-1 p-3.5 rounded-2xl bg-light-aquifer-canvas border border-muted-aquifer/15">
-                  <span className="font-body-sm text-xs text-secondary font-medium">Tankers Replaced</span>
+                  <span className="font-body-sm text-xs text-secondary font-medium font-bold text-moss">Skyra Rainsink Units</span>
                   <span className="font-metric-mono-lg text-2xl font-bold text-deep-aquifer">
-                    {tankersSaved} <span className="text-xs text-moss">Trip{tankersSaved === 1 ? "" : "s"}</span>
+                    {Math.max(1, Math.ceil(annualLiters / 30000))} <span className="text-xs text-moss">Unit{Math.max(1, Math.ceil(annualLiters / 30000)) === 1 ? "" : "s"}</span>
                   </span>
-                  <span className="text-[11px] text-deep-aquifer/60">12,000L standard tanker</span>
+                  <span className="text-[11px] text-deep-aquifer/60">Percolation capacity</span>
                 </div>
 
                 <div className="flex flex-col gap-1 p-3.5 rounded-2xl bg-light-aquifer-canvas border border-muted-aquifer/15">

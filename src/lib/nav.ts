@@ -1,5 +1,6 @@
 export const NAV_LINKS = [
   { label: "Home", href: "/" },
+  { label: "Skyra Rainsink", href: "/products/rainsink" },
   { label: "Solutions", href: "/services" },
   { label: "Mission", href: "/about" },
   { label: "Contact", href: "/contact" },

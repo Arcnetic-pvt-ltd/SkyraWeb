@@ -23,37 +23,37 @@ export default function Home() {
             <div className="inline-flex items-center gap-2.5 mb-4">
               <span className="inline-block w-2 h-2 rounded-full bg-moss animate-ping"></span>
               <span className="font-body-sm text-body-sm text-secondary tracking-normal font-semibold">
-                Closed-Loop Hydrological Stewardship
+                Hero Solution &middot; Skyra Rainsink &amp; Enterprise Stewardship
               </span>
             </div>
 
             <h1 className="font-headline-hero text-headline-hero-mobile sm:text-headline-hero text-deep-aquifer tracking-tight leading-tight">
-              Securing India’s Water Future.
+              Transform Stormwater into Lasting Aquifer Resilience.
             </h1>
 
             <p className="font-body-large text-body-large text-deep-aquifer/85 mt-4 sm:mt-5 leading-relaxed">
-              Skyra turns every monsoon into something lasting — transforming rainfall into permanent aquifer resilience across India.
+              Featuring <strong>Skyra Rainsink</strong> &mdash; our high-capacity rain percolator unit. Engineered for logistics hubs, factories, IT parks, and institutions to eliminate yard flooding, guarantee statutory CGWA NOC compliance, and reach water neutrality.
             </p>
 
             <div className="mt-6 flex flex-wrap items-center gap-4">
               <div className="relative group inline-flex items-center">
                 <div className="absolute -inset-3 rounded-full bg-moss/20 blur-md opacity-0 group-hover:opacity-100 group-hover:scale-125 transition-all duration-700 ease-out"></div>
                 <Link
-                  href="/contact"
+                  href="/products/rainsink"
                   className="relative inline-flex items-center justify-center bg-deep-aquifer hover:bg-forest-slate text-light-aquifer-canvas font-button-text text-button-text px-7 py-3.5 rounded-full transition-all duration-300 shadow-sm hover:shadow-md"
                 >
-                  Request a Consultation
+                  Explore Skyra Rainsink
                 </Link>
               </div>
-              <a
-                href="#problem"
+              <Link
+                href="/contact"
                 className="font-button-text text-button-text text-forest-slate hover:text-deep-aquifer transition-colors inline-flex items-center gap-2 py-3 px-4"
               >
-                <span>Explore methodology</span>
+                <span>Request Campus Survey</span>
                 <span className="material-symbols-outlined text-[18px]">
-                  arrow_downward
+                  arrow_forward
                 </span>
-              </a>
+              </Link>
             </div>
           </div>
 
