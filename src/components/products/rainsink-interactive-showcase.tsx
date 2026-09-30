@@ -35,6 +35,14 @@ export function RainsinkInteractiveShowcase() {
     },
   ];
 
+  const layerBounds: Record<number, { y: number; height: number; color: string }> = {
+    1: { y: 67, height: 32, color: "#38bdf8" },
+    2: { y: 99, height: 65, color: "#0284c7" },
+    3: { y: 164, height: 46, color: "#7D9D3D" },
+    4: { y: 210, height: 54, color: "#38bdf8" },
+    5: { y: 264, height: 49, color: "#d97706" },
+  };
+
   return (
     <div className="flex flex-col gap-12">
       {/* Segmented Dual-Pitch Switcher Header */}
@@ -227,8 +235,25 @@ export function RainsinkInteractiveShowcase() {
               </marker>
 
               <filter id="neonGlow" x="-20%" y="-20%" width="140%" height="140%">
-                <feGaussianBlur stdDeviation="4" result="blur" />
+                <feGaussianBlur stdDeviation="3" result="blur" />
                 <feComposite in="SourceGraphic" in2="blur" operator="over" />
+              </filter>
+
+              <linearGradient id="selectedLayerHighlight" x1="0" y1="0" x2="1" y2="0">
+                <stop offset="0%" stopColor="#7D9D3D" stopOpacity="0.3" />
+                <stop offset="50%" stopColor="#38bdf8" stopOpacity="0.25" />
+                <stop offset="100%" stopColor="#7D9D3D" stopOpacity="0.3" />
+              </linearGradient>
+
+              <filter id="crispGlow" x="-20%" y="-20%" width="140%" height="140%">
+                <feGaussianBlur stdDeviation="2.5" result="blur" />
+                <feComponentTransfer in="blur" result="boost">
+                  <feFuncA type="linear" slope="2" />
+                </feComponentTransfer>
+                <feMerge>
+                  <feMergeNode in="boost" />
+                  <feMergeNode in="SourceGraphic" />
+                </feMerge>
               </filter>
             </defs>
 
@@ -318,9 +343,6 @@ export function RainsinkInteractiveShowcase() {
                 height="32"
                 rx="4"
                 fill="url(#fluidInflow)"
-                stroke={activeLayer === 1 ? "#7D9D3D" : "none"}
-                strokeWidth="2.5"
-                filter={activeLayer === 1 ? "url(#neonGlow)" : "none"}
               />
               <path fill="#38bdf8" opacity="0.4" d="M137 76 C 165 70, 200 82, 224 76 C 250 70, 285 82, 301 76 L 301 99 L 137 99 Z">
                 <animate
@@ -348,9 +370,6 @@ export function RainsinkInteractiveShowcase() {
                 height="65"
                 fill="url(#mediumSilexGrad)"
                 opacity="0.8"
-                stroke={activeLayer === 2 ? "#7D9D3D" : "none"}
-                strokeWidth="2.5"
-                filter={activeLayer === 2 ? "url(#neonGlow)" : "none"}
               />
               <g fill="#38bdf8" opacity="0.4">
                 <circle cx="153" cy="115" r="8.5" />
@@ -377,9 +396,8 @@ export function RainsinkInteractiveShowcase() {
                 width="164"
                 height="46"
                 fill="url(#carbonBedGrad)"
-                stroke={activeLayer === 3 ? "#7D9D3D" : "#334155"}
-                strokeWidth={activeLayer === 3 ? "2.5" : "1"}
-                filter={activeLayer === 3 ? "url(#neonGlow)" : "none"}
+                stroke="#334155"
+                strokeWidth="1"
               />
               {/* Adsorption Micro-Particles */}
               <g fill="#7D9D3D" opacity="0.7">
@@ -405,9 +423,6 @@ export function RainsinkInteractiveShowcase() {
                 height="54"
                 fill="#0284c7"
                 opacity="0.65"
-                stroke={activeLayer === 4 ? "#7D9D3D" : "none"}
-                strokeWidth="2.5"
-                filter={activeLayer === 4 ? "url(#neonGlow)" : "none"}
               />
               <g fill="#e0f2fe" opacity="0.5">
                 <circle cx="148" cy="225" r="3.5" />
@@ -441,12 +456,90 @@ export function RainsinkInteractiveShowcase() {
               width="164"
               height="49"
               fill="url(#sandBedGrad)"
-              stroke={activeLayer === 5 ? "#7D9D3D" : "none"}
-              strokeWidth="2.5"
-              filter={activeLayer === 5 ? "url(#neonGlow)" : "none"}
               className="cursor-pointer hover:opacity-90 transition-opacity"
               onClick={() => setActiveLayer(5)}
             />
+
+            {/* HIGH-TECH HUD PRECISION SELECTION OVERLAY FRAME */}
+            {activeLayer && layerBounds[activeLayer] && (
+              <g className="pointer-events-none">
+                {/* 1. Soft Glassmorphic Highlight Fill */}
+                <rect
+                  x="135"
+                  y={layerBounds[activeLayer].y}
+                  width="168"
+                  height={layerBounds[activeLayer].height}
+                  rx="4"
+                  fill="url(#selectedLayerHighlight)"
+                  stroke="#7D9D3D"
+                  strokeWidth="1.8"
+                  filter="url(#crispGlow)"
+                />
+
+                {/* 2. Sub-pixel Light Beam Scanning Animation */}
+                <line
+                  x1="135"
+                  y1={layerBounds[activeLayer].y}
+                  x2="303"
+                  y2={layerBounds[activeLayer].y}
+                  stroke="#fef08a"
+                  strokeWidth="1.5"
+                  opacity="0.8"
+                >
+                  <animate
+                    attributeName="y1"
+                    values={`${layerBounds[activeLayer].y};${layerBounds[activeLayer].y + layerBounds[activeLayer].height};${layerBounds[activeLayer].y}`}
+                    dur="2.2s"
+                    repeatCount="indefinite"
+                  />
+                  <animate
+                    attributeName="y2"
+                    values={`${layerBounds[activeLayer].y};${layerBounds[activeLayer].y + layerBounds[activeLayer].height};${layerBounds[activeLayer].y}`}
+                    dur="2.2s"
+                    repeatCount="indefinite"
+                  />
+                  <animate attributeName="opacity" values="0.9;0.2;0.9" dur="2.2s" repeatCount="indefinite" />
+                </line>
+
+                {/* 3. Tech Corner HUD Reticles (L-Brackets) */}
+                {/* Top-Left Reticle */}
+                <path
+                  d={`M 135 ${layerBounds[activeLayer].y + 9} L 135 ${layerBounds[activeLayer].y} L 145 ${layerBounds[activeLayer].y}`}
+                  stroke="#a3e635"
+                  strokeWidth="2.5"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  fill="none"
+                />
+                {/* Top-Right Reticle */}
+                <path
+                  d={`M 293 ${layerBounds[activeLayer].y} L 303 ${layerBounds[activeLayer].y} L 303 ${layerBounds[activeLayer].y + 9}`}
+                  stroke="#a3e635"
+                  strokeWidth="2.5"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  fill="none"
+                />
+                {/* Bottom-Left Reticle */}
+                <path
+                  d={`M 135 ${layerBounds[activeLayer].y + layerBounds[activeLayer].height - 9} L 135 ${layerBounds[activeLayer].y + layerBounds[activeLayer].height} L 145 ${layerBounds[activeLayer].y + layerBounds[activeLayer].height}`}
+                  stroke="#a3e635"
+                  strokeWidth="2.5"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  fill="none"
+                />
+                {/* Bottom-Right Reticle */}
+                <path
+                  d={`M 293 ${layerBounds[activeLayer].y + layerBounds[activeLayer].height} L 303 ${layerBounds[activeLayer].y + layerBounds[activeLayer].height} L 303 ${layerBounds[activeLayer].y + layerBounds[activeLayer].height - 9}`}
+                  stroke="#a3e635"
+                  strokeWidth="2.5"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  fill="none"
+                />
+              </g>
+            )}
 
             {/* Active Hydrological Particle Stream */}
             <g fill="#38bdf8">
@@ -491,41 +584,191 @@ export function RainsinkInteractiveShowcase() {
               </path>
             </g>
 
-            {/* Modern Floating Hotspot Callout Badges (Positioned cleanly on Left) */}
+            {/* Modern Floating Hotspot Callout Badges (With Pulsing Active State) */}
             <g fontFamily="Space Mono, monospace">
+              {/* Badge 01 */}
               <g className="cursor-pointer" onClick={() => setActiveLayer(1)}>
-                <line x1="110" y1="83" x2="134" y2="83" stroke={activeLayer === 1 ? "#7D9D3D" : "#334155"} strokeWidth="1" strokeDasharray="2 2" />
-                <rect x="14" y="73" width="96" height="20" rx="10" fill="#0f172a" stroke={activeLayer === 1 ? "#7D9D3D" : "#334155"} strokeWidth="1.5" />
+                <line
+                  x1="110"
+                  y1="83"
+                  x2="134"
+                  y2="83"
+                  stroke={activeLayer === 1 ? "#7D9D3D" : "#334155"}
+                  strokeWidth={activeLayer === 1 ? "1.8" : "1"}
+                  strokeDasharray={activeLayer === 1 ? "none" : "2 2"}
+                />
+                {activeLayer === 1 && (
+                  <circle cx="110" cy="83" r="2.5" fill="#a3e635">
+                    <animate attributeName="cx" values="110;134;110" dur="1.6s" repeatCount="indefinite" />
+                  </circle>
+                )}
+                <rect
+                  x="14"
+                  y="73"
+                  width="96"
+                  height="20"
+                  rx="10"
+                  fill="#0f172a"
+                  stroke={activeLayer === 1 ? "#7D9D3D" : "#334155"}
+                  strokeWidth={activeLayer === 1 ? "2" : "1.5"}
+                  filter={activeLayer === 1 ? "url(#crispGlow)" : "none"}
+                />
                 <circle cx="24" cy="83" r="3.5" fill="#38bdf8" />
-                <text x="33" y="86.5" fontSize="8.5" fill="#f8fafc" fontWeight="bold">01 INFLOW</text>
+                {activeLayer === 1 && (
+                  <circle cx="24" cy="83" r="6" fill="none" stroke="#7D9D3D" strokeWidth="1" opacity="0.8">
+                    <animate attributeName="r" values="3.5;8;3.5" dur="1.8s" repeatCount="indefinite" />
+                    <animate attributeName="opacity" values="0.8;0;0.8" dur="1.8s" repeatCount="indefinite" />
+                  </circle>
+                )}
+                <text x="33" y="86.5" fontSize="8.5" fill={activeLayer === 1 ? "#ffffff" : "#f8fafc"} fontWeight="bold">01 INFLOW</text>
               </g>
 
+              {/* Badge 02 */}
               <g className="cursor-pointer" onClick={() => setActiveLayer(2)}>
-                <line x1="110" y1="131" x2="134" y2="131" stroke={activeLayer === 2 ? "#7D9D3D" : "#334155"} strokeWidth="1" strokeDasharray="2 2" />
-                <rect x="14" y="121" width="96" height="20" rx="10" fill="#0f172a" stroke={activeLayer === 2 ? "#7D9D3D" : "#334155"} strokeWidth="1.5" />
+                <line
+                  x1="110"
+                  y1="131"
+                  x2="134"
+                  y2="131"
+                  stroke={activeLayer === 2 ? "#7D9D3D" : "#334155"}
+                  strokeWidth={activeLayer === 2 ? "1.8" : "1"}
+                  strokeDasharray={activeLayer === 2 ? "none" : "2 2"}
+                />
+                {activeLayer === 2 && (
+                  <circle cx="110" cy="131" r="2.5" fill="#a3e635">
+                    <animate attributeName="cx" values="110;134;110" dur="1.6s" repeatCount="indefinite" />
+                  </circle>
+                )}
+                <rect
+                  x="14"
+                  y="121"
+                  width="96"
+                  height="20"
+                  rx="10"
+                  fill="#0f172a"
+                  stroke={activeLayer === 2 ? "#7D9D3D" : "#334155"}
+                  strokeWidth={activeLayer === 2 ? "2" : "1.5"}
+                  filter={activeLayer === 2 ? "url(#crispGlow)" : "none"}
+                />
                 <circle cx="24" cy="131" r="3.5" fill="#0284c7" />
-                <text x="33" y="134.5" fontSize="8.5" fill="#f8fafc" fontWeight="bold">02 SILEX M</text>
+                {activeLayer === 2 && (
+                  <circle cx="24" cy="131" r="6" fill="none" stroke="#7D9D3D" strokeWidth="1" opacity="0.8">
+                    <animate attributeName="r" values="3.5;8;3.5" dur="1.8s" repeatCount="indefinite" />
+                    <animate attributeName="opacity" values="0.8;0;0.8" dur="1.8s" repeatCount="indefinite" />
+                  </circle>
+                )}
+                <text x="33" y="134.5" fontSize="8.5" fill={activeLayer === 2 ? "#ffffff" : "#f8fafc"} fontWeight="bold">02 SILEX M</text>
               </g>
 
+              {/* Badge 03 */}
               <g className="cursor-pointer" onClick={() => setActiveLayer(3)}>
-                <line x1="110" y1="187" x2="134" y2="187" stroke={activeLayer === 3 ? "#7D9D3D" : "#334155"} strokeWidth="1" strokeDasharray="2 2" />
-                <rect x="14" y="177" width="96" height="20" rx="10" fill="#0f172a" stroke={activeLayer === 3 ? "#7D9D3D" : "#334155"} strokeWidth="1.5" />
+                <line
+                  x1="110"
+                  y1="187"
+                  x2="134"
+                  y2="187"
+                  stroke={activeLayer === 3 ? "#7D9D3D" : "#334155"}
+                  strokeWidth={activeLayer === 3 ? "1.8" : "1"}
+                  strokeDasharray={activeLayer === 3 ? "none" : "2 2"}
+                />
+                {activeLayer === 3 && (
+                  <circle cx="110" cy="187" r="2.5" fill="#a3e635">
+                    <animate attributeName="cx" values="110;134;110" dur="1.6s" repeatCount="indefinite" />
+                  </circle>
+                )}
+                <rect
+                  x="14"
+                  y="177"
+                  width="96"
+                  height="20"
+                  rx="10"
+                  fill="#0f172a"
+                  stroke={activeLayer === 3 ? "#7D9D3D" : "#334155"}
+                  strokeWidth={activeLayer === 3 ? "2" : "1.5"}
+                  filter={activeLayer === 3 ? "url(#crispGlow)" : "none"}
+                />
                 <circle cx="24" cy="187" r="3.5" fill="#7D9D3D" />
-                <text x="33" y="190.5" fontSize="8.5" fill="#f8fafc" fontWeight="bold">03 CARBON</text>
+                {activeLayer === 3 && (
+                  <circle cx="24" cy="187" r="6" fill="none" stroke="#7D9D3D" strokeWidth="1" opacity="0.8">
+                    <animate attributeName="r" values="3.5;8;3.5" dur="1.8s" repeatCount="indefinite" />
+                    <animate attributeName="opacity" values="0.8;0;0.8" dur="1.8s" repeatCount="indefinite" />
+                  </circle>
+                )}
+                <text x="33" y="190.5" fontSize="8.5" fill={activeLayer === 3 ? "#ffffff" : "#f8fafc"} fontWeight="bold">03 CARBON</text>
               </g>
 
+              {/* Badge 04 */}
               <g className="cursor-pointer" onClick={() => setActiveLayer(4)}>
-                <line x1="110" y1="237" x2="134" y2="237" stroke={activeLayer === 4 ? "#7D9D3D" : "#334155"} strokeWidth="1" strokeDasharray="2 2" />
-                <rect x="14" y="227" width="96" height="20" rx="10" fill="#0f172a" stroke={activeLayer === 4 ? "#7D9D3D" : "#334155"} strokeWidth="1.5" />
+                <line
+                  x1="110"
+                  y1="237"
+                  x2="134"
+                  y2="237"
+                  stroke={activeLayer === 4 ? "#7D9D3D" : "#334155"}
+                  strokeWidth={activeLayer === 4 ? "1.8" : "1"}
+                  strokeDasharray={activeLayer === 4 ? "none" : "2 2"}
+                />
+                {activeLayer === 4 && (
+                  <circle cx="110" cy="237" r="2.5" fill="#a3e635">
+                    <animate attributeName="cx" values="110;134;110" dur="1.6s" repeatCount="indefinite" />
+                  </circle>
+                )}
+                <rect
+                  x="14"
+                  y="227"
+                  width="96"
+                  height="20"
+                  rx="10"
+                  fill="#0f172a"
+                  stroke={activeLayer === 4 ? "#7D9D3D" : "#334155"}
+                  strokeWidth={activeLayer === 4 ? "2" : "1.5"}
+                  filter={activeLayer === 4 ? "url(#crispGlow)" : "none"}
+                />
                 <circle cx="24" cy="237" r="3.5" fill="#38bdf8" />
-                <text x="33" y="240.5" fontSize="8.5" fill="#f8fafc" fontWeight="bold">04 SILEX S</text>
+                {activeLayer === 4 && (
+                  <circle cx="24" cy="237" r="6" fill="none" stroke="#7D9D3D" strokeWidth="1" opacity="0.8">
+                    <animate attributeName="r" values="3.5;8;3.5" dur="1.8s" repeatCount="indefinite" />
+                    <animate attributeName="opacity" values="0.8;0;0.8" dur="1.8s" repeatCount="indefinite" />
+                  </circle>
+                )}
+                <text x="33" y="240.5" fontSize="8.5" fill={activeLayer === 4 ? "#ffffff" : "#f8fafc"} fontWeight="bold">04 SILEX S</text>
               </g>
 
+              {/* Badge 05 */}
               <g className="cursor-pointer" onClick={() => setActiveLayer(5)}>
-                <line x1="110" y1="288" x2="134" y2="288" stroke={activeLayer === 5 ? "#7D9D3D" : "#334155"} strokeWidth="1" strokeDasharray="2 2" />
-                <rect x="14" y="278" width="96" height="20" rx="10" fill="#0f172a" stroke={activeLayer === 5 ? "#7D9D3D" : "#334155"} strokeWidth="1.5" />
+                <line
+                  x1="110"
+                  y1="288"
+                  x2="134"
+                  y2="288"
+                  stroke={activeLayer === 5 ? "#7D9D3D" : "#334155"}
+                  strokeWidth={activeLayer === 5 ? "1.8" : "1"}
+                  strokeDasharray={activeLayer === 5 ? "none" : "2 2"}
+                />
+                {activeLayer === 5 && (
+                  <circle cx="110" cy="288" r="2.5" fill="#a3e635">
+                    <animate attributeName="cx" values="110;134;110" dur="1.6s" repeatCount="indefinite" />
+                  </circle>
+                )}
+                <rect
+                  x="14"
+                  y="278"
+                  width="96"
+                  height="20"
+                  rx="10"
+                  fill="#0f172a"
+                  stroke={activeLayer === 5 ? "#7D9D3D" : "#334155"}
+                  strokeWidth={activeLayer === 5 ? "2" : "1.5"}
+                  filter={activeLayer === 5 ? "url(#crispGlow)" : "none"}
+                />
                 <circle cx="24" cy="288" r="3.5" fill="#d97706" />
-                <text x="33" y="291.5" fontSize="8.5" fill="#f8fafc" fontWeight="bold">05 SAND</text>
+                {activeLayer === 5 && (
+                  <circle cx="24" cy="288" r="6" fill="none" stroke="#7D9D3D" strokeWidth="1" opacity="0.8">
+                    <animate attributeName="r" values="3.5;8;3.5" dur="1.8s" repeatCount="indefinite" />
+                    <animate attributeName="opacity" values="0.8;0;0.8" dur="1.8s" repeatCount="indefinite" />
+                  </circle>
+                )}
+                <text x="33" y="291.5" fontSize="8.5" fill={activeLayer === 5 ? "#ffffff" : "#f8fafc"} fontWeight="bold">05 SAND</text>
               </g>
             </g>
           </svg>
@@ -548,10 +791,10 @@ export function RainsinkInteractiveShowcase() {
                 <div
                   key={layer.id}
                   onClick={() => setActiveLayer(layer.id)}
-                  className={`p-4 rounded-xl border transition-all cursor-pointer ${
+                  className={`p-4 rounded-xl transition-all duration-300 cursor-pointer ${
                     isSelected
-                      ? "bg-deep-aquifer text-light-aquifer-canvas border-deep-aquifer shadow-md"
-                      : "bg-white text-deep-aquifer border-muted-aquifer/20 hover:border-moss"
+                      ? "bg-deep-aquifer text-light-aquifer-canvas border-l-4 border-l-moss border-y border-r border-moss/60 shadow-xl translate-x-1"
+                      : "bg-white text-deep-aquifer border border-muted-aquifer/20 hover:border-moss/50 hover:bg-slate-50/50"
                   }`}
                 >
                   <div className="flex items-center justify-between">

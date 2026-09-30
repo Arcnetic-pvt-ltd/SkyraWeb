@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { HarvestingCalculator } from "@/components/services/harvesting-calculator";
+import { ProductCatalogCarousel } from "@/components/services/product-catalog-carousel";
 
 export const metadata: Metadata = {
   title: "Core Water Management Solutions | Skyra",
@@ -308,8 +309,8 @@ export default function ServicesPage() {
 
       {/* Section 4: Product Integrations Catalog */}
       <section className="w-full bg-light-aquifer-canvas py-20 md:py-28">
-        <div className="max-w-5xl mx-auto px-6 lg:px-8">
-          <div className="max-w-2xl mb-12 sm:mb-16">
+        <div className="max-w-6xl mx-auto px-6 lg:px-8">
+          <div className="max-w-2xl mb-10 sm:mb-14">
             <span className="font-technical-label text-body-sm text-moss font-semibold uppercase tracking-wider block mb-3">
               Hardware &amp; Infrastructure
             </span>
@@ -317,180 +318,11 @@ export default function ServicesPage() {
               Dedicated Product Integrations
             </h2>
             <p className="font-body-large text-body-large text-muted-aquifer leading-relaxed">
-              Some jobs call for a complete system. Others just need the right piece. Our product range works both ways — as standalone tools, or built into a larger Skyra system.
+              Some jobs call for a complete system. Others just need the right piece. Our product range works both ways — as standalone tools, or built into a larger Skyra Rainsink system.
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {/* Product 1: Sloped SS 4-Chamber Filter */}
-            <div className="group bg-white rounded-xl border border-muted-aquifer/15 overflow-hidden p-6 transition-transform duration-300 hover:-translate-y-0.5 shadow-[0_4px_24px_rgba(29,41,59,0.04)] flex flex-col justify-between">
-              <div className="flex flex-col">
-                <div className="w-full aspect-[4/3] rounded-lg overflow-hidden bg-surface-container-low mb-6 relative p-4 border border-muted-aquifer/15 flex flex-col justify-center">
-                  <span className="font-technical-label text-[11px] text-moss mb-1">SLOPED 1:10 SS CHAMBER</span>
-                  <div className="grid grid-cols-4 gap-1 text-[9px] text-center font-mono font-bold text-deep-aquifer">
-                    <div className="bg-muted-aquifer/20 p-2 rounded">1. DEBRIS</div>
-                    <div className="bg-moss/20 p-2 rounded">2. SILEX</div>
-                    <div className="bg-deep-aquifer/20 p-2 rounded">3. CARBON</div>
-                    <div className="bg-sand/30 p-2 rounded">4. QUARTZ</div>
-                  </div>
-                </div>
-                <div className="flex items-center justify-between mb-2">
-                  <span className="font-technical-label text-[12px] text-moss bg-moss/10 px-2 py-0.5 rounded">
-                    SERIES SS-4
-                  </span>
-                  <span className="font-technical-label text-[12px] text-muted-aquifer">
-                    2500–5000 SQ FT
-                  </span>
-                </div>
-                <h3 className="font-headline-h3 text-[20px] text-deep-aquifer mb-3 font-semibold">
-                  Sloped SS 4-Chamber Filter System
-                </h3>
-                <p className="font-body-sm text-body-sm text-muted-aquifer mb-6 leading-relaxed">
-                  Industrial sloped stainless steel chamber on 6 legs. Uses gravity flow through Debris Sump, Silex, Activated Carbon, and Quartz Sand.
-                </p>
-              </div>
-
-              <div>
-                <div className="bg-light-aquifer-canvas p-4 rounded-lg flex flex-col gap-2 border border-muted-aquifer/15">
-                  <div className="flex justify-between items-baseline">
-                    <span className="font-body-sm text-[12px] text-muted-aquifer">Roof Capacity</span>
-                    <span className="font-metric-mono-lg text-body-primary font-bold text-deep-aquifer">
-                      5,000 <span className="text-moss text-[12px]">SQ FT</span>
-                    </span>
-                  </div>
-                  <div className="flex justify-between items-baseline">
-                    <span className="font-body-sm text-[12px] text-muted-aquifer">Chamber Material</span>
-                    <span className="font-technical-label text-body-sm text-deep-aquifer font-semibold">
-                      SS304 Sloped (1:10)
-                    </span>
-                  </div>
-                </div>
-
-                <div className="mt-4 pt-3 border-t border-muted-aquifer/15">
-                  <Link
-                    href="/contact?product=ss-4-chamber-filter"
-                    className="w-full inline-flex items-center justify-center gap-2 bg-deep-aquifer hover:bg-forest-slate text-light-aquifer-canvas font-button-text text-[13px] py-2.5 px-4 rounded-lg transition-all duration-200 font-medium"
-                  >
-                    <span>Get Quote &amp; Specs</span>
-                    <span className="material-symbols-outlined text-[16px]">request_quote</span>
-                  </Link>
-                </div>
-              </div>
-            </div>
-
-            {/* Product 2: NeeRain NRU 150 / NRN 220 */}
-            <div className="group bg-white rounded-xl border border-muted-aquifer/15 overflow-hidden p-6 transition-transform duration-300 hover:-translate-y-0.5 shadow-[0_4px_24px_rgba(29,41,59,0.04)] flex flex-col justify-between">
-              <div className="flex flex-col">
-                <div className="w-full aspect-[4/3] rounded-lg overflow-hidden bg-surface-container-low mb-6 relative p-5 flex flex-col items-center justify-center border border-muted-aquifer/15">
-                  <span className="font-technical-label text-xs text-moss font-bold mb-1">NeeRain NRU 150 / NRN 220</span>
-                  <span className="text-[11px] text-deep-aquifer/75 text-center">ABS Engineering Plastic &middot; 2-Stage Gravity Filter</span>
-                  <div className="mt-3 inline-flex items-center gap-2 text-xs text-moss font-mono">
-                    <span>Eff &gt; 95%</span>
-                    <span>&bull;</span>
-                    <span>120–150 L/MIN</span>
-                  </div>
-                </div>
-                <div className="flex items-center justify-between mb-2">
-                  <span className="font-technical-label text-[12px] text-moss bg-moss/10 px-2 py-0.5 rounded">
-                    NEERAIN SERIES
-                  </span>
-                  <span className="font-technical-label text-[12px] text-muted-aquifer">
-                    UP TO 150 M²
-                  </span>
-                </div>
-                <h3 className="font-headline-h3 text-[20px] text-deep-aquifer mb-3 font-semibold">
-                  Modular Rooftop RWH Filters
-                </h3>
-                <p className="font-body-sm text-body-sm text-muted-aquifer mb-6 leading-relaxed">
-                  Compact 2-stage gravity Y-flow filters with 200–400 Micron polymeric/SS 304 non-clogging mesh screens for clean rooftop water diversion.
-                </p>
-              </div>
-
-              <div>
-                <div className="bg-light-aquifer-canvas p-4 rounded-lg flex flex-col gap-2 border border-muted-aquifer/15">
-                  <div className="flex justify-between items-baseline">
-                    <span className="font-body-sm text-[12px] text-muted-aquifer">Filtration Rate</span>
-                    <span className="font-metric-mono-lg text-body-primary font-bold text-deep-aquifer">
-                      150 <span className="text-moss text-[12px]">L/MIN</span>
-                    </span>
-                  </div>
-                  <div className="flex justify-between items-baseline">
-                    <span className="font-body-sm text-[12px] text-muted-aquifer">Filter Elements</span>
-                    <span className="font-technical-label text-body-sm text-deep-aquifer font-semibold">
-                      200–400µm SS304 Mesh
-                    </span>
-                  </div>
-                </div>
-
-                <div className="mt-4 pt-3 border-t border-muted-aquifer/15">
-                  <Link
-                    href="/contact?product=neerain-filters"
-                    className="w-full inline-flex items-center justify-center gap-2 bg-deep-aquifer hover:bg-forest-slate text-light-aquifer-canvas font-button-text text-[13px] py-2.5 px-4 rounded-lg transition-all duration-200 font-medium"
-                  >
-                    <span>Get Quote &amp; Specs</span>
-                    <span className="material-symbols-outlined text-[16px]">request_quote</span>
-                  </Link>
-                </div>
-              </div>
-            </div>
-
-            {/* Product 3: 750 Series High-Capacity Filter */}
-            <div className="group bg-white rounded-xl border border-muted-aquifer/15 overflow-hidden p-6 transition-transform duration-300 hover:-translate-y-0.5 shadow-[0_4px_24px_rgba(29,41,59,0.04)] flex flex-col justify-between">
-              <div className="flex flex-col">
-                <div className="w-full aspect-[4/3] rounded-lg overflow-hidden bg-deep-aquifer text-light-aquifer-canvas mb-6 relative p-5 flex flex-col justify-between">
-                  <div className="flex justify-between items-center text-white/60">
-                    <span className="font-technical-label text-[11px]">750 SERIES HEAVY DUTY</span>
-                    <span className="w-2 h-2 rounded-full bg-moss animate-ping"></span>
-                  </div>
-                  <div className="flex flex-col gap-1">
-                    <span className="font-headline-h3 text-white text-lg font-bold">High-Volume Industrial Filter</span>
-                    <span className="text-[11px] text-light-aquifer-canvas/70">Designed for Large Roof Sheds &amp; Industrial Warehouses</span>
-                  </div>
-                </div>
-                <div className="flex items-center justify-between mb-2">
-                  <span className="font-technical-label text-[12px] text-moss bg-moss/10 px-2 py-0.5 rounded">
-                    SERIES 750
-                  </span>
-                  <span className="font-technical-label text-[12px] text-muted-aquifer">
-                    HIGH FLOW
-                  </span>
-                </div>
-                <h3 className="font-headline-h3 text-[20px] text-deep-aquifer mb-3 font-semibold">
-                  Skyra 750 High-Volume Filter
-                </h3>
-                <p className="font-body-sm text-body-sm text-muted-aquifer mb-6 leading-relaxed">
-                  High-capacity industrial filter variant for manufacturing sheds, raw material yards, and expansive commercial campus roofs.
-                </p>
-              </div>
-
-              <div>
-                <div className="bg-light-aquifer-canvas p-4 rounded-lg flex flex-col gap-2 border border-muted-aquifer/15">
-                  <div className="flex justify-between items-baseline">
-                    <span className="font-body-sm text-[12px] text-muted-aquifer">Target Use</span>
-                    <span className="font-metric-mono-lg text-body-primary font-bold text-deep-aquifer">
-                      Industrial <span className="text-moss text-[12px]">Campus</span>
-                    </span>
-                  </div>
-                  <div className="flex justify-between items-baseline">
-                    <span className="font-body-sm text-[12px] text-muted-aquifer">Integration</span>
-                    <span className="font-technical-label text-body-sm text-deep-aquifer font-semibold">
-                      Feeds Skyra Rainsink
-                    </span>
-                  </div>
-                </div>
-
-                <div className="mt-4 pt-3 border-t border-muted-aquifer/15">
-                  <Link
-                    href="/contact?product=750-series-filter"
-                    className="w-full inline-flex items-center justify-center gap-2 bg-deep-aquifer hover:bg-forest-slate text-light-aquifer-canvas font-button-text text-[13px] py-2.5 px-4 rounded-lg transition-all duration-200 font-medium"
-                  >
-                    <span>Get Industrial Quote</span>
-                    <span className="material-symbols-outlined text-[16px]">request_quote</span>
-                  </Link>
-                </div>
-              </div>
-            </div>
-          </div>
+          <ProductCatalogCarousel />
         </div>
       </section>
 

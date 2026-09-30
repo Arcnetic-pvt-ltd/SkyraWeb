@@ -189,16 +189,16 @@ export default function RainsinkProductPage() {
               </div>
               <ul className="space-y-3 font-body-sm text-light-aquifer-canvas/85 list-disc pl-5">
                 <li>
-                  <strong className="text-white">Slope restriction:</strong> Do not install on steep slopes of 30&deg; or higher due to landslide and soil erosion hazards.
+                  <strong className="text-white">Slope restriction:</strong>&nbsp;Do not install on steep slopes of 30&deg; or higher due to landslide and soil erosion hazards.
                 </li>
                 <li>
-                  <strong className="text-white">Safe distances:</strong> Maintain mandatory clearance from septic tanks, chemical storage zones, and building foundations.
+                  <strong className="text-white">Safe distances:</strong>&nbsp;Maintain mandatory clearance from septic tanks, chemical storage zones, and building foundations.
                 </li>
                 <li>
-                  <strong className="text-white">Hydro-geological check:</strong> Verify soil percolation capacity and unconfined aquifer depth prior to excavation.
+                  <strong className="text-white">Hydro-geological check:</strong>&nbsp;Verify soil percolation capacity and unconfined aquifer depth prior to excavation.
                 </li>
                 <li>
-                  <strong className="text-white">Statutory compliance:</strong> Align unit layout with CGWA regulations, municipal bylaws, and green building norms (LEED, IGBC, GRIHA).
+                  <strong className="text-white">Statutory compliance:</strong>&nbsp;Align unit layout with CGWA regulations, municipal bylaws, and green building norms (LEED, IGBC, GRIHA).
                 </li>
               </ul>
             </div>
