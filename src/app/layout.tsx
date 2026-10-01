@@ -9,6 +9,11 @@ export const metadata: Metadata = {
   title: "Skyra — Securing India's Water Future",
   description:
     "Closed-loop hydrological stewardship and ecological infrastructure technology. Skyra transforms rainfall into water resilience, Pan India.",
+  icons: {
+    icon: "/images/skyra-logo.png",
+    shortcut: "/images/skyra-logo.png",
+    apple: "/images/skyra-logo.png",
+  },
 };
 
 export default function RootLayout({
@@ -19,6 +24,7 @@ export default function RootLayout({
   return (
     <html lang="en" className="h-full antialiased">
       <head>
+        <link rel="icon" href="/images/skyra-logo.png" type="image/png" sizes="any" />
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link
           rel="preconnect"
