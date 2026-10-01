@@ -3,18 +3,19 @@ import Link from "next/link";
 import { RainsinkInteractiveShowcase } from "@/components/products/rainsink-interactive-showcase";
 
 export const metadata: Metadata = {
-  title: "Skyra Rainsink | Rain Percolator Unit & Aquifer Recharge System",
+  title: "Skyra Rainsink | Modular Rain Percolator & Groundwater Recharge System",
   description:
-    "Skyra Rainsink is our hero modular rain percolator unit. Engineered with concrete rings and natural multi-layer filter media, it prevents campus flooding and recharges deep aquifers for ESG compliance and water neutrality.",
+    "Skyra Rainsink is our flagship modular rain percolator unit. Fabricated with heavy-duty concrete rings and multi-stage silica and activated carbon filter media, it mitigates industrial campus flooding, recharges subterranean aquifers, and earns CGWA NOC & LEED/IGBC water credits.",
   keywords: [
     "Skyra Rainsink",
-    "Rain Percolator Unit",
+    "Modular Rain Percolator Unit",
     "Groundwater Recharge Pit",
-    "Stormwater Percolation",
+    "Stormwater Percolation System",
     "ESG Water Neutrality",
     "CGWA NOC Compliance",
     "LEED IGBC Water Credits",
-    "Flood Resilience Logistics Factories",
+    "Industrial Yard Flood Mitigation",
+    "Subterranean Aquifer Replenishment",
   ],
 };
 
@@ -27,16 +28,16 @@ export default function RainsinkProductPage() {
           <div className="inline-flex items-center gap-2.5">
             <span className="w-2.5 h-2.5 rounded-full bg-moss animate-ping"></span>
             <span className="font-technical-label text-body-sm text-moss uppercase tracking-wider font-semibold">
-              Hero Product &middot; Skyra Rainsink
+              Flagship Hydrological Engine &middot; Skyra Rainsink
             </span>
           </div>
 
           <h1 className="font-headline-hero text-headline-hero-mobile sm:text-headline-hero text-deep-aquifer tracking-tight leading-tight">
-            High-Capacity Rain Percolator Unit
+            High-Capacity Rain Percolator &amp; Groundwater Recharge Unit
           </h1>
 
           <p className="font-body-large text-body-large text-deep-aquifer/85 leading-relaxed">
-            Skyra Rainsink transforms intense surface runoff into lasting groundwater assets. Built from heavy-duty concrete rings and multi-stage natural filter media, it catches high-volume stormwater, purifies it, and actively recharges local aquifers.
+            Skyra Rainsink transforms intense monsoonal surface runoff into lasting groundwater reserves. Built from heavy-duty pre-cast RCC rings and multi-stage natural silica filter media, it intercepts high-volume stormwater, purifies suspended sediments, and actively recharges subterranean aquifers.
           </p>
 
           <div className="pt-2 flex flex-wrap items-center gap-4">
@@ -44,7 +45,7 @@ export default function RainsinkProductPage() {
               href="/contact?product=rainsink"
               className="inline-flex items-center gap-2.5 bg-deep-aquifer hover:bg-forest-slate text-light-aquifer-canvas font-button-text text-button-text px-7 py-3.5 rounded-full transition-all duration-300 shadow-md hover:shadow-lg group"
             >
-              <span>Get Site Estimate &amp; Pricing</span>
+              <span>Get Site Survey &amp; Pricing</span>
               <span className="material-symbols-outlined text-[18px] group-hover:translate-x-1 transition-transform">
                 arrow_forward
               </span>
@@ -53,7 +54,7 @@ export default function RainsinkProductPage() {
               href="#technical-specs"
               className="font-button-text text-button-text text-forest-slate hover:text-deep-aquifer transition-colors inline-flex items-center gap-2 py-3 px-4"
             >
-              <span>Technical Specifications</span>
+              <span>Engineering Specifications</span>
               <span className="material-symbols-outlined text-[18px]">
                 arrow_downward
               </span>
@@ -62,8 +63,9 @@ export default function RainsinkProductPage() {
         </div>
       </section>
 
-      {/* Interactive Dual-Pitch & System Schematic Section */}
+      {/* Interactive Value Propositions & System Schematic Section */}
       <section className="w-full bg-light-aquifer-canvas py-16 md:py-24 border-t border-muted-aquifer/15">
+
         <div className="max-w-7xl mx-auto px-6 sm:px-10 lg:px-16">
           <RainsinkInteractiveShowcase />
         </div>

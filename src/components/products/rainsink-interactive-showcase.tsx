@@ -4,7 +4,6 @@ import { useState } from "react";
 import Link from "next/link";
 
 export function RainsinkInteractiveShowcase() {
-  const [activePitch, setActivePitch] = useState<"resilience" | "esg">("resilience");
   const [activeLayer, setActiveLayer] = useState<number | null>(null);
 
   const layersInfo = [
@@ -45,113 +44,106 @@ export function RainsinkInteractiveShowcase() {
 
   return (
     <div className="flex flex-col gap-12">
-      {/* Segmented Dual-Pitch Switcher Header */}
-      <div className="flex flex-col gap-6 text-center max-w-3xl mx-auto">
+      {/* Section Header */}
+      <div className="flex flex-col gap-3 text-center max-w-3xl mx-auto">
         <span className="font-technical-label text-body-sm text-moss uppercase tracking-wider font-semibold">
-          Strategic Pitch &amp; Value Propositions
+          Strategic Campus Impact &amp; Value Delivery
         </span>
         <h2 className="font-headline-h2 text-headline-h2-mobile sm:text-headline-h2 text-deep-aquifer tracking-tight">
           How Skyra Rainsink Transforms Your Campus
         </h2>
+        <p className="font-body-primary text-body-primary text-deep-aquifer/75 max-w-2xl mx-auto">
+          Dual-action hydrological engineering designed for enterprise infrastructure — providing immediate stormwater flood resilience alongside long-term groundwater ESG stewardship.
+        </p>
+      </div>
 
-        {/* Tab Buttons */}
-        <div className="inline-flex p-1.5 rounded-full bg-surface-container border border-muted-aquifer/20 mx-auto">
-          <button
-            type="button"
-            onClick={() => setActivePitch("resilience")}
-            className={`px-6 py-2.5 rounded-full font-button-text text-body-sm transition-all duration-300 cursor-pointer ${
-              activePitch === "resilience"
-                ? "bg-deep-aquifer text-light-aquifer-canvas shadow-md"
-                : "text-deep-aquifer/75 hover:text-deep-aquifer"
-            }`}
-          >
-            1. Flood Resilience Pitch
-          </button>
-          <button
-            type="button"
-            onClick={() => setActivePitch("esg")}
-            className={`px-6 py-2.5 rounded-full font-button-text text-body-sm transition-all duration-300 cursor-pointer ${
-              activePitch === "esg"
-                ? "bg-deep-aquifer text-light-aquifer-canvas shadow-md"
-                : "text-deep-aquifer/75 hover:text-deep-aquifer"
-            }`}
-          >
-            2. ESG &amp; Stewardship Pitch
-          </button>
+      {/* Linear Value Propositions Grid */}
+      <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+        {/* Card 1: Industrial Flood Resilience */}
+        <div className="p-7 sm:p-9 rounded-3xl bg-gradient-to-br from-white via-surface-container-low/20 to-white border border-muted-aquifer/20 shadow-[0_12px_40px_rgba(29,41,59,0.06)] relative overflow-hidden flex flex-col justify-between gap-6 group hover:border-forest-slate/40 transition-all duration-300">
+          <span className="material-symbols-outlined absolute -top-4 -right-2 text-[130px] text-moss/5 select-none pointer-events-none">
+            shield
+          </span>
+
+          <div className="flex flex-col gap-4 relative z-10">
+            <div className="flex items-center justify-between flex-wrap gap-2">
+              <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-deep-aquifer/5 border border-deep-aquifer/15 text-deep-aquifer font-technical-label text-xs font-semibold">
+                <span className="material-symbols-outlined text-[16px] text-moss">shield</span>
+                <span>Industrial Flood Resilience</span>
+              </div>
+              <span className="font-technical-label text-[11px] uppercase tracking-wider text-muted-aquifer font-medium">
+                01 &middot; Stormwater Abatement
+              </span>
+            </div>
+
+            <p className="font-technical-label text-xs font-semibold text-moss uppercase tracking-wider">
+              Ideal for Logistics Hubs, Factories, Raw Material Yards &amp; Industrial Facilities
+            </p>
+
+            <p className="font-body-large text-base sm:text-[17px] text-deep-aquifer/90 leading-relaxed font-medium italic border-l-3 border-moss/50 pl-4 py-1">
+              &ldquo;Skyra safeguards your campus from intense monsoonal cloudbursts. By routing high-velocity surface runoff into structured percolation units, our system prevents yard inundation, protects ground inventory, and eliminates operational downtime.&rdquo;
+            </p>
+          </div>
+
+          <div className="pt-4 border-t border-muted-aquifer/15 grid grid-cols-1 sm:grid-cols-3 gap-3 font-body-sm relative z-10">
+            <div className="flex items-center gap-2 p-3 rounded-xl bg-surface-container-low/60 border border-muted-aquifer/15 text-deep-aquifer font-medium text-xs hover:border-moss/40 transition-colors">
+              <span className="material-symbols-outlined text-moss text-[18px]">inventory_2</span>
+              <span>Protects low-lying inventory</span>
+            </div>
+            <div className="flex items-center gap-2 p-3 rounded-xl bg-surface-container-low/60 border border-muted-aquifer/15 text-deep-aquifer font-medium text-xs hover:border-moss/40 transition-colors">
+              <span className="material-symbols-outlined text-moss text-[18px]">schedule</span>
+              <span>Eliminates yard downtime</span>
+            </div>
+            <div className="flex items-center gap-2 p-3 rounded-xl bg-surface-container-low/60 border border-muted-aquifer/15 text-deep-aquifer font-medium text-xs hover:border-moss/40 transition-colors">
+              <span className="material-symbols-outlined text-moss text-[18px]">water_damage</span>
+              <span>Absorbs cloudburst surges</span>
+            </div>
+          </div>
+        </div>
+
+        {/* Card 2: ESG & Water Stewardship */}
+        <div className="p-7 sm:p-9 rounded-3xl bg-gradient-to-br from-white via-surface-container-low/20 to-white border border-muted-aquifer/20 shadow-[0_12px_40px_rgba(29,41,59,0.06)] relative overflow-hidden flex flex-col justify-between gap-6 group hover:border-moss/50 transition-all duration-300">
+          <span className="material-symbols-outlined absolute -top-4 -right-2 text-[130px] text-moss/5 select-none pointer-events-none">
+            eco
+          </span>
+
+          <div className="flex flex-col gap-4 relative z-10">
+            <div className="flex items-center justify-between flex-wrap gap-2">
+              <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-moss/10 border border-moss/20 text-moss font-technical-label text-xs font-semibold">
+                <span className="material-symbols-outlined text-[16px]">eco</span>
+                <span>ESG &amp; Corporate Stewardship</span>
+              </div>
+              <span className="font-technical-label text-[11px] uppercase tracking-wider text-muted-aquifer font-medium">
+                02 &middot; Aquifer Replenishment
+              </span>
+            </div>
+
+            <p className="font-technical-label text-xs font-semibold text-moss uppercase tracking-wider">
+              Ideal for MNCs, IT Parks, Educational Institutions &amp; Green Building Projects
+            </p>
+
+            <p className="font-body-large text-base sm:text-[17px] text-deep-aquifer/90 leading-relaxed font-medium italic border-l-3 border-moss/50 pl-4 py-1">
+              &ldquo;Turn monsoonal precipitation into a long-term enterprise water asset. Our multi-stage silica &amp; carbon filtration units actively recharge deep soil strata, enabling facilities to meet CGWA recharge mandates and achieve verified water neutrality.&rdquo;
+            </p>
+          </div>
+
+          <div className="pt-4 border-t border-muted-aquifer/15 grid grid-cols-1 sm:grid-cols-3 gap-3 font-body-sm relative z-10">
+            <div className="flex items-center gap-2 p-3 rounded-xl bg-surface-container-low/60 border border-muted-aquifer/15 text-deep-aquifer font-medium text-xs hover:border-moss/40 transition-colors">
+              <span className="material-symbols-outlined text-moss text-[18px]">verified</span>
+              <span>CGWA NOC Compliance</span>
+            </div>
+            <div className="flex items-center gap-2 p-3 rounded-xl bg-surface-container-low/60 border border-muted-aquifer/15 text-deep-aquifer font-medium text-xs hover:border-moss/40 transition-colors">
+              <span className="material-symbols-outlined text-moss text-[18px]">workspace_premium</span>
+              <span>LEED / IGBC / GRIHA Credits</span>
+            </div>
+            <div className="flex items-center gap-2 p-3 rounded-xl bg-surface-container-low/60 border border-muted-aquifer/15 text-deep-aquifer font-medium text-xs hover:border-moss/40 transition-colors">
+              <span className="material-symbols-outlined text-moss text-[18px]">water_drop</span>
+              <span>Corporate Water Neutrality</span>
+            </div>
+          </div>
         </div>
       </div>
 
-      {/* Selected Pitch Card */}
-      <div className="p-7 sm:p-9 rounded-3xl bg-gradient-to-br from-white via-surface-container-low/25 to-white border border-muted-aquifer/20 shadow-[0_12px_40px_rgba(29,41,59,0.06)] relative overflow-hidden">
-        {/* Background Watermark Accent */}
-        <span className="material-symbols-outlined absolute -top-4 -right-2 text-[140px] text-moss/5 select-none pointer-events-none">
-          format_quote
-        </span>
-
-        {activePitch === "resilience" ? (
-          <div className="flex flex-col gap-5 relative z-10">
-            <div className="flex items-center justify-between flex-wrap gap-3">
-              <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-moss/10 border border-moss/20 text-moss font-technical-label text-xs font-semibold">
-                <span className="material-symbols-outlined text-[16px]">shield</span>
-                <span>Ideal for Logistics Hubs, Factories, Raw Material Yards &amp; Monsoonal Plants</span>
-              </div>
-              <span className="font-technical-label text-[11px] uppercase tracking-wider text-muted-aquifer font-medium">
-                Core Value Proposition 01
-              </span>
-            </div>
-
-            <p className="font-body-large text-base sm:text-[19px] text-deep-aquifer/90 leading-relaxed font-medium italic border-l-3 border-moss/40 pl-4 py-1">
-              &ldquo;Skyra safeguards your campus from intense rainfall events. By routing massive surface runoff into high-capacity percolation ponds &amp; Rainsink units, our systems prevent yard flooding, protect ground assets, and eliminate operational disruptions.&rdquo;
-            </p>
-
-            <div className="pt-4 border-t border-muted-aquifer/15 grid grid-cols-1 sm:grid-cols-3 gap-3 font-body-sm">
-              <div className="flex items-center gap-2.5 p-3 rounded-xl bg-surface-container-low/40 border border-muted-aquifer/15 text-deep-aquifer font-medium text-xs sm:text-sm hover:border-moss/40 transition-colors">
-                <span className="material-symbols-outlined text-moss text-[18px]">check_circle</span>
-                <span>Protects low-lying inventory</span>
-              </div>
-              <div className="flex items-center gap-2.5 p-3 rounded-xl bg-surface-container-low/40 border border-muted-aquifer/15 text-deep-aquifer font-medium text-xs sm:text-sm hover:border-moss/40 transition-colors">
-                <span className="material-symbols-outlined text-moss text-[18px]">check_circle</span>
-                <span>Eliminates yard downtime</span>
-              </div>
-              <div className="flex items-center gap-2.5 p-3 rounded-xl bg-surface-container-low/40 border border-muted-aquifer/15 text-deep-aquifer font-medium text-xs sm:text-sm hover:border-moss/40 transition-colors">
-                <span className="material-symbols-outlined text-moss text-[18px]">check_circle</span>
-                <span>Absorbs cloudburst surges</span>
-              </div>
-            </div>
-          </div>
-        ) : (
-          <div className="flex flex-col gap-5 relative z-10">
-            <div className="flex items-center justify-between flex-wrap gap-3">
-              <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-moss/10 border border-moss/20 text-moss font-technical-label text-xs font-semibold">
-                <span className="material-symbols-outlined text-[16px]">eco</span>
-                <span>Ideal for MNCs, IT/Tech Parks, Educational Campuses &amp; LEED/IGBC Projects</span>
-              </div>
-              <span className="font-technical-label text-[11px] uppercase tracking-wider text-muted-aquifer font-medium">
-                Core Value Proposition 02
-              </span>
-            </div>
-
-            <p className="font-body-large text-base sm:text-[19px] text-deep-aquifer/90 leading-relaxed font-medium italic border-l-3 border-moss/40 pl-4 py-1">
-              &ldquo;Skyra turns high-volume stormwater into an enterprise sustainability asset. Our dry rubble masonry percolation systems actively replenish local aquifers, helping industries meet statutory recharge mandates and progress toward water neutrality.&rdquo;
-            </p>
-
-            <div className="pt-4 border-t border-muted-aquifer/15 grid grid-cols-1 sm:grid-cols-3 gap-3 font-body-sm">
-              <div className="flex items-center gap-2.5 p-3 rounded-xl bg-surface-container-low/40 border border-muted-aquifer/15 text-deep-aquifer font-medium text-xs sm:text-sm hover:border-moss/40 transition-colors">
-                <span className="material-symbols-outlined text-moss text-[18px]">verified</span>
-                <span>CGWA NOC Compliance</span>
-              </div>
-              <div className="flex items-center gap-2.5 p-3 rounded-xl bg-surface-container-low/40 border border-muted-aquifer/15 text-deep-aquifer font-medium text-xs sm:text-sm hover:border-moss/40 transition-colors">
-                <span className="material-symbols-outlined text-moss text-[18px]">verified</span>
-                <span>LEED / IGBC / GRIHA Credits</span>
-              </div>
-              <div className="flex items-center gap-2.5 p-3 rounded-xl bg-surface-container-low/40 border border-muted-aquifer/15 text-deep-aquifer font-medium text-xs sm:text-sm hover:border-moss/40 transition-colors">
-                <span className="material-symbols-outlined text-moss text-[18px]">verified</span>
-                <span>Corporate Water Neutrality</span>
-              </div>
-            </div>
-          </div>
-        )}
-      </div>
 
       {/* Rainsink Cross-Section Diagram & Layer Explorer */}
       <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
