@@ -330,63 +330,84 @@ export default function Home() {
       </section>
 
       {/* SECTION 3: THE SKYRA OPPORTUNITY */}
-      <section className="py-24 sm:py-32 px-6 sm:px-10 lg:px-16 max-w-7xl mx-auto w-full">
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-20 items-center">
-          <div className="lg:col-span-7 flex flex-col gap-6">
-            <div className="inline-flex items-center gap-2">
-              <span className="w-1.5 h-1.5 rounded-full bg-forest-slate"></span>
-              <span className="font-body-sm text-body-sm text-secondary font-medium">
-                The Subterranean Thesis
-              </span>
+      <section className="relative w-full py-24 sm:py-32 px-6 sm:px-10 lg:px-16 overflow-hidden border-t border-muted-aquifer/15">
+        {/* Ambient background atmosphere blobs matching Sector Capabilities */}
+        <div aria-hidden="true" className="absolute -top-32 left-10 w-[600px] h-[600px] rounded-full bg-[#cde8e6]/50 blur-[130px] pointer-events-none" />
+        <div aria-hidden="true" className="absolute -bottom-32 right-10 w-[600px] h-[600px] rounded-full bg-[#ccebc8]/40 blur-[130px] pointer-events-none" />
+
+        <div className="max-w-7xl mx-auto w-full relative z-10">
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-20 items-center">
+            <div className="lg:col-span-7 flex flex-col gap-6">
+              <div className="inline-flex items-center gap-2.5">
+                <span className="w-2 h-2 rounded-full bg-moss animate-pulse"></span>
+                <span className="font-body-sm text-body-sm text-secondary font-medium uppercase tracking-wider">
+                  The Subterranean Thesis
+                </span>
+              </div>
+              <h2 className="font-headline-h2 text-headline-h2-mobile sm:text-headline-h2 text-deep-aquifer leading-snug">
+                We saw that runoff differently &mdash; not as water lost, but as water waiting to be caught.
+              </h2>
+              <p className="font-body-large text-body-large text-deep-aquifer/80 leading-relaxed">
+                Skyra designs harvesting and recharge systems that catch rainfall where it falls, and put it back where it belongs &mdash; underground, where it lasts. We’re building this across South India today, with a vision for the whole country.
+              </p>
+
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 pt-4">
+                <div className="group relative flex flex-col justify-between overflow-hidden rounded-3xl border border-muted-aquifer/15 bg-white/90 p-7 shadow-[0_8px_30px_rgb(29,41,59,0.05)] backdrop-blur-xl transition-all duration-500 hover:-translate-y-1 hover:border-moss/40 hover:shadow-2xl">
+                  <div className="flex flex-col gap-4">
+                    <div className="w-12 h-12 rounded-2xl bg-moss/10 border border-moss/20 flex items-center justify-center text-moss group-hover:bg-moss group-hover:text-white transition-all duration-300">
+                      <span className="material-symbols-outlined text-[24px]">water_drop</span>
+                    </div>
+                    <div>
+                      <h3 className="font-headline-h3 text-xl font-bold text-deep-aquifer tracking-tight group-hover:text-forest-slate transition-colors mb-2">
+                        Zero Surface Loss
+                      </h3>
+                      <p className="font-body-sm text-sm leading-relaxed text-deep-aquifer/75">
+                        Gravity-fed infiltration shafts bypass high-evaporation ground levels directly into unconfined geological strata.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+
+                <div className="group relative flex flex-col justify-between overflow-hidden rounded-3xl border border-muted-aquifer/15 bg-white/90 p-7 shadow-[0_8px_30px_rgb(29,41,59,0.05)] backdrop-blur-xl transition-all duration-500 hover:-translate-y-1 hover:border-moss/40 hover:shadow-2xl">
+                  <div className="flex flex-col gap-4">
+                    <div className="w-12 h-12 rounded-2xl bg-[#0098a6]/10 border border-[#0098a6]/20 flex items-center justify-center text-[#0098a6] group-hover:bg-[#0098a6] group-hover:text-white transition-all duration-300">
+                      <span className="material-symbols-outlined text-[24px]">filter_alt</span>
+                    </div>
+                    <div>
+                      <h3 className="font-headline-h3 text-xl font-bold text-deep-aquifer tracking-tight group-hover:text-forest-slate transition-colors mb-2">
+                        Natural Clarification
+                      </h3>
+                      <p className="font-body-sm text-sm leading-relaxed text-deep-aquifer/75">
+                        Multi-tiered biological and physical aggregate barriers purify monsoon downpours prior to bedrock entry.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
-            <h2 className="font-headline-h2 text-headline-h2-mobile sm:text-headline-h2 text-deep-aquifer leading-snug">
-              We saw that runoff differently — not as water lost, but as water waiting to be caught.
-            </h2>
-            <p className="font-body-large text-body-large text-deep-aquifer/80 leading-relaxed">
-              Skyra designs harvesting and recharge systems that catch rainfall where it falls, and put it back where it belongs — underground, where it lasts. We’re building this across South India today, with a vision for the whole country.
-            </p>
 
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 pt-4">
-              <div className="flex flex-col gap-2 p-6 rounded-2xl bg-surface-container-low/80 border border-muted-aquifer/15">
-                <span className="font-headline-h3 text-headline-h3 text-deep-aquifer">
-                  Zero Surface Loss
-                </span>
-                <p className="font-body-sm text-body-sm text-deep-aquifer/70 leading-relaxed">
-                  Gravity-fed infiltration shafts bypass high-evaporation ground levels directly into unconfined geological strata.
-                </p>
-              </div>
-              <div className="flex flex-col gap-2 p-6 rounded-2xl bg-surface-container-low/80 border border-muted-aquifer/15">
-                <span className="font-headline-h3 text-headline-h3 text-deep-aquifer">
-                  Natural Clarification
-                </span>
-                <p className="font-body-sm text-body-sm text-deep-aquifer/70 leading-relaxed">
-                  Multi-tiered biological and physical aggregate barriers purify monsoon downpours prior to bedrock entry.
-                </p>
-              </div>
-            </div>
-          </div>
+            {/* India Deployment Map Graphic */}
+            <div className="lg:col-span-5 flex justify-center">
+              <div className="w-full max-w-md p-8 rounded-3xl bg-white shadow-xl flex flex-col items-center relative overflow-hidden border border-muted-aquifer/15">
+                <div className="w-full flex items-center justify-between mb-4">
+                  <span className="font-body-sm text-body-sm text-secondary font-medium">
+                    Deployment Network
+                  </span>
+                  <span className="font-body-sm text-body-sm text-moss font-semibold">
+                    Active in Southern Corridors
+                  </span>
+                </div>
 
-          {/* India Deployment Map Graphic */}
-          <div className="lg:col-span-5 flex justify-center">
-            <div className="w-full max-w-md p-8 rounded-3xl bg-white shadow-xl flex flex-col items-center relative overflow-hidden border border-muted-aquifer/15">
-              <div className="w-full flex items-center justify-between mb-4">
-                <span className="font-body-sm text-body-sm text-secondary font-medium">
-                  Deployment Network
-                </span>
-                <span className="font-body-sm text-body-sm text-moss font-semibold">
-                  Active in Southern Corridors
-                </span>
-              </div>
+                <IndiaMapGraphic />
 
-              <IndiaMapGraphic />
-
-              <div className="w-full pt-4 mt-2 flex items-center justify-between text-deep-aquifer/75 border-t border-muted-aquifer/15">
-                <span className="font-body-sm text-body-sm">
-                  Deep Infiltration Modules
-                </span>
-                <span className="font-metric-mono-lg text-[15px] font-bold text-deep-aquifer">
-                  140+ SITES
-                </span>
+                <div className="w-full pt-4 mt-2 flex items-center justify-between text-deep-aquifer/75 border-t border-muted-aquifer/15">
+                  <span className="font-body-sm text-body-sm">
+                    Deep Infiltration Modules
+                  </span>
+                  <span className="font-metric-mono-lg text-[15px] font-bold text-deep-aquifer">
+                    140+ SITES
+                  </span>
+                </div>
               </div>
             </div>
           </div>
