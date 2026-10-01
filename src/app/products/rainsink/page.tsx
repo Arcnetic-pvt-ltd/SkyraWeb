@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { RainsinkInteractiveShowcase } from "@/components/products/rainsink-interactive-showcase";
+import { CONTACT } from "@/lib/nav";
+
 
 export const metadata: Metadata = {
   title: "Skyra Rainsink | Modular Rain Percolator & Groundwater Recharge System",
@@ -209,20 +211,73 @@ export default function RainsinkProductPage() {
       </section>
 
       {/* Bottom CTA Card */}
-      <section className="w-full bg-light-aquifer-canvas py-16 md:py-20 border-t border-muted-aquifer/15">
-        <div className="max-w-4xl mx-auto px-6 text-center flex flex-col items-center gap-6">
-          <h2 className="font-headline-h2 text-deep-aquifer">Ready to Equip Your Campus with Skyra Rainsink?</h2>
-          <p className="font-body-large text-deep-aquifer/80 max-w-2xl">
-            Our hydrological engineers conduct site surveys, compute runoff volumes, and design custom Rainsink layouts tailored to your facility's ESG goals and flood prevention needs.
-          </p>
-          <Link
-            href="/contact?product=rainsink"
-            className="bg-deep-aquifer hover:bg-forest-slate text-light-aquifer-canvas font-button-text px-8 py-4 rounded-full transition-all duration-300 shadow-md hover:shadow-lg"
-          >
-            Request Site Survey &amp; Layout Plan
-          </Link>
+      <section className="w-full bg-light-aquifer-canvas py-12 md:py-16 border-t border-muted-aquifer/15">
+        <div className="max-w-5xl mx-auto px-6 sm:px-8">
+          <div className="relative rounded-2xl bg-deep-aquifer text-light-aquifer-canvas p-7 sm:p-9 border border-white/10 shadow-xl overflow-hidden">
+            {/* Subtle Ambient Glow */}
+            <div className="absolute -top-24 -right-24 w-64 h-64 rounded-full bg-moss/15 blur-3xl pointer-events-none" />
+
+            <div className="relative z-10 flex flex-col md:flex-row items-start md:items-center justify-between gap-6 sm:gap-8">
+              {/* Content Column */}
+              <div className="flex flex-col gap-3 max-w-2xl text-left">
+                <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/10 border border-white/15 w-fit">
+                  <span className="w-1.5 h-1.5 rounded-full bg-moss animate-pulse" />
+                  <span className="font-technical-label text-[11px] uppercase tracking-wider text-moss font-semibold">
+                    Fast-Track Site Consultation
+                  </span>
+                </div>
+
+                <h2 className="font-headline-h2 text-2xl sm:text-3xl text-white tracking-tight leading-snug font-bold">
+                  Ready to Equip Your Campus with Skyra Rainsink?
+                </h2>
+
+                <p className="font-body-primary text-sm sm:text-base text-light-aquifer-canvas/80 leading-relaxed font-light">
+                  Our civil hydrologists analyze site topography, model peak monsoonal runoff, and deliver a turn-key Rainsink layout plan tailored to your ESG goals and flood prevention targets.
+                </p>
+
+                {/* Inline Deliverables Pills */}
+                <div className="pt-1 flex flex-wrap items-center gap-2 text-xs text-light-aquifer-canvas/75">
+                  <span className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-md bg-white/5 border border-white/10">
+                    <span className="material-symbols-outlined text-moss text-[14px]">analytics</span>
+                    Runoff Modeling
+                  </span>
+                  <span className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-md bg-white/5 border border-white/10">
+                    <span className="material-symbols-outlined text-moss text-[14px]">architecture</span>
+                    CAD Layout Blueprint
+                  </span>
+                  <span className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-md bg-white/5 border border-white/10">
+                    <span className="material-symbols-outlined text-moss text-[14px]">verified_user</span>
+                    CGWA Credits
+                  </span>
+                </div>
+              </div>
+
+              {/* Action Column */}
+              <div className="flex flex-col sm:flex-row md:flex-col gap-3 shrink-0 w-full sm:w-auto">
+                <Link
+                  href="/contact?product=rainsink"
+                  className="inline-flex items-center justify-center gap-2 bg-moss hover:bg-moss/90 text-deep-aquifer font-button-text text-sm font-bold px-6 py-3.5 rounded-xl transition-all duration-300 shadow-md hover:shadow-moss/20 group cursor-pointer whitespace-nowrap"
+                >
+                  <span>Request Site Survey</span>
+                  <span className="material-symbols-outlined text-[18px] group-hover:translate-x-0.5 transition-transform">
+                    arrow_forward
+                  </span>
+                </Link>
+
+                <a
+                  href={`tel:${CONTACT.phone}`}
+                  className="inline-flex items-center justify-center gap-2 bg-white/10 hover:bg-white/15 text-white font-button-text text-xs font-medium px-5 py-2.5 rounded-xl transition-colors border border-white/15 whitespace-nowrap"
+                >
+                  <span className="material-symbols-outlined text-[15px]">call</span>
+                  <span>{CONTACT.phoneDisplay}</span>
+                </a>
+              </div>
+            </div>
+          </div>
         </div>
       </section>
+
+
     </div>
   );
 }
