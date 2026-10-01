@@ -209,17 +209,90 @@ export function ProductCatalogCarousel() {
         onMouseEnter={() => setIsPaused(true)}
         onMouseLeave={() => setIsPaused(false)}
       >
-        {/* Desktop Grid Layout: Hero Spotlight (7 Cols) + Static Catalog Overview (5 Cols) */}
+        {/* Desktop Grid Layout: Static Catalog Overview (5 Cols on Left) + Hero Spotlight Card (7 Cols on Right) */}
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-stretch">
-          {/* Active Highlighted Product Hero Card (7 Cols) wrapped in AnimatePresence */}
+          {/* Static Side Stack of Other Products in Catalog (5 Cols - Left) */}
+          <div className="lg:col-span-5 flex flex-col gap-4">
+            <span className="font-technical-label text-xs uppercase tracking-wider text-muted-aquifer font-semibold">
+              Catalog Overview ({total} Models)
+            </span>
+
+            <div className="flex flex-col gap-3">
+              {filteredProducts.map((prod, idx) => {
+                const isSelected = idx === currentIndex;
+                return (
+                  <div
+                    key={prod.id}
+                    onClick={() => setCurrentIndex(idx)}
+                    className={`p-4 rounded-xl border transition-all duration-300 cursor-pointer flex items-center gap-4 group ${
+                      isSelected
+                        ? "bg-deep-aquifer text-white border-moss/60 shadow-md translate-x-1 border-l-4 border-l-moss"
+                        : "bg-white text-deep-aquifer border-muted-aquifer/20 hover:border-moss/40 hover:bg-slate-50/50"
+                    }`}
+                  >
+                    {/* Thumbnail Image */}
+                    <div className="relative w-16 h-16 rounded-lg overflow-hidden shrink-0 bg-surface-container-low border border-muted-aquifer/15">
+                      <Image
+                        src={prod.image}
+                        alt={prod.title}
+                        fill
+                        sizes="64px"
+                        className="object-cover"
+                      />
+                    </div>
+
+                    <div className="flex flex-col flex-1 min-w-0">
+                      <div className="flex items-center gap-2">
+                        <span
+                          className={`font-technical-label text-[10px] px-2 py-0.5 rounded font-semibold ${
+                            isSelected
+                              ? "bg-moss text-deep-aquifer"
+                              : "bg-moss/10 text-moss"
+                          }`}
+                        >
+                          {prod.series}
+                        </span>
+                        <span
+                          className={`font-mono text-[10px] truncate ${
+                            isSelected ? "text-white/70" : "text-muted-aquifer"
+                          }`}
+                        >
+                          {prod.capacityTag}
+                        </span>
+                      </div>
+                      <h4
+                        className={`font-bold text-sm truncate mt-1 ${
+                          isSelected ? "text-white" : "text-deep-aquifer"
+                        }`}
+                      >
+                        {prod.title}
+                      </h4>
+                    </div>
+
+                    <span
+                      className={`material-symbols-outlined text-lg transition-transform ${
+                        isSelected
+                          ? "text-moss translate-x-1"
+                          : "text-muted-aquifer/40 group-hover:text-deep-aquifer"
+                      }`}
+                    >
+                      arrow_forward_ios
+                    </span>
+                  </div>
+                );
+              })}
+            </div>
+          </div>
+
+          {/* Active Highlighted Product Hero Card (7 Cols - Right) wrapped in AnimatePresence */}
           <div className="lg:col-span-7 min-h-[500px] relative flex flex-col">
             <AnimatePresence mode="wait">
               {filteredProducts[currentIndex] && (
                 <motion.div
                   key={`${activeCategory}-${currentIndex}`}
-                  initial={{ opacity: 0, x: 20 }}
+                  initial={{ opacity: 0, x: -20 }}
                   animate={{ opacity: 1, x: 0 }}
-                  exit={{ opacity: 0, x: -20 }}
+                  exit={{ opacity: 0, x: 20 }}
                   transition={{ duration: 0.3, ease: "easeOut" }}
                   className="w-full bg-white rounded-2xl border border-muted-aquifer/20 overflow-hidden shadow-[0_8px_30px_rgb(29,41,59,0.06)] flex flex-col group h-full justify-between"
                 >
@@ -388,79 +461,6 @@ export function ProductCatalogCarousel() {
                 </motion.div>
               )}
             </AnimatePresence>
-          </div>
-
-          {/* Static Side Stack of Other Products in Catalog (5 Cols) - Never disappears or unmounts */}
-          <div className="lg:col-span-5 flex flex-col gap-4">
-            <span className="font-technical-label text-xs uppercase tracking-wider text-muted-aquifer font-semibold">
-              Catalog Overview ({total} Models)
-            </span>
-
-            <div className="flex flex-col gap-3">
-              {filteredProducts.map((prod, idx) => {
-                const isSelected = idx === currentIndex;
-                return (
-                  <div
-                    key={prod.id}
-                    onClick={() => setCurrentIndex(idx)}
-                    className={`p-4 rounded-xl border transition-all duration-300 cursor-pointer flex items-center gap-4 group ${
-                      isSelected
-                        ? "bg-deep-aquifer text-white border-moss/60 shadow-md translate-x-1 border-l-4 border-l-moss"
-                        : "bg-white text-deep-aquifer border-muted-aquifer/20 hover:border-moss/40 hover:bg-slate-50/50"
-                    }`}
-                  >
-                    {/* Thumbnail Image */}
-                    <div className="relative w-16 h-16 rounded-lg overflow-hidden shrink-0 bg-surface-container-low border border-muted-aquifer/15">
-                      <Image
-                        src={prod.image}
-                        alt={prod.title}
-                        fill
-                        sizes="64px"
-                        className="object-cover"
-                      />
-                    </div>
-
-                    <div className="flex flex-col flex-1 min-w-0">
-                      <div className="flex items-center gap-2">
-                        <span
-                          className={`font-technical-label text-[10px] px-2 py-0.5 rounded font-semibold ${
-                            isSelected
-                              ? "bg-moss text-deep-aquifer"
-                              : "bg-moss/10 text-moss"
-                          }`}
-                        >
-                          {prod.series}
-                        </span>
-                        <span
-                          className={`font-mono text-[10px] truncate ${
-                            isSelected ? "text-white/70" : "text-muted-aquifer"
-                          }`}
-                        >
-                          {prod.capacityTag}
-                        </span>
-                      </div>
-                      <h4
-                        className={`font-bold text-sm truncate mt-1 ${
-                          isSelected ? "text-white" : "text-deep-aquifer"
-                        }`}
-                      >
-                        {prod.title}
-                      </h4>
-                    </div>
-
-                    <span
-                      className={`material-symbols-outlined text-lg transition-transform ${
-                        isSelected
-                          ? "text-moss translate-x-1"
-                          : "text-muted-aquifer/40 group-hover:text-deep-aquifer"
-                      }`}
-                    >
-                      arrow_forward_ios
-                    </span>
-                  </div>
-                );
-              })}
-            </div>
           </div>
         </div>
       </div>
