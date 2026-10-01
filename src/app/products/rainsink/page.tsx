@@ -74,124 +74,165 @@ export default function RainsinkProductPage() {
       </section>
 
       {/* Technical Specifications Grid */}
-      <section id="technical-specs" className="w-full bg-surface-container-low py-20 md:py-28 border-t border-muted-aquifer/15">
-        <div className="max-w-7xl mx-auto px-6 sm:px-10 lg:px-16">
+      <section id="technical-specs" className="relative w-full bg-light-aquifer-canvas py-20 md:py-28 overflow-hidden border-t border-muted-aquifer/15">
+        {/* Ambient background atmosphere blobs matching Sector Capabilities */}
+        <div aria-hidden="true" className="absolute -top-32 right-10 w-[600px] h-[600px] rounded-full bg-[#cde8e6]/60 blur-[130px] pointer-events-none" />
+        <div aria-hidden="true" className="absolute -bottom-32 left-10 w-[600px] h-[600px] rounded-full bg-[#ccebc8]/50 blur-[130px] pointer-events-none" />
+
+        <div className="max-w-7xl mx-auto px-6 sm:px-10 lg:px-16 relative z-10">
           <div className="flex flex-col gap-4 mb-12 max-w-2xl">
-            <span className="font-technical-label text-body-sm text-moss uppercase tracking-wider font-semibold">
-              Unit Composition &amp; Hardware
-            </span>
+            <div className="inline-flex items-center gap-2.5">
+              <span className="w-2 h-2 rounded-full bg-moss animate-pulse"></span>
+              <span className="font-technical-label text-body-sm text-moss uppercase tracking-wider font-semibold">
+                Unit Composition &amp; Hardware
+              </span>
+            </div>
             <h2 className="font-headline-h2 text-headline-h2-mobile sm:text-headline-h2 text-deep-aquifer tracking-tight">
               Rainsink Engineering Specifications
             </h2>
-            <p className="font-body-primary text-body-primary text-deep-aquifer/80">
+            <p className="font-body-primary text-body-primary text-deep-aquifer/80 leading-relaxed">
               Each Skyra Rainsink is fabricated to exact industrial standards for rapid site installation, high structural integrity, and minimal maintenance.
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            <div className="p-6 rounded-2xl bg-white border border-muted-aquifer/20 shadow-sm flex flex-col gap-3">
-              <div className="w-10 h-10 rounded-xl bg-moss/10 flex items-center justify-center text-moss">
-                <span className="material-symbols-outlined">view_in_ar</span>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
+            <div className="group relative flex flex-col justify-between overflow-hidden rounded-3xl border border-muted-aquifer/15 bg-white/90 p-7 shadow-[0_8px_30px_rgb(29,41,59,0.05)] backdrop-blur-xl transition-all duration-500 hover:-translate-y-1 hover:border-moss/40 hover:shadow-2xl">
+              <div className="flex flex-col gap-4">
+                <div className="w-12 h-12 rounded-2xl bg-moss/10 border border-moss/20 flex items-center justify-center text-moss group-hover:bg-moss group-hover:text-white transition-all duration-300">
+                  <span className="material-symbols-outlined text-[24px]">view_in_ar</span>
+                </div>
+                <h3 className="font-headline-h3 text-xl font-bold text-deep-aquifer tracking-tight group-hover:text-forest-slate transition-colors">
+                  Concrete Ring Shaft
+                </h3>
+                <p className="font-body-sm text-sm leading-relaxed text-deep-aquifer/75">
+                  6 heavy-duty pre-cast RCC/concrete rings (1 meter outer diameter), stacked vertically to form a high-capacity percolation column.
+                </p>
               </div>
-              <h3 className="font-headline-h3 text-deep-aquifer font-bold">Concrete Ring Shaft</h3>
-              <p className="font-body-sm text-deep-aquifer/75">
-                6 heavy-duty pre-cast RCC/concrete rings (1 meter outer diameter), stacked vertically to form a high-capacity percolation column.
-              </p>
             </div>
 
-            <div className="p-6 rounded-2xl bg-white border border-muted-aquifer/20 shadow-sm flex flex-col gap-3">
-              <div className="w-10 h-10 rounded-xl bg-moss/10 flex items-center justify-center text-moss">
-                <span className="material-symbols-outlined">filter_alt</span>
+            <div className="group relative flex flex-col justify-between overflow-hidden rounded-3xl border border-muted-aquifer/15 bg-white/90 p-7 shadow-[0_8px_30px_rgb(29,41,59,0.05)] backdrop-blur-xl transition-all duration-500 hover:-translate-y-1 hover:border-moss/40 hover:shadow-2xl">
+              <div className="flex flex-col gap-4">
+                <div className="w-12 h-12 rounded-2xl bg-[#0098a6]/10 border border-[#0098a6]/20 flex items-center justify-center text-[#0098a6] group-hover:bg-[#0098a6] group-hover:text-white transition-all duration-300">
+                  <span className="material-symbols-outlined text-[24px]">filter_alt</span>
+                </div>
+                <h3 className="font-headline-h3 text-xl font-bold text-deep-aquifer tracking-tight group-hover:text-forest-slate transition-colors">
+                  Top Filter Layer (Silex)
+                </h3>
+                <p className="font-body-sm text-sm leading-relaxed text-deep-aquifer/75">
+                  150 to 200 kg of graded medium silex silica gravel. Traps initial coarse sediments, leaf debris, and suspended solids.
+                </p>
               </div>
-              <h3 className="font-headline-h3 text-deep-aquifer font-bold">Top Filter Layer (Silex)</h3>
-              <p className="font-body-sm text-deep-aquifer/75">
-                150 to 200 kg of graded medium silex silica gravel. Traps initial coarse sediments, leaf debris, and suspended solids.
-              </p>
             </div>
 
-            <div className="p-6 rounded-2xl bg-white border border-muted-aquifer/20 shadow-sm flex flex-col gap-3">
-              <div className="w-10 h-10 rounded-xl bg-moss/10 flex items-center justify-center text-moss">
-                <span className="material-symbols-outlined">cleaning_services</span>
+            <div className="group relative flex flex-col justify-between overflow-hidden rounded-3xl border border-muted-aquifer/15 bg-white/90 p-7 shadow-[0_8px_30px_rgb(29,41,59,0.05)] backdrop-blur-xl transition-all duration-500 hover:-translate-y-1 hover:border-moss/40 hover:shadow-2xl">
+              <div className="flex flex-col gap-4">
+                <div className="w-12 h-12 rounded-2xl bg-sky-600/10 border border-sky-600/20 flex items-center justify-center text-sky-600 group-hover:bg-sky-600 group-hover:text-white transition-all duration-300">
+                  <span className="material-symbols-outlined text-[24px]">cleaning_services</span>
+                </div>
+                <h3 className="font-headline-h3 text-xl font-bold text-deep-aquifer tracking-tight group-hover:text-forest-slate transition-colors">
+                  Active Adsorption Layer
+                </h3>
+                <p className="font-body-sm text-sm leading-relaxed text-deep-aquifer/75">
+                  2 bags (35 to 50 kg) of high-surface-area granular activated carbon / charcoal. Adsorbs organic impurities, odor, and color compounds.
+                </p>
               </div>
-              <h3 className="font-headline-h3 text-deep-aquifer font-bold">Active Adsorption Layer</h3>
-              <p className="font-body-sm text-deep-aquifer/75">
-                2 bags (35 to 50 kg) of high-surface-area granular activated carbon / charcoal. Adsorbs organic impurities, odor, and color compounds.
-              </p>
             </div>
 
-            <div className="p-6 rounded-2xl bg-white border border-muted-aquifer/20 shadow-sm flex flex-col gap-3">
-              <div className="w-10 h-10 rounded-xl bg-moss/10 flex items-center justify-center text-moss">
-                <span className="material-symbols-outlined">waves</span>
+            <div className="group relative flex flex-col justify-between overflow-hidden rounded-3xl border border-muted-aquifer/15 bg-white/90 p-7 shadow-[0_8px_30px_rgb(29,41,59,0.05)] backdrop-blur-xl transition-all duration-500 hover:-translate-y-1 hover:border-moss/40 hover:shadow-2xl">
+              <div className="flex flex-col gap-4">
+                <div className="w-12 h-12 rounded-2xl bg-emerald-600/10 border border-emerald-600/20 flex items-center justify-center text-emerald-600 group-hover:bg-emerald-600 group-hover:text-white transition-all duration-300">
+                  <span className="material-symbols-outlined text-[24px]">waves</span>
+                </div>
+                <h3 className="font-headline-h3 text-xl font-bold text-deep-aquifer tracking-tight group-hover:text-forest-slate transition-colors">
+                  Base Sand &amp; Silex Bed
+                </h3>
+                <p className="font-body-sm text-sm leading-relaxed text-deep-aquifer/75">
+                  Small silex gravel layer layered over a deep coarse sand base to polish filtrate before soil zone percolation.
+                </p>
               </div>
-              <h3 className="font-headline-h3 text-deep-aquifer font-bold">Base Sand &amp; Silex Bed</h3>
-              <p className="font-body-sm text-deep-aquifer/75">
-                Small silex gravel layer layered over a deep coarse sand base to polish filtrate before soil zone percolation.
-              </p>
             </div>
 
-            <div className="p-6 rounded-2xl bg-white border border-muted-aquifer/20 shadow-sm flex flex-col gap-3">
-              <div className="w-10 h-10 rounded-xl bg-moss/10 flex items-center justify-center text-moss">
-                <span className="material-symbols-outlined">tune</span>
+            <div className="group relative flex flex-col justify-between overflow-hidden rounded-3xl border border-muted-aquifer/15 bg-white/90 p-7 shadow-[0_8px_30px_rgb(29,41,59,0.05)] backdrop-blur-xl transition-all duration-500 hover:-translate-y-1 hover:border-moss/40 hover:shadow-2xl">
+              <div className="flex flex-col gap-4">
+                <div className="w-12 h-12 rounded-2xl bg-teal-600/10 border border-teal-600/20 flex items-center justify-center text-teal-600 group-hover:bg-teal-600 group-hover:text-white transition-all duration-300">
+                  <span className="material-symbols-outlined text-[24px]">tune</span>
+                </div>
+                <h3 className="font-headline-h3 text-xl font-bold text-deep-aquifer tracking-tight group-hover:text-forest-slate transition-colors">
+                  Overflow &amp; Inspection
+                </h3>
+                <p className="font-body-sm text-sm leading-relaxed text-deep-aquifer/75">
+                  Equipped with a high-flow PVC overflow bypass, reinforced concrete top slab, and cast-iron/concrete manhole cover for flush access.
+                </p>
               </div>
-              <h3 className="font-headline-h3 text-deep-aquifer font-bold">Overflow &amp; Inspection</h3>
-              <p className="font-body-sm text-deep-aquifer/75">
-                Equipped with a high-flow PVC overflow bypass, reinforced concrete top slab, and cast-iron/concrete manhole cover for flush access.
-              </p>
             </div>
 
-            <div className="p-6 rounded-2xl bg-white border border-muted-aquifer/20 shadow-sm flex flex-col gap-3">
-              <div className="w-10 h-10 rounded-xl bg-moss/10 flex items-center justify-center text-moss">
-                <span className="material-symbols-outlined">verified</span>
+            <div className="group relative flex flex-col justify-between overflow-hidden rounded-3xl border border-muted-aquifer/15 bg-white/90 p-7 shadow-[0_8px_30px_rgb(29,41,59,0.05)] backdrop-blur-xl transition-all duration-500 hover:-translate-y-1 hover:border-moss/40 hover:shadow-2xl">
+              <div className="flex flex-col gap-4">
+                <div className="w-12 h-12 rounded-2xl bg-indigo-600/10 border border-indigo-600/20 flex items-center justify-center text-indigo-600 group-hover:bg-indigo-600 group-hover:text-white transition-all duration-300">
+                  <span className="material-symbols-outlined text-[24px]">verified</span>
+                </div>
+                <h3 className="font-headline-h3 text-xl font-bold text-deep-aquifer tracking-tight group-hover:text-forest-slate transition-colors">
+                  Maintenance Cycle
+                </h3>
+                <p className="font-body-sm text-sm leading-relaxed text-deep-aquifer/75">
+                  Ultra-low maintenance: inspect Chamber 1 after heavy monsoons, flush drain valves, rinse silex bed annually, and replace carbon every 1–2 years.
+                </p>
               </div>
-              <h3 className="font-headline-h3 text-deep-aquifer font-bold">Maintenance Cycle</h3>
-              <p className="font-body-sm text-deep-aquifer/75">
-                Ultra-low maintenance: inspect Chamber 1 after heavy monsoons, flush drain valves, rinse silex bed annually, and replace carbon every 1–2 years.
-              </p>
             </div>
           </div>
         </div>
       </section>
 
       {/* Deployment & Installation Density Guidelines */}
-      <section className="w-full bg-white py-20 md:py-28 border-t border-muted-aquifer/15">
-        <div className="max-w-7xl mx-auto px-6 sm:px-10 lg:px-16">
+      <section className="relative w-full bg-light-aquifer-canvas py-20 md:py-28 overflow-hidden border-t border-muted-aquifer/15">
+        {/* Ambient background atmosphere blobs matching Sector Capabilities */}
+        <div aria-hidden="true" className="absolute -top-32 left-10 w-[600px] h-[600px] rounded-full bg-[#cde8e6]/60 blur-[130px] pointer-events-none" />
+        <div aria-hidden="true" className="absolute -bottom-32 right-10 w-[600px] h-[600px] rounded-full bg-[#ccebc8]/50 blur-[130px] pointer-events-none" />
+
+        <div className="max-w-7xl mx-auto px-6 sm:px-10 lg:px-16 relative z-10">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
             <div className="lg:col-span-6 flex flex-col gap-6">
-              <span className="font-technical-label text-body-sm text-moss uppercase tracking-wider font-semibold">
-                Deployment Guidelines
-              </span>
+              <div className="inline-flex items-center gap-2.5">
+                <span className="w-2 h-2 rounded-full bg-moss animate-pulse"></span>
+                <span className="font-technical-label text-body-sm text-moss uppercase tracking-wider font-semibold">
+                  Deployment Guidelines
+                </span>
+              </div>
               <h2 className="font-headline-h2 text-headline-h2-mobile sm:text-headline-h2 text-deep-aquifer tracking-tight">
                 Where &amp; How to Deploy Skyra Rainsink
               </h2>
               <div className="space-y-4 font-body-primary text-deep-aquifer/85">
-                <div className="p-5 rounded-xl bg-surface-container-low border border-muted-aquifer/20">
+                <div className="p-6 rounded-2xl bg-white/90 border border-muted-aquifer/20 shadow-sm backdrop-blur-md">
                   <h3 className="font-bold text-deep-aquifer text-lg mb-1 flex items-center gap-2">
                     <span className="material-symbols-outlined text-moss">water_drop</span>
                     Near Existing Open Wells &amp; Borewells
                   </h3>
-                  <p className="text-body-sm text-deep-aquifer/75">
+                  <p className="text-body-sm text-deep-aquifer/75 leading-relaxed">
                     Position Rainsink units 2 to 5 meters from existing wells. Rainwater filters naturally through surrounding soil strata before entering the well, restoring yield and water quality.
                   </p>
                 </div>
 
-                <div className="p-5 rounded-xl bg-surface-container-low border border-muted-aquifer/20">
+                <div className="p-6 rounded-2xl bg-white/90 border border-muted-aquifer/20 shadow-sm backdrop-blur-md">
                   <h3 className="font-bold text-deep-aquifer text-lg mb-1 flex items-center gap-2">
                     <span className="material-symbols-outlined text-moss">landscape</span>
                     1-Acre Industrial or Institutional Campus
                   </h3>
-                  <p className="text-body-sm text-deep-aquifer/75">
+                  <p className="text-body-sm text-deep-aquifer/75 leading-relaxed">
                     Install 7 to 15 Rainsink units distributed across a 1-acre plot on terrain with slopes under 30&deg;. This network captures high-intensity runoff, prevents localized yard flooding, and lifts water tables across the entire site.
                   </p>
                 </div>
               </div>
             </div>
 
-            <div className="lg:col-span-6 bg-deep-aquifer text-light-aquifer-canvas p-8 sm:p-10 rounded-3xl border border-white/10 shadow-xl flex flex-col gap-6">
-              <div className="flex items-center gap-3">
+            <div className="lg:col-span-6 bg-gradient-to-br from-[#0a1628] via-deep-aquifer to-[#060e1a] text-light-aquifer-canvas p-8 sm:p-10 rounded-3xl border border-white/10 shadow-2xl flex flex-col gap-6 relative overflow-hidden">
+              {/* Subtle inner ambient glow */}
+              <div className="absolute -top-20 -right-20 w-48 h-48 rounded-full bg-moss/20 blur-3xl pointer-events-none" />
+
+              <div className="flex items-center gap-3 relative z-10">
                 <span className="material-symbols-outlined text-moss text-3xl">warning</span>
                 <h3 className="font-headline-h3 text-white">Pre-Installation Safety Rules</h3>
               </div>
-              <ul className="space-y-3 font-body-sm text-light-aquifer-canvas/85 list-disc pl-5">
+              <ul className="space-y-3 font-body-sm text-light-aquifer-canvas/85 list-disc pl-5 relative z-10 leading-relaxed">
                 <li>
                   <strong className="text-white">Slope restriction:</strong>&nbsp;Do not install on steep slopes of 30&deg; or higher due to landslide and soil erosion hazards.
                 </li>
