@@ -27,7 +27,7 @@ export function OurStory() {
               <p>
                 Instead of letting torrential monsoon rains wash away into
                 overwhelmed drains and ocean runoff while water tables dry up,
-                {"SkyRa's"} decentralized engineered systems capture, filter,
+                {"Skyra's"} decentralized engineered systems capture, filter,
                 and inject purity back into the subterranean aquifers.
               </p>
               <p>
@@ -87,7 +87,7 @@ export function OurStory() {
                 </div>
                 <div className="rounded-lg bg-slate-950/85 p-4 text-white backdrop-blur-md">
                   <span className="text-xs font-bold uppercase tracking-widest text-brand-green">
-                    SkyRa Mandate
+                    Skyra Mandate
                   </span>
                   <p className="mt-1 text-lg font-bold">Zero</p>
                   <p className="text-xs text-slate-300">Summer Tanker Dependency</p>

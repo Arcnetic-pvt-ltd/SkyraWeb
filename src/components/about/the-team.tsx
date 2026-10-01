@@ -18,7 +18,7 @@ const TEAM = [
     tagTone: "bg-brand-teal",
     name: "Jane Doe",
     role: "Co-Founder & Chief Executive Officer",
-    bio: "With over a decade of experience in sustainable business scaling, Jane leads the strategic vision of SkyRa, ensuring our solutions reach the communities that need them most.",
+    bio: "With over a decade of experience in sustainable business scaling, Jane leads the strategic vision of Skyra, ensuring our solutions reach the communities that need them most.",
     FooterIcon: CheckCircleIcon,
     footer: "Policy & Strategic Scalability",
   },
@@ -64,7 +64,7 @@ export function TheTeam() {
             The Team Behind the Vision
           </h2>
           <p className="mt-3 text-lg leading-relaxed text-slate-400">
-            SkyRa is led by a team of passionate engineers, sustainability
+            Skyra is led by a team of passionate engineers, sustainability
             experts, and innovators dedicated to building a water-secure
             future.
           </p>

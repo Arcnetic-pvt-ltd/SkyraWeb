@@ -25,7 +25,7 @@ export function ContactHero() {
             aria-hidden="true"
             className="size-2 animate-pulse rounded-full bg-emerald-400"
           />
-          Contact SkyRa • From Sky, To Life
+          Contact Skyra • From Sky, To Life
         </div>
 
         <h1 className="text-4xl font-bold leading-tight tracking-tight text-white md:text-5xl lg:text-6xl">

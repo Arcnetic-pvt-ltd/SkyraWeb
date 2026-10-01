@@ -29,121 +29,137 @@ function RetentionChart() {
       <line stroke="rgba(255,255,255,0.08)" strokeDasharray="3,3" x1="0" x2="300" y1="60" y2="60" />
       <line stroke="rgba(255,255,255,0.08)" strokeDasharray="3,3" x1="0" x2="300" y1="100" y2="100" />
 
+      {/* Retention Capacity Gradient & Path */}
       <motion.path
-        d="M 0 100 Q 50 85, 100 70 T 200 35 T 300 15 L 300 120 L 0 120 Z"
+        d="M 0 100 C 80 80, 170 45, 300 15 L 300 120 L 0 120 Z"
         fill="url(#cyanGradient)"
+        initial={{ opacity: 0 }}
+        animate={{ opacity: inView ? 1 : 0 }}
+        transition={{ duration: 0.8, delay: 0.4 }}
+      />
+      <motion.path
+        d="M 0 100 C 80 80, 170 45, 300 15"
+        fill="none"
+        stroke="#0098a6"
+        strokeLinecap="round"
+        strokeWidth="2.5"
+        initial={{ pathLength: 0, opacity: 0 }}
+        animate={{ pathLength: inView ? 1 : 0, opacity: inView ? 1 : 0 }}
+        transition={{ pathLength: { duration: 1.2, ease: "easeInOut" }, opacity: { duration: 0.2 } }}
+      />
+
+      {/* Aquifer Rebound Gradient & Path */}
+      <motion.path
+        d="M 0 115 C 80 98, 170 65, 300 30 L 300 120 L 0 120 Z"
+        fill="url(#greenGradient)"
         initial={{ opacity: 0 }}
         animate={{ opacity: inView ? 1 : 0 }}
         transition={{ duration: 0.8, delay: 0.6 }}
       />
       <motion.path
-        d="M 0 100 Q 50 85, 100 70 T 200 35 T 300 15"
-        fill="none"
-        stroke="#0098a6"
-        strokeLinecap="round"
-        strokeWidth="2.5"
-        initial={{ pathLength: 0 }}
-        animate={{ pathLength: inView ? 1 : 0 }}
-        transition={{ duration: 1.2, ease: "easeOut" }}
-      />
-
-      <motion.path
-        d="M 0 115 Q 60 105, 120 80 T 220 50 T 300 30 L 300 120 L 0 120 Z"
-        fill="url(#greenGradient)"
-        initial={{ opacity: 0 }}
-        animate={{ opacity: inView ? 1 : 0 }}
-        transition={{ duration: 0.8, delay: 0.8 }}
-      />
-      <motion.path
-        d="M 0 115 Q 60 105, 120 80 T 220 50 T 300 30"
+        d="M 0 115 C 80 98, 170 65, 300 30"
         fill="none"
         stroke="#10b981"
         strokeLinecap="round"
         strokeWidth="2.5"
-        initial={{ pathLength: 0 }}
-        animate={{ pathLength: inView ? 1 : 0 }}
-        transition={{ duration: 1.2, delay: 0.2, ease: "easeOut" }}
+        initial={{ pathLength: 0, opacity: 0 }}
+        animate={{ pathLength: inView ? 1 : 0, opacity: inView ? 1 : 0 }}
+        transition={{ pathLength: { duration: 1.2, delay: 0.2, ease: "easeInOut" }, opacity: { duration: 0.2, delay: 0.2 } }}
       />
 
-      <circle className="animate-ping" cx="300" cy="15" fill="#0098a6" opacity="0.75" r="5" />
+      {/* Key Metric Endpoints & Pulsing Indicator */}
+      <motion.circle
+        cx="300"
+        cy="15"
+        r="5"
+        fill="#0098a6"
+        style={{ transformBox: "fill-box", transformOrigin: "center" }}
+        animate={{ scale: [1, 2.2], opacity: [0.75, 0] }}
+        transition={{ duration: 1.5, repeat: Infinity, ease: "easeOut" }}
+      />
       <circle cx="300" cy="15" fill="#66d6e5" r="4" />
-      <circle cx="200" cy="35" fill="#0098a6" r="3.5" />
+      <circle cx="200" cy="38" fill="#0098a6" r="3.5" />
       <circle cx="300" cy="30" fill="#10b981" r="4" />
     </svg>
   );
 }
 
-/** Impact Metrics Section (Animated Interactive Dashboard Module). Source: Figma node 1:366. */
+/** Impact Metrics Section (Animated Interactive Dashboard Module). Revamped for current Skyra UI. */
 export function ImpactMetrics() {
   return (
-    <section className="relative overflow-hidden border-y border-white/10 bg-ink-elevated py-24" id="impact">
-      <div aria-hidden="true" className="absolute -top-32 left-1/4 h-96 w-96 rounded-full bg-brand-teal/10 blur-3xl" />
-      <div aria-hidden="true" className="absolute -bottom-32 right-1/4 h-96 w-96 rounded-full bg-brand-green/10 blur-3xl" />
+    <section className="relative w-full bg-light-aquifer-canvas py-24 sm:py-32 px-6 sm:px-10 lg:px-16 overflow-hidden border-t border-muted-aquifer/15" id="impact">
+      {/* Ambient background atmosphere blobs */}
+      <div aria-hidden="true" className="absolute -top-32 left-10 w-[600px] h-[600px] rounded-full bg-[#cde8e6]/70 blur-[130px] pointer-events-none" />
+      <div aria-hidden="true" className="absolute -bottom-32 right-10 w-[600px] h-[600px] rounded-full bg-[#ccebc8]/60 blur-[130px] pointer-events-none" />
 
-      <Container className="relative z-10">
-        <div className="mb-16 max-w-3xl space-y-4">
-          <Eyebrow color="green">Measurable Restoration</Eyebrow>
-          <h2 className="text-3xl font-extrabold tracking-tight text-white sm:text-4xl lg:text-5xl">
+      <div className="max-w-7xl mx-auto flex flex-col gap-12 sm:gap-16 relative z-10">
+        <div className="flex flex-col gap-3 max-w-2xl">
+          <div className="inline-flex items-center gap-2.5">
+            <span className="inline-block w-2 h-2 rounded-full bg-moss animate-pulse"></span>
+            <span className="font-body-sm text-body-sm text-moss font-semibold uppercase tracking-wider">
+              MEASURABLE RESTORATION
+            </span>
+          </div>
+          <h2 className="font-headline-h2 text-headline-h2-mobile sm:text-headline-h2 text-deep-aquifer tracking-tight leading-tight">
             Impact Metrics
           </h2>
-          <p className="text-base leading-relaxed text-slate-300 sm:text-lg">
-            Our interventions are designed to create rippling positive effects
-            across the ecosystem. Data drives our design.
+          <p className="font-body-large text-body-large text-deep-aquifer/80 leading-relaxed">
+            Our interventions are designed to create rippling positive effects across the ecosystem. Data drives our design.
           </p>
         </div>
 
         <div className="grid grid-cols-1 items-stretch gap-8 lg:grid-cols-12">
-          <div className="lg:col-span-4">
+          <div className="h-full lg:col-span-4">
             <MetricCard
-              watermark={<DropletIcon className="size-24 text-brand-teal" />}
-              dotColor="bg-brand-teal"
-              pillTone="border-brand-teal/30 bg-brand-teal/20 text-brand-teal"
+              watermark={<DropletIcon className="size-24 text-[#0098a6]" />}
+              dotColor="bg-[#0098a6]"
+              pillTone="border-[#0098a6]/30 bg-[#0098a6]/10 text-[#0098a6]"
               badgeLabel="Water Conservation"
               target={1.2}
               decimals={1}
               suffix="M"
               gradientFrom="#0098a6"
-              gradientTo="#00c896"
+              gradientTo="#7D9D3D"
               title="Liters of Water Saved"
               description="Conserved annually through localized rooftop retention, smart storage cells, and closed-loop domestic distribution."
               progressLabel="CUMULATIVE TARGET"
               progressPercent={88}
-              progressTone="text-brand-teal"
+              progressTone="text-[#0098a6]"
             />
           </div>
 
-          <div className="lg:col-span-4">
+          <div className="h-full lg:col-span-4">
             <MetricCard
-              watermark={<FootprintIcon className="size-24 text-brand-green" />}
-              dotColor="bg-brand-green"
-              pillTone="border-brand-green/30 bg-brand-green/20 text-brand-green"
+              watermark={<FootprintIcon className="size-24 text-moss" />}
+              dotColor="bg-moss"
+              pillTone="border-moss/30 bg-moss/10 text-moss"
               badgeLabel="Ecological Impact"
               target={45}
               decimals={0}
               suffix="%"
-              gradientFrom="#10b981"
-              gradientTo="#6ee7b7"
+              gradientFrom="#7D9D3D"
+              gradientTo="#0098a6"
               title="Reduction in Footprint"
               description="Drastic reduction in reliance on municipal high-energy pumping and carbon-heavy commercial water tanker transit."
               progressLabel="FOOTPRINT OFFSET"
               progressPercent={45}
-              progressTone="text-brand-green"
+              progressTone="text-moss"
             />
           </div>
 
-          <div className="flex flex-col justify-between overflow-hidden rounded-3xl border border-white/10 bg-white/5 p-8 shadow-xl backdrop-blur-md lg:col-span-4">
+          <div className="flex h-full flex-col justify-between overflow-hidden rounded-3xl border border-muted-aquifer/15 bg-white/80 p-8 sm:p-9 shadow-[0_8px_30px_rgb(29,41,59,0.06)] backdrop-blur-xl transition-all duration-500 hover:border-moss/40 hover:shadow-2xl lg:col-span-4">
             <div>
               <div className="mb-4 flex items-center justify-between">
-                <span className="font-mono text-xs uppercase tracking-wider text-slate-400">
+                <span className="font-mono text-xs uppercase tracking-wider text-secondary font-medium">
                   Live Retention Trend
                 </span>
-                <span className="inline-flex items-center gap-1.5 rounded-full border border-emerald-500/20 bg-emerald-500/10 px-2 py-0.5 text-xs font-semibold text-brand-green">
-                  <span aria-hidden="true" className="size-1.5 animate-ping rounded-full bg-brand-green" />
+                <span className="inline-flex items-center gap-1.5 rounded-full border border-moss/30 bg-moss/10 px-2.5 py-0.5 text-xs font-semibold text-moss">
+                  <span aria-hidden="true" className="size-1.5 animate-pulse rounded-full bg-moss" />
                   Realtime
                 </span>
               </div>
-              <h4 className="text-lg font-bold text-white">Hydrological Restoration</h4>
-              <p className="mt-1 text-xs text-slate-400">
+              <h4 className="text-lg font-bold font-headline-h3 text-deep-aquifer">Hydrological Restoration</h4>
+              <p className="mt-1 text-xs font-body-sm text-deep-aquifer/75 leading-relaxed">
                 Groundwater table elevation vs. retention index over 12 months.
               </p>
             </div>
@@ -152,19 +168,19 @@ export function ImpactMetrics() {
               <RetentionChart />
             </div>
 
-            <div className="grid grid-cols-2 gap-2 border-t border-white/10 pt-3 text-xs">
+            <div className="grid grid-cols-2 gap-2 border-t border-muted-aquifer/15 pt-3 text-xs">
               <div className="flex items-center gap-2">
-                <span aria-hidden="true" className="size-2.5 rounded-full bg-brand-teal" />
-                <span className="text-slate-300">Retention Capacity</span>
+                <span aria-hidden="true" className="size-2.5 rounded-full bg-[#0098a6]" />
+                <span className="text-deep-aquifer/80 font-medium">Retention Capacity</span>
               </div>
               <div className="flex items-center justify-end gap-2">
-                <span aria-hidden="true" className="size-2.5 rounded-full bg-brand-green" />
-                <span className="text-slate-300">Aquifer Rebound</span>
+                <span aria-hidden="true" className="size-2.5 rounded-full bg-moss" />
+                <span className="text-deep-aquifer/80 font-medium">Aquifer Rebound</span>
               </div>
             </div>
           </div>
         </div>
-      </Container>
+      </div>
     </section>
   );
 }
