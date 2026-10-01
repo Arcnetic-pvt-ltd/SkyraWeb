@@ -43,7 +43,7 @@ export function SiteFooter() {
                 href="/services"
                 className="font-body-sm text-body-sm text-light-aquifer-canvas/60 hover:text-white transition-colors"
               >
-                Commercial Installations
+                Skyra RainSink
               </Link>
             </nav>
           </div>
@@ -79,9 +79,9 @@ export function SiteFooter() {
             </nav>
           </div>
         </div>
-        <div className="pt-10 flex flex-col sm:flex-row items-center justify-between gap-4">
+        <div className="pt-10 border-t border-white/10 flex flex-col sm:flex-row items-center justify-between gap-4">
           <p className="font-body-sm text-[13px] text-light-aquifer-canvas/40">
-            © 2025 Skyra Infrastructure. Thoughtful engineering for India’s water future.
+            © 2026 - 2027 Skyra Infrastructure. Thoughtful engineering for India’s water future.
           </p>
           <div className="flex items-center gap-6">
             <a
@@ -97,6 +97,21 @@ export function SiteFooter() {
               Terms
             </a>
           </div>
+        </div>
+      </div>
+
+      {/* Thin Sub-Footer Strip: Powered by Arcnetic */}
+      <div className="w-full border-t border-white/10 bg-slate-950/40 py-3.5 px-6">
+        <div className="max-w-5xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-2 text-center sm:text-left">
+          <span className="font-technical-label text-[11px] uppercase tracking-wider text-light-aquifer-canvas/40">
+            Technology Partner
+          </span>
+          <span className="font-body-sm text-[12px] text-light-aquifer-canvas/50">
+            Powered by{" "}
+            <span className="font-semibold text-white/90 hover:text-moss transition-colors">
+              Arcnetic
+            </span>
+          </span>
         </div>
       </div>
     </footer>

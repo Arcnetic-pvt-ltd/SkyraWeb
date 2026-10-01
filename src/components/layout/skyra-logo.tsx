@@ -15,16 +15,24 @@ export function SkyraLogo({
 }) {
   return (
     <div className={`inline-flex items-center gap-2.5 ${className}`}>
-      <img
-        src="/images/skyra-logo.png"
-        alt="Skyra Logo"
-        className={`${iconClass} object-contain ${variant === "light" ? "brightness-0 invert" : ""
-          }`}
-      />
+      <div
+        className={`inline-flex items-center justify-center ${
+          variant === "light"
+            ? "bg-white p-1 rounded-lg shadow-sm"
+            : ""
+        }`}
+      >
+        <img
+          src="/images/skyra-logo.png"
+          alt="Skyra Logo"
+          className={`${iconClass} object-contain`}
+        />
+      </div>
       {showText && (
         <span
-          className={`${textClass} ${variant === "light" ? "text-white" : "text-deep-aquifer"
-            }`}
+          className={`${textClass} ${
+            variant === "light" ? "text-white" : "text-deep-aquifer"
+          }`}
         >
           Skyra
         </span>
