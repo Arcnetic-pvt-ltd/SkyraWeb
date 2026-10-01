@@ -385,27 +385,27 @@ export default function AboutPage() {
       </section>
 
       {/* SECTION 4: CLOSING MANDATE */}
-      <section className="relative z-10 w-full bg-deep-aquifer text-light-aquifer-canvas py-28 sm:py-36">
-        <div className="max-w-4xl mx-auto px-6 sm:px-8 text-center flex flex-col items-center gap-10">
+      <section className="relative z-10 w-full bg-light-aquifer-canvas text-deep-aquifer py-24 sm:py-32 border-t border-muted-aquifer/15">
+        <div className="max-w-4xl mx-auto px-6 sm:px-8 text-center flex flex-col items-center gap-8">
           <span className="font-technical-label text-technical-label text-moss tracking-widest uppercase font-semibold">
             The Mandate
           </span>
-          <blockquote className="font-headline-h2 text-headline-h2-mobile sm:text-headline-h2 text-white max-w-2xl font-medium tracking-tight">
+          <blockquote className="font-headline-h2 text-headline-h2-mobile sm:text-headline-h2 text-deep-aquifer max-w-2xl font-semibold tracking-tight">
             “Water security is not an emergency response. It is engineered infrastructure.”
           </blockquote>
-          <p className="font-body-large text-body-large text-light-aquifer-canvas/60 max-w-[48ch]">
+          <p className="font-body-large text-body-large text-deep-aquifer/75 max-w-[48ch] leading-relaxed">
             We partner with landowners, institutional leaders, and civil developers who plan half a century ahead.
           </p>
-          <div className="flex flex-col sm:flex-row items-center gap-4 pt-4">
+          <div className="flex flex-col sm:flex-row items-center gap-4 pt-2">
             <Link
               href="/contact"
-              className="inline-flex items-center justify-center bg-moss hover:bg-forest-slate text-white font-button-text text-button-text px-8 py-3.5 rounded-full shadow-sm transition-all duration-200"
+              className="inline-flex items-center justify-center bg-deep-aquifer hover:bg-forest-slate text-light-aquifer-canvas font-button-text text-button-text px-8 py-3.5 rounded-full shadow-sm hover:shadow-md transition-all duration-300"
             >
               Start a Conversation
             </Link>
             <Link
               href="/services"
-              className="inline-flex items-center justify-center bg-transparent hover:bg-white/5 text-white/90 font-button-text text-button-text px-8 py-3.5 rounded-full transition-all duration-200"
+              className="inline-flex items-center justify-center bg-transparent hover:bg-black/5 text-deep-aquifer font-button-text text-button-text px-8 py-3.5 rounded-full transition-all duration-300"
             >
               Explore Solutions
             </Link>
