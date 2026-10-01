@@ -1,7 +1,15 @@
 import type { Metadata } from "next";
 import { ConsultationIntakeForm } from "@/components/contact/consultation-intake-form";
-import { WHATSAPP_HREF, CONTACT } from "@/lib/nav";
+import { WHATSAPP_HREF, CONTACT, SOCIAL_LINKS } from "@/lib/nav";
 import { WhatsAppIcon } from "@/components/icons/whatsapp-icon";
+import {
+  YouTubeIcon,
+  InstagramIcon,
+  FacebookIcon,
+  LinkedInIcon,
+  XIcon,
+} from "@/components/icons/social-icons";
+
 
 export const metadata: Metadata = {
   title: "Start Your Water Resilience Journey | Skyra Contact",
@@ -133,10 +141,68 @@ export default function ContactPage() {
               </div>
             </div>
 
-            {/* Right Column Intake Form */}
-            <div className="lg:col-span-7">
+            {/* Right Column Intake Form & Social Links */}
+            <div className="lg:col-span-7 flex flex-col gap-6">
               <ConsultationIntakeForm />
+
+              {/* Social Media Channels */}
+              <div className="rounded-2xl bg-white/85 backdrop-blur-xl p-4 sm:p-5 shadow-[0_16px_50px_rgba(29,41,59,0.05)] border border-muted-aquifer/15 flex items-center justify-center gap-3.5 sm:gap-4">
+                <a
+                  aria-label="YouTube"
+                  className="h-10 w-10 rounded-full bg-light-aquifer-canvas hover:bg-deep-aquifer hover:text-white text-deep-aquifer/75 transition-all duration-300 flex items-center justify-center border border-muted-aquifer/20 hover:border-deep-aquifer shadow-sm hover:scale-105"
+                  href="https://youtube.com/@skyrawater"
+                  rel="noopener noreferrer"
+                  target="_blank"
+                  title="YouTube"
+                >
+                  <YouTubeIcon className="h-4 w-4" />
+                </a>
+                <a
+                  aria-label="Instagram"
+                  className="h-10 w-10 rounded-full bg-light-aquifer-canvas hover:bg-deep-aquifer hover:text-white text-deep-aquifer/75 transition-all duration-300 flex items-center justify-center border border-muted-aquifer/20 hover:border-deep-aquifer shadow-sm hover:scale-105"
+                  href="https://instagram.com/skyrawater"
+                  rel="noopener noreferrer"
+                  target="_blank"
+                  title="Instagram"
+                >
+                  <InstagramIcon className="h-4 w-4" />
+                </a>
+                <a
+                  aria-label="Facebook"
+                  className="h-10 w-10 rounded-full bg-light-aquifer-canvas hover:bg-deep-aquifer hover:text-white text-deep-aquifer/75 transition-all duration-300 flex items-center justify-center border border-muted-aquifer/20 hover:border-deep-aquifer shadow-sm hover:scale-105"
+                  href="https://facebook.com/skyrawater"
+                  rel="noopener noreferrer"
+                  target="_blank"
+                  title="Facebook"
+                >
+                  <FacebookIcon className="h-4 w-4" />
+                </a>
+                <a
+                  aria-label="LinkedIn"
+                  className="h-10 w-10 rounded-full bg-light-aquifer-canvas hover:bg-deep-aquifer hover:text-white text-deep-aquifer/75 transition-all duration-300 flex items-center justify-center border border-muted-aquifer/20 hover:border-deep-aquifer shadow-sm hover:scale-105"
+                  href="https://linkedin.com/company/skyrawater"
+                  rel="noopener noreferrer"
+                  target="_blank"
+                  title="LinkedIn"
+                >
+                  <LinkedInIcon className="h-4 w-4" />
+                </a>
+                <a
+                  aria-label="X (formerly Twitter)"
+                  className="h-10 w-10 rounded-full bg-light-aquifer-canvas hover:bg-deep-aquifer hover:text-white text-deep-aquifer/75 transition-all duration-300 flex items-center justify-center border border-muted-aquifer/20 hover:border-deep-aquifer shadow-sm hover:scale-105"
+                  href="https://x.com/skyrawater"
+                  rel="noopener noreferrer"
+                  target="_blank"
+                  title="X"
+                >
+                  <XIcon className="h-4 w-4" />
+                </a>
+              </div>
             </div>
+
+
+
+
           </div>
         </div>
       </section>

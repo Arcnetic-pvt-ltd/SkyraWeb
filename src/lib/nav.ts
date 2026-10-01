@@ -15,3 +15,12 @@ export const CONTACT = {
   phoneDisplay: "+91 9292292111",
 } as const;
 
+export const SOCIAL_LINKS = [
+  { name: "YouTube", href: "https://youtube.com/@skyrawater", icon: "youtube" },
+  { name: "Instagram", href: "https://instagram.com/skyrawater", icon: "instagram" },
+  { name: "Facebook", href: "https://facebook.com/skyrawater", icon: "facebook" },
+  { name: "LinkedIn", href: "https://linkedin.com/company/skyrawater", icon: "linkedin" },
+  { name: "X", href: "https://x.com/skyrawater", icon: "x" },
+] as const;
+
+
