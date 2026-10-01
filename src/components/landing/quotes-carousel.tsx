@@ -23,7 +23,7 @@ const QUOTES: QuoteItem[] = [
     quote:
       "“Water harvesting and water recycling should become mandatory for all the states.”",
     author: "Dr. A. P. J. Abdul Kalam",
-    role: "11th President of India",
+    role: "Former President of India",
     image: "/images/assets/kalam_no_bg.png",
     position: "left",
   },
@@ -60,15 +60,13 @@ export function QuotesCarousel() {
         return (
           <div
             key={`img-${idx}`}
-            className={`absolute bottom-0 ${
-              isLeft ? "left-0 justify-start" : "right-0 justify-end"
-            } h-full max-h-[95%] pointer-events-none transition-all duration-700 ease-in-out z-0 hidden md:flex items-end ${
-              isActive
+            className={`absolute bottom-0 ${isLeft ? "left-0 justify-start" : "right-0 justify-end"
+              } h-full max-h-[95%] pointer-events-none transition-all duration-700 ease-in-out z-0 hidden md:flex items-end ${isActive
                 ? "opacity-100 translate-x-0"
                 : isLeft
-                ? "opacity-0 -translate-x-8"
-                : "opacity-0 translate-x-8"
-            }`}
+                  ? "opacity-0 -translate-x-8"
+                  : "opacity-0 translate-x-8"
+              }`}
           >
             <div className="relative h-full flex items-end">
               {/* Soft Gradient Mask based on image position */}
@@ -96,13 +94,11 @@ export function QuotesCarousel() {
           return (
             <div
               key={`text-${idx}`}
-              className={`lg:col-span-8 xl:col-span-7 ${
-                isLeft ? "lg:col-start-5 xl:col-start-6" : "lg:col-start-1"
-              } flex flex-col items-start text-left gap-6 transition-all duration-700 ease-in-out ${
-                isActive
+              className={`lg:col-span-8 xl:col-span-7 ${isLeft ? "lg:col-start-5 xl:col-start-6" : "lg:col-start-1"
+                } flex flex-col items-start text-left gap-6 transition-all duration-700 ease-in-out ${isActive
                   ? "opacity-100 relative z-10 translate-y-0 pointer-events-auto"
                   : "opacity-0 absolute inset-0 pointer-events-none translate-y-2"
-              }`}
+                }`}
             >
               <div className="inline-flex items-center gap-2.5 text-moss/90">
                 <span className="material-symbols-outlined text-[28px] text-tertiary-fixed">
@@ -132,11 +128,10 @@ export function QuotesCarousel() {
                     type="button"
                     aria-label={`Quote ${dotIdx + 1}`}
                     onClick={() => setActiveIndex(dotIdx)}
-                    className={`h-1.5 rounded-full transition-all duration-500 ${
-                      dotIdx === activeIndex
+                    className={`h-1.5 rounded-full transition-all duration-500 ${dotIdx === activeIndex
                         ? "w-8 bg-white"
                         : "w-2.5 bg-white/40 hover:bg-white/70"
-                    }`}
+                      }`}
                   />
                 ))}
               </div>
