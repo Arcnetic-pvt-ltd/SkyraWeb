@@ -26,7 +26,7 @@ export function SkyraLogo({
           className={`${textClass} ${variant === "light" ? "text-white" : "text-deep-aquifer"
             }`}
         >
-          SkyRa
+          Skyra
         </span>
       )}
     </div>

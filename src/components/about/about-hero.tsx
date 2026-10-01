@@ -22,7 +22,7 @@ export function AboutHero() {
       <Container className="relative z-10 flex flex-col items-center text-center">
         <div className="inline-flex items-center gap-2 rounded-full bg-ink-elevated px-4 py-1.5 text-brand-teal shadow-md">
           <DropletIcon className="size-4" />
-          <span className="text-[11px] font-bold uppercase tracking-widest">About SkyRa • From Sky, To Life</span>
+          <span className="text-[11px] font-bold uppercase tracking-widest">About Skyra • From Sky, To Life</span>
         </div>
 
         <h1 className="mt-6 max-w-4xl text-3xl font-bold text-white sm:text-4xl lg:text-[56px] lg:leading-[64px]">
@@ -33,7 +33,7 @@ export function AboutHero() {
         </h1>
 
         <p className="mt-6 max-w-3xl text-lg leading-relaxed text-slate-400">
-          SkyRa was founded to solve a fundamental paradox: our regions receive
+          Skyra was founded to solve a fundamental paradox: our regions receive
           abundant rainfall, yet we continually face seasonal water scarcity and
           groundwater depletion. We realized that to secure our future, we had
           to change how we interact with water today.
@@ -55,7 +55,7 @@ export function AboutHero() {
                 <StormIcon className="size-6" />
               </div>
               <div>
-                <p className="text-xs font-bold uppercase tracking-widest text-brand-green">The SkyRa Paradigm</p>
+                <p className="text-xs font-bold uppercase tracking-widest text-brand-green">The Skyra Paradigm</p>
                 <p className="mt-1 text-sm text-white">
                   Transforming rainwater from lost surface runoff into a
                   permanent, secure resource for homes, businesses, and

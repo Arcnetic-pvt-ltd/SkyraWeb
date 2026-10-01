@@ -75,7 +75,7 @@ export function ConsultationForm() {
               <div className="relative h-64 w-full">
                 <Image
                   src="/images/contact-facility.jpg"
-                  alt="SkyRa Hydrological Engineering Facility, Kerala"
+                  alt="Skyra Hydrological Engineering Facility, Kerala"
                   fill
                   sizes="(min-width: 1024px) 42vw, 100vw"
                   className="object-cover transition-transform duration-700 group-hover:scale-105"

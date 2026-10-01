@@ -18,7 +18,7 @@ export function BiggerVision() {
               A future where every drop has a purpose.
             </h2>
             <p className="max-w-xl text-base leading-relaxed text-slate-300 sm:text-lg">
-              SkyRa starts in Kerala, and grows across India — helping homes,
+              Skyra starts in Kerala, and grows across India — helping homes,
               businesses and communities build water security and a healthier,
               drought-resilient planet.
             </p>

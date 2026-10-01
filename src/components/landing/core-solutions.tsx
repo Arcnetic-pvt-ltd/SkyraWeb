@@ -69,12 +69,12 @@ export function CoreSolutions() {
       <Container>
         {/* Section Header */}
         <div className="mb-16 max-w-3xl space-y-4">
-          <Eyebrow color="teal">The SkyRa Solution</Eyebrow>
+          <Eyebrow color="teal">The Skyra Solution</Eyebrow>
           <h2 className="text-3xl font-extrabold tracking-tight text-slate-950 sm:text-4xl lg:text-5xl">
             Integrated water solutions for a sustainable future.
           </h2>
           <p className="text-base leading-relaxed text-slate-600 sm:text-lg">
-            SkyRa helps properties manage, harvest, recharge and use water more
+            Skyra helps properties manage, harvest, recharge and use water more
             effectively — from rooftop to groundwater. Built on trust, engineering
             precision, and true long-term value.
           </p>

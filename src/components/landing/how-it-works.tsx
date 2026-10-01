@@ -39,7 +39,7 @@ const STEPS = [
   },
 ] as const;
 
-/** How SkyRa Works (Process Strip). Revamped with current Skyra design system. */
+/** How Skyra Works (Process Strip). Revamped with current Skyra design system. */
 export function HowItWorks() {
   return (
     <section className="relative w-full bg-light-aquifer-canvas py-24 sm:py-32 px-6 sm:px-10 lg:px-16 border-t border-muted-aquifer/15">
