@@ -210,40 +210,6 @@ export function ConsultationForm() {
                     />
                   </div>
 
-                  <div>
-                    <label htmlFor="propertyType" className="mb-1 block text-sm font-medium text-deep-aquifer">
-                      Property type
-                    </label>
-                    <select
-                      id="propertyType"
-                      name="propertyType"
-                      required
-                      value={form.propertyType}
-                      onChange={(e) => handleChange("propertyType", e.target.value)}
-                      className="w-full rounded-[6px] border border-muted-aquifer/30 bg-light-aquifer-canvas px-3.5 py-2.5 text-sm text-deep-aquifer focus:border-deep-aquifer focus:outline-none cursor-pointer"
-                    >
-                      <option value="" disabled>Select Property Type</option>
-                      {PROPERTY_TYPES.map((t) => (
-                        <option key={t} value={t}>{t}</option>
-                      ))}
-                    </select>
-                  </div>
-
-                  <div>
-                    <label htmlFor="message" className="mb-1 block text-sm font-medium text-deep-aquifer">
-                      Roof size or details (optional)
-                    </label>
-                    <textarea
-                      id="message"
-                      name="message"
-                      rows={3}
-                      placeholder="Share your roof area, water challenges, or project goals…"
-                      value={form.message}
-                      onChange={(e) => handleChange("message", e.target.value)}
-                      className="w-full rounded-[6px] border border-muted-aquifer/30 bg-light-aquifer-canvas px-3.5 py-2.5 text-sm text-deep-aquifer placeholder:text-deep-aquifer/40 focus:border-deep-aquifer focus:outline-none resize-none"
-                    />
-                  </div>
-
                   <div className="pt-2 flex flex-col gap-3">
                     <button
                       type="submit"

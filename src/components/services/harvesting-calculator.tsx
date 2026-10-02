@@ -2,7 +2,6 @@
 
 import { useState, useId } from "react";
 import Link from "next/link";
-import { motion } from "framer-motion";
 
 const CITY_PRESETS = [
   { name: "Kochi", rainfall: 3000, state: "Kerala" },
@@ -16,26 +15,22 @@ const CITY_PRESETS = [
 export function HarvestingCalculator() {
   const areaInputId = useId();
   const rainfallInputId = useId();
-  const [areaSqFt, setAreaSqFt] = useState<number>(2000); // default 2000 sq ft (~185.8 m²)
+  const [areaSqFt, setAreaSqFt] = useState<number>(2000);
   const [unit, setUnit] = useState<"sqft" | "m2">("sqft");
   const [selectedCity, setSelectedCity] = useState<string>("Bengaluru");
   const [customRainfall, setCustomRainfall] = useState<number>(950);
   const [isCustomRainfall, setIsCustomRainfall] = useState<boolean>(false);
 
-  const RUNOFF_COEFFICIENT = 0.85; // Standard high-efficiency impervious surface coefficient
+  const RUNOFF_COEFFICIENT = 0.85;
 
-  // Convert area to m²
   const areaInM2 = unit === "sqft" ? areaSqFt / 10.7639 : areaSqFt;
 
-  // Active rainfall in mm
   const activeRainfall = isCustomRainfall
     ? customRainfall
     : CITY_PRESETS.find((c) => c.name === selectedCity)?.rainfall || 950;
 
-  // Formula: Water harvesting potential = catchment area in m2 * avg rainfall in mm * runoff coefficient (0.85)
   const annualLiters = Math.round(areaInM2 * activeRainfall * RUNOFF_COEFFICIENT);
-  const tankersSaved = Math.round(annualLiters / 12000); // Standard 12,000L commercial tanker
-  const estimatedSavingsInRupees = Math.round(annualLiters * 1.15); // ~₹1.15 / Liter average tanker cost
+  const estimatedSavingsInRupees = Math.round(annualLiters * 1.15);
 
   const handleCitySelect = (cityName: string) => {
     setSelectedCity(cityName);
@@ -47,36 +42,36 @@ export function HarvestingCalculator() {
   };
 
   return (
-    <section className="relative w-full bg-deep-aquifer py-20 sm:py-28 px-6 sm:px-10 lg:px-16 text-light-aquifer-canvas overflow-hidden" id="calculator">
-      <div className="max-w-5xl mx-auto relative z-10 flex flex-col gap-12 sm:gap-16">
+    <section className="relative w-full bg-light-aquifer-canvas py-16 sm:py-24 px-6 lg:px-8 text-deep-aquifer border-t border-muted-aquifer/15" id="calculator">
+      <div className="max-w-5xl mx-auto flex flex-col gap-10">
         {/* Header */}
-        <div className="flex flex-col gap-4 max-w-2xl">
-          <div className="inline-flex items-center gap-2.5">
-            <span className="inline-block w-2 h-2 rounded-[2px] bg-moss"></span>
-            <span className="font-technical-label text-body-sm text-moss font-semibold uppercase tracking-wider">
-              Interactive feasibility tool
+        <div className="flex flex-col gap-3 max-w-2xl">
+          <div className="inline-flex items-center gap-2">
+            <span className="w-2 h-2 rounded-full bg-moss"></span>
+            <span className="font-technical-label text-[12px] text-forest-slate uppercase tracking-wider font-semibold">
+              CALCULATOR
             </span>
           </div>
-          <h2 className="font-headline-h2 text-headline-h2-mobile sm:text-headline-h2 text-white tracking-tight leading-tight">
+          <h2 className="font-headline-h2 text-headline-h2-mobile sm:text-headline-h2 text-deep-aquifer tracking-tight leading-tight">
             Rainwater harvesting yield calculator
           </h2>
-          <p className="font-body-large text-body-large text-light-aquifer-canvas/80 leading-relaxed">
-            Estimate your parcel’s annual water yield based on catchment footprint, localized rainfall data, and high-efficiency runoff coefficients.
+          <p className="font-body-large text-body-large text-deep-aquifer/80 leading-relaxed">
+            Estimate your annual rainwater yield based on roof area, rainfall, and retention coefficient (0.85).
           </p>
         </div>
 
         {/* Calculator Main Grid */}
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-stretch">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-stretch">
           {/* Controls Column (Left 7 Cols) */}
-          <div className="lg:col-span-7 flex flex-col justify-between gap-8 rounded-[4px] bg-white/5 p-6 sm:p-10 border border-white/10">
+          <div className="lg:col-span-7 flex flex-col justify-between gap-6 rounded-[4px] border border-muted-aquifer/20 bg-white p-6 sm:p-8 shadow-xs">
             {/* Step 1: Area Input */}
             <div className="flex flex-col gap-4">
               <div className="flex items-center justify-between">
-                <label htmlFor={areaInputId} className="font-body-sm text-sm font-semibold text-white flex items-center gap-2">
-                  <span className="size-6 rounded-[4px] bg-moss/20 text-moss flex items-center justify-center text-xs font-bold">1</span>
-                  Rooftop / catchment footprint
+                <label htmlFor={areaInputId} className="font-body-primary text-sm font-semibold text-deep-aquifer flex items-center gap-2">
+                  <span className="size-5 rounded-[4px] bg-moss/15 text-forest-slate flex items-center justify-center text-xs font-bold font-mono">1</span>
+                  Roof / catchment footprint
                 </label>
-                <div className="inline-flex rounded-[4px] bg-white/10 p-1 border border-white/10 text-xs font-medium">
+                <div className="inline-flex rounded-[4px] bg-light-aquifer-canvas p-1 border border-muted-aquifer/20 text-xs font-medium">
                   <button
                     type="button"
                     onClick={() => {
@@ -85,8 +80,8 @@ export function HarvestingCalculator() {
                         setUnit("sqft");
                       }
                     }}
-                    className={`px-3 py-1 rounded-[4px] transition-colors ${
-                      unit === "sqft" ? "bg-moss text-deep-aquifer font-bold" : "text-light-aquifer-canvas/70 hover:text-white"
+                    className={`px-2.5 py-1 rounded-[4px] transition-colors cursor-pointer ${
+                      unit === "sqft" ? "bg-deep-aquifer text-white font-semibold" : "text-deep-aquifer/70 hover:text-deep-aquifer"
                     }`}
                   >
                     sq. ft.
@@ -99,8 +94,8 @@ export function HarvestingCalculator() {
                         setUnit("m2");
                       }
                     }}
-                    className={`px-3 py-1 rounded-[4px] transition-colors ${
-                      unit === "m2" ? "bg-moss text-deep-aquifer font-bold" : "text-light-aquifer-canvas/70 hover:text-white"
+                    className={`px-2.5 py-1 rounded-[4px] transition-colors cursor-pointer ${
+                      unit === "m2" ? "bg-deep-aquifer text-white font-semibold" : "text-deep-aquifer/70 hover:text-deep-aquifer"
                     }`}
                   >
                     m²
@@ -116,10 +111,10 @@ export function HarvestingCalculator() {
                   max={500000}
                   value={areaSqFt}
                   onChange={(e) => setAreaSqFt(Math.max(0, Number(e.target.value)))}
-                  className="w-36 bg-white/10 border border-white/20 rounded-[6px] px-4 py-2.5 text-white font-metric-mono-lg text-lg font-bold focus:outline-none focus:border-moss"
+                  className="w-36 bg-light-aquifer-canvas border border-muted-aquifer/30 rounded-[6px] px-3.5 py-2 text-deep-aquifer font-technical-label text-base font-bold focus:outline-none focus:border-deep-aquifer"
                 />
-                <span className="text-sm text-light-aquifer-canvas/60">
-                  ≈ {areaInM2.toFixed(1)} m² catchment area
+                <span className="text-xs font-mono text-deep-aquifer/70">
+                  ≈ {areaInM2.toFixed(1)} m² catchment
                 </span>
               </div>
 
@@ -130,39 +125,39 @@ export function HarvestingCalculator() {
                 step={unit === "sqft" ? 100 : 10}
                 value={areaSqFt}
                 onChange={(e) => setAreaSqFt(Number(e.target.value))}
-                className="w-full accent-moss cursor-pointer"
+                className="w-full accent-deep-aquifer cursor-pointer"
               />
             </div>
 
             {/* Step 2: Location / Rainfall Preset */}
-            <div className="flex flex-col gap-4">
-              <label htmlFor={rainfallInputId} className="font-body-sm text-sm font-semibold text-white flex items-center gap-2">
-                <span className="size-6 rounded-[4px] bg-moss/20 text-moss flex items-center justify-center text-xs font-bold">2</span>
+            <div className="flex flex-col gap-4 pt-4 border-t border-muted-aquifer/15">
+              <label htmlFor={rainfallInputId} className="font-body-primary text-sm font-semibold text-deep-aquifer flex items-center gap-2">
+                <span className="size-5 rounded-[4px] bg-moss/15 text-forest-slate flex items-center justify-center text-xs font-bold font-mono">2</span>
                 Average annual rainfall
               </label>
 
-              <div className="grid grid-cols-2 sm:grid-cols-3 gap-2.5">
+              <div className="grid grid-cols-2 sm:grid-cols-3 gap-2">
                 {CITY_PRESETS.map((city) => (
                   <button
                     key={city.name}
                     type="button"
                     onClick={() => handleCitySelect(city.name)}
-                    className={`flex flex-col items-start p-3 rounded-[4px] border text-left transition-colors ${
+                    className={`flex flex-col items-start p-2.5 rounded-[4px] border text-left transition-colors cursor-pointer ${
                       !isCustomRainfall && selectedCity === city.name
-                        ? "bg-moss/20 border-moss text-white shadow-xs"
-                        : "bg-white/5 border-white/10 text-light-aquifer-canvas/70 hover:bg-white/10 hover:text-white"
+                        ? "bg-deep-aquifer text-white border-deep-aquifer"
+                        : "bg-light-aquifer-canvas border-muted-aquifer/20 text-deep-aquifer/80 hover:bg-slate-100"
                     }`}
                   >
                     <span className="text-xs font-bold">{city.name}</span>
-                    <span className="text-[11px] opacity-75 font-mono">{city.rainfall} mm/yr</span>
+                    <span className="text-[11px] opacity-80 font-mono">{city.rainfall} mm/yr</span>
                   </button>
                 ))}
               </div>
 
               <div className="pt-2 flex flex-col gap-2">
-                <div className="flex items-center justify-between text-xs text-light-aquifer-canvas/70">
+                <div className="flex items-center justify-between text-xs text-deep-aquifer/70 font-mono">
                   <span>Custom rainfall intensity</span>
-                  <span className="font-mono font-bold text-moss">{activeRainfall} mm</span>
+                  <span className="font-bold text-moss">{activeRainfall} mm</span>
                 </div>
                 <input
                   id={rainfallInputId}
@@ -175,76 +170,67 @@ export function HarvestingCalculator() {
                     setCustomRainfall(Number(e.target.value));
                     setIsCustomRainfall(true);
                   }}
-                  className="w-full accent-moss cursor-pointer"
+                  className="w-full accent-deep-aquifer cursor-pointer"
                 />
               </div>
             </div>
 
             {/* Coefficient Note */}
-            <div className="pt-2 border-t border-white/10 flex items-center justify-between text-xs text-light-aquifer-canvas/60">
-              <span>Runoff efficiency coefficient</span>
-              <span className="font-mono font-semibold text-moss">0.85 (85% net retention)</span>
+            <div className="pt-3 border-t border-muted-aquifer/15 flex items-center justify-between text-xs text-deep-aquifer/70 font-mono">
+              <span>Runoff coefficient</span>
+              <span className="font-semibold text-forest-slate">0.85 (85% net retention)</span>
             </div>
           </div>
 
           {/* Results Output Column (Right 5 Cols) */}
-          <div className="lg:col-span-5 flex flex-col justify-between rounded-[4px] bg-white text-deep-aquifer p-6 sm:p-10 border border-white/20 relative overflow-hidden shadow-xs">
-            <div className="space-y-6 relative z-10">
-              <div className="flex items-center justify-between">
-                <span className="font-mono text-xs uppercase tracking-wider text-muted-aquifer font-semibold">
-                  ESTIMATED ANNUAL YIELD
+          <div className="lg:col-span-5 flex flex-col justify-between rounded-[4px] bg-white text-deep-aquifer p-6 sm:p-8 border border-muted-aquifer/20 shadow-xs">
+            <div className="space-y-6">
+              <div className="flex items-center justify-between border-b border-muted-aquifer/15 pb-3">
+                <span className="font-technical-label text-xs uppercase tracking-wider text-forest-slate font-semibold">
+                  ESTIMATED YIELD
                 </span>
-                <span className="inline-flex items-center gap-1.5 rounded-[4px] border border-moss/30 bg-moss/10 px-2.5 py-0.5 text-xs font-semibold text-moss">
-                  Calculated live
+                <span className="inline-flex items-center gap-1.5 rounded-[4px] border border-moss/30 bg-moss/10 px-2.5 py-0.5 text-xs font-semibold text-forest-slate">
+                  IS 15797:2008 formula
                 </span>
               </div>
 
               {/* Main Liters Metric */}
               <div>
-                <motion.div
-                  key={annualLiters}
-                  initial={{ scale: 0.98, opacity: 0.9 }}
-                  animate={{ scale: 1, opacity: 1 }}
-                  transition={{ duration: 0.2 }}
-                  className="font-metric-mono-lg text-5xl sm:text-6xl font-extrabold tracking-tight text-deep-aquifer"
-                >
-                  {(annualLiters / 1000).toFixed(1)} <span className="text-moss text-3xl font-bold">kL</span>
-                </motion.div>
-                <p className="mt-1 font-body-sm text-sm text-deep-aquifer/75 font-medium">
-                  ≈ {annualLiters.toLocaleString()} liters of pure rainwater captured per year.
+                <div className="font-technical-label text-4xl sm:text-5xl font-extrabold tracking-tight text-deep-aquifer">
+                  {(annualLiters / 1000).toFixed(1)} <span className="text-moss text-2xl font-bold">kL</span>
+                </div>
+                <p className="mt-2 font-body-primary text-sm text-deep-aquifer/75 leading-relaxed">
+                  ≈ {annualLiters.toLocaleString()} liters of rainwater captured per year.
                 </p>
               </div>
 
               {/* Secondary Impact Metrics */}
               <div className="grid grid-cols-2 gap-3 pt-4 border-t border-muted-aquifer/15">
-                <div className="flex flex-col gap-1 p-3.5 rounded-[4px] bg-[#F1F7F9] border border-muted-aquifer/15">
-                  <span className="font-body-sm text-xs font-bold text-moss">Skyra Rainsink units</span>
-                  <span className="font-metric-mono-lg text-2xl font-bold text-deep-aquifer">
+                <div className="flex flex-col gap-1 p-3 rounded-[4px] bg-light-aquifer-canvas border border-muted-aquifer/15">
+                  <span className="font-body-sm text-[11px] font-bold text-forest-slate uppercase">Rainsink units</span>
+                  <span className="font-technical-label text-xl font-bold text-deep-aquifer">
                     {Math.max(1, Math.ceil(annualLiters / 30000))} <span className="text-xs text-moss">unit{Math.max(1, Math.ceil(annualLiters / 30000)) === 1 ? "" : "s"}</span>
                   </span>
-                  <span className="text-[11px] text-deep-aquifer/60">Percolation capacity</span>
+                  <span className="text-[10px] text-deep-aquifer/60">Percolation capacity</span>
                 </div>
 
-                <div className="flex flex-col gap-1 p-3.5 rounded-[4px] bg-[#F1F7F9] border border-muted-aquifer/15">
-                  <span className="font-body-sm text-xs font-medium text-slate-700">Estimated value</span>
-                  <span className="font-metric-mono-lg text-2xl font-bold text-deep-aquifer">
+                <div className="flex flex-col gap-1 p-3 rounded-[4px] bg-light-aquifer-canvas border border-muted-aquifer/15">
+                  <span className="font-body-sm text-[11px] font-bold text-forest-slate uppercase">Estimated offset</span>
+                  <span className="font-technical-label text-xl font-bold text-deep-aquifer">
                     ₹{(estimatedSavingsInRupees / 1000).toFixed(1)} <span className="text-xs text-moss">k/yr</span>
                   </span>
-                  <span className="text-[11px] text-deep-aquifer/60">Annual water cost offset</span>
+                  <span className="text-[10px] text-deep-aquifer/60">Water tanker cost offset</span>
                 </div>
               </div>
             </div>
 
             {/* CTA Box */}
-            <div className="pt-8 relative z-10">
+            <div className="pt-6 border-t border-muted-aquifer/15">
               <Link
                 href={`/contact?area=${areaSqFt}${unit}&rainfall=${activeRainfall}&yield=${annualLiters}`}
-                className="w-full inline-flex items-center justify-center gap-2.5 bg-deep-aquifer hover:bg-forest-slate text-light-aquifer-canvas font-medium text-[15px] px-6 py-3.5 rounded-[6px] transition-colors shadow-xs group"
+                className="w-full inline-flex items-center justify-center gap-2 bg-deep-aquifer hover:bg-forest-slate text-white font-medium text-[15px] px-6 py-3.5 min-h-[44px] rounded-[6px] transition-colors shadow-xs"
               >
-                <span>Book a site survey</span>
-                <span className="material-symbols-outlined text-[18px]">
-                  arrow_forward
-                </span>
+                Book a site survey
               </Link>
             </div>
           </div>

@@ -8,8 +8,6 @@ export function ConsultationIntakeForm() {
     fullName: "",
     whatsAppNumber: "",
     propertyLocation: "",
-    buildingType: "",
-    notes: "",
   });
 
   const [phoneError, setPhoneError] = useState("");
@@ -30,8 +28,6 @@ export function ConsultationIntakeForm() {
       fullName: "",
       whatsAppNumber: "",
       propertyLocation: "",
-      buildingType: "",
-      notes: "",
     });
     setPhoneError("");
     setSubmitted(false);
@@ -46,7 +42,7 @@ export function ConsultationIntakeForm() {
               Tell us about your property
             </h2>
             <p className="font-body-sm text-body-sm text-deep-aquifer/75 mt-1">
-              Written report and quote before any work starts. Designed to IS 15797:2008 guidelines.
+              We&apos;ll reply on WhatsApp within one working day.
             </p>
           </div>
 
@@ -64,6 +60,7 @@ export function ConsultationIntakeForm() {
               name="fullName"
               required
               type="text"
+              placeholder="e.g. Anand Varma"
               value={formData.fullName}
               onChange={(e) =>
                 setFormData({ ...formData, fullName: e.target.value })
@@ -121,51 +118,10 @@ export function ConsultationIntakeForm() {
             />
           </div>
 
-          {/* Field 4: Property type */}
-          <div className="flex flex-col gap-1.5">
-            <label
-              className="font-body-sm text-body-sm text-deep-aquifer font-medium"
-              htmlFor="buildingType"
-            >
-              Property type
-            </label>
-            <input
-              className="w-full bg-light-aquifer-canvas px-4 py-3 rounded-[6px] font-body-primary text-deep-aquifer border border-muted-aquifer/20 outline-none focus:border-deep-aquifer transition-colors"
-              id="buildingType"
-              name="buildingType"
-              placeholder="e.g. Apartment, Factory, Institution or Home"
-              type="text"
-              value={formData.buildingType}
-              onChange={(e) =>
-                setFormData({ ...formData, buildingType: e.target.value })
-              }
-            />
-          </div>
-
-          {/* Field 5: Details */}
-          <div className="flex flex-col gap-1.5">
-            <label
-              className="font-body-sm text-body-sm text-deep-aquifer font-medium"
-              htmlFor="notes"
-            >
-              Roof size or details (optional)
-            </label>
-            <textarea
-              className="w-full bg-light-aquifer-canvas px-4 py-3 rounded-[6px] font-body-primary text-deep-aquifer border border-muted-aquifer/20 outline-none resize-none focus:border-deep-aquifer transition-colors"
-              id="notes"
-              name="notes"
-              rows={3}
-              value={formData.notes}
-              onChange={(e) =>
-                setFormData({ ...formData, notes: e.target.value })
-              }
-            />
-          </div>
-
           {/* Action button & response time notice */}
           <div className="pt-2 flex flex-col gap-3">
             <button
-              className="w-full py-3.5 px-6 rounded-[6px] bg-deep-aquifer hover:bg-forest-slate text-white font-medium text-[15px] transition-colors cursor-pointer"
+              className="w-full py-3.5 px-6 rounded-[6px] bg-deep-aquifer hover:bg-forest-slate text-white font-medium text-[15px] min-h-[44px] transition-colors cursor-pointer shadow-xs"
               type="submit"
             >
               Book a site survey

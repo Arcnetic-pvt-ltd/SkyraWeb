@@ -1,15 +1,6 @@
 import type { Metadata } from "next";
 import { ConsultationIntakeForm } from "@/components/contact/consultation-intake-form";
-import { WHATSAPP_HREF, CONTACT, SOCIAL_LINKS } from "@/lib/nav";
-import { WhatsAppIcon } from "@/components/icons/whatsapp-icon";
-import {
-  YouTubeIcon,
-  InstagramIcon,
-  FacebookIcon,
-  LinkedInIcon,
-  XIcon,
-} from "@/components/icons/social-icons";
-
+import { CONTACT } from "@/lib/nav";
 
 export const metadata: Metadata = {
   title: "Contact · Skyra",
@@ -20,11 +11,11 @@ export const metadata: Metadata = {
 export default function ContactPage() {
   return (
     <div className="flex flex-col w-full">
-      <section className="relative w-full overflow-hidden bg-light-aquifer-canvas pt-28 pb-12 lg:pt-32 lg:pb-20">
-        <div className="relative z-10 w-full max-w-6xl mx-auto px-6 lg:px-8">
+      <section className="relative w-full overflow-hidden bg-light-aquifer-canvas pt-28 pb-16 lg:pt-32 lg:pb-24">
+        <div className="relative z-10 w-full max-w-5xl mx-auto px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-start">
             {/* Left Column */}
-            <div className="lg:col-span-5 flex flex-col justify-between pt-2 lg:pt-6">
+            <div className="lg:col-span-5 flex flex-col justify-between pt-2 lg:pt-4">
               <div className="flex flex-col">
                 <div className="inline-flex items-center gap-2 mb-4">
                   <span className="inline-block h-2 w-2 rounded-full bg-moss"></span>
@@ -35,34 +26,22 @@ export default function ContactPage() {
                 <h1 className="font-headline-hero text-headline-hero-mobile sm:text-headline-hero text-deep-aquifer leading-[1.08] tracking-tight">
                   Book a site survey
                 </h1>
-                <p className="mt-6 font-body-large text-body-large text-deep-aquifer/85 leading-relaxed font-normal">
+                <p className="mt-5 font-body-large text-body-large text-deep-aquifer/85 leading-relaxed font-normal">
                   Tell us about your property, and we will measure your roof, test how fast the soil absorbs water, and check your well.
                 </p>
 
-                <div className="mt-8 rounded-[4px] bg-[#F1F7F9] p-6 border border-muted-aquifer/20">
-                  <div className="flex items-center gap-3">
-                    <span className="material-symbols-outlined text-moss text-[20px]">
-                      water_drop
-                    </span>
-                    <span className="font-headline-h3 text-body-primary font-bold text-deep-aquifer">
-                      An easy, collaborative process
-                    </span>
-                  </div>
-                  <p className="mt-2 font-body-sm text-body-sm text-deep-aquifer/70 leading-relaxed">
-                    Whether you oversee a multi-acre campus or are securing water autonomy for a regional estate, our team listens first, models aquifer capacity second, and designs purely around your geography.
-                  </p>
-                </div>
+                {/* "Easy Collaborative Process" card REMOVED per specification */}
               </div>
 
               {/* Studio & Direct Connect Details */}
-              <div className="mt-10 flex flex-col gap-6">
+              <div className="mt-8 flex flex-col gap-6">
                 <div className="flex items-start gap-4">
-                  <div className="h-9 w-9 rounded-[4px] bg-[#F1F7F9] flex items-center justify-center shrink-0 text-moss border border-muted-aquifer/20">
+                  <div className="h-9 w-9 rounded-[4px] bg-white flex items-center justify-center shrink-0 text-moss border border-muted-aquifer/20 shadow-xs">
                     <span className="material-symbols-outlined text-[18px]">corporate_fare</span>
                   </div>
                   <div>
                     <span className="font-headline-h3 text-[14px] font-bold text-deep-aquifer block">
-                      Kalamassery engineering labs
+                      Engineering Office
                     </span>
                     <span className="font-body-sm text-body-sm text-slate-600">
                       {CONTACT.address}
@@ -71,12 +50,12 @@ export default function ContactPage() {
                 </div>
 
                 <div className="flex items-start gap-4">
-                  <div className="h-9 w-9 rounded-[4px] bg-[#F1F7F9] flex items-center justify-center shrink-0 text-moss border border-muted-aquifer/20">
+                  <div className="h-9 w-9 rounded-[4px] bg-white flex items-center justify-center shrink-0 text-moss border border-muted-aquifer/20 shadow-xs">
                     <span className="material-symbols-outlined text-[18px]">call</span>
                   </div>
                   <div>
                     <span className="font-headline-h3 text-[14px] font-bold text-deep-aquifer block">
-                      Priority desk
+                      Priority Desk
                     </span>
                     <a
                       className="font-body-sm text-body-sm text-slate-700 hover:text-moss transition-colors font-medium"
@@ -91,12 +70,12 @@ export default function ContactPage() {
                 </div>
 
                 <div className="flex items-start gap-4">
-                  <div className="h-9 w-9 rounded-[4px] bg-[#F1F7F9] flex items-center justify-center shrink-0 text-moss border border-muted-aquifer/20">
+                  <div className="h-9 w-9 rounded-[4px] bg-white flex items-center justify-center shrink-0 text-moss border border-muted-aquifer/20 shadow-xs">
                     <span className="material-symbols-outlined text-[18px]">mail</span>
                   </div>
                   <div>
                     <span className="font-headline-h3 text-[14px] font-bold text-deep-aquifer block">
-                      Email inquiries
+                      Email Inquiries
                     </span>
                     <a
                       className="font-body-sm text-body-sm text-slate-700 hover:text-moss transition-colors font-medium"
@@ -107,155 +86,19 @@ export default function ContactPage() {
                   </div>
                 </div>
 
-                <div className="flex items-start gap-4">
-                  <div className="h-9 w-9 rounded-[4px] bg-[#F1F7F9] flex items-center justify-center shrink-0 text-moss border border-muted-aquifer/20">
-                    <WhatsAppIcon className="size-4 text-moss" />
-                  </div>
-                  <div>
-                    <span className="font-headline-h3 text-[14px] font-bold text-deep-aquifer block">
-                      Chat on WhatsApp
-                    </span>
-                    <a
-                      className="inline-flex items-center gap-1.5 font-button-text text-body-sm text-moss hover:text-deep-aquifer transition-colors font-medium"
-                      href={WHATSAPP_HREF}
-                      rel="noopener noreferrer"
-                      target="_blank"
-                    >
-                      Connect directly on WhatsApp
-                      <span className="material-symbols-outlined text-[15px]">arrow_outward</span>
-                    </a>
-                  </div>
-                </div>
+                {/* WhatsApp link under Email Inquiries REMOVED per specification */}
               </div>
             </div>
 
-            {/* Right Column Intake Form & Social Links */}
+            {/* Right Column Intake Form */}
             <div className="lg:col-span-7 flex flex-col gap-6">
               <ConsultationIntakeForm />
-
-              {/* Social Media Channels */}
-              <div className="rounded-[4px] bg-white p-4 border border-muted-aquifer/20 shadow-xs flex items-center justify-center gap-3.5 sm:gap-4">
-                <a
-                  aria-label="YouTube"
-                  className="h-9 w-9 rounded-[4px] bg-[#F1F7F9] hover:bg-deep-aquifer hover:text-white text-deep-aquifer transition-colors flex items-center justify-center border border-muted-aquifer/20"
-                  href="https://youtube.com/@skyrawater"
-                  rel="noopener noreferrer"
-                  target="_blank"
-                  title="YouTube"
-                >
-                  <YouTubeIcon className="h-4 w-4" />
-                </a>
-                <a
-                  aria-label="Instagram"
-                  className="h-9 w-9 rounded-[4px] bg-[#F1F7F9] hover:bg-deep-aquifer hover:text-white text-deep-aquifer transition-colors flex items-center justify-center border border-muted-aquifer/20"
-                  href="https://instagram.com/skyrawater"
-                  rel="noopener noreferrer"
-                  target="_blank"
-                  title="Instagram"
-                >
-                  <InstagramIcon className="h-4 w-4" />
-                </a>
-                <a
-                  aria-label="Facebook"
-                  className="h-9 w-9 rounded-[4px] bg-[#F1F7F9] hover:bg-deep-aquifer hover:text-white text-deep-aquifer transition-colors flex items-center justify-center border border-muted-aquifer/20"
-                  href="https://facebook.com/skyrawater"
-                  rel="noopener noreferrer"
-                  target="_blank"
-                  title="Facebook"
-                >
-                  <FacebookIcon className="h-4 w-4" />
-                </a>
-                <a
-                  aria-label="LinkedIn"
-                  className="h-9 w-9 rounded-[4px] bg-[#F1F7F9] hover:bg-deep-aquifer hover:text-white text-deep-aquifer transition-colors flex items-center justify-center border border-muted-aquifer/20"
-                  href="https://linkedin.com/company/skyrawater"
-                  rel="noopener noreferrer"
-                  target="_blank"
-                  title="LinkedIn"
-                >
-                  <LinkedInIcon className="h-4 w-4" />
-                </a>
-                <a
-                  aria-label="X (formerly Twitter)"
-                  className="h-9 w-9 rounded-[4px] bg-[#F1F7F9] hover:bg-deep-aquifer hover:text-white text-deep-aquifer transition-colors flex items-center justify-center border border-muted-aquifer/20"
-                  href="https://x.com/skyrawater"
-                  rel="noopener noreferrer"
-                  target="_blank"
-                  title="X"
-                >
-                  <XIcon className="h-4 w-4" />
-                </a>
-              </div>
-            </div>
-
-
-
-
-          </div>
-        </div>
-      </section>
-
-      {/* Contextual Photo Banner */}
-      <section className="w-full bg-surface-container/30 py-16 border-t border-muted-aquifer/15">
-        <div className="w-full max-w-6xl mx-auto px-6 lg:px-8">
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            <div className="rounded-[4px] overflow-hidden bg-white shadow-xs border border-muted-aquifer/20 flex flex-col">
-              <div className="relative h-48 w-full overflow-hidden">
-                <img
-                  alt="Passive Hydrology"
-                  className="w-full h-full object-cover"
-                  src="https://lh3.googleusercontent.com/aida-public/AB6AXuC_gYGxOvSB1xUcnePzJOQ1xkSIQRH2EIRAX8-A1qZMobI01idGo4Qmwy1VulPUA6D7IRfmUdELa2MTVvAs_9Kr9kqJ0dVf9BEZRWjUgEET_n-FAWLGcwRNeezF86nKm7YgcRmisWf4WMrlc1ZcqnPevzWSmFgp27DfAJ-q7nBE-4hSnKdn3QQEAm4CbnMzx81oGUFvvUOqRc6VAeTPyfilhcTaY4js9ie5ren3J3bD"
-                />
-              </div>
-              <div className="p-5 flex flex-col justify-between flex-grow">
-                <span className="font-button-text text-[12px] uppercase text-moss font-semibold tracking-wider">
-                  Passive Hydrology
-                </span>
-                <p className="mt-2 font-body-sm text-body-sm text-deep-aquifer/80">
-                  Every drop guided into soil strata naturally, maintaining steady subsoil hydration.
-                </p>
-              </div>
-            </div>
-
-            <div className="rounded-[4px] overflow-hidden bg-white shadow-xs border border-muted-aquifer/20 flex flex-col">
-              <div className="relative h-48 w-full overflow-hidden">
-                <img
-                  alt="Subterranean Infiltration"
-                  className="w-full h-full object-cover"
-                  src="https://lh3.googleusercontent.com/aida-public/AB6AXuAnJWw-UYy7RpoNvRlYwfQyENjCN9B4Kbl-4nTw03IH9OMMddfHAI4iHK7I98gMdDhIvz1zgnAU6T77URBqw9syC0agA6ocbso62gWwnfrRa0YUPR8YOIzIZ-N6zQnkGuBt1VDoNayCtsCTCfArSz3mWmyimPIdVaOHXBQ1P8pvMGxIWDxdY8-H3Q25Enqnw91RBPPsuHLeysu2RG89fkTQla1VUGRWZJYIw5-gEoOy"
-                />
-              </div>
-              <div className="p-5 flex flex-col justify-between flex-grow">
-                <span className="font-button-text text-[12px] uppercase text-moss font-semibold tracking-wider">
-                  Subterranean Infiltration
-                </span>
-                <p className="mt-2 font-body-sm text-body-sm text-deep-aquifer/80">
-                  Quiet modular recharge chambers designed to outlast concrete retention pits.
-                </p>
-              </div>
-            </div>
-
-            <div className="rounded-[4px] overflow-hidden bg-white shadow-xs border border-muted-aquifer/20 flex flex-col">
-              <div className="relative h-48 w-full overflow-hidden">
-                <img
-                  alt="Kochi Research Hub"
-                  className="w-full h-full object-cover"
-                  src="https://lh3.googleusercontent.com/aida-public/AB6AXuDzts_ScykQaZoNLIAf96IPK1L0aF2UM9vjffPj2NbOqZZ6Ipv-BI6D5iHB5nb9qpy7zgsRMrHxAPoqgwqsyl_UX3oKS_GqdF9Klq2khjUaj-UelP6Q0TDadsATLzVkzplylWcGRUOCINxakZ0FXIuXhchnQbs7kQC93Eevl69RI-OHQW4rqC7ZtJtQCwlVuroP_cDKpcK7BdCYVdRgrwZiKgGtA2anacMRbaO769Sx"
-                />
-              </div>
-              <div className="p-5 flex flex-col justify-between flex-grow">
-                <span className="font-button-text text-[12px] uppercase text-moss font-semibold tracking-wider">
-                  Kochi Research Hub
-                </span>
-                <p className="mt-2 font-body-sm text-body-sm text-deep-aquifer/80">
-                  Our engineering desk translates local precipitation records into reliable year-round yield.
-                </p>
-              </div>
             </div>
           </div>
         </div>
       </section>
+
+      {/* NO SECTIONS OR CARDS APPEAR AFTER THIS PER SPECIFICATION */}
     </div>
   );
 }
-
