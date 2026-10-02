@@ -11,71 +11,65 @@ const SOCIAL_LINKS = [
   { label: "YouTube", Icon: YouTubeIcon, href: "#" },
 ] as const;
 
-/**
- * Final Conversion Call To Action (Contact Box). Source: Figma node 1:508.
- * Social links have no real destinations in the design — "#" placeholders.
- */
 export function FinalCta() {
   return (
-    <section className="bg-linear-to-b from-ink to-ink-elevated py-20 text-white" id="contact">
+    <section className="bg-[#F8FCFE] py-16 text-deep-aquifer border-t border-muted-aquifer/15" id="contact">
       <Container>
-        <div className="relative overflow-hidden rounded-3xl border border-white/15 bg-white/5 p-8 shadow-2xl backdrop-blur-md sm:p-12 lg:p-16">
-          <div className="grid grid-cols-1 items-center gap-10 lg:grid-cols-12">
+        <div className="relative overflow-hidden rounded-[4px] border border-muted-aquifer/20 bg-white p-8 sm:p-10 shadow-xs">
+          <div className="grid grid-cols-1 items-center gap-8 lg:grid-cols-12">
             <div className="space-y-4 lg:col-span-7">
-              <h2 className="text-3xl font-extrabold tracking-tight text-white sm:text-4xl lg:text-5xl">
+              <h2 className="font-heading-hero text-heading-md font-bold tracking-tight text-deep-aquifer">
                 <span className="block">Your water problem</span>
-                <span className="block">has a solution.</span>
+                <span className="block text-moss">has a solution.</span>
               </h2>
-              <p className="text-xl font-bold text-brand-green sm:text-2xl">{"Let's find it together."}</p>
-              <p className="max-w-lg text-sm text-slate-300 sm:text-base">
+              <p className="font-body-regular text-body-base text-slate-600 max-w-lg">
                 Get an on-site feasibility evaluation, custom storage simulation,
                 and transparent quote from our engineering consultants.
               </p>
-              <div className="flex flex-wrap items-center gap-4 pt-4">
+              <div className="flex flex-wrap items-center gap-4 pt-2">
                 <CtaButton href={WHATSAPP_HREF} external icon={<WhatsAppIcon className="size-4" />}>
-                  Chat on WhatsApp
+                  Book a site survey
                 </CtaButton>
                 <CtaButton
                   href={WHATSAPP_HREF}
                   external
-                  variant="secondary-teal"
-                  size="sm"
-                  icon={<ArrowRightIcon className="size-4" />}
-                  className="flex-row-reverse font-semibold"
+                  variant="secondary"
+                  size="md"
+                  icon={<WhatsAppIcon className="size-4" />}
                 >
-                  Request a Consultation
+                  Chat on WhatsApp
                 </CtaButton>
               </div>
             </div>
 
             {/* Physical Location & Contact Micro-details */}
-            <div className="space-y-4 rounded-2xl border border-white/10 bg-black/30 p-6 sm:p-8 lg:col-span-5">
+            <div className="space-y-4 rounded-[4px] border border-muted-aquifer/20 bg-[#F1F7F9] p-6 lg:col-span-5">
               <div className="flex items-start gap-3">
-                <div className="mt-0.5 flex size-8 flex-shrink-0 items-center justify-center rounded-lg bg-brand-teal/20 text-brand-teal">
+                <div className="mt-0.5 flex size-7 flex-shrink-0 items-center justify-center rounded-[4px] bg-moss/10 text-moss">
                   <LocationPinIcon className="size-4" />
                 </div>
-                <div className="text-xs text-slate-300 sm:text-sm">
-                  <p className="font-bold text-white">SkyRa Headquarters</p>
+                <div className="font-body-sm text-body-sm text-slate-700">
+                  <p className="font-bold text-deep-aquifer">Skyra headquarters</p>
                   <p className="mt-0.5 leading-relaxed">{CONTACT.address}</p>
                 </div>
               </div>
 
-              <div className="flex items-center gap-3 border-t border-white/10 pt-3 text-xs text-slate-300 sm:text-sm">
-                <div className="flex size-8 flex-shrink-0 items-center justify-center rounded-lg bg-brand-green/20 text-brand-green">
+              <div className="flex items-center gap-3 border-t border-muted-aquifer/20 pt-3 font-body-sm text-body-sm text-slate-700">
+                <div className="flex size-7 flex-shrink-0 items-center justify-center rounded-[4px] bg-moss/10 text-moss">
                   <MailIcon className="size-4" />
                 </div>
                 <div>
-                  <p className="font-bold text-white">Direct Advisory</p>
+                  <p className="font-bold text-deep-aquifer">Direct advisory</p>
                   <p className="mt-0.5">
                     {CONTACT.email} / {CONTACT.phoneDisplay}
                   </p>
                 </div>
               </div>
 
-              <div className="flex items-center gap-4 border-t border-white/10 pt-3 text-slate-400">
+              <div className="flex items-center gap-4 border-t border-muted-aquifer/20 pt-3 text-slate-500 font-body-sm text-body-sm">
                 <span className="text-xs">Follow:</span>
                 {SOCIAL_LINKS.map(({ label, Icon, href }) => (
-                  <a key={label} aria-label={label} href={href} className="transition-colors hover:text-brand-teal">
+                  <a key={label} aria-label={label} href={href} className="transition-colors hover:text-moss">
                     <Icon className="size-4" />
                   </a>
                 ))}
@@ -87,3 +81,4 @@ export function FinalCta() {
     </section>
   );
 }
+

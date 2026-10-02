@@ -6,57 +6,44 @@ import { DropletIcon } from "@/components/icons/metric-icons";
 import { StormIcon } from "@/components/icons/service-icons";
 import { WHATSAPP_HREF } from "@/lib/nav";
 
-/**
- * About Hero. Source: HTML reference build.
- *
- * Top padding (pt-28/pt-32) clears the fixed 80px header at every
- * breakpoint — a cross-page diff pass caught the eyebrow badge sitting
- * partially behind the header on mobile/tablet at the original py-16.
- */
 export function AboutHero() {
   return (
-    <section className="relative overflow-hidden bg-ink pb-16 pt-28 lg:pb-24 lg:pt-32">
-      <div aria-hidden="true" className="pointer-events-none absolute -top-48 left-1/2 h-[550px] w-[850px] -translate-x-1/2 rounded-full bg-brand-teal/10 blur-[140px]" />
-      <div aria-hidden="true" className="pointer-events-none absolute right-0 top-1/3 h-[420px] w-[420px] rounded-full bg-brand-green/10 blur-[120px]" />
-
-      <Container className="relative z-10 flex flex-col items-center text-center">
-        <div className="inline-flex items-center gap-2 rounded-full bg-ink-elevated px-4 py-1.5 text-brand-teal shadow-md">
+    <section className="relative overflow-hidden bg-[#F8FCFE] pb-14 pt-28 lg:pb-20 lg:pt-32 border-b border-muted-aquifer/15">
+      <Container className="relative z-10 flex flex-col items-start text-left">
+        <div className="inline-flex items-center gap-2 rounded-[4px] bg-[#F1F7F9] px-3.5 py-1 text-moss border border-muted-aquifer/20">
           <DropletIcon className="size-4" />
-          <span className="text-[11px] font-bold uppercase tracking-widest">About SkyRa • From Sky, To Life</span>
+          <span className="text-[11px] font-bold uppercase tracking-widest">About Skyra &bull; From sky, to life</span>
         </div>
 
-        <h1 className="mt-6 max-w-4xl text-3xl font-bold text-white sm:text-4xl lg:text-[56px] lg:leading-[64px]">
-          Re-engineering Our Relationship with{" "}
-          <span className="bg-linear-to-r from-brand-teal via-teal-300 to-brand-green bg-clip-text text-transparent">
-            Rain.
-          </span>
+        <h1 className="mt-5 max-w-4xl font-heading-hero text-heading-hero-mobile sm:text-heading-hero font-bold tracking-tight text-deep-aquifer">
+          Re-engineering our relationship with <span className="text-moss">rain.</span>
         </h1>
 
-        <p className="mt-6 max-w-3xl text-lg leading-relaxed text-slate-400">
-          SkyRa was founded to solve a fundamental paradox: our regions receive
+        <p className="mt-5 max-w-3xl font-body-large text-body-large text-slate-700 leading-relaxed">
+          Skyra was founded to solve a fundamental paradox: our regions receive
           abundant rainfall, yet we continually face seasonal water scarcity and
           groundwater depletion. We realized that to secure our future, we had
           to change how we interact with water today.
         </p>
 
-        <div className="mt-8 flex flex-wrap items-center justify-center gap-4">
-          <CtaButton href="/services" variant="primary" icon={<ArrowRightIcon className="size-4" />} className="flex-row-reverse">
-            Explore Our Solutions
+        <div className="mt-8 flex flex-wrap items-center gap-4">
+          <CtaButton href={WHATSAPP_HREF} external variant="primary" icon={<WhatsAppIcon className="size-4" />}>
+            Book a site survey
           </CtaButton>
-          <CtaButton href={WHATSAPP_HREF} external variant="dark" icon={<WhatsAppIcon className="size-4 text-brand-green" />}>
-            Connect on WhatsApp
+          <CtaButton href="/services" variant="secondary" icon={<ArrowRightIcon className="size-4" />} className="flex-row-reverse">
+            Explore our solutions
           </CtaButton>
         </div>
 
-        <div className="mt-12 w-full max-w-4xl rounded-2xl bg-ink-elevated/90 p-6 shadow-xl backdrop-blur-md">
-          <div className="flex flex-col items-center justify-between gap-4 text-left md:flex-row">
+        <div className="mt-10 w-full max-w-4xl rounded-[4px] bg-white p-6 shadow-xs border border-muted-aquifer/20">
+          <div className="flex flex-col items-start justify-between gap-4 text-left md:flex-row md:items-center">
             <div className="flex items-center gap-4">
-              <div className="flex size-12 flex-shrink-0 items-center justify-center rounded-full bg-brand-teal/10 text-brand-teal">
-                <StormIcon className="size-6" />
+              <div className="flex size-10 flex-shrink-0 items-center justify-center rounded-[4px] bg-moss/10 text-moss">
+                <StormIcon className="size-5" />
               </div>
               <div>
-                <p className="text-xs font-bold uppercase tracking-widest text-brand-green">The SkyRa Paradigm</p>
-                <p className="mt-1 text-sm text-white">
+                <p className="text-xs font-bold uppercase tracking-widest text-moss">The Skyra paradigm</p>
+                <p className="mt-0.5 text-sm text-deep-aquifer font-medium">
                   Transforming rainwater from lost surface runoff into a
                   permanent, secure resource for homes, businesses, and
                   communities.
@@ -64,8 +51,7 @@ export function AboutHero() {
               </div>
             </div>
             <div className="flex flex-shrink-0 items-center gap-2">
-              <span aria-hidden="true" className="size-2.5 animate-ping rounded-full bg-brand-green" />
-              <span className="text-sm font-semibold text-brand-green">Decentralized Hydrology</span>
+              <span className="text-xs font-semibold text-deep-aquifer">Decentralized hydrology</span>
             </div>
           </div>
         </div>
@@ -73,3 +59,4 @@ export function AboutHero() {
     </section>
   );
 }
+

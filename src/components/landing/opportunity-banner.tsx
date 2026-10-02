@@ -2,69 +2,49 @@ import Image from "next/image";
 import { Eyebrow } from "@/components/ui/eyebrow";
 
 const FLOW_STEPS = [
-  { emoji: "🌧️", label: "Rain", tone: "text-brand-teal" },
-  { emoji: "💧", label: "Capture", tone: "text-brand-green" },
-  { emoji: "🧪", label: "Filter", tone: "text-brand-teal" },
-  { emoji: "🛢️", label: "Store", tone: "text-emerald-400" },
-  { emoji: "🌱", label: "Recharge", tone: "text-brand-green" },
-  { emoji: "🔄", label: "Reuse", tone: "text-brand-teal" },
+  { label: "Rain", tone: "text-deep-aquifer" },
+  { label: "Capture", tone: "text-deep-aquifer" },
+  { label: "Filter", tone: "text-deep-aquifer" },
+  { label: "Store", tone: "text-deep-aquifer" },
+  { label: "Recharge", tone: "text-deep-aquifer" },
+  { label: "Reuse", tone: "text-deep-aquifer" },
 ] as const;
 
-/**
- * The Opportunity Transition Banner. Source: Figma node 1:90.
- *
- * Figma positions the flow diagram with absolute calc(50% ± Npx) offsets
- * (desktop-only, fixed-width). Rebuilt as a wrapping flex row with text
- * arrow separators (matching the site's own HTML reference build) so it
- * degrades to multiple lines on narrow viewports instead of overflowing.
- */
 export function OpportunityBanner() {
   return (
-    <section className="relative overflow-hidden border-y border-white/10 bg-ink py-20">
-      <div className="absolute inset-0 z-0 opacity-25">
-        <Image
-          src="/images/dew-drops-leaves.jpg"
-          alt="Macro dew drops on deep green leaves"
-          fill
-          sizes="100vw"
-          className="object-cover object-center"
-        />
-      </div>
-
+    <section className="relative overflow-hidden border-y border-muted-aquifer/20 bg-light-aquifer-canvas py-16">
       <div className="relative z-10 mx-auto max-w-5xl space-y-8 px-5 text-center sm:px-6 lg:px-8">
         <Eyebrow color="green" dash="both" center>
-          The Opportunity
+          The opportunity
         </Eyebrow>
 
-        <h2 className="mx-auto max-w-3xl text-2xl font-extrabold leading-tight tracking-tight text-white sm:text-4xl lg:text-5xl">
+        <h2 className="mx-auto max-w-3xl text-2xl font-extrabold leading-tight tracking-tight text-deep-aquifer sm:text-4xl lg:text-5xl">
           <span className="block">What if the water running away</span>
           <span className="block">today could become the water we</span>
-          <span className="block text-brand-green underline decoration-brand-green/40 underline-offset-8">
+          <span className="block text-moss underline decoration-moss/40 underline-offset-8">
             depend on tomorrow?
           </span>
         </h2>
 
-        <div className="flex flex-wrap items-center justify-center gap-3 pt-8 text-xs font-semibold sm:gap-4 sm:text-sm md:gap-6">
-          {FLOW_STEPS.map(({ emoji, label, tone }, i) => (
+        <div className="flex flex-wrap items-center justify-center gap-2.5 pt-6 text-xs font-semibold sm:gap-3.5 sm:text-sm">
+          {FLOW_STEPS.map(({ label, tone }, i) => (
             <div key={label} className="contents">
-              <div className="flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-4 py-2 text-[#F1F5F9]">
-                <span className={tone} aria-hidden="true">
-                  {emoji}
-                </span>
+              <div className="flex items-center gap-2 rounded-[4px] border border-muted-aquifer/20 bg-white px-3.5 py-1.5 text-deep-aquifer shadow-xs">
+                <span className="size-1.5 rounded-full bg-moss" />
                 {label}
               </div>
               {i < FLOW_STEPS.length - 1 && (
-                <span aria-hidden="true" className="text-slate-500">
+                <span aria-hidden="true" className="text-deep-aquifer/40">
                   →
                 </span>
               )}
             </div>
           ))}
-          <span aria-hidden="true" className="text-slate-500">
+          <span aria-hidden="true" className="text-deep-aquifer/40">
             →
           </span>
-          <div className="flex items-center gap-2 rounded-full bg-brand-green px-4 py-2 font-bold text-ink shadow-cta-glow">
-            <span aria-hidden="true">🛡️</span> Water Security
+          <div className="flex items-center gap-2 rounded-[4px] bg-deep-aquifer px-4 py-1.5 font-bold text-white shadow-xs">
+            <span className="size-1.5 rounded-full bg-moss" /> Water security
           </div>
         </div>
       </div>

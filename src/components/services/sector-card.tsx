@@ -1,42 +1,72 @@
+"use client";
+
 import Image from "next/image";
 import type { ReactNode } from "react";
-import { ArrowRightIcon } from "@/components/icons/arrow-right-icon";
+import Link from "next/link";
 
-/** One card in "Sector Capabilities & Built Environments". */
 export function SectorCard({
   image,
   icon,
-  tone,
+  badgeTone,
   eyebrow,
   title,
   description,
   linkLabel,
+  targetHref = "/contact",
 }: {
   image: string;
   icon: ReactNode;
-  tone: string;
+  badgeTone: string;
   eyebrow: string;
   title: string;
   description: string;
   linkLabel: string;
+  targetHref?: string;
 }) {
   return (
-    <div className="group flex flex-col overflow-hidden rounded-2xl bg-ink-elevated shadow-md transition-colors hover:bg-white/[0.07]">
-      <div className="relative h-48 w-full">
-        <Image src={image} alt={title} fill sizes="(min-width: 1024px) 25vw, (min-width: 768px) 50vw, 100vw" className="object-cover" />
-      </div>
-      <div className="flex flex-1 flex-col justify-between p-6">
-        <div>
-          <div className={`mb-2 flex items-center gap-2 ${tone}`}>
-            {icon}
-            <span className="text-xs font-bold uppercase tracking-widest">{eyebrow}</span>
-          </div>
-          <h3 className="mb-2 text-lg font-semibold text-white">{title}</h3>
-          <p className="mb-4 text-sm text-slate-300">{description}</p>
+    <div className="flex h-full flex-col justify-between overflow-hidden rounded-[4px] border border-muted-aquifer/20 bg-white p-5 shadow-xs">
+      {/* Top Image Section */}
+      <div className="relative aspect-[4/3] w-full overflow-hidden rounded-[4px] bg-slate-100 mb-4">
+        <Image
+          src={image}
+          alt={title}
+          fill
+          sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 25vw"
+          className="object-cover"
+        />
+
+        {/* Badge Tag */}
+        <div className={`absolute top-3 left-3 inline-flex items-center gap-1.5 rounded-[4px] border px-2.5 py-0.5 text-[11px] font-bold uppercase tracking-wider ${badgeTone}`}>
+          {icon}
+          <span>{eyebrow}</span>
         </div>
-        <div className="flex items-center gap-2 pt-2 text-sm font-semibold text-brand-teal">
-          {linkLabel}
-          <ArrowRightIcon className="size-4" />
+      </div>
+
+      {/* Content Section */}
+      <div className="flex flex-1 flex-col justify-between">
+        <div>
+          <h3 className="font-headline-h3 text-lg font-bold text-deep-aquifer tracking-tight mb-2">
+            {title}
+          </h3>
+          <p className="font-body-sm text-xs leading-relaxed text-deep-aquifer/75 mb-5">
+            {description}
+          </p>
+        </div>
+
+        {/* Link / Action Tag */}
+        <div className="pt-3 border-t border-muted-aquifer/15 flex items-center justify-between">
+          <span className="font-technical-label text-xs font-semibold text-moss">
+            {linkLabel}
+          </span>
+          <Link
+            href={targetHref}
+            className="size-7 rounded-[4px] bg-deep-aquifer text-white transition-colors flex items-center justify-center"
+            aria-label={`Inquire about ${title}`}
+          >
+            <span className="material-symbols-outlined text-[15px]">
+              arrow_forward
+            </span>
+          </Link>
         </div>
       </div>
     </div>
