@@ -25,19 +25,17 @@ export function InlineCtaBox({
 }) {
   return (
     <div
-      className={`flex flex-col items-center gap-6 rounded-2xl border p-8 shadow-sm md:flex-row md:justify-between ${
-        tone === "light" ? "border-slate-200 bg-slate-50" : "border-white/10 bg-ink-elevated"
-      }`}
+      className="flex flex-col items-center gap-6 rounded-[4px] border border-muted-aquifer/20 bg-white p-6 sm:p-8 shadow-xs md:flex-row md:justify-between"
     >
       <div className="flex items-center gap-4">
-        <div className={`flex size-14 flex-shrink-0 items-center justify-center rounded-full ${iconTone}`}>
+        <div className="flex size-12 flex-shrink-0 items-center justify-center rounded-[4px] bg-slate-100 text-deep-aquifer">
           {icon}
         </div>
         <div>
-          <h3 className={`text-lg font-semibold ${tone === "light" ? "text-slate-900" : "text-white"}`}>
+          <h3 className="text-base font-bold text-deep-aquifer">
             {title}
           </h3>
-          <p className={tone === "light" ? "text-slate-600" : "text-slate-300"}>{description}</p>
+          <p className="text-xs text-deep-aquifer/75 leading-relaxed">{description}</p>
         </div>
       </div>
       <CtaButton href={href} external={external} variant="primary" icon={buttonIcon} className="w-full flex-shrink-0 md:w-auto">

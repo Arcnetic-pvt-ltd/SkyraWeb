@@ -42,15 +42,10 @@ export function QuotesCarousel() {
     });
   }, []);
 
-  useEffect(() => {
-    const timer = setInterval(() => {
-      setActiveIndex((prev) => (prev + 1) % QUOTES.length);
-    }, 8500);
-    return () => clearInterval(timer);
-  }, []);
+  // Remove auto-play interval per Page 08 guidelines: still until touched
 
   return (
-    <section className="w-full bg-forest-slate text-light-aquifer-canvas py-20 sm:py-24 lg:py-28 px-6 sm:px-10 lg:px-16 relative overflow-hidden min-h-[543.5px] lg:min-h-[543.5px] flex items-center">
+    <section className="w-full bg-light-aquifer-canvas text-deep-aquifer py-20 sm:py-24 border-t border-muted-aquifer/15 relative overflow-hidden min-h-[460px] flex items-center">
       {/* Background Images for Quotes (Synchronized with text transition) */}
       {QUOTES.map((item, idx) => {
         if (!item.image) return null;
@@ -61,32 +56,27 @@ export function QuotesCarousel() {
           <div
             key={`img-${idx}`}
             className={`absolute bottom-0 ${isLeft ? "left-0 justify-start" : "right-0 justify-end"
-              } h-full max-h-[95%] pointer-events-none transition-all duration-700 ease-in-out z-0 hidden md:flex items-end ${isActive
-                ? "opacity-100 translate-x-0"
-                : isLeft
-                  ? "opacity-0 -translate-x-8"
-                  : "opacity-0 translate-x-8"
-              }`}
+              } h-full max-h-[95%] pointer-events-none transition-opacity duration-300 ease-in-out z-0 hidden md:flex items-end ${isActive ? "opacity-100" : "opacity-0"}`}
           >
             <div className="relative h-full flex items-end">
               {/* Soft Gradient Mask based on image position */}
               {isLeft ? (
-                <div className="absolute inset-y-0 right-0 w-32 sm:w-56 bg-gradient-to-l from-forest-slate via-forest-slate/60 to-transparent z-10 pointer-events-none"></div>
+                <div className="absolute inset-y-0 right-0 w-32 sm:w-56 bg-gradient-to-l from-light-aquifer-canvas via-light-aquifer-canvas/60 to-transparent z-10 pointer-events-none"></div>
               ) : (
-                <div className="absolute inset-y-0 left-0 w-32 sm:w-56 bg-gradient-to-r from-forest-slate via-forest-slate/60 to-transparent z-10 pointer-events-none"></div>
+                <div className="absolute inset-y-0 left-0 w-32 sm:w-56 bg-gradient-to-r from-light-aquifer-canvas via-light-aquifer-canvas/60 to-transparent z-10 pointer-events-none"></div>
               )}
 
               <img
                 src={item.image}
                 alt={item.author}
-                className="h-full w-auto object-contain object-bottom block max-w-none"
+                className="h-full w-auto object-contain object-bottom block max-w-none opacity-80"
               />
             </div>
           </div>
         );
       })}
 
-      <div className="max-w-7xl mx-auto w-full relative z-10 grid grid-cols-1 lg:grid-cols-12 gap-8 items-center min-h-[280px]">
+      <div className="max-w-5xl mx-auto px-6 lg:px-8 w-full relative z-10 grid grid-cols-1 lg:grid-cols-12 gap-8 items-center min-h-[280px]">
         {QUOTES.map((item, idx) => {
           const isActive = idx === activeIndex;
           const isLeft = item.position === "left";
@@ -95,33 +85,31 @@ export function QuotesCarousel() {
             <div
               key={`text-${idx}`}
               className={`lg:col-span-8 xl:col-span-7 ${isLeft ? "lg:col-start-5 xl:col-start-6" : "lg:col-start-1"
-                } flex flex-col items-start text-left gap-6 transition-all duration-700 ease-in-out ${isActive
-                  ? "opacity-100 relative z-10 translate-y-0 pointer-events-auto"
-                  : "opacity-0 absolute inset-0 pointer-events-none translate-y-2"
+                } flex flex-col items-start text-left gap-5 transition-opacity duration-300 ease-in-out ${isActive
+                  ? "opacity-100 relative z-10 pointer-events-auto"
+                  : "opacity-0 absolute inset-0 pointer-events-none"
                 }`}
             >
-              <div className="inline-flex items-center gap-2.5 text-moss/90">
-                <span className="material-symbols-outlined text-[28px] text-tertiary-fixed">
-                  water_drop
-                </span>
-                <span className="font-technical-label text-[12px] uppercase tracking-wider text-white/70">
-                  National Vision
+              <div className="inline-flex items-center gap-2">
+                <span className="w-2 h-2 rounded-full bg-moss"></span>
+                <span className="font-technical-label text-[12px] uppercase tracking-wider text-forest-slate font-semibold">
+                  National vision
                 </span>
               </div>
 
-              <blockquote className="font-headline-h2 text-[26px] sm:text-[34px] lg:text-[38px] text-white font-normal leading-snug tracking-tight">
+              <blockquote className="font-headline-h2 text-[24px] sm:text-[30px] text-deep-aquifer font-normal leading-snug tracking-tight">
                 {item.quote}
               </blockquote>
 
-              <cite className="font-body-large text-body-large text-light-aquifer-canvas/90 not-italic block">
-                <span className="font-semibold text-white">
+              <cite className="font-body-large text-body-large text-deep-aquifer/80 not-italic block">
+                <span className="font-semibold text-deep-aquifer">
                   — {item.author}
                 </span>
-                , <span className="text-white/70">{item.role}</span>
+                , <span className="text-deep-aquifer/65">{item.role}</span>
               </cite>
 
               {/* Carousel Dot Indicators */}
-              <div className="flex items-center gap-3 pt-4">
+              <div className="flex items-center gap-2 pt-2">
                 {QUOTES.map((_, dotIdx) => (
                   <button
                     key={dotIdx}
@@ -129,8 +117,8 @@ export function QuotesCarousel() {
                     aria-label={`Quote ${dotIdx + 1}`}
                     onClick={() => setActiveIndex(dotIdx)}
                     className={`h-1.5 rounded-full transition-all duration-500 ${dotIdx === activeIndex
-                        ? "w-8 bg-white"
-                        : "w-2.5 bg-white/40 hover:bg-white/70"
+                        ? "w-6 bg-deep-aquifer"
+                        : "w-2 bg-muted-aquifer/30 hover:bg-muted-aquifer/60"
                       }`}
                   />
                 ))}

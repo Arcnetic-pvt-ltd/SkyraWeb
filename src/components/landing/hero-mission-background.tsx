@@ -94,20 +94,6 @@ export function HeroMissionBackground() {
 
   return (
     <div className="absolute inset-0 overflow-hidden pointer-events-none select-none z-0">
-      {/* Background Atmosphere Glow (Follows active node) */}
-      <motion.div
-        className="absolute w-[400px] h-[400px] rounded-full blur-[140px] opacity-25 pointer-events-none"
-        style={{
-          left: `${(stage.nodeX / 1440) * 100}%`,
-          top: `${(stage.nodeY / 900) * 100}%`,
-          transform: "translate(-50%, -50%)",
-        }}
-        animate={{
-          backgroundColor: stage.accent,
-          scale: [1, 1.15, 1],
-        }}
-        transition={{ duration: 3, ease: "easeInOut" }}
-      />
 
       {/* FULL HERO SVG HYDROLOGICAL FLOW BACKGROUND */}
       <svg
@@ -255,7 +241,7 @@ export function HeroMissionBackground() {
       </svg>
 
       {/* TOP-RIGHT MINIMAL STAGE SELECTOR PILLS */}
-      <div className="absolute top-28 sm:top-32 right-6 sm:right-12 z-20 pointer-events-auto flex items-center gap-1.5 p-1.5 rounded-full bg-white/90 border border-muted-aquifer/25 backdrop-blur-md shadow-md">
+      <div className="absolute top-28 sm:top-32 right-6 sm:right-12 z-20 pointer-events-auto flex items-center gap-1.5 p-1.5 rounded-[4px] bg-white border border-muted-aquifer/25 shadow-xs">
         {STAGES.map((st, idx) => {
           const isActive = idx === activeStage;
           return (
@@ -265,9 +251,9 @@ export function HeroMissionBackground() {
                 setActiveStage(idx);
                 setIsPlaying(false);
               }}
-              className={`px-3 py-1.5 rounded-full text-xs font-mono font-medium transition-all duration-300 cursor-pointer flex items-center gap-1.5 ${
+              className={`px-3 py-1.5 rounded-[4px] text-xs font-mono font-medium transition-all duration-300 cursor-pointer flex items-center gap-1.5 ${
                 isActive
-                  ? "bg-deep-aquifer text-white shadow-sm"
+                  ? "bg-deep-aquifer text-white shadow-xs"
                   : "text-deep-aquifer/70 hover:text-deep-aquifer hover:bg-black/5"
               }`}
             >
@@ -281,10 +267,10 @@ export function HeroMissionBackground() {
 
         <button
           onClick={() => setIsPlaying(!isPlaying)}
-          className="p-1 rounded-full text-deep-aquifer hover:bg-black/5 transition-colors cursor-pointer"
+          className="p-1 rounded-[4px] text-deep-aquifer hover:bg-black/5 transition-colors cursor-pointer"
           title={isPlaying ? "Pause auto-loop" : "Play auto-loop"}
         >
-          <span className={`block size-2 rounded-full ${isPlaying ? "bg-moss animate-pulse" : "bg-amber-500"}`} />
+          <span className={`block size-2 rounded-full ${isPlaying ? "bg-moss" : "bg-amber-500"}`} />
         </button>
       </div>
 
@@ -300,11 +286,11 @@ export function HeroMissionBackground() {
             left: `${(stage.cardX / 1440) * 100}%`,
             top: `${(stage.cardY / 900) * 100}%`,
           }}
-          className="absolute z-20 pointer-events-auto w-72 sm:w-80 p-4 rounded-2xl bg-white/95 border border-muted-aquifer/30 backdrop-blur-xl shadow-xl text-deep-aquifer space-y-2 hidden lg:block"
+          className="absolute z-20 pointer-events-auto w-72 sm:w-80 p-4 rounded-[4px] bg-white border border-muted-aquifer/30 shadow-xs text-deep-aquifer space-y-2 hidden lg:block"
         >
           <div className="flex items-center justify-between border-b border-muted-aquifer/15 pb-2">
             <span className="text-[10px] font-mono font-bold uppercase tracking-wider text-moss flex items-center gap-1.5">
-              <span className="size-1.5 rounded-full bg-moss animate-ping" />
+              <span className="size-1.5 rounded-full bg-moss" />
               Phase {stage.num} • {stage.subtitle}
             </span>
             <span className="text-xs font-mono font-bold text-deep-aquifer">

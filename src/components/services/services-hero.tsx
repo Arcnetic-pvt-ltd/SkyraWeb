@@ -7,76 +7,63 @@ import { DropletIcon } from "@/components/icons/metric-icons";
 import { WHATSAPP_HREF } from "@/lib/nav";
 
 const HIGHLIGHTS = [
-  { label: "100% On-Site Capture", Icon: CheckCircleIcon, tone: "text-brand-green" },
-  { label: "Aquifer Rejuvenation", Icon: DropletIcon, tone: "text-brand-teal" },
-  { label: "Zero Structural Risk", Icon: MedalIcon, tone: "text-emerald-400" },
+  { label: "100% on-site capture", Icon: CheckCircleIcon },
+  { label: "Aquifer rejuvenation", Icon: DropletIcon },
+  { label: "Zero structural risk", Icon: MedalIcon },
 ] as const;
 
 const METRICS = [
-  { Icon: TruckIcon, label: "Annual Impact", value: "1.2M+ L", tone: "text-brand-green", description: "Pure rainwater captured and redirected on average per commercial installation." },
-  { Icon: TruckIcon, label: "Cost Elimination", value: "Zero", tone: "text-brand-teal", description: "Tanker reliance during peak summer months across multi-tier residential setups." },
-  { Icon: MedalIcon, label: "Engineering Quality", value: "100%", tone: "text-sky-600", description: "Turnkey design, hydro-geological survey, civil installation, and sensor deployment." },
+  { Icon: TruckIcon, label: "Annual impact", value: "1.2M+ L", description: "Pure rainwater captured and redirected on average per commercial installation." },
+  { Icon: TruckIcon, label: "Cost elimination", value: "Zero", description: "Tanker reliance during peak summer months across multi-tier residential setups." },
+  { Icon: MedalIcon, label: "Engineering quality", value: "100%", description: "Turnkey design, hydro-geological survey, civil installation, and sensor deployment." },
 ] as const;
 
-/**
- * Services Hero (Dark Oceanic Cinematic Anchor). Source: HTML reference build.
- *
- * Top padding (pt-28/pt-32) clears the fixed 80px header at every
- * breakpoint — a cross-page diff pass caught the eyebrow badge sitting
- * partially behind the header on mobile/tablet at the original py-16.
- */
 export function ServicesHero() {
   return (
-    <section className="relative overflow-hidden bg-ink pb-16 pt-28 lg:pb-24 lg:pt-32">
-      <div aria-hidden="true" className="pointer-events-none absolute -top-40 left-1/2 h-96 w-[700px] -translate-x-1/2 rounded-full bg-brand-teal/10 blur-[130px]" />
-      <div aria-hidden="true" className="pointer-events-none absolute right-0 top-1/3 h-80 w-80 rounded-full bg-brand-green/10 blur-[110px]" />
-
+    <section className="relative overflow-hidden bg-[#F8FCFE] pb-14 pt-28 lg:pb-20 lg:pt-32 border-b border-muted-aquifer/15">
       <Container className="relative z-10">
-        <div className="mx-auto flex max-w-4xl flex-col items-center text-center">
-          <div className="mb-6 inline-flex items-center gap-2 rounded-full bg-ink-elevated px-4 py-2 text-brand-teal">
-            <span aria-hidden="true" className="size-2 animate-pulse rounded-full bg-brand-teal" />
-            <span className="text-[11px] font-bold uppercase tracking-widest">Integrated Water Solutions</span>
+        <div className="mx-auto flex max-w-3xl flex-col items-center text-center">
+          <div className="mb-5 inline-flex items-center gap-2 rounded-[4px] bg-[#F1F7F9] px-3.5 py-1 text-moss border border-muted-aquifer/20">
+            <span aria-hidden="true" className="size-2 rounded-[2px] bg-moss" />
+            <span className="text-[11px] font-bold uppercase tracking-widest">Integrated water solutions</span>
           </div>
 
-          <h1 className="mb-4 text-3xl font-bold tracking-tight text-white sm:text-4xl lg:text-[56px] lg:leading-[64px]">
-            Integrated Water Solutions for{" "}
-            <span className="bg-linear-to-r from-brand-teal via-teal-400 to-brand-green bg-clip-text text-transparent">
-              Complete Resource Independence
-            </span>
+          <h1 className="mb-4 font-heading-hero text-heading-hero-mobile sm:text-heading-hero font-bold tracking-tight text-deep-aquifer">
+            Integrated water solutions for <span className="text-moss">complete resource independence</span>
           </h1>
 
-          <p className="mb-8 max-w-2xl text-lg leading-relaxed text-slate-300">
+          <p className="mb-6 max-w-2xl font-body-large text-body-large text-slate-700 leading-relaxed">
             {"Secure your property's future with end-to-end water management. We transform seasonal rainfall into a permanent, independent resource, reducing dependency on external supply and protecting your infrastructure."}
           </p>
 
-          <div className="mb-10 flex flex-wrap items-center justify-center gap-2">
-            {HIGHLIGHTS.map(({ label, Icon, tone }) => (
-              <div key={label} className="inline-flex items-center gap-2 rounded-full bg-ink-elevated px-4 py-2 text-sm font-semibold text-white shadow-sm">
-                <Icon className={`size-4.5 ${tone}`} />
+          <div className="mb-8 flex flex-wrap items-center justify-center gap-2">
+            {HIGHLIGHTS.map(({ label, Icon }) => (
+              <div key={label} className="inline-flex items-center gap-2 rounded-[4px] bg-white px-3.5 py-1.5 text-xs font-semibold text-deep-aquifer border border-muted-aquifer/20 shadow-xs">
+                <Icon className="size-4 text-moss" />
                 {label}
               </div>
             ))}
           </div>
 
-          <div className="mb-16 flex w-full flex-col items-center gap-4 sm:w-auto sm:flex-row">
-            <CtaButton href="#contact" variant="primary" icon={<ArrowRightIcon className="size-4" />} className="w-full flex-row-reverse sm:w-auto">
-              Request Technical Audit
+          <div className="mb-12 flex w-full flex-col items-center gap-4 sm:w-auto sm:flex-row">
+            <CtaButton href={WHATSAPP_HREF} external variant="primary" icon={<WhatsAppIcon className="size-4" />}>
+              Book a site survey
             </CtaButton>
-            <CtaButton href={WHATSAPP_HREF} external variant="dark" icon={<WhatsAppIcon className="size-4 text-brand-green" />} className="w-full sm:w-auto">
-              Chat on WhatsApp
+            <CtaButton href="#contact" variant="secondary" icon={<ArrowRightIcon className="size-4" />} className="w-full flex-row-reverse sm:w-auto">
+              Request technical audit
             </CtaButton>
           </div>
         </div>
 
         <div className="grid grid-cols-1 gap-4 md:grid-cols-3 lg:gap-6">
-          {METRICS.map(({ Icon, label, value, tone, description }) => (
-            <div key={label} className="flex flex-col gap-2 rounded-2xl bg-ink-elevated/80 p-6 shadow-md backdrop-blur-md">
-              <div className={`flex items-center gap-2 ${tone}`}>
-                <Icon className="size-5" />
-                <span className="text-xs font-bold uppercase tracking-widest">{label}</span>
+          {METRICS.map(({ Icon, label, value, description }) => (
+            <div key={label} className="flex flex-col gap-2 rounded-[4px] bg-white p-6 border border-muted-aquifer/20 shadow-xs">
+              <div className="flex items-center gap-2 text-moss">
+                <Icon className="size-4.5" />
+                <span className="text-xs font-bold uppercase tracking-widest text-deep-aquifer">{label}</span>
               </div>
-              <div className="text-4xl font-extrabold tracking-tight text-white">{value}</div>
-              <p className="text-sm text-slate-400">{description}</p>
+              <div className="font-metric-mono-lg text-3xl font-extrabold tracking-tight text-deep-aquifer">{value}</div>
+              <p className="text-xs text-slate-600 leading-relaxed">{description}</p>
             </div>
           ))}
         </div>
@@ -84,3 +71,4 @@ export function ServicesHero() {
     </section>
   );
 }
+

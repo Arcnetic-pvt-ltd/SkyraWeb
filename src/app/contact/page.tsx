@@ -39,12 +39,12 @@ export default function ContactPage() {
                   Tell us about your property, and we will measure your roof, test how fast the soil absorbs water, and check your well.
                 </p>
 
-                <div className="mt-10 rounded-xl bg-surface-container/50 p-6 backdrop-blur-md border border-muted-aquifer/15">
+                <div className="mt-8 rounded-[4px] bg-[#F1F7F9] p-6 border border-muted-aquifer/20">
                   <div className="flex items-center gap-3">
-                    <span className="material-symbols-outlined text-moss text-[22px]">
+                    <span className="material-symbols-outlined text-moss text-[20px]">
                       water_drop
                     </span>
-                    <span className="font-headline-h3 text-body-primary font-semibold text-deep-aquifer">
+                    <span className="font-headline-h3 text-body-primary font-bold text-deep-aquifer">
                       An easy, collaborative process
                     </span>
                   </div>
@@ -55,51 +55,51 @@ export default function ContactPage() {
               </div>
 
               {/* Studio & Direct Connect Details */}
-              <div className="mt-12 flex flex-col gap-6">
+              <div className="mt-10 flex flex-col gap-6">
                 <div className="flex items-start gap-4">
-                  <div className="h-10 w-10 rounded-full bg-white shadow-sm flex items-center justify-center shrink-0 text-forest-slate border border-muted-aquifer/15">
-                    <span className="material-symbols-outlined text-[20px]">corporate_fare</span>
+                  <div className="h-9 w-9 rounded-[4px] bg-[#F1F7F9] flex items-center justify-center shrink-0 text-moss border border-muted-aquifer/20">
+                    <span className="material-symbols-outlined text-[18px]">corporate_fare</span>
                   </div>
                   <div>
-                    <span className="font-headline-h3 text-[15px] font-semibold text-deep-aquifer block">
-                      Kalamassery Engineering Labs
+                    <span className="font-headline-h3 text-[14px] font-bold text-deep-aquifer block">
+                      Kalamassery engineering labs
                     </span>
-                    <span className="font-body-sm text-body-sm text-deep-aquifer/65">
+                    <span className="font-body-sm text-body-sm text-slate-600">
                       {CONTACT.address}
                     </span>
                   </div>
                 </div>
 
                 <div className="flex items-start gap-4">
-                  <div className="h-10 w-10 rounded-full bg-white shadow-sm flex items-center justify-center shrink-0 text-forest-slate border border-muted-aquifer/15">
-                    <span className="material-symbols-outlined text-[20px]">call</span>
+                  <div className="h-9 w-9 rounded-[4px] bg-[#F1F7F9] flex items-center justify-center shrink-0 text-moss border border-muted-aquifer/20">
+                    <span className="material-symbols-outlined text-[18px]">call</span>
                   </div>
                   <div>
-                    <span className="font-headline-h3 text-[15px] font-semibold text-deep-aquifer block">
-                      Priority Desk
+                    <span className="font-headline-h3 text-[14px] font-bold text-deep-aquifer block">
+                      Priority desk
                     </span>
                     <a
-                      className="font-body-sm text-body-sm text-forest-slate hover:text-deep-aquifer transition-colors font-medium"
+                      className="font-body-sm text-body-sm text-slate-700 hover:text-moss transition-colors font-medium"
                       href={`tel:${CONTACT.phone}`}
                     >
                       {CONTACT.phoneDisplay}
                     </a>
-                    <span className="font-body-sm text-[12px] text-deep-aquifer/50 block mt-0.5">
+                    <span className="font-body-sm text-[12px] text-slate-500 block mt-0.5">
                       Mon – Fri, 9:00 AM – 6:00 PM IST
                     </span>
                   </div>
                 </div>
 
                 <div className="flex items-start gap-4">
-                  <div className="h-10 w-10 rounded-full bg-white shadow-sm flex items-center justify-center shrink-0 text-forest-slate border border-muted-aquifer/15">
-                    <span className="material-symbols-outlined text-[20px]">mail</span>
+                  <div className="h-9 w-9 rounded-[4px] bg-[#F1F7F9] flex items-center justify-center shrink-0 text-moss border border-muted-aquifer/20">
+                    <span className="material-symbols-outlined text-[18px]">mail</span>
                   </div>
                   <div>
-                    <span className="font-headline-h3 text-[15px] font-semibold text-deep-aquifer block">
-                      Email Inquiries
+                    <span className="font-headline-h3 text-[14px] font-bold text-deep-aquifer block">
+                      Email inquiries
                     </span>
                     <a
-                      className="font-body-sm text-body-sm text-forest-slate hover:text-deep-aquifer transition-colors font-medium"
+                      className="font-body-sm text-body-sm text-slate-700 hover:text-moss transition-colors font-medium"
                       href={`mailto:${CONTACT.email}`}
                     >
                       {CONTACT.email}
@@ -108,15 +108,15 @@ export default function ContactPage() {
                 </div>
 
                 <div className="flex items-start gap-4">
-                  <div className="h-10 w-10 rounded-full bg-white shadow-sm flex items-center justify-center shrink-0 text-forest-slate border border-muted-aquifer/15">
-                    <WhatsAppIcon className="size-[19px] text-forest-slate" />
+                  <div className="h-9 w-9 rounded-[4px] bg-[#F1F7F9] flex items-center justify-center shrink-0 text-moss border border-muted-aquifer/20">
+                    <WhatsAppIcon className="size-4 text-moss" />
                   </div>
                   <div>
-                    <span className="font-headline-h3 text-[15px] font-semibold text-deep-aquifer block">
+                    <span className="font-headline-h3 text-[14px] font-bold text-deep-aquifer block">
                       Chat on WhatsApp
                     </span>
                     <a
-                      className="inline-flex items-center gap-1.5 font-button-text text-body-sm text-moss hover:text-forest-slate transition-colors font-medium"
+                      className="inline-flex items-center gap-1.5 font-button-text text-body-sm text-moss hover:text-deep-aquifer transition-colors font-medium"
                       href={WHATSAPP_HREF}
                       rel="noopener noreferrer"
                       target="_blank"
@@ -134,10 +134,10 @@ export default function ContactPage() {
               <ConsultationIntakeForm />
 
               {/* Social Media Channels */}
-              <div className="rounded-2xl bg-white/85 backdrop-blur-xl p-4 sm:p-5 shadow-[0_16px_50px_rgba(29,41,59,0.05)] border border-muted-aquifer/15 flex items-center justify-center gap-3.5 sm:gap-4">
+              <div className="rounded-[4px] bg-white p-4 border border-muted-aquifer/20 shadow-xs flex items-center justify-center gap-3.5 sm:gap-4">
                 <a
                   aria-label="YouTube"
-                  className="h-10 w-10 rounded-full bg-light-aquifer-canvas hover:bg-deep-aquifer hover:text-white text-deep-aquifer/75 transition-all duration-300 flex items-center justify-center border border-muted-aquifer/20 hover:border-deep-aquifer shadow-sm hover:scale-105"
+                  className="h-9 w-9 rounded-[4px] bg-[#F1F7F9] hover:bg-deep-aquifer hover:text-white text-deep-aquifer transition-colors flex items-center justify-center border border-muted-aquifer/20"
                   href="https://youtube.com/@skyrawater"
                   rel="noopener noreferrer"
                   target="_blank"
@@ -147,7 +147,7 @@ export default function ContactPage() {
                 </a>
                 <a
                   aria-label="Instagram"
-                  className="h-10 w-10 rounded-full bg-light-aquifer-canvas hover:bg-deep-aquifer hover:text-white text-deep-aquifer/75 transition-all duration-300 flex items-center justify-center border border-muted-aquifer/20 hover:border-deep-aquifer shadow-sm hover:scale-105"
+                  className="h-9 w-9 rounded-[4px] bg-[#F1F7F9] hover:bg-deep-aquifer hover:text-white text-deep-aquifer transition-colors flex items-center justify-center border border-muted-aquifer/20"
                   href="https://instagram.com/skyrawater"
                   rel="noopener noreferrer"
                   target="_blank"
@@ -157,7 +157,7 @@ export default function ContactPage() {
                 </a>
                 <a
                   aria-label="Facebook"
-                  className="h-10 w-10 rounded-full bg-light-aquifer-canvas hover:bg-deep-aquifer hover:text-white text-deep-aquifer/75 transition-all duration-300 flex items-center justify-center border border-muted-aquifer/20 hover:border-deep-aquifer shadow-sm hover:scale-105"
+                  className="h-9 w-9 rounded-[4px] bg-[#F1F7F9] hover:bg-deep-aquifer hover:text-white text-deep-aquifer transition-colors flex items-center justify-center border border-muted-aquifer/20"
                   href="https://facebook.com/skyrawater"
                   rel="noopener noreferrer"
                   target="_blank"
@@ -167,7 +167,7 @@ export default function ContactPage() {
                 </a>
                 <a
                   aria-label="LinkedIn"
-                  className="h-10 w-10 rounded-full bg-light-aquifer-canvas hover:bg-deep-aquifer hover:text-white text-deep-aquifer/75 transition-all duration-300 flex items-center justify-center border border-muted-aquifer/20 hover:border-deep-aquifer shadow-sm hover:scale-105"
+                  className="h-9 w-9 rounded-[4px] bg-[#F1F7F9] hover:bg-deep-aquifer hover:text-white text-deep-aquifer transition-colors flex items-center justify-center border border-muted-aquifer/20"
                   href="https://linkedin.com/company/skyrawater"
                   rel="noopener noreferrer"
                   target="_blank"
@@ -177,7 +177,7 @@ export default function ContactPage() {
                 </a>
                 <a
                   aria-label="X (formerly Twitter)"
-                  className="h-10 w-10 rounded-full bg-light-aquifer-canvas hover:bg-deep-aquifer hover:text-white text-deep-aquifer/75 transition-all duration-300 flex items-center justify-center border border-muted-aquifer/20 hover:border-deep-aquifer shadow-sm hover:scale-105"
+                  className="h-9 w-9 rounded-[4px] bg-[#F1F7F9] hover:bg-deep-aquifer hover:text-white text-deep-aquifer transition-colors flex items-center justify-center border border-muted-aquifer/20"
                   href="https://x.com/skyrawater"
                   rel="noopener noreferrer"
                   target="_blank"
@@ -199,7 +199,7 @@ export default function ContactPage() {
       <section className="w-full bg-surface-container/30 py-16 border-t border-muted-aquifer/15">
         <div className="w-full max-w-6xl mx-auto px-6 lg:px-8">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            <div className="rounded-xl overflow-hidden bg-white shadow-sm border border-muted-aquifer/15 flex flex-col">
+            <div className="rounded-[4px] overflow-hidden bg-white shadow-xs border border-muted-aquifer/20 flex flex-col">
               <div className="relative h-48 w-full overflow-hidden">
                 <img
                   alt="Passive Hydrology"
@@ -217,7 +217,7 @@ export default function ContactPage() {
               </div>
             </div>
 
-            <div className="rounded-xl overflow-hidden bg-white shadow-sm border border-muted-aquifer/15 flex flex-col">
+            <div className="rounded-[4px] overflow-hidden bg-white shadow-xs border border-muted-aquifer/20 flex flex-col">
               <div className="relative h-48 w-full overflow-hidden">
                 <img
                   alt="Subterranean Infiltration"
@@ -235,7 +235,7 @@ export default function ContactPage() {
               </div>
             </div>
 
-            <div className="rounded-xl overflow-hidden bg-white shadow-sm border border-muted-aquifer/15 flex flex-col">
+            <div className="rounded-[4px] overflow-hidden bg-white shadow-xs border border-muted-aquifer/20 flex flex-col">
               <div className="relative h-48 w-full overflow-hidden">
                 <img
                   alt="Kochi Research Hub"

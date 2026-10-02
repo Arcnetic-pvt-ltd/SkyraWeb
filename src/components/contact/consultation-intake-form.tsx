@@ -12,8 +12,16 @@ export function ConsultationIntakeForm() {
     notes: "",
   });
 
+  const [phoneError, setPhoneError] = useState("");
+
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
+    const cleanPhone = formData.whatsAppNumber.replace(/\D/g, "");
+    if (cleanPhone.length < 10) {
+      setPhoneError("Enter a 10-digit phone number");
+      return;
+    }
+    setPhoneError("");
     setSubmitted(true);
   };
 
@@ -25,6 +33,7 @@ export function ConsultationIntakeForm() {
       buildingType: "",
       notes: "",
     });
+    setPhoneError("");
     setSubmitted(false);
   };
 
@@ -36,8 +45,8 @@ export function ConsultationIntakeForm() {
             <h2 className="font-headline-h2 text-[24px] font-semibold text-deep-aquifer">
               Tell us about your property
             </h2>
-            <p className="font-body-sm text-body-sm text-deep-aquifer/70 mt-1">
-              We&apos;ll reply on WhatsApp within one working day.
+            <p className="font-body-sm text-body-sm text-deep-aquifer/75 mt-1">
+              Written report and quote before any work starts. Designed to IS 15797:2008 guidelines.
             </p>
           </div>
 
@@ -71,17 +80,23 @@ export function ConsultationIntakeForm() {
               WhatsApp number
             </label>
             <input
-              className="w-full bg-light-aquifer-canvas px-4 py-3 rounded-[6px] font-body-primary text-deep-aquifer border border-muted-aquifer/20 outline-none focus:border-deep-aquifer transition-colors"
+              className={`w-full bg-light-aquifer-canvas px-4 py-3 rounded-[6px] font-body-primary text-deep-aquifer border ${
+                phoneError ? "border-red-500" : "border-muted-aquifer/20"
+              } outline-none focus:border-deep-aquifer transition-colors`}
               id="whatsAppNumber"
               name="whatsAppNumber"
               placeholder="e.g. 9847000000"
               required
               type="tel"
               value={formData.whatsAppNumber}
-              onChange={(e) =>
-                setFormData({ ...formData, whatsAppNumber: e.target.value })
-              }
+              onChange={(e) => {
+                if (phoneError) setPhoneError("");
+                setFormData({ ...formData, whatsAppNumber: e.target.value });
+              }}
             />
+            {phoneError && (
+              <span className="text-xs text-red-600 font-medium">{phoneError}</span>
+            )}
           </div>
 
           {/* Field 3: Location */}

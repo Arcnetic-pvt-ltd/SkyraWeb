@@ -9,60 +9,53 @@ import { CheckCircleIcon } from "@/components/icons/service-icons";
 const PILLARS = [
   {
     Icon: WaterSecurityIcon,
-    tone: "text-brand-teal",
-    hoverBg: "group-hover:bg-brand-teal",
     title: "Trust",
     description: "We use verified data and proven technologies to deliver solutions that actually work, ensuring your property is protected for decades.",
     FooterIcon: CheckCircleIcon,
-    footer: "Hydro-Geological Precision",
+    footer: "Hydro-geological precision",
   },
   {
     Icon: DropletIcon,
-    tone: "text-brand-green",
-    hoverBg: "group-hover:bg-brand-green",
     title: "Transparency",
     description: "From our initial site assessment to the final drop harvested, we provide clear communication, honest timelines, and no hidden costs.",
     FooterIcon: EyeIcon,
-    footer: "Open Milestones & Audit Logs",
+    footer: "Open milestones & audit logs",
   },
   {
     Icon: RefreshIcon,
-    tone: "text-emerald-400",
-    hoverBg: "group-hover:bg-emerald-400",
     title: "Affordability",
     description: "Premium sustainability should not be out of reach. We engineer cost-effective systems that deliver a true long-term return on investment.",
     FooterIcon: RechargeGroundwaterIcon,
-    footer: "Rapid Tanker-Cost Amortization",
+    footer: "Rapid tanker-cost amortization",
   },
 ] as const;
 
-/** What Drives Us — three guiding-principle pillars. */
 export function WhatDrivesUs() {
   return (
-    <section className="bg-ink-elevated py-16 lg:py-24">
+    <section className="bg-[#F8FCFE] py-14 lg:py-20 border-b border-muted-aquifer/15">
       <Container className="flex flex-col items-center">
         <div className="max-w-2xl text-center">
-          <Eyebrow color="green" center>Core Guiding Principles</Eyebrow>
-          <h2 className="mt-2 text-3xl font-bold tracking-tight text-white sm:text-4xl">
-            What Drives Us
+          <Eyebrow color="green" center>Core guiding principles</Eyebrow>
+          <h2 className="mt-2 font-heading-h2 text-heading-h2-mobile sm:text-headline-h2 font-bold tracking-tight text-deep-aquifer">
+            What drives us
           </h2>
-          <p className="mt-3 text-lg leading-relaxed text-slate-400">
+          <p className="mt-3 font-body-large text-body-large text-slate-700 leading-relaxed">
             Moving the industry away from traditional, opaque engineering
             practices with three unwavering pillars.
           </p>
         </div>
 
-        <div className="mt-12 grid w-full grid-cols-1 gap-6 md:grid-cols-3">
-          {PILLARS.map(({ Icon, tone, hoverBg, title, description, FooterIcon, footer }) => (
-            <div key={title} className="group flex flex-col justify-between rounded-2xl bg-ink p-8 shadow-xl transition-transform duration-300 hover:-translate-y-1">
+        <div className="mt-10 grid w-full grid-cols-1 gap-6 md:grid-cols-3">
+          {PILLARS.map(({ Icon, title, description, FooterIcon, footer }) => (
+            <div key={title} className="group flex flex-col justify-between rounded-[4px] bg-white p-6 sm:p-8 border border-muted-aquifer/20 shadow-xs">
               <div>
-                <div className={`flex size-14 items-center justify-center rounded-full bg-ink-elevated ${tone} ${hoverBg} transition-colors group-hover:text-ink`}>
-                  <Icon className="size-7" />
+                <div className="flex size-12 items-center justify-center rounded-[4px] bg-moss/10 text-moss">
+                  <Icon className="size-6" />
                 </div>
-                <h3 className="mt-6 text-xl font-semibold text-white">{title}</h3>
-                <p className="mt-2 leading-relaxed text-slate-400">{description}</p>
+                <h3 className="mt-5 text-xl font-bold text-deep-aquifer">{title}</h3>
+                <p className="mt-2 text-sm leading-relaxed text-slate-600">{description}</p>
               </div>
-              <div className={`mt-6 flex items-center gap-2 border-t border-white/10 pt-4 text-sm font-semibold ${tone}`}>
+              <div className="mt-6 flex items-center gap-2 border-t border-muted-aquifer/20 pt-4 text-xs font-semibold text-moss">
                 <FooterIcon className="size-4" />
                 {footer}
               </div>
@@ -73,3 +66,4 @@ export function WhatDrivesUs() {
     </section>
   );
 }
+

@@ -6,9 +6,37 @@ import { WhatsAppWidget } from "@/components/layout/whatsapp-widget";
 import { SmoothScrollProvider } from "@/components/providers/smooth-scroll";
 
 export const metadata: Metadata = {
-  title: "Skyra — Securing India's Water Future",
+  title: {
+    default: "Rainwater harvesting and groundwater recharge · Skyra",
+    template: "%s · Skyra",
+  },
   description:
-    "Closed-loop hydrological stewardship and ecological infrastructure technology. Skyra transforms rainfall into water resilience, Pan India.",
+    "Systems for homes, apartments, industries and campuses across South India.",
+  metadataBase: new URL("https://skyra.in"),
+  openGraph: {
+    title: "Rainwater harvesting and groundwater recharge · Skyra",
+    description:
+      "Systems for homes, apartments, industries and campuses across South India.",
+    url: "https://skyra.in",
+    siteName: "Skyra",
+    images: [
+      {
+        url: "/images/contact-facility.jpg",
+        width: 1200,
+        height: 630,
+        alt: "Skyra Rainwater Harvesting Systems",
+      },
+    ],
+    locale: "en_IN",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Rainwater harvesting and groundwater recharge · Skyra",
+    description:
+      "Systems for homes, apartments, industries and campuses across South India.",
+    images: ["/images/contact-facility.jpg"],
+  },
   icons: {
     icon: "/images/skyra-logo.png",
     shortcut: "/images/skyra-logo.png",
@@ -43,7 +71,7 @@ export default function RootLayout({
       <body className="min-h-full flex flex-col bg-light-aquifer-canvas font-body-primary text-deep-aquifer selection:bg-moss/20 selection:text-deep-aquifer">
         <SmoothScrollProvider>
           <SiteHeader />
-          <main className="flex-1 w-full bg-light-aquifer-canvas min-h-screen">
+          <main className="flex-1 w-full bg-light-aquifer-canvas min-h-screen pb-16 sm:pb-0">
             {children}
           </main>
           <SiteFooter />

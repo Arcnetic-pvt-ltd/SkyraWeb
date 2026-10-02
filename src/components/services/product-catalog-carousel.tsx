@@ -135,14 +135,7 @@ export function ProductCatalogCarousel() {
     setCurrentIndex(0);
   }, [activeCategory]);
 
-  // Auto-play loop
-  useEffect(() => {
-    if (isPaused || total <= 1) return;
-    const interval = setInterval(() => {
-      handleNext();
-    }, 6000);
-    return () => clearInterval(interval);
-  }, [isPaused, total, handleNext]);
+  // Carousel stays still until user interaction per Page 08 guidelines
 
   return (
     <div className="w-full flex flex-col gap-10">
@@ -161,9 +154,9 @@ export function ProductCatalogCarousel() {
                 key={tab.id}
                 type="button"
                 onClick={() => setActiveCategory(tab.id as any)}
-                className={`px-4 py-2 rounded-full font-button-text text-xs sm:text-body-sm transition-all duration-300 cursor-pointer ${
+                className={`px-4 py-2 rounded-[6px] font-button-text text-xs sm:text-body-sm transition-all duration-300 cursor-pointer ${
                   isActive
-                    ? "bg-deep-aquifer text-light-aquifer-canvas shadow-md"
+                    ? "bg-deep-aquifer text-light-aquifer-canvas shadow-xs"
                     : "bg-surface-container-low text-deep-aquifer/70 hover:text-deep-aquifer hover:bg-black/5"
                 }`}
               >
@@ -187,17 +180,17 @@ export function ProductCatalogCarousel() {
               type="button"
               onClick={handlePrev}
               aria-label="Previous product"
-              className="w-10 h-10 rounded-full border border-muted-aquifer/25 flex items-center justify-center text-deep-aquifer hover:bg-deep-aquifer hover:text-white transition-all duration-200 cursor-pointer shadow-sm disabled:opacity-40"
+              className="w-9 h-9 rounded-[6px] border border-muted-aquifer/25 flex items-center justify-center text-deep-aquifer hover:bg-deep-aquifer hover:text-white transition-colors cursor-pointer shadow-xs disabled:opacity-40"
             >
-              <span className="material-symbols-outlined text-[20px]">arrow_back</span>
+              <span className="material-symbols-outlined text-[18px]">arrow_back</span>
             </button>
             <button
               type="button"
               onClick={handleNext}
               aria-label="Next product"
-              className="w-10 h-10 rounded-full border border-muted-aquifer/25 flex items-center justify-center text-deep-aquifer hover:bg-deep-aquifer hover:text-white transition-all duration-200 cursor-pointer shadow-sm disabled:opacity-40"
+              className="w-9 h-9 rounded-[6px] border border-muted-aquifer/25 flex items-center justify-center text-deep-aquifer hover:bg-deep-aquifer hover:text-white transition-colors cursor-pointer shadow-xs disabled:opacity-40"
             >
-              <span className="material-symbols-outlined text-[20px]">arrow_forward</span>
+              <span className="material-symbols-outlined text-[18px]">arrow_forward</span>
             </button>
           </div>
         </div>
@@ -224,9 +217,9 @@ export function ProductCatalogCarousel() {
                   <div
                     key={prod.id}
                     onClick={() => setCurrentIndex(idx)}
-                    className={`p-4 rounded-xl border transition-all duration-300 cursor-pointer flex items-center gap-4 group ${
+                    className={`p-4 rounded-xl border transition-colors duration-300 cursor-pointer flex items-center gap-4 group ${
                       isSelected
-                        ? "bg-deep-aquifer text-white border-moss/60 shadow-md translate-x-1 border-l-4 border-l-moss"
+                        ? "bg-deep-aquifer text-white border-moss/60 shadow-md border-l-4 border-l-moss"
                         : "bg-white text-deep-aquifer border-muted-aquifer/20 hover:border-moss/40 hover:bg-slate-50/50"
                     }`}
                   >
@@ -270,9 +263,9 @@ export function ProductCatalogCarousel() {
                     </div>
 
                     <span
-                      className={`material-symbols-outlined text-lg transition-transform ${
+                      className={`material-symbols-outlined text-lg transition-colors ${
                         isSelected
-                          ? "text-moss translate-x-1"
+                          ? "text-moss"
                           : "text-muted-aquifer/40 group-hover:text-deep-aquifer"
                       }`}
                     >
@@ -310,10 +303,10 @@ export function ProductCatalogCarousel() {
 
                     {/* Top Overlay Badges */}
                     <div className="absolute top-4 left-4 right-4 flex items-center justify-between pointer-events-none">
-                      <span className="font-technical-label text-[11px] text-white bg-deep-aquifer/85 backdrop-blur-md px-3 py-1 rounded-full font-semibold border border-white/10 shadow-sm">
+                      <span className="font-technical-label text-[11px] text-white bg-deep-aquifer/90 px-3 py-1 rounded-[4px] font-semibold border border-white/10 shadow-xs">
                         {filteredProducts[currentIndex].series}
                       </span>
-                      <span className="font-technical-label text-[11px] text-moss bg-white/90 backdrop-blur-md px-3 py-1 rounded-full font-bold shadow-sm">
+                      <span className="font-technical-label text-[11px] text-moss bg-white px-3 py-1 rounded-[4px] font-bold shadow-xs">
                         {filteredProducts[currentIndex].capacityTag}
                       </span>
                     </div>
@@ -323,7 +316,7 @@ export function ProductCatalogCarousel() {
                       {filteredProducts[currentIndex].specsHighlight.map((spec, i) => (
                         <span
                           key={i}
-                          className="font-mono text-[10px] text-light-aquifer-canvas bg-slate-900/80 backdrop-blur-md px-2.5 py-0.5 rounded border border-white/10"
+                          className="font-mono text-[10px] text-light-aquifer-canvas bg-slate-900 px-2.5 py-0.5 rounded-[4px] border border-white/10"
                         >
                           &bull; {spec}
                         </span>
@@ -344,7 +337,7 @@ export function ProductCatalogCarousel() {
 
                     <div className="flex flex-col gap-4">
                       {/* Metric Highlights Box */}
-                      <div className="bg-light-aquifer-canvas p-4 rounded-xl border border-muted-aquifer/15 grid grid-cols-2 gap-4">
+                      <div className="bg-[#F1F7F9] p-4 rounded-[4px] border border-muted-aquifer/15 grid grid-cols-2 gap-4">
                         <div className="flex flex-col">
                           <span className="font-body-sm text-[11px] uppercase tracking-wider text-muted-aquifer">
                             {filteredProducts[currentIndex].metric1Label}
@@ -448,10 +441,10 @@ export function ProductCatalogCarousel() {
                       <div className="pt-2 flex items-center gap-3">
                         <Link
                           href={`/contact?product=${filteredProducts[currentIndex].contactProductSlug}`}
-                          className="w-full sm:w-auto inline-flex items-center justify-center gap-2.5 bg-deep-aquifer hover:bg-forest-slate text-light-aquifer-canvas font-button-text text-button-text px-7 py-3 rounded-full transition-all duration-300 shadow-md hover:shadow-lg group/btn"
+                          className="w-full sm:w-auto inline-flex items-center justify-center gap-2.5 bg-deep-aquifer hover:bg-forest-slate text-light-aquifer-canvas font-medium text-[14px] px-6 py-3 rounded-[6px] transition-colors shadow-xs group/btn"
                         >
-                          <span>Get Quote &amp; Specs</span>
-                          <span className="material-symbols-outlined text-[18px] group-hover/btn:translate-x-1 transition-transform">
+                          <span>Book a site survey</span>
+                          <span className="material-symbols-outlined text-[18px]">
                             arrow_forward
                           </span>
                         </Link>

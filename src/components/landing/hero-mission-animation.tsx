@@ -79,16 +79,12 @@ export function HeroMissionAnimation() {
   }, [isPlaying]);
 
   return (
-    <div className="relative w-full rounded-3xl bg-slate-950/90 p-5 sm:p-7 text-white shadow-2xl border border-white/15 backdrop-blur-xl overflow-hidden font-sans group">
-      {/* Background Glow Orbs */}
-      <div className="absolute -top-24 -right-24 w-72 h-72 rounded-full bg-[#0098a6]/20 blur-3xl pointer-events-none" />
-      <div className="absolute -bottom-24 -left-24 w-72 h-72 rounded-full bg-[#00c896]/20 blur-3xl pointer-events-none" />
+    <div className="relative w-full rounded-[6px] bg-white border border-muted-aquifer/20 p-5 sm:p-7 text-deep-aquifer shadow-xs overflow-hidden font-sans group">
 
       {/* Header bar: Title & Auto-Play Controller */}
       <div className="flex items-center justify-between gap-4 mb-5 border-b border-white/10 pb-4 relative z-10">
         <div className="flex items-center gap-2.5">
           <span className="relative flex h-2.5 w-2.5">
-            <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-brand-green opacity-75" />
             <span className="relative inline-flex rounded-full h-2.5 w-2.5 bg-brand-green" />
           </span>
           <span className="font-mono text-xs font-semibold uppercase tracking-wider text-slate-300">
@@ -391,7 +387,7 @@ export function HeroMissionAnimation() {
               initial={{ opacity: 0, y: 10 }}
               animate={{ opacity: 1, y: 0 }}
               exit={{ opacity: 0, y: 10 }}
-              className="absolute bottom-3 left-3 right-3 p-3 rounded-xl bg-slate-900/95 border border-brand-teal text-xs text-slate-200 flex items-center justify-between backdrop-blur-md shadow-xl z-20"
+              className="absolute bottom-3 left-3 right-3 p-3 rounded-[4px] bg-slate-900 border border-white/20 text-xs text-slate-200 flex items-center justify-between shadow-md z-20"
             >
               <div>
                 <span className="font-semibold text-brand-green uppercase text-[10px] tracking-wider block">
@@ -456,7 +452,7 @@ export function HeroMissionAnimation() {
               {currentStage.metricValue}
             </span>
             <span className="text-[10px] text-brand-green/90 font-mono mt-1 inline-flex items-center gap-1">
-              <span className="size-1.5 rounded-full bg-brand-green animate-pulse" />
+              <span className="size-1.5 rounded-full bg-brand-green" />
               Live Telemetry Active
             </span>
           </div>

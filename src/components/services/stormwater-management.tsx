@@ -131,11 +131,11 @@ export function StormwaterManagement() {
 
         <InlineCtaBox
           icon={<WaterSecurityIcon className="size-7" />}
-          iconTone="bg-brand-teal/20 text-brand-teal"
+          iconTone="bg-moss/10 text-moss"
           title="Secure your property ahead of the monsoon season."
-          description="Click to Request a Consultation and safeguard your foundation against unmanaged heavy storm runoff."
+          description="Book a site survey to assess your property's stormwater management needs and safeguard your foundation."
           href="#contact"
-          buttonLabel="Request a Consultation"
+          buttonLabel="Book a site survey"
           buttonIcon={<ArrowRightIcon className="size-4" />}
           tone="dark"
         />

@@ -2,11 +2,9 @@ import type { Metadata } from "next";
 import Link from "next/link";
 
 export const metadata: Metadata = {
-  // title: "About Us & Founding Team | Skyra Water Solutions",
-  title: "The Skyra Mission | Hydrological Foundation & Philosophy",
-
+  title: "Mission · Skyra",
   description:
-    "Learn about Skyra's mission, closed-loop hydrological engineering, and our founding team of civil hydrologists, environmental scientists, and systems engineers.",
+    "Learn about Skyra's mission, closed-loop hydrological engineering, and our team of civil hydrologists, environmental scientists, and systems engineers.",
 };
 
 const FOUNDERS = [
@@ -52,7 +50,7 @@ export default function AboutPage() {
         <div className="max-w-5xl mx-auto px-6 sm:px-8">
           <div className="flex flex-col gap-8 max-w-3xl">
             <div className="inline-flex items-center gap-2.5">
-              <span className="inline-block w-2 h-2 rounded-full bg-moss animate-ping"></span>
+              <span className="inline-block w-2 h-2 rounded-full bg-moss"></span>
               <span className="font-body-sm text-body-sm text-secondary font-semibold tracking-normal">
                 Our Foundation &amp; Philosophy
               </span>
@@ -94,7 +92,7 @@ export default function AboutPage() {
             </div>
 
             <div className="md:col-span-5 pt-2">
-              <div className="p-8 rounded-2xl bg-white/80 backdrop-blur-md border border-muted-aquifer/15 shadow-sm flex flex-col gap-6">
+              <div className="p-7 rounded-[4px] bg-white border border-muted-aquifer/20 shadow-xs flex flex-col gap-5">
                 <svg
                   className="w-full h-44 text-muted-aquifer select-none"
                   fill="none"
@@ -148,7 +146,7 @@ export default function AboutPage() {
                 </svg>
                 <div className="space-y-1">
                   <span className="font-technical-label text-technical-label text-deep-aquifer font-semibold">
-                    Atmospheric Capture Delta
+                    Atmospheric capture delta
                   </span>
                   <p className="font-body-sm text-body-sm text-deep-aquifer/60">
                     Average urban run-off velocity yields 78% net loss without intentional subterranean retention barriers.
@@ -163,7 +161,7 @@ export default function AboutPage() {
         <div className="max-w-5xl mx-auto px-6 sm:px-8">
           <div className="grid grid-cols-1 md:grid-cols-12 gap-12 md:gap-16 items-start">
             <div className="md:col-span-5 order-2 md:order-1 pt-2">
-              <div className="p-8 rounded-2xl bg-white/80 backdrop-blur-md border border-muted-aquifer/15 shadow-sm flex flex-col gap-6">
+              <div className="p-7 rounded-[4px] bg-white border border-muted-aquifer/20 shadow-xs flex flex-col gap-5">
                 <svg
                   className="w-full h-48 text-forest-slate select-none"
                   fill="none"
@@ -224,7 +222,7 @@ export default function AboutPage() {
                 </svg>
                 <div className="space-y-1">
                   <span className="font-technical-label text-technical-label text-deep-aquifer font-semibold">
-                    Subsoil Equilibrium
+                    Subsoil equilibrium
                   </span>
                   <p className="font-body-sm text-body-sm text-deep-aquifer/60">
                     Passive gravity infiltration restores native perched water tables without chemical intervention.
@@ -235,10 +233,10 @@ export default function AboutPage() {
 
             <div className="md:col-span-7 order-1 md:order-2 space-y-6">
               <span className="font-technical-label text-body-sm text-moss font-semibold uppercase tracking-wider block">
-                02 • Our Technical Approach
+                02 • Our technical approach
               </span>
               <h2 className="font-headline-h2 text-headline-h2-mobile sm:text-headline-h2 text-deep-aquifer tracking-tight">
-                Passive Infiltration &amp; Soil Hydrology
+                Passive infiltration &amp; soil hydrology
               </h2>
               <p className="font-body-large text-body-large text-deep-aquifer font-medium leading-relaxed">
                 Rather than relying on oversized concrete holding tanks that silt up after three seasons, we study lithology, rainfall cadence, and soil percolation.
@@ -258,10 +256,10 @@ export default function AboutPage() {
           <div className="space-y-12">
             <div className="space-y-4 max-w-3xl">
               <span className="font-technical-label text-body-sm text-moss font-semibold uppercase tracking-wider block">
-                03 • Verification &amp; Scale
+                03 • Verification &amp; scale
               </span>
               <h2 className="font-headline-h2 text-headline-h2-mobile sm:text-headline-h2 text-deep-aquifer tracking-tight">
-                Kalamassery R&amp;D Proving Grounds
+                Kalamassery R&amp;D proving grounds
               </h2>
               <p className="font-body-large text-body-large text-deep-aquifer/80 leading-relaxed">
                 Engineered at our central laboratory along the NH 544 Corridor in Kalamassery, Kerala, every Skyra installation is monitored against strict hydrological telemetry standards.
@@ -269,7 +267,7 @@ export default function AboutPage() {
             </div>
 
             <div className="space-y-6">
-              <div className="relative w-full rounded-2xl overflow-hidden shadow-xl aspect-[1.79/1] bg-surface-container border border-muted-aquifer/15">
+              <div className="relative w-full rounded-[4px] overflow-hidden shadow-xs aspect-[1.79/1] bg-surface-container border border-muted-aquifer/15">
                 <img
                   alt="Kalamassery Proving Grounds Prototype"
                   className="w-full h-full object-cover"
@@ -287,36 +285,36 @@ export default function AboutPage() {
               </div>
 
               <div className="grid grid-cols-2 md:grid-cols-4 gap-4 sm:gap-6 pt-2">
-                <div className="p-5 rounded-xl bg-white/80 backdrop-blur-md border border-muted-aquifer/15 shadow-sm">
+                <div className="p-5 rounded-[4px] bg-white border border-muted-aquifer/20 shadow-xs">
                   <span className="block font-metric-mono-lg text-metric-mono-lg text-deep-aquifer">
                     14
                   </span>
                   <span className="block font-body-sm text-body-sm text-deep-aquifer/65 mt-1 font-medium">
-                    States Active Across India
+                    States active across India
                   </span>
                 </div>
-                <div className="p-5 rounded-xl bg-white/80 backdrop-blur-md border border-muted-aquifer/15 shadow-sm">
+                <div className="p-5 rounded-[4px] bg-white border border-muted-aquifer/20 shadow-xs">
                   <span className="block font-metric-mono-lg text-metric-mono-lg text-deep-aquifer">
                     420+
                   </span>
                   <span className="block font-body-sm text-body-sm text-deep-aquifer/65 mt-1 font-medium">
-                    Engineered Installations
+                    Engineered installations
                   </span>
                 </div>
-                <div className="p-5 rounded-xl bg-white/80 backdrop-blur-md border border-muted-aquifer/15 shadow-sm">
+                <div className="p-5 rounded-[4px] bg-white border border-muted-aquifer/20 shadow-xs">
                   <span className="block font-metric-mono-lg text-metric-mono-lg text-deep-aquifer">
                     2.4B
                   </span>
                   <span className="block font-body-sm text-body-sm text-deep-aquifer/65 mt-1 font-medium">
-                    Litres Infiltrated Annually
+                    Litres infiltrated annually
                   </span>
                 </div>
-                <div className="p-5 rounded-xl bg-white/80 backdrop-blur-md border border-muted-aquifer/15 shadow-sm">
+                <div className="p-5 rounded-[4px] bg-white border border-muted-aquifer/20 shadow-xs">
                   <span className="block font-metric-mono-lg text-metric-mono-lg text-deep-aquifer">
                     100%
                   </span>
                   <span className="block font-body-sm text-body-sm text-deep-aquifer/65 mt-1 font-medium">
-                    Passive Gravity-Fed Flow
+                    Passive gravity-fed flow
                   </span>
                 </div>
               </div>
@@ -327,35 +325,35 @@ export default function AboutPage() {
 
       {/* SECTION 3: FOUNDERS & LEADERSHIP */}
       <section className="relative z-10 w-full py-24 sm:py-32 bg-white border-t border-muted-aquifer/15">
-        <div className="max-w-6xl mx-auto px-6 lg:px-8">
+        <div className="max-w-5xl mx-auto px-6 lg:px-8">
           <div className="max-w-3xl mb-16">
             <span className="font-technical-label text-body-sm text-moss font-semibold uppercase tracking-wider block mb-3">
-              Leadership &amp; Engineering Desk
+              Leadership &amp; engineering desk
             </span>
             <h2 className="font-headline-h2 text-headline-h2-mobile sm:text-headline-h2 text-deep-aquifer tracking-tight mb-4">
-              Meet Our Founders
+              Meet our founders
             </h2>
             <p className="font-body-large text-body-large text-muted-aquifer leading-relaxed">
               Skyra was founded by civil hydrologists, environmental engineers, and fluid dynamicists united by a shared commitment to quiet, regenerative water infrastructure.
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             {FOUNDERS.map((founder, idx) => (
               <div
                 key={idx}
-                className="group bg-light-aquifer-canvas rounded-2xl overflow-hidden border border-muted-aquifer/20 p-5 flex flex-col justify-between transition-all duration-300 hover:shadow-xl hover:-translate-y-1"
+                className="group bg-[#F8FCFE] rounded-[4px] border border-muted-aquifer/20 p-5 flex flex-col justify-between transition-all duration-300 shadow-xs"
               >
                 <div>
-                  <div className="relative w-full aspect-square rounded-xl overflow-hidden mb-5 bg-surface-container border border-muted-aquifer/15">
+                  <div className="relative w-full aspect-square rounded-[4px] overflow-hidden mb-5 bg-surface-container border border-muted-aquifer/15">
                     <img
                       alt={founder.name}
-                      className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 ease-out"
+                      className="w-full h-full object-cover"
                       src={founder.image}
                     />
                   </div>
                   <div className="flex flex-col gap-1 mb-3">
-                    <h3 className="font-headline-h3 text-[20px] font-bold text-deep-aquifer">
+                    <h3 className="font-headline-h3 text-[18px] font-bold text-deep-aquifer">
                       {founder.name}
                     </h3>
                     <span className="font-body-sm text-[13px] text-moss font-semibold">
@@ -372,7 +370,7 @@ export default function AboutPage() {
 
                 <div className="pt-3 border-t border-muted-aquifer/15">
                   <span className="font-technical-label text-[10px] uppercase tracking-wider text-muted-aquifer block mb-1">
-                    Key Focus
+                    Key focus
                   </span>
                   <span className="font-body-sm text-[12px] text-deep-aquifer/80 font-medium block">
                     {founder.expertise}
@@ -385,10 +383,10 @@ export default function AboutPage() {
       </section>
 
       {/* SECTION 4: CLOSING MANDATE */}
-      <section className="relative z-10 w-full bg-light-aquifer-canvas text-deep-aquifer py-24 sm:py-32 border-t border-muted-aquifer/15">
-        <div className="max-w-4xl mx-auto px-6 sm:px-8 text-center flex flex-col items-center gap-8">
+      <section className="relative z-10 w-full bg-[#F1F7F9] text-deep-aquifer py-20 sm:py-28 border-t border-muted-aquifer/15">
+        <div className="max-w-4xl mx-auto px-6 sm:px-8 text-center flex flex-col items-center gap-6">
           <span className="font-technical-label text-technical-label text-moss tracking-widest uppercase font-semibold">
-            The Mandate
+            The mandate
           </span>
           <blockquote className="font-headline-h2 text-headline-h2-mobile sm:text-headline-h2 text-deep-aquifer max-w-2xl font-semibold tracking-tight">
             “Water security is not an emergency response. It is engineered infrastructure.”
@@ -399,15 +397,15 @@ export default function AboutPage() {
           <div className="flex flex-col sm:flex-row items-center gap-4 pt-2">
             <Link
               href="/contact"
-              className="inline-flex items-center justify-center bg-deep-aquifer hover:bg-forest-slate text-light-aquifer-canvas font-button-text text-button-text px-8 py-3.5 rounded-full shadow-sm hover:shadow-md transition-all duration-300"
+              className="inline-flex items-center justify-center bg-deep-aquifer hover:bg-forest-slate text-light-aquifer-canvas font-medium text-[15px] px-8 py-3.5 rounded-[6px] shadow-xs transition-colors"
             >
-              Start a Conversation
+              Book a site survey
             </Link>
             <Link
               href="/services"
-              className="inline-flex items-center justify-center bg-transparent hover:bg-black/5 text-deep-aquifer font-button-text text-button-text px-8 py-3.5 rounded-full transition-all duration-300"
+              className="inline-flex items-center justify-center border border-muted-aquifer/30 bg-white/80 hover:bg-white text-deep-aquifer font-medium text-[15px] px-8 py-3.5 rounded-[6px] transition-colors"
             >
-              Explore Solutions
+              Explore our solutions
             </Link>
           </div>
         </div>

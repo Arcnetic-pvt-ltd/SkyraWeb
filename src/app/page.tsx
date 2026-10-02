@@ -10,7 +10,7 @@ export default function Home() {
   return (
     <div className="flex flex-col w-full overflow-hidden relative">
       {/* SECTION 1: HERO */}
-      <section className="relative z-10 min-h-[calc(100vh-5rem)] flex flex-col justify-between px-6 sm:px-10 lg:px-16 pt-24 sm:pt-28 pb-8 max-w-7xl mx-auto w-full">
+      <section className="relative z-10 min-h-[calc(100vh-5rem)] flex flex-col justify-between px-6 lg:px-8 pt-24 sm:pt-28 pb-8 max-w-5xl mx-auto w-full">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center pt-1 sm:pt-2">
           {/* Left Column: Headline, Copy & CTAs */}
           <div className="lg:col-span-6 flex flex-col">
@@ -24,7 +24,7 @@ export default function Home() {
               Rainwater harvesting and groundwater recharge across India
             </h1>
 
-            <p className="font-body-large text-body-large text-deep-aquifer/85 mt-4 sm:mt-5 leading-relaxed">
+            <p className="font-body-large text-body-large text-deep-aquifer/85 mt-4 sm:mt-5 leading-relaxed max-w-prose">
               Featuring <strong>Skyra Rainsink</strong> &mdash; our high-capacity rain percolator unit. Engineered for logistics hubs, factories, IT parks, and institutions to eliminate yard flooding, guarantee statutory CGWA NOC compliance, and reach water neutrality.
             </p>
 
@@ -74,31 +74,30 @@ export default function Home() {
         </div>
       </section>
 
-
       {/* SECTION 2: THE CORE PROBLEM */}
       <section
-        className="relative w-full bg-deep-aquifer text-light-aquifer-canvas py-24 sm:py-32 px-6 sm:px-10 lg:px-16"
+        className="relative w-full bg-light-aquifer-canvas text-deep-aquifer py-20 sm:py-28 px-6 lg:px-8 border-t border-muted-aquifer/15"
         id="problem"
       >
-        <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-20 items-center">
+        <div className="max-w-5xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
           <div className="lg:col-span-6 flex flex-col gap-6">
-            <span className="font-body-sm text-body-sm text-moss/90 font-medium">
-              The Hydrological Reality
+            <span className="font-technical-label text-[13px] text-forest-slate uppercase tracking-wider font-semibold">
+              The monsoon challenge
             </span>
-            <h2 className="font-headline-h2 text-headline-h2-mobile sm:text-headline-h2 text-white leading-tight">
-              India isn’t short on rain. It’s short on places to keep it.
+            <h2 className="font-headline-h2 text-headline-h2-mobile sm:text-headline-h2 text-deep-aquifer leading-tight">
+              Most of the rain that falls in India is lost within hours.
             </h2>
-            <p className="font-body-large text-body-large text-light-aquifer-canvas/75 leading-relaxed">
-              Across much of the country, a season of good rainfall runs straight off the surface — down drains, into rivers, out to sea — before the ground ever gets the chance to hold onto it.
+            <p className="font-body-large text-body-large text-deep-aquifer/85 leading-relaxed">
+              Kerala receives an average of 3,100 mm of yearly rainfall (Kerala State Planning Board), yet across much of the country, a season of good rainfall runs straight off the surface — down drains, into rivers, out to sea — before the ground ever gets the chance to hold onto it.
             </p>
-            <p className="font-body-primary text-body-primary text-light-aquifer-canvas/60 leading-relaxed">
-              Hard paving, rapid urbanization, and compacted topsoil transform natural bounty into destructive runoff. In moments where our subterranean basins could be replenishing for dry seasons, billions of cubic meters are permanently discarded within mere hours of touching soil.
+            <p className="font-body-primary text-body-primary text-deep-aquifer/75 leading-relaxed">
+              Hard paving, rapid urbanization, and compacted topsoil transform natural bounty into destructive runoff. In moments where subterranean basins could be replenishing for dry seasons, billions of cubic meters are discarded within hours of touching soil. Designed to IS 15797:2008 standards, Skyra systems catch and recharge this water at the source.
             </p>
           </div>
 
           {/* Hydrology Graphic Visual */}
           <div className="lg:col-span-6 flex justify-center items-center">
-            <div className="w-full max-w-lg aspect-square rounded-3xl bg-primary-container/60 p-6 sm:p-10 flex flex-col justify-center items-center relative overflow-hidden shadow-2xl border border-white/10">
+            <div className="w-full max-w-lg aspect-square rounded-[4px] bg-white p-6 sm:p-10 flex flex-col justify-center items-center relative overflow-hidden border border-muted-aquifer/20 shadow-xs">
               <svg
                 className="w-full h-full select-none"
                 fill="none"
@@ -314,18 +313,14 @@ export default function Home() {
       </section>
 
       {/* SECTION 3: THE SKYRA OPPORTUNITY */}
-      <section className="relative w-full py-24 sm:py-32 px-6 sm:px-10 lg:px-16 overflow-hidden border-t border-muted-aquifer/15">
-        {/* Ambient background atmosphere blobs matching Sector Capabilities */}
-        <div aria-hidden="true" className="absolute -top-32 left-10 w-[600px] h-[600px] rounded-full bg-[#cde8e6]/50 blur-[130px] pointer-events-none" />
-        <div aria-hidden="true" className="absolute -bottom-32 right-10 w-[600px] h-[600px] rounded-full bg-[#ccebc8]/40 blur-[130px] pointer-events-none" />
-
-        <div className="max-w-7xl mx-auto w-full relative z-10">
+      <section className="relative w-full py-20 sm:py-28 px-6 lg:px-8 overflow-hidden border-t border-muted-aquifer/15">
+        <div className="max-w-5xl mx-auto w-full relative z-10">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-20 items-center">
             <div className="lg:col-span-7 flex flex-col gap-6">
-              <div className="inline-flex items-center gap-2.5">
-                <span className="w-2 h-2 rounded-full bg-moss animate-pulse"></span>
-                <span className="font-body-sm text-body-sm text-secondary font-medium uppercase tracking-wider">
-                  The Subterranean Thesis
+              <div className="inline-flex items-center gap-2">
+                <span className="w-2 h-2 rounded-full bg-moss"></span>
+                <span className="font-technical-label text-[13px] text-forest-slate uppercase tracking-wider font-semibold">
+                  Subterranean recharge approach
                 </span>
               </div>
               <h2 className="font-headline-h2 text-headline-h2-mobile sm:text-headline-h2 text-deep-aquifer leading-snug">
@@ -336,14 +331,14 @@ export default function Home() {
               </p>
 
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 pt-4">
-                <div className="group relative flex flex-col justify-between overflow-hidden rounded-3xl border border-muted-aquifer/15 bg-white/90 p-7 shadow-[0_8px_30px_rgb(29,41,59,0.05)] backdrop-blur-xl transition-all duration-500 hover:-translate-y-1 hover:border-moss/40 hover:shadow-2xl">
+                <div className="flex flex-col justify-between rounded-[4px] border border-muted-aquifer/20 bg-white p-6 shadow-xs">
                   <div className="flex flex-col gap-4">
-                    <div className="w-12 h-12 rounded-2xl bg-moss/10 border border-moss/20 flex items-center justify-center text-moss group-hover:bg-moss group-hover:text-white transition-all duration-300">
-                      <span className="material-symbols-outlined text-[24px]">water_drop</span>
+                    <div className="w-10 h-10 rounded-[4px] bg-slate-100 border border-muted-aquifer/20 flex items-center justify-center text-moss">
+                      <span className="material-symbols-outlined text-[22px]">water_drop</span>
                     </div>
                     <div>
-                      <h3 className="font-headline-h3 text-xl font-bold text-deep-aquifer tracking-tight group-hover:text-forest-slate transition-colors mb-2">
-                        Zero Surface Loss
+                      <h3 className="font-headline-h3 text-lg font-bold text-deep-aquifer tracking-tight mb-1.5">
+                        Zero surface loss
                       </h3>
                       <p className="font-body-sm text-sm leading-relaxed text-deep-aquifer/75">
                         Gravity-fed infiltration shafts bypass high-evaporation ground levels directly into unconfined geological strata.
@@ -352,14 +347,14 @@ export default function Home() {
                   </div>
                 </div>
 
-                <div className="group relative flex flex-col justify-between overflow-hidden rounded-3xl border border-muted-aquifer/15 bg-white/90 p-7 shadow-[0_8px_30px_rgb(29,41,59,0.05)] backdrop-blur-xl transition-all duration-500 hover:-translate-y-1 hover:border-moss/40 hover:shadow-2xl">
+                <div className="flex flex-col justify-between rounded-[4px] border border-muted-aquifer/20 bg-white p-6 shadow-xs">
                   <div className="flex flex-col gap-4">
-                    <div className="w-12 h-12 rounded-2xl bg-[#0098a6]/10 border border-[#0098a6]/20 flex items-center justify-center text-[#0098a6] group-hover:bg-[#0098a6] group-hover:text-white transition-all duration-300">
-                      <span className="material-symbols-outlined text-[24px]">filter_alt</span>
+                    <div className="w-10 h-10 rounded-[4px] bg-slate-100 border border-muted-aquifer/20 flex items-center justify-center text-forest-slate">
+                      <span className="material-symbols-outlined text-[22px]">filter_alt</span>
                     </div>
                     <div>
-                      <h3 className="font-headline-h3 text-xl font-bold text-deep-aquifer tracking-tight group-hover:text-forest-slate transition-colors mb-2">
-                        Natural Clarification
+                      <h3 className="font-headline-h3 text-lg font-bold text-deep-aquifer tracking-tight mb-1.5">
+                        Natural clarification
                       </h3>
                       <p className="font-body-sm text-sm leading-relaxed text-deep-aquifer/75">
                         Multi-tiered biological and physical aggregate barriers purify monsoon downpours prior to bedrock entry.
@@ -372,13 +367,13 @@ export default function Home() {
 
             {/* India Deployment Map Graphic */}
             <div className="lg:col-span-5 flex justify-center">
-              <div className="w-full max-w-md p-8 rounded-3xl bg-white shadow-xl flex flex-col items-center relative overflow-hidden border border-muted-aquifer/15">
+              <div className="w-full max-w-md p-6 rounded-[4px] bg-white border border-muted-aquifer/20 shadow-xs flex flex-col items-center relative">
                 <div className="w-full flex items-center justify-between mb-4">
-                  <span className="font-body-sm text-body-sm text-secondary font-medium">
-                    Deployment Network
+                  <span className="font-body-sm text-body-sm text-deep-aquifer/70 font-medium">
+                    Deployment network
                   </span>
                   <span className="font-body-sm text-body-sm text-moss font-semibold">
-                    Active in Southern Corridors
+                    Active across South India
                   </span>
                 </div>
 
@@ -386,7 +381,7 @@ export default function Home() {
 
                 <div className="w-full pt-4 mt-2 flex items-center justify-between text-deep-aquifer/75 border-t border-muted-aquifer/15">
                   <span className="font-body-sm text-body-sm">
-                    Deep Infiltration Modules
+                    Deep infiltration modules
                   </span>
                   <span className="font-metric-mono-lg text-[15px] font-bold text-deep-aquifer">
                     140+ SITES
@@ -411,39 +406,35 @@ export default function Home() {
       <ImpactMetrics />
 
       {/* SECTION 5: CLOSING CTA */}
-      <section className="py-28 sm:py-40 px-6 sm:px-10 lg:px-16 max-w-5xl mx-auto w-full text-center flex flex-col items-center relative">
-        <div className="absolute inset-0 flex items-center justify-center -z-10 pointer-events-none opacity-30">
-          <div className="w-[500px] h-[500px] rounded-full border-none bg-surface-variant/40 blur-3xl"></div>
-        </div>
-
-        <span className="font-body-sm text-body-sm text-secondary font-medium tracking-normal mb-6">
-          Begin The Recharge Cycle
+      <section className="py-24 sm:py-32 px-6 sm:px-10 lg:px-16 max-w-5xl mx-auto w-full text-center flex flex-col items-center border-t border-muted-aquifer/15">
+        <span className="font-technical-label text-[13px] text-forest-slate uppercase tracking-wider font-semibold mb-4">
+          Begin the recharge cycle
         </span>
 
         <h2 className="font-headline-hero text-headline-h2-mobile sm:text-headline-hero text-deep-aquifer max-w-3xl leading-tight">
           Every roof, every courtyard, every open plot is a chance to catch the rain. Let’s find yours.
         </h2>
 
-        <p className="font-body-large text-body-large text-deep-aquifer/70 max-w-xl mt-8 leading-relaxed">
+        <p className="font-body-large text-body-large text-deep-aquifer/80 max-w-xl mt-6 leading-relaxed">
           Talk with our civil hydrologists to assess your parcel’s percolation potential and aquifer recharge capability.
         </p>
 
-        <div className="mt-10 flex flex-col sm:flex-row items-center gap-5 w-full sm:w-auto">
+        <div className="mt-8 flex flex-col sm:flex-row items-center gap-4 w-full sm:w-auto">
           <Link
             href="/contact"
-            className="w-full sm:w-auto inline-flex items-center justify-center bg-deep-aquifer hover:bg-forest-slate text-light-aquifer-canvas font-button-text text-button-text px-9 py-4 rounded-full transition-all duration-300 shadow-sm hover:shadow-md"
+            className="w-full sm:w-auto inline-flex items-center justify-center bg-deep-aquifer hover:bg-forest-slate text-white font-medium text-[15px] px-7 py-3.5 rounded-[6px] transition-colors shadow-xs"
           >
-            Start a Conversation
+            Book a site survey
           </Link>
           <Link
             href="/services"
-            className="w-full sm:w-auto inline-flex items-center justify-center text-deep-aquifer hover:text-forest-slate font-button-text text-button-text px-8 py-4 rounded-full hover:bg-surface-container/50 transition-all duration-200"
+            className="w-full sm:w-auto inline-flex items-center justify-center border border-muted-aquifer/30 text-deep-aquifer hover:bg-slate-100 font-medium text-[15px] px-7 py-3.5 rounded-[6px] transition-colors"
           >
-            Explore Solutions
+            Explore solutions
           </Link>
         </div>
 
-        <div className="mt-16 pt-8 flex items-center gap-3 text-secondary/60 text-sm">
+        <div className="mt-12 pt-6 flex items-center gap-2.5 text-deep-aquifer/65 text-sm">
           <span className="w-1.5 h-1.5 rounded-full bg-moss"></span>
           <span>
             Engineered for commercial campuses, industrial corridors, and residential communities.

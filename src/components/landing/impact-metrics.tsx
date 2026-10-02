@@ -87,44 +87,40 @@ function RetentionChart() {
 /** Impact Metrics Section (Animated Interactive Dashboard Module). Revamped for current Skyra UI. */
 export function ImpactMetrics() {
   return (
-    <section className="relative w-full bg-light-aquifer-canvas py-24 sm:py-32 px-6 sm:px-10 lg:px-16 overflow-hidden border-t border-muted-aquifer/15" id="impact">
-      {/* Ambient background atmosphere blobs */}
-      <div aria-hidden="true" className="absolute -top-32 left-10 w-[600px] h-[600px] rounded-full bg-[#cde8e6]/70 blur-[130px] pointer-events-none" />
-      <div aria-hidden="true" className="absolute -bottom-32 right-10 w-[600px] h-[600px] rounded-full bg-[#ccebc8]/60 blur-[130px] pointer-events-none" />
-
-      <div className="max-w-7xl mx-auto flex flex-col gap-12 sm:gap-16 relative z-10">
+    <section className="relative w-full bg-light-aquifer-canvas py-20 sm:py-28 px-6 lg:px-8 overflow-hidden border-t border-muted-aquifer/15" id="impact">
+      <div className="max-w-5xl mx-auto flex flex-col gap-12 sm:gap-16 relative z-10">
         <div className="flex flex-col gap-3 max-w-2xl">
-          <div className="inline-flex items-center gap-2.5">
-            <span className="inline-block w-2 h-2 rounded-full bg-moss animate-pulse"></span>
-            <span className="font-body-sm text-body-sm text-moss font-semibold uppercase tracking-wider">
-              MEASURABLE RESTORATION
+          <div className="inline-flex items-center gap-2">
+            <span className="w-2 h-2 rounded-full bg-moss"></span>
+            <span className="font-technical-label text-[13px] text-forest-slate uppercase tracking-wider font-semibold">
+              Measurable restoration
             </span>
           </div>
           <h2 className="font-headline-h2 text-headline-h2-mobile sm:text-headline-h2 text-deep-aquifer tracking-tight leading-tight">
-            Impact Metrics
+            Impact metrics
           </h2>
           <p className="font-body-large text-body-large text-deep-aquifer/80 leading-relaxed">
             Our interventions are designed to create rippling positive effects across the ecosystem. Data drives our design.
           </p>
         </div>
 
-        <div className="grid grid-cols-1 items-stretch gap-8 lg:grid-cols-12">
+        <div className="grid grid-cols-1 items-stretch gap-6 sm:gap-8 lg:grid-cols-12">
           <div className="h-full lg:col-span-4">
             <MetricCard
-              watermark={<DropletIcon className="size-24 text-[#0098a6]" />}
-              dotColor="bg-[#0098a6]"
-              pillTone="border-[#0098a6]/30 bg-[#0098a6]/10 text-[#0098a6]"
+              watermark={<DropletIcon className="size-24 text-moss" />}
+              dotColor="bg-moss"
+              pillTone="border-muted-aquifer/20 bg-slate-100 text-deep-aquifer"
               badgeLabel="Water Conservation"
               target={1.2}
               decimals={1}
               suffix="M"
-              gradientFrom="#0098a6"
-              gradientTo="#7D9D3D"
+              gradientFrom="#7D9D3D"
+              gradientTo="#445F44"
               title="Liters of Water Saved"
               description="Conserved annually through localized rooftop retention, smart storage cells, and closed-loop domestic distribution."
               progressLabel="CUMULATIVE TARGET"
               progressPercent={88}
-              progressTone="text-[#0098a6]"
+              progressTone="text-moss"
             />
           </div>
 
@@ -132,13 +128,13 @@ export function ImpactMetrics() {
             <MetricCard
               watermark={<FootprintIcon className="size-24 text-moss" />}
               dotColor="bg-moss"
-              pillTone="border-moss/30 bg-moss/10 text-moss"
+              pillTone="border-muted-aquifer/20 bg-slate-100 text-deep-aquifer"
               badgeLabel="Ecological Impact"
               target={45}
               decimals={0}
               suffix="%"
               gradientFrom="#7D9D3D"
-              gradientTo="#0098a6"
+              gradientTo="#445F44"
               title="Reduction in Footprint"
               description="Drastic reduction in reliance on municipal high-energy pumping and carbon-heavy commercial water tanker transit."
               progressLabel="FOOTPRINT OFFSET"
@@ -147,18 +143,18 @@ export function ImpactMetrics() {
             />
           </div>
 
-          <div className="flex h-full flex-col justify-between overflow-hidden rounded-3xl border border-muted-aquifer/15 bg-white/80 p-8 sm:p-9 shadow-[0_8px_30px_rgb(29,41,59,0.06)] backdrop-blur-xl transition-all duration-500 hover:border-moss/40 hover:shadow-2xl lg:col-span-4">
+          <div className="flex h-full flex-col justify-between overflow-hidden rounded-[4px] border border-muted-aquifer/20 bg-white p-6 sm:p-7 shadow-xs lg:col-span-4">
             <div>
               <div className="mb-4 flex items-center justify-between">
-                <span className="font-mono text-xs uppercase tracking-wider text-secondary font-medium">
-                  Live Retention Trend
+                <span className="font-mono text-xs uppercase tracking-wider text-deep-aquifer/70 font-medium">
+                  Live retention trend
                 </span>
-                <span className="inline-flex items-center gap-1.5 rounded-full border border-moss/30 bg-moss/10 px-2.5 py-0.5 text-xs font-semibold text-moss">
-                  <span aria-hidden="true" className="size-1.5 animate-pulse rounded-full bg-moss" />
+                <span className="inline-flex items-center gap-1.5 rounded-[4px] border border-muted-aquifer/20 bg-slate-100 px-2 py-0.5 text-xs font-semibold text-deep-aquifer">
+                  <span aria-hidden="true" className="size-1.5 rounded-full bg-moss" />
                   Realtime
                 </span>
               </div>
-              <h4 className="text-lg font-bold font-headline-h3 text-deep-aquifer">Hydrological Restoration</h4>
+              <h4 className="text-lg font-bold font-headline-h3 text-deep-aquifer">Hydrological restoration</h4>
               <p className="mt-1 text-xs font-body-sm text-deep-aquifer/75 leading-relaxed">
                 Groundwater table elevation vs. retention index over 12 months.
               </p>
@@ -170,12 +166,12 @@ export function ImpactMetrics() {
 
             <div className="grid grid-cols-2 gap-2 border-t border-muted-aquifer/15 pt-3 text-xs">
               <div className="flex items-center gap-2">
-                <span aria-hidden="true" className="size-2.5 rounded-full bg-[#0098a6]" />
-                <span className="text-deep-aquifer/80 font-medium">Retention Capacity</span>
+                <span aria-hidden="true" className="size-2.5 rounded-full bg-forest-slate" />
+                <span className="text-deep-aquifer/80 font-medium">Retention capacity</span>
               </div>
               <div className="flex items-center justify-end gap-2">
                 <span aria-hidden="true" className="size-2.5 rounded-full bg-moss" />
-                <span className="text-deep-aquifer/80 font-medium">Aquifer Rebound</span>
+                <span className="text-deep-aquifer/80 font-medium">Aquifer rebound</span>
               </div>
             </div>
           </div>

@@ -112,7 +112,7 @@ export function RainwaterHarvesting() {
             {WORKFLOW_STEPS.map(({ n, Icon, title, description, tone }) => (
               <div key={n} className="flex flex-col gap-3 rounded-xl border border-slate-200 bg-white p-5 shadow-sm">
                 <div className="flex items-center justify-between">
-                  <div className={`flex size-10 items-center justify-center rounded-full text-sm font-bold ${tone}`}>
+                  <div className={`flex size-10 items-center justify-center rounded-[4px] text-sm font-bold ${tone}`}>
                     {n}
                   </div>
                   <Icon className="size-5 text-slate-500" />

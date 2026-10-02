@@ -47,39 +47,39 @@ const TRUST_BADGES = [
 /** The End-to-End Implementation Process (4-Phase Roadmap). */
 export function ImplementationProcess() {
   return (
-    <section className="border-y border-slate-200 bg-white py-16 lg:py-24">
+    <section className="border-y border-muted-aquifer/20 bg-light-aquifer-canvas py-16 lg:py-24">
       <Container>
         <div className="mx-auto mb-12 max-w-3xl text-center">
-          <span className="inline-block rounded-full bg-brand-green/10 px-4 py-1.5 text-xs font-bold uppercase tracking-widest text-brand-green">
-            Standardized Execution
-          </span>
-          <h2 className="mt-3 text-2xl font-bold tracking-tight text-slate-950 sm:text-3xl lg:text-4xl">
-            The End-to-End Implementation Process
+          <div className="inline-flex items-center gap-2 rounded-[4px] border border-muted-aquifer/20 bg-white px-3 py-1 text-xs font-medium text-deep-aquifer shadow-xs">
+            <span aria-hidden="true" className="size-1.5 rounded-full bg-moss" />
+            Standardized execution
+          </div>
+          <h2 className="mt-4 text-2xl font-bold tracking-tight text-deep-aquifer sm:text-3xl lg:text-4xl">
+            The end-to-end implementation process
           </h2>
-          <p className="mt-3 text-lg leading-relaxed text-slate-600">
-            We handle every technical detail from the initial site audit to
-            long-term maintenance, ensuring a frictionless experience,
-            transparent pricing, and lasting return on investment.
+          <p className="mt-3 text-base sm:text-lg leading-relaxed text-deep-aquifer/75">
+            We handle every technical detail from the initial site survey to
+            long-term maintenance, ensuring transparent pricing and lasting performance.
           </p>
         </div>
 
         <div className="mb-12 grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-4">
-          {PHASES.map(({ n, tone, labelTone, title, description, deliverables }) => (
-            <div key={n} className="flex flex-col justify-between rounded-2xl border border-slate-200 bg-slate-50 p-6 shadow-sm transition-shadow hover:shadow-lg">
+          {PHASES.map(({ n, title, description, deliverables }) => (
+            <div key={n} className="flex flex-col justify-between rounded-[4px] border border-muted-aquifer/20 bg-white p-6 shadow-xs">
               <div>
                 <div className="mb-4 flex items-center justify-between">
-                  <span className={`text-xs font-bold uppercase tracking-widest ${labelTone}`}>
+                  <span className="text-xs font-bold uppercase tracking-widest text-moss">
                     Phase {n}
                   </span>
-                  <div className={`flex size-10 items-center justify-center rounded-full text-sm font-bold ${tone}`}>
+                  <div className="flex size-9 items-center justify-center rounded-[4px] bg-slate-100 text-deep-aquifer text-xs font-bold">
                     {n}
                   </div>
                 </div>
-                <h3 className="mb-2 text-lg font-semibold text-slate-900">{title}</h3>
-                <p className="mb-4 text-sm text-slate-600">{description}</p>
+                <h3 className="mb-2 text-base font-bold text-deep-aquifer">{title}</h3>
+                <p className="mb-4 text-xs leading-relaxed text-deep-aquifer/75">{description}</p>
               </div>
-              <div className="flex flex-col gap-1 text-sm text-slate-500">
-                <span className={`font-semibold ${labelTone}`}>Deliverables:</span>
+              <div className="flex flex-col gap-1 text-xs text-deep-aquifer/70 pt-3 border-t border-muted-aquifer/15">
+                <span className="font-semibold text-deep-aquifer">Deliverables:</span>
                 {deliverables.map((d) => (
                   <span key={d}>• {d}</span>
                 ))}

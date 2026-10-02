@@ -50,15 +50,11 @@ const SECTORS = [
 export function SectorCapabilities() {
   return (
     <section className="relative w-full bg-light-aquifer-canvas py-24 sm:py-32 px-6 sm:px-10 lg:px-16 overflow-hidden border-t border-muted-aquifer/15" id="sectors">
-      {/* Ambient background atmosphere blobs */}
-      <div aria-hidden="true" className="absolute -top-32 right-10 w-[600px] h-[600px] rounded-full bg-[#cde8e6]/60 blur-[130px] pointer-events-none" />
-      <div aria-hidden="true" className="absolute -bottom-32 left-10 w-[600px] h-[600px] rounded-full bg-[#ccebc8]/50 blur-[130px] pointer-events-none" />
-
       <div className="max-w-7xl mx-auto flex flex-col gap-12 sm:gap-16 relative z-10">
         {/* Header */}
         <div className="flex flex-col gap-3 max-w-2xl">
           <div className="inline-flex items-center gap-2.5">
-            <span className="inline-block w-2 h-2 rounded-full bg-moss animate-pulse"></span>
+            <span className="inline-block w-2 h-2 rounded-full bg-moss"></span>
             <span className="font-technical-label text-body-sm text-moss font-semibold uppercase tracking-wider">
               TAILORED ENGINEERING
             </span>

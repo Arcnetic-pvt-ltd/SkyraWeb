@@ -9,36 +9,24 @@ import { Container } from "@/components/ui/container";
  */
 export function ContactHero() {
   return (
-    <section className="relative overflow-hidden bg-ink pb-16 pt-28 lg:pt-38">
-      <div
-        aria-hidden="true"
-        className="pointer-events-none absolute left-1/2 top-1/4 size-96 -translate-x-1/2 rounded-full bg-brand-teal/10 blur-3xl"
-      />
-      <div
-        aria-hidden="true"
-        className="pointer-events-none absolute right-10 top-1/3 size-72 rounded-full bg-brand-green/10 blur-3xl"
-      />
-
-      <Container className="relative z-10 mx-auto max-w-4xl text-center">
-        <div className="mb-6 inline-flex items-center gap-2 rounded-full border border-white/10 bg-ink-elevated px-4 py-1.5 text-xs font-medium text-slate-300 shadow-sm">
+    <section className="relative overflow-hidden bg-light-aquifer-canvas pb-16 pt-28 lg:pt-36">
+      <Container className="relative z-10 text-center">
+        <div className="mb-6 inline-flex items-center gap-2 rounded-[4px] border border-muted-aquifer/20 bg-white px-3 py-1 text-xs font-medium text-deep-aquifer shadow-xs">
           <span
             aria-hidden="true"
-            className="size-2 animate-pulse rounded-full bg-emerald-400"
+            className="size-1.5 rounded-full bg-moss"
           />
-          Contact Skyra • From Sky, To Life
+          Contact Skyra · From sky, to life
         </div>
 
-        <h1 className="text-4xl font-bold leading-tight tracking-tight text-white md:text-5xl lg:text-6xl">
-          Your water problem{" "}
-          <span className="bg-linear-to-br from-brand-teal to-emerald-500 bg-clip-text text-transparent">
-            has a solution.
-          </span>
+        <h1 className="text-4xl font-bold leading-tight tracking-tight text-deep-aquifer md:text-5xl lg:text-6xl max-w-3xl mx-auto">
+          Your water problem has a solution.
           <br className="hidden sm:inline" />
           {" "}
           {"Let's find it together."}
         </h1>
 
-        <p className="mx-auto mt-6 max-w-2xl text-lg leading-relaxed text-slate-400">
+        <p className="mx-auto mt-6 max-w-2xl text-base sm:text-lg leading-relaxed text-deep-aquifer/75">
           We are ready to help you capture, conserve, and secure your{" "}
           {"property's"} water future. Reach out to our engineering team to
           schedule a site assessment or ask a question.

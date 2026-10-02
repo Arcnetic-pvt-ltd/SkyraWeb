@@ -138,7 +138,7 @@ export function HeroMissionEngine() {
       </div>
 
       {/* Main Hydrological SVG Visual Canvas (Dedicated Frame) */}
-      <div className="relative w-full aspect-[16/9] min-h-[210px] rounded-2xl bg-gradient-to-b from-[#f8fcfe] via-[#e4fffd]/40 to-[#d8f3f2]/60 border border-muted-aquifer/20 overflow-hidden mb-4">
+      <div className="relative w-full aspect-[16/9] min-h-[210px] rounded-[4px] bg-gradient-to-b from-[#f8fcfe] via-[#e4fffd]/40 to-[#d8f3f2]/60 border border-muted-aquifer/20 overflow-hidden mb-4">
         <svg
           className="w-full h-full select-none"
           viewBox="0 0 500 280"
@@ -175,7 +175,7 @@ export function HeroMissionEngine() {
             y={activeStageIndex >= 2 ? "190" : "215"}
             width="460"
             height="75"
-            rx="10"
+            rx="4"
             fill="url(#aquiferPoolGrad)"
             opacity="0.85"
             animate={{
@@ -248,7 +248,7 @@ export function HeroMissionEngine() {
               y="110"
               width="80"
               height="55"
-              rx="8"
+              rx="4"
               fill="#ffffff"
               stroke={activeStageIndex === 1 ? "#0098a6" : "#748D8C"}
               strokeWidth={activeStageIndex === 1 ? "2.5" : "1.5"}
@@ -314,7 +314,7 @@ export function HeroMissionEngine() {
           {/* STAGE 4: GENERATIONAL AUTONOMY */}
           <g opacity={activeStageIndex === 3 ? 1 : 0.5}>
             {/* Building Node Box */}
-            <rect x="348" y="22" width="128" height="68" rx="10" fill="#ffffff" stroke="#00c896" strokeWidth="2" />
+            <rect x="348" y="22" width="128" height="68" rx="4" fill="#ffffff" stroke="#00c896" strokeWidth="2" />
             <text x="358" y="40" fill="#445F44" fontSize="8" fontWeight="bold" letterSpacing="0.2">
               SECURED AUTONOMY
             </text>
@@ -376,12 +376,12 @@ export function HeroMissionEngine() {
           animate={{ opacity: 1, y: 0 }}
           exit={{ opacity: 0, y: -6 }}
           transition={{ duration: 0.25 }}
-          className="grid grid-cols-1 sm:grid-cols-12 gap-3 items-center bg-black/5 border border-muted-aquifer/15 rounded-2xl p-3.5 sm:p-4 relative z-10"
+          className="grid grid-cols-1 sm:grid-cols-12 gap-3 items-center bg-slate-50 border border-muted-aquifer/15 rounded-[4px] p-3.5 sm:p-4 relative z-10"
         >
           <div className="sm:col-span-8 space-y-1">
             <div className="flex items-center gap-2">
               <span
-                className="px-2 py-0.5 rounded-full text-[10px] font-mono font-bold uppercase tracking-wider text-white"
+                className="px-2 py-0.5 rounded-[4px] text-[10px] font-mono font-bold uppercase tracking-wider text-white"
                 style={{ backgroundColor: currentStage.accentColor }}
               >
                 Phase {currentStage.number} • {currentStage.tagline}
@@ -406,7 +406,7 @@ export function HeroMissionEngine() {
               {currentStage.metricValue}
             </span>
             <span className="text-[10px] text-moss font-mono mt-0.5 inline-flex items-center gap-1">
-              <span className="size-1.5 rounded-full bg-moss animate-pulse" />
+              <span className="size-1.5 rounded-full bg-moss" />
               Engine Active
             </span>
           </div>
