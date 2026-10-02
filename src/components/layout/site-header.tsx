@@ -2,126 +2,96 @@
 
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { useEffect, useState } from "react";
-import { NAV_LINKS } from "@/lib/nav";
-
+import { useState } from "react";
+import { NAV_LINKS, WHATSAPP_HREF } from "@/lib/nav";
 import { SkyraLogo } from "@/components/layout/skyra-logo";
 
 export function SiteHeader() {
-  const [open, setOpen] = useState(false);
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const pathname = usePathname();
 
-  useEffect(() => {
-    setOpen(false);
-  }, [pathname]);
-
-  useEffect(() => {
-    if (!open) return;
-    const onKeyDown = (e: KeyboardEvent) => {
-      if (e.key === "Escape") setOpen(false);
-    };
-    document.addEventListener("keydown", onKeyDown);
-    document.body.style.overflow = "hidden";
-    return () => {
-      document.removeEventListener("keydown", onKeyDown);
-      document.body.style.overflow = "";
-    };
-  }, [open]);
-
-  const scrollToTop = () => {
-    setOpen(false);
-    if (typeof window !== "undefined") {
-      window.scrollTo({ top: 0, left: 0, behavior: "instant" });
-    }
-  };
-
   return (
-    <header className="fixed top-4 inset-x-0 z-50 px-4 sm:px-6 lg:px-8">
-      <div className="h-16 max-w-5xl mx-auto rounded-full bg-white/80 backdrop-blur-xl shadow-[0_8px_30px_rgb(29,41,59,0.06)] border border-muted-aquifer/15 px-4 sm:px-6 flex items-center justify-between transition-all duration-300">
-        <Link
-          className="flex items-center gap-3 transition-opacity hover:opacity-85 text-deep-aquifer"
-          href="/"
-          onClick={scrollToTop}
-        >
-          <SkyraLogo className="text-deep-aquifer" />
+    <header className="w-full bg-[#F4F7F6] border-b border-[#1D293B]/10 sticky top-0 z-50">
+      <div className="max-w-5xl mx-auto px-4 sm:px-6 h-16 flex items-center justify-between">
+        {/* Brand Logo */}
+        <Link href="/" className="flex items-center gap-2 text-[#1D293B] no-underline">
+          <SkyraLogo />
         </Link>
 
-        <nav className="hidden md:flex items-center gap-7">
+        {/* Desktop Navigation Menu (4 items + CTA) */}
+        <nav className="hidden md:flex items-center gap-8">
           {NAV_LINKS.map((link) => {
             const isActive = pathname === link.href;
             return (
               <Link
                 key={link.href}
                 href={link.href}
-                onClick={scrollToTop}
-                aria-current={isActive ? "page" : undefined}
-                className={
+                className={`text-[15px] font-medium no-underline transition-colors ${
                   isActive
-                    ? "transition-colors tracking-tight text-deep-aquifer font-medium"
-                    : "font-button-text text-body-sm text-deep-aquifer/65 hover:text-deep-aquifer transition-colors tracking-tight"
-                }
+                    ? "text-[#1D293B] font-semibold"
+                    : "text-[#1D293B]/70 hover:text-[#1D293B]"
+                }`}
               >
                 {link.label}
               </Link>
             );
           })}
+          <a
+            href={WHATSAPP_HREF}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="skyra-btn-primary"
+          >
+            Chat on WhatsApp
+          </a>
         </nav>
 
-        <div className="flex items-center gap-3">
-          <Link
-            className="hidden sm:inline-flex items-center justify-center bg-deep-aquifer hover:bg-forest-slate text-white font-button-text text-[13px] px-4 py-2.5 rounded-full transition-all duration-300 tracking-tight hover:shadow-[0_4px_20px_rgba(125,157,61,0.35)] active:scale-[0.98]"
-            href="/contact"
-            onClick={scrollToTop}
-          >
-            Start a Conversation
-          </Link>
-
-          <button
-            type="button"
-            onClick={() => setOpen((v) => !v)}
-            aria-label={open ? "Close menu" : "Open menu"}
-            className="md:hidden inline-flex items-center justify-center p-2 rounded-full text-deep-aquifer hover:bg-surface-container/50 transition-colors"
-          >
-            <span className="material-symbols-outlined text-[24px]">
-              {open ? "close" : "menu"}
-            </span>
-          </button>
-        </div>
+        {/* Mobile Hamburger Button */}
+        <button
+          type="button"
+          onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+          className="md:hidden p-2 text-[#1D293B] bg-transparent border-none cursor-pointer"
+          aria-label="Toggle navigation menu"
+        >
+          <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            {mobileMenuOpen ? (
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+            ) : (
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
+            )}
+          </svg>
+        </button>
       </div>
 
-      {open && (
-        <div className="md:hidden fixed inset-x-4 top-24 z-50 rounded-2xl bg-white/95 backdrop-blur-2xl p-6 shadow-2xl border border-muted-aquifer/20 flex flex-col gap-5">
-          <nav className="flex flex-col gap-4">
-            {NAV_LINKS.map((link) => {
-              const isActive = pathname === link.href;
-              return (
-                <Link
-                  key={link.href}
-                  href={link.href}
-                  onClick={scrollToTop}
-                  className={`text-base font-medium transition-colors ${
-                    isActive
-                      ? "text-deep-aquifer font-semibold"
-                      : "text-deep-aquifer/70 hover:text-deep-aquifer"
-                  }`}
-                >
-                  {link.label}
-                </Link>
-              );
-            })}
-          </nav>
-          <div className="pt-2 border-t border-muted-aquifer/15">
-            <Link
-              className="w-full inline-flex items-center justify-center bg-deep-aquifer hover:bg-forest-slate text-white font-button-text text-[14px] py-3 rounded-full transition-all"
-              href="/contact"
-              onClick={scrollToTop}
-            >
-              Start a Conversation
-            </Link>
-          </div>
+      {/* Mobile Menu Dropdown */}
+      {mobileMenuOpen && (
+        <div className="md:hidden bg-[#FFFFFF] border-b border-[#1D293B]/10 px-4 py-4 flex flex-col gap-4">
+          {NAV_LINKS.map((link) => {
+            const isActive = pathname === link.href;
+            return (
+              <Link
+                key={link.href}
+                href={link.href}
+                onClick={() => setMobileMenuOpen(false)}
+                className={`text-[16px] font-medium no-underline ${
+                  isActive ? "text-[#1D293B] font-semibold" : "text-[#1D293B]/80"
+                }`}
+              >
+                {link.label}
+              </Link>
+            );
+          })}
+          <a
+            href={WHATSAPP_HREF}
+            target="_blank"
+            rel="noopener noreferrer"
+            onClick={() => setMobileMenuOpen(false)}
+            className="skyra-btn-primary text-center"
+          >
+            Chat on WhatsApp
+          </a>
         </div>
       )}
     </header>
   );
 }
-

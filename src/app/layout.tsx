@@ -3,12 +3,11 @@ import "./globals.css";
 import { SiteHeader } from "@/components/layout/site-header";
 import { SiteFooter } from "@/components/layout/site-footer";
 import { WhatsAppWidget } from "@/components/layout/whatsapp-widget";
-import { SmoothScrollProvider } from "@/components/providers/smooth-scroll";
 
 export const metadata: Metadata = {
-  title: "Skyra — Securing India's Water Future",
+  title: "Rainwater harvesting · Skyra",
   description:
-    "Closed-loop hydrological stewardship and ecological infrastructure technology. Skyra transforms rainfall into water resilience, Pan India.",
+    "Rainwater harvesting and groundwater recharge systems for homes, apartments, industries and campuses across South India.",
   icons: {
     icon: "/images/skyra-logo.png",
     shortcut: "/images/skyra-logo.png",
@@ -22,36 +21,21 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className="h-full antialiased">
+    <html lang="en" className="bg-[#F4F7F6]">
       <head>
-        <link rel="icon" href="/images/skyra-logo.png" type="image/png" sizes="any" />
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link
-          rel="preconnect"
-          href="https://fonts.gstatic.com"
-          crossOrigin=""
-        />
-        <link
-          href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700&family=Inter:wght@400;500;600&family=Space+Mono:wght@400;700&display=swap"
-          rel="stylesheet"
-        />
-        <link
-          href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap"
+          href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700&family=Geist+Mono:wght@400;500&family=Inter:wght@400;500;600&display=swap"
           rel="stylesheet"
         />
       </head>
-      <body className="min-h-full flex flex-col bg-light-aquifer-canvas font-body-primary text-deep-aquifer selection:bg-moss/20 selection:text-deep-aquifer">
-        <SmoothScrollProvider>
-          <SiteHeader />
-          <main className="flex-1 w-full bg-light-aquifer-canvas min-h-screen">
-            {children}
-          </main>
-          <SiteFooter />
-          <WhatsAppWidget />
-        </SmoothScrollProvider>
+      <body className="min-h-screen flex flex-col bg-[#F4F7F6] text-[#1D293B]">
+        <SiteHeader />
+        <main className="flex-1 w-full max-w-5xl mx-auto px-4 sm:px-6 py-6 sm:py-10 bg-[#F4F7F6]">
+          {children}
+        </main>
+        <SiteFooter />
+        <WhatsAppWidget />
       </body>
     </html>
   );
 }
-
-
