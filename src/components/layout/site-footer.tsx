@@ -1,117 +1,61 @@
 import Link from "next/link";
-import { CONTACT } from "@/lib/nav";
+import { CONTACT, WHATSAPP_HREF } from "@/lib/nav";
 import { SkyraLogo } from "@/components/layout/skyra-logo";
 
 export function SiteFooter() {
   return (
-    <footer className="w-full bg-deep-aquifer text-light-aquifer-canvas">
-      <div className="w-full max-w-5xl mx-auto px-6 lg:px-8 py-20 lg:py-24">
-        <div className="grid grid-cols-1 md:grid-cols-12 gap-12 lg:gap-16 pb-16">
-          <div className="md:col-span-5 flex flex-col gap-5">
-            <SkyraLogo variant="light" iconClass="h-7 w-7" textClass="font-headline-h3 text-[18px] font-medium tracking-tight" />
-            <p className="font-body-sm text-body-sm text-light-aquifer-canvas/60 leading-relaxed max-w-sm">
-              Pioneering closed-loop hydrology and ecological infrastructure across India. Quiet, regenerative systems built for generations.
-            </p>
-            <p className="font-body-sm text-[13px] text-light-aquifer-canvas/40">
-              Kochi • Bengaluru • Hyderabad
+    <footer className="w-full bg-light-aquifer-canvas border-t border-muted-aquifer/15 text-deep-aquifer py-12 lg:py-16">
+      <div className="w-full max-w-5xl mx-auto px-6 lg:px-8">
+        <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-8 pb-10 border-b border-muted-aquifer/15">
+          {/* Left Column: Logo & Physical Address */}
+          <div className="flex flex-col gap-3">
+            <SkyraLogo className="text-deep-aquifer" />
+            <p className="font-body-sm text-[15px] text-deep-aquifer/80 leading-snug">
+              {CONTACT.address}
             </p>
           </div>
-          <div className="md:col-span-3 flex flex-col gap-4">
-            <span className="font-button-text text-[13px] text-white/90 font-medium tracking-normal">
-              Solutions
-            </span>
-            <nav className="flex flex-col gap-3">
-              <Link
-                href="/services"
-                className="font-body-sm text-body-sm text-light-aquifer-canvas/60 hover:text-white transition-colors"
+
+          {/* Right Column: Contact options, Privacy policy, Current year */}
+          <div className="flex flex-col md:items-end gap-3 text-[15px]">
+            <div className="flex flex-wrap items-center gap-2 text-deep-aquifer/90">
+              <a
+                href={WHATSAPP_HREF}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="hover:text-forest-slate transition-colors font-medium"
               >
-                Rainwater Harvesting
-              </Link>
-              <Link
-                href="/services"
-                className="font-body-sm text-body-sm text-light-aquifer-canvas/60 hover:text-white transition-colors"
+                WhatsApp
+              </a>
+              <span>·</span>
+              <a
+                href={`tel:${CONTACT.phone}`}
+                className="hover:text-forest-slate transition-colors font-medium"
               >
-                Subterranean Infiltration
-              </Link>
-              <Link
-                href="/services"
-                className="font-body-sm text-body-sm text-light-aquifer-canvas/60 hover:text-white transition-colors"
-              >
-                Aquifer Replenishment
-              </Link>
-              <Link
-                href="/services"
-                className="font-body-sm text-body-sm text-light-aquifer-canvas/60 hover:text-white transition-colors"
-              >
-                Skyra RainSink
-              </Link>
-            </nav>
-          </div>
-          <div className="md:col-span-4 flex flex-col gap-4">
-            <span className="font-button-text text-[13px] text-white/90 font-medium tracking-normal">
-              Company
-            </span>
-            <nav className="flex flex-col gap-3">
-              <Link
-                href="/about"
-                className="font-body-sm text-body-sm text-light-aquifer-canvas/60 hover:text-white transition-colors"
-              >
-                Our Philosophy
-              </Link>
-              <Link
-                href="/about"
-                className="font-body-sm text-body-sm text-light-aquifer-canvas/60 hover:text-white transition-colors"
-              >
-                Impact &amp; Ecology
-              </Link>
-              <Link
-                href="/contact"
-                className="font-body-sm text-body-sm text-light-aquifer-canvas/60 hover:text-white transition-colors"
-              >
-                Start a Conversation
-              </Link>
+                Phone
+              </a>
+              <span>·</span>
               <a
                 href={`mailto:${CONTACT.email}`}
-                className="font-body-sm text-body-sm text-light-aquifer-canvas/60 hover:text-white transition-colors"
+                className="hover:text-forest-slate transition-colors font-medium"
               >
-                {CONTACT.email}
+                Email
               </a>
-            </nav>
-          </div>
-        </div>
-        <div className="pt-10 border-t border-white/10 flex flex-col sm:flex-row items-center justify-between gap-4">
-          <p className="font-body-sm text-[13px] text-light-aquifer-canvas/40">
-            © 2026 - 2027 Skyra Infrastructure. Thoughtful engineering for India’s water future.
-          </p>
-          <div className="flex items-center gap-6">
-            <a
-              href="#"
-              className="font-body-sm text-[13px] text-light-aquifer-canvas/40 hover:text-light-aquifer-canvas/80 transition-colors"
-            >
-              Privacy
-            </a>
-            <a
-              href="#"
-              className="font-body-sm text-[13px] text-light-aquifer-canvas/40 hover:text-light-aquifer-canvas/80 transition-colors"
-            >
-              Terms
-            </a>
-          </div>
-        </div>
-      </div>
+            </div>
 
-      {/* Thin Sub-Footer Strip: Powered by Arcnetic */}
-      <div className="w-full border-t border-white/10 bg-slate-950/40 py-3.5 px-6">
-        <div className="max-w-5xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-2 text-center sm:text-left">
-          <span className="font-technical-label text-[11px] uppercase tracking-wider text-light-aquifer-canvas/40">
-            Technology Partner
-          </span>
-          <span className="font-body-sm text-[12px] text-light-aquifer-canvas/50">
-            Powered by{" "}
-            <span className="font-semibold text-white/90 hover:text-moss transition-colors">
-              Arcnetic
-            </span>
-          </span>
+            <div className="flex items-center gap-4 text-deep-aquifer/70 text-[14px]">
+              <Link href="/contact" className="hover:text-deep-aquifer transition-colors">
+                Privacy policy
+              </Link>
+              <span>·</span>
+              <span>© 2026 Skyra</span>
+            </div>
+          </div>
+        </div>
+
+        {/* Sub-Footer: Powered by Arcnetic */}
+        <div className="pt-6 flex flex-col sm:flex-row items-center justify-between gap-2 text-[13px] text-deep-aquifer/50">
+          <span>Rainwater harvesting and groundwater recharge across India</span>
+          <span>Powered by Arcnetic</span>
         </div>
       </div>
     </footer>

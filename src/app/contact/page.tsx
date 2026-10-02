@@ -12,43 +12,31 @@ import {
 
 
 export const metadata: Metadata = {
-  title: "Start Your Water Resilience Journey | Skyra Contact",
+  title: "Contact · Skyra",
   description:
-    "Schedule a direct hydrological consultation with Skyra's civil hydrologists. Kalamassery engineering labs, priority desk, and direct WhatsApp support.",
+    "Tell us about your property. Book a site survey with Skyra hydrologists across South India.",
 };
 
 export default function ContactPage() {
   return (
     <div className="flex flex-col w-full">
       <section className="relative w-full overflow-hidden bg-light-aquifer-canvas pt-28 pb-12 lg:pt-32 lg:pb-20">
-        {/* Ambient gentle drifting water atmosphere blobs */}
-        <div aria-hidden="true" className="pointer-events-none absolute inset-0 overflow-hidden">
-          <div className="absolute -top-32 -left-32 h-[520px] w-[520px] rounded-full bg-secondary-container/40 blur-[120px] animate-pulse"></div>
-          <div className="absolute top-1/3 -right-48 h-[640px] w-[640px] rounded-full bg-surface-container-low/70 blur-[140px] animate-pulse"></div>
-          <div className="absolute bottom-10 left-1/4 h-[420px] w-[420px] rounded-full bg-tertiary-fixed-dim/20 blur-[110px] animate-pulse"></div>
-          <svg className="absolute top-12 right-10 w-96 h-96 text-muted-aquifer/10 select-none" fill="none" viewBox="0 0 400 400">
-            <circle cx="200" cy="200" r="80" stroke="currentColor" strokeDasharray="3 6" strokeWidth="1.5" />
-            <circle cx="200" cy="200" r="130" stroke="currentColor" strokeWidth="1" />
-            <circle cx="200" cy="200" r="180" stroke="currentColor" strokeDasharray="6 8" strokeWidth="1" />
-          </svg>
-        </div>
-
         <div className="relative z-10 w-full max-w-6xl mx-auto px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-start">
             {/* Left Column */}
             <div className="lg:col-span-5 flex flex-col justify-between pt-2 lg:pt-6">
               <div className="flex flex-col">
-                <div className="inline-flex items-center gap-2.5 mb-5">
+                <div className="inline-flex items-center gap-2 mb-4">
                   <span className="inline-block h-2 w-2 rounded-full bg-moss"></span>
-                  <span className="font-button-text text-body-sm text-forest-slate tracking-normal font-semibold">
-                    Direct Hydrological Consultation
+                  <span className="font-technical-label text-[13px] text-forest-slate uppercase tracking-wider font-semibold">
+                    Site survey &amp; consultation
                   </span>
                 </div>
                 <h1 className="font-headline-hero text-headline-hero-mobile sm:text-headline-hero text-deep-aquifer leading-[1.08] tracking-tight">
-                  Start Your Water Resilience Journey
+                  Book a site survey
                 </h1>
-                <p className="mt-6 font-body-large text-body-large text-deep-aquifer/75 leading-relaxed font-light">
-                  Tell us a bit about your property, and we’ll show you what’s possible — no pressure, just a conversation.
+                <p className="mt-6 font-body-large text-body-large text-deep-aquifer/85 leading-relaxed font-normal">
+                  Tell us about your property, and we will measure your roof, test how fast the soil absorbs water, and check your well.
                 </p>
 
                 <div className="mt-10 rounded-xl bg-surface-container/50 p-6 backdrop-blur-md border border-muted-aquifer/15">

@@ -9,26 +9,19 @@ import { SectorCapabilities } from "@/components/services/sector-capabilities";
 export default function Home() {
   return (
     <div className="flex flex-col w-full overflow-hidden relative">
-      {/* Ambient Floating Gradients */}
-      <div className="absolute top-0 inset-x-0 h-[100vh] pointer-events-none z-0 overflow-hidden">
-        <div className="absolute -top-[12%] right-[-5%] w-[850px] h-[850px] rounded-full bg-[#cde8e6]/90 blur-[120px]"></div>
-        <div className="absolute top-[15%] right-[12%] w-[550px] h-[550px] rounded-full bg-[#ccebc8]/50 blur-[130px]"></div>
-      </div>
-
       {/* SECTION 1: HERO */}
-      <section className="relative z-10 min-h-screen flex flex-col justify-between px-6 sm:px-10 lg:px-16 pt-24 sm:pt-28 pb-8 max-w-7xl mx-auto w-full">
+      <section className="relative z-10 min-h-[calc(100vh-5rem)] flex flex-col justify-between px-6 sm:px-10 lg:px-16 pt-24 sm:pt-28 pb-8 max-w-7xl mx-auto w-full">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center pt-1 sm:pt-2">
           {/* Left Column: Headline, Copy & CTAs */}
           <div className="lg:col-span-6 flex flex-col">
-            <div className="inline-flex items-center gap-2.5 mb-4">
-              <span className="inline-block w-2 h-2 rounded-full bg-moss animate-ping"></span>
-              <span className="font-body-sm text-body-sm text-secondary tracking-normal font-semibold">
-                Hero Solution &middot; Skyra Rainsink &amp; Enterprise Stewardship
+            <div className="inline-flex items-center gap-2 mb-4">
+              <span className="font-technical-label text-[13px] text-forest-slate uppercase tracking-wider font-semibold">
+                Rainwater harvesting &middot; Groundwater recharge
               </span>
             </div>
 
             <h1 className="font-headline-hero text-headline-hero-mobile sm:text-headline-hero text-deep-aquifer tracking-tight leading-tight">
-              Transform Stormwater into Lasting Aquifer Resilience.
+              Rainwater harvesting and groundwater recharge across India
             </h1>
 
             <p className="font-body-large text-body-large text-deep-aquifer/85 mt-4 sm:mt-5 leading-relaxed">
@@ -36,23 +29,17 @@ export default function Home() {
             </p>
 
             <div className="mt-6 flex flex-wrap items-center gap-4">
-              <div className="relative group inline-flex items-center">
-                <div className="absolute -inset-3 rounded-full bg-moss/20 blur-md opacity-0 group-hover:opacity-100 group-hover:scale-125 transition-all duration-700 ease-out"></div>
-                <Link
-                  href="/products/rainsink"
-                  className="relative inline-flex items-center justify-center bg-deep-aquifer hover:bg-forest-slate text-light-aquifer-canvas font-button-text text-button-text px-7 py-3.5 rounded-full transition-all duration-300 shadow-sm hover:shadow-md"
-                >
-                  Explore Skyra Rainsink
-                </Link>
-              </div>
+              <Link
+                href="/products/rainsink"
+                className="inline-flex items-center justify-center bg-deep-aquifer hover:bg-forest-slate text-white font-medium text-[15px] px-6 py-3 rounded-[6px] transition-colors shadow-xs"
+              >
+                Explore Skyra Rainsink
+              </Link>
               <Link
                 href="/contact"
-                className="font-button-text text-button-text text-forest-slate hover:text-deep-aquifer transition-colors inline-flex items-center gap-2 py-3 px-4"
+                className="inline-flex items-center justify-center border border-muted-aquifer/30 text-deep-aquifer hover:bg-slate-100 font-medium text-[15px] px-6 py-3 rounded-[6px] transition-colors"
               >
-                <span>Request Campus Survey</span>
-                <span className="material-symbols-outlined text-[18px]">
-                  arrow_forward
-                </span>
+                Book a site survey
               </Link>
             </div>
           </div>
@@ -65,26 +52,23 @@ export default function Home() {
 
         {/* Telemetry Metric Chip */}
         <div className="mt-8 sm:mt-10 pt-4 flex items-center justify-between flex-wrap gap-6 border-t border-muted-aquifer/15">
-          <div className="inline-flex items-center gap-4 py-3 px-5 rounded-full bg-white/70 backdrop-blur-md shadow-sm border border-muted-aquifer/20">
-            <div className="relative flex h-3 w-3">
-              <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-moss opacity-75"></span>
-              <span className="relative inline-flex rounded-full h-3 w-3 bg-moss"></span>
-            </div>
+          <div className="inline-flex items-center gap-4 py-3 px-5 rounded-[6px] bg-white border border-muted-aquifer/20">
+            <span className="inline-block w-2.5 h-2.5 rounded-full bg-moss"></span>
             <div className="flex items-baseline gap-2">
               <span className="font-metric-mono-lg text-metric-mono-lg text-deep-aquifer tracking-tight">
                 1.8B
               </span>
-              <span className="font-body-sm text-body-sm text-secondary font-medium">
-                Liters Harvested &amp; Recharged
+              <span className="font-body-sm text-body-sm text-deep-aquifer/80 font-medium">
+                Liters harvested &amp; recharged (Skyra survey data 2025)
               </span>
             </div>
           </div>
 
-          <div className="flex items-center gap-6 sm:gap-8 text-secondary/70">
+          <div className="flex items-center gap-6 sm:gap-8 text-deep-aquifer/70">
             <span className="font-body-sm text-body-sm font-medium">Kochi</span>
-            <span className="w-1 h-1 rounded-full bg-secondary/40"></span>
+            <span className="w-1 h-1 rounded-full bg-deep-aquifer/30"></span>
             <span className="font-body-sm text-body-sm font-medium">Bengaluru</span>
-            <span className="w-1 h-1 rounded-full bg-secondary/40"></span>
+            <span className="w-1 h-1 rounded-full bg-deep-aquifer/30"></span>
             <span className="font-body-sm text-body-sm font-medium">Hyderabad</span>
           </div>
         </div>

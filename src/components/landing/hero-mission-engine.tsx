@@ -78,31 +78,22 @@ export function HeroMissionEngine() {
   }, [isPlaying]);
 
   return (
-    <div className="relative w-full rounded-3xl bg-white/90 border border-muted-aquifer/25 p-5 sm:p-6 text-deep-aquifer shadow-2xl backdrop-blur-xl overflow-hidden font-sans group">
-      {/* Background Soft Glow */}
-      <div
-        className="absolute -top-24 -right-24 w-72 h-72 rounded-full blur-3xl opacity-20 pointer-events-none transition-colors duration-700"
-        style={{ backgroundColor: currentStage.accentColor }}
-      />
-
+    <div className="relative w-full rounded-[6px] bg-white border border-muted-aquifer/20 p-5 sm:p-6 text-deep-aquifer shadow-xs overflow-hidden font-sans group">
       {/* Top Header Control Bar */}
       <div className="flex items-center justify-between gap-3 mb-4 pb-3 border-b border-muted-aquifer/15 relative z-10">
         <div className="flex items-center gap-2">
-          <span className="relative flex h-2.5 w-2.5">
-            <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-moss opacity-75" />
-            <span className="relative inline-flex rounded-full h-2.5 w-2.5 bg-moss" />
-          </span>
+          <span className="inline-block h-2 w-2 rounded-full bg-moss" />
           <span className="font-mono text-xs font-bold uppercase tracking-wider text-deep-aquifer">
-            Closed-Loop Hydrological Engine
+            Closed-loop hydrological engine
           </span>
         </div>
 
         <button
           onClick={() => setIsPlaying(!isPlaying)}
-          className="inline-flex items-center gap-1.5 rounded-full border border-muted-aquifer/20 bg-black/5 px-2.5 py-1 text-[11px] font-mono text-deep-aquifer/80 hover:bg-black/10 transition-colors cursor-pointer"
+          className="inline-flex items-center gap-1.5 rounded-[4px] border border-muted-aquifer/20 bg-slate-100 px-2.5 py-1 text-[11px] font-mono text-deep-aquifer/80 hover:bg-slate-200 transition-colors cursor-pointer"
           title={isPlaying ? "Pause auto-loop" : "Play auto-loop"}
         >
-          <span className={`size-1.5 rounded-full ${isPlaying ? "bg-moss animate-pulse" : "bg-amber-500"}`} />
+          <span className={`size-1.5 rounded-full ${isPlaying ? "bg-moss" : "bg-amber-500"}`} />
           {isPlaying ? "PAUSE" : "PLAY"}
         </button>
       </div>
@@ -118,19 +109,19 @@ export function HeroMissionEngine() {
                 setActiveStageIndex(idx);
                 setIsPlaying(false);
               }}
-              className={`relative flex flex-col items-start p-2 sm:p-2.5 rounded-xl border text-left transition-all duration-300 cursor-pointer ${
+              className={`relative flex flex-col items-start p-2 sm:p-2.5 rounded-[4px] border text-left transition-all duration-300 cursor-pointer ${
                 isActive
-                  ? "border-moss bg-deep-aquifer text-white shadow-md"
-                  : "border-muted-aquifer/20 bg-black/5 text-deep-aquifer/70 hover:bg-black/10 hover:text-deep-aquifer"
+                  ? "border-moss bg-deep-aquifer text-white shadow-xs"
+                  : "border-muted-aquifer/20 bg-slate-50 text-deep-aquifer/70 hover:bg-slate-100 hover:text-deep-aquifer"
               }`}
             >
               <div className="flex items-center justify-between w-full mb-1">
-                <span className={`font-mono text-[10px] font-bold ${isActive ? "text-brand-green" : "text-slate-400"}`}>
+                <span className={`font-mono text-[10px] font-bold ${isActive ? "text-moss" : "text-slate-400"}`}>
                   {st.number}
                 </span>
                 {isActive && isPlaying && (
                   <motion.div
-                    className="h-1 bg-brand-green rounded-full"
+                    className="h-1 bg-moss rounded-[2px]"
                     initial={{ width: "0%" }}
                     animate={{ width: "100%" }}
                     transition={{ duration: 4.5, ease: "linear" }}
