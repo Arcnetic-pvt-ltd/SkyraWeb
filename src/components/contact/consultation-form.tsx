@@ -64,8 +64,7 @@ export function ConsultationForm() {
           <div className="space-y-8 lg:col-span-5">
             <div>
               <div className="mb-4 inline-flex items-center gap-2 rounded-[4px] border border-muted-aquifer/20 bg-white px-3 py-1 text-xs font-medium text-deep-aquifer shadow-xs">
-                <span className="size-1.5 rounded-full bg-moss"></span>
-                Site assessment · 24h turnaround
+                Site assessment &middot; 24h turnaround
               </div>
               <h2 className="mb-4 text-3xl font-bold leading-tight tracking-tight text-deep-aquifer md:text-4xl">
                 Request a consultation

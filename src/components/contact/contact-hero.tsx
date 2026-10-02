@@ -12,11 +12,7 @@ export function ContactHero() {
     <section className="relative overflow-hidden bg-light-aquifer-canvas pb-16 pt-28 lg:pt-36">
       <Container className="relative z-10 text-center">
         <div className="mb-6 inline-flex items-center gap-2 rounded-[4px] border border-muted-aquifer/20 bg-white px-3 py-1 text-xs font-medium text-deep-aquifer shadow-xs">
-          <span
-            aria-hidden="true"
-            className="size-1.5 rounded-full bg-moss"
-          />
-          Contact Skyra · From sky, to life
+          Contact Skyra &middot; From sky, to life
         </div>
 
         <h1 className="text-4xl font-bold leading-tight tracking-tight text-deep-aquifer md:text-5xl lg:text-6xl max-w-3xl mx-auto">

@@ -65,7 +65,6 @@ export function TheTeam() {
                     {initials}
                   </div>
                   <div className="mt-2 flex items-center gap-1.5 text-[11px] font-bold uppercase tracking-widest text-moss">
-                    <span aria-hidden="true" className="size-2 rounded-[2px] bg-moss" />
                     {tag}
                   </div>
                 </div>

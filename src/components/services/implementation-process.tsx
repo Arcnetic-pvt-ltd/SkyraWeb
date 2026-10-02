@@ -51,7 +51,6 @@ export function ImplementationProcess() {
       <Container>
         <div className="mx-auto mb-12 max-w-3xl text-center">
           <div className="inline-flex items-center gap-2 rounded-[4px] border border-muted-aquifer/20 bg-white px-3 py-1 text-xs font-medium text-deep-aquifer shadow-xs">
-            <span aria-hidden="true" className="size-1.5 rounded-full bg-moss" />
             Standardized execution
           </div>
           <h2 className="mt-4 text-2xl font-bold tracking-tight text-deep-aquifer sm:text-3xl lg:text-4xl">

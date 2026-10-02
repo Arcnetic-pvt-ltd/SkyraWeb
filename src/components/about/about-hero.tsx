@@ -51,7 +51,6 @@ export function AboutHero() {
               </div>
             </div>
             <div className="flex flex-shrink-0 items-center gap-2">
-              <span aria-hidden="true" className="size-2 rounded-[2px] bg-moss" />
               <span className="text-xs font-semibold text-deep-aquifer">Decentralized hydrology</span>
             </div>
           </div>

@@ -153,9 +153,6 @@ export function RainsinkInteractiveShowcase() {
           {/* Card Header & Controls */}
           <div className="flex items-center justify-between gap-4 mb-3 relative z-10 border-b border-white/10 pb-3">
             <div className="flex items-center gap-2">
-              <span className="relative flex h-2 w-2">
-                <span className="relative inline-flex rounded-[2px] h-2 w-2 bg-moss" />
-              </span>
               <span className="font-mono text-xs font-semibold uppercase tracking-wider text-slate-300">
                 Hydrological vector cutaway
               </span>

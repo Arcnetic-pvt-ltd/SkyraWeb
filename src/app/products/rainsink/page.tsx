@@ -17,7 +17,6 @@ export default function RainsinkProductPage() {
       <section className="relative z-10 pt-28 pb-14 md:pt-32 md:pb-20 px-6 sm:px-10 lg:px-16 max-w-5xl mx-auto w-full">
         <div className="flex flex-col gap-5 max-w-3xl">
           <div className="inline-flex items-center gap-2">
-            <span className="w-2 h-2 rounded-[2px] bg-moss"></span>
             <span className="font-technical-label text-[13px] text-forest-slate uppercase tracking-wider font-semibold">
               Flagship hydrological unit &middot; Skyra Rainsink
             </span>
@@ -60,7 +59,6 @@ export default function RainsinkProductPage() {
         <div className="max-w-5xl mx-auto px-6 sm:px-10 lg:px-16 relative z-10">
           <div className="flex flex-col gap-4 mb-12 max-w-2xl">
             <div className="inline-flex items-center gap-2.5">
-              <span className="w-2 h-2 rounded-[2px] bg-moss"></span>
               <span className="font-technical-label text-body-sm text-moss uppercase tracking-wider font-semibold">
                 Unit composition &amp; hardware
               </span>
@@ -167,7 +165,6 @@ export default function RainsinkProductPage() {
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
             <div className="lg:col-span-6 flex flex-col gap-6">
               <div className="inline-flex items-center gap-2.5">
-                <span className="w-2 h-2 rounded-[2px] bg-moss"></span>
                 <span className="font-technical-label text-body-sm text-moss uppercase tracking-wider font-semibold">
                   Deployment guidelines
                 </span>
@@ -256,7 +253,6 @@ export default function RainsinkProductPage() {
               {/* Content Column */}
               <div className="flex flex-col gap-3 max-w-2xl text-left">
                 <div className="inline-flex items-center gap-2 px-3 py-1 rounded-[4px] bg-white/10 border border-white/15 w-fit">
-                  <span className="w-1.5 h-1.5 rounded-[2px] bg-moss" />
                   <span className="font-technical-label text-[11px] uppercase tracking-wider text-moss font-semibold">
                     Fast-track site consultation
                   </span>

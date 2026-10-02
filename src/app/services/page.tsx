@@ -55,7 +55,6 @@ export default function ServicesPage() {
       <section className="w-full max-w-5xl mx-auto px-6 lg:px-8 pt-24 pb-12 md:pt-28 md:pb-16">
         <div className="max-w-3xl flex flex-col gap-4">
           <span className="inline-flex items-center gap-2 font-technical-label text-[13px] uppercase tracking-wider text-forest-slate font-semibold">
-            <span className="w-2 h-2 rounded-full bg-moss"></span>
             Systems &amp; architecture
           </span>
           <h1 className="font-headline-hero text-headline-hero-mobile sm:text-headline-hero text-deep-aquifer tracking-tight">

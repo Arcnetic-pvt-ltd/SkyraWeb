@@ -70,7 +70,6 @@ export function OurStory() {
               <div className="absolute inset-0 bg-gradient-to-t from-slate-950/80 via-transparent to-transparent" />
 
               <div className="absolute left-4 top-4 flex items-center gap-2 rounded-[4px] bg-white px-3.5 py-1.5 shadow-xs">
-                <span aria-hidden="true" className="size-2 rounded-[2px] bg-moss" />
                 <span className="text-xs font-semibold text-deep-aquifer">
                   The South Indian hydrology paradox
                 </span>

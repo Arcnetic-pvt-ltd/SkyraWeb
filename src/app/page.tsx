@@ -189,7 +189,6 @@ export default function Home() {
         </div>
 
         <div className="mt-10 pt-6 flex items-center gap-2.5 text-deep-aquifer/65 text-sm">
-          <span className="w-1.5 h-1.5 rounded-full bg-moss"></span>
           <span>
             Rajagiri Road, N. Kalamassery, Kerala
           </span>

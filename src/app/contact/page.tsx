@@ -18,7 +18,6 @@ export default function ContactPage() {
             <div className="lg:col-span-5 flex flex-col justify-between pt-2 lg:pt-4">
               <div className="flex flex-col">
                 <div className="inline-flex items-center gap-2 mb-4">
-                  <span className="inline-block h-2 w-2 rounded-full bg-moss"></span>
                   <span className="font-technical-label text-[13px] text-forest-slate uppercase tracking-wider font-semibold">
                     Site survey &amp; consultation
                   </span>

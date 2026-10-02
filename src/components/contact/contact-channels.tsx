@@ -62,7 +62,6 @@ export function ContactChannels() {
             <h2 className="mt-1 text-xl font-bold tracking-tight text-deep-aquifer">Direct contact channels</h2>
           </div>
           <div className="hidden items-center gap-2 text-xs text-slate-600 sm:flex">
-            <span aria-hidden="true" className="size-2 rounded-[2px] bg-moss" />
             Fast response within working hours
           </div>
         </div>

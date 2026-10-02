@@ -24,7 +24,6 @@ export function ServicesHero() {
       <Container className="relative z-10">
         <div className="mx-auto flex max-w-3xl flex-col items-center text-center">
           <div className="mb-5 inline-flex items-center gap-2 rounded-[4px] bg-[#F1F7F9] px-3.5 py-1 text-moss border border-muted-aquifer/20">
-            <span aria-hidden="true" className="size-2 rounded-[2px] bg-moss" />
             <span className="text-[11px] font-bold uppercase tracking-widest">Integrated water solutions</span>
           </div>
 

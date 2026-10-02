@@ -47,7 +47,6 @@ export function HarvestingCalculator() {
         {/* Header */}
         <div className="flex flex-col gap-3 max-w-2xl">
           <div className="inline-flex items-center gap-2">
-            <span className="w-2 h-2 rounded-full bg-moss"></span>
             <span className="font-technical-label text-[12px] text-forest-slate uppercase tracking-wider font-semibold">
               CALCULATOR
             </span>

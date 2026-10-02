@@ -91,7 +91,6 @@ export function QuotesCarousel() {
                 }`}
             >
               <div className="inline-flex items-center gap-2">
-                <span className="w-2 h-2 rounded-full bg-moss"></span>
                 <span className="font-technical-label text-[12px] uppercase tracking-wider text-forest-slate font-semibold">
                   National vision
                 </span>

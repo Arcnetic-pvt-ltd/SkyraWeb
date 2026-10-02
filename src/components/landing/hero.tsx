@@ -23,7 +23,6 @@ export function Hero() {
         <div className="grid grid-cols-1 gap-10 lg:grid-cols-12 lg:gap-12 items-center">
           <div className="lg:col-span-6">
             <div className="mb-6 inline-flex items-center gap-2 rounded-[4px] border border-muted-aquifer/20 bg-white px-3 py-1 text-xs font-medium text-deep-aquifer shadow-xs">
-              <span aria-hidden="true" className="size-1.5 rounded-full bg-moss" />
               Water resilience &amp; sustainable architecture
             </div>
 

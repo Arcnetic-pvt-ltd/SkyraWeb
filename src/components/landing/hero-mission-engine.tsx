@@ -82,7 +82,6 @@ export function HeroMissionEngine() {
       {/* Top Header Control Bar */}
       <div className="flex items-center justify-between gap-3 mb-4 pb-3 border-b border-muted-aquifer/15 relative z-10">
         <div className="flex items-center gap-2">
-          <span className="inline-block h-2 w-2 rounded-full bg-moss" />
           <span className="font-mono text-xs font-bold uppercase tracking-wider text-deep-aquifer">
             Closed-loop hydrological engine
           </span>
