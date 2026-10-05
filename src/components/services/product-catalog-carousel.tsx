@@ -1,28 +1,47 @@
 "use client";
 
-import React, { useState, useEffect, useCallback } from "react";
+import React, { useState, useCallback } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { motion, AnimatePresence } from "framer-motion";
+
+type Category = "all" | "rooftop" | "industrial" | "infrastructure";
 
 export interface ProductItem {
   id: string;
   series: string;
   capacityTag: string;
   title: string;
-  category: "all" | "rooftop" | "industrial" | "infrastructure";
+  category: Category;
   description: string;
   metric1Label: string;
   metric1Value: string;
   metric1Unit: string;
   metric2Label: string;
   metric2Value: string;
-  image: string;
+  image?: string;
   contactProductSlug: string;
   specsHighlight: string[];
 }
 
 export const PRODUCTS_CATALOG: ProductItem[] = [
+  {
+    id: "skyra-rainsink",
+    series: "SKYRA RAINSINK",
+    capacityTag: "30,000 L/YR PER UNIT",
+    title: "Skyra Rainsink Percolator Unit",
+    category: "infrastructure",
+    description:
+      "Modular pre-cast concrete infiltration chamber with multi-stage silica and activated carbon filter media for underground aquifer recharge.",
+    metric1Label: "Annual Recharge",
+    metric1Value: "30,000",
+    metric1Unit: "L/YR",
+    metric2Label: "Construction",
+    metric2Value: "Pre-cast RCC Rings",
+    image: "/images/skyra-rainsink-unit.jpg",
+    contactProductSlug: "rainsink-module",
+    specsHighlight: ["Multi-stage Filter Media", "Aquifer Recharge", "LEED/IGBC Water Credits"],
+  },
   {
     id: "neerain-nru-150",
     series: "NEERAIN NRU 150",
@@ -111,9 +130,8 @@ export const PRODUCTS_CATALOG: ProductItem[] = [
 ];
 
 export function ProductCatalogCarousel() {
-  const [activeCategory, setActiveCategory] = useState<"all" | "rooftop" | "industrial" | "infrastructure">("all");
+  const [activeCategory, setActiveCategory] = useState<Category>("all");
   const [currentIndex, setCurrentIndex] = useState(0);
-  const [isPaused, setIsPaused] = useState(false);
   const [showSpecTable, setShowSpecTable] = useState(false);
 
   const filteredProducts = PRODUCTS_CATALOG.filter(
@@ -130,11 +148,6 @@ export function ProductCatalogCarousel() {
     setCurrentIndex((prev) => (prev - 1 + total) % total);
   }, [total]);
 
-  // Reset index on category change
-  useEffect(() => {
-    setCurrentIndex(0);
-  }, [activeCategory]);
-
   // Carousel stays still until user interaction per Page 08 guidelines
 
   return (
@@ -146,17 +159,20 @@ export function ProductCatalogCarousel() {
             { id: "all", label: "All Products" },
             { id: "rooftop", label: "Rooftop Filters" },
             { id: "industrial", label: "Industrial Systems" },
-            { id: "infrastructure", label: "Percolation Ponds" },
+            { id: "infrastructure", label: "Recharge Systems" },
           ].map((tab) => {
             const isActive = activeCategory === tab.id;
             return (
               <button
                 key={tab.id}
                 type="button"
-                onClick={() => setActiveCategory(tab.id as any)}
-                className={`px-4 py-2 rounded-[6px] font-button-text text-xs sm:text-body-sm transition-all duration-300 cursor-pointer ${
+                onClick={() => {
+                  setActiveCategory(tab.id as Category);
+                  setCurrentIndex(0);
+                }}
+                className={`px-4 py-2 rounded-[6px] font-button-text text-xs sm:text-body-sm transition-colors cursor-pointer ${
                   isActive
-                    ? "bg-deep-aquifer text-light-aquifer-canvas shadow-xs"
+                    ? "bg-deep-aquifer text-light-aquifer-canvas"
                     : "bg-surface-container-low text-deep-aquifer/70 hover:text-deep-aquifer hover:bg-black/5"
                 }`}
               >
@@ -199,8 +215,6 @@ export function ProductCatalogCarousel() {
       {/* Main Interactive Carousel Slide Container */}
       <div
         className="relative w-full"
-        onMouseEnter={() => setIsPaused(true)}
-        onMouseLeave={() => setIsPaused(false)}
       >
         {/* Desktop Grid Layout: Static Catalog Overview (5 Cols on Left) + Hero Spotlight Card (7 Cols on Right) */}
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-stretch">
@@ -217,30 +231,34 @@ export function ProductCatalogCarousel() {
                   <div
                     key={prod.id}
                     onClick={() => setCurrentIndex(idx)}
-                    className={`p-4 rounded-xl border transition-colors duration-300 cursor-pointer flex items-center gap-4 group ${
+                    className={`p-4 rounded-[4px] border transition-colors cursor-pointer flex items-center gap-4 group ${
                       isSelected
-                        ? "bg-deep-aquifer text-white border-moss/60 shadow-md border-l-4 border-l-moss"
-                        : "bg-white text-deep-aquifer border-muted-aquifer/20 hover:border-moss/40 hover:bg-slate-50/50"
+                        ? "bg-deep-aquifer text-white border-deep-aquifer"
+                        : "bg-white text-deep-aquifer border-muted-aquifer/20 hover:border-deep-aquifer/40"
                     }`}
                   >
                     {/* Thumbnail Image */}
-                    <div className="relative w-16 h-16 rounded-lg overflow-hidden shrink-0 bg-surface-container-low border border-muted-aquifer/15">
-                      <Image
-                        src={prod.image}
-                        alt={prod.title}
-                        fill
-                        sizes="64px"
-                        className="object-cover"
-                      />
+                    <div className="relative w-16 h-16 rounded-[4px] overflow-hidden shrink-0 bg-surface-container-low border border-muted-aquifer/15 flex items-center justify-center">
+                      {prod.image ? (
+                        <Image
+                          src={prod.image}
+                          alt={prod.title}
+                          fill
+                          sizes="64px"
+                          className="object-cover"
+                        />
+                      ) : (
+                        <span aria-hidden="true" className="material-symbols-outlined text-moss text-[28px]">water_drop</span>
+                      )}
                     </div>
 
                     <div className="flex flex-col flex-1 min-w-0">
                       <div className="flex items-center gap-2">
                         <span
-                          className={`font-technical-label text-[10px] px-2 py-0.5 rounded font-semibold ${
+                          className={`font-technical-label text-[10px] px-2 py-0.5 rounded-[4px] font-semibold whitespace-nowrap shrink-0 ${
                             isSelected
-                              ? "bg-moss text-deep-aquifer"
-                              : "bg-moss/10 text-moss"
+                              ? "bg-white/15 text-white"
+                              : "bg-moss/10 text-forest-slate"
                           }`}
                         >
                           {prod.series}
@@ -265,7 +283,7 @@ export function ProductCatalogCarousel() {
                     <span
                       className={`material-symbols-outlined text-lg transition-colors ${
                         isSelected
-                          ? "text-moss"
+                          ? "text-white"
                           : "text-muted-aquifer/40 group-hover:text-deep-aquifer"
                       }`}
                     >
@@ -287,26 +305,31 @@ export function ProductCatalogCarousel() {
                   animate={{ opacity: 1, x: 0 }}
                   exit={{ opacity: 0, x: 20 }}
                   transition={{ duration: 0.3, ease: "easeOut" }}
-                  className="w-full bg-white rounded-2xl border border-muted-aquifer/20 overflow-hidden shadow-[0_8px_30px_rgb(29,41,59,0.06)] flex flex-col group h-full justify-between"
+                  className="w-full bg-white rounded-[4px] border border-muted-aquifer/20 overflow-hidden shadow-xs flex flex-col group h-full justify-between"
                 >
                   {/* High-Res Rendered Image Frame */}
                   <div className="relative w-full aspect-[16/10] bg-surface-container-low overflow-hidden border-b border-muted-aquifer/15">
-                    <Image
-                      src={filteredProducts[currentIndex].image}
-                      alt={filteredProducts[currentIndex].title}
-                      fill
-                      sizes="(max-width: 1024px) 100vw, 700px"
-                      className="object-cover group-hover:scale-105 transition-transform duration-700 ease-out"
-                      priority
-                    />
-                    <div className="absolute inset-0 bg-gradient-to-t from-deep-aquifer/40 via-transparent to-transparent pointer-events-none" />
+                    {filteredProducts[currentIndex].image ? (
+                      <Image
+                        src={filteredProducts[currentIndex].image}
+                        alt={filteredProducts[currentIndex].title}
+                        fill
+                        sizes="(max-width: 1024px) 100vw, 700px"
+                        className="object-cover"
+                        priority
+                      />
+                    ) : (
+                      <div className="absolute inset-0 flex items-center justify-center">
+                        <span aria-hidden="true" className="material-symbols-outlined text-moss text-[72px]">water_drop</span>
+                      </div>
+                    )}
 
                     {/* Top Overlay Badges */}
                     <div className="absolute top-4 left-4 right-4 flex items-center justify-between pointer-events-none">
                       <span className="font-technical-label text-[11px] text-white bg-deep-aquifer/90 px-3 py-1 rounded-[4px] font-semibold border border-white/10 shadow-xs">
                         {filteredProducts[currentIndex].series}
                       </span>
-                      <span className="font-technical-label text-[11px] text-moss bg-white px-3 py-1 rounded-[4px] font-bold shadow-xs">
+                      <span className="font-technical-label text-[11px] text-forest-slate bg-white px-3 py-1 rounded-[4px] font-bold shadow-xs">
                         {filteredProducts[currentIndex].capacityTag}
                       </span>
                     </div>
@@ -316,7 +339,7 @@ export function ProductCatalogCarousel() {
                       {filteredProducts[currentIndex].specsHighlight.map((spec, i) => (
                         <span
                           key={i}
-                          className="font-mono text-[10px] text-light-aquifer-canvas bg-slate-900 px-2.5 py-0.5 rounded-[4px] border border-white/10"
+                          className="font-mono text-[10px] text-light-aquifer-canvas bg-deep-aquifer px-2.5 py-0.5 rounded-[4px] border border-white/10"
                         >
                           &bull; {spec}
                         </span>
@@ -364,7 +387,7 @@ export function ProductCatalogCarousel() {
                           <button
                             type="button"
                             onClick={() => setShowSpecTable(!showSpecTable)}
-                            className="w-full inline-flex items-center justify-between px-4 py-2.5 rounded-lg bg-surface-container-low hover:bg-slate-200/60 border border-muted-aquifer/20 font-technical-label text-xs font-semibold text-deep-aquifer transition-colors cursor-pointer"
+                            className="w-full inline-flex items-center justify-between px-4 py-2.5 rounded-[4px] bg-surface-container-low hover:bg-slate-200/60 border border-muted-aquifer/20 font-technical-label text-xs font-semibold text-deep-aquifer transition-colors cursor-pointer"
                           >
                             <span className="flex items-center gap-2">
                               <span className="material-symbols-outlined text-moss text-base">table_chart</span>
@@ -380,7 +403,7 @@ export function ProductCatalogCarousel() {
                               initial={{ opacity: 0, height: 0 }}
                               animate={{ opacity: 1, height: "auto" }}
                               exit={{ opacity: 0, height: 0 }}
-                              className="overflow-x-auto rounded-lg border border-muted-aquifer/20 bg-white p-3 text-xs"
+                              className="overflow-x-auto rounded-[4px] border border-muted-aquifer/20 bg-white p-3 text-xs"
                             >
                               <table className="w-full text-left font-mono">
                                 <thead>
@@ -438,15 +461,12 @@ export function ProductCatalogCarousel() {
                         </div>
                       )}
 
-                      <div className="pt-2 flex items-center gap-3">
+                      <div className="pt-2 flex flex-col sm:flex-row items-stretch sm:items-center gap-3">
                         <Link
                           href={`/contact?product=${filteredProducts[currentIndex].contactProductSlug}`}
-                          className="w-full sm:w-auto inline-flex items-center justify-center gap-2.5 bg-deep-aquifer hover:bg-forest-slate text-light-aquifer-canvas font-medium text-[14px] px-6 py-3 rounded-[6px] transition-colors shadow-xs group/btn"
+                          className="w-full sm:w-auto inline-flex items-center justify-center bg-deep-aquifer hover:bg-forest-slate text-white font-medium text-[14px] px-6 py-3 min-h-[44px] rounded-[6px] transition-colors shadow-xs"
                         >
-                          <span>Book a site survey</span>
-                          <span className="material-symbols-outlined text-[18px]">
-                            arrow_forward
-                          </span>
+                          Get Quote
                         </Link>
                       </div>
                     </div>
@@ -456,21 +476,6 @@ export function ProductCatalogCarousel() {
             </AnimatePresence>
           </div>
         </div>
-      </div>
-
-      {/* Bottom Dot Indicators */}
-      <div className="flex items-center justify-center gap-2 pt-2">
-        {filteredProducts.map((_, i) => (
-          <button
-            key={i}
-            type="button"
-            onClick={() => setCurrentIndex(i)}
-            aria-label={`Go to slide ${i + 1}`}
-            className={`h-2 rounded-full transition-all duration-300 cursor-pointer ${
-              i === currentIndex ? "w-8 bg-moss" : "w-2 bg-muted-aquifer/30 hover:bg-muted-aquifer/60"
-            }`}
-          />
-        ))}
       </div>
     </div>
   );

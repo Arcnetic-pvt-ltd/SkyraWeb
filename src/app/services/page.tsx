@@ -1,52 +1,13 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { HarvestingCalculator } from "@/components/services/harvesting-calculator";
-// import { ProductCatalogCarousel } from "@/components/services/product-catalog-carousel";
+import { ProductCatalogCarousel } from "@/components/services/product-catalog-carousel";
 
 export const metadata: Metadata = {
   title: "Solutions · Skyra",
   description:
     "Three natural, engineering-grade approaches to catching, filtering, and storing water where it falls: Rainwater Harvesting, Stormwater Management, and Afforestation.",
 };
-
-const PRODUCTS = [
-  {
-    id: "rainsink-module",
-    title: "Skyra Rainsink Percolator Unit",
-    category: "Percolation Module",
-    description:
-      "Modular pre-cast concrete infiltration chamber with multi-stage aggregate filter media for underground aquifer recharge.",
-    capacity: "30,000 L/yr per unit",
-    href: "/contact?product=rainsink-module",
-  },
-  {
-    id: "first-flush-filter",
-    title: "Automatic Rooftop First-Flush Filter",
-    category: "Rooftop Filtration",
-    description:
-      "Dual-chamber automatic bypass filter unit designed to isolate initial roof debris and silt before cistern storage.",
-    capacity: "Up to 500 m² roof area",
-    href: "/contact?product=first-flush-filter",
-  },
-  {
-    id: "attenuation-crate",
-    title: "Subsurface Attenuation Crate",
-    category: "Stormwater Retention",
-    description:
-      "High-strength modular polypropylene void crates engineered for parking yard stormwater detention and controlled release.",
-    capacity: "45 T/m² load capacity",
-    href: "/contact?product=attenuation-crate",
-  },
-  {
-    id: "filter-media-pack",
-    title: "Silica & Carbon Filter Media Pack",
-    category: "Filter Media",
-    description:
-      "Gradated silica gravel, quartz aggregate, and activated carbon refill pack for borehole clarification systems.",
-    capacity: "0.2µm turbidity clarification",
-    href: "/contact?product=filter-media-pack",
-  },
-];
 
 export default function ServicesPage() {
   return (
@@ -207,45 +168,7 @@ export default function ServicesPage() {
             </p>
           </div>
 
-          {/* Product Listing Grid */}
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-            {PRODUCTS.map((prod) => (
-              <div
-                key={prod.id}
-                className="rounded-[4px] border border-muted-aquifer/20 bg-white p-6 shadow-xs flex flex-col justify-between gap-5"
-              >
-                <div className="flex flex-col gap-3">
-                  <span className="font-technical-label text-[11px] font-semibold text-moss uppercase tracking-wider">
-                    {prod.category}
-                  </span>
-                  <h3 className="font-headline-h3 text-base font-bold text-deep-aquifer leading-snug">
-                    {prod.title}
-                  </h3>
-                  <p className="font-body-sm text-xs text-deep-aquifer/75 leading-relaxed">
-                    {prod.description}
-                  </p>
-                  <div className="pt-2 border-t border-muted-aquifer/15">
-                    <span className="font-mono text-[11px] text-deep-aquifer/70 font-semibold block">
-                      {prod.capacity}
-                    </span>
-                  </div>
-                </div>
-
-                <div className="pt-2">
-                  <Link
-                    href={prod.href}
-                    className="w-full inline-flex items-center justify-center bg-deep-aquifer hover:bg-forest-slate text-white font-medium text-[14px] px-4 py-2.5 min-h-[44px] rounded-[6px] transition-colors shadow-xs"
-                  >
-                    Get Quote
-                  </Link>
-                </div>
-              </div>
-            ))}
-          </div>
-
-          {/* ORIGINAL PRODUCT CATALOG CAROUSEL COMMENTED OUT PER SPECIFICATION:
           <ProductCatalogCarousel />
-          */}
         </div>
       </section>
 
