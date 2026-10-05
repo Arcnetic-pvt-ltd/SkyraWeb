@@ -173,7 +173,7 @@ export function ProductCatalogCarousel() {
                 className={`px-4 py-2 rounded-[6px] font-button-text text-xs sm:text-body-sm transition-colors cursor-pointer ${
                   isActive
                     ? "bg-deep-aquifer text-light-aquifer-canvas"
-                    : "bg-surface-container-low text-deep-aquifer/70 hover:text-deep-aquifer hover:bg-black/5"
+                    : "bg-white border border-muted-aquifer/30 text-deep-aquifer hover:bg-slate-50 shadow-xs"
                 }`}
               >
                 {tab.label}
@@ -233,12 +233,12 @@ export function ProductCatalogCarousel() {
                     onClick={() => setCurrentIndex(idx)}
                     className={`p-4 rounded-[4px] border transition-colors cursor-pointer flex items-center gap-4 group ${
                       isSelected
-                        ? "bg-deep-aquifer text-white border-deep-aquifer"
-                        : "bg-white text-deep-aquifer border-muted-aquifer/20 hover:border-deep-aquifer/40"
+                        ? "bg-white text-deep-aquifer border-forest-slate ring-1 ring-forest-slate shadow-xs"
+                        : "bg-white text-deep-aquifer border-muted-aquifer/20 hover:border-forest-slate/50"
                     }`}
                   >
                     {/* Thumbnail Image */}
-                    <div className="relative w-16 h-16 rounded-[4px] overflow-hidden shrink-0 bg-surface-container-low border border-muted-aquifer/15 flex items-center justify-center">
+                    <div className="relative w-16 h-16 rounded-[4px] overflow-hidden shrink-0 bg-slate-100 border border-muted-aquifer/15 flex items-center justify-center">
                       {prod.image ? (
                         <Image
                           src={prod.image}
@@ -257,37 +257,33 @@ export function ProductCatalogCarousel() {
                         <span
                           className={`font-technical-label text-[10px] px-2 py-0.5 rounded-[4px] font-semibold whitespace-nowrap shrink-0 ${
                             isSelected
-                              ? "bg-white/15 text-white"
+                              ? "bg-forest-slate text-white"
                               : "bg-moss/10 text-forest-slate"
                           }`}
                         >
                           {prod.series}
                         </span>
                         <span
-                          className={`font-mono text-[10px] truncate ${
-                            isSelected ? "text-white/70" : "text-muted-aquifer"
-                          }`}
+                          className="font-mono text-[10px] truncate text-muted-aquifer"
                         >
                           {prod.capacityTag}
                         </span>
                       </div>
                       <h4
-                        className={`font-bold text-sm truncate mt-1 ${
-                          isSelected ? "text-white" : "text-deep-aquifer"
-                        }`}
+                        className="font-bold text-sm truncate mt-1 text-deep-aquifer"
                       >
                         {prod.title}
                       </h4>
                     </div>
 
                     <span
-                      className={`material-symbols-outlined text-lg transition-colors ${
+                      className={`material-symbols-outlined text-[18px] transition-colors ${
                         isSelected
-                          ? "text-white"
-                          : "text-muted-aquifer/40 group-hover:text-deep-aquifer"
+                          ? "text-forest-slate"
+                          : "text-muted-aquifer/50 group-hover:text-deep-aquifer"
                       }`}
                     >
-                      arrow_forward_ios
+                      arrow_forward
                     </span>
                   </div>
                 );
@@ -308,7 +304,7 @@ export function ProductCatalogCarousel() {
                   className="w-full bg-white rounded-[4px] border border-muted-aquifer/20 overflow-hidden shadow-xs flex flex-col group h-full justify-between"
                 >
                   {/* High-Res Rendered Image Frame */}
-                  <div className="relative w-full aspect-[16/10] bg-surface-container-low overflow-hidden border-b border-muted-aquifer/15">
+                  <div className="relative w-full aspect-[16/10] bg-slate-100 overflow-hidden border-b border-muted-aquifer/15">
                     {filteredProducts[currentIndex].image ? (
                       <Image
                         src={filteredProducts[currentIndex].image}
@@ -326,7 +322,7 @@ export function ProductCatalogCarousel() {
 
                     {/* Top Overlay Badges */}
                     <div className="absolute top-4 left-4 right-4 flex items-center justify-between pointer-events-none">
-                      <span className="font-technical-label text-[11px] text-white bg-deep-aquifer/90 px-3 py-1 rounded-[4px] font-semibold border border-white/10 shadow-xs">
+                      <span className="font-technical-label text-[11px] text-white bg-forest-slate px-3 py-1 rounded-[4px] font-semibold shadow-xs">
                         {filteredProducts[currentIndex].series}
                       </span>
                       <span className="font-technical-label text-[11px] text-forest-slate bg-white px-3 py-1 rounded-[4px] font-bold shadow-xs">
@@ -339,7 +335,7 @@ export function ProductCatalogCarousel() {
                       {filteredProducts[currentIndex].specsHighlight.map((spec, i) => (
                         <span
                           key={i}
-                          className="font-mono text-[10px] text-light-aquifer-canvas bg-deep-aquifer px-2.5 py-0.5 rounded-[4px] border border-white/10"
+                          className="font-technical-label text-[10px] text-deep-aquifer bg-white/90 px-2.5 py-0.5 rounded-[4px] font-semibold shadow-xs"
                         >
                           &bull; {spec}
                         </span>
@@ -360,7 +356,7 @@ export function ProductCatalogCarousel() {
 
                     <div className="flex flex-col gap-4">
                       {/* Metric Highlights Box */}
-                      <div className="bg-[#F1F7F9] p-4 rounded-[4px] border border-muted-aquifer/15 grid grid-cols-2 gap-4">
+                      <div className="bg-light-aquifer-canvas p-4 rounded-[4px] border border-muted-aquifer/15 grid grid-cols-2 gap-4">
                         <div className="flex flex-col">
                           <span className="font-body-sm text-[11px] uppercase tracking-wider text-muted-aquifer">
                             {filteredProducts[currentIndex].metric1Label}
@@ -387,7 +383,7 @@ export function ProductCatalogCarousel() {
                           <button
                             type="button"
                             onClick={() => setShowSpecTable(!showSpecTable)}
-                            className="w-full inline-flex items-center justify-between px-4 py-2.5 rounded-[4px] bg-surface-container-low hover:bg-slate-200/60 border border-muted-aquifer/20 font-technical-label text-xs font-semibold text-deep-aquifer transition-colors cursor-pointer"
+                            className="w-full inline-flex items-center justify-between px-4 py-2.5 rounded-[4px] bg-white hover:bg-slate-50 border border-muted-aquifer/20 font-technical-label text-xs font-semibold text-deep-aquifer transition-colors cursor-pointer"
                           >
                             <span className="flex items-center gap-2">
                               <span className="material-symbols-outlined text-moss text-base">table_chart</span>
