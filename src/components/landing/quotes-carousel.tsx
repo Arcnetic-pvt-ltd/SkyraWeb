@@ -45,7 +45,7 @@ export function QuotesCarousel() {
   // Remove auto-play interval per Page 08 guidelines: still until touched
 
   return (
-    <section className="w-full bg-light-aquifer-canvas text-deep-aquifer py-20 sm:py-24 border-t border-muted-aquifer/15 relative overflow-hidden min-h-[460px] flex items-center">
+    <section className="w-full bg-forest-slate text-light-aquifer-canvas py-20 sm:py-24 border-t border-muted-aquifer/15 relative overflow-hidden min-h-[460px] flex items-center">
       {/* Background Images for Quotes (Synchronized with text transition) */}
       {QUOTES.map((item, idx) => {
         if (!item.image) return null;
@@ -61,9 +61,9 @@ export function QuotesCarousel() {
             <div className="relative h-full flex items-end">
               {/* Soft Gradient Mask based on image position */}
               {isLeft ? (
-                <div className="absolute inset-y-0 right-0 w-32 sm:w-56 bg-gradient-to-l from-light-aquifer-canvas via-light-aquifer-canvas/60 to-transparent z-10 pointer-events-none"></div>
+                <div className="absolute inset-y-0 right-0 w-32 sm:w-56 bg-gradient-to-l from-forest-slate via-forest-slate/60 to-transparent z-10 pointer-events-none"></div>
               ) : (
-                <div className="absolute inset-y-0 left-0 w-32 sm:w-56 bg-gradient-to-r from-light-aquifer-canvas via-light-aquifer-canvas/60 to-transparent z-10 pointer-events-none"></div>
+                <div className="absolute inset-y-0 left-0 w-32 sm:w-56 bg-gradient-to-r from-forest-slate via-forest-slate/60 to-transparent z-10 pointer-events-none"></div>
               )}
 
               <img
@@ -91,20 +91,20 @@ export function QuotesCarousel() {
                 }`}
             >
               <div className="inline-flex items-center gap-2">
-                <span className="font-technical-label text-[12px] uppercase tracking-wider text-forest-slate font-semibold">
+                <span className="font-technical-label text-[12px] uppercase tracking-wider text-white/70 font-semibold">
                   National vision
                 </span>
               </div>
 
-              <blockquote className="font-headline-h2 text-[24px] sm:text-[30px] text-deep-aquifer font-normal leading-snug tracking-tight">
+              <blockquote className="font-headline-h2 text-[24px] sm:text-[30px] text-white font-normal leading-snug tracking-tight">
                 {item.quote}
               </blockquote>
 
-              <cite className="font-body-large text-body-large text-deep-aquifer/80 not-italic block">
-                <span className="font-semibold text-deep-aquifer">
+              <cite className="font-body-large text-body-large text-light-aquifer-canvas/90 not-italic block">
+                <span className="font-semibold text-white">
                   — {item.author}
                 </span>
-                , <span className="text-deep-aquifer/65">{item.role}</span>
+                , <span className="text-white/70">{item.role}</span>
               </cite>
 
               {/* Carousel Dot Indicators */}
@@ -116,8 +116,8 @@ export function QuotesCarousel() {
                     aria-label={`Quote ${dotIdx + 1}`}
                     onClick={() => setActiveIndex(dotIdx)}
                     className={`h-1.5 rounded-full transition-all duration-500 ${dotIdx === activeIndex
-                        ? "w-6 bg-deep-aquifer"
-                        : "w-2 bg-muted-aquifer/30 hover:bg-muted-aquifer/60"
+                      ? "w-6 bg-white"
+                      : "w-2 bg-white/40 hover:bg-white/70"
                       }`}
                   />
                 ))}
