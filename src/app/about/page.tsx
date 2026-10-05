@@ -59,6 +59,34 @@ export default function AboutPage() {
         </div>
       </section>
 
+      {/* SECTION: WHY WE EXIST & MISSION */}
+      <section className="relative z-10 w-full py-16 sm:py-24 bg-forest-slate text-light-aquifer-canvas">
+        <div className="max-w-5xl mx-auto px-6 sm:px-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-10 md:gap-0">
+            <div className="flex flex-col gap-4 md:pr-12 md:border-r md:border-light-aquifer-canvas/20">
+              <span className="font-technical-label text-[12px] uppercase tracking-wider font-semibold text-light-aquifer-canvas/70">
+                WHY WE EXIST
+              </span>
+              <h2 className="font-headline-h2 text-headline-h2-mobile sm:text-headline-h2 tracking-tight">
+                The rain was never the problem
+              </h2>
+              <p className="font-body-large text-body-large text-light-aquifer-canvas/85 leading-relaxed">
+                Kerala receives over 3,000 mm of rain a year, yet its wells run dry every summer and tankers fill the gap. Skyra was founded in Kalamassery, Kochi, by hydrologists and engineers who saw that the problem was never too little rain. The rain was simply leaving. We set out to build systems that keep it.
+              </p>
+            </div>
+
+            <div className="flex flex-col gap-4 md:pl-12">
+              <span className="font-technical-label text-[12px] uppercase tracking-wider font-semibold text-light-aquifer-canvas/70">
+                OUR MISSION
+              </span>
+              <p className="font-headline-h2 text-headline-h2-mobile sm:text-headline-h2 leading-tight">
+                To turn every roof and campus into a working aquifer recharge system, so water independence stops depending on tankers and the weather.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* SECTION 2: MINIMAL TECHNICAL APPROACH */}
       <section className="relative z-10 w-full py-16 bg-light-aquifer-canvas border-t border-muted-aquifer/15">
         <div className="max-w-5xl mx-auto px-6 sm:px-8">
