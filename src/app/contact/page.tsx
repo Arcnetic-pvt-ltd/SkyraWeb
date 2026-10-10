@@ -21,6 +21,15 @@ export default function ContactPage() {
   return (
     <div className="flex flex-col w-full">
       <section className="relative w-full overflow-hidden bg-light-aquifer-canvas pt-28 pb-16 sm:pt-32 sm:pb-24">
+        {/* Soft organic ripple ring graphic */}
+        <div aria-hidden="true" className="pointer-events-none absolute inset-0 overflow-hidden">
+          <svg className="absolute top-12 right-10 w-96 h-96 text-muted-aquifer/10" fill="none" viewBox="0 0 400 400">
+            <circle cx="200" cy="200" r="80" stroke="currentColor" strokeDasharray="3 6" strokeWidth="1.5" />
+            <circle cx="200" cy="200" r="130" stroke="currentColor" strokeWidth="1" />
+            <circle cx="200" cy="200" r="180" stroke="currentColor" strokeDasharray="6 8" strokeWidth="1" />
+          </svg>
+        </div>
+
         <div className="relative z-10 w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-start">
             {/* Left Column */}
@@ -39,7 +48,7 @@ export default function ContactPage() {
                   Tell us a bit about your property, and we’ll show you what’s possible — no pressure, just a conversation.
                 </p>
 
-                <div className="mt-10 rounded-[4px] bg-white p-6 border border-muted-aquifer/20">
+                <div className="mt-10 rounded-xl bg-white/80 p-6 border border-muted-aquifer/20 backdrop-blur-xs">
                   <div className="flex items-center gap-3">
                     <span className="material-symbols-outlined text-moss text-[22px]">
                       water_drop
@@ -57,7 +66,7 @@ export default function ContactPage() {
               {/* Studio & Direct Connect Details */}
               <div className="mt-12 flex flex-col gap-6">
                 <div className="flex items-start gap-4">
-                  <div className="h-10 w-10 rounded-[6px] bg-white flex items-center justify-center shrink-0 text-deep-aquifer border border-muted-aquifer/20">
+                  <div className="h-10 w-10 rounded-full bg-white flex items-center justify-center shrink-0 text-forest-slate border border-muted-aquifer/20 shadow-xs">
                     <span className="material-symbols-outlined text-[20px]">corporate_fare</span>
                   </div>
                   <div>
@@ -71,7 +80,7 @@ export default function ContactPage() {
                 </div>
 
                 <div className="flex items-start gap-4">
-                  <div className="h-10 w-10 rounded-[6px] bg-white flex items-center justify-center shrink-0 text-deep-aquifer border border-muted-aquifer/20">
+                  <div className="h-10 w-10 rounded-full bg-white flex items-center justify-center shrink-0 text-forest-slate border border-muted-aquifer/20 shadow-xs">
                     <span className="material-symbols-outlined text-[20px]">call</span>
                   </div>
                   <div>
@@ -91,7 +100,7 @@ export default function ContactPage() {
                 </div>
 
                 <div className="flex items-start gap-4">
-                  <div className="h-10 w-10 rounded-[6px] bg-white flex items-center justify-center shrink-0 text-deep-aquifer border border-muted-aquifer/20">
+                  <div className="h-10 w-10 rounded-full bg-white flex items-center justify-center shrink-0 text-forest-slate border border-muted-aquifer/20 shadow-xs">
                     <span className="material-symbols-outlined text-[20px]">mail</span>
                   </div>
                   <div>
@@ -108,8 +117,8 @@ export default function ContactPage() {
                 </div>
 
                 <div className="flex items-start gap-4">
-                  <div className="h-10 w-10 rounded-[6px] bg-white flex items-center justify-center shrink-0 text-deep-aquifer border border-muted-aquifer/20">
-                    <WhatsAppIcon className="size-[19px] text-deep-aquifer" />
+                  <div className="h-10 w-10 rounded-full bg-white flex items-center justify-center shrink-0 text-moss border border-muted-aquifer/20 shadow-xs">
+                    <WhatsAppIcon className="size-[19px] text-moss" />
                   </div>
                   <div>
                     <span className="font-headline-h3 text-base font-medium text-deep-aquifer block">
@@ -134,57 +143,65 @@ export default function ContactPage() {
               <ConsultationIntakeForm />
 
               {/* Social Media Channels */}
-              <div className="rounded-[4px] bg-white p-4 sm:p-5 border border-[#bcd7e8]/60 shadow-[0_2px_12px_rgba(15,35,60,0.03)] flex items-center justify-center gap-3.5 sm:gap-4">
-                <a
-                  aria-label="YouTube"
-                  className="h-10 w-10 rounded-[6px] bg-light-aquifer-canvas hover:bg-deep-aquifer hover:text-white text-deep-aquifer/75 transition-all duration-300 flex items-center justify-center border border-muted-aquifer/20 hover:border-deep-aquifer"
-                  href="https://youtube.com/@skyrawater"
-                  rel="noopener noreferrer"
-                  target="_blank"
-                  title="YouTube"
-                >
-                  <YouTubeIcon className="h-4 w-4" />
-                </a>
-                <a
-                  aria-label="Instagram"
-                  className="h-10 w-10 rounded-[6px] bg-light-aquifer-canvas hover:bg-deep-aquifer hover:text-white text-deep-aquifer/75 transition-all duration-300 flex items-center justify-center border border-muted-aquifer/20 hover:border-deep-aquifer"
-                  href="https://instagram.com/skyrawater"
-                  rel="noopener noreferrer"
-                  target="_blank"
-                  title="Instagram"
-                >
-                  <InstagramIcon className="h-4 w-4" />
-                </a>
-                <a
-                  aria-label="Facebook"
-                  className="h-10 w-10 rounded-[6px] bg-light-aquifer-canvas hover:bg-deep-aquifer hover:text-white text-deep-aquifer/75 transition-all duration-300 flex items-center justify-center border border-muted-aquifer/20 hover:border-deep-aquifer"
-                  href="https://facebook.com/skyrawater"
-                  rel="noopener noreferrer"
-                  target="_blank"
-                  title="Facebook"
-                >
-                  <FacebookIcon className="h-4 w-4" />
-                </a>
-                <a
-                  aria-label="LinkedIn"
-                  className="h-10 w-10 rounded-[6px] bg-light-aquifer-canvas hover:bg-deep-aquifer hover:text-white text-deep-aquifer/75 transition-all duration-300 flex items-center justify-center border border-muted-aquifer/20 hover:border-deep-aquifer"
-                  href="https://linkedin.com/company/skyrawater"
-                  rel="noopener noreferrer"
-                  target="_blank"
-                  title="LinkedIn"
-                >
-                  <LinkedInIcon className="h-4 w-4" />
-                </a>
-                <a
-                  aria-label="X (formerly Twitter)"
-                  className="h-10 w-10 rounded-[6px] bg-light-aquifer-canvas hover:bg-deep-aquifer hover:text-white text-deep-aquifer/75 transition-all duration-300 flex items-center justify-center border border-muted-aquifer/20 hover:border-deep-aquifer"
-                  href="https://x.com/skyrawater"
-                  rel="noopener noreferrer"
-                  target="_blank"
-                  title="X"
-                >
-                  <XIcon className="h-4 w-4" />
-                </a>
+              <div className="rounded-xl bg-white/90 backdrop-blur-xl p-4 sm:p-5 border border-muted-aquifer/20 shadow-[0_8px_30px_rgba(29,41,59,0.03)] flex flex-col sm:flex-row items-center justify-between gap-4">
+                <div className="flex items-center gap-2">
+                  <span className="w-1.5 h-1.5 rounded-full bg-moss shrink-0"></span>
+                  <span className="font-mono text-xs text-deep-aquifer/70 font-medium">
+                    Follow our field studies &amp; research
+                  </span>
+                </div>
+                <div className="flex items-center gap-2.5">
+                  <a
+                    aria-label="YouTube"
+                    className="h-9 w-9 rounded-lg bg-light-aquifer-canvas hover:bg-deep-aquifer hover:text-white text-deep-aquifer/75 transition-all duration-300 flex items-center justify-center border border-muted-aquifer/20 hover:border-deep-aquifer"
+                    href="https://youtube.com/@skyrawater"
+                    rel="noopener noreferrer"
+                    target="_blank"
+                    title="YouTube"
+                  >
+                    <YouTubeIcon className="h-4 w-4" />
+                  </a>
+                  <a
+                    aria-label="Instagram"
+                    className="h-9 w-9 rounded-lg bg-light-aquifer-canvas hover:bg-deep-aquifer hover:text-white text-deep-aquifer/75 transition-all duration-300 flex items-center justify-center border border-muted-aquifer/20 hover:border-deep-aquifer"
+                    href="https://instagram.com/skyrawater"
+                    rel="noopener noreferrer"
+                    target="_blank"
+                    title="Instagram"
+                  >
+                    <InstagramIcon className="h-4 w-4" />
+                  </a>
+                  <a
+                    aria-label="Facebook"
+                    className="h-9 w-9 rounded-lg bg-light-aquifer-canvas hover:bg-deep-aquifer hover:text-white text-deep-aquifer/75 transition-all duration-300 flex items-center justify-center border border-muted-aquifer/20 hover:border-deep-aquifer"
+                    href="https://facebook.com/skyrawater"
+                    rel="noopener noreferrer"
+                    target="_blank"
+                    title="Facebook"
+                  >
+                    <FacebookIcon className="h-4 w-4" />
+                  </a>
+                  <a
+                    aria-label="LinkedIn"
+                    className="h-9 w-9 rounded-lg bg-light-aquifer-canvas hover:bg-deep-aquifer hover:text-white text-deep-aquifer/75 transition-all duration-300 flex items-center justify-center border border-muted-aquifer/20 hover:border-deep-aquifer"
+                    href="https://linkedin.com/company/skyrawater"
+                    rel="noopener noreferrer"
+                    target="_blank"
+                    title="LinkedIn"
+                  >
+                    <LinkedInIcon className="h-4 w-4" />
+                  </a>
+                  <a
+                    aria-label="X (formerly Twitter)"
+                    className="h-9 w-9 rounded-lg bg-light-aquifer-canvas hover:bg-deep-aquifer hover:text-white text-deep-aquifer/75 transition-all duration-300 flex items-center justify-center border border-muted-aquifer/20 hover:border-deep-aquifer"
+                    href="https://x.com/skyrawater"
+                    rel="noopener noreferrer"
+                    target="_blank"
+                    title="X"
+                  >
+                    <XIcon className="h-4 w-4" />
+                  </a>
+                </div>
               </div>
             </div>
 
@@ -199,7 +216,7 @@ export default function ContactPage() {
       <section className="w-full bg-linear-to-b from-[#edf6fa] via-[#e5f1f7] to-[#edf6fa] py-16 sm:py-24 border-y border-[#c8e0ee]/60">
         <div className="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            <div className="rounded-[4px] overflow-hidden bg-white/95 border border-[#bcd7e8]/60 shadow-[0_1px_3px_rgba(20,50,80,0.03)] flex flex-col">
+            <div className="rounded-xl overflow-hidden bg-white/95 border border-[#bcd7e8]/60 shadow-[0_1px_3px_rgba(20,50,80,0.03)] flex flex-col">
               <div className="relative h-48 w-full overflow-hidden">
                 <img
                   alt="Passive Hydrology"
@@ -217,7 +234,7 @@ export default function ContactPage() {
               </div>
             </div>
 
-            <div className="rounded-[4px] overflow-hidden bg-white/95 border border-[#bcd7e8]/60 shadow-[0_1px_3px_rgba(20,50,80,0.03)] flex flex-col">
+            <div className="rounded-xl overflow-hidden bg-white/95 border border-[#bcd7e8]/60 shadow-[0_1px_3px_rgba(20,50,80,0.03)] flex flex-col">
               <div className="relative h-48 w-full overflow-hidden">
                 <img
                   alt="Subterranean Infiltration"
@@ -235,7 +252,7 @@ export default function ContactPage() {
               </div>
             </div>
 
-            <div className="rounded-[4px] overflow-hidden bg-white/95 border border-[#bcd7e8]/60 shadow-[0_1px_3px_rgba(20,50,80,0.03)] flex flex-col">
+            <div className="rounded-xl overflow-hidden bg-white/95 border border-[#bcd7e8]/60 shadow-[0_1px_3px_rgba(20,50,80,0.03)] flex flex-col">
               <div className="relative h-48 w-full overflow-hidden">
                 <img
                   alt="Kochi Research Hub"
