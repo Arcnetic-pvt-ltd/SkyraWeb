@@ -7,15 +7,15 @@ import { DropletIcon } from "@/components/icons/metric-icons";
 import { WHATSAPP_HREF } from "@/lib/nav";
 
 const HIGHLIGHTS = [
-  { label: "100% On-Site Capture", Icon: CheckCircleIcon, tone: "text-brand-green" },
-  { label: "Aquifer Rejuvenation", Icon: DropletIcon, tone: "text-brand-teal" },
-  { label: "Zero Structural Risk", Icon: MedalIcon, tone: "text-emerald-400" },
+  { label: "100% on-site capture", Icon: CheckCircleIcon, tone: "text-moss" },
+  { label: "Aquifer rejuvenation", Icon: DropletIcon, tone: "text-muted-aquifer" },
+  { label: "Zero structural risk", Icon: MedalIcon, tone: "text-forest-slate" },
 ] as const;
 
 const METRICS = [
-  { Icon: TruckIcon, label: "Annual Impact", value: "1.2M+ L", tone: "text-brand-green", description: "Pure rainwater captured and redirected on average per commercial installation." },
-  { Icon: TruckIcon, label: "Cost Elimination", value: "Zero", tone: "text-brand-teal", description: "Tanker reliance during peak summer months across multi-tier residential setups." },
-  { Icon: MedalIcon, label: "Engineering Quality", value: "100%", tone: "text-sky-600", description: "Turnkey design, hydro-geological survey, civil installation, and sensor deployment." },
+  { Icon: TruckIcon, label: "Annual impact", value: "1.2M+ L", tone: "text-moss", description: "Pure rainwater captured and redirected on average per commercial installation." },
+  { Icon: TruckIcon, label: "Cost elimination", value: "Zero", tone: "text-muted-aquifer", description: "Tanker reliance during peak summer months across multi-tier residential setups." },
+  { Icon: MedalIcon, label: "Engineering quality", value: "100%", tone: "text-forest-slate", description: "Turnkey design, hydro-geological survey, civil installation, and sensor deployment." },
 ] as const;
 
 /**
@@ -27,42 +27,50 @@ const METRICS = [
  */
 export function ServicesHero() {
   return (
-    <section className="relative overflow-hidden bg-ink pb-16 pt-28 lg:pb-24 lg:pt-32">
-      <div aria-hidden="true" className="pointer-events-none absolute -top-40 left-1/2 h-96 w-[700px] -translate-x-1/2 rounded-full bg-brand-teal/10 blur-[130px]" />
-      <div aria-hidden="true" className="pointer-events-none absolute right-0 top-1/3 h-80 w-80 rounded-full bg-brand-green/10 blur-[110px]" />
+    <section className="relative overflow-hidden bg-linear-to-b from-[#0c1a2c] via-[#10233b] to-[#162c47] pt-28 sm:pt-32 pb-16 sm:pb-24">
+      {/* Subtle Rainfall Overlay Element */}
+      <div aria-hidden="true" className="absolute inset-0 z-[1] pointer-events-none overflow-hidden select-none opacity-25">
+        <svg className="w-full h-full" xmlns="http://www.w3.org/2000/svg">
+          <defs>
+            <pattern id="servicesHeroRainPattern" width="120" height="120" patternUnits="userSpaceOnUse">
+              <line x1="30" y1="0" x2="20" y2="35" stroke="#748D8C" strokeWidth="1" strokeOpacity="0.4" strokeDasharray="12 18" />
+              <line x1="80" y1="40" x2="70" y2="75" stroke="#7D9D3D" strokeWidth="1" strokeOpacity="0.3" strokeDasharray="10 20" />
+              <line x1="120" y1="20" x2="110" y2="55" stroke="#86b5db" strokeWidth="0.8" strokeOpacity="0.35" strokeDasharray="8 16" />
+            </pattern>
+          </defs>
+          <rect width="100%" height="100%" fill="url(#servicesHeroRainPattern)" className="animate-subtle-rain" />
+        </svg>
+      </div>
 
       <Container className="relative z-10">
-        <div className="mx-auto flex max-w-4xl flex-col items-center text-center">
-          <div className="mb-6 inline-flex items-center gap-2 rounded-full bg-ink-elevated px-4 py-2 text-brand-teal">
-            <span aria-hidden="true" className="size-2 animate-pulse rounded-full bg-brand-teal" />
-            <span className="text-[11px] font-bold uppercase tracking-widest">Integrated Water Solutions</span>
+        <div className="flex max-w-4xl flex-col items-start text-left">
+          <div className="mb-6 inline-flex items-center gap-2 rounded-[4px] bg-[#132742] border border-[#22446d] px-3 py-1.5 text-[#86b5db]">
+            <span aria-hidden="true" className="size-2 rounded-full bg-moss" />
+            <span className="font-mono text-xs font-medium">Integrated water solutions</span>
           </div>
 
-          <h1 className="mb-4 text-3xl font-bold tracking-tight text-white sm:text-4xl lg:text-[56px] lg:leading-[64px]">
-            Integrated Water Solutions for{" "}
-            <span className="bg-linear-to-r from-brand-teal via-teal-400 to-brand-green bg-clip-text text-transparent">
-              Complete Resource Independence
-            </span>
+          <h1 className="mb-4 text-[38px] sm:text-5xl lg:text-[56px] font-bold font-headline-hero tracking-tight text-white leading-[1.15]">
+            Integrated water solutions for complete resource independence
           </h1>
 
-          <p className="mb-8 max-w-2xl text-lg leading-relaxed text-slate-300">
+          <p className="mb-8 max-w-2xl text-base font-normal font-body-primary leading-relaxed text-slate-300">
             {"Secure your property's future with end-to-end water management. We transform seasonal rainfall into a permanent, independent resource, reducing dependency on external supply and protecting your infrastructure."}
           </p>
 
-          <div className="mb-10 flex flex-wrap items-center justify-center gap-2">
+          <div className="mb-10 flex flex-wrap items-center justify-start gap-2">
             {HIGHLIGHTS.map(({ label, Icon, tone }) => (
-              <div key={label} className="inline-flex items-center gap-2 rounded-full bg-ink-elevated px-4 py-2 text-sm font-semibold text-white shadow-sm">
+              <div key={label} className="inline-flex items-center gap-2 rounded-[4px] bg-[#132742] border border-[#22446d]/80 px-3 py-1.5 font-mono text-xs font-medium text-white">
                 <Icon className={`size-4.5 ${tone}`} />
                 {label}
               </div>
             ))}
           </div>
 
-          <div className="mb-16 flex w-full flex-col items-center gap-4 sm:w-auto sm:flex-row">
+          <div className="mb-16 flex w-full flex-col items-start gap-4 sm:w-auto sm:flex-row">
             <CtaButton href="#contact" variant="primary" icon={<ArrowRightIcon className="size-4" />} className="w-full flex-row-reverse sm:w-auto">
-              Request Technical Audit
+              Request technical audit
             </CtaButton>
-            <CtaButton href={WHATSAPP_HREF} external variant="dark" icon={<WhatsAppIcon className="size-4 text-brand-green" />} className="w-full sm:w-auto">
+            <CtaButton href={WHATSAPP_HREF} external variant="dark" icon={<WhatsAppIcon className="size-4 text-moss" />} className="w-full sm:w-auto">
               Chat on WhatsApp
             </CtaButton>
           </div>
@@ -70,13 +78,13 @@ export function ServicesHero() {
 
         <div className="grid grid-cols-1 gap-4 md:grid-cols-3 lg:gap-6">
           {METRICS.map(({ Icon, label, value, tone, description }) => (
-            <div key={label} className="flex flex-col gap-2 rounded-2xl bg-ink-elevated/80 p-6 shadow-md backdrop-blur-md">
+            <div key={label} className="flex flex-col gap-2 rounded-[4px] bg-[#132742]/90 border border-[#22446d]/80 p-6">
               <div className={`flex items-center gap-2 ${tone}`}>
                 <Icon className="size-5" />
-                <span className="text-xs font-bold uppercase tracking-widest">{label}</span>
+                <span className="font-mono text-xs font-medium text-[#86b5db]">{label}</span>
               </div>
-              <div className="text-4xl font-extrabold tracking-tight text-white">{value}</div>
-              <p className="text-sm text-slate-400">{description}</p>
+              <div className="font-metric-mono-lg text-4xl font-bold tracking-tight text-white">{value}</div>
+              <p className="text-base font-normal font-body-primary text-slate-300 leading-relaxed">{description}</p>
             </div>
           ))}
         </div>

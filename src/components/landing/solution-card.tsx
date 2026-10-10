@@ -13,7 +13,7 @@ export function SolutionCard({
   description: string;
 }) {
   return (
-    <div className="group flex flex-col overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-sm transition-shadow duration-300 hover:shadow-xl">
+    <div className="group flex flex-col overflow-hidden rounded-[4px] border border-muted-aquifer/20 bg-white transition-all duration-300">
       <div className="relative h-48 overflow-hidden">
         <Image
           src={image}
@@ -22,19 +22,19 @@ export function SolutionCard({
           sizes="(min-width: 1024px) 33vw, (min-width: 768px) 50vw, 100vw"
           className="object-cover transition-transform duration-500 group-hover:scale-105"
         />
-        <div className="absolute inset-0 bg-linear-to-t from-black/60 to-transparent" />
-        <span className="absolute right-3 top-3 rounded-full bg-white/90 px-2.5 py-1 text-[11px] font-bold text-ink backdrop-blur-sm">
+        <div className="absolute inset-0 bg-gradient-to-t from-deep-aquifer/60 to-transparent" />
+        <span className="absolute right-3 top-3 rounded-[4px] bg-white px-2.5 py-1 font-mono text-xs font-medium text-deep-aquifer border border-muted-aquifer/20">
           {badge}
         </span>
       </div>
       <div className="flex flex-1 flex-col justify-between p-6">
         <div>
-          <h4 className="text-lg font-bold text-slate-900 transition-colors group-hover:text-brand-teal">
+          <h3 className="font-headline-h3 text-[24px] font-medium text-deep-aquifer transition-colors group-hover:text-forest-slate leading-[1.3]">
             {title}
-          </h4>
-          <p className="mt-2 text-sm leading-relaxed text-slate-600">{description}</p>
+          </h3>
+          <p className="mt-2 text-base font-normal font-body-primary leading-relaxed text-deep-aquifer">{description}</p>
         </div>
-        <div className="mt-4 flex items-center border-t border-slate-100 pt-4 text-xs font-bold text-brand-teal transition-colors group-hover:text-brand-green">
+        <div className="mt-4 flex items-center border-t border-muted-aquifer/15 pt-4 font-button-text text-sm font-semibold text-deep-aquifer transition-colors group-hover:text-moss">
           Learn more →
         </div>
       </div>

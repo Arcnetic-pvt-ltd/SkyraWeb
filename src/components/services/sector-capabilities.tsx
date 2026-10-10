@@ -1,69 +1,79 @@
-import { Container } from "@/components/ui/container";
+"use client";
+
 import { SectorCard } from "@/components/services/sector-card";
 import { HomeIcon, BuildingIcon, LeafIcon } from "@/components/icons/service-icons";
 
 const SECTORS = [
   {
-    image: "/images/sector-residential.jpg",
-    icon: <HomeIcon className="size-5" />,
-    tone: "text-brand-green",
+    image: "/images/sector-residential-v2.jpg",
+    icon: <HomeIcon className="size-3.5" />,
+    badgeTone: "bg-white border-muted-aquifer/30 text-muted-aquifer",
     eyebrow: "Residential",
-    title: "Villas & Communities",
-    description: "Compact automated rooftop multi-stage filtration, subterranean cisterns, and full potable water integration directly into home plumbing.",
-    linkLabel: "Potable Rainwater Ready",
+    title: "Villas & gated communities",
+    description: "Compact automated rooftop multi-stage filtration, subterranean cisterns, and full potable water integration directly into domestic plumbing.",
+    linkLabel: "Potable rainwater ready",
+    targetHref: "/contact?sector=residential",
   },
   {
-    image: "/images/sector-commercial.jpg",
-    icon: <BuildingIcon className="size-5" />,
-    tone: "text-brand-teal",
+    image: "/images/sector-commercial-v2.jpg",
+    icon: <BuildingIcon className="size-3.5" />,
+    badgeTone: "bg-white border-moss/30 text-moss",
     eyebrow: "Commercial",
-    title: "IT & Business Parks",
+    title: "IT parks & corporate hubs",
     description: "High-volume underground retention vaults, dual-circuit greywater networks, cooling tower make-up water recycling, and LEED water credits.",
-    linkLabel: "LEED Point Optimization",
+    linkLabel: "LEED point optimization",
+    targetHref: "/contact?sector=commercial",
   },
   {
-    image: "/images/sector-hospitality.jpg",
-    icon: <BuildingIcon className="size-5" />,
-    tone: "text-sky-600",
-    eyebrow: "Hospitality & Industry",
-    title: "Resorts & Facilities",
+    image: "/images/sector-hospitality-v2.jpg",
+    icon: <BuildingIcon className="size-3.5" />,
+    badgeTone: "bg-white border-muted-aquifer/30 text-muted-aquifer",
+    eyebrow: "Hospitality",
+    title: "Resorts & eco-hotels",
     description: "Peak storm runoff interception, oil-grit separators, continuous groundwater injection, and non-stop operational water security for guests.",
-    linkLabel: "Peak Resilience",
+    linkLabel: "Peak resilience",
+    targetHref: "/contact?sector=hospitality",
   },
   {
-    image: "/images/sector-agriculture.jpg",
-    icon: <LeafIcon className="size-5" />,
-    tone: "text-emerald-400",
+    image: "/images/sector-agriculture-v2.jpg",
+    icon: <LeafIcon className="size-3.5" />,
+    badgeTone: "bg-white border-moss/30 text-moss",
     eyebrow: "Agriculture",
-    title: "Plantations & Farms",
+    title: "Plantations & Miyawaki forests",
     description: "Contour swales, engineered retention ponds, and deep aquifer recharge shafts that stabilize open borewells and guarantee drought-resilient irrigation.",
-    linkLabel: "Aquifer Borewell Security",
+    linkLabel: "Aquifer borewell security",
+    targetHref: "/contact?sector=agriculture",
   },
 ] as const;
 
-/** Sector Capabilities & Property Types. */
+/** Sector Capabilities & Built Environments Section. Aligned with modern Skyra design principles. */
 export function SectorCapabilities() {
   return (
-    <section className="bg-ink py-16 lg:py-24">
-      <Container>
-        <div className="mb-12 max-w-2xl">
-          <span className="text-xs font-bold uppercase tracking-widest text-brand-teal">Tailored Engineering</span>
-          <h2 className="mt-3 text-2xl font-bold tracking-tight text-white sm:text-3xl lg:text-4xl">
-            Sector Capabilities &amp; Built Environments
+    <section className="relative w-full bg-light-aquifer-canvas py-16 sm:py-24 border-t border-muted-aquifer/15" id="sectors">
+      <div className="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col gap-12 sm:gap-16 relative z-10">
+        {/* Header */}
+        <div className="flex flex-col gap-3 max-w-2xl">
+          <div className="inline-flex items-center gap-2.5">
+            <span className="inline-block w-2 h-2 rounded-full bg-moss"></span>
+            <span className="font-mono text-xs font-medium text-moss">
+              Tailored engineering
+            </span>
+          </div>
+          <h2 className="font-headline-h2 text-headline-h2-mobile sm:text-headline-h2 text-deep-aquifer tracking-tight leading-tight">
+            Sector capabilities &amp; built environments
           </h2>
-          <p className="mt-3 text-lg leading-relaxed text-slate-300">
-            From private high-end residences to hyper-scale commercial hubs,
-            SkyRa customizes the hydraulic profile to match the exact physical
-            and environmental demands of each sector.
+          <p className="font-body-primary text-base font-normal text-deep-aquifer leading-relaxed">
+            From private high-end residences to hyper-scale commercial hubs, Skyra customizes the hydraulic profile to match the exact physical and environmental demands of each sector.
           </p>
         </div>
 
-        <div className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-4">
+        {/* Grid */}
+        <div className="grid grid-cols-1 items-stretch gap-8 sm:grid-cols-2 lg:grid-cols-4">
           {SECTORS.map((s) => (
             <SectorCard key={s.title} {...s} />
           ))}
         </div>
-      </Container>
+      </div>
     </section>
   );
 }
