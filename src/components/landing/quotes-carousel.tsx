@@ -50,7 +50,7 @@ export function QuotesCarousel() {
   }, []);
 
   return (
-    <section className="w-full bg-forest-slate text-light-aquifer-canvas py-20 sm:py-24 lg:py-28 px-6 sm:px-10 lg:px-16 relative overflow-hidden min-h-[543.5px] lg:min-h-[543.5px] flex items-center">
+    <section className="w-full bg-forest-slate text-light-aquifer-canvas py-16 sm:py-24 px-4 sm:px-6 lg:px-8 relative overflow-hidden min-h-[543.5px] flex items-center">
       {/* Background Images for Quotes (Synchronized with text transition) */}
       {QUOTES.map((item, idx) => {
         if (!item.image) return null;

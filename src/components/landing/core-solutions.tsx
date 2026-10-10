@@ -65,10 +65,10 @@ const SOLUTIONS = [
 /** Core Solutions Ecosystem. Source: Figma node 1:141. */
 export function CoreSolutions() {
   return (
-    <section className="bg-slate-50 py-24" id="solutions">
+    <section className="bg-slate-50 py-16 sm:py-24" id="solutions">
       <Container>
         {/* Section Header */}
-        <div className="mb-16 max-w-3xl space-y-4">
+        <div className="mb-16 max-w-2xl space-y-4">
           <Eyebrow color="teal">The Skyra solution</Eyebrow>
           <h2 className="font-headline-h2 text-headline-h2-mobile sm:text-headline-h2 text-deep-aquifer tracking-tight leading-[1.2]">
             Integrated water solutions for a sustainable future.

@@ -39,7 +39,7 @@ const PILLARS = [
 /** What Drives Us — three guiding-principle pillars. */
 export function WhatDrivesUs() {
   return (
-    <section className="bg-ink-elevated py-16 lg:py-24">
+    <section className="bg-ink-elevated py-16 sm:py-24">
       <Container className="flex flex-col items-center">
         <div className="max-w-2xl text-center">
           <Eyebrow color="green" center>Core guiding principles</Eyebrow>

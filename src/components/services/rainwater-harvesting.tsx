@@ -49,7 +49,7 @@ const WORKFLOW_STEPS = [
 /** Service Deep Dive 1: Rainwater Harvesting & Groundwater Recharge. */
 export function RainwaterHarvesting() {
   return (
-    <section className="relative border-y border-slate-200 bg-white py-16 lg:py-24">
+    <section className="relative border-y border-slate-200 bg-white py-16 sm:py-24">
       <Container>
         <div className="mb-12 flex flex-col justify-between gap-6 lg:flex-row lg:items-end">
           <div className="max-w-2xl">

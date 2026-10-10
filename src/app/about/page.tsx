@@ -48,9 +48,9 @@ export default function AboutPage() {
   return (
     <div className="flex flex-col w-full overflow-hidden relative">
       {/* SECTION 1: HERO */}
-      <section className="relative z-10 w-full pt-28 pb-24 sm:pb-32">
-        <div className="max-w-5xl mx-auto px-6 sm:px-8">
-          <div className="flex flex-col gap-8 max-w-3xl">
+      <section className="relative z-10 w-full pt-28 pb-16 sm:pt-32 sm:pb-24 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto">
+          <div className="flex flex-col gap-6 max-w-3xl">
             <div className="inline-flex items-center gap-2.5">
               <span className="inline-block w-2 h-2 rounded-full bg-moss animate-ping"></span>
               <span className="font-mono text-xs text-moss font-medium">
@@ -71,9 +71,9 @@ export default function AboutPage() {
       </section>
 
       {/* SECTION 2: PRODUCT CONTEXT & HYDROLOGICAL MONOGRAPH */}
-      <section className="relative z-10 w-full pb-28 space-y-28 sm:space-y-36">
+      <section className="relative z-10 w-full py-16 sm:py-24 px-4 sm:px-6 lg:px-8 space-y-16 sm:space-y-24 border-t border-muted-aquifer/15">
         {/* Beat 1: The Scarcity Myth */}
-        <div className="max-w-5xl mx-auto px-6 sm:px-8">
+        <div className="max-w-7xl mx-auto">
           <div className="grid grid-cols-1 md:grid-cols-12 gap-12 md:gap-16 items-start">
             <div className="md:col-span-7 space-y-6">
               <span className="font-mono text-xs text-moss font-medium block">
@@ -160,7 +160,7 @@ export default function AboutPage() {
         </div>
 
         {/* Beat 2: Passive Gravity Infiltration */}
-        <div className="max-w-5xl mx-auto px-6 sm:px-8">
+        <div className="max-w-7xl mx-auto">
           <div className="grid grid-cols-1 md:grid-cols-12 gap-12 md:gap-16 items-start">
             <div className="md:col-span-5 order-2 md:order-1 pt-2">
               <div className="p-8 rounded-2xl bg-white/80 backdrop-blur-md border border-muted-aquifer/15 shadow-sm flex flex-col gap-6">
@@ -254,7 +254,7 @@ export default function AboutPage() {
         </div>
 
         {/* Beat 3: Proving Grounds & Impact */}
-        <div className="max-w-5xl mx-auto px-6 sm:px-8">
+        <div className="max-w-7xl mx-auto">
           <div className="space-y-12">
             <div className="space-y-4 max-w-3xl">
               <span className="font-mono text-xs text-moss font-medium block">
@@ -326,8 +326,8 @@ export default function AboutPage() {
       </section>
 
       {/* SECTION 3: FOUNDERS & LEADERSHIP */}
-      <section className="relative z-10 w-full py-24 sm:py-32 bg-white border-t border-muted-aquifer/15">
-        <div className="max-w-6xl mx-auto px-6 lg:px-8">
+      <section className="relative z-10 w-full py-16 sm:py-24 px-4 sm:px-6 lg:px-8 bg-white border-t border-muted-aquifer/15">
+        <div className="max-w-7xl mx-auto">
           <div className="max-w-3xl mb-16">
             <span className="font-mono text-xs text-moss font-medium block mb-3">
               Leadership &amp; engineering desk
@@ -385,8 +385,8 @@ export default function AboutPage() {
       </section>
 
       {/* SECTION 4: CLOSING MANDATE */}
-      <section className="relative z-10 w-full bg-light-aquifer-canvas text-deep-aquifer py-24 sm:py-32 border-t border-muted-aquifer/15">
-        <div className="max-w-4xl mx-auto px-6 sm:px-8 text-left flex flex-col items-start gap-8">
+      <section className="relative z-10 w-full bg-light-aquifer-canvas text-deep-aquifer py-16 sm:py-24 px-4 sm:px-6 lg:px-8 border-t border-muted-aquifer/15">
+        <div className="max-w-7xl mx-auto text-left flex flex-col items-start gap-6 sm:gap-8">
           <span className="font-mono text-xs text-moss font-medium">
             The mandate
           </span>

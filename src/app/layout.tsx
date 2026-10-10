@@ -40,10 +40,10 @@ export default function RootLayout({
           rel="stylesheet"
         />
       </head>
-      <body className="min-h-full flex flex-col bg-light-aquifer-canvas font-sans text-deep-aquifer selection:bg-moss/20 selection:text-deep-aquifer text-base leading-relaxed text-left">
+      <body className="min-h-full flex flex-col bg-light-aquifer-canvas font-sans text-deep-aquifer selection:bg-moss/20 selection:text-deep-aquifer text-base leading-relaxed text-left overflow-x-hidden">
         <SmoothScrollProvider>
           <SiteHeader />
-          <main className="flex-1 w-full bg-light-aquifer-canvas min-h-screen">
+          <main className="flex-1 w-full bg-light-aquifer-canvas min-h-screen overflow-x-hidden">
             {children}
           </main>
           <SiteFooter />

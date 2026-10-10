@@ -87,7 +87,7 @@ function RetentionChart() {
 /** Impact Metrics Section (Animated Interactive Dashboard Module). Revamped for current Skyra UI. */
 export function ImpactMetrics() {
   return (
-    <section className="relative w-full bg-light-aquifer-canvas py-24 sm:py-32 px-6 sm:px-10 lg:px-16 overflow-hidden border-t border-muted-aquifer/15" id="impact">
+    <section className="relative w-full bg-light-aquifer-canvas py-16 sm:py-24 px-4 sm:px-6 lg:px-8 overflow-hidden border-t border-muted-aquifer/15" id="impact">
       {/* Ambient background atmosphere blobs */}
       <div aria-hidden="true" className="absolute -top-32 left-10 w-[600px] h-[600px] rounded-full bg-[#cde8e6]/70 blur-[130px] pointer-events-none" />
       <div aria-hidden="true" className="absolute -bottom-32 right-10 w-[600px] h-[600px] rounded-full bg-[#ccebc8]/60 blur-[130px] pointer-events-none" />

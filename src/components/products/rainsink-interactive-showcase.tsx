@@ -45,14 +45,14 @@ export function RainsinkInteractiveShowcase() {
   return (
     <div className="flex flex-col gap-12">
       {/* Section Header */}
-      <div className="flex flex-col gap-3 text-center max-w-3xl mx-auto">
+      <div className="flex flex-col gap-3 text-left max-w-2xl">
         <span className="font-mono text-xs text-moss font-medium">
           Strategic campus impact &amp; value delivery
         </span>
         <h2 className="font-headline-h2 text-[28px] sm:text-[36px] font-semibold text-deep-aquifer tracking-tight">
           How Skyra Rainsink transforms your campus
         </h2>
-        <p className="font-body-primary text-base font-normal leading-relaxed text-deep-aquifer/85 max-w-2xl mx-auto">
+        <p className="font-body-primary text-base font-normal leading-relaxed text-deep-aquifer max-w-2xl">
           Dual-action hydrological engineering designed for enterprise infrastructure — providing immediate stormwater flood resilience alongside long-term groundwater ESG stewardship.
         </p>
       </div>

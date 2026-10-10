@@ -16,7 +16,7 @@ export default function Home() {
       </div>
 
       {/* SECTION 1: HERO */}
-      <section className="relative z-10 min-h-screen flex flex-col justify-between px-6 sm:px-10 lg:px-16 pt-24 sm:pt-28 pb-8 max-w-7xl mx-auto w-full">
+      <section className="relative z-10 min-h-screen flex flex-col justify-between px-4 sm:px-6 lg:px-8 pt-28 sm:pt-32 pb-8 max-w-7xl mx-auto w-full">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center pt-1 sm:pt-2">
           {/* Left Column: Headline, Copy & CTAs */}
           <div className="lg:col-span-6 flex flex-col">
@@ -93,7 +93,7 @@ export default function Home() {
 
       {/* SECTION 2: THE CORE PROBLEM */}
       <section
-        className="relative w-full bg-deep-aquifer text-light-aquifer-canvas py-24 sm:py-32 px-6 sm:px-10 lg:px-16"
+        className="relative w-full bg-deep-aquifer text-light-aquifer-canvas py-16 sm:py-24 px-4 sm:px-6 lg:px-8"
         id="problem"
       >
         <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-20 items-center">
@@ -330,7 +330,7 @@ export default function Home() {
       </section>
 
       {/* SECTION 3: THE SKYRA OPPORTUNITY */}
-      <section className="relative w-full py-24 sm:py-32 px-6 sm:px-10 lg:px-16 overflow-hidden border-t border-muted-aquifer/15">
+      <section className="relative w-full py-16 sm:py-24 px-4 sm:px-6 lg:px-8 overflow-hidden border-t border-muted-aquifer/15">
         {/* Ambient background atmosphere blobs matching Sector Capabilities */}
         <div aria-hidden="true" className="absolute -top-32 left-10 w-[600px] h-[600px] rounded-full bg-[#cde8e6]/50 blur-[130px] pointer-events-none" />
         <div aria-hidden="true" className="absolute -bottom-32 right-10 w-[600px] h-[600px] rounded-full bg-[#ccebc8]/40 blur-[130px] pointer-events-none" />
@@ -427,43 +427,45 @@ export default function Home() {
       <ImpactMetrics />
 
       {/* SECTION 5: CLOSING CTA */}
-      <section className="py-28 sm:py-40 px-6 sm:px-10 lg:px-16 max-w-5xl mx-auto w-full flex flex-col items-start relative">
+      <section className="relative w-full py-16 sm:py-24 px-4 sm:px-6 lg:px-8 border-t border-muted-aquifer/15 overflow-hidden">
         <div className="absolute inset-0 flex items-center justify-center -z-10 pointer-events-none opacity-30">
           <div className="w-[500px] h-[500px] rounded-full border-none bg-surface-variant/40 blur-3xl"></div>
         </div>
 
-        <span className="font-mono text-body-sm text-secondary font-medium tracking-normal mb-6">
-          Begin the recharge cycle
-        </span>
-
-        <h2 className="font-headline-h2 text-headline-h2-mobile sm:text-headline-h2 text-deep-aquifer max-w-3xl leading-tight font-semibold">
-          Every roof, every courtyard, every open plot is a chance to catch the rain. Let’s find yours.
-        </h2>
-
-        <p className="font-body-large text-body-large text-deep-aquifer max-w-xl mt-6 leading-relaxed text-left">
-          Talk with our civil hydrologists to assess your parcel’s percolation potential and aquifer recharge capability.
-        </p>
-
-        <div className="mt-10 flex flex-col sm:flex-row items-center gap-5 w-full sm:w-auto">
-          <Link
-            href="/contact"
-            className="w-full sm:w-auto inline-flex items-center justify-center bg-deep-aquifer hover:bg-forest-slate text-light-aquifer-canvas font-button-text text-button-text px-9 py-4 rounded-full transition-all duration-300 shadow-sm hover:shadow-md"
-          >
-            Start a conversation
-          </Link>
-          <Link
-            href="/services"
-            className="w-full sm:w-auto inline-flex items-center justify-center text-deep-aquifer hover:text-forest-slate font-button-text text-button-text px-8 py-4 rounded-full hover:bg-surface-container/50 transition-all duration-200"
-          >
-            Explore solutions
-          </Link>
-        </div>
-
-        <div className="mt-16 pt-8 flex items-center gap-3 text-secondary/60 text-sm">
-          <span className="w-1.5 h-1.5 rounded-full bg-moss"></span>
-          <span>
-            Engineered for commercial campuses, industrial corridors, and residential communities.
+        <div className="max-w-7xl mx-auto w-full flex flex-col items-start relative z-10">
+          <span className="font-mono text-xs text-secondary font-medium tracking-wide mb-6">
+            Begin the recharge cycle
           </span>
+
+          <h2 className="font-headline-h2 text-headline-h2-mobile sm:text-headline-h2 text-deep-aquifer max-w-3xl leading-tight font-semibold">
+            Every roof, every courtyard, every open plot is a chance to catch the rain. Let’s find yours.
+          </h2>
+
+          <p className="font-body-large text-body-large text-deep-aquifer max-w-2xl mt-6 leading-relaxed text-left">
+            Talk with our civil hydrologists to assess your parcel’s percolation potential and aquifer recharge capability.
+          </p>
+
+          <div className="mt-10 flex flex-col sm:flex-row items-center gap-4 w-full sm:w-auto">
+            <Link
+              href="/contact"
+              className="w-full sm:w-auto inline-flex items-center justify-center bg-deep-aquifer hover:bg-forest-slate text-light-aquifer-canvas font-button-text text-button-text px-8 py-3.5 rounded-full transition-all duration-300 shadow-sm hover:shadow-md"
+            >
+              Start a conversation
+            </Link>
+            <Link
+              href="/services"
+              className="w-full sm:w-auto inline-flex items-center justify-center text-deep-aquifer hover:text-forest-slate font-button-text text-button-text px-8 py-3.5 rounded-full hover:bg-surface-container/50 transition-all duration-200"
+            >
+              Explore solutions
+            </Link>
+          </div>
+
+          <div className="mt-16 pt-8 flex items-center gap-3 text-secondary/60 text-sm">
+            <span className="w-1.5 h-1.5 rounded-full bg-moss"></span>
+            <span>
+              Engineered for commercial campuses, industrial corridors, and residential communities.
+            </span>
+          </div>
         </div>
       </section>
     </div>

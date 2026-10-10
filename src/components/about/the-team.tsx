@@ -56,7 +56,7 @@ const TEAM = [
 
 export function TheTeam() {
   return (
-    <section className="bg-ink py-16 lg:py-24">
+    <section className="bg-ink py-16 sm:py-24">
       <Container>
         <div className="max-w-3xl">
           <span className="font-mono text-xs font-medium text-brand-teal">Leadership &amp; expertise</span>

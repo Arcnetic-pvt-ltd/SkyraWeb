@@ -20,7 +20,7 @@ const FLOW_STEPS = [
  */
 export function OpportunityBanner() {
   return (
-    <section className="relative overflow-hidden border-y border-white/10 bg-ink py-20">
+    <section className="relative overflow-hidden border-y border-white/10 bg-ink py-16 sm:py-24">
       <div className="absolute inset-0 z-0 opacity-25">
         <Image
           src="/images/dew-drops-leaves.jpg"
@@ -31,7 +31,7 @@ export function OpportunityBanner() {
         />
       </div>
 
-      <div className="relative z-10 mx-auto max-w-5xl space-y-8 px-5 text-center sm:px-6 lg:px-8">
+      <div className="relative z-10 mx-auto max-w-7xl space-y-8 px-4 sm:px-6 lg:px-8 text-center">
         <Eyebrow color="green" dash="both" center>
           The opportunity
         </Eyebrow>

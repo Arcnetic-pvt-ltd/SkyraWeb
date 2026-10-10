@@ -13,13 +13,13 @@ export default function ServicesPage() {
   return (
     <div className="flex flex-col w-full">
       {/* Top Section: Editorial Header */}
-      <section className="w-full max-w-5xl mx-auto px-6 lg:px-8 pt-28 pb-16 md:pt-32 md:pb-24">
-        <div className="max-w-3xl flex flex-col gap-6">
+      <section className="w-full pt-28 pb-16 sm:pt-32 sm:pb-24 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto flex flex-col gap-6">
           <span className="inline-flex items-center gap-2 font-mono text-xs tracking-wide text-moss font-medium">
             <span className="w-2 h-2 rounded-full bg-moss animate-pulse"></span>
             Systems &amp; architecture
           </span>
-          <h1 className="font-headline-hero text-headline-hero-mobile sm:text-headline-hero text-deep-aquifer tracking-tight text-balance">
+          <h1 className="font-headline-hero text-headline-hero-mobile sm:text-headline-hero text-deep-aquifer tracking-tight text-balance max-w-3xl">
             Core water management solutions
           </h1>
           <p className="font-body-primary text-base font-normal text-deep-aquifer leading-relaxed max-w-2xl text-balance">
@@ -29,8 +29,8 @@ export default function ServicesPage() {
       </section>
 
       {/* Service 1: Site-Specific Rainwater Harvesting */}
-      <section className="w-full bg-light-aquifer-canvas py-20 md:py-28 transition-all duration-700 border-t border-muted-aquifer/15">
-        <div className="max-w-5xl mx-auto px-6 lg:px-8">
+      <section className="w-full bg-light-aquifer-canvas py-16 sm:py-24 px-4 sm:px-6 lg:px-8 transition-all duration-700 border-t border-muted-aquifer/15">
+        <div className="max-w-7xl mx-auto">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
             {/* Content Column */}
             <div className="lg:col-span-6 flex flex-col gap-6">
@@ -126,8 +126,8 @@ export default function ServicesPage() {
       </section>
 
       {/* Service 2: Stormwater Management Solutions */}
-      <section className="w-full bg-surface-container-low py-20 md:py-28 border-t border-muted-aquifer/15">
-        <div className="max-w-5xl mx-auto px-6 lg:px-8">
+      <section className="w-full bg-surface-container-low py-16 sm:py-24 px-4 sm:px-6 lg:px-8 border-t border-muted-aquifer/15">
+        <div className="max-w-7xl mx-auto">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
             {/* SVG Graphic */}
             <div className="lg:col-span-6 order-last lg:order-first">
@@ -211,8 +211,8 @@ export default function ServicesPage() {
       </section>
 
       {/* Service 3: Afforestation & Miyawaki Forests */}
-      <section className="w-full bg-forest-slate text-light-aquifer-canvas py-20 md:py-28">
-        <div className="max-w-5xl mx-auto px-6 lg:px-8">
+      <section className="w-full bg-forest-slate text-light-aquifer-canvas py-16 sm:py-24 px-4 sm:px-6 lg:px-8 border-t border-muted-aquifer/15">
+        <div className="max-w-7xl mx-auto">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
             {/* Content Column */}
             <div className="lg:col-span-6 flex flex-col gap-6">
@@ -308,8 +308,8 @@ export default function ServicesPage() {
       <HarvestingCalculator />
 
       {/* Section 4: Product Integrations Catalog */}
-      <section className="w-full bg-light-aquifer-canvas py-20 md:py-28">
-        <div className="max-w-6xl mx-auto px-6 lg:px-8">
+      <section className="w-full bg-light-aquifer-canvas py-16 sm:py-24 px-4 sm:px-6 lg:px-8 border-t border-muted-aquifer/15">
+        <div className="max-w-7xl mx-auto">
           <div className="max-w-2xl mb-10 sm:mb-14">
             <span className="font-mono text-xs text-moss font-medium tracking-wide block mb-3">
               Hardware &amp; infrastructure
@@ -327,27 +327,27 @@ export default function ServicesPage() {
       </section>
 
       {/* CTA Section */}
-      <section className="w-full py-20 md:py-28 bg-white border-t border-muted-aquifer/15">
-        <div className="max-w-3xl mx-auto px-6 text-center flex flex-col items-center gap-6">
+      <section className="w-full py-16 sm:py-24 px-4 sm:px-6 lg:px-8 bg-white border-t border-muted-aquifer/15">
+        <div className="max-w-7xl mx-auto flex flex-col items-start gap-6">
           <span className="font-mono text-xs tracking-wide text-moss font-medium">
             Consultation &amp; site assessment
           </span>
-          <h2 className="font-headline-h2 text-headline-h2-mobile sm:text-headline-h2 text-deep-aquifer tracking-tight">
+          <h2 className="font-headline-h2 text-headline-h2-mobile sm:text-headline-h2 text-deep-aquifer tracking-tight max-w-2xl">
             Have a specific property or watershed in mind?
           </h2>
-          <p className="font-body-primary text-base font-normal text-deep-aquifer max-w-xl">
+          <p className="font-body-primary text-base font-normal text-deep-aquifer max-w-2xl leading-relaxed text-left">
             We walk the land, study the soil hydrology, and prepare a frank, transparent feasibility analysis before any work begins.
           </p>
-          <div className="pt-4 flex flex-col sm:flex-row items-center gap-4">
+          <div className="pt-2 flex flex-col sm:flex-row items-center gap-4 w-full sm:w-auto">
             <Link
               href="/contact"
-              className="bg-deep-aquifer hover:bg-forest-slate text-light-aquifer-canvas font-button-text text-button-text px-8 py-3.5 rounded-full transition-all duration-300 hover:shadow-lg"
+              className="w-full sm:w-auto inline-flex items-center justify-center bg-deep-aquifer hover:bg-forest-slate text-light-aquifer-canvas font-button-text text-button-text px-8 py-3.5 rounded-full transition-all duration-300 hover:shadow-lg"
             >
               Request a hydrological study
             </Link>
             <Link
               href="/about"
-              className="font-button-text text-button-text text-deep-aquifer hover:text-moss px-6 py-3.5 transition-colors flex items-center gap-1.5"
+              className="w-full sm:w-auto inline-flex items-center justify-center font-button-text text-button-text text-deep-aquifer hover:text-moss px-6 py-3.5 transition-colors gap-1.5"
             >
               <span>Read our engineering manifesto</span>
               <span className="material-symbols-outlined text-[18px]">

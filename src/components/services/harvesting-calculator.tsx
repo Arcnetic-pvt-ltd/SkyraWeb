@@ -47,12 +47,12 @@ export function HarvestingCalculator() {
   };
 
   return (
-    <section className="relative w-full bg-deep-aquifer py-20 sm:py-28 px-6 sm:px-10 lg:px-16 text-light-aquifer-canvas overflow-hidden" id="calculator">
+    <section className="relative w-full bg-deep-aquifer py-16 sm:py-24 px-4 sm:px-6 lg:px-8 text-light-aquifer-canvas overflow-hidden" id="calculator">
       {/* Ambient background atmosphere */}
       <div aria-hidden="true" className="absolute -top-32 -left-20 w-[600px] h-[600px] rounded-full bg-forest-slate/40 blur-[140px] pointer-events-none" />
       <div aria-hidden="true" className="absolute -bottom-32 -right-20 w-[600px] h-[600px] rounded-full bg-moss/20 blur-[140px] pointer-events-none" />
 
-      <div className="max-w-6xl mx-auto relative z-10 flex flex-col gap-12 sm:gap-16">
+      <div className="max-w-7xl mx-auto relative z-10 flex flex-col gap-12 sm:gap-16">
         {/* Header */}
         <div className="flex flex-col gap-4 max-w-2xl">
           <div className="inline-flex items-center gap-2.5">

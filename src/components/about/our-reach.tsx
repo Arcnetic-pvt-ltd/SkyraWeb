@@ -23,21 +23,21 @@ const REGIONS = [
 /** Our Reach & Regional Footprint. */
 export function OurReach() {
   return (
-    <section className="bg-slate-50 py-16 text-slate-950 lg:py-24">
+    <section className="bg-slate-50 py-16 sm:py-24 text-slate-950">
       <Container>
-        <div className="max-w-3xl">
+        <div className="max-w-2xl">
           <span className="font-mono text-xs font-medium text-brand-teal">Strategic expansion</span>
           <h2 className="mt-2 font-headline-h2 text-[28px] sm:text-[36px] font-semibold tracking-tight text-slate-950">
             Our reach: rooted in South India, scaling nationally
           </h2>
-          <p className="mt-3 font-body-primary text-base font-normal leading-relaxed text-deep-aquifer/85">
+          <p className="mt-4 font-body-primary text-base font-normal leading-relaxed text-deep-aquifer/85">
             We are proudly rooted in South India, understanding the unique
             climatic, soil, and geographical challenges of the Western Ghats
             and Deccan Plateau.
           </p>
         </div>
 
-        <div className="mt-12 grid grid-cols-1 gap-6 lg:grid-cols-12">
+        <div className="mt-10 sm:mt-16 grid grid-cols-1 gap-6 lg:grid-cols-12">
           <div className="flex flex-col gap-4 lg:col-span-7">
             <p className="font-headline-h3 text-[20px] font-medium text-slate-950">Core focus areas</p>
             {REGIONS.map(({ tag, title, description }) => (

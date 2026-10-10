@@ -20,7 +20,7 @@ export const metadata: Metadata = {
 export default function ContactPage() {
   return (
     <div className="flex flex-col w-full">
-      <section className="relative w-full overflow-hidden bg-light-aquifer-canvas pt-28 pb-12 lg:pt-32 lg:pb-20">
+      <section className="relative w-full overflow-hidden bg-light-aquifer-canvas pt-28 pb-16 sm:pt-32 sm:pb-24 px-4 sm:px-6 lg:px-8">
         {/* Ambient gentle drifting water atmosphere blobs */}
         <div aria-hidden="true" className="pointer-events-none absolute inset-0 overflow-hidden">
           <div className="absolute -top-32 -left-32 h-[520px] w-[520px] rounded-full bg-secondary-container/40 blur-[120px] animate-pulse"></div>
@@ -33,7 +33,7 @@ export default function ContactPage() {
           </svg>
         </div>
 
-        <div className="relative z-10 w-full max-w-6xl mx-auto px-6 lg:px-8">
+        <div className="relative z-10 w-full max-w-7xl mx-auto">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-start">
             {/* Left Column */}
             <div className="lg:col-span-5 flex flex-col justify-between pt-2 lg:pt-6">
@@ -208,8 +208,8 @@ export default function ContactPage() {
       </section>
 
       {/* Contextual Photo Banner */}
-      <section className="w-full bg-surface-container/30 py-16 border-t border-muted-aquifer/15">
-        <div className="w-full max-w-6xl mx-auto px-6 lg:px-8">
+      <section className="w-full bg-surface-container/30 py-16 sm:py-24 px-4 sm:px-6 lg:px-8 border-t border-muted-aquifer/15">
+        <div className="w-full max-w-7xl mx-auto">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             <div className="rounded-xl overflow-hidden bg-white shadow-sm border border-muted-aquifer/15 flex flex-col">
               <div className="relative h-48 w-full overflow-hidden">

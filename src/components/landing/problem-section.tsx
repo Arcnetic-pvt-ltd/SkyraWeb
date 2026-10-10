@@ -18,7 +18,7 @@ const PIPELINE_STEPS: {
 /** The Problem Section (Light Surface). Source: Figma node 1:32. */
 export function ProblemSection() {
   return (
-    <section className="border-b border-slate-200 bg-white py-28" id="problem">
+    <section className="border-b border-slate-200 bg-white py-16 sm:py-24" id="problem">
       <Container>
         <div className="grid grid-cols-1 items-center gap-16 lg:grid-cols-12">
           {/* Left Column: Problem Copy & Flow Diagram */}

@@ -49,7 +49,7 @@ const SECTORS = [
 /** Sector Capabilities & Built Environments Section. Aligned with modern Skyra design principles. */
 export function SectorCapabilities() {
   return (
-    <section className="relative w-full bg-light-aquifer-canvas py-24 sm:py-32 px-6 sm:px-10 lg:px-16 overflow-hidden border-t border-muted-aquifer/15" id="sectors">
+    <section className="relative w-full bg-light-aquifer-canvas py-16 sm:py-24 px-4 sm:px-6 lg:px-8 overflow-hidden border-t border-muted-aquifer/15" id="sectors">
       {/* Ambient background atmosphere blobs */}
       <div aria-hidden="true" className="absolute -top-32 right-10 w-[600px] h-[600px] rounded-full bg-[#cde8e6]/60 blur-[130px] pointer-events-none" />
       <div aria-hidden="true" className="absolute -bottom-32 left-10 w-[600px] h-[600px] rounded-full bg-[#ccebc8]/50 blur-[130px] pointer-events-none" />

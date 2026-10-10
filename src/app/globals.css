@@ -169,6 +169,8 @@ body {
   line-height: 1.65;
   font-weight: 400;
   text-align: left;
+  overflow-x: hidden;
+  max-width: 100%;
 }
 
 h1 {

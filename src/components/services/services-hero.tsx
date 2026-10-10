@@ -27,7 +27,7 @@ const METRICS = [
  */
 export function ServicesHero() {
   return (
-    <section className="relative overflow-hidden bg-ink pb-16 pt-28 lg:pb-24 lg:pt-32">
+    <section className="relative overflow-hidden bg-ink pt-28 sm:pt-32 pb-16 sm:pb-24">
       <div aria-hidden="true" className="pointer-events-none absolute -top-40 left-1/2 h-96 w-[700px] -translate-x-1/2 rounded-full bg-brand-teal/10 blur-[130px]" />
       <div aria-hidden="true" className="pointer-events-none absolute right-0 top-1/3 h-80 w-80 rounded-full bg-brand-green/10 blur-[110px]" />
 

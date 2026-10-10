@@ -9,7 +9,7 @@ import { ArrowRightIcon } from "@/components/icons/arrow-right-icon";
 /** The Bigger Vision Section (Dark Theme). Source: Figma node 1:460. */
 export function BiggerVision() {
   return (
-    <section className="relative overflow-hidden border-b border-white/10 bg-ink py-24 text-white" id="vision">
+    <section className="relative overflow-hidden border-b border-white/10 bg-ink py-16 sm:py-24 text-white" id="vision">
       <Container>
         <div className="grid grid-cols-1 items-center gap-12 lg:grid-cols-12">
           <div className="space-y-6 lg:col-span-7">

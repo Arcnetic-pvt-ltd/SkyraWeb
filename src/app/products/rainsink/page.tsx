@@ -25,7 +25,7 @@ export default function RainsinkProductPage() {
   return (
     <div className="flex flex-col w-full overflow-hidden">
       {/* Top Editorial Banner */}
-      <section className="relative z-10 pt-28 pb-16 md:pt-36 md:pb-24 px-6 sm:px-10 lg:px-16 max-w-7xl mx-auto w-full">
+      <section className="relative z-10 pt-28 pb-16 sm:pt-32 sm:pb-24 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto w-full">
         <div className="flex flex-col gap-6 max-w-3xl">
           <div className="inline-flex items-center gap-2.5">
             <span className="w-2.5 h-2.5 rounded-full bg-moss animate-ping"></span>
@@ -66,20 +66,20 @@ export default function RainsinkProductPage() {
       </section>
 
       {/* Interactive Value Propositions & System Schematic Section */}
-      <section className="w-full bg-light-aquifer-canvas py-16 md:py-24 border-t border-muted-aquifer/15">
+      <section className="w-full bg-light-aquifer-canvas py-16 sm:py-24 px-4 sm:px-6 lg:px-8 border-t border-muted-aquifer/15">
 
-        <div className="max-w-7xl mx-auto px-6 sm:px-10 lg:px-16">
+        <div className="max-w-7xl mx-auto">
           <RainsinkInteractiveShowcase />
         </div>
       </section>
 
       {/* Technical Specifications Grid */}
-      <section id="technical-specs" className="relative w-full bg-light-aquifer-canvas py-20 md:py-28 overflow-hidden border-t border-muted-aquifer/15">
+      <section id="technical-specs" className="relative w-full bg-light-aquifer-canvas py-16 sm:py-24 px-4 sm:px-6 lg:px-8 overflow-hidden border-t border-muted-aquifer/15">
         {/* Ambient background atmosphere blobs matching Sector Capabilities */}
         <div aria-hidden="true" className="absolute -top-32 right-10 w-[600px] h-[600px] rounded-full bg-[#cde8e6]/60 blur-[130px] pointer-events-none" />
         <div aria-hidden="true" className="absolute -bottom-32 left-10 w-[600px] h-[600px] rounded-full bg-[#ccebc8]/50 blur-[130px] pointer-events-none" />
 
-        <div className="max-w-7xl mx-auto px-6 sm:px-10 lg:px-16 relative z-10">
+        <div className="max-w-7xl mx-auto relative z-10">
           <div className="flex flex-col gap-4 mb-12 max-w-2xl">
             <div className="inline-flex items-center gap-2.5">
               <span className="w-2 h-2 rounded-full bg-moss animate-pulse"></span>
@@ -252,8 +252,8 @@ export default function RainsinkProductPage() {
       </section>
 
       {/* Bottom CTA Card */}
-      <section className="w-full bg-light-aquifer-canvas py-12 md:py-16 border-t border-muted-aquifer/15">
-        <div className="max-w-5xl mx-auto px-6 sm:px-8">
+      <section className="w-full bg-light-aquifer-canvas py-16 sm:py-24 px-4 sm:px-6 lg:px-8 border-t border-muted-aquifer/15">
+        <div className="max-w-7xl mx-auto">
           <div className="relative rounded-2xl bg-deep-aquifer text-light-aquifer-canvas p-7 sm:p-9 border border-white/10 shadow-xl overflow-hidden">
             {/* Subtle Ambient Glow */}
             <div className="absolute -top-24 -right-24 w-64 h-64 rounded-full bg-moss/15 blur-3xl pointer-events-none" />

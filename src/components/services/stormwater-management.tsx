@@ -46,7 +46,7 @@ const SKYRA_POINTS = [
 /** Service Deep Dive 2: Intelligent Stormwater Management. */
 export function StormwaterManagement() {
   return (
-    <section className="relative bg-ink py-16 text-white lg:py-24">
+    <section className="relative bg-ink py-16 sm:py-24 text-white">
       <Container>
         <div className="mb-12 max-w-2xl">
           <Eyebrow color="teal">

@@ -47,7 +47,7 @@ const TRUST_BADGES = [
 /** The End-to-End Implementation Process (4-Phase Roadmap). */
 export function ImplementationProcess() {
   return (
-    <section className="border-y border-slate-200 bg-white py-16 lg:py-24">
+    <section className="border-y border-slate-200 bg-white py-16 sm:py-24">
       <Container>
         <div className="mx-auto mb-12 max-w-3xl text-center">
           <span className="inline-block rounded-full bg-brand-green/10 px-4 py-1.5 font-mono text-xs font-medium text-brand-green">

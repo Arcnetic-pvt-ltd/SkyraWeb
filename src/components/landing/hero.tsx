@@ -18,7 +18,7 @@ import { HeroMissionEngine } from "@/components/landing/hero-mission-engine";
  */
 export function Hero() {
   return (
-    <section className="relative flex min-h-[92vh] items-center justify-center overflow-hidden bg-ink pt-27 pb-19">
+    <section className="relative flex min-h-[92vh] items-center justify-center overflow-hidden bg-ink pt-28 sm:pt-32 pb-16 sm:pb-24">
       {/* Photo Backdrop */}
       <div className="absolute inset-0 z-0">
         <Image

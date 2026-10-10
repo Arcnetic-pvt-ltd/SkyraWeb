@@ -57,7 +57,7 @@ const CARDS: {
 /** Direct Contact Options — 4 clickable cards. */
 export function ContactChannels() {
   return (
-    <section className="relative z-10 bg-ink py-12">
+    <section className="relative z-10 bg-ink py-16 sm:py-24">
       <Container>
       <div className="mb-8 flex items-center justify-between border-b border-white/10 pb-4">
         <div>

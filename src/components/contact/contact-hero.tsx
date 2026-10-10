@@ -9,7 +9,7 @@ import { Container } from "@/components/ui/container";
  */
 export function ContactHero() {
   return (
-    <section className="relative overflow-hidden bg-ink pb-16 pt-28 lg:pt-38">
+    <section className="relative overflow-hidden bg-ink pt-28 sm:pt-32 pb-16 sm:pb-24">
       <div
         aria-hidden="true"
         className="pointer-events-none absolute left-1/2 top-1/4 size-96 -translate-x-1/2 rounded-full bg-brand-teal/10 blur-3xl"
