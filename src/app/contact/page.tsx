@@ -20,8 +20,8 @@ export const metadata: Metadata = {
 export default function ContactPage() {
   return (
     <div className="flex flex-col w-full">
-      <section className="relative w-full overflow-hidden bg-light-aquifer-canvas pt-28 pb-16 sm:pt-32 sm:pb-24 px-4 sm:px-6 lg:px-8">
-        <div className="relative z-10 w-full max-w-7xl mx-auto">
+      <section className="relative w-full overflow-hidden bg-light-aquifer-canvas pt-28 pb-16 sm:pt-32 sm:pb-24">
+        <div className="relative z-10 w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-start">
             {/* Left Column */}
             <div className="lg:col-span-5 flex flex-col justify-between pt-2 lg:pt-6">
@@ -196,8 +196,8 @@ export default function ContactPage() {
       </section>
 
       {/* Contextual Photo Banner */}
-      <section className="w-full bg-linear-to-b from-[#edf6fa] via-[#e5f1f7] to-[#edf6fa] py-16 sm:py-24 px-4 sm:px-6 lg:px-8 border-y border-[#c8e0ee]/60">
-        <div className="w-full max-w-7xl mx-auto">
+      <section className="w-full bg-linear-to-b from-[#edf6fa] via-[#e5f1f7] to-[#edf6fa] py-16 sm:py-24 border-y border-[#c8e0ee]/60">
+        <div className="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             <div className="rounded-[4px] overflow-hidden bg-white/95 border border-[#bcd7e8]/60 shadow-[0_1px_3px_rgba(20,50,80,0.03)] flex flex-col">
               <div className="relative h-48 w-full overflow-hidden">

@@ -42,8 +42,8 @@ const STEPS = [
 /** How Skyra Works (Process Strip). Revamped with current Skyra design system. */
 export function HowItWorks() {
   return (
-    <section className="relative w-full bg-light-aquifer-canvas py-16 sm:py-24 px-4 sm:px-6 lg:px-8 border-t border-muted-aquifer/15">
-      <div className="max-w-7xl mx-auto flex flex-col gap-12 sm:gap-16">
+    <section className="relative w-full bg-light-aquifer-canvas py-16 sm:py-24 border-t border-muted-aquifer/15">
+      <div className="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col gap-12 sm:gap-16">
         {/* Section Header */}
         <div className="flex flex-col gap-3 max-w-2xl">
           <div className="inline-flex items-center gap-2.5">

@@ -10,8 +10,9 @@ export default function Home() {
   return (
     <div className="flex flex-col w-full overflow-hidden relative">
       {/* SECTION 1: HERO */}
-      <section className="relative z-10 flex flex-col px-4 sm:px-6 lg:px-8 pt-28 sm:pt-32 pb-12 sm:pb-16 max-w-7xl mx-auto w-full gap-10">
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center pt-1 sm:pt-2">
+      <section className="relative z-10 w-full pt-28 sm:pt-32 pb-12 sm:pb-16">
+        <div className="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col gap-10">
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center pt-1 sm:pt-2">
           {/* Left Column: Headline, Copy & CTAs */}
           <div className="lg:col-span-6 flex flex-col">
             <div className="inline-flex items-center gap-2.5 mb-4">
@@ -76,12 +77,13 @@ export default function Home() {
             <span className="font-body-sm text-body-sm font-medium">Hyderabad</span>
           </div>
         </div>
+        </div>
       </section>
 
 
       {/* SECTION 2: THE CORE PROBLEM */}
       <section
-        className="relative w-full bg-linear-to-b from-[#0a1829] via-[#0f233b] to-[#152e4d] text-light-aquifer-canvas py-16 sm:py-24 px-4 sm:px-6 lg:px-8 overflow-hidden border-t border-[#22446d]/40"
+        className="relative w-full bg-linear-to-b from-[#0a1829] via-[#0f233b] to-[#152e4d] text-light-aquifer-canvas py-16 sm:py-24 overflow-hidden border-t border-[#22446d]/40"
         id="problem"
       >
         {/* Subtle Rainfall Overlay Element */}
@@ -98,7 +100,7 @@ export default function Home() {
           </svg>
         </div>
 
-        <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-20 items-center relative z-10">
+        <div className="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-20 items-center relative z-10">
           <div className="lg:col-span-6 flex flex-col gap-6">
             <span className="font-mono text-body-sm text-[#86b5db] font-medium">
               The hydrological reality
@@ -332,8 +334,8 @@ export default function Home() {
       </section>
 
       {/* SECTION 3: THE SKYRA OPPORTUNITY */}
-      <section className="relative w-full py-16 sm:py-24 px-4 sm:px-6 lg:px-8 border-t border-muted-aquifer/15">
-        <div className="max-w-7xl mx-auto w-full relative z-10">
+      <section className="relative w-full py-16 sm:py-24 border-t border-muted-aquifer/15">
+        <div className="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-20 items-center">
             <div className="lg:col-span-7 flex flex-col gap-6">
               <div className="inline-flex items-center gap-2.5">
@@ -421,8 +423,8 @@ export default function Home() {
       <ImpactMetrics />
 
       {/* SECTION 5: CLOSING CTA */}
-      <section className="relative w-full bg-linear-to-b from-[#edf6fa] via-[#e5f1f7] to-[#edf6fa] py-16 sm:py-24 px-4 sm:px-6 lg:px-8 border-t border-[#c8e0ee]/60">
-        <div className="max-w-7xl mx-auto w-full flex flex-col items-start relative z-10">
+      <section className="relative w-full bg-linear-to-b from-[#edf6fa] via-[#e5f1f7] to-[#edf6fa] py-16 sm:py-24 border-t border-[#c8e0ee]/60">
+        <div className="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col items-start relative z-10">
           <span className="font-mono text-xs text-secondary font-medium tracking-wide mb-6">
             Begin the recharge cycle
           </span>

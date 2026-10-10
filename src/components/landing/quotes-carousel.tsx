@@ -31,6 +31,7 @@ const QUOTES: QuoteItem[] = [
 
 export function QuotesCarousel() {
   const [activeIndex, setActiveIndex] = useState(0);
+  const [isPaused, setIsPaused] = useState(false);
 
   // Preload all carousel images into browser memory to eliminate image load lag
   useEffect(() => {
@@ -42,10 +43,23 @@ export function QuotesCarousel() {
     });
   }, []);
 
-  // User controls active quote via dot indicators below
+  // Automatic rotation between quotes (every 7 seconds) with hover-pause
+  useEffect(() => {
+    if (isPaused) return;
+
+    const timer = setInterval(() => {
+      setActiveIndex((prev) => (prev + 1) % QUOTES.length);
+    }, 7000);
+
+    return () => clearInterval(timer);
+  }, [isPaused, activeIndex]);
 
   return (
-    <section className="w-full bg-linear-to-br from-[#0c1a2d] via-[#10243d] to-[#173050] text-light-aquifer-canvas py-16 sm:py-24 px-4 sm:px-6 lg:px-8 relative overflow-hidden min-h-[543.5px] flex items-center border-y border-[#22446d]/40">
+    <section
+      className="w-full bg-linear-to-br from-[#0c1a2d] via-[#10243d] to-[#173050] text-light-aquifer-canvas py-16 sm:py-24 relative overflow-hidden min-h-[543.5px] flex items-center border-y border-[#22446d]/40"
+      onMouseEnter={() => setIsPaused(true)}
+      onMouseLeave={() => setIsPaused(false)}
+    >
       {/* Subtle Rainfall Overlay Element */}
       <div aria-hidden="true" className="absolute inset-0 z-0 pointer-events-none overflow-hidden select-none opacity-20">
         <svg className="w-full h-full" xmlns="http://www.w3.org/2000/svg">
@@ -78,16 +92,19 @@ export function QuotesCarousel() {
               }`}
           >
             <div className="relative h-full flex items-end">
-              {/* Soft Gradient Mask based on image position */}
-              {isLeft ? (
-                <div className="absolute inset-y-0 right-0 w-32 sm:w-56 bg-gradient-to-l from-[#10243d] via-[#10243d]/70 to-transparent z-10 pointer-events-none"></div>
-              ) : (
-                <div className="absolute inset-y-0 left-0 w-32 sm:w-56 bg-gradient-to-r from-[#10243d] via-[#10243d]/70 to-transparent z-10 pointer-events-none"></div>
-              )}
-
               <img
                 src={item.image}
                 alt={item.author}
+                style={
+                  !isLeft
+                    ? {
+                        WebkitMaskImage:
+                          "linear-gradient(to right, transparent 0%, black 12%, black 100%)",
+                        maskImage:
+                          "linear-gradient(to right, transparent 0%, black 12%, black 100%)",
+                      }
+                    : undefined
+                }
                 className="h-full w-auto object-contain object-bottom block max-w-none"
               />
             </div>
@@ -95,7 +112,7 @@ export function QuotesCarousel() {
         );
       })}
 
-      <div className="max-w-7xl mx-auto w-full relative z-10 grid grid-cols-1 lg:grid-cols-12 gap-8 items-center min-h-[280px]">
+      <div className="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 grid grid-cols-1 lg:grid-cols-12 gap-8 items-center min-h-[280px]">
         {QUOTES.map((item, idx) => {
           const isActive = idx === activeIndex;
           const isLeft = item.position === "left";

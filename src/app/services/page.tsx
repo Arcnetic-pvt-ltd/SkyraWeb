@@ -13,8 +13,8 @@ export default function ServicesPage() {
   return (
     <div className="flex flex-col w-full">
       {/* Top Section: Editorial Header */}
-      <section className="w-full pt-28 pb-16 sm:pt-32 sm:pb-24 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto flex flex-col gap-6">
+      <section className="w-full pt-28 pb-16 sm:pt-32 sm:pb-24">
+        <div className="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col gap-6">
           <span className="inline-flex items-center gap-2 font-mono text-xs tracking-wide text-moss font-medium">
             <span className="w-2 h-2 rounded-full bg-moss"></span>
             Systems &amp; architecture
@@ -29,8 +29,8 @@ export default function ServicesPage() {
       </section>
 
       {/* Service 1: Site-Specific Rainwater Harvesting */}
-      <section className="w-full bg-light-aquifer-canvas py-16 sm:py-24 px-4 sm:px-6 lg:px-8 transition-all duration-700 border-t border-muted-aquifer/15">
-        <div className="max-w-7xl mx-auto">
+      <section className="w-full bg-light-aquifer-canvas py-16 sm:py-24 transition-all duration-700 border-t border-muted-aquifer/15">
+        <div className="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
             {/* Content Column */}
             <div className="lg:col-span-6 flex flex-col gap-6">
@@ -126,8 +126,8 @@ export default function ServicesPage() {
       </section>
 
       {/* Service 2: Stormwater Management Solutions */}
-      <section className="w-full bg-linear-to-b from-[#edf6fa] via-[#e5f1f7] to-[#edf6fa] py-16 sm:py-24 px-4 sm:px-6 lg:px-8 border-t border-[#c8e0ee]/60">
-        <div className="max-w-7xl mx-auto">
+      <section className="w-full bg-linear-to-b from-[#edf6fa] via-[#e5f1f7] to-[#edf6fa] py-16 sm:py-24 border-t border-[#c8e0ee]/60">
+        <div className="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
             {/* SVG Graphic */}
             <div className="lg:col-span-6 order-last lg:order-first">
@@ -211,8 +211,8 @@ export default function ServicesPage() {
       </section>
 
       {/* Service 3: Afforestation & Miyawaki Forests */}
-      <section className="w-full bg-forest-slate text-light-aquifer-canvas py-16 sm:py-24 px-4 sm:px-6 lg:px-8 border-t border-muted-aquifer/15">
-        <div className="max-w-7xl mx-auto">
+      <section className="w-full bg-forest-slate text-light-aquifer-canvas py-16 sm:py-24 border-t border-muted-aquifer/15">
+        <div className="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
             {/* Content Column */}
             <div className="lg:col-span-6 flex flex-col gap-6">
@@ -221,7 +221,10 @@ export default function ServicesPage() {
                 <span className="w-8 h-px bg-light-aquifer-canvas/20"></span>
                 <span className="font-mono text-xs text-light-aquifer-canvas/60">Bio-hydrological sponge</span>
               </div>
-              <h2 className="font-headline-h2 text-headline-h2-mobile sm:text-headline-h2 text-white tracking-tight">
+              <h2
+                className="font-headline-h2 text-headline-h2-mobile sm:text-headline-h2 text-white !text-white tracking-tight"
+                style={{ color: "#ffffff" }}
+              >
                 Afforestation &amp; Miyawaki forests
               </h2>
               <p className="font-body-primary text-base font-normal text-light-aquifer-canvas/90 leading-relaxed">
@@ -308,8 +311,8 @@ export default function ServicesPage() {
       <HarvestingCalculator />
 
       {/* Section 4: Product Integrations Catalog */}
-      <section className="w-full bg-light-aquifer-canvas py-16 sm:py-24 px-4 sm:px-6 lg:px-8 border-t border-muted-aquifer/15">
-        <div className="max-w-7xl mx-auto">
+      <section className="w-full bg-light-aquifer-canvas py-16 sm:py-24 border-t border-muted-aquifer/15">
+        <div className="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-2xl mb-10 sm:mb-14">
             <span className="font-mono text-xs text-moss font-medium tracking-wide block mb-3">
               Hardware &amp; infrastructure
@@ -327,8 +330,8 @@ export default function ServicesPage() {
       </section>
 
       {/* CTA Section */}
-      <section className="w-full py-16 sm:py-24 px-4 sm:px-6 lg:px-8 bg-white border-t border-muted-aquifer/15">
-        <div className="max-w-7xl mx-auto flex flex-col items-start gap-6">
+      <section className="w-full py-16 sm:py-24 bg-white border-t border-muted-aquifer/15">
+        <div className="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col items-start gap-6">
           <span className="font-mono text-xs tracking-wide text-moss font-medium">
             Consultation &amp; site assessment
           </span>

@@ -45,7 +45,7 @@ export function OpportunityBanner() {
         </svg>
       </div>
 
-      <div className="relative z-10 mx-auto max-w-7xl space-y-8 px-4 sm:px-6 lg:px-8 text-left">
+      <div className="relative z-10 mx-auto w-full max-w-7xl space-y-8 px-4 sm:px-6 lg:px-8 text-left">
         <Eyebrow color="green">
           The opportunity
         </Eyebrow>

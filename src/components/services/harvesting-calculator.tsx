@@ -47,7 +47,7 @@ export function HarvestingCalculator() {
   };
 
   return (
-    <section className="relative w-full bg-linear-to-br from-[#0a1829] via-[#0f243c] to-[#152e4b] py-16 sm:py-24 px-4 sm:px-6 lg:px-8 text-light-aquifer-canvas overflow-hidden border-t border-[#22446d]/40" id="calculator">
+    <section className="relative w-full bg-linear-to-br from-[#0a1829] via-[#0f243c] to-[#152e4b] pt-24 pb-16 sm:pt-32 sm:pb-24 scroll-mt-28 sm:scroll-mt-32 text-light-aquifer-canvas overflow-hidden border-t border-[#22446d]/40" id="calculator">
       {/* Subtle Rainfall Overlay Element */}
       <div aria-hidden="true" className="absolute inset-0 z-[1] pointer-events-none overflow-hidden select-none opacity-20">
         <svg className="w-full h-full" xmlns="http://www.w3.org/2000/svg">
@@ -62,19 +62,22 @@ export function HarvestingCalculator() {
         </svg>
       </div>
 
-      <div className="max-w-7xl mx-auto relative z-10 flex flex-col gap-12 sm:gap-16">
+      <div className="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 flex flex-col gap-12 sm:gap-16">
         {/* Header */}
         <div className="flex flex-col gap-4 max-w-2xl">
-          <div className="inline-flex items-center gap-2.5">
-            <span className="inline-block w-2 h-2 rounded-full bg-moss"></span>
-            <span className="font-mono text-xs text-[#86b5db] font-medium">
+          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-[4px] bg-[#132742]/80 border border-[#22446d] w-fit">
+            <span className="inline-block w-1.5 h-1.5 rounded-full bg-moss"></span>
+            <span className="font-mono text-xs text-[#86b5db] font-medium tracking-wide">
               Interactive feasibility tool
             </span>
           </div>
-          <h2 className="font-headline-h2 text-[28px] sm:text-[36px] font-semibold text-white tracking-tight leading-tight">
+          <h2
+            className="font-headline-h2 text-[28px] sm:text-[36px] font-semibold text-white !text-white tracking-tight leading-tight"
+            style={{ color: "#ffffff" }}
+          >
             Rainwater harvesting yield calculator
           </h2>
-          <p className="font-body-primary text-base font-normal text-light-aquifer-canvas/80 leading-relaxed">
+          <p className="font-body-primary text-base font-normal text-[#bcd7e8]/90 leading-relaxed">
             Estimate your parcel’s annual water yield based on catchment footprint, localized rainfall data, and high-efficiency runoff coefficients.
           </p>
         </div>

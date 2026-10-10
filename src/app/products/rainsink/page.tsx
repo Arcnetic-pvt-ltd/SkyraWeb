@@ -25,7 +25,8 @@ export default function RainsinkProductPage() {
   return (
     <div className="flex flex-col w-full overflow-hidden">
       {/* Top Editorial Banner */}
-      <section className="relative z-10 pt-28 pb-16 sm:pt-32 sm:pb-24 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto w-full">
+      <section className="relative z-10 w-full pt-28 pb-16 sm:pt-32 sm:pb-24">
+        <div className="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
         {/* Subtle Atmospheric Rainfall Accent Overlay */}
         <div aria-hidden="true" className="absolute top-0 right-0 w-full sm:w-1/2 h-full z-[-1] pointer-events-none overflow-hidden select-none opacity-20">
           <svg className="w-full h-full" xmlns="http://www.w3.org/2000/svg">
@@ -77,19 +78,19 @@ export default function RainsinkProductPage() {
             </a>
           </div>
         </div>
+        </div>
       </section>
 
       {/* Interactive Value Propositions & System Schematic Section */}
-      <section className="w-full bg-light-aquifer-canvas py-16 sm:py-24 px-4 sm:px-6 lg:px-8 border-t border-muted-aquifer/15">
-
-        <div className="max-w-7xl mx-auto">
+      <section className="w-full bg-light-aquifer-canvas py-16 sm:py-24 border-t border-muted-aquifer/15">
+        <div className="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <RainsinkInteractiveShowcase />
         </div>
       </section>
 
       {/* Technical Specifications Grid */}
-      <section id="technical-specs" className="relative w-full bg-linear-to-b from-[#edf6fa] via-[#e6f1f7] to-[#edf6fa] py-16 sm:py-24 px-4 sm:px-6 lg:px-8 overflow-hidden border-t border-[#c5def0]/60">
-        <div className="max-w-7xl mx-auto relative z-10">
+      <section id="technical-specs" className="relative w-full bg-linear-to-b from-[#edf6fa] via-[#e6f1f7] to-[#edf6fa] py-16 sm:py-24 overflow-hidden border-t border-[#c5def0]/60">
+        <div className="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="flex flex-col gap-4 mb-12 max-w-2xl">
             <div className="inline-flex items-center gap-2.5">
               <span className="w-2 h-2 rounded-full bg-moss"></span>
@@ -195,19 +196,22 @@ export default function RainsinkProductPage() {
 
       {/* Deployment & Installation Density Guidelines */}
       <section className="relative w-full bg-light-aquifer-canvas py-20 md:py-28 overflow-hidden border-t border-muted-aquifer/15">
-        <div className="max-w-7xl mx-auto px-6 sm:px-10 lg:px-16 relative z-10">
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
-            <div className="lg:col-span-6 flex flex-col gap-6">
-              <div className="inline-flex items-center gap-2.5">
-                <span className="w-2 h-2 rounded-full bg-moss"></span>
-                <span className="font-mono text-xs text-moss font-medium">
-                  Deployment guidelines
-                </span>
+        <div className="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-stretch">
+            <div className="lg:col-span-6 flex flex-col justify-between gap-6">
+              <div className="flex flex-col gap-3">
+                <div className="inline-flex items-center gap-2.5">
+                  <span className="w-2 h-2 rounded-full bg-moss"></span>
+                  <span className="font-mono text-xs text-moss font-medium">
+                    Deployment guidelines
+                  </span>
+                </div>
+                <h2 className="font-headline-h2 text-[28px] sm:text-[36px] font-semibold text-deep-aquifer tracking-tight">
+                  Where &amp; how to deploy Skyra Rainsink
+                </h2>
               </div>
-              <h2 className="font-headline-h2 text-[28px] sm:text-[36px] font-semibold text-deep-aquifer tracking-tight">
-                Where &amp; how to deploy Skyra Rainsink
-              </h2>
-              <div className="space-y-4 font-body-primary text-deep-aquifer/85">
+
+              <div className="space-y-4 font-body-primary text-deep-aquifer/85 flex-1 flex flex-col justify-end">
                 <div className="p-6 rounded-[4px] bg-white border border-muted-aquifer/20">
                   <h3 className="font-headline-h3 text-[24px] font-medium leading-[1.3] text-deep-aquifer mb-1 flex items-center gap-2">
                     <span className="material-symbols-outlined text-moss">water_drop</span>
@@ -230,33 +234,78 @@ export default function RainsinkProductPage() {
               </div>
             </div>
 
-            <div className="lg:col-span-6 bg-linear-to-br from-[#0c1a2d] via-[#10243d] to-[#173050] text-white p-8 sm:p-10 rounded-[4px] border border-[#22446d]/50 flex flex-col gap-6 relative overflow-hidden">
-              <div className="flex items-center gap-3 relative z-10">
-                <span className="material-symbols-outlined text-moss text-3xl">warning</span>
-                <h3 className="font-headline-h3 text-[24px] font-medium leading-[1.3] text-white">Pre-installation safety rules</h3>
+            <div className="lg:col-span-6 h-full flex flex-col">
+              <div className="h-full bg-linear-to-br from-[#0c1a2d] via-[#10243d] to-[#173050] text-white p-7 sm:p-9 rounded-[4px] border border-[#22446d]/60 flex flex-col justify-between relative overflow-hidden shadow-sm">
+                {/* Subtle inner ambient glow */}
+                <div aria-hidden="true" className="absolute -top-24 -right-24 w-64 h-64 rounded-full bg-[#0098a6]/10 blur-3xl pointer-events-none" />
+
+                <div className="relative z-10 flex flex-col gap-6">
+                  {/* Card Header */}
+                  <div className="flex flex-col gap-3 pb-5 border-b border-[#22446d]/60">
+                    <div className="inline-flex items-center gap-2 px-3 py-1 rounded-[4px] bg-[#132742]/80 border border-[#22446d] w-fit">
+                      <span className="material-symbols-outlined text-moss text-sm">warning</span>
+                      <span className="font-mono text-xs text-[#86b5db] font-medium tracking-wide">
+                        Mandatory protocols
+                      </span>
+                    </div>
+                    <h3
+                      className="font-headline-h3 text-[24px] font-medium leading-[1.3] text-white !text-white"
+                      style={{ color: "#ffffff" }}
+                    >
+                      Pre-installation safety rules
+                    </h3>
+                  </div>
+
+                  {/* Safety Points */}
+                  <ul className="space-y-4 font-body-primary text-base font-normal text-light-aquifer-canvas/90 leading-relaxed">
+                    <li className="flex items-start gap-3">
+                      <span className="w-1.5 h-1.5 rounded-full bg-moss shrink-0 mt-2.5"></span>
+                      <div>
+                        <strong className="text-white font-medium">Slope restriction:</strong>
+                        <span className="text-[#bcd7e8]/90">&nbsp;Do not install on steep slopes of 30&deg; or higher due to landslide and soil erosion hazards.</span>
+                      </div>
+                    </li>
+                    <li className="flex items-start gap-3">
+                      <span className="w-1.5 h-1.5 rounded-full bg-moss shrink-0 mt-2.5"></span>
+                      <div>
+                        <strong className="text-white font-medium">Safe distances:</strong>
+                        <span className="text-[#bcd7e8]/90">&nbsp;Maintain mandatory clearance from septic tanks, chemical storage zones, and building foundations.</span>
+                      </div>
+                    </li>
+                    <li className="flex items-start gap-3">
+                      <span className="w-1.5 h-1.5 rounded-full bg-moss shrink-0 mt-2.5"></span>
+                      <div>
+                        <strong className="text-white font-medium">Hydro-geological check:</strong>
+                        <span className="text-[#bcd7e8]/90">&nbsp;Verify soil percolation capacity and unconfined aquifer depth prior to excavation.</span>
+                      </div>
+                    </li>
+                    <li className="flex items-start gap-3">
+                      <span className="w-1.5 h-1.5 rounded-full bg-moss shrink-0 mt-2.5"></span>
+                      <div>
+                        <strong className="text-white font-medium">Statutory compliance:</strong>
+                        <span className="text-[#bcd7e8]/90">&nbsp;Align unit layout with CGWA regulations, municipal bylaws, and green building norms (LEED, IGBC, GRIHA).</span>
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+
+                {/* Compliance footer indicator */}
+                <div className="relative z-10 pt-5 mt-6 border-t border-[#22446d]/60 flex items-center justify-between text-xs font-mono text-[#86b5db]/80">
+                  <span className="flex items-center gap-2">
+                    <span className="w-1.5 h-1.5 rounded-full bg-moss"></span>
+                    Zero structural risk standard
+                  </span>
+                  <span>CGWA &bull; IGBC &bull; GRIHA</span>
+                </div>
               </div>
-              <ul className="space-y-3 font-body-primary text-base font-normal text-light-aquifer-canvas/85 list-disc pl-5 relative z-10 leading-relaxed">
-                <li>
-                  <strong className="text-white">Slope restriction:</strong>&nbsp;Do not install on steep slopes of 30&deg; or higher due to landslide and soil erosion hazards.
-                </li>
-                <li>
-                  <strong className="text-white">Safe distances:</strong>&nbsp;Maintain mandatory clearance from septic tanks, chemical storage zones, and building foundations.
-                </li>
-                <li>
-                  <strong className="text-white">Hydro-geological check:</strong>&nbsp;Verify soil percolation capacity and unconfined aquifer depth prior to excavation.
-                </li>
-                <li>
-                  <strong className="text-white">Statutory compliance:</strong>&nbsp;Align unit layout with CGWA regulations, municipal bylaws, and green building norms (LEED, IGBC, GRIHA).
-                </li>
-              </ul>
             </div>
           </div>
         </div>
       </section>
 
       {/* Bottom CTA Card */}
-      <section className="w-full bg-light-aquifer-canvas py-16 sm:py-24 px-4 sm:px-6 lg:px-8 border-t border-muted-aquifer/15">
-        <div className="max-w-7xl mx-auto">
+      <section className="w-full bg-light-aquifer-canvas py-16 sm:py-24 border-t border-muted-aquifer/15">
+        <div className="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="relative rounded-[4px] bg-linear-to-br from-[#0c1a2d] via-[#11243d] to-[#173050] text-white p-7 sm:p-9 border border-[#203f66]/50 overflow-hidden">
             <div className="relative z-10 flex flex-col md:flex-row items-start md:items-center justify-between gap-6 sm:gap-8">
               {/* Content Column */}
@@ -268,11 +317,14 @@ export default function RainsinkProductPage() {
                   </span>
                 </div>
 
-                <h2 className="font-headline-h2 text-[28px] sm:text-[36px] text-white tracking-tight leading-snug font-semibold">
+                <h2
+                  className="font-headline-h2 text-[28px] sm:text-[36px] text-white !text-white tracking-tight leading-snug font-semibold"
+                  style={{ color: "#ffffff" }}
+                >
                   Ready to equip your campus with Skyra Rainsink?
                 </h2>
 
-                <p className="font-body-primary text-base font-normal text-light-aquifer-canvas/80 leading-relaxed">
+                <p className="font-body-primary text-base font-normal text-[#bcd7e8]/90 leading-relaxed">
                   Our civil hydrologists analyze site topography, model peak monsoonal runoff, and deliver a turn-key Rainsink layout plan tailored to your ESG goals and flood prevention targets.
                 </p>
 
