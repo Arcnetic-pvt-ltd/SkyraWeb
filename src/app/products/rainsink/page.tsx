@@ -303,69 +303,63 @@ export default function RainsinkProductPage() {
         </div>
       </section>
 
-      {/* Bottom CTA Card */}
-      <section className="w-full bg-light-aquifer-canvas py-16 sm:py-24 border-t border-muted-aquifer/15">
-        <div className="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="relative rounded-[4px] bg-linear-to-br from-[#0c1a2d] via-[#11243d] to-[#173050] text-white p-7 sm:p-9 border border-[#203f66]/50 overflow-hidden">
-            <div className="relative z-10 flex flex-col md:flex-row items-start md:items-center justify-between gap-6 sm:gap-8">
-              {/* Content Column */}
-              <div className="flex flex-col gap-3 max-w-2xl text-left">
-                <div className="inline-flex items-center gap-2 px-3 py-1 rounded-[4px] bg-[#132742]/80 border border-[#22446d] w-fit">
-                  <span className="w-1.5 h-1.5 rounded-full bg-moss" />
-                  <span className="font-mono text-xs text-[#86b5db] font-medium">
-                    Fast-track site consultation
-                  </span>
-                </div>
+      {/* Bottom CTA Section */}
+      <section className="relative w-full bg-linear-to-b from-[#edf6fa] via-[#e5f1f7] to-[#edf6fa] py-16 sm:py-24 border-t border-[#c8e0ee]/60">
+        <div className="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col items-start relative z-10 gap-6">
+          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-[4px] bg-white border border-[#bcd7e8]/60 shadow-xs">
+            <span className="w-1.5 h-1.5 rounded-full bg-moss" />
+            <span className="font-mono text-xs text-secondary font-medium">
+              Fast-track site consultation
+            </span>
+          </div>
 
-                <h2
-                  className="font-headline-h2 text-[28px] sm:text-[36px] text-white !text-white tracking-tight leading-snug font-semibold"
-                  style={{ color: "#ffffff" }}
-                >
-                  Ready to equip your campus with Skyra Rainsink?
-                </h2>
+          <h2 className="font-headline-h2 text-headline-h2-mobile sm:text-headline-h2 text-deep-aquifer max-w-3xl leading-tight font-semibold tracking-tight">
+            Ready to equip your campus with Skyra Rainsink?
+          </h2>
 
-                <p className="font-body-primary text-base font-normal text-[#bcd7e8]/90 leading-relaxed">
-                  Our civil hydrologists analyze site topography, model peak monsoonal runoff, and deliver a turn-key Rainsink layout plan tailored to your ESG goals and flood prevention targets.
-                </p>
+          <p className="font-body-large text-body-large text-deep-aquifer max-w-2xl leading-relaxed text-left">
+            Our civil hydrologists analyze site topography, model peak monsoonal runoff, and deliver a turn-key Rainsink layout plan tailored to your ESG goals and flood prevention targets.
+          </p>
 
-                {/* Inline Deliverables Pills */}
-                <div className="pt-1 flex flex-wrap items-center gap-2 font-mono text-xs font-medium text-light-aquifer-canvas/75">
-                  <span className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-[4px] bg-[#132742]/70 border border-[#22446d]/70 text-[#bcd7e8]">
-                    <span className="material-symbols-outlined text-moss text-[14px]">analytics</span>
-                    Runoff modeling
-                  </span>
-                  <span className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-[4px] bg-[#132742]/70 border border-[#22446d]/70 text-[#bcd7e8]">
-                    <span className="material-symbols-outlined text-moss text-[14px]">architecture</span>
-                    CAD layout blueprint
-                  </span>
-                  <span className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-[4px] bg-[#132742]/70 border border-[#22446d]/70 text-[#bcd7e8]">
-                    <span className="material-symbols-outlined text-moss text-[14px]">verified_user</span>
-                    CGWA credits
-                  </span>
-                </div>
-              </div>
+          {/* Inline Deliverables Pills */}
+          <div className="flex flex-wrap items-center gap-2.5 font-mono text-xs font-medium text-deep-aquifer">
+            <span className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-[4px] bg-white border border-[#bcd7e8]/70 text-deep-aquifer shadow-xs">
+              <span className="material-symbols-outlined text-moss text-[15px]">analytics</span>
+              Runoff modeling
+            </span>
+            <span className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-[4px] bg-white border border-[#bcd7e8]/70 text-deep-aquifer shadow-xs">
+              <span className="material-symbols-outlined text-moss text-[15px]">architecture</span>
+              CAD layout blueprint
+            </span>
+            <span className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-[4px] bg-white border border-[#bcd7e8]/70 text-deep-aquifer shadow-xs">
+              <span className="material-symbols-outlined text-moss text-[15px]">verified_user</span>
+              CGWA credits
+            </span>
+          </div>
 
-              {/* Action Column */}
-              <div className="flex flex-col sm:flex-row md:flex-col gap-3 shrink-0 w-full sm:w-auto">
-                <Link
-                  href="/contact?product=rainsink"
-                  className="inline-flex items-center justify-center gap-2 bg-moss hover:bg-moss/90 text-deep-aquifer font-button-text font-semibold text-sm px-6 py-3.5 rounded-[6px] transition-all duration-300 group cursor-pointer whitespace-nowrap"
-                >
-                  <span>Request site survey</span>
-                  <span className="material-symbols-outlined text-[18px] group-hover:translate-x-0.5 transition-transform">
-                    arrow_forward
-                  </span>
-                </Link>
+          <div className="pt-2 flex flex-col sm:flex-row items-center gap-3 w-full sm:w-auto">
+            <Link
+              href="/contact?product=rainsink"
+              className="w-full sm:w-auto inline-flex items-center justify-center gap-2 bg-deep-aquifer hover:bg-forest-slate text-light-aquifer-canvas font-button-text font-semibold text-button-text px-8 py-3.5 rounded-[6px] transition-all duration-300 group cursor-pointer whitespace-nowrap"
+            >
+              <span>Request site survey</span>
+              <span className="material-symbols-outlined text-[18px] group-hover:translate-x-0.5 transition-transform">
+                arrow_forward
+              </span>
+            </Link>
 
-                <a
-                  href={`tel:${CONTACT.phone}`}
-                  className="inline-flex items-center justify-center gap-2 bg-[#132742]/80 hover:bg-[#183457] text-white font-button-text font-semibold text-xs px-5 py-2.5 rounded-[6px] transition-colors border border-[#22446d]/70 whitespace-nowrap"
-                >
-                  <span className="material-symbols-outlined text-[15px]">call</span>
-                  <span>{CONTACT.phoneDisplay}</span>
-                </a>
-              </div>
-            </div>
+            <a
+              href={`tel:${CONTACT.phone}`}
+              className="w-full sm:w-auto inline-flex items-center justify-center gap-2 border border-[#bcd7e8]/70 bg-white hover:bg-[#e7f3f9] hover:border-[#748D8C] text-deep-aquifer font-button-text font-semibold text-button-text px-7 py-3.5 rounded-[6px] transition-colors whitespace-nowrap"
+            >
+              <span className="material-symbols-outlined text-[16px]">call</span>
+              <span>{CONTACT.phoneDisplay}</span>
+            </a>
+          </div>
+
+          <div className="mt-8 pt-6 flex flex-wrap items-center gap-3 text-secondary/70 text-xs font-mono border-t border-[#bcd7e8]/60 w-full">
+            <span className="w-1.5 h-1.5 rounded-full bg-moss shrink-0"></span>
+            <span>Zero structural risk standard &bull; Engineered to IS 15797:2008 &bull; CGWA &amp; IGBC compliant</span>
           </div>
         </div>
       </section>

@@ -9,7 +9,7 @@ export const metadata: Metadata = {
     "Learn about Skyra's mission, closed-loop hydrological engineering, and our founding team of civil hydrologists, environmental scientists, and systems engineers.",
 };
 
-const FOUNDERS = [
+export const FOUNDERS = [
   {
     name: "Dr. Madhavan Nair",
     role: "Co-Founder & Chief Hydrologist",
@@ -253,41 +253,106 @@ export default function AboutPage() {
           </div>
         </div>
 
-        {/* Beat 3: Proving Grounds & Impact */}
+        {/* Beat 3: SEO Section - Regional Hydro-Geological Standards & Verification */}
         <div className="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="space-y-12">
             <div className="space-y-4 max-w-3xl">
               <span className="font-mono text-xs text-moss font-medium block">
-                03 • Verification &amp; scale
+                03 • Regional standards &amp; hydro-geological compliance
               </span>
               <h2 className="font-headline-h2 text-[28px] sm:text-[36px] font-semibold text-deep-aquifer tracking-tight">
-                Kalamassery R&amp;D proving grounds
+                Engineered for South India’s soil strata &amp; groundwater guidelines
               </h2>
               <p className="font-body-primary text-base font-normal text-deep-aquifer leading-relaxed">
-                Engineered at our central laboratory along the NH 544 Corridor in Kalamassery, Kerala, every Skyra installation is monitored against strict hydrological telemetry standards.
+                Every Skyra rainwater harvesting and aquifer replenishment system is built to rigorous national hydrological standards. Rather than generic catchment pits, our civil engineers design zone-calibrated infiltration solutions tailored to the diverse lithological profiles of Kerala, Karnataka, and Tamil Nadu.
               </p>
             </div>
 
-            <div className="space-y-6">
-              <div className="relative w-full rounded-[4px] overflow-hidden aspect-[1.79/1] bg-surface-container border border-muted-aquifer/20">
+            <div className="space-y-8">
+              {/* Documentary Field Photo */}
+              <div className="relative w-full rounded-[4px] overflow-hidden aspect-[16/9] sm:aspect-[1.79/1] bg-surface-container border border-muted-aquifer/20 shadow-xs">
                 <img
-                  alt="Kalamassery Proving Grounds Prototype"
+                  alt="Civil hydrologists conducting on-site soil percolation and groundwater recharge survey"
                   className="w-full h-full object-cover"
-                  src="/images/kalamassery-proving-grounds.jpg"
+                  src="/images/groundwater-recharge-survey.jpg"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-deep-aquifer/80 via-deep-aquifer/20 to-transparent"></div>
-                <div className="absolute bottom-6 left-6 right-6 flex items-end justify-between text-white">
-                  <span className="font-mono text-xs text-white/90">
-                    Kalamassery proving grounds • Commercial prototype 04
-                  </span>
-                  <span className="hidden sm:inline-block font-mono text-xs text-white/70">
-                    Passive infiltration series
+                <div className="absolute inset-0 bg-gradient-to-t from-deep-aquifer/85 via-deep-aquifer/25 to-transparent"></div>
+                <div className="absolute bottom-4 left-4 right-4 sm:bottom-6 sm:left-6 sm:right-6 flex flex-col sm:flex-row sm:items-end justify-between gap-2 text-white">
+                  <div className="flex flex-col gap-1">
+                    <span className="font-mono text-xs text-white/95 font-medium">
+                      On-site hydro-geological survey &amp; percolation rate profiling
+                    </span>
+                    <span className="font-mono text-[11px] text-white/75">
+                      Commercial campus aquifer recharge • Regional validation
+                    </span>
+                  </div>
+                  <span className="inline-flex items-center gap-1.5 font-mono text-xs text-moss bg-deep-aquifer/80 px-2.5 py-1 rounded-[4px] border border-[#22446d]/60 w-fit">
+                    <span className="w-1.5 h-1.5 rounded-full bg-moss"></span>
+                    IS 15797:2008 &bull; CGWA Norms
                   </span>
                 </div>
               </div>
 
+              {/* SEO Regulatory & Technical Standards Cards */}
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <div className="p-6 rounded-[4px] bg-white border border-muted-aquifer/20 flex flex-col justify-between gap-3 shadow-xs">
+                  <div className="space-y-2">
+                    <div className="flex items-center gap-2 text-moss font-mono text-xs font-medium">
+                      <span className="material-symbols-outlined text-[18px]">verified</span>
+                      <span>BIS &amp; CGWA compliance</span>
+                    </div>
+                    <h3 className="font-headline-h3 text-lg font-semibold text-deep-aquifer">
+                      IS 15797:2008 &amp; Central Ground Water Authority guidelines
+                    </h3>
+                    <p className="font-body-primary text-sm font-normal text-deep-aquifer/80 leading-relaxed">
+                      All infiltration shafts and percolation units adhere strictly to Bureau of Indian Standards (BIS) specifications for artificial groundwater recharge, mitigating surface runoff while preventing deep-aquifer contamination.
+                    </p>
+                  </div>
+                  <span className="font-mono text-xs text-secondary/70 pt-2 border-t border-muted-aquifer/15">
+                    Regulatory compliance
+                  </span>
+                </div>
+
+                <div className="p-6 rounded-[4px] bg-white border border-muted-aquifer/20 flex flex-col justify-between gap-3 shadow-xs">
+                  <div className="space-y-2">
+                    <div className="flex items-center gap-2 text-moss font-mono text-xs font-medium">
+                      <span className="material-symbols-outlined text-[18px]">layers</span>
+                      <span>Lithological adaptation</span>
+                    </div>
+                    <h3 className="font-headline-h3 text-lg font-semibold text-deep-aquifer">
+                      Subsurface soil strata &amp; percolation rate profiling
+                    </h3>
+                    <p className="font-body-primary text-sm font-normal text-deep-aquifer/80 leading-relaxed">
+                      Custom-engineered for regional South Indian geology: high-drainage coastal laterites in Kerala, fractured granite crystalline bedrock across Bengaluru, and alluvial basins in Tamil Nadu.
+                    </p>
+                  </div>
+                  <span className="font-mono text-xs text-secondary/70 pt-2 border-t border-muted-aquifer/15">
+                    Geotechnical engineering
+                  </span>
+                </div>
+
+                <div className="p-6 rounded-[4px] bg-white border border-muted-aquifer/20 flex flex-col justify-between gap-3 shadow-xs">
+                  <div className="space-y-2">
+                    <div className="flex items-center gap-2 text-moss font-mono text-xs font-medium">
+                      <span className="material-symbols-outlined text-[18px]">eco</span>
+                      <span>ESG &amp; Green Building</span>
+                    </div>
+                    <h3 className="font-headline-h3 text-lg font-semibold text-deep-aquifer">
+                      IGBC, GRIHA &amp; LEED water credits
+                    </h3>
+                    <p className="font-body-primary text-sm font-normal text-deep-aquifer/80 leading-relaxed">
+                      Equips industrial corridors and commercial IT parks to achieve complete water neutrality and qualify for maximum points under national green building rating frameworks.
+                    </p>
+                  </div>
+                  <span className="font-mono text-xs text-secondary/70 pt-2 border-t border-muted-aquifer/15">
+                    Sustainability benchmarking
+                  </span>
+                </div>
+              </div>
+
+              {/* Quantified Verification Metrics */}
               <div className="grid grid-cols-2 md:grid-cols-4 gap-4 sm:gap-6 pt-2">
-                <div className="p-5 rounded-[4px] bg-white border border-muted-aquifer/20">
+                <div className="p-5 rounded-[4px] bg-white border border-muted-aquifer/20 shadow-xs">
                   <span className="block font-mono text-3xl sm:text-4xl font-bold text-deep-aquifer">
                     14
                   </span>
@@ -295,7 +360,7 @@ export default function AboutPage() {
                     States active across India
                   </span>
                 </div>
-                <div className="p-5 rounded-[4px] bg-white border border-muted-aquifer/20">
+                <div className="p-5 rounded-[4px] bg-white border border-muted-aquifer/20 shadow-xs">
                   <span className="block font-mono text-3xl sm:text-4xl font-bold text-deep-aquifer">
                     420+
                   </span>
@@ -303,7 +368,7 @@ export default function AboutPage() {
                     Engineered installations
                   </span>
                 </div>
-                <div className="p-5 rounded-[4px] bg-white border border-muted-aquifer/20">
+                <div className="p-5 rounded-[4px] bg-white border border-muted-aquifer/20 shadow-xs">
                   <span className="block font-mono text-3xl sm:text-4xl font-bold text-deep-aquifer">
                     2.4B
                   </span>
@@ -311,7 +376,7 @@ export default function AboutPage() {
                     Litres infiltrated annually
                   </span>
                 </div>
-                <div className="p-5 rounded-[4px] bg-white border border-muted-aquifer/20">
+                <div className="p-5 rounded-[4px] bg-white border border-muted-aquifer/20 shadow-xs">
                   <span className="block font-mono text-3xl sm:text-4xl font-bold text-deep-aquifer">
                     100%
                   </span>
@@ -325,7 +390,8 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* SECTION 3: FOUNDERS & LEADERSHIP */}
+      {/* SECTION 3: FOUNDERS & LEADERSHIP (Preserved for later use) */}
+      {/*
       <section className="relative z-10 w-full py-16 sm:py-24 bg-white border-t border-muted-aquifer/15">
         <div className="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-3xl mb-16">
@@ -383,6 +449,7 @@ export default function AboutPage() {
           </div>
         </div>
       </section>
+      */}
 
       {/* SECTION 4: CLOSING MANDATE */}
       <section className="relative z-10 w-full bg-linear-to-b from-[#edf6fa] via-[#e5f1f7] to-[#edf6fa] text-deep-aquifer py-16 sm:py-24 border-t border-[#c8e0ee]/60">
