@@ -83,8 +83,8 @@ export function MetricCard({
             {value}
             {suffix}
           </div>
-          <h3 className="mt-2 text-xl font-bold font-headline-h3 text-deep-aquifer">{title}</h3>
-          <p className="mt-1 text-xs leading-relaxed font-body-sm text-deep-aquifer/75 sm:text-sm">{description}</p>
+          <h3 className="mt-2 text-[24px] font-medium font-headline-h3 text-deep-aquifer">{title}</h3>
+          <p className="mt-1 text-base leading-relaxed font-body-primary text-deep-aquifer">{description}</p>
         </div>
       </div>
 

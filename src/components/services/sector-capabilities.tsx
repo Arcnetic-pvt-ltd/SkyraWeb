@@ -9,9 +9,9 @@ const SECTORS = [
     icon: <HomeIcon className="size-3.5" />,
     badgeTone: "bg-white/90 border-[#0098a6]/30 text-[#0098a6]",
     eyebrow: "Residential",
-    title: "Villas & Gated Communities",
+    title: "Villas & gated communities",
     description: "Compact automated rooftop multi-stage filtration, subterranean cisterns, and full potable water integration directly into domestic plumbing.",
-    linkLabel: "Potable Rainwater Ready",
+    linkLabel: "Potable rainwater ready",
     targetHref: "/contact?sector=residential",
   },
   {
@@ -19,9 +19,9 @@ const SECTORS = [
     icon: <BuildingIcon className="size-3.5" />,
     badgeTone: "bg-white/90 border-moss/30 text-moss",
     eyebrow: "Commercial",
-    title: "IT Parks & Corporate Hubs",
+    title: "IT parks & corporate hubs",
     description: "High-volume underground retention vaults, dual-circuit greywater networks, cooling tower make-up water recycling, and LEED water credits.",
-    linkLabel: "LEED Point Optimization",
+    linkLabel: "LEED point optimization",
     targetHref: "/contact?sector=commercial",
   },
   {
@@ -29,9 +29,9 @@ const SECTORS = [
     icon: <BuildingIcon className="size-3.5" />,
     badgeTone: "bg-white/90 border-sky-600/30 text-sky-600",
     eyebrow: "Hospitality",
-    title: "Resorts & Eco-Hotels",
+    title: "Resorts & eco-hotels",
     description: "Peak storm runoff interception, oil-grit separators, continuous groundwater injection, and non-stop operational water security for guests.",
-    linkLabel: "Peak Resilience",
+    linkLabel: "Peak resilience",
     targetHref: "/contact?sector=hospitality",
   },
   {
@@ -39,9 +39,9 @@ const SECTORS = [
     icon: <LeafIcon className="size-3.5" />,
     badgeTone: "bg-white/90 border-emerald-600/30 text-emerald-600",
     eyebrow: "Agriculture",
-    title: "Plantations & Miyawaki Forests",
+    title: "Plantations & Miyawaki forests",
     description: "Contour swales, engineered retention ponds, and deep aquifer recharge shafts that stabilize open borewells and guarantee drought-resilient irrigation.",
-    linkLabel: "Aquifer Borewell Security",
+    linkLabel: "Aquifer borewell security",
     targetHref: "/contact?sector=agriculture",
   },
 ] as const;
@@ -59,14 +59,14 @@ export function SectorCapabilities() {
         <div className="flex flex-col gap-3 max-w-2xl">
           <div className="inline-flex items-center gap-2.5">
             <span className="inline-block w-2 h-2 rounded-full bg-moss animate-pulse"></span>
-            <span className="font-technical-label text-body-sm text-moss font-semibold uppercase tracking-wider">
-              TAILORED ENGINEERING
+            <span className="font-mono text-xs font-medium text-moss">
+              Tailored engineering
             </span>
           </div>
           <h2 className="font-headline-h2 text-headline-h2-mobile sm:text-headline-h2 text-deep-aquifer tracking-tight leading-tight">
-            Sector Capabilities &amp; Built Environments
+            Sector capabilities &amp; built environments
           </h2>
-          <p className="font-body-large text-body-large text-deep-aquifer/80 leading-relaxed">
+          <p className="font-body-primary text-base font-normal text-deep-aquifer leading-relaxed">
             From private high-end residences to hyper-scale commercial hubs, Skyra customizes the hydraulic profile to match the exact physical and environmental demands of each sector.
           </p>
         </div>

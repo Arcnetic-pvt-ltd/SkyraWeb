@@ -15,14 +15,14 @@ export default function ServicesPage() {
       {/* Top Section: Editorial Header */}
       <section className="w-full max-w-5xl mx-auto px-6 lg:px-8 pt-28 pb-16 md:pt-32 md:pb-24">
         <div className="max-w-3xl flex flex-col gap-6">
-          <span className="inline-flex items-center gap-2 font-technical-label text-body-sm uppercase tracking-wider text-moss font-semibold">
+          <span className="inline-flex items-center gap-2 font-mono text-xs tracking-wide text-moss font-medium">
             <span className="w-2 h-2 rounded-full bg-moss animate-pulse"></span>
-            Systems &amp; Architecture
+            Systems &amp; architecture
           </span>
           <h1 className="font-headline-hero text-headline-hero-mobile sm:text-headline-hero text-deep-aquifer tracking-tight text-balance">
-            Core Water Management Solutions
+            Core water management solutions
           </h1>
-          <p className="font-body-large text-body-large text-muted-aquifer leading-relaxed max-w-2xl text-balance">
+          <p className="font-body-primary text-base font-normal text-deep-aquifer leading-relaxed max-w-2xl text-balance">
             Three natural, engineering-grade approaches to catching, filtering, and storing water where it falls.
           </p>
         </div>
@@ -35,24 +35,24 @@ export default function ServicesPage() {
             {/* Content Column */}
             <div className="lg:col-span-6 flex flex-col gap-6">
               <div className="flex items-center gap-3">
-                <span className="font-mono text-body-sm text-moss font-semibold">01</span>
+                <span className="font-mono text-xs text-moss font-semibold">01</span>
                 <span className="w-8 h-px bg-muted-aquifer/30"></span>
-                <span className="font-mono text-body-sm text-muted-aquifer">Decentralized Storage</span>
+                <span className="font-mono text-xs text-deep-aquifer/70">Decentralized storage</span>
               </div>
               <h2 className="font-headline-h2 text-headline-h2-mobile sm:text-headline-h2 text-deep-aquifer tracking-tight">
-                Site-Specific Rainwater Harvesting
+                Site-specific rainwater harvesting
               </h2>
-              <p className="font-body-large text-body-large text-deep-aquifer/80 leading-relaxed">
+              <p className="font-body-primary text-base font-normal text-deep-aquifer leading-relaxed">
                 We design your property to catch its own water &mdash; filtered, stored, and ready to use &mdash; so you rely a little less on the tanker or the municipal line, and the ground beneath you gets a little healthier every monsoon.
               </p>
-              <div className="pt-2 flex flex-col gap-3 font-mono text-body-sm text-muted-aquifer">
+              <div className="pt-2 flex flex-col gap-3 font-mono text-xs text-deep-aquifer">
                 <div className="flex items-center gap-2.5">
                   <span className="material-symbols-outlined text-[20px] text-moss">check_circle</span>
-                  <span className="text-deep-aquifer/90 font-medium">Zero-loss gravity filtration</span>
+                  <span className="text-deep-aquifer font-medium">Zero-loss gravity filtration</span>
                 </div>
                 <div className="flex items-center gap-2.5">
                   <span className="material-symbols-outlined text-[20px] text-moss">check_circle</span>
-                  <span className="text-deep-aquifer/90 font-medium">Potable-grade cistern storage</span>
+                  <span className="text-deep-aquifer font-medium">Potable-grade cistern storage</span>
                 </div>
               </div>
 
@@ -61,7 +61,7 @@ export default function ServicesPage() {
                   href="/contact?service=rainwater-harvesting"
                   className="inline-flex items-center gap-2.5 bg-deep-aquifer hover:bg-forest-slate text-light-aquifer-canvas font-button-text text-button-text px-6 py-3 rounded-full transition-all duration-300 shadow-sm hover:shadow-md group"
                 >
-                  <span>Get Quote &amp; Estimate</span>
+                  <span>Get quote &amp; estimate</span>
                   <span className="material-symbols-outlined text-[18px]">
                     request_quote
                   </span>
@@ -70,7 +70,7 @@ export default function ServicesPage() {
                   href="/contact?query=rainwater-harvesting"
                   className="inline-flex items-center gap-1.5 font-button-text text-button-text text-deep-aquifer hover:text-moss transition-colors py-2 px-3"
                 >
-                  <span>Send Query</span>
+                  <span>Send query</span>
                   <span className="material-symbols-outlined text-[18px]">
                     help_outline
                   </span>
@@ -164,24 +164,24 @@ export default function ServicesPage() {
             {/* Content Column */}
             <div className="lg:col-span-6 flex flex-col gap-6">
               <div className="flex items-center gap-3">
-                <span className="font-mono text-body-sm text-moss font-semibold">02</span>
+                <span className="font-mono text-xs text-moss font-semibold">02</span>
                 <span className="w-8 h-px bg-muted-aquifer/30"></span>
-                <span className="font-mono text-body-sm text-muted-aquifer">Surface Hydraulics</span>
+                <span className="font-mono text-xs text-deep-aquifer/70">Surface hydraulics</span>
               </div>
               <h2 className="font-headline-h2 text-headline-h2-mobile sm:text-headline-h2 text-deep-aquifer tracking-tight">
-                Stormwater Management Solutions
+                Stormwater management solutions
               </h2>
-              <p className="font-body-large text-body-large text-deep-aquifer/80 leading-relaxed">
+              <p className="font-body-primary text-base font-normal text-deep-aquifer leading-relaxed">
                 When the rain comes hard and fast, we make sure it has somewhere good to go &mdash; routed safely away from your building, and guided toward the aquifers that need it, instead of flooding the street.
               </p>
-              <div className="pt-2 flex flex-col gap-3 font-mono text-body-sm text-muted-aquifer">
+              <div className="pt-2 flex flex-col gap-3 font-mono text-xs text-deep-aquifer">
                 <div className="flex items-center gap-2.5">
                   <span className="material-symbols-outlined text-[20px] text-moss">grain</span>
-                  <span className="text-deep-aquifer/90 font-medium">Subsurface attenuation crates</span>
+                  <span className="text-deep-aquifer font-medium">Subsurface attenuation crates</span>
                 </div>
                 <div className="flex items-center gap-2.5">
                   <span className="material-symbols-outlined text-[20px] text-moss">water</span>
-                  <span className="text-deep-aquifer/90 font-medium">Bio-swale retention design</span>
+                  <span className="text-deep-aquifer font-medium">Bio-swale retention design</span>
                 </div>
               </div>
 
@@ -190,7 +190,7 @@ export default function ServicesPage() {
                   href="/contact?service=stormwater-management"
                   className="inline-flex items-center gap-2.5 bg-deep-aquifer hover:bg-forest-slate text-light-aquifer-canvas font-button-text text-button-text px-6 py-3 rounded-full transition-all duration-300 shadow-sm hover:shadow-md group"
                 >
-                  <span>Get Quote &amp; Estimate</span>
+                  <span>Get quote &amp; estimate</span>
                   <span className="material-symbols-outlined text-[18px]">
                     request_quote
                   </span>
@@ -199,7 +199,7 @@ export default function ServicesPage() {
                   href="/contact?query=stormwater-management"
                   className="inline-flex items-center gap-1.5 font-button-text text-button-text text-deep-aquifer hover:text-moss transition-colors py-2 px-3"
                 >
-                  <span>Send Query</span>
+                  <span>Send query</span>
                   <span className="material-symbols-outlined text-[18px]">
                     help_outline
                   </span>
@@ -217,24 +217,24 @@ export default function ServicesPage() {
             {/* Content Column */}
             <div className="lg:col-span-6 flex flex-col gap-6">
               <div className="flex items-center gap-3">
-                <span className="font-mono text-body-sm text-tertiary-fixed font-semibold">03</span>
+                <span className="font-mono text-xs text-tertiary-fixed font-semibold">03</span>
                 <span className="w-8 h-px bg-light-aquifer-canvas/20"></span>
-                <span className="font-mono text-body-sm text-light-aquifer-canvas/60">Bio-Hydrological Sponge</span>
+                <span className="font-mono text-xs text-light-aquifer-canvas/60">Bio-hydrological sponge</span>
               </div>
               <h2 className="font-headline-h2 text-headline-h2-mobile sm:text-headline-h2 text-white tracking-tight">
-                Afforestation &amp; Miyawaki Forests
+                Afforestation &amp; Miyawaki forests
               </h2>
-              <p className="font-body-large text-body-large text-light-aquifer-canvas/85 leading-relaxed">
+              <p className="font-body-primary text-base font-normal text-light-aquifer-canvas/90 leading-relaxed">
                 On land that’s gone bare, we bring back dense, native forest &mdash; the kind that heals soil, holds water, and quietly pulls carbon from the air. It’s slow work that pays off for decades.
               </p>
-              <div className="pt-2 flex flex-col gap-3 font-mono text-body-sm text-light-aquifer-canvas/70">
+              <div className="pt-2 flex flex-col gap-3 font-mono text-xs text-light-aquifer-canvas/70">
                 <div className="flex items-center gap-2.5">
                   <span className="material-symbols-outlined text-[20px] text-tertiary-fixed">forest</span>
-                  <span className="text-light-aquifer-canvas/90 font-medium">30x multi-tier canopy density</span>
+                  <span className="text-light-aquifer-canvas font-medium">30x multi-tier canopy density</span>
                 </div>
                 <div className="flex items-center gap-2.5">
                   <span className="material-symbols-outlined text-[20px] text-tertiary-fixed">yard</span>
-                  <span className="text-light-aquifer-canvas/90 font-medium">High-speed organic root penetration</span>
+                  <span className="text-light-aquifer-canvas font-medium">High-speed organic root penetration</span>
                 </div>
               </div>
 
@@ -243,7 +243,7 @@ export default function ServicesPage() {
                   href="/contact?service=afforestation"
                   className="inline-flex items-center gap-2.5 bg-moss hover:bg-moss/90 text-deep-aquifer font-button-text text-button-text px-6 py-3 rounded-full transition-all duration-300 shadow-sm hover:shadow-md font-semibold group"
                 >
-                  <span>Get Quote &amp; Estimate</span>
+                  <span>Get quote &amp; estimate</span>
                   <span className="material-symbols-outlined text-[18px]">
                     request_quote
                   </span>
@@ -252,7 +252,7 @@ export default function ServicesPage() {
                   href="/contact?query=afforestation"
                   className="inline-flex items-center gap-1.5 font-button-text text-button-text text-light-aquifer-canvas/80 hover:text-white transition-colors py-2 px-3"
                 >
-                  <span>Send Query</span>
+                  <span>Send query</span>
                   <span className="material-symbols-outlined text-[18px]">
                     help_outline
                   </span>
@@ -274,7 +274,7 @@ export default function ServicesPage() {
                   <path d="M 270 132 L 265 175" opacity="0.8" stroke="#F8FCFE" strokeLinecap="round" strokeWidth="2" />
 
                   <rect fill="#cbef85" height="4" opacity="0.6" width="380" x="40" y="174" />
-                  <text fill="#cbef85" fontFamily="Space Mono" fontSize="10" letterSpacing="0.05em" x="45" y="167">ORGANIC SPONGE LAYER</text>
+                  <text fill="#cbef85" fontFamily="Geist Mono, monospace" fontSize="10" letterSpacing="0.05em" x="45" y="167">ORGANIC SPONGE LAYER</text>
 
                   <g fill="none" stroke="#cbef85" strokeLinecap="round">
                     <path d="M 215 178 C 215 210 200 240 205 285" opacity="0.9" strokeWidth="2.5" />
@@ -296,7 +296,7 @@ export default function ServicesPage() {
                   <circle cx="130" cy="265" fill="#cbef85" r="3">
                     <animate attributeName="opacity" begin="1.2s" dur="3.5s" repeatCount="indefinite" values="0.2;0.8;0.2" />
                   </circle>
-                  <text fill="#F8FCFE" fontFamily="Space Mono" fontSize="9" opacity="0.5" x="320" y="240">IN SITU CARBON SINK</text>
+                  <text fill="#F8FCFE" fontFamily="Geist Mono, monospace" fontSize="9" opacity="0.5" x="320" y="240">IN SITU CARBON SINK</text>
                 </svg>
               </div>
             </div>
@@ -311,13 +311,13 @@ export default function ServicesPage() {
       <section className="w-full bg-light-aquifer-canvas py-20 md:py-28">
         <div className="max-w-6xl mx-auto px-6 lg:px-8">
           <div className="max-w-2xl mb-10 sm:mb-14">
-            <span className="font-technical-label text-body-sm text-moss font-semibold uppercase tracking-wider block mb-3">
-              Hardware &amp; Infrastructure
+            <span className="font-mono text-xs text-moss font-medium tracking-wide block mb-3">
+              Hardware &amp; infrastructure
             </span>
             <h2 className="font-headline-h2 text-headline-h2-mobile sm:text-headline-h2 text-deep-aquifer tracking-tight mb-4">
-              Dedicated Product Integrations
+              Dedicated product integrations
             </h2>
-            <p className="font-body-large text-body-large text-muted-aquifer leading-relaxed">
+            <p className="font-body-primary text-base font-normal text-deep-aquifer leading-relaxed">
               Some jobs call for a complete system. Others just need the right piece. Our product range works both ways — as standalone tools, or built into a larger Skyra Rainsink system.
             </p>
           </div>
@@ -329,13 +329,13 @@ export default function ServicesPage() {
       {/* CTA Section */}
       <section className="w-full py-20 md:py-28 bg-white border-t border-muted-aquifer/15">
         <div className="max-w-3xl mx-auto px-6 text-center flex flex-col items-center gap-6">
-          <span className="font-technical-label text-body-sm uppercase tracking-wider text-moss font-semibold">
-            Consultation &amp; Site Assessment
+          <span className="font-mono text-xs tracking-wide text-moss font-medium">
+            Consultation &amp; site assessment
           </span>
           <h2 className="font-headline-h2 text-headline-h2-mobile sm:text-headline-h2 text-deep-aquifer tracking-tight">
             Have a specific property or watershed in mind?
           </h2>
-          <p className="font-body-large text-body-large text-muted-aquifer max-w-xl">
+          <p className="font-body-primary text-base font-normal text-deep-aquifer max-w-xl">
             We walk the land, study the soil hydrology, and prepare a frank, transparent feasibility analysis before any work begins.
           </p>
           <div className="pt-4 flex flex-col sm:flex-row items-center gap-4">
@@ -343,7 +343,7 @@ export default function ServicesPage() {
               href="/contact"
               className="bg-deep-aquifer hover:bg-forest-slate text-light-aquifer-canvas font-button-text text-button-text px-8 py-3.5 rounded-full transition-all duration-300 hover:shadow-lg"
             >
-              Request a Hydrological Study
+              Request a hydrological study
             </Link>
             <Link
               href="/about"

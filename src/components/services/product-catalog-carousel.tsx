@@ -31,10 +31,10 @@ export const PRODUCTS_CATALOG: ProductItem[] = [
     category: "rooftop",
     description:
       "Compact 2-stage gravity Reverse Y-flow filter in high-impact ABS engineering plastic housing. Utilizes dual polymeric screen elements (0.5mm non-clogging slot + 400µm secondary mesh) for >95% efficiency.",
-    metric1Label: "Max Filtration Rate",
+    metric1Label: "Max filtration rate",
     metric1Value: "120",
     metric1Unit: "L/MIN (>95%)",
-    metric2Label: "Filter Mesh & Price",
+    metric2Label: "Filter mesh & price",
     metric2Value: "400µm Polymer Screen | ₹3,250",
     image: "/images/neerain-nru150-exact.jpg",
     contactProductSlug: "neerain-nru-150",
@@ -48,10 +48,10 @@ export const PRODUCTS_CATALOG: ProductItem[] = [
     category: "rooftop",
     description:
       "Advanced 2-stage gravity Reverse Y-flow filter featuring SS 304 curved non-clogging primary screen (0.5mm slot) paired with high-density 200 Micron polymeric secondary mesh in ABS housing.",
-    metric1Label: "Max Filtration Rate",
+    metric1Label: "Max filtration rate",
     metric1Value: "150",
     metric1Unit: "L/MIN (>95%)",
-    metric2Label: "Filter Mesh & Price",
+    metric2Label: "Filter mesh & price",
     metric2Value: "SS 304 Curved + 200µm | ₹7,150",
     image: "/images/neerain-exact-filter.jpg",
     contactProductSlug: "neerain-nrn-220",
@@ -65,10 +65,10 @@ export const PRODUCTS_CATALOG: ProductItem[] = [
     category: "rooftop",
     description:
       "Industrial 1:10 sloped stainless steel 304 chamber on 6 heavy-duty legs. Uses gravity flow through Debris Sump, Silex Bed, Activated Carbon, and Quartz Sand.",
-    metric1Label: "Roof Capacity",
+    metric1Label: "Roof capacity",
     metric1Value: "5,000",
     metric1Unit: "SQ FT",
-    metric2Label: "Chamber Material",
+    metric2Label: "Chamber material",
     metric2Value: "SS304 Sloped (1:10)",
     image: "/images/sloped-ss-filter.jpg",
     contactProductSlug: "ss-4-chamber-filter",
@@ -82,10 +82,10 @@ export const PRODUCTS_CATALOG: ProductItem[] = [
     category: "industrial",
     description:
       "Heavy-duty 10 LPS industrial rainwater filter cabinet designed for 750 m² roof catchments. Features 140mm dual inlet/outlet flanges and quick-flush drain manifold.",
-    metric1Label: "Discharge Rate",
+    metric1Label: "Discharge rate",
     metric1Value: "10",
     metric1Unit: "LPS (140mm)",
-    metric2Label: "Rainfall Intensity",
+    metric2Label: "Rainfall intensity",
     metric2Value: "50 mm/hr Peak",
     image: "/images/skyra-rc-750-filter.jpg",
     contactProductSlug: "750-series-filter",
@@ -99,10 +99,10 @@ export const PRODUCTS_CATALOG: ProductItem[] = [
     category: "infrastructure",
     description:
       "Eco-engineered subterranean percolation pond with dry rubble stone masonry walls, organic sponge silt trap, and deep injection well into unconfined aquifers.",
-    metric1Label: "Recharge Well Depth",
+    metric1Label: "Recharge well depth",
     metric1Value: "150+",
     metric1Unit: "FT",
-    metric2Label: "Pond Construction",
+    metric2Label: "Pond construction",
     metric2Value: "Dry Rubble Masonry",
     image: "/images/drm-percolation-pond.jpg",
     contactProductSlug: "drm-percolation-pond",
@@ -150,10 +150,10 @@ export function ProductCatalogCarousel() {
       <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 pb-4 border-b border-muted-aquifer/15">
         <div className="flex flex-wrap items-center gap-2">
           {[
-            { id: "all", label: "All Products" },
-            { id: "rooftop", label: "Rooftop Filters" },
-            { id: "industrial", label: "Industrial Systems" },
-            { id: "infrastructure", label: "Percolation Ponds" },
+            { id: "all", label: "All products" },
+            { id: "rooftop", label: "Rooftop filters" },
+            { id: "industrial", label: "Industrial systems" },
+            { id: "infrastructure", label: "Percolation ponds" },
           ].map((tab) => {
             const isActive = activeCategory === tab.id;
             return (
@@ -213,8 +213,8 @@ export function ProductCatalogCarousel() {
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-stretch">
           {/* Static Side Stack of Other Products in Catalog (5 Cols - Left) */}
           <div className="lg:col-span-5 flex flex-col gap-4">
-            <span className="font-technical-label text-xs uppercase tracking-wider text-muted-aquifer font-semibold">
-              Catalog Overview ({total} Models)
+            <span className="font-mono text-xs text-muted-aquifer font-medium">
+              Catalog overview ({total} models)
             </span>
 
             <div className="flex flex-col gap-3">
@@ -244,7 +244,7 @@ export function ProductCatalogCarousel() {
                     <div className="flex flex-col flex-1 min-w-0">
                       <div className="flex items-center gap-2">
                         <span
-                          className={`font-technical-label text-[10px] px-2 py-0.5 rounded font-semibold ${
+                          className={`font-mono text-[10px] px-2 py-0.5 rounded font-medium ${
                             isSelected
                               ? "bg-moss text-deep-aquifer"
                               : "bg-moss/10 text-moss"
@@ -261,7 +261,7 @@ export function ProductCatalogCarousel() {
                         </span>
                       </div>
                       <h4
-                        className={`font-bold text-sm truncate mt-1 ${
+                        className={`font-medium text-sm truncate mt-1 ${
                           isSelected ? "text-white" : "text-deep-aquifer"
                         }`}
                       >
@@ -310,10 +310,10 @@ export function ProductCatalogCarousel() {
 
                     {/* Top Overlay Badges */}
                     <div className="absolute top-4 left-4 right-4 flex items-center justify-between pointer-events-none">
-                      <span className="font-technical-label text-[11px] text-white bg-deep-aquifer/85 backdrop-blur-md px-3 py-1 rounded-full font-semibold border border-white/10 shadow-sm">
+                      <span className="font-mono text-[11px] text-white bg-deep-aquifer/85 backdrop-blur-md px-3 py-1 rounded-full font-medium border border-white/10 shadow-sm">
                         {filteredProducts[currentIndex].series}
                       </span>
-                      <span className="font-technical-label text-[11px] text-moss bg-white/90 backdrop-blur-md px-3 py-1 rounded-full font-bold shadow-sm">
+                      <span className="font-mono text-[11px] text-moss bg-white/90 backdrop-blur-md px-3 py-1 rounded-full font-medium shadow-sm">
                         {filteredProducts[currentIndex].capacityTag}
                       </span>
                     </div>
@@ -334,10 +334,10 @@ export function ProductCatalogCarousel() {
                   {/* Product Details Content */}
                   <div className="p-6 sm:p-8 flex flex-col justify-between flex-1 gap-6">
                     <div className="flex flex-col gap-3">
-                      <h3 className="font-headline-h3 text-headline-h3-mobile sm:text-headline-h3 text-deep-aquifer font-bold tracking-tight">
+                      <h3 className="font-headline-h3 text-[24px] font-medium leading-[1.3] text-deep-aquifer tracking-tight">
                         {filteredProducts[currentIndex].title}
                       </h3>
-                      <p className="font-body-primary text-body-primary text-deep-aquifer/80 leading-relaxed">
+                      <p className="font-body-primary text-base font-normal leading-relaxed text-deep-aquifer/85">
                         {filteredProducts[currentIndex].description}
                       </p>
                     </div>
@@ -346,10 +346,10 @@ export function ProductCatalogCarousel() {
                       {/* Metric Highlights Box */}
                       <div className="bg-light-aquifer-canvas p-4 rounded-xl border border-muted-aquifer/15 grid grid-cols-2 gap-4">
                         <div className="flex flex-col">
-                          <span className="font-body-sm text-[11px] uppercase tracking-wider text-muted-aquifer">
+                          <span className="font-mono text-xs font-medium text-muted-aquifer">
                             {filteredProducts[currentIndex].metric1Label}
                           </span>
-                          <span className="font-metric-mono-lg text-lg sm:text-xl font-bold text-deep-aquifer">
+                          <span className="font-mono text-lg sm:text-xl font-bold text-deep-aquifer">
                             {filteredProducts[currentIndex].metric1Value}{" "}
                             <span className="text-moss text-xs font-normal">
                               {filteredProducts[currentIndex].metric1Unit}
@@ -357,10 +357,10 @@ export function ProductCatalogCarousel() {
                           </span>
                         </div>
                         <div className="flex flex-col">
-                          <span className="font-body-sm text-[11px] uppercase tracking-wider text-muted-aquifer">
+                          <span className="font-mono text-xs font-medium text-muted-aquifer">
                             {filteredProducts[currentIndex].metric2Label}
                           </span>
-                          <span className="font-technical-label text-sm sm:text-base font-semibold text-deep-aquifer mt-1">
+                          <span className="font-mono text-sm sm:text-base font-medium text-deep-aquifer mt-1">
                             {filteredProducts[currentIndex].metric2Value}
                           </span>
                         </div>
@@ -371,11 +371,11 @@ export function ProductCatalogCarousel() {
                           <button
                             type="button"
                             onClick={() => setShowSpecTable(!showSpecTable)}
-                            className="w-full inline-flex items-center justify-between px-4 py-2.5 rounded-lg bg-surface-container-low hover:bg-slate-200/60 border border-muted-aquifer/20 font-technical-label text-xs font-semibold text-deep-aquifer transition-colors cursor-pointer"
+                            className="w-full inline-flex items-center justify-between px-4 py-2.5 rounded-lg bg-surface-container-low hover:bg-slate-200/60 border border-muted-aquifer/20 font-mono text-xs font-medium text-deep-aquifer transition-colors cursor-pointer"
                           >
                             <span className="flex items-center gap-2">
                               <span className="material-symbols-outlined text-moss text-base">table_chart</span>
-                              <span>Compare NRU 150 vs NRN 220 Datasheet</span>
+                              <span>Compare NRU 150 vs NRN 220 datasheet</span>
                             </span>
                             <span className="material-symbols-outlined text-sm">
                               {showSpecTable ? "expand_less" : "expand_more"}
@@ -392,49 +392,49 @@ export function ProductCatalogCarousel() {
                               <table className="w-full text-left font-mono">
                                 <thead>
                                   <tr className="border-b border-muted-aquifer/20 text-deep-aquifer font-bold bg-slate-50">
-                                    <th className="p-2 font-sans font-semibold">Technical Feature</th>
+                                    <th className="p-2 font-medium">Technical feature</th>
                                     <th className="p-2 text-moss font-bold">NRU 150</th>
                                     <th className="p-2 text-deep-aquifer font-bold">NRN 220</th>
                                   </tr>
                                 </thead>
                                 <tbody className="divide-y divide-slate-100 text-slate-700 text-[11px]">
                                   <tr>
-                                    <td className="p-2 font-sans font-medium text-slate-900">Suitable Roof Area</td>
+                                    <td className="p-2 font-medium text-slate-900">Suitable roof area</td>
                                     <td className="p-2">140 m²</td>
                                     <td className="p-2">150 m²</td>
                                   </tr>
                                   <tr>
-                                    <td className="p-2 font-sans font-medium text-slate-900">Rate of Filtration</td>
+                                    <td className="p-2 font-medium text-slate-900">Rate of filtration</td>
                                     <td className="p-2 font-bold text-moss">120 L/min</td>
                                     <td className="p-2 font-bold text-deep-aquifer">150 L/min</td>
                                   </tr>
                                   <tr>
-                                    <td className="p-2 font-sans font-medium text-slate-900">Filter Element 1</td>
+                                    <td className="p-2 font-medium text-slate-900">Filter element 1</td>
                                     <td className="p-2">Polymeric (0.5mm)</td>
                                     <td className="p-2 font-semibold text-deep-aquifer">SS 304 Curved (0.5mm)</td>
                                   </tr>
                                   <tr>
-                                    <td className="p-2 font-sans font-medium text-slate-900">Filter Element 2</td>
+                                    <td className="p-2 font-medium text-slate-900">Filter element 2</td>
                                     <td className="p-2">Polymeric 400µm</td>
                                     <td className="p-2">Polymeric 200µm</td>
                                   </tr>
                                   <tr>
-                                    <td className="p-2 font-sans font-medium text-slate-900">Inlet / Clean Outlet</td>
+                                    <td className="p-2 font-medium text-slate-900">Inlet / clean outlet</td>
                                     <td className="p-2">110mm ID / 110mm OD</td>
                                     <td className="p-2">110mm ID / 110mm OD</td>
                                   </tr>
                                   <tr>
-                                    <td className="p-2 font-sans font-medium text-slate-900">Drain Outlet / Head</td>
+                                    <td className="p-2 font-medium text-slate-900">Drain outlet / head</td>
                                     <td className="p-2">50mm OD / 1 ft min</td>
                                     <td className="p-2">50mm OD / 1 ft min</td>
                                   </tr>
                                   <tr>
-                                    <td className="p-2 font-sans font-medium text-slate-900">Efficiency &amp; Material</td>
+                                    <td className="p-2 font-medium text-slate-900">Efficiency &amp; material</td>
                                     <td className="p-2">&gt;95% (ABS Plastic)</td>
                                     <td className="p-2">&gt;95% (ABS Plastic)</td>
                                   </tr>
                                   <tr className="bg-moss/5 font-bold">
-                                    <td className="p-2 font-sans text-deep-aquifer">Quotation Price</td>
+                                    <td className="p-2 text-deep-aquifer">Quotation price</td>
                                     <td className="p-2 text-moss text-xs">₹3,250</td>
                                     <td className="p-2 text-deep-aquifer text-xs">₹7,150</td>
                                   </tr>
@@ -448,9 +448,9 @@ export function ProductCatalogCarousel() {
                       <div className="pt-2 flex items-center gap-3">
                         <Link
                           href={`/contact?product=${filteredProducts[currentIndex].contactProductSlug}`}
-                          className="w-full sm:w-auto inline-flex items-center justify-center gap-2.5 bg-deep-aquifer hover:bg-forest-slate text-light-aquifer-canvas font-button-text text-button-text px-7 py-3 rounded-full transition-all duration-300 shadow-md hover:shadow-lg group/btn"
+                          className="w-full sm:w-auto inline-flex items-center justify-center gap-2.5 bg-deep-aquifer hover:bg-forest-slate text-light-aquifer-canvas font-button-text font-semibold text-button-text px-7 py-3 rounded-full transition-all duration-300 shadow-md hover:shadow-lg group/btn"
                         >
-                          <span>Get Quote &amp; Specs</span>
+                          <span>Get quote &amp; specs</span>
                           <span className="material-symbols-outlined text-[18px] group-hover/btn:translate-x-1 transition-transform">
                             arrow_forward
                           </span>

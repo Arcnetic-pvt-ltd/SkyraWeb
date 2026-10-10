@@ -29,34 +29,34 @@ export default function RainsinkProductPage() {
         <div className="flex flex-col gap-6 max-w-3xl">
           <div className="inline-flex items-center gap-2.5">
             <span className="w-2.5 h-2.5 rounded-full bg-moss animate-ping"></span>
-            <span className="font-technical-label text-body-sm text-moss uppercase tracking-wider font-semibold">
-              Flagship Hydrological Engine &middot; Skyra Rainsink
+            <span className="font-mono text-xs text-moss font-medium">
+              Flagship hydrological engine &middot; Skyra Rainsink
             </span>
           </div>
 
-          <h1 className="font-headline-hero text-headline-hero-mobile sm:text-headline-hero text-deep-aquifer tracking-tight leading-tight">
-            High-Capacity Rain Percolator &amp; Groundwater Recharge Unit
+          <h1 className="font-headline-hero text-[38px] sm:text-5xl lg:text-[56px] font-bold text-deep-aquifer tracking-tight leading-tight">
+            High-capacity rain percolator &amp; groundwater recharge unit
           </h1>
 
-          <p className="font-body-large text-body-large text-deep-aquifer/85 leading-relaxed">
+          <p className="font-body-primary text-base font-normal text-deep-aquifer leading-relaxed">
             Skyra Rainsink transforms intense monsoonal surface runoff into lasting groundwater reserves. Built from heavy-duty pre-cast RCC rings and multi-stage natural silica filter media, it intercepts high-volume stormwater, purifies suspended sediments, and actively recharges subterranean aquifers.
           </p>
 
           <div className="pt-2 flex flex-wrap items-center gap-4">
             <Link
               href="/contact?product=rainsink"
-              className="inline-flex items-center gap-2.5 bg-deep-aquifer hover:bg-forest-slate text-light-aquifer-canvas font-button-text text-button-text px-7 py-3.5 rounded-full transition-all duration-300 shadow-md hover:shadow-lg group"
+              className="inline-flex items-center gap-2.5 bg-deep-aquifer hover:bg-forest-slate text-light-aquifer-canvas font-button-text font-semibold text-button-text px-7 py-3.5 rounded-full transition-all duration-300 shadow-md hover:shadow-lg group"
             >
-              <span>Get Site Survey &amp; Pricing</span>
+              <span>Get site survey &amp; pricing</span>
               <span className="material-symbols-outlined text-[18px] group-hover:translate-x-1 transition-transform">
                 arrow_forward
               </span>
             </Link>
             <a
               href="#technical-specs"
-              className="font-button-text text-button-text text-forest-slate hover:text-deep-aquifer transition-colors inline-flex items-center gap-2 py-3 px-4"
+              className="font-button-text font-semibold text-button-text text-forest-slate hover:text-deep-aquifer transition-colors inline-flex items-center gap-2 py-3 px-4"
             >
-              <span>Engineering Specifications</span>
+              <span>Engineering specifications</span>
               <span className="material-symbols-outlined text-[18px]">
                 arrow_downward
               </span>
@@ -83,14 +83,14 @@ export default function RainsinkProductPage() {
           <div className="flex flex-col gap-4 mb-12 max-w-2xl">
             <div className="inline-flex items-center gap-2.5">
               <span className="w-2 h-2 rounded-full bg-moss animate-pulse"></span>
-              <span className="font-technical-label text-body-sm text-moss uppercase tracking-wider font-semibold">
-                Unit Composition &amp; Hardware
+              <span className="font-mono text-xs text-moss font-medium">
+                Unit composition &amp; hardware
               </span>
             </div>
-            <h2 className="font-headline-h2 text-headline-h2-mobile sm:text-headline-h2 text-deep-aquifer tracking-tight">
-              Rainsink Engineering Specifications
+            <h2 className="font-headline-h2 text-[28px] sm:text-[36px] font-semibold text-deep-aquifer tracking-tight">
+              Rainsink engineering specifications
             </h2>
-            <p className="font-body-primary text-body-primary text-deep-aquifer/80 leading-relaxed">
+            <p className="font-body-primary text-base font-normal text-deep-aquifer leading-relaxed">
               Each Skyra Rainsink is fabricated to exact industrial standards for rapid site installation, high structural integrity, and minimal maintenance.
             </p>
           </div>
@@ -101,10 +101,10 @@ export default function RainsinkProductPage() {
                 <div className="w-12 h-12 rounded-2xl bg-moss/10 border border-moss/20 flex items-center justify-center text-moss group-hover:bg-moss group-hover:text-white transition-all duration-300">
                   <span className="material-symbols-outlined text-[24px]">view_in_ar</span>
                 </div>
-                <h3 className="font-headline-h3 text-xl font-bold text-deep-aquifer tracking-tight group-hover:text-forest-slate transition-colors">
-                  Concrete Ring Shaft
+                <h3 className="font-headline-h3 text-[24px] font-medium leading-[1.3] text-deep-aquifer tracking-tight group-hover:text-forest-slate transition-colors">
+                  Concrete ring shaft
                 </h3>
-                <p className="font-body-sm text-sm leading-relaxed text-deep-aquifer/75">
+                <p className="font-body-primary text-base font-normal leading-relaxed text-deep-aquifer/85">
                   6 heavy-duty pre-cast RCC/concrete rings (1 meter outer diameter), stacked vertically to form a high-capacity percolation column.
                 </p>
               </div>
@@ -115,10 +115,10 @@ export default function RainsinkProductPage() {
                 <div className="w-12 h-12 rounded-2xl bg-[#0098a6]/10 border border-[#0098a6]/20 flex items-center justify-center text-[#0098a6] group-hover:bg-[#0098a6] group-hover:text-white transition-all duration-300">
                   <span className="material-symbols-outlined text-[24px]">filter_alt</span>
                 </div>
-                <h3 className="font-headline-h3 text-xl font-bold text-deep-aquifer tracking-tight group-hover:text-forest-slate transition-colors">
-                  Top Filter Layer (Silex)
+                <h3 className="font-headline-h3 text-[24px] font-medium leading-[1.3] text-deep-aquifer tracking-tight group-hover:text-forest-slate transition-colors">
+                  Top filter layer (silex)
                 </h3>
-                <p className="font-body-sm text-sm leading-relaxed text-deep-aquifer/75">
+                <p className="font-body-primary text-base font-normal leading-relaxed text-deep-aquifer/85">
                   150 to 200 kg of graded medium silex silica gravel. Traps initial coarse sediments, leaf debris, and suspended solids.
                 </p>
               </div>
@@ -129,10 +129,10 @@ export default function RainsinkProductPage() {
                 <div className="w-12 h-12 rounded-2xl bg-sky-600/10 border border-sky-600/20 flex items-center justify-center text-sky-600 group-hover:bg-sky-600 group-hover:text-white transition-all duration-300">
                   <span className="material-symbols-outlined text-[24px]">cleaning_services</span>
                 </div>
-                <h3 className="font-headline-h3 text-xl font-bold text-deep-aquifer tracking-tight group-hover:text-forest-slate transition-colors">
-                  Active Adsorption Layer
+                <h3 className="font-headline-h3 text-[24px] font-medium leading-[1.3] text-deep-aquifer tracking-tight group-hover:text-forest-slate transition-colors">
+                  Active adsorption layer
                 </h3>
-                <p className="font-body-sm text-sm leading-relaxed text-deep-aquifer/75">
+                <p className="font-body-primary text-base font-normal leading-relaxed text-deep-aquifer/85">
                   2 bags (35 to 50 kg) of high-surface-area granular activated carbon / charcoal. Adsorbs organic impurities, odor, and color compounds.
                 </p>
               </div>
@@ -143,10 +143,10 @@ export default function RainsinkProductPage() {
                 <div className="w-12 h-12 rounded-2xl bg-emerald-600/10 border border-emerald-600/20 flex items-center justify-center text-emerald-600 group-hover:bg-emerald-600 group-hover:text-white transition-all duration-300">
                   <span className="material-symbols-outlined text-[24px]">waves</span>
                 </div>
-                <h3 className="font-headline-h3 text-xl font-bold text-deep-aquifer tracking-tight group-hover:text-forest-slate transition-colors">
-                  Base Sand &amp; Silex Bed
+                <h3 className="font-headline-h3 text-[24px] font-medium leading-[1.3] text-deep-aquifer tracking-tight group-hover:text-forest-slate transition-colors">
+                  Base sand &amp; silex bed
                 </h3>
-                <p className="font-body-sm text-sm leading-relaxed text-deep-aquifer/75">
+                <p className="font-body-primary text-base font-normal leading-relaxed text-deep-aquifer/85">
                   Small silex gravel layer layered over a deep coarse sand base to polish filtrate before soil zone percolation.
                 </p>
               </div>
@@ -157,10 +157,10 @@ export default function RainsinkProductPage() {
                 <div className="w-12 h-12 rounded-2xl bg-teal-600/10 border border-teal-600/20 flex items-center justify-center text-teal-600 group-hover:bg-teal-600 group-hover:text-white transition-all duration-300">
                   <span className="material-symbols-outlined text-[24px]">tune</span>
                 </div>
-                <h3 className="font-headline-h3 text-xl font-bold text-deep-aquifer tracking-tight group-hover:text-forest-slate transition-colors">
-                  Overflow &amp; Inspection
+                <h3 className="font-headline-h3 text-[24px] font-medium leading-[1.3] text-deep-aquifer tracking-tight group-hover:text-forest-slate transition-colors">
+                  Overflow &amp; inspection
                 </h3>
-                <p className="font-body-sm text-sm leading-relaxed text-deep-aquifer/75">
+                <p className="font-body-primary text-base font-normal leading-relaxed text-deep-aquifer/85">
                   Equipped with a high-flow PVC overflow bypass, reinforced concrete top slab, and cast-iron/concrete manhole cover for flush access.
                 </p>
               </div>
@@ -171,10 +171,10 @@ export default function RainsinkProductPage() {
                 <div className="w-12 h-12 rounded-2xl bg-indigo-600/10 border border-indigo-600/20 flex items-center justify-center text-indigo-600 group-hover:bg-indigo-600 group-hover:text-white transition-all duration-300">
                   <span className="material-symbols-outlined text-[24px]">verified</span>
                 </div>
-                <h3 className="font-headline-h3 text-xl font-bold text-deep-aquifer tracking-tight group-hover:text-forest-slate transition-colors">
-                  Maintenance Cycle
+                <h3 className="font-headline-h3 text-[24px] font-medium leading-[1.3] text-deep-aquifer tracking-tight group-hover:text-forest-slate transition-colors">
+                  Maintenance cycle
                 </h3>
-                <p className="font-body-sm text-sm leading-relaxed text-deep-aquifer/75">
+                <p className="font-body-primary text-base font-normal leading-relaxed text-deep-aquifer/85">
                   Ultra-low maintenance: inspect Chamber 1 after heavy monsoons, flush drain valves, rinse silex bed annually, and replace carbon every 1–2 years.
                 </p>
               </div>
@@ -194,30 +194,30 @@ export default function RainsinkProductPage() {
             <div className="lg:col-span-6 flex flex-col gap-6">
               <div className="inline-flex items-center gap-2.5">
                 <span className="w-2 h-2 rounded-full bg-moss animate-pulse"></span>
-                <span className="font-technical-label text-body-sm text-moss uppercase tracking-wider font-semibold">
-                  Deployment Guidelines
+                <span className="font-mono text-xs text-moss font-medium">
+                  Deployment guidelines
                 </span>
               </div>
-              <h2 className="font-headline-h2 text-headline-h2-mobile sm:text-headline-h2 text-deep-aquifer tracking-tight">
-                Where &amp; How to Deploy Skyra Rainsink
+              <h2 className="font-headline-h2 text-[28px] sm:text-[36px] font-semibold text-deep-aquifer tracking-tight">
+                Where &amp; how to deploy Skyra Rainsink
               </h2>
               <div className="space-y-4 font-body-primary text-deep-aquifer/85">
                 <div className="p-6 rounded-2xl bg-white/90 border border-muted-aquifer/20 shadow-sm backdrop-blur-md">
-                  <h3 className="font-bold text-deep-aquifer text-lg mb-1 flex items-center gap-2">
+                  <h3 className="font-headline-h3 text-[24px] font-medium leading-[1.3] text-deep-aquifer mb-1 flex items-center gap-2">
                     <span className="material-symbols-outlined text-moss">water_drop</span>
-                    Near Existing Open Wells &amp; Borewells
+                    Near existing open wells &amp; borewells
                   </h3>
-                  <p className="text-body-sm text-deep-aquifer/75 leading-relaxed">
+                  <p className="font-body-primary text-base font-normal text-deep-aquifer/85 leading-relaxed">
                     Position Rainsink units 2 to 5 meters from existing wells. Rainwater filters naturally through surrounding soil strata before entering the well, restoring yield and water quality.
                   </p>
                 </div>
 
                 <div className="p-6 rounded-2xl bg-white/90 border border-muted-aquifer/20 shadow-sm backdrop-blur-md">
-                  <h3 className="font-bold text-deep-aquifer text-lg mb-1 flex items-center gap-2">
+                  <h3 className="font-headline-h3 text-[24px] font-medium leading-[1.3] text-deep-aquifer mb-1 flex items-center gap-2">
                     <span className="material-symbols-outlined text-moss">landscape</span>
-                    1-Acre Industrial or Institutional Campus
+                    1-Acre industrial or institutional campus
                   </h3>
-                  <p className="text-body-sm text-deep-aquifer/75 leading-relaxed">
+                  <p className="font-body-primary text-base font-normal text-deep-aquifer/85 leading-relaxed">
                     Install 7 to 15 Rainsink units distributed across a 1-acre plot on terrain with slopes under 30&deg;. This network captures high-intensity runoff, prevents localized yard flooding, and lifts water tables across the entire site.
                   </p>
                 </div>
@@ -230,9 +230,9 @@ export default function RainsinkProductPage() {
 
               <div className="flex items-center gap-3 relative z-10">
                 <span className="material-symbols-outlined text-moss text-3xl">warning</span>
-                <h3 className="font-headline-h3 text-white">Pre-Installation Safety Rules</h3>
+                <h3 className="font-headline-h3 text-[24px] font-medium leading-[1.3] text-white">Pre-installation safety rules</h3>
               </div>
-              <ul className="space-y-3 font-body-sm text-light-aquifer-canvas/85 list-disc pl-5 relative z-10 leading-relaxed">
+              <ul className="space-y-3 font-body-primary text-base font-normal text-light-aquifer-canvas/85 list-disc pl-5 relative z-10 leading-relaxed">
                 <li>
                   <strong className="text-white">Slope restriction:</strong>&nbsp;Do not install on steep slopes of 30&deg; or higher due to landslide and soil erosion hazards.
                 </li>
@@ -263,32 +263,32 @@ export default function RainsinkProductPage() {
               <div className="flex flex-col gap-3 max-w-2xl text-left">
                 <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/10 border border-white/15 w-fit">
                   <span className="w-1.5 h-1.5 rounded-full bg-moss animate-pulse" />
-                  <span className="font-technical-label text-[11px] uppercase tracking-wider text-moss font-semibold">
-                    Fast-Track Site Consultation
+                  <span className="font-mono text-xs text-moss font-medium">
+                    Fast-track site consultation
                   </span>
                 </div>
 
-                <h2 className="font-headline-h2 text-2xl sm:text-3xl text-white tracking-tight leading-snug font-bold">
-                  Ready to Equip Your Campus with Skyra Rainsink?
+                <h2 className="font-headline-h2 text-[28px] sm:text-[36px] text-white tracking-tight leading-snug font-semibold">
+                  Ready to equip your campus with Skyra Rainsink?
                 </h2>
 
-                <p className="font-body-primary text-sm sm:text-base text-light-aquifer-canvas/80 leading-relaxed font-light">
+                <p className="font-body-primary text-base font-normal text-light-aquifer-canvas/80 leading-relaxed">
                   Our civil hydrologists analyze site topography, model peak monsoonal runoff, and deliver a turn-key Rainsink layout plan tailored to your ESG goals and flood prevention targets.
                 </p>
 
                 {/* Inline Deliverables Pills */}
-                <div className="pt-1 flex flex-wrap items-center gap-2 text-xs text-light-aquifer-canvas/75">
+                <div className="pt-1 flex flex-wrap items-center gap-2 font-mono text-xs font-medium text-light-aquifer-canvas/75">
                   <span className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-md bg-white/5 border border-white/10">
                     <span className="material-symbols-outlined text-moss text-[14px]">analytics</span>
-                    Runoff Modeling
+                    Runoff modeling
                   </span>
                   <span className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-md bg-white/5 border border-white/10">
                     <span className="material-symbols-outlined text-moss text-[14px]">architecture</span>
-                    CAD Layout Blueprint
+                    CAD layout blueprint
                   </span>
                   <span className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-md bg-white/5 border border-white/10">
                     <span className="material-symbols-outlined text-moss text-[14px]">verified_user</span>
-                    CGWA Credits
+                    CGWA credits
                   </span>
                 </div>
               </div>
@@ -297,9 +297,9 @@ export default function RainsinkProductPage() {
               <div className="flex flex-col sm:flex-row md:flex-col gap-3 shrink-0 w-full sm:w-auto">
                 <Link
                   href="/contact?product=rainsink"
-                  className="inline-flex items-center justify-center gap-2 bg-moss hover:bg-moss/90 text-deep-aquifer font-button-text text-sm font-bold px-6 py-3.5 rounded-xl transition-all duration-300 shadow-md hover:shadow-moss/20 group cursor-pointer whitespace-nowrap"
+                  className="inline-flex items-center justify-center gap-2 bg-moss hover:bg-moss/90 text-deep-aquifer font-button-text font-semibold text-sm px-6 py-3.5 rounded-xl transition-all duration-300 shadow-md hover:shadow-moss/20 group cursor-pointer whitespace-nowrap"
                 >
-                  <span>Request Site Survey</span>
+                  <span>Request site survey</span>
                   <span className="material-symbols-outlined text-[18px] group-hover:translate-x-0.5 transition-transform">
                     arrow_forward
                   </span>
@@ -307,7 +307,7 @@ export default function RainsinkProductPage() {
 
                 <a
                   href={`tel:${CONTACT.phone}`}
-                  className="inline-flex items-center justify-center gap-2 bg-white/10 hover:bg-white/15 text-white font-button-text text-xs font-medium px-5 py-2.5 rounded-xl transition-colors border border-white/15 whitespace-nowrap"
+                  className="inline-flex items-center justify-center gap-2 bg-white/10 hover:bg-white/15 text-white font-button-text font-semibold text-xs px-5 py-2.5 rounded-xl transition-colors border border-white/15 whitespace-nowrap"
                 >
                   <span className="material-symbols-outlined text-[15px]">call</span>
                   <span>{CONTACT.phoneDisplay}</span>

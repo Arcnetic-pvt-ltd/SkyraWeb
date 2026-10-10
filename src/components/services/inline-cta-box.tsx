@@ -34,10 +34,10 @@ export function InlineCtaBox({
           {icon}
         </div>
         <div>
-          <h3 className={`text-lg font-semibold ${tone === "light" ? "text-slate-900" : "text-white"}`}>
+          <h3 className={`font-headline-h3 text-[24px] font-medium leading-[1.3] ${tone === "light" ? "text-deep-aquifer" : "text-white"}`}>
             {title}
           </h3>
-          <p className={tone === "light" ? "text-slate-600" : "text-slate-300"}>{description}</p>
+          <p className={`font-body-primary text-base font-normal leading-relaxed mt-1 ${tone === "light" ? "text-deep-aquifer/85" : "text-slate-300"}`}>{description}</p>
         </div>
       </div>
       <CtaButton href={href} external={external} variant="primary" icon={buttonIcon} className="w-full flex-shrink-0 md:w-auto">

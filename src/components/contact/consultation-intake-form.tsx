@@ -35,10 +35,10 @@ export function ConsultationIntakeForm() {
           {/* Input: Full Name */}
           <div className="relative flex flex-col group">
             <label
-              className="font-body-sm text-body-sm text-deep-aquifer/80 font-medium mb-1.5 transition-all duration-200 group-focus-within:text-forest-slate"
+              className="font-body-primary text-sm text-deep-aquifer/80 font-medium mb-1.5 transition-all duration-200 group-focus-within:text-forest-slate"
               htmlFor="fullName"
             >
-              Full Name
+              Full name
             </label>
             <input
               className="w-full bg-light-aquifer-canvas px-4 py-3.5 rounded-lg font-body-primary text-deep-aquifer placeholder:text-muted-aquifer/70 transition-all duration-200 outline-none shadow-sm border border-muted-aquifer/20 focus:bg-white focus:border-moss focus:shadow-[0_0_0_2px_rgba(125,157,61,0.35)]"
@@ -59,10 +59,10 @@ export function ConsultationIntakeForm() {
             {/* Input: Work Email */}
             <div className="relative flex flex-col group">
               <label
-                className="font-body-sm text-body-sm text-deep-aquifer/80 font-medium mb-1.5 transition-all duration-200 group-focus-within:text-forest-slate"
+                className="font-body-primary text-sm text-deep-aquifer/80 font-medium mb-1.5 transition-all duration-200 group-focus-within:text-forest-slate"
                 htmlFor="workEmail"
               >
-                Work Email
+                Work email
               </label>
               <input
                 className="w-full bg-light-aquifer-canvas px-4 py-3.5 rounded-lg font-body-primary text-deep-aquifer placeholder:text-muted-aquifer/70 transition-all duration-200 outline-none shadow-sm border border-muted-aquifer/20 focus:bg-white focus:border-moss focus:shadow-[0_0_0_2px_rgba(125,157,61,0.35)]"
@@ -81,7 +81,7 @@ export function ConsultationIntakeForm() {
             {/* Input: Phone / WhatsApp */}
             <div className="relative flex flex-col group">
               <label
-                className="font-body-sm text-body-sm text-deep-aquifer/80 font-medium mb-1.5 transition-all duration-200 group-focus-within:text-forest-slate"
+                className="font-body-primary text-sm text-deep-aquifer/80 font-medium mb-1.5 transition-all duration-200 group-focus-within:text-forest-slate"
                 htmlFor="phoneNumber"
               >
                 Phone / WhatsApp
@@ -103,10 +103,10 @@ export function ConsultationIntakeForm() {
           {/* Input: Property Location / District */}
           <div className="relative flex flex-col group">
             <label
-              className="font-body-sm text-body-sm text-deep-aquifer/80 font-medium mb-1.5 transition-all duration-200 group-focus-within:text-forest-slate"
+              className="font-body-primary text-sm text-deep-aquifer/80 font-medium mb-1.5 transition-all duration-200 group-focus-within:text-forest-slate"
               htmlFor="propertyLocation"
             >
-              Property Location / District
+              Property location / district
             </label>
             <input
               className="w-full bg-light-aquifer-canvas px-4 py-3.5 rounded-lg font-body-primary text-deep-aquifer placeholder:text-muted-aquifer/70 transition-all duration-200 outline-none shadow-sm border border-muted-aquifer/20 focus:bg-white focus:border-moss focus:shadow-[0_0_0_2px_rgba(125,157,61,0.35)]"
@@ -125,12 +125,12 @@ export function ConsultationIntakeForm() {
           <div className="relative flex flex-col group">
             <div className="flex justify-between items-center mb-1.5">
               <label
-                className="font-body-sm text-body-sm text-deep-aquifer/80 font-medium transition-all duration-200 group-focus-within:text-forest-slate"
+                className="font-body-primary text-sm text-deep-aquifer/80 font-medium transition-all duration-200 group-focus-within:text-forest-slate"
                 htmlFor="projectScope"
               >
                 How can Skyra help you?
               </label>
-              <span className="font-body-sm text-[12px] text-deep-aquifer/50">
+              <span className="font-mono text-xs text-deep-aquifer/50">
                 Optional thoughts
               </span>
             </div>
@@ -150,11 +150,11 @@ export function ConsultationIntakeForm() {
           {/* Action button */}
           <div className="pt-2 flex flex-col gap-4">
             <button
-              className="relative group w-full py-4 px-8 rounded-lg bg-deep-aquifer hover:bg-forest-slate text-light-aquifer-canvas font-button-text text-button-text flex items-center justify-center gap-3 transition-all duration-300 shadow-md hover:shadow-xl active:scale-[0.99] overflow-hidden cursor-pointer"
+              className="relative group w-full py-4 px-8 rounded-lg bg-deep-aquifer hover:bg-forest-slate text-light-aquifer-canvas font-button-text font-semibold text-button-text flex items-center justify-center gap-3 transition-all duration-300 shadow-md hover:shadow-xl active:scale-[0.99] overflow-hidden cursor-pointer"
               type="submit"
             >
               <span className="relative z-10 tracking-normal">
-                Begin the Conversation
+                Begin the conversation
               </span>
               <span className="material-symbols-outlined text-[18px] transition-transform duration-300 group-hover:translate-x-1">
                 arrow_right_alt
@@ -164,7 +164,7 @@ export function ConsultationIntakeForm() {
               <span className="material-symbols-outlined text-[16px] text-moss shrink-0">
                 shield
               </span>
-              <p className="font-body-sm text-[13px] text-deep-aquifer/60">
+              <p className="font-body-primary text-sm text-deep-aquifer/60">
                 Your information is treated with complete confidentiality by our senior hydrologists.
               </p>
             </div>
@@ -175,15 +175,15 @@ export function ConsultationIntakeForm() {
           <div className="h-16 w-16 rounded-full bg-secondary-container flex items-center justify-center text-forest-slate mb-5">
             <span className="material-symbols-outlined text-[32px]">check</span>
           </div>
-          <h3 className="font-headline-h3 text-headline-h3 text-deep-aquifer font-semibold">
+          <h3 className="font-headline-h3 text-[24px] font-medium leading-[1.3] text-deep-aquifer">
             Thank you for reaching out
           </h3>
-          <p className="mt-3 font-body-primary text-deep-aquifer/75 max-w-sm leading-relaxed">
+          <p className="mt-3 font-body-primary text-base font-normal text-deep-aquifer/85 max-w-sm leading-relaxed">
             We’ve received your note. A senior hydrologist from our Kochi team will review your site geography and reach out quietly within 24 hours.
           </p>
           <button
             type="button"
-            className="mt-8 font-button-text text-body-sm text-moss hover:text-forest-slate font-medium underline underline-offset-4 cursor-pointer"
+            className="mt-8 font-button-text font-semibold text-sm text-moss hover:text-forest-slate underline underline-offset-4 cursor-pointer"
             onClick={handleReset}
           >
             Send another message

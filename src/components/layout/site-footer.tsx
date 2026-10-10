@@ -23,27 +23,27 @@ export function SiteFooter() {
             <nav className="flex flex-col gap-3">
               <Link
                 href="/services"
-                className="font-body-sm text-body-sm text-light-aquifer-canvas/60 hover:text-white transition-colors"
+                className="font-body-sm text-body-sm text-light-aquifer-canvas/70 hover:text-white transition-colors"
               >
-                Rainwater Harvesting
+                Rainwater harvesting
               </Link>
               <Link
                 href="/services"
-                className="font-body-sm text-body-sm text-light-aquifer-canvas/60 hover:text-white transition-colors"
+                className="font-body-sm text-body-sm text-light-aquifer-canvas/70 hover:text-white transition-colors"
               >
-                Subterranean Infiltration
+                Subterranean infiltration
               </Link>
               <Link
                 href="/services"
-                className="font-body-sm text-body-sm text-light-aquifer-canvas/60 hover:text-white transition-colors"
+                className="font-body-sm text-body-sm text-light-aquifer-canvas/70 hover:text-white transition-colors"
               >
-                Aquifer Replenishment
+                Aquifer replenishment
               </Link>
               <Link
                 href="/services"
-                className="font-body-sm text-body-sm text-light-aquifer-canvas/60 hover:text-white transition-colors"
+                className="font-body-sm text-body-sm text-light-aquifer-canvas/70 hover:text-white transition-colors"
               >
-                Skyra RainSink
+                Skyra Rainsink
               </Link>
             </nav>
           </div>
@@ -54,25 +54,25 @@ export function SiteFooter() {
             <nav className="flex flex-col gap-3">
               <Link
                 href="/about"
-                className="font-body-sm text-body-sm text-light-aquifer-canvas/60 hover:text-white transition-colors"
+                className="font-body-sm text-body-sm text-light-aquifer-canvas/70 hover:text-white transition-colors"
               >
-                Our Philosophy
+                Our philosophy
               </Link>
               <Link
                 href="/about"
-                className="font-body-sm text-body-sm text-light-aquifer-canvas/60 hover:text-white transition-colors"
+                className="font-body-sm text-body-sm text-light-aquifer-canvas/70 hover:text-white transition-colors"
               >
-                Impact &amp; Ecology
+                Impact &amp; ecology
               </Link>
               <Link
                 href="/contact"
-                className="font-body-sm text-body-sm text-light-aquifer-canvas/60 hover:text-white transition-colors"
+                className="font-body-sm text-body-sm text-light-aquifer-canvas/70 hover:text-white transition-colors"
               >
-                Start a Conversation
+                Start a conversation
               </Link>
               <a
                 href={`mailto:${CONTACT.email}`}
-                className="font-body-sm text-body-sm text-light-aquifer-canvas/60 hover:text-white transition-colors"
+                className="font-body-sm text-body-sm text-light-aquifer-canvas/70 hover:text-white transition-colors"
               >
                 {CONTACT.email}
               </a>
@@ -80,19 +80,19 @@ export function SiteFooter() {
           </div>
         </div>
         <div className="pt-10 border-t border-white/10 flex flex-col sm:flex-row items-center justify-between gap-4">
-          <p className="font-body-sm text-[13px] text-light-aquifer-canvas/40">
+          <p className="font-body-sm text-[13px] text-light-aquifer-canvas/50">
             © 2026 - 2027 Skyra Infrastructure. Thoughtful engineering for India’s water future.
           </p>
           <div className="flex items-center gap-6">
             <a
               href="#"
-              className="font-body-sm text-[13px] text-light-aquifer-canvas/40 hover:text-light-aquifer-canvas/80 transition-colors"
+              className="font-body-sm text-[13px] text-light-aquifer-canvas/50 hover:text-light-aquifer-canvas/80 transition-colors"
             >
               Privacy
             </a>
             <a
               href="#"
-              className="font-body-sm text-[13px] text-light-aquifer-canvas/40 hover:text-light-aquifer-canvas/80 transition-colors"
+              className="font-body-sm text-[13px] text-light-aquifer-canvas/50 hover:text-light-aquifer-canvas/80 transition-colors"
             >
               Terms
             </a>
@@ -103,8 +103,8 @@ export function SiteFooter() {
       {/* Thin Sub-Footer Strip: Powered by Arcnetic */}
       <div className="w-full border-t border-white/10 bg-slate-950/40 py-3.5 px-6">
         <div className="max-w-5xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-2 text-center sm:text-left">
-          <span className="font-technical-label text-[11px] uppercase tracking-wider text-light-aquifer-canvas/40">
-            Technology Partner
+          <span className="font-mono text-xs font-medium tracking-wide text-light-aquifer-canvas/50">
+            Technology partner
           </span>
           <span className="font-body-sm text-[12px] text-light-aquifer-canvas/50">
             Powered by{" "}

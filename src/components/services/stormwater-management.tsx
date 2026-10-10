@@ -9,23 +9,23 @@ const PILLARS = [
   {
     Icon: StormIcon,
     tone: "bg-brand-teal/10 text-brand-teal",
-    title: "Flood Prevention",
+    title: "Flood prevention",
     description: "Protect basements, underground parking, delicate landscaping, and foundational piles from dangerous hydrostatic pressure with hydro-engineered bioswales and high-flow retention cells.",
-    footer: "Zero Foundation Inundation",
+    footer: "Zero foundation inundation",
   },
   {
     Icon: GavelIcon,
     tone: "bg-brand-green/10 text-brand-green",
-    title: "Regulatory Compliance",
+    title: "Regulatory compliance",
     description: "Effortlessly meet and exceed green building certifications (IGBC, GRIHA, LEED) and State Pollution Control Board discharge standards without administrative delays.",
-    footer: "Statutory Clearance Ready",
+    footer: "Statutory clearance ready",
   },
   {
     Icon: LeafIcon,
     tone: "bg-sky-600/10 text-sky-600",
-    title: "Aesthetic Integration",
+    title: "Aesthetic integration",
     description: "Solutions engineered to blend harmoniously into landscape design: permeable interlocking pavers, discreetly submerged retention arches, and decorative gravel swales.",
-    footer: "Invisible Urban Footprint",
+    footer: "Invisible urban footprint",
   },
 ] as const;
 
@@ -50,12 +50,12 @@ export function StormwaterManagement() {
       <Container>
         <div className="mb-12 max-w-2xl">
           <Eyebrow color="teal">
-            <StormIcon className="size-3.5" /> Primary Intervention 02
+            <StormIcon className="size-3.5" /> Primary intervention 02
           </Eyebrow>
-          <h2 className="mt-3 text-2xl font-bold tracking-tight sm:text-3xl lg:text-4xl">
-            Intelligent Stormwater Management
+          <h2 className="mt-3 font-headline-h2 text-headline-h2-mobile sm:text-headline-h2 text-white tracking-tight leading-[1.2]">
+            Intelligent stormwater management
           </h2>
-          <p className="mt-3 text-lg leading-relaxed text-slate-300">
+          <p className="mt-3 text-base font-normal font-body-primary leading-relaxed text-slate-300">
             Heavy monsoons do not have to mean flooded properties and lost
             resources. We design robust drainage and routing systems that
             manage heavy surface runoff, preventing structural damage while
@@ -69,9 +69,9 @@ export function StormwaterManagement() {
               <div className={`flex size-12 items-center justify-center rounded-full ${tone}`}>
                 <Icon className="size-6" />
               </div>
-              <h3 className="text-lg font-semibold text-white">{title}</h3>
-              <p className="text-sm text-slate-300">{description}</p>
-              <div className="mt-auto flex items-center gap-2 text-sm font-semibold text-brand-teal">
+              <h3 className="font-headline-h3 text-[24px] font-medium text-white leading-[1.3]">{title}</h3>
+              <p className="text-base font-normal font-body-primary leading-relaxed text-slate-300">{description}</p>
+              <div className="mt-auto flex items-center gap-2 font-mono text-xs font-medium text-brand-teal">
                 <CheckCircleIcon className="size-4" />
                 {footer}
               </div>
@@ -82,24 +82,24 @@ export function StormwaterManagement() {
         {/* Engineering Spec Comparison Matrix */}
         <div className="mb-12 rounded-2xl bg-ink-elevated p-6 shadow-xl lg:p-10">
           <div className="mb-8 max-w-xl">
-            <span className="text-xs font-bold uppercase tracking-widest text-brand-teal">
-              Hydrological Engineering Comparison
+            <span className="font-mono text-xs font-medium text-brand-teal">
+              Hydrological engineering comparison
             </span>
-            <h3 className="text-xl font-semibold text-white sm:text-2xl">
-              Conventional Runoff vs. Skyra Managed Infrastructure
+            <h3 className="mt-1 font-headline-h3 text-[24px] font-medium text-white leading-[1.3]">
+              Conventional runoff vs. Skyra managed infrastructure
             </h3>
           </div>
 
           <div className="grid grid-cols-1 gap-6 lg:grid-cols-2">
             <div className="flex flex-col gap-4 rounded-xl bg-ink p-6">
               <div className="flex items-center justify-between">
-                <span className="rounded-full bg-red-950 px-3 py-1 text-[11px] font-bold uppercase tracking-wider text-red-400">
-                  Traditional Disposal
+                <span className="rounded-full bg-red-950 px-3 py-1 font-mono text-xs font-medium text-red-400">
+                  Traditional disposal
                 </span>
                 <XCircleIcon className="size-6 text-red-400" />
               </div>
-              <h4 className="text-lg font-semibold text-white">Unmanaged Surface Discharge</h4>
-              <ul className="flex flex-col gap-3 text-sm text-slate-300">
+              <h4 className="font-headline-h3 text-lg font-medium text-white leading-snug">Unmanaged surface discharge</h4>
+              <ul className="flex flex-col gap-3 text-base font-normal font-body-primary text-slate-300 leading-relaxed">
                 {TRADITIONAL_POINTS.map((point) => (
                   <li key={point} className="flex items-start gap-2">
                     <XCircleIcon className="mt-0.5 size-4.5 flex-shrink-0 text-red-400" />
@@ -111,13 +111,13 @@ export function StormwaterManagement() {
 
             <div className="flex flex-col gap-4 rounded-xl bg-ink-elevated p-6 shadow-lg ring-1 ring-white/10">
               <div className="flex items-center justify-between">
-                <span className="rounded-full bg-brand-green/20 px-3 py-1 text-[11px] font-bold uppercase tracking-wider text-brand-green">
-                  Skyra Engineered System
+                <span className="rounded-full bg-brand-green/20 px-3 py-1 font-mono text-xs font-medium text-brand-green">
+                  Skyra engineered system
                 </span>
                 <CheckCircleIcon className="size-6 text-brand-green" />
               </div>
-              <h4 className="text-lg font-semibold text-white">Sub-Surface Controlled Hydrology</h4>
-              <ul className="flex flex-col gap-3 text-sm text-white">
+              <h4 className="font-headline-h3 text-lg font-medium text-white leading-snug">Sub-surface controlled hydrology</h4>
+              <ul className="flex flex-col gap-3 text-base font-normal font-body-primary text-white leading-relaxed">
                 {SKYRA_POINTS.map((point) => (
                   <li key={point} className="flex items-start gap-2">
                     <CheckCircleIcon className="mt-0.5 size-4.5 flex-shrink-0 text-brand-green" />
@@ -133,9 +133,9 @@ export function StormwaterManagement() {
           icon={<WaterSecurityIcon className="size-7" />}
           iconTone="bg-brand-teal/20 text-brand-teal"
           title="Secure your property ahead of the monsoon season."
-          description="Click to Request a Consultation and safeguard your foundation against unmanaged heavy storm runoff."
+          description="Click to request a consultation and safeguard your foundation against unmanaged heavy storm runoff."
           href="#contact"
-          buttonLabel="Request a Consultation"
+          buttonLabel="Request a consultation"
           buttonIcon={<ArrowRightIcon className="size-4" />}
           tone="dark"
         />

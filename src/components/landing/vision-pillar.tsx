@@ -18,8 +18,8 @@ export function VisionPillar({
         {icon}
       </div>
       <div>
-        <h4 className="text-base font-bold text-white">{title}</h4>
-        <p className="mt-1 text-xs text-slate-300">{description}</p>
+        <h3 className="font-headline-h3 text-lg sm:text-[24px] font-medium text-white leading-snug">{title}</h3>
+        <p className="mt-2 text-base font-normal font-body-primary text-slate-300 leading-relaxed">{description}</p>
       </div>
     </div>
   );

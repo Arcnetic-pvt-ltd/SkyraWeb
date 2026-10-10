@@ -104,16 +104,16 @@ export function QuotesCarousel() {
                 <span className="material-symbols-outlined text-[28px] text-tertiary-fixed">
                   water_drop
                 </span>
-                <span className="font-technical-label text-[12px] uppercase tracking-wider text-white/70">
-                  National Vision
+                <span className="font-mono text-xs text-white/80 font-medium">
+                  National vision
                 </span>
               </div>
 
-              <blockquote className="font-headline-h2 text-[26px] sm:text-[34px] lg:text-[38px] text-white font-normal leading-snug tracking-tight">
+              <blockquote className="font-headline-h2 text-headline-h2-mobile sm:text-headline-h2 text-white font-normal leading-snug tracking-tight">
                 {item.quote}
               </blockquote>
 
-              <cite className="font-body-large text-body-large text-light-aquifer-canvas/90 not-italic block">
+              <cite className="font-body-primary text-base text-light-aquifer-canvas/90 not-italic block font-normal">
                 <span className="font-semibold text-white">
                   — {item.author}
                 </span>

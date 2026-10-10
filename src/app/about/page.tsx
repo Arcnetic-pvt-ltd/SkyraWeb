@@ -53,17 +53,17 @@ export default function AboutPage() {
           <div className="flex flex-col gap-8 max-w-3xl">
             <div className="inline-flex items-center gap-2.5">
               <span className="inline-block w-2 h-2 rounded-full bg-moss animate-ping"></span>
-              <span className="font-body-sm text-body-sm text-secondary font-semibold tracking-normal">
-                Our Foundation &amp; Philosophy
+              <span className="font-mono text-xs text-moss font-medium">
+                Our foundation &amp; philosophy
               </span>
             </div>
-            <h1 className="font-headline-hero text-headline-hero-mobile sm:text-headline-hero text-deep-aquifer tracking-tight leading-tight">
-              The Skyra Mission
+            <h1 className="font-headline-hero text-[38px] sm:text-5xl lg:text-[56px] font-bold text-deep-aquifer tracking-tight leading-tight">
+              The Skyra mission
             </h1>
-            <p className="font-headline-h2 text-headline-h2-mobile sm:text-headline-h2 text-deep-aquifer/80 font-normal leading-tight">
+            <p className="font-body-primary text-lg sm:text-xl font-normal text-deep-aquifer/80 leading-relaxed">
               Reclaiming India’s seasonal downpours to build generational water independence.
             </p>
-            <p className="font-body-large text-body-large text-deep-aquifer/75 leading-relaxed">
+            <p className="font-body-primary text-base font-normal text-deep-aquifer leading-relaxed">
               Founded in Kalamassery, Kochi, Skyra re-engineers urban and commercial land into natural, high-yield subterranean water reservoirs — replacing temporary tanker reliance with lasting aquifer resilience.
             </p>
           </div>
@@ -76,19 +76,19 @@ export default function AboutPage() {
         <div className="max-w-5xl mx-auto px-6 sm:px-8">
           <div className="grid grid-cols-1 md:grid-cols-12 gap-12 md:gap-16 items-start">
             <div className="md:col-span-7 space-y-6">
-              <span className="font-technical-label text-body-sm text-moss font-semibold uppercase tracking-wider block">
-                01 • The Problem We Solve
+              <span className="font-mono text-xs text-moss font-medium block">
+                01 • The problem we solve
               </span>
-              <h2 className="font-headline-h2 text-headline-h2-mobile sm:text-headline-h2 text-deep-aquifer tracking-tight">
-                Architectural Scarcity vs. Atmospheric Bounty
+              <h2 className="font-headline-h2 text-[28px] sm:text-[36px] font-semibold text-deep-aquifer tracking-tight">
+                Architectural scarcity vs. atmospheric bounty
               </h2>
-              <p className="font-body-large text-body-large text-deep-aquifer font-medium leading-relaxed">
+              <p className="font-body-primary text-base font-normal text-deep-aquifer leading-relaxed">
                 Skyra started with a simple, frustrating fact: India isn’t short on rain — it’s short on places to keep it.
               </p>
-              <p className="font-body-primary text-body-primary text-deep-aquifer/70 leading-relaxed">
+              <p className="font-body-primary text-base font-normal text-deep-aquifer leading-relaxed">
                 Every monsoon season, trillions of litres of pristine rainwater cascade across rooftops, parking aprons, and industrial parks, only to wash into overburdened storm drains and vanish into the sea within 48 hours. Meanwhile, borehole pumps drill 500+ feet deeper every summer to pull brackish brine from exhausted bedrock.
               </p>
-              <p className="font-body-primary text-body-primary text-deep-aquifer/70 leading-relaxed">
+              <p className="font-body-primary text-base font-normal text-deep-aquifer leading-relaxed">
                 The scarcity we experience is rarely atmospheric. It is architectural. We built our cities to repel moisture rather than receive it.
               </p>
             </div>
@@ -147,10 +147,10 @@ export default function AboutPage() {
                   />
                 </svg>
                 <div className="space-y-1">
-                  <span className="font-technical-label text-technical-label text-deep-aquifer font-semibold">
-                    Atmospheric Capture Delta
+                  <span className="font-mono text-xs text-deep-aquifer font-medium">
+                    Atmospheric capture delta
                   </span>
-                  <p className="font-body-sm text-body-sm text-deep-aquifer/60">
+                  <p className="font-body-primary text-base font-normal text-deep-aquifer/85">
                     Average urban run-off velocity yields 78% net loss without intentional subterranean retention barriers.
                   </p>
                 </div>
@@ -223,10 +223,10 @@ export default function AboutPage() {
                   />
                 </svg>
                 <div className="space-y-1">
-                  <span className="font-technical-label text-technical-label text-deep-aquifer font-semibold">
-                    Subsoil Equilibrium
+                  <span className="font-mono text-xs text-deep-aquifer font-medium">
+                    Subsoil equilibrium
                   </span>
-                  <p className="font-body-sm text-body-sm text-deep-aquifer/60">
+                  <p className="font-body-primary text-base font-normal text-deep-aquifer/85">
                     Passive gravity infiltration restores native perched water tables without chemical intervention.
                   </p>
                 </div>
@@ -234,19 +234,19 @@ export default function AboutPage() {
             </div>
 
             <div className="md:col-span-7 order-1 md:order-2 space-y-6">
-              <span className="font-technical-label text-body-sm text-moss font-semibold uppercase tracking-wider block">
-                02 • Our Technical Approach
+              <span className="font-mono text-xs text-moss font-medium block">
+                02 • Our technical approach
               </span>
-              <h2 className="font-headline-h2 text-headline-h2-mobile sm:text-headline-h2 text-deep-aquifer tracking-tight">
-                Passive Infiltration &amp; Soil Hydrology
+              <h2 className="font-headline-h2 text-[28px] sm:text-[36px] font-semibold text-deep-aquifer tracking-tight">
+                Passive infiltration &amp; soil hydrology
               </h2>
-              <p className="font-body-large text-body-large text-deep-aquifer font-medium leading-relaxed">
+              <p className="font-body-primary text-base font-normal text-deep-aquifer leading-relaxed">
                 Rather than relying on oversized concrete holding tanks that silt up after three seasons, we study lithology, rainfall cadence, and soil percolation.
               </p>
-              <p className="font-body-primary text-body-primary text-deep-aquifer/70 leading-relaxed">
+              <p className="font-body-primary text-base font-normal text-deep-aquifer leading-relaxed">
                 We design zero-loss gravity infiltration shafts, modular bio-filtration chambers, and naturalized aquifers that recharge subsoil horizons automatically.
               </p>
-              <p className="font-body-primary text-body-primary text-deep-aquifer/70 leading-relaxed">
+              <p className="font-body-primary text-base font-normal text-deep-aquifer leading-relaxed">
                 When an institutional campus or residential community catches water properly, the earth beneath becomes their reservoir — clean, silent, and self-replenishing for generations.
               </p>
             </div>
@@ -257,13 +257,13 @@ export default function AboutPage() {
         <div className="max-w-5xl mx-auto px-6 sm:px-8">
           <div className="space-y-12">
             <div className="space-y-4 max-w-3xl">
-              <span className="font-technical-label text-body-sm text-moss font-semibold uppercase tracking-wider block">
-                03 • Verification &amp; Scale
+              <span className="font-mono text-xs text-moss font-medium block">
+                03 • Verification &amp; scale
               </span>
-              <h2 className="font-headline-h2 text-headline-h2-mobile sm:text-headline-h2 text-deep-aquifer tracking-tight">
-                Kalamassery R&amp;D Proving Grounds
+              <h2 className="font-headline-h2 text-[28px] sm:text-[36px] font-semibold text-deep-aquifer tracking-tight">
+                Kalamassery R&amp;D proving grounds
               </h2>
-              <p className="font-body-large text-body-large text-deep-aquifer/80 leading-relaxed">
+              <p className="font-body-primary text-base font-normal text-deep-aquifer leading-relaxed">
                 Engineered at our central laboratory along the NH 544 Corridor in Kalamassery, Kerala, every Skyra installation is monitored against strict hydrological telemetry standards.
               </p>
             </div>
@@ -277,46 +277,46 @@ export default function AboutPage() {
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-deep-aquifer/80 via-deep-aquifer/20 to-transparent"></div>
                 <div className="absolute bottom-6 left-6 right-6 flex items-end justify-between text-white">
-                  <span className="font-technical-label text-technical-label tracking-wide text-white/90">
-                    Kalamassery Proving Grounds • Commercial Prototype 04
+                  <span className="font-mono text-xs text-white/90">
+                    Kalamassery proving grounds • Commercial prototype 04
                   </span>
-                  <span className="hidden sm:inline-block font-technical-label text-technical-label text-white/70">
-                    Passive Infiltration Series
+                  <span className="hidden sm:inline-block font-mono text-xs text-white/70">
+                    Passive infiltration series
                   </span>
                 </div>
               </div>
 
               <div className="grid grid-cols-2 md:grid-cols-4 gap-4 sm:gap-6 pt-2">
                 <div className="p-5 rounded-xl bg-white/80 backdrop-blur-md border border-muted-aquifer/15 shadow-sm">
-                  <span className="block font-metric-mono-lg text-metric-mono-lg text-deep-aquifer">
+                  <span className="block font-mono text-3xl sm:text-4xl font-bold text-deep-aquifer">
                     14
                   </span>
-                  <span className="block font-body-sm text-body-sm text-deep-aquifer/65 mt-1 font-medium">
-                    States Active Across India
+                  <span className="block font-mono text-xs text-deep-aquifer/70 mt-1 font-medium">
+                    States active across India
                   </span>
                 </div>
                 <div className="p-5 rounded-xl bg-white/80 backdrop-blur-md border border-muted-aquifer/15 shadow-sm">
-                  <span className="block font-metric-mono-lg text-metric-mono-lg text-deep-aquifer">
+                  <span className="block font-mono text-3xl sm:text-4xl font-bold text-deep-aquifer">
                     420+
                   </span>
-                  <span className="block font-body-sm text-body-sm text-deep-aquifer/65 mt-1 font-medium">
-                    Engineered Installations
+                  <span className="block font-mono text-xs text-deep-aquifer/70 mt-1 font-medium">
+                    Engineered installations
                   </span>
                 </div>
                 <div className="p-5 rounded-xl bg-white/80 backdrop-blur-md border border-muted-aquifer/15 shadow-sm">
-                  <span className="block font-metric-mono-lg text-metric-mono-lg text-deep-aquifer">
+                  <span className="block font-mono text-3xl sm:text-4xl font-bold text-deep-aquifer">
                     2.4B
                   </span>
-                  <span className="block font-body-sm text-body-sm text-deep-aquifer/65 mt-1 font-medium">
-                    Litres Infiltrated Annually
+                  <span className="block font-mono text-xs text-deep-aquifer/70 mt-1 font-medium">
+                    Litres infiltrated annually
                   </span>
                 </div>
                 <div className="p-5 rounded-xl bg-white/80 backdrop-blur-md border border-muted-aquifer/15 shadow-sm">
-                  <span className="block font-metric-mono-lg text-metric-mono-lg text-deep-aquifer">
+                  <span className="block font-mono text-3xl sm:text-4xl font-bold text-deep-aquifer">
                     100%
                   </span>
-                  <span className="block font-body-sm text-body-sm text-deep-aquifer/65 mt-1 font-medium">
-                    Passive Gravity-Fed Flow
+                  <span className="block font-mono text-xs text-deep-aquifer/70 mt-1 font-medium">
+                    Passive gravity-fed flow
                   </span>
                 </div>
               </div>
@@ -329,13 +329,13 @@ export default function AboutPage() {
       <section className="relative z-10 w-full py-24 sm:py-32 bg-white border-t border-muted-aquifer/15">
         <div className="max-w-6xl mx-auto px-6 lg:px-8">
           <div className="max-w-3xl mb-16">
-            <span className="font-technical-label text-body-sm text-moss font-semibold uppercase tracking-wider block mb-3">
-              Leadership &amp; Engineering Desk
+            <span className="font-mono text-xs text-moss font-medium block mb-3">
+              Leadership &amp; engineering desk
             </span>
-            <h2 className="font-headline-h2 text-headline-h2-mobile sm:text-headline-h2 text-deep-aquifer tracking-tight mb-4">
-              Meet Our Founders
+            <h2 className="font-headline-h2 text-[28px] sm:text-[36px] font-semibold text-deep-aquifer tracking-tight mb-4">
+              Meet our founders
             </h2>
-            <p className="font-body-large text-body-large text-muted-aquifer leading-relaxed">
+            <p className="font-body-primary text-base font-normal text-deep-aquifer/85 leading-relaxed">
               Skyra was founded by civil hydrologists, environmental engineers, and fluid dynamicists united by a shared commitment to quiet, regenerative water infrastructure.
             </p>
           </div>
@@ -355,26 +355,26 @@ export default function AboutPage() {
                     />
                   </div>
                   <div className="flex flex-col gap-1 mb-3">
-                    <h3 className="font-headline-h3 text-[20px] font-bold text-deep-aquifer">
+                    <h3 className="font-headline-h3 text-[24px] font-medium leading-[1.3] text-deep-aquifer">
                       {founder.name}
                     </h3>
-                    <span className="font-body-sm text-[13px] text-moss font-semibold">
+                    <span className="font-mono text-xs text-moss font-medium">
                       {founder.role}
                     </span>
-                    <span className="font-technical-label text-[11px] text-muted-aquifer">
+                    <span className="font-mono text-xs text-muted-aquifer">
                       {founder.credentials}
                     </span>
                   </div>
-                  <p className="font-body-sm text-body-sm text-deep-aquifer/70 leading-relaxed mb-4">
+                  <p className="font-body-primary text-base font-normal text-deep-aquifer leading-relaxed mb-4">
                     {founder.bio}
                   </p>
                 </div>
 
                 <div className="pt-3 border-t border-muted-aquifer/15">
-                  <span className="font-technical-label text-[10px] uppercase tracking-wider text-muted-aquifer block mb-1">
-                    Key Focus
+                  <span className="font-mono text-xs text-muted-aquifer block mb-1">
+                    Key focus
                   </span>
-                  <span className="font-body-sm text-[12px] text-deep-aquifer/80 font-medium block">
+                  <span className="font-mono text-xs text-deep-aquifer font-medium block">
                     {founder.expertise}
                   </span>
                 </div>
@@ -386,28 +386,28 @@ export default function AboutPage() {
 
       {/* SECTION 4: CLOSING MANDATE */}
       <section className="relative z-10 w-full bg-light-aquifer-canvas text-deep-aquifer py-24 sm:py-32 border-t border-muted-aquifer/15">
-        <div className="max-w-4xl mx-auto px-6 sm:px-8 text-center flex flex-col items-center gap-8">
-          <span className="font-technical-label text-technical-label text-moss tracking-widest uppercase font-semibold">
-            The Mandate
+        <div className="max-w-4xl mx-auto px-6 sm:px-8 text-left flex flex-col items-start gap-8">
+          <span className="font-mono text-xs text-moss font-medium">
+            The mandate
           </span>
-          <blockquote className="font-headline-h2 text-headline-h2-mobile sm:text-headline-h2 text-deep-aquifer max-w-2xl font-semibold tracking-tight">
+          <blockquote className="font-headline-h2 text-[28px] sm:text-[36px] font-semibold text-deep-aquifer max-w-2xl tracking-tight">
             “Water security is not an emergency response. It is engineered infrastructure.”
           </blockquote>
-          <p className="font-body-large text-body-large text-deep-aquifer/75 max-w-[48ch] leading-relaxed">
+          <p className="font-body-primary text-base font-normal text-deep-aquifer max-w-[48ch] leading-relaxed">
             We partner with landowners, institutional leaders, and civil developers who plan half a century ahead.
           </p>
           <div className="flex flex-col sm:flex-row items-center gap-4 pt-2">
             <Link
               href="/contact"
-              className="inline-flex items-center justify-center bg-deep-aquifer hover:bg-forest-slate text-light-aquifer-canvas font-button-text text-button-text px-8 py-3.5 rounded-full shadow-sm hover:shadow-md transition-all duration-300"
+              className="inline-flex items-center justify-center bg-deep-aquifer hover:bg-forest-slate text-light-aquifer-canvas font-button-text font-semibold text-button-text px-8 py-3.5 rounded-full shadow-sm hover:shadow-md transition-all duration-300"
             >
-              Start a Conversation
+              Start a conversation
             </Link>
             <Link
               href="/services"
-              className="inline-flex items-center justify-center bg-transparent hover:bg-black/5 text-deep-aquifer font-button-text text-button-text px-8 py-3.5 rounded-full transition-all duration-300"
+              className="inline-flex items-center justify-center bg-transparent hover:bg-black/5 text-deep-aquifer font-button-text font-semibold text-button-text px-8 py-3.5 rounded-full transition-all duration-300"
             >
-              Explore Solutions
+              Explore solutions
             </Link>
           </div>
         </div>

@@ -40,14 +40,14 @@ export default function ContactPage() {
               <div className="flex flex-col">
                 <div className="inline-flex items-center gap-2.5 mb-5">
                   <span className="inline-block h-2 w-2 rounded-full bg-moss"></span>
-                  <span className="font-button-text text-body-sm text-forest-slate tracking-normal font-semibold">
-                    Direct Hydrological Consultation
+                  <span className="font-mono text-xs font-medium text-forest-slate">
+                    Direct hydrological consultation
                   </span>
                 </div>
-                <h1 className="font-headline-hero text-headline-hero-mobile sm:text-headline-hero text-deep-aquifer leading-[1.08] tracking-tight">
-                  Start Your Water Resilience Journey
+                <h1 className="font-headline-hero text-[38px] sm:text-5xl lg:text-[56px] font-bold text-deep-aquifer leading-[1.08] tracking-tight">
+                  Start your water resilience journey
                 </h1>
-                <p className="mt-6 font-body-large text-body-large text-deep-aquifer/75 leading-relaxed font-light">
+                <p className="mt-6 font-body-primary text-base font-normal text-deep-aquifer leading-relaxed">
                   Tell us a bit about your property, and we’ll show you what’s possible — no pressure, just a conversation.
                 </p>
 
@@ -56,11 +56,11 @@ export default function ContactPage() {
                     <span className="material-symbols-outlined text-moss text-[22px]">
                       water_drop
                     </span>
-                    <span className="font-headline-h3 text-body-primary font-semibold text-deep-aquifer">
+                    <span className="font-headline-h3 text-[24px] font-medium leading-[1.3] text-deep-aquifer">
                       An easy, collaborative process
                     </span>
                   </div>
-                  <p className="mt-2 font-body-sm text-body-sm text-deep-aquifer/70 leading-relaxed">
+                  <p className="mt-2 font-body-primary text-base font-normal text-deep-aquifer leading-relaxed">
                     Whether you oversee a multi-acre campus or are securing water autonomy for a regional estate, our team listens first, models aquifer capacity second, and designs purely around your geography.
                   </p>
                 </div>
@@ -73,10 +73,10 @@ export default function ContactPage() {
                     <span className="material-symbols-outlined text-[20px]">corporate_fare</span>
                   </div>
                   <div>
-                    <span className="font-headline-h3 text-[15px] font-semibold text-deep-aquifer block">
-                      Kalamassery Engineering Labs
+                    <span className="font-headline-h3 text-base font-medium text-deep-aquifer block">
+                      Kalamassery engineering labs
                     </span>
-                    <span className="font-body-sm text-body-sm text-deep-aquifer/65">
+                    <span className="font-mono text-xs text-deep-aquifer/65">
                       {CONTACT.address}
                     </span>
                   </div>
@@ -87,16 +87,16 @@ export default function ContactPage() {
                     <span className="material-symbols-outlined text-[20px]">call</span>
                   </div>
                   <div>
-                    <span className="font-headline-h3 text-[15px] font-semibold text-deep-aquifer block">
-                      Priority Desk
+                    <span className="font-headline-h3 text-base font-medium text-deep-aquifer block">
+                      Priority desk
                     </span>
                     <a
-                      className="font-body-sm text-body-sm text-forest-slate hover:text-deep-aquifer transition-colors font-medium"
+                      className="font-mono text-xs text-forest-slate hover:text-deep-aquifer transition-colors font-medium block"
                       href={`tel:${CONTACT.phone}`}
                     >
                       {CONTACT.phoneDisplay}
                     </a>
-                    <span className="font-body-sm text-[12px] text-deep-aquifer/50 block mt-0.5">
+                    <span className="font-mono text-xs text-deep-aquifer/50 block mt-0.5">
                       Mon – Fri, 9:00 AM – 6:00 PM IST
                     </span>
                   </div>
@@ -107,11 +107,11 @@ export default function ContactPage() {
                     <span className="material-symbols-outlined text-[20px]">mail</span>
                   </div>
                   <div>
-                    <span className="font-headline-h3 text-[15px] font-semibold text-deep-aquifer block">
-                      Email Inquiries
+                    <span className="font-headline-h3 text-base font-medium text-deep-aquifer block">
+                      Email inquiries
                     </span>
                     <a
-                      className="font-body-sm text-body-sm text-forest-slate hover:text-deep-aquifer transition-colors font-medium"
+                      className="font-mono text-xs text-forest-slate hover:text-deep-aquifer transition-colors font-medium block"
                       href={`mailto:${CONTACT.email}`}
                     >
                       {CONTACT.email}
@@ -124,11 +124,11 @@ export default function ContactPage() {
                     <WhatsAppIcon className="size-[19px] text-forest-slate" />
                   </div>
                   <div>
-                    <span className="font-headline-h3 text-[15px] font-semibold text-deep-aquifer block">
+                    <span className="font-headline-h3 text-base font-medium text-deep-aquifer block">
                       Chat on WhatsApp
                     </span>
                     <a
-                      className="inline-flex items-center gap-1.5 font-button-text text-body-sm text-moss hover:text-forest-slate transition-colors font-medium"
+                      className="inline-flex items-center gap-1.5 font-button-text font-semibold text-xs text-moss hover:text-forest-slate transition-colors"
                       href={WHATSAPP_HREF}
                       rel="noopener noreferrer"
                       target="_blank"
@@ -220,10 +220,10 @@ export default function ContactPage() {
                 />
               </div>
               <div className="p-5 flex flex-col justify-between flex-grow">
-                <span className="font-button-text text-[12px] uppercase text-moss font-semibold tracking-wider">
-                  Passive Hydrology
+                <span className="font-mono text-xs text-moss font-medium">
+                  Passive hydrology
                 </span>
-                <p className="mt-2 font-body-sm text-body-sm text-deep-aquifer/80">
+                <p className="mt-2 font-body-primary text-base font-normal text-deep-aquifer/80 leading-relaxed">
                   Every drop guided into soil strata naturally, maintaining steady subsoil hydration.
                 </p>
               </div>
@@ -238,10 +238,10 @@ export default function ContactPage() {
                 />
               </div>
               <div className="p-5 flex flex-col justify-between flex-grow">
-                <span className="font-button-text text-[12px] uppercase text-moss font-semibold tracking-wider">
-                  Subterranean Infiltration
+                <span className="font-mono text-xs text-moss font-medium">
+                  Subterranean infiltration
                 </span>
-                <p className="mt-2 font-body-sm text-body-sm text-deep-aquifer/80">
+                <p className="mt-2 font-body-primary text-base font-normal text-deep-aquifer/80 leading-relaxed">
                   Quiet modular recharge chambers designed to outlast concrete retention pits.
                 </p>
               </div>
@@ -256,10 +256,10 @@ export default function ContactPage() {
                 />
               </div>
               <div className="p-5 flex flex-col justify-between flex-grow">
-                <span className="font-button-text text-[12px] uppercase text-moss font-semibold tracking-wider">
-                  Kochi Research Hub
+                <span className="font-mono text-xs text-moss font-medium">
+                  Kochi research hub
                 </span>
-                <p className="mt-2 font-body-sm text-body-sm text-deep-aquifer/80">
+                <p className="mt-2 font-body-primary text-base font-normal text-deep-aquifer/80 leading-relaxed">
                   Our engineering desk translates local precipitation records into reliable year-round yield.
                 </p>
               </div>

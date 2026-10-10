@@ -22,12 +22,12 @@ export function FinalCta() {
         <div className="relative overflow-hidden rounded-3xl border border-white/15 bg-white/5 p-8 shadow-2xl backdrop-blur-md sm:p-12 lg:p-16">
           <div className="grid grid-cols-1 items-center gap-10 lg:grid-cols-12">
             <div className="space-y-4 lg:col-span-7">
-              <h2 className="text-3xl font-extrabold tracking-tight text-white sm:text-4xl lg:text-5xl">
+              <h2 className="font-headline-h2 text-headline-h2-mobile sm:text-headline-h2 text-white tracking-tight leading-[1.2]">
                 <span className="block">Your water problem</span>
                 <span className="block">has a solution.</span>
               </h2>
-              <p className="text-xl font-bold text-brand-green sm:text-2xl">{"Let's find it together."}</p>
-              <p className="max-w-lg text-sm text-slate-300 sm:text-base">
+              <p className="font-headline-h3 text-[24px] font-medium text-brand-green leading-[1.3]">{"Let's find it together."}</p>
+              <p className="max-w-lg text-base font-normal font-body-primary leading-relaxed text-slate-300">
                 Get an on-site feasibility evaluation, custom storage simulation,
                 and transparent quote from our engineering consultants.
               </p>
@@ -43,7 +43,7 @@ export function FinalCta() {
                   icon={<ArrowRightIcon className="size-4" />}
                   className="flex-row-reverse font-semibold"
                 >
-                  Request a Consultation
+                  Request a consultation
                 </CtaButton>
               </div>
             </div>
@@ -54,18 +54,18 @@ export function FinalCta() {
                 <div className="mt-0.5 flex size-8 flex-shrink-0 items-center justify-center rounded-lg bg-brand-teal/20 text-brand-teal">
                   <LocationPinIcon className="size-4" />
                 </div>
-                <div className="text-xs text-slate-300 sm:text-sm">
-                  <p className="font-bold text-white">Skyra Headquarters</p>
+                <div className="text-base text-slate-300">
+                  <p className="font-medium text-white">Skyra headquarters</p>
                   <p className="mt-0.5 leading-relaxed">{CONTACT.address}</p>
                 </div>
               </div>
 
-              <div className="flex items-center gap-3 border-t border-white/10 pt-3 text-xs text-slate-300 sm:text-sm">
+              <div className="flex items-center gap-3 border-t border-white/10 pt-3 text-base text-slate-300">
                 <div className="flex size-8 flex-shrink-0 items-center justify-center rounded-lg bg-brand-green/20 text-brand-green">
                   <MailIcon className="size-4" />
                 </div>
                 <div>
-                  <p className="font-bold text-white">Direct Advisory</p>
+                  <p className="font-medium text-white">Direct advisory</p>
                   <p className="mt-0.5">
                     {CONTACT.email} / {CONTACT.phoneDisplay}
                   </p>
@@ -73,7 +73,7 @@ export function FinalCta() {
               </div>
 
               <div className="flex items-center gap-4 border-t border-white/10 pt-3 text-slate-400">
-                <span className="text-xs">Follow:</span>
+                <span className="font-mono text-xs">Follow:</span>
                 {SOCIAL_LINKS.map(({ label, Icon, href }) => (
                   <a key={label} aria-label={label} href={href} className="transition-colors hover:text-brand-teal">
                     <Icon className="size-4" />

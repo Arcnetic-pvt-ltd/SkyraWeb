@@ -13,18 +13,18 @@ export function BiggerVision() {
       <Container>
         <div className="grid grid-cols-1 items-center gap-12 lg:grid-cols-12">
           <div className="space-y-6 lg:col-span-7">
-            <Eyebrow color="green">The Bigger Vision</Eyebrow>
-            <h2 className="text-3xl font-extrabold leading-tight tracking-tight sm:text-5xl">
+            <Eyebrow color="green">The bigger vision</Eyebrow>
+            <h2 className="font-headline-h2 text-headline-h2-mobile sm:text-headline-h2 text-white leading-[1.2] tracking-tight">
               A future where every drop has a purpose.
             </h2>
-            <p className="max-w-xl text-base leading-relaxed text-slate-300 sm:text-lg">
+            <p className="max-w-xl text-base font-normal font-body-primary leading-relaxed text-slate-300">
               Skyra starts in Kerala, and grows across India — helping homes,
               businesses and communities build water security and a healthier,
               drought-resilient planet.
             </p>
             <div className="pt-4">
               <CtaButton href="#contact" icon={<ArrowRightIcon className="size-4" />} className="flex-row-reverse" size="sm">
-                Our Vision &amp; Mission
+                Our vision &amp; mission
               </CtaButton>
             </div>
           </div>
@@ -33,19 +33,19 @@ export function BiggerVision() {
             <VisionPillar
               icon={<CheckIcon className="size-5 text-brand-teal" />}
               tone="bg-brand-teal/20"
-              title="Conserve Water"
+              title="Conserve water"
               description="Prevent precious freshwater from ending up as polluted stormwater drainage."
             />
             <VisionPillar
               icon={<HarvestRainwaterIcon className="size-5 text-brand-green" />}
               tone="bg-brand-green/20"
-              title="Recharge Groundwater"
+              title="Recharge groundwater"
               description="Actively replenish subterranean tables to eliminate summer well drought."
             />
             <VisionPillar
               icon={<CommunityIcon className="size-5 text-sky-600" />}
               tone="bg-sky-600/20"
-              title="Build Sustainable Communities"
+              title="Build sustainable communities"
               description="Decentralize water security for self-sufficient neighborhoods and farms."
             />
           </div>

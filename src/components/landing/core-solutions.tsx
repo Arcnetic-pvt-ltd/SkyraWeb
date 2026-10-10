@@ -13,12 +13,12 @@ import {
 } from "@/components/icons/solution-icons";
 
 const CAPABILITIES = [
-  { label: "Manage Water", Icon: ManageWaterIcon, bg: "bg-emerald-50", tone: "text-brand-green" },
-  { label: "Harvest Rainwater", Icon: HarvestRainwaterIcon, bg: "bg-cyan-50", tone: "text-brand-teal" },
-  { label: "Recharge Groundwater", Icon: RechargeGroundwaterIcon, bg: "bg-teal-50", tone: "text-teal-600" },
-  { label: "Conserve Water", Icon: ConserveWaterIcon, bg: "bg-blue-50", tone: "text-blue-600" },
-  { label: "Improve Water Security", Icon: WaterSecurityIcon, bg: "bg-emerald-50", tone: "text-brand-green" },
-  { label: "Use Water Effectively", Icon: UseWaterEffectivelyIcon, bg: "bg-cyan-50", tone: "text-brand-teal" },
+  { label: "Manage water", Icon: ManageWaterIcon, bg: "bg-emerald-50", tone: "text-brand-green" },
+  { label: "Harvest rainwater", Icon: HarvestRainwaterIcon, bg: "bg-cyan-50", tone: "text-brand-teal" },
+  { label: "Recharge groundwater", Icon: RechargeGroundwaterIcon, bg: "bg-teal-50", tone: "text-teal-600" },
+  { label: "Conserve water", Icon: ConserveWaterIcon, bg: "bg-blue-50", tone: "text-blue-600" },
+  { label: "Improve water security", Icon: WaterSecurityIcon, bg: "bg-emerald-50", tone: "text-brand-green" },
+  { label: "Use water effectively", Icon: UseWaterEffectivelyIcon, bg: "bg-cyan-50", tone: "text-brand-teal" },
 ] as const;
 
 const SECTORS = ["Residential", "Commercial", "Industrial", "Agricultural"] as const;
@@ -51,13 +51,13 @@ const SOLUTIONS = [
   {
     image: "/images/solution-filtration.jpg",
     badge: "Filtration",
-    title: "Water Filtration Systems",
+    title: "Water filtration systems",
     description: "Automatic backwash media filters, UV sterilizers, and carbon filters ensuring potable and kitchen-safe water.",
   },
   {
     image: "/images/solution-maintenance.jpg",
     badge: "Maintenance",
-    title: "Maintenance & Monitoring",
+    title: "Maintenance & monitoring",
     description: "System maintenance, filter inspections, and certified water quality lab testing.",
   },
 ] as const;
@@ -69,17 +69,17 @@ export function CoreSolutions() {
       <Container>
         {/* Section Header */}
         <div className="mb-16 max-w-3xl space-y-4">
-          <Eyebrow color="teal">The Skyra Solution</Eyebrow>
-          <h2 className="text-3xl font-extrabold tracking-tight text-slate-950 sm:text-4xl lg:text-5xl">
+          <Eyebrow color="teal">The Skyra solution</Eyebrow>
+          <h2 className="font-headline-h2 text-headline-h2-mobile sm:text-headline-h2 text-deep-aquifer tracking-tight leading-[1.2]">
             Integrated water solutions for a sustainable future.
           </h2>
-          <p className="text-base leading-relaxed text-slate-600 sm:text-lg">
+          <p className="text-base font-normal font-body-primary leading-relaxed text-deep-aquifer">
             Skyra helps properties manage, harvest, recharge and use water more
             effectively — from rooftop to groundwater. Built on trust, engineering
             precision, and true long-term value.
           </p>
           <CtaButton href="#services-grid" variant="dark" size="sm" icon={<ChevronDownIcon className="size-4 text-brand-green" />} className="flex-row-reverse">
-            Explore Services
+            Explore services
           </CtaButton>
         </div>
 
@@ -90,7 +90,7 @@ export function CoreSolutions() {
               <div className={`flex size-10 items-center justify-center rounded-full ${bg} ${tone}`}>
                 <Icon className="size-5" />
               </div>
-              <span className="text-xs font-bold text-slate-800">{label}</span>
+              <span className="font-mono text-xs font-medium text-deep-aquifer">{label}</span>
             </div>
           ))}
         </div>
@@ -99,12 +99,12 @@ export function CoreSolutions() {
         <div className="border-t border-slate-200 pt-4" id="services-grid">
           <div className="mb-10 flex flex-col gap-4 md:flex-row md:items-end md:justify-between">
             <div>
-              <span className="text-xs font-bold uppercase tracking-widest text-brand-teal">Our Services</span>
-              <h3 className="mt-1 text-2xl font-extrabold text-slate-900 sm:text-3xl">
+              <span className="font-mono text-xs font-medium text-brand-teal">Our services</span>
+              <h3 className="mt-1 font-headline-h3 text-[24px] font-medium text-deep-aquifer leading-[1.3]">
                 Solutions for every space.
               </h3>
             </div>
-            <div className="flex flex-wrap gap-3 text-xs font-semibold text-slate-500">
+            <div className="flex flex-wrap gap-3 font-mono text-xs font-medium text-slate-500">
               {SECTORS.map((sector, i) => (
                 <span key={sector} className="contents">
                   <span className="font-bold text-brand-teal">{sector}</span>

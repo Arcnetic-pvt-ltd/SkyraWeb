@@ -22,7 +22,7 @@ export function Eyebrow({
   const bar = <span aria-hidden="true" className={`h-0.5 w-6 ${barClass}`} />;
 
   return (
-    <div className={`inline-flex items-center gap-2 text-xs font-bold uppercase tracking-widest ${colorClass} ${center ? "justify-center" : ""}`}>
+    <div className={`inline-flex items-center gap-2 text-xs font-mono font-medium tracking-wide ${colorClass} ${center ? "justify-center" : ""}`}>
       {dash && bar}
       {children}
       {dash === "both" && bar}

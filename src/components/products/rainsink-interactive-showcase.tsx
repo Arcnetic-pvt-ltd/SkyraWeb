@@ -9,27 +9,27 @@ export function RainsinkInteractiveShowcase() {
   const layersInfo = [
     {
       id: 1,
-      title: "Top Inlet & Manhole Cover",
+      title: "Top inlet & manhole cover",
       desc: "Reinforced concrete slab with flush manhole cover for routine inspection and maintenance access.",
     },
     {
       id: 2,
-      title: "Primary Filter (Medium Silex)",
+      title: "Primary filter (medium silex)",
       desc: "150–200 kg graded silica silex gravel. Traps coarse sediments, leaves, and suspended silt.",
     },
     {
       id: 3,
-      title: "Adsorption Bed (Activated Carbon)",
+      title: "Adsorption bed (activated carbon)",
       desc: "35–50 kg granular activated charcoal. Removes organic pollutants, color, odor, and micro-contaminants.",
     },
     {
       id: 4,
-      title: "Polishing Layer (Small Silex)",
+      title: "Polishing layer (small silex)",
       desc: "Fine silex aggregate layer that retains carbon particles and prevents fine clogging.",
     },
     {
       id: 5,
-      title: "Coarse Sand Base & Soil Seep Zone",
+      title: "Coarse sand base & soil seep zone",
       desc: "Permeable sand foundation allowing clean purified filtrate to percolate into subterranean aquifers.",
     },
   ];
@@ -46,13 +46,13 @@ export function RainsinkInteractiveShowcase() {
     <div className="flex flex-col gap-12">
       {/* Section Header */}
       <div className="flex flex-col gap-3 text-center max-w-3xl mx-auto">
-        <span className="font-technical-label text-body-sm text-moss uppercase tracking-wider font-semibold">
-          Strategic Campus Impact &amp; Value Delivery
+        <span className="font-mono text-xs text-moss font-medium">
+          Strategic campus impact &amp; value delivery
         </span>
-        <h2 className="font-headline-h2 text-headline-h2-mobile sm:text-headline-h2 text-deep-aquifer tracking-tight">
-          How Skyra Rainsink Transforms Your Campus
+        <h2 className="font-headline-h2 text-[28px] sm:text-[36px] font-semibold text-deep-aquifer tracking-tight">
+          How Skyra Rainsink transforms your campus
         </h2>
-        <p className="font-body-primary text-body-primary text-deep-aquifer/75 max-w-2xl mx-auto">
+        <p className="font-body-primary text-base font-normal leading-relaxed text-deep-aquifer/85 max-w-2xl mx-auto">
           Dual-action hydrological engineering designed for enterprise infrastructure — providing immediate stormwater flood resilience alongside long-term groundwater ESG stewardship.
         </p>
       </div>
@@ -67,34 +67,34 @@ export function RainsinkInteractiveShowcase() {
 
           <div className="flex flex-col gap-4 relative z-10">
             <div className="flex items-center justify-between flex-wrap gap-2">
-              <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-deep-aquifer/5 border border-deep-aquifer/15 text-deep-aquifer font-technical-label text-xs font-semibold">
+              <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-deep-aquifer/5 border border-deep-aquifer/15 text-deep-aquifer font-mono text-xs font-medium">
                 <span className="material-symbols-outlined text-[16px] text-moss">shield</span>
-                <span>Industrial Flood Resilience</span>
+                <span>Industrial flood resilience</span>
               </div>
-              <span className="font-technical-label text-[11px] uppercase tracking-wider text-muted-aquifer font-medium">
-                01 &middot; Stormwater Abatement
+              <span className="font-mono text-[11px] text-muted-aquifer font-medium">
+                01 &middot; Stormwater abatement
               </span>
             </div>
 
-            <p className="font-technical-label text-xs font-semibold text-moss uppercase tracking-wider">
-              Ideal for Logistics Hubs, Factories, Raw Material Yards &amp; Industrial Facilities
+            <p className="font-mono text-xs font-medium text-moss">
+              Ideal for logistics hubs, factories, raw material yards &amp; industrial facilities
             </p>
 
-            <p className="font-body-large text-base sm:text-[17px] text-deep-aquifer/90 leading-relaxed font-medium italic border-l-3 border-moss/50 pl-4 py-1">
+            <p className="font-body-primary text-base sm:text-[17px] text-deep-aquifer/90 leading-relaxed font-normal italic border-l-3 border-moss/50 pl-4 py-1">
               &ldquo;Skyra safeguards your campus from intense monsoonal cloudbursts. By routing high-velocity surface runoff into structured percolation units, our system prevents yard inundation, protects ground inventory, and eliminates operational downtime.&rdquo;
             </p>
           </div>
 
-          <div className="pt-4 border-t border-muted-aquifer/15 grid grid-cols-1 sm:grid-cols-3 gap-3 font-body-sm relative z-10">
-            <div className="flex items-center gap-2 p-3 rounded-xl bg-surface-container-low/60 border border-muted-aquifer/15 text-deep-aquifer font-medium text-xs hover:border-moss/40 transition-colors">
+          <div className="pt-4 border-t border-muted-aquifer/15 grid grid-cols-1 sm:grid-cols-3 gap-3 font-mono text-xs font-medium relative z-10">
+            <div className="flex items-center gap-2 p-3 rounded-xl bg-surface-container-low/60 border border-muted-aquifer/15 text-deep-aquifer text-xs hover:border-moss/40 transition-colors">
               <span className="material-symbols-outlined text-moss text-[18px]">inventory_2</span>
               <span>Protects low-lying inventory</span>
             </div>
-            <div className="flex items-center gap-2 p-3 rounded-xl bg-surface-container-low/60 border border-muted-aquifer/15 text-deep-aquifer font-medium text-xs hover:border-moss/40 transition-colors">
+            <div className="flex items-center gap-2 p-3 rounded-xl bg-surface-container-low/60 border border-muted-aquifer/15 text-deep-aquifer text-xs hover:border-moss/40 transition-colors">
               <span className="material-symbols-outlined text-moss text-[18px]">schedule</span>
               <span>Eliminates yard downtime</span>
             </div>
-            <div className="flex items-center gap-2 p-3 rounded-xl bg-surface-container-low/60 border border-muted-aquifer/15 text-deep-aquifer font-medium text-xs hover:border-moss/40 transition-colors">
+            <div className="flex items-center gap-2 p-3 rounded-xl bg-surface-container-low/60 border border-muted-aquifer/15 text-deep-aquifer text-xs hover:border-moss/40 transition-colors">
               <span className="material-symbols-outlined text-moss text-[18px]">water_damage</span>
               <span>Absorbs cloudburst surges</span>
             </div>
@@ -109,36 +109,36 @@ export function RainsinkInteractiveShowcase() {
 
           <div className="flex flex-col gap-4 relative z-10">
             <div className="flex items-center justify-between flex-wrap gap-2">
-              <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-moss/10 border border-moss/20 text-moss font-technical-label text-xs font-semibold">
+              <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-moss/10 border border-moss/20 text-moss font-mono text-xs font-medium">
                 <span className="material-symbols-outlined text-[16px]">eco</span>
-                <span>ESG &amp; Corporate Stewardship</span>
+                <span>ESG &amp; corporate stewardship</span>
               </div>
-              <span className="font-technical-label text-[11px] uppercase tracking-wider text-muted-aquifer font-medium">
-                02 &middot; Aquifer Replenishment
+              <span className="font-mono text-[11px] text-muted-aquifer font-medium">
+                02 &middot; Aquifer replenishment
               </span>
             </div>
 
-            <p className="font-technical-label text-xs font-semibold text-moss uppercase tracking-wider">
-              Ideal for MNCs, IT Parks, Educational Institutions &amp; Green Building Projects
+            <p className="font-mono text-xs font-medium text-moss">
+              Ideal for MNCs, IT parks, educational institutions &amp; green building projects
             </p>
 
-            <p className="font-body-large text-base sm:text-[17px] text-deep-aquifer/90 leading-relaxed font-medium italic border-l-3 border-moss/50 pl-4 py-1">
+            <p className="font-body-primary text-base sm:text-[17px] text-deep-aquifer/90 leading-relaxed font-normal italic border-l-3 border-moss/50 pl-4 py-1">
               &ldquo;Turn monsoonal precipitation into a long-term enterprise water asset. Our multi-stage silica &amp; carbon filtration units actively recharge deep soil strata, enabling facilities to meet CGWA recharge mandates and achieve verified water neutrality.&rdquo;
             </p>
           </div>
 
-          <div className="pt-4 border-t border-muted-aquifer/15 grid grid-cols-1 sm:grid-cols-3 gap-3 font-body-sm relative z-10">
-            <div className="flex items-center gap-2 p-3 rounded-xl bg-surface-container-low/60 border border-muted-aquifer/15 text-deep-aquifer font-medium text-xs hover:border-moss/40 transition-colors">
+          <div className="pt-4 border-t border-muted-aquifer/15 grid grid-cols-1 sm:grid-cols-3 gap-3 font-mono text-xs font-medium relative z-10">
+            <div className="flex items-center gap-2 p-3 rounded-xl bg-surface-container-low/60 border border-muted-aquifer/15 text-deep-aquifer text-xs hover:border-moss/40 transition-colors">
               <span className="material-symbols-outlined text-moss text-[18px]">verified</span>
-              <span>CGWA NOC Compliance</span>
+              <span>CGWA NOC compliance</span>
             </div>
-            <div className="flex items-center gap-2 p-3 rounded-xl bg-surface-container-low/60 border border-muted-aquifer/15 text-deep-aquifer font-medium text-xs hover:border-moss/40 transition-colors">
+            <div className="flex items-center gap-2 p-3 rounded-xl bg-surface-container-low/60 border border-muted-aquifer/15 text-deep-aquifer text-xs hover:border-moss/40 transition-colors">
               <span className="material-symbols-outlined text-moss text-[18px]">workspace_premium</span>
-              <span>LEED / IGBC / GRIHA Credits</span>
+              <span>LEED / IGBC / GRIHA credits</span>
             </div>
-            <div className="flex items-center gap-2 p-3 rounded-xl bg-surface-container-low/60 border border-muted-aquifer/15 text-deep-aquifer font-medium text-xs hover:border-moss/40 transition-colors">
+            <div className="flex items-center gap-2 p-3 rounded-xl bg-surface-container-low/60 border border-muted-aquifer/15 text-deep-aquifer text-xs hover:border-moss/40 transition-colors">
               <span className="material-symbols-outlined text-moss text-[18px]">water_drop</span>
-              <span>Corporate Water Neutrality</span>
+              <span>Corporate water neutrality</span>
             </div>
           </div>
         </div>
@@ -160,12 +160,12 @@ export function RainsinkInteractiveShowcase() {
                 <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-moss opacity-75" />
                 <span className="relative inline-flex rounded-full h-2.5 w-2.5 bg-moss" />
               </span>
-              <span className="font-mono text-xs font-semibold uppercase tracking-wider text-slate-300">
-                Hydrological Vector Cutaway
+              <span className="font-mono text-xs font-medium text-slate-300">
+                Hydrological vector cutaway
               </span>
             </div>
-            <span className="font-mono text-[11px] text-slate-400">
-              5-Chamber Engine
+            <span className="font-mono text-xs text-slate-400">
+              5-Chamber engine
             </span>
           </div>
 
@@ -768,11 +768,11 @@ export function RainsinkInteractiveShowcase() {
 
         {/* Interactive Layer Explorer Info */}
         <div className="lg:col-span-6 flex flex-col gap-4">
-          <span className="font-technical-label text-body-sm text-moss uppercase tracking-wider font-semibold">
-            Component Breakdown
+          <span className="font-mono text-xs font-medium text-moss">
+            Component breakdown
           </span>
-          <h3 className="font-headline-h3 text-deep-aquifer">Explore Rainsink Filter Chambers</h3>
-          <p className="font-body-sm text-deep-aquifer/75">
+          <h3 className="font-headline-h3 text-[24px] font-medium leading-[1.3] text-deep-aquifer">Explore Rainsink filter chambers</h3>
+          <p className="font-body-primary text-base font-normal text-deep-aquifer/85 leading-relaxed">
             Click on any section of the cross-section diagram on the left to inspect its filter media specifications and hydrological purpose.
           </p>
 
@@ -790,7 +790,7 @@ export function RainsinkInteractiveShowcase() {
                   }`}
                 >
                   <div className="flex items-center justify-between">
-                    <h4 className="font-bold text-sm flex items-center gap-2">
+                    <h4 className="font-headline-h3 text-[18px] sm:text-[20px] font-medium flex items-center gap-2">
                       <span className="w-5 h-5 rounded-full bg-moss/20 text-moss text-xs flex items-center justify-center font-mono">
                         {layer.id}
                       </span>
@@ -801,7 +801,7 @@ export function RainsinkInteractiveShowcase() {
                     </span>
                   </div>
                   {isSelected && (
-                    <p className="mt-2 text-xs opacity-90 leading-relaxed font-body-sm">
+                    <p className="mt-2 text-base opacity-90 leading-relaxed font-body-primary font-normal">
                       {layer.desc}
                     </p>
                   )}

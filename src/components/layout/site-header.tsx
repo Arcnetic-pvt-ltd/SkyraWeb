@@ -73,7 +73,7 @@ export function SiteHeader() {
             href="/contact"
             onClick={scrollToTop}
           >
-            Start a Conversation
+            Start a conversation
           </Link>
 
           <button
@@ -116,7 +116,7 @@ export function SiteHeader() {
               href="/contact"
               onClick={scrollToTop}
             >
-              Start a Conversation
+              Start a conversation
             </Link>
           </div>
         </div>

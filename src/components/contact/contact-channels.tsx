@@ -22,7 +22,7 @@ const CARDS: {
     external: true,
     Icon: LocationPinIcon,
     tone: "bg-brand-teal/10 border-brand-teal/30 text-brand-teal",
-    eyebrow: "Office Location",
+    eyebrow: "Office location",
     title: "Headquarters",
     detail: CONTACT.address,
     linkLabel: "Open in Google Maps",
@@ -33,11 +33,11 @@ const CARDS: {
     external: false,
     Icon: PhoneIcon,
     tone: "bg-sky-950/40 border-sky-500/30 text-sky-400",
-    eyebrow: "Direct Line",
-    title: "Phone Support",
+    eyebrow: "Direct line",
+    title: "Phone support",
     detail: CONTACT.phoneDisplay,
     detailMono: true,
-    linkLabel: "Click to Call",
+    linkLabel: "Click to call",
     LinkIcon: ExternalLinkIcon,
   },
   {
@@ -46,10 +46,10 @@ const CARDS: {
     Icon: MailIcon,
     tone: "bg-blue-950/40 border-blue-500/30 text-blue-400",
     eyebrow: "Inquiries",
-    title: "Email Us",
+    title: "Email us",
     detail: CONTACT.email,
     detailMono: true,
-    linkLabel: "Click to Email",
+    linkLabel: "Click to email",
     LinkIcon: ExternalLinkIcon,
   },
 ];
@@ -61,12 +61,12 @@ export function ContactChannels() {
       <Container>
       <div className="mb-8 flex items-center justify-between border-b border-white/10 pb-4">
         <div>
-          <span className="font-mono text-xs font-semibold uppercase tracking-widest text-brand-teal">
-            Get In Touch
+          <span className="font-mono text-xs font-medium text-brand-teal">
+            Get in touch
           </span>
-          <h2 className="mt-1 text-2xl font-bold tracking-tight text-white">Direct Contact Channels</h2>
+          <h2 className="mt-1 font-headline-h2 text-[28px] sm:text-[36px] font-semibold tracking-tight text-white">Direct contact channels</h2>
         </div>
-        <div className="hidden items-center gap-2 text-xs text-slate-400 sm:flex">
+        <div className="hidden items-center gap-2 font-mono text-xs text-slate-400 sm:flex">
           <span aria-hidden="true" className="size-2 rounded-full bg-emerald-400" />
           Fast response within working hours
         </div>
@@ -84,13 +84,13 @@ export function ContactChannels() {
               <div className={`mb-5 flex size-12 items-center justify-center rounded-xl border transition-transform duration-300 group-hover:scale-110 ${tone}`}>
                 <Icon className="size-5" />
               </div>
-              <span className="mb-1 block font-mono text-xs uppercase tracking-wider text-slate-400">{eyebrow}</span>
-              <h3 className="mb-2 text-base font-semibold text-white transition-colors group-hover:text-brand-teal">{title}</h3>
-              <p className={`mb-4 text-sm leading-relaxed text-slate-300 ${detailMono ? "font-mono tracking-wide" : ""}`}>
+              <span className="mb-1 block font-mono text-xs text-slate-400 font-medium">{eyebrow}</span>
+              <h3 className="mb-2 font-headline-h3 text-[20px] sm:text-[24px] font-medium leading-[1.3] text-white transition-colors group-hover:text-brand-teal">{title}</h3>
+              <p className={`mb-4 font-body-primary text-base font-normal leading-relaxed text-slate-300 ${detailMono ? "font-mono" : ""}`}>
                 {detail}
               </p>
             </div>
-            <div className="inline-flex items-center gap-1.5 text-xs font-semibold text-brand-teal transition-all group-hover:gap-2.5">
+            <div className="inline-flex items-center gap-1.5 font-mono text-xs font-medium text-brand-teal transition-all group-hover:gap-2.5">
               {linkLabel}
               <LinkIcon className="size-3.5" />
             </div>
@@ -113,17 +113,17 @@ export function ContactChannels() {
                 <span className="relative inline-flex size-3 rounded-full bg-emerald-500" />
               </span>
             </div>
-            <span className="mb-1 block font-mono text-xs uppercase tracking-wider text-emerald-400">
-              Instant Advisory
+            <span className="mb-1 block font-mono text-xs text-emerald-400 font-medium">
+              Instant advisory
             </span>
-            <h3 className="mb-2 text-base font-semibold text-white transition-colors group-hover:text-emerald-300">
-              WhatsApp Desk
+            <h3 className="mb-2 font-headline-h3 text-[20px] sm:text-[24px] font-medium leading-[1.3] text-white transition-colors group-hover:text-emerald-300">
+              WhatsApp desk
             </h3>
-            <p className="mb-4 text-sm leading-relaxed text-slate-300">
+            <p className="mb-4 font-body-primary text-base font-normal leading-relaxed text-slate-300">
               Direct chat with senior hydrological engineers.
             </p>
           </div>
-          <div className="inline-flex items-center gap-1.5 text-xs font-semibold text-emerald-400 transition-all group-hover:gap-2.5">
+          <div className="inline-flex items-center gap-1.5 font-mono text-xs font-medium text-emerald-400 transition-all group-hover:gap-2.5">
             Chat on WhatsApp
             <WhatsAppIcon className="size-3.5" />
           </div>

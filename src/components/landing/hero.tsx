@@ -36,19 +36,18 @@ export function Hero() {
       <Container className="relative z-10 w-full py-12">
         <div className="grid grid-cols-1 gap-10 lg:grid-cols-12 lg:gap-14 items-center">
           <div className="lg:col-span-6">
-            <div className="mb-6 inline-flex items-center gap-2 rounded-full border border-white/15 bg-white/10 px-3.25 py-1.75 text-xs font-medium uppercase tracking-wide text-brand-green backdrop-blur-md">
+            <div className="mb-6 inline-flex items-center gap-2 rounded-full border border-white/15 bg-white/10 px-3.25 py-1.75 font-mono text-xs font-medium text-brand-green backdrop-blur-md">
               <span aria-hidden="true" className="size-2 rounded-full bg-brand-green" />
-              Water Resilience &amp; Sustainable Architecture
+              Water resilience &amp; sustainable architecture
             </div>
 
-            <h1 className="mb-6 text-4xl font-extrabold tracking-tight text-white sm:text-5xl lg:text-6xl">
-              <span className="block">Stop Letting Your</span>
-              <span className="block">Water Run Dry.</span>
-              <span className="block font-semibold text-brand-teal">Capture, Recharge,</span>
-              <span className="block font-semibold text-brand-teal">Secure.</span>
+            <h1 className="mb-6 text-[38px] sm:text-5xl lg:text-[56px] font-bold font-headline-hero tracking-tight text-white leading-[1.15]">
+              <span className="block">Stop letting your</span>
+              <span className="block">water run dry.</span>
+              <span className="block">Capture, recharge, secure.</span>
             </h1>
 
-            <p className="mb-8 max-w-xl text-base font-normal leading-relaxed text-slate-300 sm:text-lg">
+            <p className="mb-8 max-w-xl text-base font-normal leading-relaxed text-slate-300 font-body-primary">
               Transform seasonal rainfall into a permanent, independent water source
               with intelligent, cost-effective water management solutions.
             </p>
@@ -58,7 +57,7 @@ export function Hero() {
                 Chat on WhatsApp
               </CtaButton>
               <CtaButton href="#contact" variant="secondary" icon={<ArrowRightIcon className="size-4 text-brand-teal" />} className="flex-row-reverse">
-                Request a Consultation
+                Request a consultation
               </CtaButton>
             </div>
           </div>
@@ -69,9 +68,9 @@ export function Hero() {
         </div>
       </Container>
 
-      <div className="absolute bottom-6 right-8 hidden items-center gap-2 font-mono text-[11px] uppercase tracking-widest text-slate-400 md:flex">
+      <div className="absolute bottom-6 right-8 hidden items-center gap-2 font-mono text-xs font-medium text-slate-400 md:flex">
         <span aria-hidden="true" className="h-px w-8 bg-brand-green/60" />
-        From Sky, To Life
+        From sky, to life
       </div>
     </section>
   );

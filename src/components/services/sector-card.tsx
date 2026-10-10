@@ -37,7 +37,7 @@ export function SectorCard({
         <div className="absolute inset-0 bg-gradient-to-t from-deep-aquifer/60 via-transparent to-transparent opacity-60 transition-opacity group-hover:opacity-40" />
 
         {/* Badge Tag */}
-        <div className={`absolute top-3 left-3 inline-flex items-center gap-1.5 rounded-full border px-3 py-1 text-[11px] font-bold uppercase tracking-wider backdrop-blur-md shadow-sm ${badgeTone}`}>
+        <div className={`absolute top-3 left-3 inline-flex items-center gap-1.5 rounded-full border px-3 py-1 font-mono text-xs font-medium backdrop-blur-md shadow-sm ${badgeTone}`}>
           {icon}
           <span>{eyebrow}</span>
         </div>
@@ -46,17 +46,17 @@ export function SectorCard({
       {/* Content Section */}
       <div className="flex flex-1 flex-col justify-between">
         <div>
-          <h3 className="font-headline-h3 text-xl font-bold text-deep-aquifer tracking-tight mb-2 group-hover:text-forest-slate transition-colors">
+          <h3 className="font-headline-h3 text-[24px] font-medium leading-[1.3] text-deep-aquifer tracking-tight mb-2 group-hover:text-forest-slate transition-colors">
             {title}
           </h3>
-          <p className="font-body-sm text-xs leading-relaxed text-deep-aquifer/75 mb-6">
+          <p className="font-body-primary text-base font-normal leading-relaxed text-deep-aquifer/85 mb-6">
             {description}
           </p>
         </div>
 
         {/* Link / Action Tag */}
         <div className="pt-4 border-t border-muted-aquifer/15 flex items-center justify-between">
-          <span className="font-technical-label text-xs font-semibold text-moss">
+          <span className="font-mono text-xs font-medium text-moss">
             {linkLabel}
           </span>
           <Link

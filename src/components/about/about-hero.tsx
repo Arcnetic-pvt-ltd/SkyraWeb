@@ -22,17 +22,14 @@ export function AboutHero() {
       <Container className="relative z-10 flex flex-col items-center text-center">
         <div className="inline-flex items-center gap-2 rounded-full bg-ink-elevated px-4 py-1.5 text-brand-teal shadow-md">
           <DropletIcon className="size-4" />
-          <span className="text-[11px] font-bold uppercase tracking-widest">About Skyra • From Sky, To Life</span>
+          <span className="font-mono text-xs font-medium">About Skyra • From sky, to life</span>
         </div>
 
-        <h1 className="mt-6 max-w-4xl text-3xl font-bold text-white sm:text-4xl lg:text-[56px] lg:leading-[64px]">
-          Re-engineering Our Relationship with{" "}
-          <span className="bg-linear-to-r from-brand-teal via-teal-300 to-brand-green bg-clip-text text-transparent">
-            Rain.
-          </span>
+        <h1 className="mt-6 max-w-4xl font-headline-hero text-[38px] sm:text-5xl lg:text-[56px] font-bold text-white tracking-tight leading-tight">
+          Re-engineering our relationship with rain.
         </h1>
 
-        <p className="mt-6 max-w-3xl text-lg leading-relaxed text-slate-400">
+        <p className="mt-6 max-w-3xl font-body-primary text-base font-normal leading-relaxed text-slate-300">
           Skyra was founded to solve a fundamental paradox: our regions receive
           abundant rainfall, yet we continually face seasonal water scarcity and
           groundwater depletion. We realized that to secure our future, we had
@@ -41,7 +38,7 @@ export function AboutHero() {
 
         <div className="mt-8 flex flex-wrap items-center justify-center gap-4">
           <CtaButton href="/services" variant="primary" icon={<ArrowRightIcon className="size-4" />} className="flex-row-reverse">
-            Explore Our Solutions
+            Explore our solutions
           </CtaButton>
           <CtaButton href={WHATSAPP_HREF} external variant="dark" icon={<WhatsAppIcon className="size-4 text-brand-green" />}>
             Connect on WhatsApp
@@ -55,8 +52,8 @@ export function AboutHero() {
                 <StormIcon className="size-6" />
               </div>
               <div>
-                <p className="text-xs font-bold uppercase tracking-widest text-brand-green">The Skyra Paradigm</p>
-                <p className="mt-1 text-sm text-white">
+                <p className="font-mono text-xs font-medium text-brand-green">The Skyra paradigm</p>
+                <p className="mt-1 font-body-primary text-base font-normal text-white/90">
                   Transforming rainwater from lost surface runoff into a
                   permanent, secure resource for homes, businesses, and
                   communities.
@@ -65,7 +62,7 @@ export function AboutHero() {
             </div>
             <div className="flex flex-shrink-0 items-center gap-2">
               <span aria-hidden="true" className="size-2.5 animate-ping rounded-full bg-brand-green" />
-              <span className="text-sm font-semibold text-brand-green">Decentralized Hydrology</span>
+              <span className="font-mono text-xs font-medium text-brand-green">Decentralized hydrology</span>
             </div>
           </div>
         </div>

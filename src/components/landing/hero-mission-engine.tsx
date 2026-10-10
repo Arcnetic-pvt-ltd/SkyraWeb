@@ -19,45 +19,45 @@ const STAGES: StageInfo[] = [
   {
     id: "capture",
     number: "01",
-    title: "Monsoon Rain Capture",
-    tagline: "Rooftop & Apron Interception",
+    title: "Monsoon rain capture",
+    tagline: "Rooftop & apron interception",
     description: "Capturing pristine monsoon rainwater from rooftops and aprons before it reaches polluted storm drains.",
-    metricLabel: "Capture Rate",
+    metricLabel: "Capture rate",
     metricValue: "18,400 L/hr",
-    badge: "100% Runoff Interception",
+    badge: "100% runoff interception",
     accentColor: "#7D9D3D", // moss
   },
   {
     id: "filter",
     number: "02",
-    title: "Hydrostatic Vortex Filter",
-    tagline: "Zero-Power Silt Removal",
+    title: "Hydrostatic vortex filter",
+    tagline: "Zero-power silt removal",
     description: "Passive centripetal fluid mechanics separate silt, sand, and organic debris without electricity.",
-    metricLabel: "Filtration Purity",
+    metricLabel: "Filtration purity",
     metricValue: "99.8%",
-    badge: "Passive Centripetal Separation",
+    badge: "Passive centripetal separation",
     accentColor: "#0098a6", // brand-teal
   },
   {
     id: "recharge",
     number: "03",
-    title: "Deep Aquifer Recharge",
-    tagline: "150ft Subterranean Injection",
+    title: "Deep aquifer recharge",
+    tagline: "150ft subterranean injection",
     description: "Injecting purified water directly into subterranean bedrock aquifers and piezometric water tables.",
-    metricLabel: "Aquifer Restored",
+    metricLabel: "Aquifer restored",
     metricValue: "+4.8 Meters",
-    badge: "Lithological Percolation",
+    badge: "Lithological percolation",
     accentColor: "#445F44", // forest-slate
   },
   {
     id: "secure",
     number: "04",
-    title: "Generational Water Security",
-    tagline: "Permanent Water Autonomy",
+    title: "Generational water security",
+    tagline: "Permanent water autonomy",
     description: "Creating continuous, self-sustaining water security for commercial campuses, estates, and homes.",
-    metricLabel: "Tanker Reliance",
+    metricLabel: "Tanker reliance",
     metricValue: "0.0%",
-    badge: "From Sky, To Life",
+    badge: "From sky, to life",
     accentColor: "#00c896", // brand-green
   },
 ];
@@ -92,8 +92,8 @@ export function HeroMissionEngine() {
             <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-moss opacity-75" />
             <span className="relative inline-flex rounded-full h-2.5 w-2.5 bg-moss" />
           </span>
-          <span className="font-mono text-xs font-bold uppercase tracking-wider text-deep-aquifer">
-            Closed-Loop Hydrological Engine
+          <span className="font-mono text-xs font-medium text-deep-aquifer">
+            Closed-loop hydrological engine
           </span>
         </div>
 
@@ -103,7 +103,7 @@ export function HeroMissionEngine() {
           title={isPlaying ? "Pause auto-loop" : "Play auto-loop"}
         >
           <span className={`size-1.5 rounded-full ${isPlaying ? "bg-moss animate-pulse" : "bg-amber-500"}`} />
-          {isPlaying ? "PAUSE" : "PLAY"}
+          {isPlaying ? "Pause" : "Play"}
         </button>
       </div>
 
@@ -390,22 +390,22 @@ export function HeroMissionEngine() {
           <div className="sm:col-span-8 space-y-1">
             <div className="flex items-center gap-2">
               <span
-                className="px-2 py-0.5 rounded-full text-[10px] font-mono font-bold uppercase tracking-wider text-white"
+                className="px-2.5 py-0.5 rounded-full text-xs font-mono font-medium tracking-wide text-white"
                 style={{ backgroundColor: currentStage.accentColor }}
               >
                 Phase {currentStage.number} • {currentStage.tagline}
               </span>
             </div>
-            <h4 className="text-sm sm:text-base font-bold text-deep-aquifer tracking-tight">
+            <h4 className="text-base font-semibold text-deep-aquifer tracking-tight">
               {currentStage.title}
             </h4>
-            <p className="text-xs text-deep-aquifer/80 leading-relaxed font-sans">
+            <p className="text-base text-deep-aquifer leading-relaxed font-sans">
               {currentStage.description}
             </p>
           </div>
 
           <div className="sm:col-span-4 flex flex-col items-start sm:items-end justify-center border-t sm:border-t-0 sm:border-l border-muted-aquifer/15 pt-2 sm:pt-0 sm:pl-3">
-            <span className="text-[10px] font-mono uppercase text-secondary">
+            <span className="text-xs font-mono text-secondary">
               {currentStage.metricLabel}
             </span>
             <span
@@ -416,7 +416,7 @@ export function HeroMissionEngine() {
             </span>
             <span className="text-[10px] text-moss font-mono mt-0.5 inline-flex items-center gap-1">
               <span className="size-1.5 rounded-full bg-moss animate-pulse" />
-              Engine Active
+              Engine active
             </span>
           </div>
         </motion.div>

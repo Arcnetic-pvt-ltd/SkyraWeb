@@ -32,7 +32,7 @@ export default function RootLayout({
           crossOrigin=""
         />
         <link
-          href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700&family=Inter:wght@400;500;600&family=Space+Mono:wght@400;700&display=swap"
+          href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700&family=Geist+Mono:wght@400;500;600;700&display=swap"
           rel="stylesheet"
         />
         <link
@@ -40,7 +40,7 @@ export default function RootLayout({
           rel="stylesheet"
         />
       </head>
-      <body className="min-h-full flex flex-col bg-light-aquifer-canvas font-body-primary text-deep-aquifer selection:bg-moss/20 selection:text-deep-aquifer">
+      <body className="min-h-full flex flex-col bg-light-aquifer-canvas font-sans text-deep-aquifer selection:bg-moss/20 selection:text-deep-aquifer text-base leading-relaxed text-left">
         <SmoothScrollProvider>
           <SiteHeader />
           <main className="flex-1 w-full bg-light-aquifer-canvas min-h-screen">

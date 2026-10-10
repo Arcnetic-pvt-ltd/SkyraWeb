@@ -5,17 +5,17 @@ import { FlowIcon } from "@/components/icons/service-icons";
 const REGIONS = [
   {
     tag: "State Hub • Kerala",
-    title: "Coastal Aquifer & High-Precipitation Systems",
+    title: "Coastal aquifer & high-precipitation systems",
     description: "High-precipitation tropical catchment, coastal aquifer recharge, flood retention detention, and saline intrusion prevention throughout Kochi, Trivandrum, and Calicut.",
   },
   {
     tag: "Industrial Corridor • Tamil Nadu",
-    title: "Urban Rainwater Harvesting & Industrial Compliance",
+    title: "Urban rainwater harvesting & industrial compliance",
     description: "Urban rainwater harvesting, industrial green-building regulatory compliance, and rapid infiltration deep recharge boreholes across Chennai and Coimbatore.",
   },
   {
     tag: "Tech Ecosystem • Karnataka",
-    title: "Commercial Tech Park & Campus Closed-Loop Autonomy",
+    title: "Commercial tech park & campus closed-loop autonomy",
     description: "Commercial tech park stormwater capture, campus closed-loop water autonomy, and decentralized storage solutions for Bangalore and Mysore.",
   },
 ] as const;
@@ -26,11 +26,11 @@ export function OurReach() {
     <section className="bg-slate-50 py-16 text-slate-950 lg:py-24">
       <Container>
         <div className="max-w-3xl">
-          <span className="text-xs font-bold uppercase tracking-widest text-brand-teal">Strategic Expansion</span>
-          <h2 className="mt-2 text-3xl font-bold tracking-tight text-slate-950 sm:text-4xl">
-            Our Reach: Rooted in South India, Scaling Nationally
+          <span className="font-mono text-xs font-medium text-brand-teal">Strategic expansion</span>
+          <h2 className="mt-2 font-headline-h2 text-[28px] sm:text-[36px] font-semibold tracking-tight text-slate-950">
+            Our reach: rooted in South India, scaling nationally
           </h2>
-          <p className="mt-3 text-lg leading-relaxed text-slate-600">
+          <p className="mt-3 font-body-primary text-base font-normal leading-relaxed text-deep-aquifer/85">
             We are proudly rooted in South India, understanding the unique
             climatic, soil, and geographical challenges of the Western Ghats
             and Deccan Plateau.
@@ -39,19 +39,19 @@ export function OurReach() {
 
         <div className="mt-12 grid grid-cols-1 gap-6 lg:grid-cols-12">
           <div className="flex flex-col gap-4 lg:col-span-7">
-            <p className="text-lg font-bold text-slate-950">Core Focus Areas</p>
+            <p className="font-headline-h3 text-[20px] font-medium text-slate-950">Core focus areas</p>
             {REGIONS.map(({ tag, title, description }) => (
-              <div key={tag} className="rounded-2xl bg-white p-6 shadow-sm transition-shadow hover:shadow-md">
+              <div key={tag} className="rounded-2xl bg-white p-6 shadow-sm transition-shadow hover:shadow-md border border-slate-100">
                 <div className="flex items-start justify-between gap-4">
                   <div>
-                    <span className="text-xs font-bold uppercase tracking-widest text-brand-teal">{tag}</span>
-                    <h4 className="mt-1 text-lg font-semibold text-slate-950">{title}</h4>
+                    <span className="font-mono text-xs font-medium text-brand-teal">{tag}</span>
+                    <h4 className="mt-1 font-headline-h3 text-[18px] sm:text-[20px] font-medium text-slate-950">{title}</h4>
                   </div>
-                  <span className="flex-shrink-0 rounded-full bg-emerald-100 px-3 py-1 text-xs font-semibold text-emerald-800">
-                    Active Node
+                  <span className="flex-shrink-0 rounded-full bg-emerald-100 px-3 py-1 font-mono text-xs font-medium text-emerald-800">
+                    Active node
                   </span>
                 </div>
-                <p className="mt-2 text-sm text-slate-600">{description}</p>
+                <p className="mt-2 font-body-primary text-base font-normal leading-relaxed text-deep-aquifer/85">{description}</p>
               </div>
             ))}
           </div>
@@ -64,25 +64,25 @@ export function OurReach() {
                 <div className="flex size-12 items-center justify-center rounded-full bg-brand-teal/20 text-brand-teal">
                   <GlobeIcon className="size-6" />
                 </div>
-                <span className="mt-6 block text-xs font-bold uppercase tracking-widest text-brand-teal">
-                  Pan-India Mandate
+                <span className="mt-6 block font-mono text-xs font-medium text-brand-teal">
+                  Pan-India mandate
                 </span>
-                <h3 className="mt-1 text-2xl font-semibold">National Vision</h3>
-                <p className="mt-3 leading-relaxed text-slate-300">
+                <h3 className="mt-1 font-headline-h3 text-[24px] font-medium leading-[1.3] text-white">National vision</h3>
+                <p className="mt-3 font-body-primary text-base font-normal leading-relaxed text-slate-300">
                   Operating with a Pan-India scope, bringing sustainable
                   rainwater harvesting and groundwater recharge solutions to
                   properties across the country.
                 </p>
-                <p className="mt-2 leading-relaxed text-slate-300">
+                <p className="mt-2 font-body-primary text-base font-normal leading-relaxed text-slate-300">
                   Scaling proven decentralized water technology to
                   drought-prone industrial corridors, agricultural belts, and
                   residential developments nationwide.
                 </p>
 
                 <div className="mt-6 rounded-lg bg-black/30 p-4 backdrop-blur-sm">
-                  <div className="mb-2 flex items-center justify-between text-xs text-slate-400">
-                    <span>Network Topology</span>
-                    <span className="font-semibold text-brand-green">Live Strata Sync</span>
+                  <div className="mb-2 flex items-center justify-between font-mono text-xs text-slate-400">
+                    <span>Network topology</span>
+                    <span className="font-medium text-brand-green">Live strata sync</span>
                   </div>
                   <svg className="h-16 w-full text-brand-teal" fill="none" viewBox="0 0 300 60" xmlns="http://www.w3.org/2000/svg">
                     <path
@@ -99,9 +99,9 @@ export function OurReach() {
                 </div>
               </div>
 
-              <div className="mt-6 flex items-center gap-2 border-t border-white/10 pt-4 text-sm font-semibold text-brand-green">
+              <div className="mt-6 flex items-center gap-2 border-t border-white/10 pt-4 font-mono text-xs font-medium text-brand-green">
                 <FlowIcon className="size-5" />
-                Centralized Diagnostics • Decentralized Deployment
+                Centralized diagnostics • Decentralized deployment
               </div>
             </div>
           </div>

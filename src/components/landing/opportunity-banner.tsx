@@ -33,18 +33,16 @@ export function OpportunityBanner() {
 
       <div className="relative z-10 mx-auto max-w-5xl space-y-8 px-5 text-center sm:px-6 lg:px-8">
         <Eyebrow color="green" dash="both" center>
-          The Opportunity
+          The opportunity
         </Eyebrow>
 
-        <h2 className="mx-auto max-w-3xl text-2xl font-extrabold leading-tight tracking-tight text-white sm:text-4xl lg:text-5xl">
+        <h2 className="mx-auto max-w-3xl font-headline-h2 text-headline-h2-mobile sm:text-headline-h2 text-white tracking-tight leading-[1.2]">
           <span className="block">What if the water running away</span>
           <span className="block">today could become the water we</span>
-          <span className="block text-brand-green underline decoration-brand-green/40 underline-offset-8">
-            depend on tomorrow?
-          </span>
+          <span className="block">depend on tomorrow?</span>
         </h2>
 
-        <div className="flex flex-wrap items-center justify-center gap-3 pt-8 text-xs font-semibold sm:gap-4 sm:text-sm md:gap-6">
+        <div className="flex flex-wrap items-center justify-center gap-3 pt-8 font-mono text-xs font-medium sm:gap-4 md:gap-6">
           {FLOW_STEPS.map(({ emoji, label, tone }, i) => (
             <div key={label} className="contents">
               <div className="flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-4 py-2 text-[#F1F5F9]">
@@ -63,8 +61,8 @@ export function OpportunityBanner() {
           <span aria-hidden="true" className="text-slate-500">
             →
           </span>
-          <div className="flex items-center gap-2 rounded-full bg-brand-green px-4 py-2 font-bold text-ink shadow-cta-glow">
-            <span aria-hidden="true">🛡️</span> Water Security
+          <div className="flex items-center gap-2 rounded-full bg-brand-green px-4 py-2 font-mono font-medium text-ink shadow-cta-glow">
+            <span aria-hidden="true">🛡️</span> Water security
           </div>
         </div>
       </div>

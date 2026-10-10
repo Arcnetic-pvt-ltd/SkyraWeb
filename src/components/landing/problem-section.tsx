@@ -12,7 +12,7 @@ const PIPELINE_STEPS: {
   { label: "Rain", Icon: RainIcon, tone: "text-sky-600 bg-slate-50 border-slate-200" },
   { label: "Runoff", Icon: RunoffIcon, tone: "text-slate-600 bg-slate-50 border-slate-200" },
   { label: "Drainage", Icon: DrainageIcon, tone: "text-slate-600 bg-slate-50 border-slate-200" },
-  { label: "Lost Resource", Icon: LostResourceIcon, tone: "text-red-500 bg-red-50 border-red-200", labelTone: "text-red-600 font-bold" },
+  { label: "Lost resource", Icon: LostResourceIcon, tone: "text-red-500 bg-red-50 border-red-200", labelTone: "text-red-600 font-medium" },
 ];
 
 /** The Problem Section (Light Surface). Source: Figma node 1:32. */
@@ -23,14 +23,12 @@ export function ProblemSection() {
         <div className="grid grid-cols-1 items-center gap-16 lg:grid-cols-12">
           {/* Left Column: Problem Copy & Flow Diagram */}
           <div className="space-y-6 lg:col-span-6">
-            <Eyebrow color="teal">The Problem</Eyebrow>
-            <h2 className="text-3xl font-extrabold tracking-tight text-slate-950 sm:text-4xl lg:text-5xl">
-              <span className="block">{"We don't have a rain"}</span>
-              <span className="block">problem.</span>
-              <span className="block text-brand-teal">We have a water-</span>
-              <span className="block text-brand-teal">management problem.</span>
+            <Eyebrow color="teal">The problem</Eyebrow>
+            <h2 className="font-headline-h2 text-headline-h2-mobile sm:text-headline-h2 text-deep-aquifer tracking-tight leading-[1.2]">
+              <span className="block">{"We don't have a rain problem."}</span>
+              <span className="block">We have a water-management problem.</span>
             </h2>
-            <p className="text-base leading-relaxed text-slate-600 sm:text-lg">
+            <p className="text-base font-normal font-body-primary leading-relaxed text-deep-aquifer">
               India receives abundant rainfall, yet water scarcity still becomes a
               reality during dry periods. Rainwater is lost as runoff, while
               groundwater faces increasing pressure from unchecked extraction.
@@ -42,7 +40,7 @@ export function ProblemSection() {
                   <div className={`mb-2 flex size-12 items-center justify-center rounded-xl border shadow-sm ${tone}`}>
                     <Icon className="size-6" />
                   </div>
-                  <span className={`text-xs font-semibold text-slate-800 ${labelTone ?? ""}`}>{label}</span>
+                  <span className={`font-mono text-xs font-medium text-deep-aquifer ${labelTone ?? ""}`}>{label}</span>
                 </div>
               ))}
             </div>
@@ -61,11 +59,11 @@ export function ProblemSection() {
                 />
                 <div className="absolute inset-0 bg-linear-to-t from-black/80 via-transparent to-black/20" />
                 <div className="absolute bottom-6 left-6 right-6">
-                  <span className="rounded bg-sky-600/80 px-2.5 py-1 text-[11px] font-bold uppercase tracking-wider text-white">
-                    Status Quo 1
+                  <span className="rounded bg-sky-600/80 px-2.5 py-1 font-mono text-xs font-medium text-white">
+                    Status quo 1
                   </span>
-                  <p className="mt-2 text-lg font-bold text-white sm:text-xl">Abundant rainfall.</p>
-                  <p className="mt-0.5 text-xs text-slate-300">
+                  <p className="mt-2 text-lg font-medium text-white sm:text-xl">Abundant rainfall.</p>
+                  <p className="mt-1 text-base font-normal font-body-primary text-slate-200 leading-relaxed">
                     Billions of liters lost as untreated surface runoff.
                   </p>
                 </div>
@@ -80,11 +78,11 @@ export function ProblemSection() {
                 />
                 <div className="absolute inset-0 bg-linear-to-t from-black/80 via-transparent to-black/20" />
                 <div className="absolute bottom-6 left-6 right-6">
-                  <span className="rounded bg-amber-600/80 px-2.5 py-1 text-[11px] font-bold uppercase tracking-wider text-white">
-                    Status Quo 2
+                  <span className="rounded bg-amber-600/80 px-2.5 py-1 font-mono text-xs font-medium text-white">
+                    Status quo 2
                   </span>
-                  <p className="mt-2 text-lg font-bold text-white sm:text-xl">Seasonal water scarcity.</p>
-                  <p className="mt-0.5 text-xs text-slate-300">
+                  <p className="mt-2 text-lg font-medium text-white sm:text-xl">Seasonal water scarcity.</p>
+                  <p className="mt-1 text-base font-normal font-body-primary text-slate-200 leading-relaxed">
                     Depleted aquifers, dried wells, and tanker dependency.
                   </p>
                 </div>

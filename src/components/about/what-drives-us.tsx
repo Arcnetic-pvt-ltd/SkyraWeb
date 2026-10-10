@@ -14,7 +14,7 @@ const PILLARS = [
     title: "Trust",
     description: "We use verified data and proven technologies to deliver solutions that actually work, ensuring your property is protected for decades.",
     FooterIcon: CheckCircleIcon,
-    footer: "Hydro-Geological Precision",
+    footer: "Hydro-geological precision",
   },
   {
     Icon: DropletIcon,
@@ -23,7 +23,7 @@ const PILLARS = [
     title: "Transparency",
     description: "From our initial site assessment to the final drop harvested, we provide clear communication, honest timelines, and no hidden costs.",
     FooterIcon: EyeIcon,
-    footer: "Open Milestones & Audit Logs",
+    footer: "Open milestones & audit logs",
   },
   {
     Icon: RefreshIcon,
@@ -32,7 +32,7 @@ const PILLARS = [
     title: "Affordability",
     description: "Premium sustainability should not be out of reach. We engineer cost-effective systems that deliver a true long-term return on investment.",
     FooterIcon: RechargeGroundwaterIcon,
-    footer: "Rapid Tanker-Cost Amortization",
+    footer: "Rapid tanker-cost amortization",
   },
 ] as const;
 
@@ -42,11 +42,11 @@ export function WhatDrivesUs() {
     <section className="bg-ink-elevated py-16 lg:py-24">
       <Container className="flex flex-col items-center">
         <div className="max-w-2xl text-center">
-          <Eyebrow color="green" center>Core Guiding Principles</Eyebrow>
-          <h2 className="mt-2 text-3xl font-bold tracking-tight text-white sm:text-4xl">
-            What Drives Us
+          <Eyebrow color="green" center>Core guiding principles</Eyebrow>
+          <h2 className="mt-2 font-headline-h2 text-[28px] sm:text-[36px] font-semibold tracking-tight text-white">
+            What drives us
           </h2>
-          <p className="mt-3 text-lg leading-relaxed text-slate-400">
+          <p className="mt-3 font-body-primary text-base font-normal leading-relaxed text-slate-300">
             Moving the industry away from traditional, opaque engineering
             practices with three unwavering pillars.
           </p>
@@ -59,10 +59,10 @@ export function WhatDrivesUs() {
                 <div className={`flex size-14 items-center justify-center rounded-full bg-ink-elevated ${tone} ${hoverBg} transition-colors group-hover:text-ink`}>
                   <Icon className="size-7" />
                 </div>
-                <h3 className="mt-6 text-xl font-semibold text-white">{title}</h3>
-                <p className="mt-2 leading-relaxed text-slate-400">{description}</p>
+                <h3 className="mt-6 font-headline-h3 text-[24px] font-medium leading-[1.3] text-white">{title}</h3>
+                <p className="mt-2 font-body-primary text-base font-normal leading-relaxed text-slate-300">{description}</p>
               </div>
-              <div className={`mt-6 flex items-center gap-2 border-t border-white/10 pt-4 text-sm font-semibold ${tone}`}>
+              <div className={`mt-6 flex items-center gap-2 border-t border-white/10 pt-4 font-mono text-xs font-medium ${tone}`}>
                 <FooterIcon className="size-4" />
                 {footer}
               </div>

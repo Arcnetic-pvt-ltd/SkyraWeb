@@ -91,8 +91,8 @@ export function HeroMissionAnimation() {
             <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-brand-green opacity-75" />
             <span className="relative inline-flex rounded-full h-2.5 w-2.5 bg-brand-green" />
           </span>
-          <span className="font-mono text-xs font-semibold uppercase tracking-wider text-slate-300">
-            Closed-Loop Hydrological Engine
+          <span className="font-mono text-xs font-medium tracking-wide text-slate-300">
+            Closed-loop hydrological engine
           </span>
         </div>
 
@@ -394,8 +394,8 @@ export function HeroMissionAnimation() {
               className="absolute bottom-3 left-3 right-3 p-3 rounded-xl bg-slate-900/95 border border-brand-teal text-xs text-slate-200 flex items-center justify-between backdrop-blur-md shadow-xl z-20"
             >
               <div>
-                <span className="font-semibold text-brand-green uppercase text-[10px] tracking-wider block">
-                  Interactive Node: {activeHotspot}
+                <span className="font-mono text-xs font-medium text-brand-green tracking-wide block">
+                  Interactive node: {activeHotspot}
                 </span>
                 <span>
                   {activeHotspot === "roof" && "High-yield surface catchment channels 98%+ of rain straight into filtration."}
@@ -406,9 +406,9 @@ export function HeroMissionAnimation() {
               </div>
               <button
                 onClick={() => setActiveHotspot(null)}
-                className="ml-3 px-2 py-1 bg-white/10 hover:bg-white/20 rounded text-[10px] font-mono text-slate-300 cursor-pointer"
+                className="ml-3 px-2 py-1 bg-white/10 hover:bg-white/20 rounded text-xs font-mono text-slate-300 cursor-pointer"
               >
-                CLOSE
+                Close
               </button>
             </motion.div>
           )}
@@ -428,7 +428,7 @@ export function HeroMissionAnimation() {
           <div className="sm:col-span-8 space-y-1.5">
             <div className="flex items-center gap-2">
               <span
-                className="px-2 py-0.5 rounded-full text-[10px] font-mono font-bold uppercase tracking-wider text-slate-950"
+                className="px-2 py-0.5 rounded-full text-xs font-mono font-medium text-slate-950"
                 style={{ backgroundColor: currentStage.accentColor }}
               >
                 Stage {currentStage.number} • {currentStage.tagline}
@@ -437,40 +437,40 @@ export function HeroMissionAnimation() {
                 {currentStage.badge}
               </span>
             </div>
-            <h4 className="text-base sm:text-lg font-bold text-white tracking-tight">
+            <h4 className="text-base sm:text-lg font-semibold text-white tracking-tight">
               {currentStage.title}
             </h4>
-            <p className="text-xs sm:text-sm text-slate-300 leading-relaxed">
+            <p className="text-base text-slate-300 leading-relaxed">
               {currentStage.description}
             </p>
           </div>
 
           <div className="sm:col-span-4 flex flex-col items-start sm:items-end justify-center border-t sm:border-t-0 sm:border-l border-white/10 pt-3 sm:pt-0 sm:pl-4">
-            <span className="text-[11px] font-mono uppercase text-slate-400">
+            <span className="text-xs font-mono text-slate-400">
               {currentStage.metricLabel}
             </span>
             <span
-              className="text-xl sm:text-2xl font-extrabold font-mono tracking-tight mt-0.5"
+              className="text-xl sm:text-2xl font-bold font-mono tracking-tight mt-0.5"
               style={{ color: currentStage.accentColor }}
             >
               {currentStage.metricValue}
             </span>
-            <span className="text-[10px] text-brand-green/90 font-mono mt-1 inline-flex items-center gap-1">
+            <span className="text-xs text-brand-green/90 font-mono mt-1 inline-flex items-center gap-1">
               <span className="size-1.5 rounded-full bg-brand-green animate-pulse" />
-              Live Telemetry Active
+              Live telemetry active
             </span>
           </div>
         </motion.div>
       </AnimatePresence>
 
       {/* Footer Banner: Mission Tagline */}
-      <div className="mt-4 flex items-center justify-between text-[11px] text-slate-400 font-mono pt-2 border-t border-white/5">
+      <div className="mt-4 flex items-center justify-between text-xs text-slate-400 font-mono pt-2 border-t border-white/5">
         <span className="flex items-center gap-1.5">
           <span className="size-1.5 rounded-full bg-brand-teal" />
-          Mission: Hydro-Resilience across India
+          Mission: Hydro-resilience across India
         </span>
-        <span className="uppercase text-brand-green font-bold tracking-widest">
-          From Sky, To Life
+        <span className="text-brand-green font-medium">
+          From sky, to life
         </span>
       </div>
     </div>

@@ -58,13 +58,13 @@ export function ConsultationForm() {
           {/* Left Column: Context & Facility Photo */}
           <div className="space-y-8 lg:col-span-5">
             <div>
-              <div className="mb-4 inline-flex items-center gap-2 rounded-full border border-brand-teal/30 bg-brand-teal/10 px-3.5 py-1 text-xs font-semibold uppercase tracking-wider text-teal-800">
-                Site Assessment • 24h Turnaround
+              <div className="mb-4 inline-flex items-center gap-2 rounded-full border border-brand-teal/30 bg-brand-teal/10 px-3.5 py-1 font-mono text-xs font-medium text-teal-800">
+                Site assessment • 24h turnaround
               </div>
-              <h2 className="mb-4 text-3xl font-bold leading-tight tracking-tight text-slate-950 md:text-4xl">
-                Request a Consultation
+              <h2 className="mb-4 font-headline-h2 text-[28px] sm:text-[36px] font-semibold leading-tight tracking-tight text-slate-950">
+                Request a consultation
               </h2>
-              <p className="text-base leading-relaxed text-slate-600">
+              <p className="font-body-primary text-base font-normal leading-relaxed text-slate-600">
                 Drop us a message and our civil hydrological engineers will
                 get back to you within 24 hours to schedule an on-site
                 feasibility study or custom water storage simulation.
@@ -83,10 +83,10 @@ export function ConsultationForm() {
               </div>
               <div className="absolute inset-0 flex items-end bg-linear-to-t from-slate-950/80 via-transparent to-transparent p-6">
                 <div className="text-white">
-                  <span className="mb-1 block font-mono text-xs uppercase tracking-wider text-teal-300">
-                    R&amp;D &amp; Engineering Hub
+                  <span className="mb-1 block font-mono text-xs text-teal-300 font-medium">
+                    R&amp;D &amp; engineering hub
                   </span>
-                  <p className="text-sm font-semibold">
+                  <p className="font-headline-h3 text-sm font-medium">
                     South India Rainwater Harvesting Research Center, Kerala
                   </p>
                 </div>
@@ -99,8 +99,8 @@ export function ConsultationForm() {
                   <CheckIcon className="size-4" />
                 </div>
                 <div>
-                  <h4 className="text-sm font-bold text-slate-900">Zero-Obligation Assessment</h4>
-                  <p className="text-xs text-slate-500">
+                  <h4 className="font-headline-h3 text-sm font-medium text-slate-900">Zero-obligation assessment</h4>
+                  <p className="font-body-primary text-xs font-normal text-slate-500">
                     Free initial catchment calculation and aquifer depth analysis.
                   </p>
                 </div>
@@ -110,8 +110,8 @@ export function ConsultationForm() {
                   <WaterSecurityIcon className="size-4" />
                 </div>
                 <div>
-                  <h4 className="text-sm font-bold text-slate-900">KSPCB &amp; Municipal Compliance</h4>
-                  <p className="text-xs text-slate-500">
+                  <h4 className="font-headline-h3 text-sm font-medium text-slate-900">KSPCB &amp; municipal compliance</h4>
+                  <p className="font-body-primary text-xs font-normal text-slate-500">
                     100% compliant with Kerala and South India water security mandates.
                   </p>
                 </div>
@@ -126,8 +126,8 @@ export function ConsultationForm() {
                 <div className="mb-4 flex size-14 items-center justify-center rounded-full bg-emerald-100 text-emerald-700">
                   <CheckIcon className="size-7" />
                 </div>
-                <h3 className="text-xl font-bold text-slate-900">Request received</h3>
-                <p className="mt-2 max-w-sm text-sm text-slate-600">
+                <h3 className="font-headline-h3 text-[24px] font-medium leading-[1.3] text-slate-900">Request received</h3>
+                <p className="mt-2 max-w-sm font-body-primary text-base font-normal text-slate-600">
                   Thank you, {form.fullName.split(" ")[0] || "there"}. Our team
                   will contact you within 24 hours to schedule your assessment.
                 </p>
@@ -137,7 +137,7 @@ export function ConsultationForm() {
                     setForm(EMPTY_FORM);
                     setSubmitted(false);
                   }}
-                  className="mt-6 text-sm font-semibold text-brand-teal hover:text-brand-green"
+                  className="mt-6 font-button-text font-semibold text-sm text-brand-teal hover:text-brand-green"
                 >
                   Submit another request
                 </button>
@@ -145,8 +145,8 @@ export function ConsultationForm() {
             ) : (
               <>
                 <div className="mb-8">
-                  <h3 className="text-xl font-bold text-slate-900">Tell us about your property</h3>
-                  <p className="mt-1 text-sm text-slate-500">
+                  <h3 className="font-headline-h3 text-[24px] font-medium leading-[1.3] text-slate-900">Tell us about your property</h3>
+                  <p className="mt-1 font-body-primary text-base font-normal text-slate-500">
                     Fill out the brief details below and we will contact you shortly.
                   </p>
                 </div>
@@ -154,8 +154,8 @@ export function ConsultationForm() {
                 <form onSubmit={handleSubmit} className="space-y-8">
                   <div className="grid grid-cols-1 gap-8 md:grid-cols-2">
                     <div>
-                      <label htmlFor="fullName" className="mb-1 block text-xs font-semibold uppercase tracking-wider text-slate-700">
-                        Full Name <span className="text-brand-teal">*</span>
+                      <label htmlFor="fullName" className="mb-1 block font-mono text-xs font-medium text-slate-700">
+                        Full name <span className="text-brand-teal">*</span>
                       </label>
                       <input
                         id="fullName"
@@ -169,8 +169,8 @@ export function ConsultationForm() {
                       />
                     </div>
                     <div>
-                      <label htmlFor="phone" className="mb-1 block text-xs font-semibold uppercase tracking-wider text-slate-700">
-                        Phone / WhatsApp Number <span className="text-brand-teal">*</span>
+                      <label htmlFor="phone" className="mb-1 block font-mono text-xs font-medium text-slate-700">
+                        Phone / WhatsApp number <span className="text-brand-teal">*</span>
                       </label>
                       <input
                         id="phone"
@@ -187,8 +187,8 @@ export function ConsultationForm() {
 
                   <div className="grid grid-cols-1 gap-8 md:grid-cols-2">
                     <div>
-                      <label htmlFor="location" className="mb-1 block text-xs font-semibold uppercase tracking-wider text-slate-700">
-                        Location / District <span className="text-brand-teal">*</span>
+                      <label htmlFor="location" className="mb-1 block font-mono text-xs font-medium text-slate-700">
+                        Location / district <span className="text-brand-teal">*</span>
                       </label>
                       <input
                         id="location"
@@ -202,8 +202,8 @@ export function ConsultationForm() {
                       />
                     </div>
                     <div>
-                      <label htmlFor="propertyType" className="mb-1 block text-xs font-semibold uppercase tracking-wider text-slate-700">
-                        Property Type <span className="text-brand-teal">*</span>
+                      <label htmlFor="propertyType" className="mb-1 block font-mono text-xs font-medium text-slate-700">
+                        Property type <span className="text-brand-teal">*</span>
                       </label>
                       <select
                         id="propertyType"
@@ -213,7 +213,7 @@ export function ConsultationForm() {
                         onChange={(e) => handleChange("propertyType", e.target.value)}
                         className={`${inputClass} cursor-pointer`}
                       >
-                        <option value="" disabled>Select Property Type</option>
+                        <option value="" disabled>Select property type</option>
                         {PROPERTY_TYPES.map((t) => (
                           <option key={t} value={t}>{t}</option>
                         ))}
@@ -222,7 +222,7 @@ export function ConsultationForm() {
                   </div>
 
                   <div>
-                    <label htmlFor="message" className="mb-1 block text-xs font-semibold uppercase tracking-wider text-slate-700">
+                    <label htmlFor="message" className="mb-1 block font-mono text-xs font-medium text-slate-700">
                       How can we help you?
                     </label>
                     <textarea
@@ -239,12 +239,12 @@ export function ConsultationForm() {
                   <div className="flex flex-col items-center justify-between gap-4 pt-4 sm:flex-row">
                     <button
                       type="submit"
-                      className="inline-flex w-full items-center justify-center gap-2 rounded-full bg-linear-to-r from-teal-600 to-brand-teal px-9 py-4 text-sm font-semibold text-white shadow-lg shadow-teal-600/25 transition-all hover:shadow-teal-600/40 sm:w-auto"
+                      className="inline-flex w-full items-center justify-center gap-2 rounded-full bg-linear-to-r from-teal-600 to-brand-teal px-9 py-4 font-button-text font-semibold text-sm text-white shadow-lg shadow-teal-600/25 transition-all hover:shadow-teal-600/40 sm:w-auto"
                     >
-                      Submit Request
+                      Submit request
                       <ArrowRightIcon className="size-4" />
                     </button>
-                    <div className="flex items-center gap-2 text-xs text-slate-500">
+                    <div className="flex items-center gap-2 font-mono text-xs text-slate-500">
                       <LockIcon className="size-3.5 text-slate-400" />
                       Your information is strictly protected
                     </div>

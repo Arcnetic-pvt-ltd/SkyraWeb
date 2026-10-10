@@ -303,27 +303,27 @@ export function HeroMissionBackground() {
           className="absolute z-20 pointer-events-auto w-72 sm:w-80 p-4 rounded-2xl bg-white/95 border border-muted-aquifer/30 backdrop-blur-xl shadow-xl text-deep-aquifer space-y-2 hidden lg:block"
         >
           <div className="flex items-center justify-between border-b border-muted-aquifer/15 pb-2">
-            <span className="text-[10px] font-mono font-bold uppercase tracking-wider text-moss flex items-center gap-1.5">
+            <span className="text-xs font-mono font-medium tracking-wide text-moss flex items-center gap-1.5">
               <span className="size-1.5 rounded-full bg-moss animate-ping" />
               Phase {stage.num} • {stage.subtitle}
             </span>
-            <span className="text-xs font-mono font-bold text-deep-aquifer">
+            <span className="text-xs font-mono font-medium text-deep-aquifer">
               {stage.metric}
             </span>
           </div>
 
           <div>
-            <h4 className="text-sm font-bold tracking-tight text-deep-aquifer">
+            <h4 className="text-base font-semibold tracking-tight text-deep-aquifer">
               {stage.title}
             </h4>
-            <p className="text-xs text-deep-aquifer/75 font-sans mt-1 leading-relaxed">
+            <p className="text-base text-deep-aquifer font-sans mt-1 leading-relaxed">
               {stage.description}
             </p>
           </div>
 
-          <div className="pt-1 flex items-center justify-between text-[10px] font-mono text-secondary">
+          <div className="pt-1 flex items-center justify-between text-xs font-mono text-secondary">
             <span>{stage.statLabel}</span>
-            <span className="text-moss font-semibold uppercase">Engine Active</span>
+            <span className="text-moss font-medium">Engine active</span>
           </div>
         </motion.div>
       </AnimatePresence>
