@@ -18,30 +18,30 @@ export default function Home() {
             <div className="inline-flex items-center gap-2.5 mb-4">
               <span className="inline-block w-2 h-2 rounded-full bg-moss"></span>
               <span className="font-mono text-body-sm text-secondary tracking-normal font-medium">
-                Hero solution &middot; Skyra Rainsink &amp; enterprise stewardship
+                Rainwater harvesting &amp; groundwater recharge &middot; South India
               </span>
             </div>
 
             <h1 className="font-headline-hero text-headline-hero-mobile sm:text-headline-hero text-deep-aquifer tracking-tight leading-tight">
-              Transform stormwater into lasting aquifer resilience.
+              Rainwater harvesting across South India
             </h1>
 
             <p className="font-body-large text-body-large text-deep-aquifer mt-4 sm:mt-5 leading-relaxed">
-              Featuring <strong>Skyra Rainsink</strong> &mdash; our high-capacity rain percolator unit. Engineered for logistics hubs, factories, IT parks, and institutions to eliminate yard flooding, guarantee statutory CGWA NOC compliance, and reach water neutrality.
+              We catch the rain on your roof and grounds and return it to the earth where it lasts. Turn-key rainwater harvesting, groundwater recharge, and percolation systems for homes, apartments, industries, and campuses across Kerala, Karnataka, and Tamil Nadu.
             </p>
 
             <div className="mt-6 flex flex-wrap items-center gap-3">
               <Link
-                href="/products/rainsink"
+                href="/contact?query=site-survey"
                 className="inline-flex items-center justify-center bg-deep-aquifer hover:bg-forest-slate text-light-aquifer-canvas font-button-text text-button-text px-6 py-3 rounded-[6px] transition-colors"
               >
-                Explore Skyra Rainsink
+                Book a site survey
               </Link>
               <Link
-                href="/contact"
+                href="/services"
                 className="font-button-text text-button-text text-deep-aquifer hover:text-forest-slate transition-colors inline-flex items-center gap-2 py-3 px-5 border border-muted-aquifer/30 bg-white rounded-[6px]"
               >
-                <span>Request campus survey</span>
+                <span>Explore solutions</span>
                 <span className="material-symbols-outlined text-[18px]">
                   arrow_forward
                 </span>
