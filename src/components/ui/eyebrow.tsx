@@ -17,12 +17,12 @@ export function Eyebrow({
   dash?: boolean | "both";
   center?: boolean;
 }) {
-  const colorClass = color === "teal" ? "text-brand-teal" : "text-brand-green";
-  const barClass = color === "teal" ? "bg-brand-teal" : "bg-brand-green";
-  const bar = <span aria-hidden="true" className={`h-0.5 w-6 ${barClass}`} />;
+  const colorClass = "text-moss font-bold uppercase tracking-widest text-[11px]";
+  const barClass = "bg-moss";
+  const bar = <span aria-hidden="true" className={`h-0.5 w-5 ${barClass}`} />;
 
   return (
-    <div className={`inline-flex items-center gap-2 text-xs font-bold uppercase tracking-widest ${colorClass} ${center ? "justify-center" : ""}`}>
+    <div className={`inline-flex items-center gap-2 ${colorClass} ${center ? "justify-center" : ""}`}>
       {dash && bar}
       {children}
       {dash === "both" && bar}

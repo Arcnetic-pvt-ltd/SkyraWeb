@@ -1,20 +1,47 @@
 import type { Metadata } from "next";
-import { Plus_Jakarta_Sans } from "next/font/google";
 import "./globals.css";
 import { SiteHeader } from "@/components/layout/site-header";
 import { SiteFooter } from "@/components/layout/site-footer";
 import { WhatsAppWidget } from "@/components/layout/whatsapp-widget";
-
-const jakarta = Plus_Jakarta_Sans({
-  variable: "--font-jakarta",
-  subsets: ["latin"],
-  weight: ["400", "500", "600", "700", "800"],
-});
+import { SmoothScrollProvider } from "@/components/providers/smooth-scroll";
 
 export const metadata: Metadata = {
-  title: "SkyRa — From Sky, To Life",
+  title: {
+    default: "Rainwater harvesting and groundwater recharge · Skyra",
+    template: "%s · Skyra",
+  },
   description:
-    "SkyRa helps properties manage, harvest, recharge and use water more effectively — from rooftop to groundwater.",
+    "Systems for homes, apartments, industries and campuses across South India.",
+  metadataBase: new URL("https://skyra.in"),
+  openGraph: {
+    title: "Rainwater harvesting and groundwater recharge · Skyra",
+    description:
+      "Systems for homes, apartments, industries and campuses across South India.",
+    url: "https://skyra.in",
+    siteName: "Skyra",
+    images: [
+      {
+        url: "/images/contact-facility.jpg",
+        width: 1200,
+        height: 630,
+        alt: "Skyra Rainwater Harvesting Systems",
+      },
+    ],
+    locale: "en_IN",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Rainwater harvesting and groundwater recharge · Skyra",
+    description:
+      "Systems for homes, apartments, industries and campuses across South India.",
+    images: ["/images/contact-facility.jpg"],
+  },
+  icons: {
+    icon: "/images/skyra-logo.png",
+    shortcut: "/images/skyra-logo.png",
+    apple: "/images/skyra-logo.png",
+  },
 };
 
 export default function RootLayout({
@@ -23,20 +50,36 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={`${jakarta.variable} h-full antialiased`}>
-      {/*
-        No top padding is added here for the fixed header: each page's
-        first section bakes in its own top offset to clear the 80px
-        header (e.g. the Landing Hero's Figma-authored pt-[108px]),
-        matching how the design itself accounts for the header floating
-        over page content. Adding a second offset here would double it.
-      */}
-      <body className="min-h-full flex flex-col">
-        <SiteHeader />
-        <main className="flex-1">{children}</main>
-        <SiteFooter />
-        <WhatsAppWidget />
+    <html lang="en" className="h-full antialiased">
+      <head>
+        <link rel="icon" href="/images/skyra-logo.png" type="image/png" sizes="any" />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link
+          rel="preconnect"
+          href="https://fonts.gstatic.com"
+          crossOrigin=""
+        />
+        <link
+          href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700&family=Inter:wght@400;500;600&family=Space+Mono:wght@400;700&display=swap"
+          rel="stylesheet"
+        />
+        <link
+          href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap"
+          rel="stylesheet"
+        />
+      </head>
+      <body className="min-h-full flex flex-col bg-light-aquifer-canvas font-body-primary text-deep-aquifer selection:bg-moss/20 selection:text-deep-aquifer">
+        <SmoothScrollProvider>
+          <SiteHeader />
+          <main className="flex-1 w-full bg-light-aquifer-canvas min-h-screen pb-16 sm:pb-0">
+            {children}
+          </main>
+          <SiteFooter />
+          <WhatsAppWidget />
+        </SmoothScrollProvider>
       </body>
     </html>
   );
 }
+
+

@@ -1,69 +1,64 @@
 import Link from "next/link";
-import { Container } from "@/components/ui/container";
-import { Logo } from "@/components/layout/logo";
-import { NAV_LINKS } from "@/lib/nav";
+import { CONTACT, WHATSAPP_HREF } from "@/lib/nav";
+import { SkyraLogo } from "@/components/layout/skyra-logo";
 
-const LEGAL_LINKS = [
-  { label: "Privacy Policy", href: "#" },
-  { label: "Terms of Service", href: "#" },
-  { label: "KSPCB Compliance", href: "#" },
-] as const;
-
-/**
- * Global Footer. Source: Figma node 1:563.
- *
- * Legal links (Privacy/Terms/KSPCB Compliance) have no destination pages
- * in this design or in the four-page scope — left as "#" placeholders
- * rather than linking to pages that don't exist. TODO: wire these up once
- * those pages exist.
- *
- * Responsive assumption (Phase 4): both rows go from a 3-part horizontal
- * layout to a stacked, centered column below `md`.
- */
 export function SiteFooter() {
   return (
-    <footer className="border-t border-white/10 bg-ink py-12">
-      <Container>
-        <div className="flex flex-col items-center gap-8 border-b border-white/10 pb-8 md:flex-row md:items-center md:justify-between">
-          <Logo variant="footer" />
-
-          <nav aria-label="Footer" className="flex flex-wrap items-center justify-center gap-8">
-            {NAV_LINKS.map((link) => (
-              <Link
-                key={link.href}
-                href={link.href}
-                className="text-xs text-slate-300 transition-colors hover:text-white"
-              >
-                {link.label}
-              </Link>
-            ))}
-          </nav>
-
-          <div className="flex items-center gap-2">
-            <span aria-hidden="true" className="h-px w-6 bg-brand-green/60" />
-            <span className="font-mono text-[11px] tracking-widest text-slate-400">
-              FROM SKY, TO LIFE
-            </span>
+    <footer className="w-full bg-light-aquifer-canvas border-t border-muted-aquifer/15 text-deep-aquifer py-12 lg:py-16">
+      <div className="w-full max-w-5xl mx-auto px-6 lg:px-8">
+        <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-8 pb-10 border-b border-muted-aquifer/15">
+          {/* Left Column: Logo & Physical Address */}
+          <div className="flex flex-col gap-3">
+            <SkyraLogo className="text-deep-aquifer" />
+            <p className="font-body-sm text-[15px] text-deep-aquifer/80 leading-snug">
+              {CONTACT.address}
+            </p>
           </div>
-        </div>
 
-        <div className="flex flex-col items-center gap-4 pt-8 md:flex-row md:items-center md:justify-between">
-          <p className="text-[11px] text-slate-300">
-            © 2026 SkyRa Water Technologies Private Limited. All rights reserved.
-          </p>
-          <div className="flex flex-wrap items-center justify-center gap-6">
-            {LEGAL_LINKS.map((link) => (
+          {/* Right Column: Contact options, Privacy policy, Current year */}
+          <div className="flex flex-col md:items-end gap-3 text-[15px]">
+            <div className="flex flex-wrap items-center gap-2 text-deep-aquifer/90">
               <a
-                key={link.label}
-                href={link.href}
-                className="text-[11px] text-slate-300 transition-colors hover:text-white"
+                href={WHATSAPP_HREF}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="hover:text-forest-slate transition-colors font-medium"
               >
-                {link.label}
+                WhatsApp
               </a>
-            ))}
+              <span>·</span>
+              <a
+                href={`tel:${CONTACT.phone}`}
+                className="hover:text-forest-slate transition-colors font-medium"
+              >
+                Phone
+              </a>
+              <span>·</span>
+              <a
+                href={`mailto:${CONTACT.email}`}
+                className="hover:text-forest-slate transition-colors font-medium"
+              >
+                Email
+              </a>
+            </div>
+
+            <div className="flex items-center gap-4 text-deep-aquifer/70 text-[14px]">
+              <Link href="/contact" className="hover:text-deep-aquifer transition-colors">
+                Privacy policy
+              </Link>
+              <span>·</span>
+              <span>© 2026 Skyra</span>
+            </div>
           </div>
         </div>
-      </Container>
+
+        {/* Sub-Footer: Powered by Arcnetic */}
+        <div className="pt-6 flex flex-col sm:flex-row items-center justify-between gap-2 text-[13px] text-deep-aquifer/50">
+          <span>Rainwater harvesting and groundwater recharge across India</span>
+          <span>Powered by Arcnetic</span>
+        </div>
+      </div>
     </footer>
   );
 }
+

@@ -141,3 +141,6 @@ dist
 vite.config.js.timestamp-*
 vite.config.ts.timestamp-*
 .vite/
+
+stitch_skyra_brand_design_system/
+stitch_skyra_water_solutions_platform/

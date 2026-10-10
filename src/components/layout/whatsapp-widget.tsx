@@ -1,24 +1,22 @@
-import { WhatsAppIcon } from "@/components/icons/whatsapp-icon";
 import { WHATSAPP_HREF } from "@/lib/nav";
+import { WhatsAppIcon } from "@/components/icons/whatsapp-icon";
 
-/**
- * Floating WhatsApp link. Source: Figma node 1:610 — a standalone
- * "Floating WhatsApp link" section, not part of any page's normal flow,
- * so it's rendered fixed to the viewport corner (standard pattern for
- * this kind of persistent contact widget) rather than at a Figma-given
- * x/y, which the design doesn't specify for a floating element.
- */
 export function WhatsAppWidget() {
   return (
-    <a
-      href={WHATSAPP_HREF}
-      target="_blank"
-      rel="noopener noreferrer"
-      aria-label="Chat with an expert on WhatsApp"
-      className="fixed bottom-6 right-6 z-40 inline-flex items-center gap-2 rounded-full bg-emerald-500 px-4 py-3 text-xs font-bold text-white shadow-2xl transition-transform hover:scale-105 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white sm:bottom-8 sm:right-8"
-    >
-      <WhatsAppIcon className="size-6" />
-      Chat with an Expert
-    </a>
+    <div className="fixed bottom-0 sm:bottom-6 inset-x-0 sm:inset-auto sm:right-6 z-40 p-3 sm:p-0 bg-white/95 sm:bg-transparent border-t sm:border-t-0 border-muted-aquifer/20">
+      <a
+        aria-label="Chat on WhatsApp"
+        className="flex items-center justify-center gap-2.5 px-5 py-3 rounded-[6px] bg-deep-aquifer hover:bg-forest-slate text-white border border-muted-aquifer/20 transition-colors shadow-xs w-full sm:w-auto"
+        href={WHATSAPP_HREF}
+        rel="noopener noreferrer"
+        target="_blank"
+      >
+        <WhatsAppIcon className="size-4 text-moss" />
+        <span className="text-[14px] font-medium">
+          Chat on WhatsApp
+        </span>
+      </a>
+    </div>
   );
 }
+

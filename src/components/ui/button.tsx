@@ -3,17 +3,17 @@ import type { ReactNode } from "react";
 type Variant = "primary" | "secondary" | "secondary-teal" | "dark";
 
 const VARIANT_CLASSES: Record<Variant, string> = {
-  // Solid brand-green pill w/ glow shadow — main WhatsApp/conversion CTA.
+  // Main site survey & primary CTA button — Deep Aquifer / Moss accent
   primary:
-    "bg-brand-green text-ink shadow-cta-glow hover:bg-emerald-400 focus-visible:outline-white",
-  // Translucent white outline on dark surfaces — Hero's secondary CTA.
+    "bg-deep-aquifer text-light-aquifer-canvas hover:bg-forest-slate focus-visible:outline-deep-aquifer border border-transparent shadow-sm",
+  // Secondary CTA button with subtle border
   secondary:
-    "border border-white/20 bg-white/5 text-white backdrop-blur-sm hover:bg-white/10 focus-visible:outline-white",
-  // Teal outline on dark surfaces — Final CTA's secondary link.
+    "border border-muted-aquifer/30 bg-white text-deep-aquifer hover:bg-slate-50 focus-visible:outline-deep-aquifer shadow-xs",
+  // Moss accent CTA button
   "secondary-teal":
-    "border border-brand-teal/60 text-brand-teal hover:border-brand-teal hover:text-white focus-visible:outline-brand-teal",
-  // Solid dark pill — "Explore Services".
-  dark: "bg-ink-elevated text-white hover:bg-ink focus-visible:outline-brand-green",
+    "bg-moss text-deep-aquifer hover:bg-moss/90 focus-visible:outline-moss font-semibold border border-transparent shadow-sm",
+  // Dark button variant
+  dark: "bg-deep-aquifer text-white hover:bg-forest-slate focus-visible:outline-deep-aquifer border border-transparent shadow-sm",
 };
 
 export function CtaButton({
@@ -33,15 +33,16 @@ export function CtaButton({
   external?: boolean;
   className?: string;
 }) {
-  const sizeClass = size === "md" ? "px-6 py-3.5 text-sm gap-2.5" : "px-5 py-2.5 text-sm gap-2";
+  const sizeClass = size === "md" ? "px-6 py-3 min-h-[44px] text-button-text font-button-text gap-2.5" : "px-4 py-2.5 min-h-[44px] text-xs font-button-text gap-2";
   return (
     <a
       href={href}
       {...(external ? { target: "_blank", rel: "noopener noreferrer" } : {})}
-      className={`inline-flex items-center rounded-full font-bold transition-colors focus-visible:outline-2 focus-visible:outline-offset-2 ${sizeClass} ${VARIANT_CLASSES[variant]} ${className}`}
+      className={`inline-flex items-center rounded-[6px] transition-colors focus-visible:outline-2 focus-visible:outline-offset-2 ${sizeClass} ${VARIANT_CLASSES[variant]} ${className}`}
     >
       {icon}
       {children}
     </a>
   );
 }
+

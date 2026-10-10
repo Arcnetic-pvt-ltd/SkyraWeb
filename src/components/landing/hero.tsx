@@ -4,6 +4,7 @@ import { Container } from "@/components/ui/container";
 import { WhatsAppIcon } from "@/components/icons/whatsapp-icon";
 import { ArrowRightIcon } from "@/components/icons/arrow-right-icon";
 import { WHATSAPP_HREF } from "@/lib/nav";
+import { HeroMissionEngine } from "@/components/landing/hero-mission-engine";
 
 /**
  * Hero Section. Source: Figma node 1:3.
@@ -17,54 +18,39 @@ import { WHATSAPP_HREF } from "@/lib/nav";
  */
 export function Hero() {
   return (
-    <section className="relative flex min-h-[92vh] items-center justify-center overflow-hidden bg-ink pt-27 pb-19">
-      <div className="absolute inset-0 z-0">
-        <Image
-          src="/images/hero-rainfall.jpg"
-          alt="Lush rainfall over modern architecture and water reservoir"
-          fill
-          priority
-          sizes="100vw"
-          className="scale-105 object-cover object-center brightness-75 contrast-125"
-        />
-        <div className="absolute inset-0 bg-linear-to-r from-ink via-ink/80 to-transparent" />
-        <div className="absolute inset-0 bg-linear-to-t from-ink via-transparent to-ink/40" />
-      </div>
+    <section className="relative flex min-h-[85vh] items-center justify-center overflow-hidden bg-light-aquifer-canvas pt-28 pb-16">
+      <Container className="relative z-10 w-full">
+        <div className="grid grid-cols-1 gap-10 lg:grid-cols-12 lg:gap-12 items-center">
+          <div className="lg:col-span-6">
+            <div className="mb-6 inline-flex items-center gap-2 rounded-[4px] border border-muted-aquifer/20 bg-white px-3 py-1 text-xs font-medium text-deep-aquifer shadow-xs">
+              Water resilience &amp; sustainable architecture
+            </div>
 
-      <Container className="relative z-10 w-full py-12">
-        <div className="max-w-2xl">
-          <div className="mb-6 inline-flex items-center gap-2 rounded-full border border-white/15 bg-white/10 px-3.25 py-1.75 text-xs font-medium uppercase tracking-wide text-brand-green backdrop-blur-md">
-            <span aria-hidden="true" className="size-2 rounded-full bg-brand-green" />
-            Water Resilience &amp; Sustainable Architecture
+            <h1 className="mb-6 text-4xl font-extrabold tracking-tight text-deep-aquifer sm:text-5xl lg:text-6xl leading-[1.1]">
+              Stop letting your water run dry.
+              <span className="block font-semibold text-deep-aquifer/90">Capture, recharge, secure.</span>
+            </h1>
+
+            <p className="mb-8 max-w-xl text-base font-normal leading-relaxed text-deep-aquifer/75 sm:text-lg">
+              Transform seasonal rainfall into a permanent, independent water source
+              with intelligent, cost-effective water management solutions.
+            </p>
+
+            <div className="flex flex-wrap items-center gap-4">
+              <CtaButton href="#contact" variant="primary">
+                Book a site survey
+              </CtaButton>
+              <CtaButton href={WHATSAPP_HREF} external variant="secondary" icon={<WhatsAppIcon className="size-4 text-deep-aquifer" />}>
+                Chat on WhatsApp
+              </CtaButton>
+            </div>
           </div>
 
-          <h1 className="mb-6 text-4xl font-extrabold tracking-tight text-white sm:text-5xl lg:text-6xl">
-            <span className="block">Stop Letting Your</span>
-            <span className="block">Water Run Dry.</span>
-            <span className="block font-semibold text-brand-teal">Capture, Recharge,</span>
-            <span className="block font-semibold text-brand-teal">Secure.</span>
-          </h1>
-
-          <p className="mb-8 max-w-xl text-base font-normal leading-relaxed text-slate-300 sm:text-lg">
-            Transform seasonal rainfall into a permanent, independent water source
-            with intelligent, cost-effective water management solutions.
-          </p>
-
-          <div className="flex flex-wrap items-center gap-4">
-            <CtaButton href={WHATSAPP_HREF} external icon={<WhatsAppIcon className="size-4" />}>
-              Chat on WhatsApp
-            </CtaButton>
-            <CtaButton href="#contact" variant="secondary" icon={<ArrowRightIcon className="size-4 text-brand-teal" />} className="flex-row-reverse">
-              Request a Consultation
-            </CtaButton>
+          <div className="lg:col-span-6 w-full">
+            <HeroMissionEngine />
           </div>
         </div>
       </Container>
-
-      <div className="absolute bottom-6 right-8 hidden items-center gap-2 font-mono text-[11px] uppercase tracking-widest text-slate-400 md:flex">
-        <span aria-hidden="true" className="h-px w-8 bg-brand-green/60" />
-        From Sky, To Life
-      </div>
     </section>
   );
 }
