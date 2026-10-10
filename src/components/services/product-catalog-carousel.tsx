@@ -154,10 +154,10 @@ export function ProductCatalogCarousel() {
                 key={tab.id}
                 type="button"
                 onClick={() => setActiveCategory(tab.id as any)}
-                className={`px-4 py-2 rounded-full font-button-text text-xs sm:text-body-sm transition-all duration-300 cursor-pointer ${
+                className={`px-4 py-2 rounded-[6px] font-button-text text-xs sm:text-body-sm transition-all duration-300 cursor-pointer ${
                   isActive
-                    ? "bg-deep-aquifer text-light-aquifer-canvas shadow-md"
-                    : "bg-surface-container-low text-deep-aquifer/70 hover:text-deep-aquifer hover:bg-black/5"
+                    ? "bg-deep-aquifer text-white"
+                    : "bg-white border border-muted-aquifer/20 text-deep-aquifer/70 hover:text-deep-aquifer hover:bg-black/5"
                 }`}
               >
                 {tab.label}
@@ -180,7 +180,7 @@ export function ProductCatalogCarousel() {
               type="button"
               onClick={handlePrev}
               aria-label="Previous product"
-              className="w-10 h-10 rounded-full border border-muted-aquifer/25 flex items-center justify-center text-deep-aquifer hover:bg-deep-aquifer hover:text-white transition-all duration-200 cursor-pointer shadow-sm disabled:opacity-40"
+              className="w-9 h-9 rounded-[6px] border border-muted-aquifer/25 bg-white flex items-center justify-center text-deep-aquifer hover:bg-deep-aquifer hover:text-white transition-all duration-200 cursor-pointer disabled:opacity-40"
             >
               <span className="material-symbols-outlined text-[20px]">arrow_back</span>
             </button>
@@ -188,7 +188,7 @@ export function ProductCatalogCarousel() {
               type="button"
               onClick={handleNext}
               aria-label="Next product"
-              className="w-10 h-10 rounded-full border border-muted-aquifer/25 flex items-center justify-center text-deep-aquifer hover:bg-deep-aquifer hover:text-white transition-all duration-200 cursor-pointer shadow-sm disabled:opacity-40"
+              className="w-9 h-9 rounded-[6px] border border-muted-aquifer/25 bg-white flex items-center justify-center text-deep-aquifer hover:bg-deep-aquifer hover:text-white transition-all duration-200 cursor-pointer disabled:opacity-40"
             >
               <span className="material-symbols-outlined text-[20px]">arrow_forward</span>
             </button>
@@ -217,14 +217,14 @@ export function ProductCatalogCarousel() {
                   <div
                     key={prod.id}
                     onClick={() => setCurrentIndex(idx)}
-                    className={`p-4 rounded-xl border transition-all duration-300 cursor-pointer flex items-center gap-4 group ${
+                    className={`p-4 rounded-[4px] border transition-all duration-300 cursor-pointer flex items-center gap-4 group ${
                       isSelected
-                        ? "bg-deep-aquifer text-white border-moss/60 shadow-md translate-x-1 border-l-4 border-l-moss"
+                        ? "bg-deep-aquifer text-white border-moss/60 border-l-4 border-l-moss"
                         : "bg-white text-deep-aquifer border-muted-aquifer/20 hover:border-moss/40 hover:bg-slate-50/50"
                     }`}
                   >
                     {/* Thumbnail Image */}
-                    <div className="relative w-16 h-16 rounded-lg overflow-hidden shrink-0 bg-surface-container-low border border-muted-aquifer/15">
+                    <div className="relative w-16 h-16 rounded-[4px] overflow-hidden shrink-0 bg-surface-container-low border border-muted-aquifer/15">
                       <Image
                         src={prod.image}
                         alt={prod.title}
@@ -237,7 +237,7 @@ export function ProductCatalogCarousel() {
                     <div className="flex flex-col flex-1 min-w-0">
                       <div className="flex items-center gap-2">
                         <span
-                          className={`font-mono text-[10px] px-2 py-0.5 rounded font-medium ${
+                          className={`font-mono text-[10px] px-2 py-0.5 rounded-[4px] font-medium ${
                             isSelected
                               ? "bg-moss text-deep-aquifer"
                               : "bg-moss/10 text-moss"
@@ -287,7 +287,7 @@ export function ProductCatalogCarousel() {
                   animate={{ opacity: 1, x: 0 }}
                   exit={{ opacity: 0, x: 20 }}
                   transition={{ duration: 0.3, ease: "easeOut" }}
-                  className="w-full bg-white rounded-2xl border border-muted-aquifer/20 overflow-hidden shadow-[0_8px_30px_rgb(29,41,59,0.06)] flex flex-col group h-full justify-between"
+                  className="w-full bg-white rounded-[4px] border border-muted-aquifer/20 overflow-hidden flex flex-col group h-full justify-between shadow-none"
                 >
                   {/* High-Res Rendered Image Frame */}
                   <div className="relative w-full aspect-[16/10] bg-surface-container-low overflow-hidden border-b border-muted-aquifer/15">
@@ -303,10 +303,10 @@ export function ProductCatalogCarousel() {
 
                     {/* Top Overlay Badges */}
                     <div className="absolute top-4 left-4 right-4 flex items-center justify-between pointer-events-none">
-                      <span className="font-mono text-[11px] text-white bg-deep-aquifer/85 backdrop-blur-md px-3 py-1 rounded-full font-medium border border-white/10 shadow-sm">
+                      <span className="font-mono text-[11px] text-white bg-deep-aquifer px-3 py-1 rounded-[4px] font-medium border border-white/10">
                         {filteredProducts[currentIndex].series}
                       </span>
-                      <span className="font-mono text-[11px] text-moss bg-white/90 backdrop-blur-md px-3 py-1 rounded-full font-medium shadow-sm">
+                      <span className="font-mono text-[11px] text-deep-aquifer bg-white px-3 py-1 rounded-[4px] font-medium border border-muted-aquifer/20">
                         {filteredProducts[currentIndex].capacityTag}
                       </span>
                     </div>
@@ -316,7 +316,7 @@ export function ProductCatalogCarousel() {
                       {filteredProducts[currentIndex].specsHighlight.map((spec, i) => (
                         <span
                           key={i}
-                          className="font-mono text-[10px] text-light-aquifer-canvas bg-slate-900/80 backdrop-blur-md px-2.5 py-0.5 rounded border border-white/10"
+                          className="font-mono text-[10px] text-light-aquifer-canvas bg-slate-900/90 px-2.5 py-0.5 rounded-[4px] border border-white/10"
                         >
                           &bull; {spec}
                         </span>
@@ -337,7 +337,7 @@ export function ProductCatalogCarousel() {
 
                     <div className="flex flex-col gap-4">
                       {/* Metric Highlights Box */}
-                      <div className="bg-light-aquifer-canvas p-4 rounded-xl border border-muted-aquifer/15 grid grid-cols-2 gap-4">
+                      <div className="bg-light-aquifer-canvas p-4 rounded-[4px] border border-muted-aquifer/20 grid grid-cols-2 gap-4">
                         <div className="flex flex-col">
                           <span className="font-mono text-xs font-medium text-muted-aquifer">
                             {filteredProducts[currentIndex].metric1Label}
@@ -364,7 +364,7 @@ export function ProductCatalogCarousel() {
                           <button
                             type="button"
                             onClick={() => setShowSpecTable(!showSpecTable)}
-                            className="w-full inline-flex items-center justify-between px-4 py-2.5 rounded-lg bg-surface-container-low hover:bg-slate-200/60 border border-muted-aquifer/20 font-mono text-xs font-medium text-deep-aquifer transition-colors cursor-pointer"
+                            className="w-full inline-flex items-center justify-between px-4 py-2.5 rounded-[6px] bg-surface-container-low hover:bg-slate-200/60 border border-muted-aquifer/20 font-mono text-xs font-medium text-deep-aquifer transition-colors cursor-pointer"
                           >
                             <span className="flex items-center gap-2">
                               <span className="material-symbols-outlined text-moss text-base">table_chart</span>
@@ -380,7 +380,7 @@ export function ProductCatalogCarousel() {
                               initial={{ opacity: 0, height: 0 }}
                               animate={{ opacity: 1, height: "auto" }}
                               exit={{ opacity: 0, height: 0 }}
-                              className="overflow-x-auto rounded-lg border border-muted-aquifer/20 bg-white p-3 text-xs"
+                              className="overflow-x-auto rounded-[4px] border border-muted-aquifer/20 bg-white p-3 text-xs"
                             >
                               <table className="w-full text-left font-mono">
                                 <thead>
@@ -441,7 +441,7 @@ export function ProductCatalogCarousel() {
                       <div className="pt-2 flex items-center gap-3">
                         <Link
                           href={`/contact?product=${filteredProducts[currentIndex].contactProductSlug}`}
-                          className="w-full sm:w-auto inline-flex items-center justify-center gap-2.5 bg-deep-aquifer hover:bg-forest-slate text-light-aquifer-canvas font-button-text font-semibold text-button-text px-7 py-3 rounded-full transition-all duration-300 shadow-md hover:shadow-lg group/btn"
+                          className="w-full sm:w-auto inline-flex items-center justify-center gap-2.5 bg-deep-aquifer hover:bg-forest-slate text-white font-button-text font-semibold text-button-text px-7 py-3 rounded-[6px] transition-all duration-300 group/btn"
                         >
                           <span>Get quote &amp; specs</span>
                           <span className="material-symbols-outlined text-[18px] group-hover/btn:translate-x-1 transition-transform">

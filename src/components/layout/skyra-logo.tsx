@@ -18,7 +18,7 @@ export function SkyraLogo({
       <div
         className={`inline-flex items-center justify-center ${
           variant === "light"
-            ? "bg-white p-1 rounded-lg shadow-sm"
+            ? "bg-white p-1.5 rounded-[4px] border border-muted-aquifer/20"
             : ""
         }`}
       >

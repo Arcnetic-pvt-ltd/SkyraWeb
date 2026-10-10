@@ -25,12 +25,12 @@ export function InlineCtaBox({
 }) {
   return (
     <div
-      className={`flex flex-col items-center gap-6 rounded-2xl border p-8 shadow-sm md:flex-row md:justify-between ${
-        tone === "light" ? "border-slate-200 bg-slate-50" : "border-white/10 bg-ink-elevated"
+      className={`flex flex-col items-center gap-6 rounded-[4px] border p-8 md:flex-row md:justify-between ${
+        tone === "light" ? "border-muted-aquifer/20 bg-white" : "border-white/10 bg-ink-elevated"
       }`}
     >
       <div className="flex items-center gap-4">
-        <div className={`flex size-14 flex-shrink-0 items-center justify-center rounded-full ${iconTone}`}>
+        <div className={`flex size-12 flex-shrink-0 items-center justify-center rounded-[4px] border border-muted-aquifer/20 ${iconTone}`}>
           {icon}
         </div>
         <div>

@@ -96,7 +96,7 @@ export function QuotesCarousel() {
                 }`}
             >
               <div className="inline-flex items-center gap-2.5 text-moss/90">
-                <span className="material-symbols-outlined text-[28px] text-tertiary-fixed">
+                <span className="material-symbols-outlined text-[28px] text-moss">
                   water_drop
                 </span>
                 <span className="font-mono text-xs text-white/80 font-medium">

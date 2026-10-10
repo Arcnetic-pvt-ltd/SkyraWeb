@@ -25,7 +25,7 @@ const STAGES: StageInfo[] = [
     metricLabel: "Capture Rate",
     metricValue: "18,400 L/hr",
     badge: "100% Runoff Interception",
-    accentColor: "#00c896", // brand-green
+    accentColor: "#7D9D3D",
   },
   {
     id: "filter",
@@ -36,7 +36,7 @@ const STAGES: StageInfo[] = [
     metricLabel: "Filtration Purity",
     metricValue: "99.8%",
     badge: "Zero Electrical Input",
-    accentColor: "#0098a6", // brand-teal
+    accentColor: "#748D8C",
   },
   {
     id: "recharge",
@@ -47,7 +47,7 @@ const STAGES: StageInfo[] = [
     metricLabel: "Aquifer Restored",
     metricValue: "+4.8 Meters",
     badge: "Lithological Percolation",
-    accentColor: "#38bdf8", // sky-400
+    accentColor: "#7D9D3D",
   },
   {
     id: "secure",
@@ -58,7 +58,7 @@ const STAGES: StageInfo[] = [
     metricLabel: "Tanker Reliance",
     metricValue: "0.0%",
     badge: "From Sky, To Life",
-    accentColor: "#10b981", // emerald-500
+    accentColor: "#7D9D3D",
   },
 ];
 
@@ -79,18 +79,11 @@ export function HeroMissionAnimation() {
   }, [isPlaying]);
 
   return (
-    <div className="relative w-full rounded-3xl bg-slate-950/90 p-5 sm:p-7 text-white shadow-2xl border border-white/15 backdrop-blur-xl overflow-hidden font-sans group">
-      {/* Background Glow Orbs */}
-      <div className="absolute -top-24 -right-24 w-72 h-72 rounded-full bg-[#0098a6]/20 blur-3xl pointer-events-none" />
-      <div className="absolute -bottom-24 -left-24 w-72 h-72 rounded-full bg-[#00c896]/20 blur-3xl pointer-events-none" />
-
+    <div className="relative w-full rounded-[4px] bg-deep-aquifer p-5 sm:p-7 text-white border border-muted-aquifer/20 overflow-hidden font-sans group">
       {/* Header bar: Title & Auto-Play Controller */}
       <div className="flex items-center justify-between gap-4 mb-5 border-b border-white/10 pb-4 relative z-10">
         <div className="flex items-center gap-2.5">
-          <span className="relative flex h-2.5 w-2.5">
-            <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-brand-green opacity-75" />
-            <span className="relative inline-flex rounded-full h-2.5 w-2.5 bg-brand-green" />
-          </span>
+          <span className="size-2 rounded-full bg-moss" />
           <span className="font-mono text-xs font-medium tracking-wide text-slate-300">
             Closed-loop hydrological engine
           </span>
@@ -99,10 +92,10 @@ export function HeroMissionAnimation() {
         <div className="flex items-center gap-2">
           <button
             onClick={() => setIsPlaying(!isPlaying)}
-            className="inline-flex items-center gap-1.5 rounded-full border border-white/15 bg-white/5 px-2.5 py-1 text-[11px] font-mono text-slate-300 hover:bg-white/15 transition-colors cursor-pointer"
+            className="inline-flex items-center gap-1.5 rounded-[6px] border border-white/15 bg-white/5 px-2.5 py-1 text-[11px] font-mono text-slate-300 hover:bg-white/15 transition-colors cursor-pointer"
             title={isPlaying ? "Pause auto-loop" : "Play auto-loop"}
           >
-            <span className="size-1.5 rounded-full bg-brand-teal" />
+            <span className="size-1.5 rounded-full bg-moss" />
             {isPlaying ? "PAUSE LOOP" : "PLAY LOOP"}
           </button>
         </div>
@@ -119,18 +112,18 @@ export function HeroMissionAnimation() {
                 setActiveStageIndex(idx);
                 setIsPlaying(false);
               }}
-              className={`relative flex flex-col items-start p-2 sm:p-2.5 rounded-xl border text-left transition-all duration-300 cursor-pointer ${isActive
-                  ? "border-brand-teal bg-white/10 shadow-lg text-white"
+              className={`relative flex flex-col items-start p-2 sm:p-2.5 rounded-[4px] border text-left transition-all duration-300 cursor-pointer ${isActive
+                  ? "border-moss bg-white/10 text-white"
                   : "border-white/5 bg-white/5 text-slate-400 hover:bg-white/10 hover:text-slate-200"
                 }`}
             >
               <div className="flex items-center justify-between w-full mb-1">
-                <span className={`font-mono text-[10px] font-bold ${isActive ? "text-brand-green" : "text-slate-500"}`}>
+                <span className={`font-mono text-[10px] font-bold ${isActive ? "text-moss" : "text-slate-500"}`}>
                   {stage.number}
                 </span>
                 {isActive && isPlaying && (
                   <motion.div
-                    className="h-1 bg-brand-green rounded-full"
+                    className="h-1 bg-moss rounded-[2px]"
                     initial={{ width: "0%" }}
                     animate={{ width: "100%" }}
                     transition={{ duration: 4.5, ease: "linear" }}
@@ -147,7 +140,7 @@ export function HeroMissionAnimation() {
       </div>
 
       {/* Main Hydrological SVG Graphic Stage */}
-      <div className="relative w-full aspect-[16/10] min-h-[260px] rounded-2xl bg-gradient-to-b from-slate-900/90 via-slate-900/60 to-slate-950/90 border border-white/10 overflow-hidden mb-5">
+      <div className="relative w-full aspect-[16/10] min-h-[260px] rounded-[4px] bg-gradient-to-b from-slate-900/90 via-slate-900/60 to-slate-950/90 border border-white/10 overflow-hidden mb-5">
         <svg
           className="w-full h-full select-none"
           viewBox="0 0 500 320"
@@ -391,10 +384,10 @@ export function HeroMissionAnimation() {
               initial={{ opacity: 0, y: 10 }}
               animate={{ opacity: 1, y: 0 }}
               exit={{ opacity: 0, y: 10 }}
-              className="absolute bottom-3 left-3 right-3 p-3 rounded-xl bg-slate-900/95 border border-brand-teal text-xs text-slate-200 flex items-center justify-between backdrop-blur-md shadow-xl z-20"
+              className="absolute bottom-3 left-3 right-3 p-3 rounded-[4px] bg-slate-900 border border-muted-aquifer/30 text-xs text-slate-200 flex items-center justify-between z-20"
             >
               <div>
-                <span className="font-mono text-xs font-medium text-brand-green tracking-wide block">
+                <span className="font-mono text-xs font-medium text-moss tracking-wide block">
                   Interactive node: {activeHotspot}
                 </span>
                 <span>
@@ -406,7 +399,7 @@ export function HeroMissionAnimation() {
               </div>
               <button
                 onClick={() => setActiveHotspot(null)}
-                className="ml-3 px-2 py-1 bg-white/10 hover:bg-white/20 rounded text-xs font-mono text-slate-300 cursor-pointer"
+                className="ml-3 px-2 py-1 bg-white/10 hover:bg-white/20 rounded-[4px] text-xs font-mono text-slate-300 cursor-pointer"
               >
                 Close
               </button>
@@ -423,12 +416,12 @@ export function HeroMissionAnimation() {
           animate={{ opacity: 1, y: 0 }}
           exit={{ opacity: 0, y: -8 }}
           transition={{ duration: 0.3 }}
-          className="grid grid-cols-1 sm:grid-cols-12 gap-4 items-center bg-white/5 border border-white/10 rounded-2xl p-4 sm:p-5 relative z-10"
+          className="grid grid-cols-1 sm:grid-cols-12 gap-4 items-center bg-white/5 border border-white/10 rounded-[4px] p-4 sm:p-5 relative z-10"
         >
           <div className="sm:col-span-8 space-y-1.5">
             <div className="flex items-center gap-2">
               <span
-                className="px-2 py-0.5 rounded-full text-xs font-mono font-medium text-slate-950"
+                className="px-2 py-0.5 rounded-[4px] text-xs font-mono font-medium text-slate-950"
                 style={{ backgroundColor: currentStage.accentColor }}
               >
                 Stage {currentStage.number} • {currentStage.tagline}
@@ -455,8 +448,8 @@ export function HeroMissionAnimation() {
             >
               {currentStage.metricValue}
             </span>
-            <span className="text-xs text-brand-green/90 font-mono mt-1 inline-flex items-center gap-1">
-              <span className="size-1.5 rounded-full bg-brand-green animate-pulse" />
+            <span className="text-xs text-moss font-mono mt-1 inline-flex items-center gap-1">
+              <span className="size-1.5 rounded-full bg-moss" />
               Live telemetry active
             </span>
           </div>
@@ -466,10 +459,10 @@ export function HeroMissionAnimation() {
       {/* Footer Banner: Mission Tagline */}
       <div className="mt-4 flex items-center justify-between text-xs text-slate-400 font-mono pt-2 border-t border-white/5">
         <span className="flex items-center gap-1.5">
-          <span className="size-1.5 rounded-full bg-brand-teal" />
+          <span className="size-1.5 rounded-full bg-muted-aquifer" />
           Mission: Hydro-resilience across India
         </span>
-        <span className="text-brand-green font-medium">
+        <span className="text-moss font-medium">
           From sky, to life
         </span>
       </div>

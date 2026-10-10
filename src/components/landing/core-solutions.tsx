@@ -13,12 +13,12 @@ import {
 } from "@/components/icons/solution-icons";
 
 const CAPABILITIES = [
-  { label: "Manage water", Icon: ManageWaterIcon, bg: "bg-emerald-50", tone: "text-brand-green" },
-  { label: "Harvest rainwater", Icon: HarvestRainwaterIcon, bg: "bg-cyan-50", tone: "text-brand-teal" },
-  { label: "Recharge groundwater", Icon: RechargeGroundwaterIcon, bg: "bg-teal-50", tone: "text-teal-600" },
-  { label: "Conserve water", Icon: ConserveWaterIcon, bg: "bg-blue-50", tone: "text-blue-600" },
-  { label: "Improve water security", Icon: WaterSecurityIcon, bg: "bg-emerald-50", tone: "text-brand-green" },
-  { label: "Use water effectively", Icon: UseWaterEffectivelyIcon, bg: "bg-cyan-50", tone: "text-brand-teal" },
+  { label: "Manage water", Icon: ManageWaterIcon },
+  { label: "Harvest rainwater", Icon: HarvestRainwaterIcon },
+  { label: "Recharge groundwater", Icon: RechargeGroundwaterIcon },
+  { label: "Conserve water", Icon: ConserveWaterIcon },
+  { label: "Improve water security", Icon: WaterSecurityIcon },
+  { label: "Use water effectively", Icon: UseWaterEffectivelyIcon },
 ] as const;
 
 const SECTORS = ["Residential", "Commercial", "Industrial", "Agricultural"] as const;
@@ -78,16 +78,16 @@ export function CoreSolutions() {
             effectively — from rooftop to groundwater. Built on trust, engineering
             precision, and true long-term value.
           </p>
-          <CtaButton href="#services-grid" variant="dark" size="sm" icon={<ChevronDownIcon className="size-4 text-brand-green" />} className="flex-row-reverse">
+          <CtaButton href="#services-grid" variant="dark" size="sm" icon={<ChevronDownIcon className="size-4 text-moss" />} className="flex-row-reverse">
             Explore services
           </CtaButton>
         </div>
 
         {/* Capability Feature Badges / Highlights */}
         <div className="mb-16 grid grid-cols-2 gap-4 sm:grid-cols-3 lg:grid-cols-6">
-          {CAPABILITIES.map(({ label, Icon, bg, tone }) => (
-            <div key={label} className="flex flex-col items-start justify-center gap-2 rounded-2xl border border-slate-200/80 bg-white p-4 text-left shadow-sm">
-              <div className={`flex size-10 items-center justify-center rounded-full ${bg} ${tone}`}>
+          {CAPABILITIES.map(({ label, Icon }) => (
+            <div key={label} className="flex flex-col items-start justify-center gap-2 rounded-[4px] border border-muted-aquifer/20 bg-white p-4 text-left">
+              <div className="flex size-8 items-center justify-center rounded-[4px] border border-muted-aquifer/20 text-forest-slate">
                 <Icon className="size-5" />
               </div>
               <span className="font-mono text-xs font-medium text-deep-aquifer">{label}</span>
@@ -99,7 +99,7 @@ export function CoreSolutions() {
         <div className="border-t border-slate-200 pt-4" id="services-grid">
           <div className="mb-10 flex flex-col gap-4 md:flex-row md:items-end md:justify-between">
             <div>
-              <span className="font-mono text-xs font-medium text-brand-teal">Our services</span>
+              <span className="font-mono text-xs font-medium text-muted-aquifer">Our services</span>
               <h3 className="mt-1 font-headline-h3 text-[24px] font-medium text-deep-aquifer leading-[1.3]">
                 Solutions for every space.
               </h3>
@@ -107,7 +107,7 @@ export function CoreSolutions() {
             <div className="flex flex-wrap gap-3 font-mono text-xs font-medium text-slate-500">
               {SECTORS.map((sector, i) => (
                 <span key={sector} className="contents">
-                  <span className="font-bold text-brand-teal">{sector}</span>
+                  <span className="font-bold text-deep-aquifer">{sector}</span>
                   {i < SECTORS.length - 1 && <span aria-hidden="true">•</span>}
                 </span>
               ))}

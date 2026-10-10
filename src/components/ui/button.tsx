@@ -3,17 +3,18 @@ import type { ReactNode } from "react";
 type Variant = "primary" | "secondary" | "secondary-teal" | "dark";
 
 const VARIANT_CLASSES: Record<Variant, string> = {
-  // Solid brand-green pill w/ glow shadow — main WhatsApp/conversion CTA.
+  // Flat Deep Aquifer solid button — matches DO THIS guide.
   primary:
-    "bg-brand-green text-ink shadow-cta-glow hover:bg-emerald-400 focus-visible:outline-white",
-  // Translucent white outline on dark surfaces — Hero's secondary CTA.
+    "bg-deep-aquifer text-white hover:bg-forest-slate focus-visible:outline-deep-aquifer border border-transparent",
+  // Flat outline on light surfaces — matches DO THIS guide.
   secondary:
-    "border border-white/20 bg-white/5 text-white backdrop-blur-sm hover:bg-white/10 focus-visible:outline-white",
-  // Teal outline on dark surfaces — Final CTA's secondary link.
+    "border border-muted-aquifer/30 bg-white text-deep-aquifer hover:bg-muted-aquifer/5 focus-visible:outline-deep-aquifer",
+  // Secondary outline link.
   "secondary-teal":
-    "border border-brand-teal/60 text-brand-teal hover:border-brand-teal hover:text-white focus-visible:outline-brand-teal",
-  // Solid dark pill — "Explore Services".
-  dark: "bg-ink-elevated text-white hover:bg-ink focus-visible:outline-brand-green",
+    "border border-muted-aquifer/30 bg-white text-deep-aquifer hover:bg-muted-aquifer/5 focus-visible:outline-deep-aquifer",
+  // Solid dark button.
+  dark:
+    "bg-deep-aquifer text-white hover:bg-forest-slate focus-visible:outline-deep-aquifer border border-transparent",
 };
 
 export function CtaButton({
@@ -33,12 +34,12 @@ export function CtaButton({
   external?: boolean;
   className?: string;
 }) {
-  const sizeClass = size === "md" ? "px-6 py-3.5 text-sm gap-2.5" : "px-5 py-2.5 text-sm gap-2";
+  const sizeClass = size === "md" ? "px-5 py-2.5 text-sm gap-2" : "px-4 py-2 text-sm gap-1.5";
   return (
     <a
       href={href}
       {...(external ? { target: "_blank", rel: "noopener noreferrer" } : {})}
-      className={`inline-flex items-center rounded-full font-semibold font-button-text transition-colors focus-visible:outline-2 focus-visible:outline-offset-2 ${sizeClass} ${VARIANT_CLASSES[variant]} ${className}`}
+      className={`inline-flex items-center rounded-[6px] font-medium font-button-text transition-colors focus-visible:outline-2 focus-visible:outline-offset-2 ${sizeClass} ${VARIANT_CLASSES[variant]} ${className}`}
     >
       {icon}
       {children}

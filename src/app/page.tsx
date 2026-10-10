@@ -9,19 +9,13 @@ import { SectorCapabilities } from "@/components/services/sector-capabilities";
 export default function Home() {
   return (
     <div className="flex flex-col w-full overflow-hidden relative">
-      {/* Ambient Floating Gradients */}
-      <div className="absolute top-0 inset-x-0 h-[100vh] pointer-events-none z-0 overflow-hidden">
-        <div className="absolute -top-[12%] right-[-5%] w-[850px] h-[850px] rounded-full bg-[#cde8e6]/90 blur-[120px]"></div>
-        <div className="absolute top-[15%] right-[12%] w-[550px] h-[550px] rounded-full bg-[#ccebc8]/50 blur-[130px]"></div>
-      </div>
-
       {/* SECTION 1: HERO */}
       <section className="relative z-10 flex flex-col px-4 sm:px-6 lg:px-8 pt-28 sm:pt-32 pb-12 sm:pb-16 max-w-7xl mx-auto w-full gap-10">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center pt-1 sm:pt-2">
           {/* Left Column: Headline, Copy & CTAs */}
           <div className="lg:col-span-6 flex flex-col">
             <div className="inline-flex items-center gap-2.5 mb-4">
-              <span className="inline-block w-2 h-2 rounded-full bg-moss animate-ping"></span>
+              <span className="inline-block w-2 h-2 rounded-full bg-moss"></span>
               <span className="font-mono text-body-sm text-secondary tracking-normal font-medium">
                 Hero solution &middot; Skyra Rainsink &amp; enterprise stewardship
               </span>
@@ -35,19 +29,16 @@ export default function Home() {
               Featuring <strong>Skyra Rainsink</strong> &mdash; our high-capacity rain percolator unit. Engineered for logistics hubs, factories, IT parks, and institutions to eliminate yard flooding, guarantee statutory CGWA NOC compliance, and reach water neutrality.
             </p>
 
-            <div className="mt-6 flex flex-wrap items-center gap-4">
-              <div className="relative group inline-flex items-center">
-                <div className="absolute -inset-3 rounded-full bg-moss/20 blur-md opacity-0 group-hover:opacity-100 group-hover:scale-125 transition-all duration-700 ease-out"></div>
-                <Link
-                  href="/products/rainsink"
-                  className="relative inline-flex items-center justify-center bg-deep-aquifer hover:bg-forest-slate text-light-aquifer-canvas font-button-text text-button-text px-7 py-3.5 rounded-full transition-all duration-300 shadow-sm hover:shadow-md"
-                >
-                  Explore Skyra Rainsink
-                </Link>
-              </div>
+            <div className="mt-6 flex flex-wrap items-center gap-3">
+              <Link
+                href="/products/rainsink"
+                className="inline-flex items-center justify-center bg-deep-aquifer hover:bg-forest-slate text-light-aquifer-canvas font-button-text text-button-text px-6 py-3 rounded-[6px] transition-colors"
+              >
+                Explore Skyra Rainsink
+              </Link>
               <Link
                 href="/contact"
-                className="font-button-text text-button-text text-forest-slate hover:text-deep-aquifer transition-colors inline-flex items-center gap-2 py-3 px-4"
+                className="font-button-text text-button-text text-deep-aquifer hover:text-forest-slate transition-colors inline-flex items-center gap-2 py-3 px-5 border border-muted-aquifer/30 bg-white rounded-[6px]"
               >
                 <span>Request campus survey</span>
                 <span className="material-symbols-outlined text-[18px]">
@@ -65,11 +56,8 @@ export default function Home() {
 
         {/* Telemetry Metric Chip */}
         <div className="mt-8 sm:mt-10 pt-4 flex items-center justify-between flex-wrap gap-6 border-t border-muted-aquifer/15">
-          <div className="inline-flex items-center gap-4 py-3 px-5 rounded-full bg-white/70 backdrop-blur-md shadow-sm border border-muted-aquifer/20">
-            <div className="relative flex h-3 w-3">
-              <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-moss opacity-75"></span>
-              <span className="relative inline-flex rounded-full h-3 w-3 bg-moss"></span>
-            </div>
+          <div className="inline-flex items-center gap-4 py-2.5 px-4 rounded-[4px] bg-white border border-muted-aquifer/20">
+            <span className="inline-block w-2 h-2 rounded-full bg-moss"></span>
             <div className="flex items-baseline gap-2">
               <span className="font-metric-mono-lg text-metric-mono-lg text-deep-aquifer tracking-tight">
                 1.8B
@@ -114,7 +102,7 @@ export default function Home() {
 
           {/* Hydrology Graphic Visual */}
           <div className="lg:col-span-6 flex justify-center items-center">
-            <div className="w-full max-w-lg aspect-square rounded-3xl bg-primary-container/60 p-6 sm:p-10 flex flex-col justify-center items-center relative overflow-hidden shadow-2xl border border-white/10">
+            <div className="w-full max-w-lg aspect-square rounded-[4px] bg-primary-container p-6 sm:p-10 flex flex-col justify-center items-center relative overflow-hidden border border-white/10">
               <svg
                 className="w-full h-full select-none"
                 fill="none"
@@ -330,16 +318,12 @@ export default function Home() {
       </section>
 
       {/* SECTION 3: THE SKYRA OPPORTUNITY */}
-      <section className="relative w-full py-16 sm:py-24 px-4 sm:px-6 lg:px-8 overflow-hidden border-t border-muted-aquifer/15">
-        {/* Ambient background atmosphere blobs matching Sector Capabilities */}
-        <div aria-hidden="true" className="absolute -top-32 left-10 w-[600px] h-[600px] rounded-full bg-[#cde8e6]/50 blur-[130px] pointer-events-none" />
-        <div aria-hidden="true" className="absolute -bottom-32 right-10 w-[600px] h-[600px] rounded-full bg-[#ccebc8]/40 blur-[130px] pointer-events-none" />
-
+      <section className="relative w-full py-16 sm:py-24 px-4 sm:px-6 lg:px-8 border-t border-muted-aquifer/15">
         <div className="max-w-7xl mx-auto w-full relative z-10">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-20 items-center">
             <div className="lg:col-span-7 flex flex-col gap-6">
               <div className="inline-flex items-center gap-2.5">
-                <span className="w-2 h-2 rounded-full bg-moss animate-pulse"></span>
+                <span className="w-2 h-2 rounded-full bg-moss"></span>
                 <span className="font-mono text-xs text-secondary font-medium tracking-wide">
                   The subterranean thesis
                 </span>
@@ -352,13 +336,11 @@ export default function Home() {
               </p>
 
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 pt-4">
-                <div className="group relative flex flex-col justify-between overflow-hidden rounded-3xl border border-muted-aquifer/15 bg-white/90 p-7 shadow-[0_8px_30px_rgb(29,41,59,0.05)] backdrop-blur-xl transition-all duration-500 hover:-translate-y-1 hover:border-moss/40 hover:shadow-2xl">
+                <div className="group relative flex flex-col justify-between overflow-hidden rounded-[4px] border border-muted-aquifer/20 bg-white p-6">
                   <div className="flex flex-col gap-4">
-                    <div className="w-12 h-12 rounded-2xl bg-moss/10 border border-moss/20 flex items-center justify-center text-moss group-hover:bg-moss group-hover:text-white transition-all duration-300">
-                      <span className="material-symbols-outlined text-[24px]">water_drop</span>
-                    </div>
+                    <span className="material-symbols-outlined text-[24px] text-moss">water_drop</span>
                     <div>
-                      <h3 className="font-headline-h3 text-[24px] font-medium text-deep-aquifer tracking-tight group-hover:text-forest-slate transition-colors mb-2">
+                      <h3 className="font-headline-h3 text-[24px] font-medium text-deep-aquifer tracking-tight mb-2">
                         Zero surface loss
                       </h3>
                       <p className="font-body-primary text-base leading-relaxed text-deep-aquifer">
@@ -368,13 +350,11 @@ export default function Home() {
                   </div>
                 </div>
 
-                <div className="group relative flex flex-col justify-between overflow-hidden rounded-3xl border border-muted-aquifer/15 bg-white/90 p-7 shadow-[0_8px_30px_rgb(29,41,59,0.05)] backdrop-blur-xl transition-all duration-500 hover:-translate-y-1 hover:border-moss/40 hover:shadow-2xl">
+                <div className="group relative flex flex-col justify-between overflow-hidden rounded-[4px] border border-muted-aquifer/20 bg-white p-6">
                   <div className="flex flex-col gap-4">
-                    <div className="w-12 h-12 rounded-2xl bg-[#0098a6]/10 border border-[#0098a6]/20 flex items-center justify-center text-[#0098a6] group-hover:bg-[#0098a6] group-hover:text-white transition-all duration-300">
-                      <span className="material-symbols-outlined text-[24px]">filter_alt</span>
-                    </div>
+                    <span className="material-symbols-outlined text-[24px] text-forest-slate">filter_alt</span>
                     <div>
-                      <h3 className="font-headline-h3 text-[24px] font-medium text-deep-aquifer tracking-tight group-hover:text-forest-slate transition-colors mb-2">
+                      <h3 className="font-headline-h3 text-[24px] font-medium text-deep-aquifer tracking-tight mb-2">
                         Natural clarification
                       </h3>
                       <p className="font-body-primary text-base leading-relaxed text-deep-aquifer">
@@ -388,7 +368,7 @@ export default function Home() {
 
             {/* India Deployment Map Graphic */}
             <div className="lg:col-span-5 flex justify-center">
-              <div className="w-full max-w-md p-8 rounded-3xl bg-white shadow-xl flex flex-col items-center relative overflow-hidden border border-muted-aquifer/15">
+              <div className="w-full max-w-md p-6 rounded-[4px] bg-white flex flex-col items-center relative overflow-hidden border border-muted-aquifer/20">
                 <div className="w-full flex items-center justify-between mb-4">
                   <span className="font-mono text-body-sm text-secondary font-medium">
                     Deployment network
@@ -427,11 +407,7 @@ export default function Home() {
       <ImpactMetrics />
 
       {/* SECTION 5: CLOSING CTA */}
-      <section className="relative w-full py-16 sm:py-24 px-4 sm:px-6 lg:px-8 border-t border-muted-aquifer/15 overflow-hidden">
-        <div className="absolute inset-0 flex items-center justify-center -z-10 pointer-events-none opacity-30">
-          <div className="w-[500px] h-[500px] rounded-full border-none bg-surface-variant/40 blur-3xl"></div>
-        </div>
-
+      <section className="relative w-full py-16 sm:py-24 px-4 sm:px-6 lg:px-8 border-t border-muted-aquifer/15">
         <div className="max-w-7xl mx-auto w-full flex flex-col items-start relative z-10">
           <span className="font-mono text-xs text-secondary font-medium tracking-wide mb-6">
             Begin the recharge cycle
@@ -445,22 +421,22 @@ export default function Home() {
             Talk with our civil hydrologists to assess your parcel’s percolation potential and aquifer recharge capability.
           </p>
 
-          <div className="mt-10 flex flex-col sm:flex-row items-center gap-4 w-full sm:w-auto">
+          <div className="mt-10 flex flex-col sm:flex-row items-center gap-3 w-full sm:w-auto">
             <Link
               href="/contact"
-              className="w-full sm:w-auto inline-flex items-center justify-center bg-deep-aquifer hover:bg-forest-slate text-light-aquifer-canvas font-button-text text-button-text px-8 py-3.5 rounded-full transition-all duration-300 shadow-sm hover:shadow-md"
+              className="w-full sm:w-auto inline-flex items-center justify-center bg-deep-aquifer hover:bg-forest-slate text-light-aquifer-canvas font-button-text text-button-text px-7 py-3 rounded-[6px] transition-colors"
             >
               Start a conversation
             </Link>
             <Link
               href="/services"
-              className="w-full sm:w-auto inline-flex items-center justify-center text-deep-aquifer hover:text-forest-slate font-button-text text-button-text px-8 py-3.5 rounded-full hover:bg-surface-container/50 transition-all duration-200"
+              className="w-full sm:w-auto inline-flex items-center justify-center border border-muted-aquifer/30 bg-white text-deep-aquifer hover:bg-muted-aquifer/5 font-button-text text-button-text px-7 py-3 rounded-[6px] transition-colors"
             >
               Explore solutions
             </Link>
           </div>
 
-          <div className="mt-16 pt-8 flex items-center gap-3 text-secondary/60 text-sm">
+          <div className="mt-16 pt-8 flex items-center gap-3 text-secondary/60 text-sm border-t border-muted-aquifer/15 w-full">
             <span className="w-1.5 h-1.5 rounded-full bg-moss"></span>
             <span>
               Engineered for commercial campuses, industrial corridors, and residential communities.

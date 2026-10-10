@@ -52,7 +52,7 @@ export default function AboutPage() {
         <div className="max-w-7xl mx-auto">
           <div className="flex flex-col gap-6 max-w-3xl">
             <div className="inline-flex items-center gap-2.5">
-              <span className="inline-block w-2 h-2 rounded-full bg-moss animate-ping"></span>
+              <span className="inline-block w-2 h-2 rounded-full bg-moss"></span>
               <span className="font-mono text-xs text-moss font-medium">
                 Our foundation &amp; philosophy
               </span>
@@ -94,7 +94,7 @@ export default function AboutPage() {
             </div>
 
             <div className="md:col-span-5 pt-2">
-              <div className="p-8 rounded-2xl bg-white/80 backdrop-blur-md border border-muted-aquifer/15 shadow-sm flex flex-col gap-6">
+              <div className="p-8 rounded-[4px] bg-white border border-muted-aquifer/20 flex flex-col gap-6">
                 <svg
                   className="w-full h-44 text-muted-aquifer select-none"
                   fill="none"
@@ -163,7 +163,7 @@ export default function AboutPage() {
         <div className="max-w-7xl mx-auto">
           <div className="grid grid-cols-1 md:grid-cols-12 gap-12 md:gap-16 items-start">
             <div className="md:col-span-5 order-2 md:order-1 pt-2">
-              <div className="p-8 rounded-2xl bg-white/80 backdrop-blur-md border border-muted-aquifer/15 shadow-sm flex flex-col gap-6">
+              <div className="p-8 rounded-[4px] bg-white border border-muted-aquifer/20 flex flex-col gap-6">
                 <svg
                   className="w-full h-48 text-forest-slate select-none"
                   fill="none"
@@ -269,7 +269,7 @@ export default function AboutPage() {
             </div>
 
             <div className="space-y-6">
-              <div className="relative w-full rounded-2xl overflow-hidden shadow-xl aspect-[1.79/1] bg-surface-container border border-muted-aquifer/15">
+              <div className="relative w-full rounded-[4px] overflow-hidden aspect-[1.79/1] bg-surface-container border border-muted-aquifer/20">
                 <img
                   alt="Kalamassery Proving Grounds Prototype"
                   className="w-full h-full object-cover"
@@ -287,7 +287,7 @@ export default function AboutPage() {
               </div>
 
               <div className="grid grid-cols-2 md:grid-cols-4 gap-4 sm:gap-6 pt-2">
-                <div className="p-5 rounded-xl bg-white/80 backdrop-blur-md border border-muted-aquifer/15 shadow-sm">
+                <div className="p-5 rounded-[4px] bg-white border border-muted-aquifer/20">
                   <span className="block font-mono text-3xl sm:text-4xl font-bold text-deep-aquifer">
                     14
                   </span>
@@ -295,7 +295,7 @@ export default function AboutPage() {
                     States active across India
                   </span>
                 </div>
-                <div className="p-5 rounded-xl bg-white/80 backdrop-blur-md border border-muted-aquifer/15 shadow-sm">
+                <div className="p-5 rounded-[4px] bg-white border border-muted-aquifer/20">
                   <span className="block font-mono text-3xl sm:text-4xl font-bold text-deep-aquifer">
                     420+
                   </span>
@@ -303,7 +303,7 @@ export default function AboutPage() {
                     Engineered installations
                   </span>
                 </div>
-                <div className="p-5 rounded-xl bg-white/80 backdrop-blur-md border border-muted-aquifer/15 shadow-sm">
+                <div className="p-5 rounded-[4px] bg-white border border-muted-aquifer/20">
                   <span className="block font-mono text-3xl sm:text-4xl font-bold text-deep-aquifer">
                     2.4B
                   </span>
@@ -311,7 +311,7 @@ export default function AboutPage() {
                     Litres infiltrated annually
                   </span>
                 </div>
-                <div className="p-5 rounded-xl bg-white/80 backdrop-blur-md border border-muted-aquifer/15 shadow-sm">
+                <div className="p-5 rounded-[4px] bg-white border border-muted-aquifer/20">
                   <span className="block font-mono text-3xl sm:text-4xl font-bold text-deep-aquifer">
                     100%
                   </span>
@@ -344,10 +344,10 @@ export default function AboutPage() {
             {FOUNDERS.map((founder, idx) => (
               <div
                 key={idx}
-                className="group bg-light-aquifer-canvas rounded-2xl overflow-hidden border border-muted-aquifer/20 p-5 flex flex-col justify-between transition-all duration-300 hover:shadow-xl hover:-translate-y-1"
+                className="group bg-white rounded-[4px] overflow-hidden border border-muted-aquifer/20 p-5 flex flex-col justify-between transition-all duration-300"
               >
                 <div>
-                  <div className="relative w-full aspect-square rounded-xl overflow-hidden mb-5 bg-surface-container border border-muted-aquifer/15">
+                  <div className="relative w-full aspect-square rounded-[4px] overflow-hidden mb-5 bg-[#F8FCFE] border border-muted-aquifer/20">
                     <img
                       alt={founder.name}
                       className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 ease-out"
@@ -399,13 +399,13 @@ export default function AboutPage() {
           <div className="flex flex-col sm:flex-row items-center gap-4 pt-2">
             <Link
               href="/contact"
-              className="inline-flex items-center justify-center bg-deep-aquifer hover:bg-forest-slate text-light-aquifer-canvas font-button-text font-semibold text-button-text px-8 py-3.5 rounded-full shadow-sm hover:shadow-md transition-all duration-300"
+              className="inline-flex items-center justify-center bg-deep-aquifer hover:bg-forest-slate text-white font-button-text font-semibold text-button-text px-8 py-3.5 rounded-[6px] transition-all duration-300"
             >
               Start a conversation
             </Link>
             <Link
               href="/services"
-              className="inline-flex items-center justify-center bg-transparent hover:bg-black/5 text-deep-aquifer font-button-text font-semibold text-button-text px-8 py-3.5 rounded-full transition-all duration-300"
+              className="inline-flex items-center justify-center bg-white hover:bg-black/5 text-deep-aquifer border border-muted-aquifer/30 font-button-text font-semibold text-button-text px-8 py-3.5 rounded-[6px] transition-all duration-300"
             >
               Explore solutions
             </Link>

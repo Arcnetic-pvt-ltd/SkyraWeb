@@ -7,15 +7,15 @@ import { DropletIcon } from "@/components/icons/metric-icons";
 import { WHATSAPP_HREF } from "@/lib/nav";
 
 const HIGHLIGHTS = [
-  { label: "100% on-site capture", Icon: CheckCircleIcon, tone: "text-brand-green" },
-  { label: "Aquifer rejuvenation", Icon: DropletIcon, tone: "text-brand-teal" },
-  { label: "Zero structural risk", Icon: MedalIcon, tone: "text-emerald-400" },
+  { label: "100% on-site capture", Icon: CheckCircleIcon, tone: "text-moss" },
+  { label: "Aquifer rejuvenation", Icon: DropletIcon, tone: "text-muted-aquifer" },
+  { label: "Zero structural risk", Icon: MedalIcon, tone: "text-forest-slate" },
 ] as const;
 
 const METRICS = [
-  { Icon: TruckIcon, label: "Annual impact", value: "1.2M+ L", tone: "text-brand-green", description: "Pure rainwater captured and redirected on average per commercial installation." },
-  { Icon: TruckIcon, label: "Cost elimination", value: "Zero", tone: "text-brand-teal", description: "Tanker reliance during peak summer months across multi-tier residential setups." },
-  { Icon: MedalIcon, label: "Engineering quality", value: "100%", tone: "text-sky-600", description: "Turnkey design, hydro-geological survey, civil installation, and sensor deployment." },
+  { Icon: TruckIcon, label: "Annual impact", value: "1.2M+ L", tone: "text-moss", description: "Pure rainwater captured and redirected on average per commercial installation." },
+  { Icon: TruckIcon, label: "Cost elimination", value: "Zero", tone: "text-muted-aquifer", description: "Tanker reliance during peak summer months across multi-tier residential setups." },
+  { Icon: MedalIcon, label: "Engineering quality", value: "100%", tone: "text-forest-slate", description: "Turnkey design, hydro-geological survey, civil installation, and sensor deployment." },
 ] as const;
 
 /**
@@ -28,13 +28,10 @@ const METRICS = [
 export function ServicesHero() {
   return (
     <section className="relative overflow-hidden bg-ink pt-28 sm:pt-32 pb-16 sm:pb-24">
-      <div aria-hidden="true" className="pointer-events-none absolute -top-40 left-1/2 h-96 w-[700px] -translate-x-1/2 rounded-full bg-brand-teal/10 blur-[130px]" />
-      <div aria-hidden="true" className="pointer-events-none absolute right-0 top-1/3 h-80 w-80 rounded-full bg-brand-green/10 blur-[110px]" />
-
       <Container className="relative z-10">
         <div className="flex max-w-4xl flex-col items-start text-left">
-          <div className="mb-6 inline-flex items-center gap-2 rounded-full bg-ink-elevated px-4 py-2 text-brand-teal">
-            <span aria-hidden="true" className="size-2 animate-pulse rounded-full bg-brand-teal" />
+          <div className="mb-6 inline-flex items-center gap-2 rounded-[4px] bg-ink-elevated border border-white/10 px-3 py-1.5 text-muted-aquifer">
+            <span aria-hidden="true" className="size-2 rounded-full bg-moss" />
             <span className="font-mono text-xs font-medium">Integrated water solutions</span>
           </div>
 
@@ -48,7 +45,7 @@ export function ServicesHero() {
 
           <div className="mb-10 flex flex-wrap items-center justify-start gap-2">
             {HIGHLIGHTS.map(({ label, Icon, tone }) => (
-              <div key={label} className="inline-flex items-center gap-2 rounded-full bg-ink-elevated px-4 py-2 font-mono text-xs font-medium text-white shadow-sm">
+              <div key={label} className="inline-flex items-center gap-2 rounded-[4px] bg-ink-elevated border border-white/10 px-3 py-1.5 font-mono text-xs font-medium text-white">
                 <Icon className={`size-4.5 ${tone}`} />
                 {label}
               </div>
@@ -59,7 +56,7 @@ export function ServicesHero() {
             <CtaButton href="#contact" variant="primary" icon={<ArrowRightIcon className="size-4" />} className="w-full flex-row-reverse sm:w-auto">
               Request technical audit
             </CtaButton>
-            <CtaButton href={WHATSAPP_HREF} external variant="dark" icon={<WhatsAppIcon className="size-4 text-brand-green" />} className="w-full sm:w-auto">
+            <CtaButton href={WHATSAPP_HREF} external variant="dark" icon={<WhatsAppIcon className="size-4 text-moss" />} className="w-full sm:w-auto">
               Chat on WhatsApp
             </CtaButton>
           </div>
@@ -67,7 +64,7 @@ export function ServicesHero() {
 
         <div className="grid grid-cols-1 gap-4 md:grid-cols-3 lg:gap-6">
           {METRICS.map(({ Icon, label, value, tone, description }) => (
-            <div key={label} className="flex flex-col gap-2 rounded-2xl bg-ink-elevated/80 p-6 shadow-md backdrop-blur-md">
+            <div key={label} className="flex flex-col gap-2 rounded-[4px] bg-ink-elevated border border-white/10 p-6">
               <div className={`flex items-center gap-2 ${tone}`}>
                 <Icon className="size-5" />
                 <span className="font-mono text-xs font-medium text-white/80">{label}</span>

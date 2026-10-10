@@ -2,12 +2,12 @@ import Image from "next/image";
 import { Eyebrow } from "@/components/ui/eyebrow";
 
 const FLOW_STEPS = [
-  { emoji: "🌧️", label: "Rain", tone: "text-brand-teal" },
-  { emoji: "💧", label: "Capture", tone: "text-brand-green" },
-  { emoji: "🧪", label: "Filter", tone: "text-brand-teal" },
-  { emoji: "🛢️", label: "Store", tone: "text-emerald-400" },
-  { emoji: "🌱", label: "Recharge", tone: "text-brand-green" },
-  { emoji: "🔄", label: "Reuse", tone: "text-brand-teal" },
+  { step: "01", label: "Rain" },
+  { step: "02", label: "Capture" },
+  { step: "03", label: "Filter" },
+  { step: "04", label: "Store" },
+  { step: "05", label: "Recharge" },
+  { step: "06", label: "Reuse" },
 ] as const;
 
 /**
@@ -43,11 +43,11 @@ export function OpportunityBanner() {
         </h2>
 
         <div className="flex flex-wrap items-center justify-start gap-3 pt-8 font-mono text-xs font-medium sm:gap-4 md:gap-6">
-          {FLOW_STEPS.map(({ emoji, label, tone }, i) => (
+          {FLOW_STEPS.map(({ step, label }, i) => (
             <div key={label} className="contents">
-              <div className="flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-4 py-2 text-[#F1F5F9]">
-                <span className={tone} aria-hidden="true">
-                  {emoji}
+              <div className="flex items-center gap-2 rounded-[4px] border border-white/15 bg-white/5 px-3.5 py-1.5 text-[#F1F5F9]">
+                <span className="text-moss font-bold" aria-hidden="true">
+                  {step}
                 </span>
                 {label}
               </div>
@@ -61,8 +61,8 @@ export function OpportunityBanner() {
           <span aria-hidden="true" className="text-slate-500">
             →
           </span>
-          <div className="flex items-center gap-2 rounded-full bg-brand-green px-4 py-2 font-mono font-medium text-ink shadow-cta-glow">
-            <span aria-hidden="true">🛡️</span> Water security
+          <div className="flex items-center gap-2 rounded-[4px] bg-moss px-3.5 py-1.5 font-mono font-medium text-deep-aquifer">
+            Water security
           </div>
         </div>
       </div>

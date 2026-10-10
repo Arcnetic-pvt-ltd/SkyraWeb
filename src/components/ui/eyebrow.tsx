@@ -17,8 +17,8 @@ export function Eyebrow({
   dash?: boolean | "both";
   center?: boolean;
 }) {
-  const colorClass = color === "teal" ? "text-brand-teal" : "text-brand-green";
-  const barClass = color === "teal" ? "bg-brand-teal" : "bg-brand-green";
+  const colorClass = color === "teal" ? "text-muted-aquifer" : "text-moss";
+  const barClass = color === "teal" ? "bg-muted-aquifer" : "bg-moss";
   const bar = <span aria-hidden="true" className={`h-0.5 w-6 ${barClass}`} />;
 
   return (

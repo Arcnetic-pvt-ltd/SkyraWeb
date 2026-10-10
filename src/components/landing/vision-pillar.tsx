@@ -13,8 +13,8 @@ export function VisionPillar({
   description: string;
 }) {
   return (
-    <div className="flex items-start gap-4 rounded-2xl border border-white/10 bg-white/5 p-5 backdrop-blur-sm">
-      <div className={`mt-1 flex size-10 flex-shrink-0 items-center justify-center rounded-xl ${tone}`}>
+    <div className="flex items-start gap-4 rounded-[4px] border border-white/10 bg-white/5 p-5">
+      <div className={`mt-1 flex size-9 flex-shrink-0 items-center justify-center rounded-[4px] border border-white/10 ${tone}`}>
         {icon}
       </div>
       <div>

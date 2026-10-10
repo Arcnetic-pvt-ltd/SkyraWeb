@@ -58,7 +58,7 @@ export function ConsultationForm() {
           {/* Left Column: Context & Facility Photo */}
           <div className="space-y-8 lg:col-span-5">
             <div>
-              <div className="mb-4 inline-flex items-center gap-2 rounded-full border border-brand-teal/30 bg-brand-teal/10 px-3.5 py-1 font-mono text-xs font-medium text-teal-800">
+              <div className="mb-4 inline-flex items-center gap-2 rounded-[4px] border border-muted-aquifer/20 bg-light-aquifer-canvas px-3.5 py-1 font-mono text-xs font-medium text-forest-slate">
                 Site assessment • 24h turnaround
               </div>
               <h2 className="mb-4 font-headline-h2 text-[28px] sm:text-[36px] font-semibold leading-tight tracking-tight text-slate-950">
@@ -71,7 +71,7 @@ export function ConsultationForm() {
               </p>
             </div>
 
-            <div className="group relative overflow-hidden rounded-2xl border border-slate-200/80 shadow-2xl">
+            <div className="group relative overflow-hidden rounded-[4px] border border-muted-aquifer/20">
               <div className="relative h-64 w-full">
                 <Image
                   src="/images/contact-facility.jpg"
@@ -81,9 +81,9 @@ export function ConsultationForm() {
                   className="object-cover transition-transform duration-700 group-hover:scale-105"
                 />
               </div>
-              <div className="absolute inset-0 flex items-end bg-linear-to-t from-slate-950/80 via-transparent to-transparent p-6">
+              <div className="absolute inset-0 flex items-end bg-gradient-to-t from-deep-aquifer/80 via-transparent to-transparent p-6">
                 <div className="text-white">
-                  <span className="mb-1 block font-mono text-xs text-teal-300 font-medium">
+                  <span className="mb-1 block font-mono text-xs text-moss font-medium">
                     R&amp;D &amp; engineering hub
                   </span>
                   <p className="font-headline-h3 text-sm font-medium">
@@ -95,7 +95,7 @@ export function ConsultationForm() {
 
             <div className="space-y-4 pt-2">
               <div className="flex items-start gap-3">
-                <div className="mt-0.5 flex size-8 flex-shrink-0 items-center justify-center rounded-full bg-teal-100/70 text-teal-700">
+                <div className="mt-0.5 flex size-8 flex-shrink-0 items-center justify-center rounded-[4px] border border-muted-aquifer/20 text-forest-slate">
                   <CheckIcon className="size-4" />
                 </div>
                 <div>
@@ -106,7 +106,7 @@ export function ConsultationForm() {
                 </div>
               </div>
               <div className="flex items-start gap-3">
-                <div className="mt-0.5 flex size-8 flex-shrink-0 items-center justify-center rounded-full bg-teal-100/70 text-teal-700">
+                <div className="mt-0.5 flex size-8 flex-shrink-0 items-center justify-center rounded-[4px] border border-muted-aquifer/20 text-forest-slate">
                   <WaterSecurityIcon className="size-4" />
                 </div>
                 <div>
@@ -120,10 +120,10 @@ export function ConsultationForm() {
           </div>
 
           {/* Right Column: Form */}
-          <div className="relative rounded-3xl border border-slate-200/90 bg-slate-50 p-8 shadow-xl lg:col-span-7 md:p-12">
+          <div className="relative rounded-[4px] border border-muted-aquifer/20 bg-white p-8 lg:col-span-7 md:p-12">
             {submitted ? (
               <div className="flex flex-col items-center justify-center py-16 text-center">
-                <div className="mb-4 flex size-14 items-center justify-center rounded-full bg-emerald-100 text-emerald-700">
+                <div className="mb-4 flex size-14 items-center justify-center rounded-[4px] bg-[#F8FCFE] border border-muted-aquifer/20 text-forest-slate">
                   <CheckIcon className="size-7" />
                 </div>
                 <h3 className="font-headline-h3 text-[24px] font-medium leading-[1.3] text-slate-900">Request received</h3>
@@ -137,7 +137,7 @@ export function ConsultationForm() {
                     setForm(EMPTY_FORM);
                     setSubmitted(false);
                   }}
-                  className="mt-6 font-button-text font-semibold text-sm text-brand-teal hover:text-brand-green"
+                  className="mt-6 font-button-text font-semibold text-sm text-moss hover:text-forest-slate"
                 >
                   Submit another request
                 </button>
@@ -155,7 +155,7 @@ export function ConsultationForm() {
                   <div className="grid grid-cols-1 gap-8 md:grid-cols-2">
                     <div>
                       <label htmlFor="fullName" className="mb-1 block font-mono text-xs font-medium text-slate-700">
-                        Full name <span className="text-brand-teal">*</span>
+                        Full name <span className="text-moss">*</span>
                       </label>
                       <input
                         id="fullName"
@@ -170,7 +170,7 @@ export function ConsultationForm() {
                     </div>
                     <div>
                       <label htmlFor="phone" className="mb-1 block font-mono text-xs font-medium text-slate-700">
-                        Phone / WhatsApp number <span className="text-brand-teal">*</span>
+                        Phone / WhatsApp number <span className="text-moss">*</span>
                       </label>
                       <input
                         id="phone"
@@ -188,7 +188,7 @@ export function ConsultationForm() {
                   <div className="grid grid-cols-1 gap-8 md:grid-cols-2">
                     <div>
                       <label htmlFor="location" className="mb-1 block font-mono text-xs font-medium text-slate-700">
-                        Location / district <span className="text-brand-teal">*</span>
+                        Location / district <span className="text-moss">*</span>
                       </label>
                       <input
                         id="location"
@@ -203,7 +203,7 @@ export function ConsultationForm() {
                     </div>
                     <div>
                       <label htmlFor="propertyType" className="mb-1 block font-mono text-xs font-medium text-slate-700">
-                        Property type <span className="text-brand-teal">*</span>
+                        Property type <span className="text-moss">*</span>
                       </label>
                       <select
                         id="propertyType"
@@ -239,7 +239,7 @@ export function ConsultationForm() {
                   <div className="flex flex-col items-center justify-between gap-4 pt-4 sm:flex-row">
                     <button
                       type="submit"
-                      className="inline-flex w-full items-center justify-center gap-2 rounded-full bg-linear-to-r from-teal-600 to-brand-teal px-9 py-4 font-button-text font-semibold text-sm text-white shadow-lg shadow-teal-600/25 transition-all hover:shadow-teal-600/40 sm:w-auto"
+                      className="inline-flex w-full items-center justify-center gap-2 rounded-[6px] bg-deep-aquifer hover:bg-forest-slate px-9 py-4 font-button-text font-semibold text-sm text-white transition-all sm:w-auto"
                     >
                       Submit request
                       <ArrowRightIcon className="size-4" />

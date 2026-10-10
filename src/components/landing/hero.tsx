@@ -36,8 +36,8 @@ export function Hero() {
       <Container className="relative z-10 w-full py-12">
         <div className="grid grid-cols-1 gap-10 lg:grid-cols-12 lg:gap-14 items-center">
           <div className="lg:col-span-6">
-            <div className="mb-6 inline-flex items-center gap-2 rounded-full border border-white/15 bg-white/10 px-3.25 py-1.75 font-mono text-xs font-medium text-brand-green backdrop-blur-md">
-              <span aria-hidden="true" className="size-2 rounded-full bg-brand-green" />
+            <div className="mb-6 inline-flex items-center gap-2 rounded-[4px] border border-white/15 bg-white/10 px-3 py-1.5 font-mono text-xs font-medium text-moss">
+              <span aria-hidden="true" className="size-2 rounded-full bg-moss" />
               Water resilience &amp; sustainable architecture
             </div>
 

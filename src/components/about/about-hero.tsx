@@ -16,11 +16,8 @@ import { WHATSAPP_HREF } from "@/lib/nav";
 export function AboutHero() {
   return (
     <section className="relative overflow-hidden bg-ink pt-28 sm:pt-32 pb-16 sm:pb-24">
-      <div aria-hidden="true" className="pointer-events-none absolute -top-48 left-1/2 h-[550px] w-[850px] -translate-x-1/2 rounded-full bg-brand-teal/10 blur-[140px]" />
-      <div aria-hidden="true" className="pointer-events-none absolute right-0 top-1/3 h-[420px] w-[420px] rounded-full bg-brand-green/10 blur-[120px]" />
-
       <Container className="relative z-10 flex flex-col items-start text-left">
-        <div className="inline-flex items-center gap-2 rounded-full bg-ink-elevated px-4 py-1.5 text-brand-teal shadow-md">
+        <div className="inline-flex items-center gap-2 rounded-[4px] bg-ink-elevated border border-white/10 px-3 py-1 text-muted-aquifer">
           <DropletIcon className="size-4" />
           <span className="font-mono text-xs font-medium">About Skyra • From sky, to life</span>
         </div>
@@ -40,19 +37,19 @@ export function AboutHero() {
           <CtaButton href="/services" variant="primary" icon={<ArrowRightIcon className="size-4" />} className="flex-row-reverse">
             Explore our solutions
           </CtaButton>
-          <CtaButton href={WHATSAPP_HREF} external variant="dark" icon={<WhatsAppIcon className="size-4 text-brand-green" />}>
+          <CtaButton href={WHATSAPP_HREF} external variant="dark" icon={<WhatsAppIcon className="size-4 text-moss" />}>
             Connect on WhatsApp
           </CtaButton>
         </div>
 
-        <div className="mt-12 w-full max-w-4xl rounded-2xl bg-ink-elevated/90 p-6 shadow-xl backdrop-blur-md">
+        <div className="mt-12 w-full max-w-4xl rounded-[4px] bg-ink-elevated border border-white/10 p-6">
           <div className="flex flex-col items-center justify-between gap-4 text-left md:flex-row">
             <div className="flex items-center gap-4">
-              <div className="flex size-12 flex-shrink-0 items-center justify-center rounded-full bg-brand-teal/10 text-brand-teal">
-                <StormIcon className="size-6" />
+              <div className="flex size-10 flex-shrink-0 items-center justify-center rounded-[4px] border border-white/10 bg-white/5 text-muted-aquifer">
+                <StormIcon className="size-5" />
               </div>
               <div>
-                <p className="font-mono text-xs font-medium text-brand-green">The Skyra paradigm</p>
+                <p className="font-mono text-xs font-medium text-moss">The Skyra paradigm</p>
                 <p className="mt-1 font-body-primary text-base font-normal text-white/90">
                   Transforming rainwater from lost surface runoff into a
                   permanent, secure resource for homes, businesses, and
@@ -61,8 +58,8 @@ export function AboutHero() {
               </div>
             </div>
             <div className="flex flex-shrink-0 items-center gap-2">
-              <span aria-hidden="true" className="size-2.5 animate-ping rounded-full bg-brand-green" />
-              <span className="font-mono text-xs font-medium text-brand-green">Decentralized hydrology</span>
+              <span aria-hidden="true" className="size-2 rounded-full bg-moss" />
+              <span className="font-mono text-xs font-medium text-moss">Decentralized hydrology</span>
             </div>
           </div>
         </div>

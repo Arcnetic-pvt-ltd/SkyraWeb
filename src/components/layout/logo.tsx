@@ -15,12 +15,12 @@ export function Logo({ variant = "header" }: { variant?: "header" | "footer" }) 
       className={`relative inline-flex items-center font-extrabold tracking-tight ${isHeader ? "text-[30px] leading-9" : "text-2xl leading-8"
         }`}
     >
-      <span className="text-brand-teal">Sky</span>
-      <span className="text-emerald-500">Ra</span>
+      <span className="text-deep-aquifer">Sky</span>
+      <span className="text-moss">Ra</span>
       <span className={isHeader ? "text-slate-100" : "text-slate-400"}>&nbsp;</span>
       <span
         aria-hidden="true"
-        className={`absolute top-1/2 -translate-y-1/2 size-1.5 rounded-full bg-emerald-500 ${isHeader ? "left-23.75" : "left-19.25"
+        className={`absolute top-1/2 -translate-y-1/2 size-1.5 rounded-full bg-moss ${isHeader ? "left-23.75" : "left-19.25"
           }`}
       />
     </Link>

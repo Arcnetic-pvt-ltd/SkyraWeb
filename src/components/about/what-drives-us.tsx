@@ -9,8 +9,7 @@ import { CheckCircleIcon } from "@/components/icons/service-icons";
 const PILLARS = [
   {
     Icon: WaterSecurityIcon,
-    tone: "text-brand-teal",
-    hoverBg: "group-hover:bg-brand-teal",
+    tone: "text-muted-aquifer",
     title: "Trust",
     description: "We use verified data and proven technologies to deliver solutions that actually work, ensuring your property is protected for decades.",
     FooterIcon: CheckCircleIcon,
@@ -18,8 +17,7 @@ const PILLARS = [
   },
   {
     Icon: DropletIcon,
-    tone: "text-brand-green",
-    hoverBg: "group-hover:bg-brand-green",
+    tone: "text-moss",
     title: "Transparency",
     description: "From our initial site assessment to the final drop harvested, we provide clear communication, honest timelines, and no hidden costs.",
     FooterIcon: EyeIcon,
@@ -27,8 +25,7 @@ const PILLARS = [
   },
   {
     Icon: RefreshIcon,
-    tone: "text-emerald-400",
-    hoverBg: "group-hover:bg-emerald-400",
+    tone: "text-muted-aquifer",
     title: "Affordability",
     description: "Premium sustainability should not be out of reach. We engineer cost-effective systems that deliver a true long-term return on investment.",
     FooterIcon: RechargeGroundwaterIcon,
@@ -53,11 +50,11 @@ export function WhatDrivesUs() {
         </div>
 
         <div className="mt-10 sm:mt-12 grid w-full grid-cols-1 gap-6 md:grid-cols-3">
-          {PILLARS.map(({ Icon, tone, hoverBg, title, description, FooterIcon, footer }) => (
-            <div key={title} className="group flex flex-col justify-between rounded-2xl bg-ink p-8 shadow-xl transition-transform duration-300 hover:-translate-y-1">
+          {PILLARS.map(({ Icon, tone, title, description, FooterIcon, footer }) => (
+            <div key={title} className="group flex flex-col justify-between rounded-[4px] bg-ink p-8 border border-white/10">
               <div>
-                <div className={`flex size-14 items-center justify-center rounded-full bg-ink-elevated ${tone} ${hoverBg} transition-colors group-hover:text-ink`}>
-                  <Icon className="size-7" />
+                <div className={`flex size-10 items-center justify-center rounded-[4px] border border-white/10 bg-white/5 ${tone}`}>
+                  <Icon className="size-5" />
                 </div>
                 <h3 className="mt-6 font-headline-h3 text-[24px] font-medium leading-[1.3] text-white">{title}</h3>
                 <p className="mt-2 font-body-primary text-base font-normal leading-relaxed text-slate-300">{description}</p>

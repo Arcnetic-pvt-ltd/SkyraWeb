@@ -31,20 +31,20 @@ export function BiggerVision() {
 
           <div className="space-y-4 lg:col-span-5">
             <VisionPillar
-              icon={<CheckIcon className="size-5 text-brand-teal" />}
-              tone="bg-brand-teal/20"
+              icon={<CheckIcon className="size-5 text-muted-aquifer" />}
+              tone="bg-muted-aquifer/10"
               title="Conserve water"
               description="Prevent precious freshwater from ending up as polluted stormwater drainage."
             />
             <VisionPillar
-              icon={<HarvestRainwaterIcon className="size-5 text-brand-green" />}
-              tone="bg-brand-green/20"
+              icon={<HarvestRainwaterIcon className="size-5 text-moss" />}
+              tone="bg-moss/10"
               title="Recharge groundwater"
               description="Actively replenish subterranean tables to eliminate summer well drought."
             />
             <VisionPillar
-              icon={<CommunityIcon className="size-5 text-sky-600" />}
-              tone="bg-sky-600/20"
+              icon={<CommunityIcon className="size-5 text-muted-aquifer" />}
+              tone="bg-muted-aquifer/10"
               title="Build sustainable communities"
               description="Decentralize water security for self-sufficient neighborhoods and farms."
             />

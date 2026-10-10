@@ -35,10 +35,10 @@ export function ProblemSection() {
             </p>
 
             <div className="grid grid-cols-4 gap-2 border-t border-slate-100 pt-6 text-left sm:gap-4">
-              {PIPELINE_STEPS.map(({ label, Icon, tone, labelTone }) => (
+              {PIPELINE_STEPS.map(({ label, Icon, labelTone }) => (
                 <div key={label} className="flex flex-col items-start">
-                  <div className={`mb-2 flex size-12 items-center justify-center rounded-xl border shadow-sm ${tone}`}>
-                    <Icon className="size-6" />
+                  <div className="mb-2 flex size-10 items-center justify-center rounded-[6px] border border-muted-aquifer/20 bg-[#F8FCFE] text-forest-slate">
+                    <Icon className="size-5" />
                   </div>
                   <span className={`font-mono text-xs font-medium text-deep-aquifer ${labelTone ?? ""}`}>{label}</span>
                 </div>
@@ -48,7 +48,7 @@ export function ProblemSection() {
 
           {/* Right Column: Visual Contrast */}
           <div className="lg:col-span-6">
-            <div className="grid grid-cols-1 overflow-hidden rounded-3xl border border-slate-200 bg-slate-900 shadow-2xl sm:grid-cols-2">
+            <div className="grid grid-cols-1 overflow-hidden rounded-[4px] border border-muted-aquifer/20 bg-slate-900 sm:grid-cols-2">
               <div className="group relative h-72 overflow-hidden sm:h-96">
                 <Image
                   src="/images/problem-rain.jpg"
@@ -57,9 +57,9 @@ export function ProblemSection() {
                   sizes="(min-width: 640px) 25vw, 100vw"
                   className="object-cover transition-transform duration-500 group-hover:scale-105"
                 />
-                <div className="absolute inset-0 bg-linear-to-t from-black/80 via-transparent to-black/20" />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-black/20" />
                 <div className="absolute bottom-6 left-6 right-6">
-                  <span className="rounded bg-sky-600/80 px-2.5 py-1 font-mono text-xs font-medium text-white">
+                  <span className="rounded-[4px] bg-deep-aquifer border border-white/20 px-2.5 py-1 font-mono text-xs font-medium text-white">
                     Status quo 1
                   </span>
                   <p className="mt-2 text-lg font-medium text-white sm:text-xl">Abundant rainfall.</p>
@@ -76,9 +76,9 @@ export function ProblemSection() {
                   sizes="(min-width: 640px) 25vw, 100vw"
                   className="object-cover transition-transform duration-500 group-hover:scale-105"
                 />
-                <div className="absolute inset-0 bg-linear-to-t from-black/80 via-transparent to-black/20" />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-black/20" />
                 <div className="absolute bottom-6 left-6 right-6">
-                  <span className="rounded bg-amber-600/80 px-2.5 py-1 font-mono text-xs font-medium text-white">
+                  <span className="rounded-[4px] bg-deep-aquifer border border-white/20 px-2.5 py-1 font-mono text-xs font-medium text-white">
                     Status quo 2
                   </span>
                   <p className="mt-2 text-lg font-medium text-white sm:text-xl">Seasonal water scarcity.</p>

@@ -47,7 +47,7 @@ export function HowItWorks() {
         {/* Section Header */}
         <div className="flex flex-col gap-3 max-w-2xl">
           <div className="inline-flex items-center gap-2.5">
-            <span className="w-2 h-2 rounded-full bg-moss animate-pulse"></span>
+            <span className="w-2 h-2 rounded-full bg-moss"></span>
             <span className="font-mono text-xs text-moss font-medium tracking-wide">
               How Skyra works
             </span>
@@ -65,21 +65,18 @@ export function HowItWorks() {
           {STEPS.map(({ n, title, description, icon }) => (
             <div
               key={n}
-              className="group flex flex-col justify-between p-6 rounded-2xl bg-white/80 backdrop-blur-md border border-muted-aquifer/15 shadow-sm hover:shadow-md hover:border-moss/40 transition-all duration-300 relative overflow-hidden"
+              className="group flex flex-col justify-between p-5 rounded-[4px] bg-white border border-muted-aquifer/20 relative"
             >
-              {/* Top Accent Bar */}
-              <div className="absolute top-0 inset-x-0 h-1 bg-gradient-to-r from-moss to-[#0098a6] opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-
               <div>
                 <div className="flex items-center justify-between mb-4">
-                  <span className="font-mono text-xs font-semibold text-moss bg-moss/10 px-2.5 py-1 rounded-full border border-moss/20">
+                  <span className="font-mono text-xs font-medium text-moss bg-moss/10 px-2 py-0.5 rounded-[2px] border border-moss/20">
                     {n}
                   </span>
-                  <span className="material-symbols-outlined text-muted-aquifer group-hover:text-moss transition-colors text-[22px]">
+                  <span className="material-symbols-outlined text-muted-aquifer text-[22px]">
                     {icon}
                   </span>
                 </div>
-                <h3 className="font-headline-h3 text-[24px] font-medium text-deep-aquifer tracking-tight group-hover:text-forest-slate transition-colors">
+                <h3 className="font-headline-h3 text-[20px] font-medium text-deep-aquifer tracking-tight">
                   {title}
                 </h3>
                 <p className="font-body-primary text-base text-deep-aquifer mt-2 leading-relaxed">

@@ -61,13 +61,13 @@ export function ContactChannels() {
       <Container>
       <div className="mb-8 flex items-center justify-between border-b border-white/10 pb-4">
         <div>
-          <span className="font-mono text-xs font-medium text-brand-teal">
+          <span className="font-mono text-xs font-medium text-muted-aquifer">
             Get in touch
           </span>
           <h2 className="mt-1 font-headline-h2 text-[28px] sm:text-[36px] font-semibold tracking-tight text-white">Direct contact channels</h2>
         </div>
         <div className="hidden items-center gap-2 font-mono text-xs text-slate-400 sm:flex">
-          <span aria-hidden="true" className="size-2 rounded-full bg-emerald-400" />
+          <span aria-hidden="true" className="size-2 rounded-full bg-moss" />
           Fast response within working hours
         </div>
       </div>
@@ -78,52 +78,47 @@ export function ContactChannels() {
             key={title}
             href={href}
             {...(external ? { target: "_blank", rel: "noopener noreferrer" } : {})}
-            className="group flex flex-col justify-between rounded-2xl border border-white/10 bg-ink-elevated/90 p-6 transition-all duration-300 hover:-translate-y-1.5 hover:border-brand-teal/60 hover:shadow-[0_10px_30px_rgba(0,152,166,0.12)]"
+            className="group flex flex-col justify-between rounded-[4px] border border-white/10 bg-white/5 p-6 transition-all duration-300 hover:border-moss/60"
           >
             <div>
-              <div className={`mb-5 flex size-12 items-center justify-center rounded-xl border transition-transform duration-300 group-hover:scale-110 ${tone}`}>
+              <div className="mb-5 flex size-10 items-center justify-center rounded-[6px] border border-white/10 bg-white/10 text-moss">
                 <Icon className="size-5" />
               </div>
               <span className="mb-1 block font-mono text-xs text-slate-400 font-medium">{eyebrow}</span>
-              <h3 className="mb-2 font-headline-h3 text-[20px] sm:text-[24px] font-medium leading-[1.3] text-white transition-colors group-hover:text-brand-teal">{title}</h3>
+              <h3 className="mb-2 font-headline-h3 text-[20px] sm:text-[24px] font-medium leading-[1.3] text-white transition-colors group-hover:text-moss">{title}</h3>
               <p className={`mb-4 font-body-primary text-base font-normal leading-relaxed text-slate-300 ${detailMono ? "font-mono" : ""}`}>
                 {detail}
               </p>
             </div>
-            <div className="inline-flex items-center gap-1.5 font-mono text-xs font-medium text-brand-teal transition-all group-hover:gap-2.5">
+            <div className="inline-flex items-center gap-1.5 font-mono text-xs font-medium text-moss transition-all group-hover:gap-2.5">
               {linkLabel}
               <LinkIcon className="size-3.5" />
             </div>
           </a>
         ))}
 
-        {/* WhatsApp card (distinct styling — high-priority conversion channel) */}
+        {/* WhatsApp card */}
         <a
           href={WHATSAPP_HREF}
           target="_blank"
           rel="noopener noreferrer"
-          className="group relative flex flex-col justify-between overflow-hidden rounded-2xl border border-brand-green/50 bg-linear-to-br from-ink-elevated to-emerald-950/50 p-6 transition-all duration-300 hover:-translate-y-1.5 hover:border-brand-green hover:shadow-[0_10px_35px_rgba(16,185,129,0.25)]"
+          className="group relative flex flex-col justify-between overflow-hidden rounded-[4px] border border-moss/40 bg-white/5 p-6 transition-all duration-300 hover:border-moss"
         >
-          <div aria-hidden="true" className="pointer-events-none absolute -bottom-8 -right-8 size-28 rounded-full bg-brand-green/15 blur-2xl transition-transform duration-500 group-hover:scale-150" />
           <div>
-            <div className="relative mb-5 flex size-12 items-center justify-center rounded-xl border border-emerald-500/50 bg-emerald-950/80 text-emerald-400 transition-transform duration-300 group-hover:scale-110">
+            <div className="relative mb-5 flex size-10 items-center justify-center rounded-[6px] border border-moss/30 bg-moss/10 text-moss">
               <WhatsAppIcon className="size-5" />
-              <span className="absolute -right-1 -top-1 flex size-3">
-                <span className="absolute inline-flex size-full animate-ping rounded-full bg-emerald-400 opacity-75" />
-                <span className="relative inline-flex size-3 rounded-full bg-emerald-500" />
-              </span>
             </div>
-            <span className="mb-1 block font-mono text-xs text-emerald-400 font-medium">
+            <span className="mb-1 block font-mono text-xs text-moss font-medium">
               Instant advisory
             </span>
-            <h3 className="mb-2 font-headline-h3 text-[20px] sm:text-[24px] font-medium leading-[1.3] text-white transition-colors group-hover:text-emerald-300">
+            <h3 className="mb-2 font-headline-h3 text-[20px] sm:text-[24px] font-medium leading-[1.3] text-white transition-colors group-hover:text-moss">
               WhatsApp desk
             </h3>
             <p className="mb-4 font-body-primary text-base font-normal leading-relaxed text-slate-300">
               Direct chat with senior hydrological engineers.
             </p>
           </div>
-          <div className="inline-flex items-center gap-1.5 font-mono text-xs font-medium text-emerald-400 transition-all group-hover:gap-2.5">
+          <div className="inline-flex items-center gap-1.5 font-mono text-xs font-medium text-moss transition-all group-hover:gap-2.5">
             Chat on WhatsApp
             <WhatsAppIcon className="size-3.5" />
           </div>

@@ -78,20 +78,11 @@ export function HeroMissionEngine() {
   }, [isPlaying]);
 
   return (
-    <div className="relative w-full rounded-3xl bg-white/90 border border-muted-aquifer/25 p-5 sm:p-6 text-deep-aquifer shadow-2xl backdrop-blur-xl overflow-hidden font-sans group">
-      {/* Background Soft Glow */}
-      <div
-        className="absolute -top-24 -right-24 w-72 h-72 rounded-full blur-3xl opacity-20 pointer-events-none transition-colors duration-700"
-        style={{ backgroundColor: currentStage.accentColor }}
-      />
-
+    <div className="relative w-full rounded-[4px] bg-white border border-muted-aquifer/20 p-5 sm:p-6 text-deep-aquifer font-sans group">
       {/* Top Header Control Bar */}
       <div className="flex items-center justify-between gap-3 mb-4 pb-3 border-b border-muted-aquifer/15 relative z-10">
         <div className="flex items-center gap-2">
-          <span className="relative flex h-2.5 w-2.5">
-            <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-moss opacity-75" />
-            <span className="relative inline-flex rounded-full h-2.5 w-2.5 bg-moss" />
-          </span>
+          <span className="size-2 rounded-full bg-moss inline-block" />
           <span className="font-mono text-xs font-medium text-deep-aquifer">
             Closed-loop hydrological engine
           </span>
@@ -99,10 +90,10 @@ export function HeroMissionEngine() {
 
         <button
           onClick={() => setIsPlaying(!isPlaying)}
-          className="inline-flex items-center gap-1.5 rounded-full border border-muted-aquifer/20 bg-black/5 px-2.5 py-1 text-[11px] font-mono text-deep-aquifer/80 hover:bg-black/10 transition-colors cursor-pointer"
+          className="inline-flex items-center gap-1.5 rounded-[6px] border border-muted-aquifer/20 bg-black/5 px-2.5 py-1 text-[11px] font-mono text-deep-aquifer/80 hover:bg-black/10 transition-colors cursor-pointer"
           title={isPlaying ? "Pause auto-loop" : "Play auto-loop"}
         >
-          <span className={`size-1.5 rounded-full ${isPlaying ? "bg-moss animate-pulse" : "bg-amber-500"}`} />
+          <span className={`size-1.5 rounded-full ${isPlaying ? "bg-moss" : "bg-muted-aquifer"}`} />
           {isPlaying ? "Pause" : "Play"}
         </button>
       </div>
@@ -118,19 +109,19 @@ export function HeroMissionEngine() {
                 setActiveStageIndex(idx);
                 setIsPlaying(false);
               }}
-              className={`relative flex flex-col items-start p-2 sm:p-2.5 rounded-xl border text-left transition-all duration-300 cursor-pointer ${
+              className={`relative flex flex-col items-start p-2 sm:p-2.5 rounded-[4px] border text-left transition-colors cursor-pointer ${
                 isActive
-                  ? "border-moss bg-deep-aquifer text-white shadow-md"
+                  ? "border-moss bg-deep-aquifer text-white"
                   : "border-muted-aquifer/20 bg-black/5 text-deep-aquifer/70 hover:bg-black/10 hover:text-deep-aquifer"
               }`}
             >
               <div className="flex items-center justify-between w-full mb-1">
-                <span className={`font-mono text-[10px] font-bold ${isActive ? "text-brand-green" : "text-slate-400"}`}>
+                <span className={`font-mono text-[10px] font-bold ${isActive ? "text-moss" : "text-slate-400"}`}>
                   {st.number}
                 </span>
                 {isActive && isPlaying && (
                   <motion.div
-                    className="h-1 bg-brand-green rounded-full"
+                    className="h-1 bg-moss rounded-[2px]"
                     initial={{ width: "0%" }}
                     animate={{ width: "100%" }}
                     transition={{ duration: 4.5, ease: "linear" }}
@@ -147,7 +138,7 @@ export function HeroMissionEngine() {
       </div>
 
       {/* Main Hydrological SVG Visual Canvas (Dedicated Frame) */}
-      <div className="relative w-full aspect-[16/9] min-h-[210px] rounded-2xl bg-gradient-to-b from-[#f8fcfe] via-[#e4fffd]/40 to-[#d8f3f2]/60 border border-muted-aquifer/20 overflow-hidden mb-4">
+      <div className="relative w-full aspect-[16/9] min-h-[210px] rounded-[4px] bg-[#F8FCFE] border border-muted-aquifer/20 overflow-hidden mb-4">
         <svg
           className="w-full h-full select-none"
           viewBox="0 0 500 280"
@@ -385,12 +376,12 @@ export function HeroMissionEngine() {
           animate={{ opacity: 1, y: 0 }}
           exit={{ opacity: 0, y: -6 }}
           transition={{ duration: 0.25 }}
-          className="grid grid-cols-1 sm:grid-cols-12 gap-3 items-center bg-black/5 border border-muted-aquifer/15 rounded-2xl p-3.5 sm:p-4 relative z-10"
+          className="grid grid-cols-1 sm:grid-cols-12 gap-3 items-center bg-black/5 border border-muted-aquifer/15 rounded-[4px] p-3.5 sm:p-4 relative z-10"
         >
           <div className="sm:col-span-8 space-y-1">
             <div className="flex items-center gap-2">
               <span
-                className="px-2.5 py-0.5 rounded-full text-xs font-mono font-medium tracking-wide text-white"
+                className="px-2 py-0.5 rounded-[2px] text-xs font-mono font-medium tracking-wide text-white"
                 style={{ backgroundColor: currentStage.accentColor }}
               >
                 Phase {currentStage.number} • {currentStage.tagline}
@@ -415,7 +406,7 @@ export function HeroMissionEngine() {
               {currentStage.metricValue}
             </span>
             <span className="text-[10px] text-moss font-mono mt-0.5 inline-flex items-center gap-1">
-              <span className="size-1.5 rounded-full bg-moss animate-pulse" />
+              <span className="size-1.5 rounded-full bg-moss" />
               Engine active
             </span>
           </div>

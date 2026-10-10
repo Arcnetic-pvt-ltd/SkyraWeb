@@ -16,7 +16,7 @@ export default function ServicesPage() {
       <section className="w-full pt-28 pb-16 sm:pt-32 sm:pb-24 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto flex flex-col gap-6">
           <span className="inline-flex items-center gap-2 font-mono text-xs tracking-wide text-moss font-medium">
-            <span className="w-2 h-2 rounded-full bg-moss animate-pulse"></span>
+            <span className="w-2 h-2 rounded-full bg-moss"></span>
             Systems &amp; architecture
           </span>
           <h1 className="font-headline-hero text-headline-hero-mobile sm:text-headline-hero text-deep-aquifer tracking-tight text-balance max-w-3xl">
@@ -47,11 +47,11 @@ export default function ServicesPage() {
               </p>
               <div className="pt-2 flex flex-col gap-3 font-mono text-xs text-deep-aquifer">
                 <div className="flex items-center gap-2.5">
-                  <span className="material-symbols-outlined text-[20px] text-moss">check_circle</span>
+                  <span className="w-1.5 h-1.5 rounded-[1px] bg-moss"></span>
                   <span className="text-deep-aquifer font-medium">Zero-loss gravity filtration</span>
                 </div>
                 <div className="flex items-center gap-2.5">
-                  <span className="material-symbols-outlined text-[20px] text-moss">check_circle</span>
+                  <span className="w-1.5 h-1.5 rounded-[1px] bg-moss"></span>
                   <span className="text-deep-aquifer font-medium">Potable-grade cistern storage</span>
                 </div>
               </div>
@@ -59,7 +59,7 @@ export default function ServicesPage() {
               <div className="pt-4 flex flex-wrap items-center gap-4">
                 <Link
                   href="/contact?service=rainwater-harvesting"
-                  className="inline-flex items-center gap-2.5 bg-deep-aquifer hover:bg-forest-slate text-light-aquifer-canvas font-button-text text-button-text px-6 py-3 rounded-full transition-all duration-300 shadow-sm hover:shadow-md group"
+                  className="inline-flex items-center gap-2.5 bg-deep-aquifer hover:bg-forest-slate text-white font-button-text text-button-text px-6 py-3 rounded-[6px] transition-all duration-300 group"
                 >
                   <span>Get quote &amp; estimate</span>
                   <span className="material-symbols-outlined text-[18px]">
@@ -68,7 +68,7 @@ export default function ServicesPage() {
                 </Link>
                 <Link
                   href="/contact?query=rainwater-harvesting"
-                  className="inline-flex items-center gap-1.5 font-button-text text-button-text text-deep-aquifer hover:text-moss transition-colors py-2 px-3"
+                  className="inline-flex items-center gap-1.5 font-button-text text-button-text text-deep-aquifer hover:text-moss transition-colors py-2 px-3 rounded-[6px] border border-muted-aquifer/30 bg-white"
                 >
                   <span>Send query</span>
                   <span className="material-symbols-outlined text-[18px]">
@@ -80,7 +80,7 @@ export default function ServicesPage() {
 
             {/* SVG Line Illustration */}
             <div className="lg:col-span-6">
-              <div className="w-full rounded-2xl bg-white p-6 sm:p-8 shadow-[0_8px_30px_rgb(29,41,59,0.04)] border border-muted-aquifer/15 relative overflow-hidden">
+              <div className="w-full rounded-[4px] bg-white p-6 sm:p-8 border border-muted-aquifer/20 relative overflow-hidden">
                 <svg className="w-full h-80 select-none" fill="none" viewBox="0 0 460 320" xmlns="http://www.w3.org/2000/svg">
                   <path d="M 60 40 Q 90 20 120 40 Q 150 20 180 40" fill="none" stroke="#748D8C" strokeLinecap="round" strokeOpacity="0.3" strokeWidth="1.5" />
                   <path d="M 280 45 Q 310 30 340 45 Q 360 30 380 45" fill="none" stroke="#748D8C" strokeLinecap="round" strokeOpacity="0.25" strokeWidth="1.5" />
@@ -131,7 +131,7 @@ export default function ServicesPage() {
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
             {/* SVG Graphic */}
             <div className="lg:col-span-6 order-last lg:order-first">
-              <div className="w-full rounded-2xl bg-white p-6 sm:p-8 shadow-[0_8px_30px_rgb(29,41,59,0.04)] border border-muted-aquifer/15 relative overflow-hidden">
+              <div className="w-full rounded-[4px] bg-white p-6 sm:p-8 border border-muted-aquifer/20 relative overflow-hidden">
                 <svg className="w-full h-80 select-none" fill="none" viewBox="0 0 460 320" xmlns="http://www.w3.org/2000/svg">
                   <rect fill="#1D293B" height="24" opacity="0.12" rx="3" width="170" x="30" y="70" />
                   <text fill="#1D293B" fontFamily="Space Mono" fontSize="10" fontWeight="600" x="40" y="86">IMPERVIOUS RUNOFF</text>
@@ -176,11 +176,11 @@ export default function ServicesPage() {
               </p>
               <div className="pt-2 flex flex-col gap-3 font-mono text-xs text-deep-aquifer">
                 <div className="flex items-center gap-2.5">
-                  <span className="material-symbols-outlined text-[20px] text-moss">grain</span>
+                  <span className="w-1.5 h-1.5 rounded-[1px] bg-moss"></span>
                   <span className="text-deep-aquifer font-medium">Subsurface attenuation crates</span>
                 </div>
                 <div className="flex items-center gap-2.5">
-                  <span className="material-symbols-outlined text-[20px] text-moss">water</span>
+                  <span className="w-1.5 h-1.5 rounded-[1px] bg-moss"></span>
                   <span className="text-deep-aquifer font-medium">Bio-swale retention design</span>
                 </div>
               </div>
@@ -188,7 +188,7 @@ export default function ServicesPage() {
               <div className="pt-4 flex flex-wrap items-center gap-4">
                 <Link
                   href="/contact?service=stormwater-management"
-                  className="inline-flex items-center gap-2.5 bg-deep-aquifer hover:bg-forest-slate text-light-aquifer-canvas font-button-text text-button-text px-6 py-3 rounded-full transition-all duration-300 shadow-sm hover:shadow-md group"
+                  className="inline-flex items-center gap-2.5 bg-deep-aquifer hover:bg-forest-slate text-white font-button-text text-button-text px-6 py-3 rounded-[6px] transition-all duration-300 group"
                 >
                   <span>Get quote &amp; estimate</span>
                   <span className="material-symbols-outlined text-[18px]">
@@ -197,7 +197,7 @@ export default function ServicesPage() {
                 </Link>
                 <Link
                   href="/contact?query=stormwater-management"
-                  className="inline-flex items-center gap-1.5 font-button-text text-button-text text-deep-aquifer hover:text-moss transition-colors py-2 px-3"
+                  className="inline-flex items-center gap-1.5 font-button-text text-button-text text-deep-aquifer hover:text-moss transition-colors py-2 px-3 rounded-[6px] border border-muted-aquifer/30 bg-white"
                 >
                   <span>Send query</span>
                   <span className="material-symbols-outlined text-[18px]">
@@ -241,7 +241,7 @@ export default function ServicesPage() {
               <div className="pt-4 flex flex-wrap items-center gap-4">
                 <Link
                   href="/contact?service=afforestation"
-                  className="inline-flex items-center gap-2.5 bg-moss hover:bg-moss/90 text-deep-aquifer font-button-text text-button-text px-6 py-3 rounded-full transition-all duration-300 shadow-sm hover:shadow-md font-semibold group"
+                  className="inline-flex items-center gap-2.5 bg-moss hover:bg-moss/90 text-deep-aquifer font-button-text text-button-text px-6 py-3 rounded-[6px] transition-all duration-300 font-semibold group"
                 >
                   <span>Get quote &amp; estimate</span>
                   <span className="material-symbols-outlined text-[18px]">
@@ -250,7 +250,7 @@ export default function ServicesPage() {
                 </Link>
                 <Link
                   href="/contact?query=afforestation"
-                  className="inline-flex items-center gap-1.5 font-button-text text-button-text text-light-aquifer-canvas/80 hover:text-white transition-colors py-2 px-3"
+                  className="inline-flex items-center gap-1.5 font-button-text text-button-text text-light-aquifer-canvas/80 hover:text-white transition-colors py-2 px-3 rounded-[6px] border border-white/20"
                 >
                   <span>Send query</span>
                   <span className="material-symbols-outlined text-[18px]">
@@ -262,7 +262,7 @@ export default function ServicesPage() {
 
             {/* SVG Organic Root Network */}
             <div className="lg:col-span-6">
-              <div className="w-full rounded-2xl bg-deep-aquifer/60 p-6 sm:p-8 border border-white/10 shadow-[0_16px_40px_rgba(0,0,0,0.18)] relative overflow-hidden">
+              <div className="w-full rounded-[4px] bg-deep-aquifer p-6 sm:p-8 border border-white/10 relative overflow-hidden">
                 <svg className="w-full h-80 select-none" fill="none" viewBox="0 0 460 320" xmlns="http://www.w3.org/2000/svg">
                   <circle cx="160" cy="85" fill="#7D9D3D" opacity="0.35" r="42" />
                   <circle cx="215" cy="70" fill="#7D9D3D" opacity="0.5" r="54" />
@@ -341,13 +341,13 @@ export default function ServicesPage() {
           <div className="pt-2 flex flex-col sm:flex-row items-center gap-4 w-full sm:w-auto">
             <Link
               href="/contact"
-              className="w-full sm:w-auto inline-flex items-center justify-center bg-deep-aquifer hover:bg-forest-slate text-light-aquifer-canvas font-button-text text-button-text px-8 py-3.5 rounded-full transition-all duration-300 hover:shadow-lg"
+              className="w-full sm:w-auto inline-flex items-center justify-center bg-deep-aquifer hover:bg-forest-slate text-white font-button-text text-button-text px-8 py-3.5 rounded-[6px] transition-all duration-300"
             >
               Request a hydrological study
             </Link>
             <Link
               href="/about"
-              className="w-full sm:w-auto inline-flex items-center justify-center font-button-text text-button-text text-deep-aquifer hover:text-moss px-6 py-3.5 transition-colors gap-1.5"
+              className="w-full sm:w-auto inline-flex items-center justify-center font-button-text text-button-text text-deep-aquifer hover:text-moss px-6 py-3.5 transition-colors gap-1.5 rounded-[6px] border border-muted-aquifer/30 bg-white"
             >
               <span>Read our engineering manifesto</span>
               <span className="material-symbols-outlined text-[18px]">

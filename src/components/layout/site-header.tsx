@@ -37,7 +37,7 @@ export function SiteHeader() {
 
   return (
     <header className="fixed top-4 inset-x-0 z-50 px-4 sm:px-6 lg:px-8">
-      <div className="h-16 max-w-5xl mx-auto rounded-full bg-white/80 backdrop-blur-xl shadow-[0_8px_30px_rgb(29,41,59,0.06)] border border-muted-aquifer/15 px-4 sm:px-6 flex items-center justify-between transition-all duration-300">
+      <div className="h-16 max-w-5xl mx-auto rounded-[6px] bg-white border border-muted-aquifer/20 px-4 sm:px-6 flex items-center justify-between transition-all duration-300">
         <Link
           className="flex items-center gap-3 transition-opacity hover:opacity-85 text-deep-aquifer"
           href="/"
@@ -69,7 +69,7 @@ export function SiteHeader() {
 
         <div className="flex items-center gap-3">
           <Link
-            className="hidden sm:inline-flex items-center justify-center bg-deep-aquifer hover:bg-forest-slate text-white font-button-text text-[13px] px-4 py-2.5 rounded-full transition-all duration-300 tracking-tight hover:shadow-[0_4px_20px_rgba(125,157,61,0.35)] active:scale-[0.98]"
+            className="hidden sm:inline-flex items-center justify-center bg-deep-aquifer hover:bg-forest-slate text-white font-button-text text-[13px] px-4 py-2.5 rounded-[6px] transition-all duration-300 tracking-tight active:scale-[0.98]"
             href="/contact"
             onClick={scrollToTop}
           >
@@ -80,7 +80,7 @@ export function SiteHeader() {
             type="button"
             onClick={() => setOpen((v) => !v)}
             aria-label={open ? "Close menu" : "Open menu"}
-            className="md:hidden inline-flex items-center justify-center p-2 rounded-full text-deep-aquifer hover:bg-surface-container/50 transition-colors"
+            className="md:hidden inline-flex items-center justify-center p-2 rounded-[6px] text-deep-aquifer hover:bg-surface-container/50 transition-colors"
           >
             <span className="material-symbols-outlined text-[24px]">
               {open ? "close" : "menu"}
@@ -90,7 +90,7 @@ export function SiteHeader() {
       </div>
 
       {open && (
-        <div className="md:hidden fixed inset-x-4 top-24 z-50 rounded-2xl bg-white/95 backdrop-blur-2xl p-6 shadow-2xl border border-muted-aquifer/20 flex flex-col gap-5">
+        <div className="md:hidden fixed inset-x-4 top-24 z-50 rounded-[4px] bg-white p-6 border border-muted-aquifer/20 flex flex-col gap-5">
           <nav className="flex flex-col gap-4">
             {NAV_LINKS.map((link) => {
               const isActive = pathname === link.href;
@@ -112,7 +112,7 @@ export function SiteHeader() {
           </nav>
           <div className="pt-2 border-t border-muted-aquifer/15">
             <Link
-              className="w-full inline-flex items-center justify-center bg-deep-aquifer hover:bg-forest-slate text-white font-button-text text-[14px] py-3 rounded-full transition-all"
+              className="w-full inline-flex items-center justify-center bg-deep-aquifer hover:bg-forest-slate text-white font-button-text text-[14px] py-3 rounded-[6px] transition-all"
               href="/contact"
               onClick={scrollToTop}
             >

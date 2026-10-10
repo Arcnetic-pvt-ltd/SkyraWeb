@@ -7,7 +7,7 @@ const SECTORS = [
   {
     image: "/images/sector-residential-v2.jpg",
     icon: <HomeIcon className="size-3.5" />,
-    badgeTone: "bg-white/90 border-[#0098a6]/30 text-[#0098a6]",
+    badgeTone: "bg-white border-muted-aquifer/30 text-muted-aquifer",
     eyebrow: "Residential",
     title: "Villas & gated communities",
     description: "Compact automated rooftop multi-stage filtration, subterranean cisterns, and full potable water integration directly into domestic plumbing.",
@@ -17,7 +17,7 @@ const SECTORS = [
   {
     image: "/images/sector-commercial-v2.jpg",
     icon: <BuildingIcon className="size-3.5" />,
-    badgeTone: "bg-white/90 border-moss/30 text-moss",
+    badgeTone: "bg-white border-moss/30 text-moss",
     eyebrow: "Commercial",
     title: "IT parks & corporate hubs",
     description: "High-volume underground retention vaults, dual-circuit greywater networks, cooling tower make-up water recycling, and LEED water credits.",
@@ -27,7 +27,7 @@ const SECTORS = [
   {
     image: "/images/sector-hospitality-v2.jpg",
     icon: <BuildingIcon className="size-3.5" />,
-    badgeTone: "bg-white/90 border-sky-600/30 text-sky-600",
+    badgeTone: "bg-white border-muted-aquifer/30 text-muted-aquifer",
     eyebrow: "Hospitality",
     title: "Resorts & eco-hotels",
     description: "Peak storm runoff interception, oil-grit separators, continuous groundwater injection, and non-stop operational water security for guests.",
@@ -37,7 +37,7 @@ const SECTORS = [
   {
     image: "/images/sector-agriculture-v2.jpg",
     icon: <LeafIcon className="size-3.5" />,
-    badgeTone: "bg-white/90 border-emerald-600/30 text-emerald-600",
+    badgeTone: "bg-white border-moss/30 text-moss",
     eyebrow: "Agriculture",
     title: "Plantations & Miyawaki forests",
     description: "Contour swales, engineered retention ponds, and deep aquifer recharge shafts that stabilize open borewells and guarantee drought-resilient irrigation.",
@@ -49,16 +49,12 @@ const SECTORS = [
 /** Sector Capabilities & Built Environments Section. Aligned with modern Skyra design principles. */
 export function SectorCapabilities() {
   return (
-    <section className="relative w-full bg-light-aquifer-canvas py-16 sm:py-24 px-4 sm:px-6 lg:px-8 overflow-hidden border-t border-muted-aquifer/15" id="sectors">
-      {/* Ambient background atmosphere blobs */}
-      <div aria-hidden="true" className="absolute -top-32 right-10 w-[600px] h-[600px] rounded-full bg-[#cde8e6]/60 blur-[130px] pointer-events-none" />
-      <div aria-hidden="true" className="absolute -bottom-32 left-10 w-[600px] h-[600px] rounded-full bg-[#ccebc8]/50 blur-[130px] pointer-events-none" />
-
+    <section className="relative w-full bg-light-aquifer-canvas py-16 sm:py-24 px-4 sm:px-6 lg:px-8 border-t border-muted-aquifer/15" id="sectors">
       <div className="max-w-7xl mx-auto flex flex-col gap-12 sm:gap-16 relative z-10">
         {/* Header */}
         <div className="flex flex-col gap-3 max-w-2xl">
           <div className="inline-flex items-center gap-2.5">
-            <span className="inline-block w-2 h-2 rounded-full bg-moss animate-pulse"></span>
+            <span className="inline-block w-2 h-2 rounded-full bg-moss"></span>
             <span className="font-mono text-xs font-medium text-moss">
               Tailored engineering
             </span>

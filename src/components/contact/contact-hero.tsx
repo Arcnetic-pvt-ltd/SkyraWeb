@@ -10,20 +10,11 @@ import { Container } from "@/components/ui/container";
 export function ContactHero() {
   return (
     <section className="relative overflow-hidden bg-ink pt-28 sm:pt-32 pb-16 sm:pb-24">
-      <div
-        aria-hidden="true"
-        className="pointer-events-none absolute left-1/2 top-1/4 size-96 -translate-x-1/2 rounded-full bg-brand-teal/10 blur-3xl"
-      />
-      <div
-        aria-hidden="true"
-        className="pointer-events-none absolute right-10 top-1/3 size-72 rounded-full bg-brand-green/10 blur-3xl"
-      />
-
       <Container className="relative z-10 text-left">
-        <div className="mb-6 inline-flex items-center gap-2 rounded-full border border-white/10 bg-ink-elevated px-4 py-1.5 font-mono text-xs font-medium text-slate-300 shadow-sm">
+        <div className="mb-6 inline-flex items-center gap-2 rounded-[4px] border border-white/10 bg-ink-elevated px-3 py-1 font-mono text-xs font-medium text-slate-300">
           <span
             aria-hidden="true"
-            className="size-2 animate-pulse rounded-full bg-emerald-400"
+            className="size-2 rounded-full bg-moss"
           />
           Contact Skyra • From sky, to life
         </div>

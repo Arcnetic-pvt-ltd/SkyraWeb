@@ -19,14 +19,14 @@ export function FinalCta() {
   return (
     <section className="bg-linear-to-b from-ink to-ink-elevated py-16 sm:py-24 text-white" id="contact">
       <Container>
-        <div className="relative overflow-hidden rounded-3xl border border-white/15 bg-white/5 p-8 shadow-2xl backdrop-blur-md sm:p-12 lg:p-16">
+        <div className="relative overflow-hidden rounded-[4px] border border-white/15 bg-white/5 p-8 sm:p-12 lg:p-16">
           <div className="grid grid-cols-1 items-center gap-10 lg:grid-cols-12">
             <div className="space-y-4 lg:col-span-7">
               <h2 className="font-headline-h2 text-headline-h2-mobile sm:text-headline-h2 text-white tracking-tight leading-[1.2]">
                 <span className="block">Your water problem</span>
                 <span className="block">has a solution.</span>
               </h2>
-              <p className="font-headline-h3 text-[24px] font-medium text-brand-green leading-[1.3]">{"Let's find it together."}</p>
+              <p className="font-headline-h3 text-[24px] font-medium text-moss leading-[1.3]">{"Let's find it together."}</p>
               <p className="max-w-lg text-base font-normal font-body-primary leading-relaxed text-slate-300">
                 Get an on-site feasibility evaluation, custom storage simulation,
                 and transparent quote from our engineering consultants.
@@ -49,9 +49,9 @@ export function FinalCta() {
             </div>
 
             {/* Physical Location & Contact Micro-details */}
-            <div className="space-y-4 rounded-2xl border border-white/10 bg-black/30 p-6 sm:p-8 lg:col-span-5">
+            <div className="space-y-4 rounded-[4px] border border-white/10 bg-black/30 p-6 sm:p-8 lg:col-span-5">
               <div className="flex items-start gap-3">
-                <div className="mt-0.5 flex size-8 flex-shrink-0 items-center justify-center rounded-lg bg-brand-teal/20 text-brand-teal">
+                <div className="mt-0.5 flex size-8 flex-shrink-0 items-center justify-center rounded-[4px] border border-white/10 bg-white/10 text-muted-aquifer">
                   <LocationPinIcon className="size-4" />
                 </div>
                 <div className="text-base text-slate-300">
@@ -61,7 +61,7 @@ export function FinalCta() {
               </div>
 
               <div className="flex items-center gap-3 border-t border-white/10 pt-3 text-base text-slate-300">
-                <div className="flex size-8 flex-shrink-0 items-center justify-center rounded-lg bg-brand-green/20 text-brand-green">
+                <div className="flex size-8 flex-shrink-0 items-center justify-center rounded-[4px] border border-white/10 bg-white/10 text-moss">
                   <MailIcon className="size-4" />
                 </div>
                 <div>
@@ -75,7 +75,7 @@ export function FinalCta() {
               <div className="flex items-center gap-4 border-t border-white/10 pt-3 text-slate-400">
                 <span className="font-mono text-xs">Follow:</span>
                 {SOCIAL_LINKS.map(({ label, Icon, href }) => (
-                  <a key={label} aria-label={label} href={href} className="transition-colors hover:text-brand-teal">
+                  <a key={label} aria-label={label} href={href} className="transition-colors hover:text-muted-aquifer">
                     <Icon className="size-4" />
                   </a>
                 ))}
