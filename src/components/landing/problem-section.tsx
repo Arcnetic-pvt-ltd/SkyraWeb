@@ -58,6 +58,18 @@ export function ProblemSection() {
                   className="object-cover transition-transform duration-500 group-hover:scale-105"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-black/20" />
+                {/* Subtle Rainfall Overlay Element */}
+                <div aria-hidden="true" className="absolute inset-0 pointer-events-none overflow-hidden select-none opacity-30">
+                  <svg className="w-full h-full" xmlns="http://www.w3.org/2000/svg">
+                    <defs>
+                      <pattern id="problemRainPattern" width="100" height="100" patternUnits="userSpaceOnUse">
+                        <line x1="20" y1="0" x2="10" y2="30" stroke="#748D8C" strokeWidth="1" strokeOpacity="0.6" strokeDasharray="10 15" />
+                        <line x1="60" y1="35" x2="50" y2="65" stroke="#F8FCFE" strokeWidth="0.8" strokeOpacity="0.4" strokeDasharray="8 16" />
+                      </pattern>
+                    </defs>
+                    <rect width="100%" height="100%" fill="url(#problemRainPattern)" className="animate-subtle-rain" />
+                  </svg>
+                </div>
                 <div className="absolute bottom-6 left-6 right-6">
                   <span className="rounded-[4px] bg-deep-aquifer border border-white/20 px-2.5 py-1 font-mono text-xs font-medium text-white">
                     Status quo 1

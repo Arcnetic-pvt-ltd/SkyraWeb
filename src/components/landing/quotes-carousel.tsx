@@ -45,7 +45,21 @@ export function QuotesCarousel() {
   // User controls active quote via dot indicators below
 
   return (
-    <section className="w-full bg-forest-slate text-light-aquifer-canvas py-16 sm:py-24 px-4 sm:px-6 lg:px-8 relative overflow-hidden min-h-[543.5px] flex items-center">
+    <section className="w-full bg-linear-to-br from-[#0c1a2d] via-[#10243d] to-[#173050] text-light-aquifer-canvas py-16 sm:py-24 px-4 sm:px-6 lg:px-8 relative overflow-hidden min-h-[543.5px] flex items-center border-y border-[#22446d]/40">
+      {/* Subtle Rainfall Overlay Element */}
+      <div aria-hidden="true" className="absolute inset-0 z-0 pointer-events-none overflow-hidden select-none opacity-20">
+        <svg className="w-full h-full" xmlns="http://www.w3.org/2000/svg">
+          <defs>
+            <pattern id="quotesRainPattern" width="120" height="120" patternUnits="userSpaceOnUse">
+              <line x1="20" y1="0" x2="10" y2="35" stroke="#748D8C" strokeWidth="1" strokeOpacity="0.4" strokeDasharray="12 18" />
+              <line x1="70" y1="40" x2="60" y2="75" stroke="#7D9D3D" strokeWidth="1" strokeOpacity="0.3" strokeDasharray="10 20" />
+              <line x1="110" y1="20" x2="100" y2="55" stroke="#86b5db" strokeWidth="0.8" strokeOpacity="0.35" strokeDasharray="8 16" />
+            </pattern>
+          </defs>
+          <rect width="100%" height="100%" fill="url(#quotesRainPattern)" className="animate-subtle-rain" />
+        </svg>
+      </div>
+
       {/* Background Images for Quotes (Synchronized with text transition) */}
       {QUOTES.map((item, idx) => {
         if (!item.image) return null;
@@ -66,9 +80,9 @@ export function QuotesCarousel() {
             <div className="relative h-full flex items-end">
               {/* Soft Gradient Mask based on image position */}
               {isLeft ? (
-                <div className="absolute inset-y-0 right-0 w-32 sm:w-56 bg-gradient-to-l from-forest-slate via-forest-slate/60 to-transparent z-10 pointer-events-none"></div>
+                <div className="absolute inset-y-0 right-0 w-32 sm:w-56 bg-gradient-to-l from-[#10243d] via-[#10243d]/70 to-transparent z-10 pointer-events-none"></div>
               ) : (
-                <div className="absolute inset-y-0 left-0 w-32 sm:w-56 bg-gradient-to-r from-forest-slate via-forest-slate/60 to-transparent z-10 pointer-events-none"></div>
+                <div className="absolute inset-y-0 left-0 w-32 sm:w-56 bg-gradient-to-r from-[#10243d] via-[#10243d]/70 to-transparent z-10 pointer-events-none"></div>
               )}
 
               <img
@@ -99,7 +113,7 @@ export function QuotesCarousel() {
                 <span className="material-symbols-outlined text-[28px] text-moss">
                   water_drop
                 </span>
-                <span className="font-mono text-xs text-white/80 font-medium">
+                <span className="font-mono text-xs text-[#86b5db] font-medium">
                   National vision
                 </span>
               </div>
@@ -112,7 +126,7 @@ export function QuotesCarousel() {
                 <span className="font-semibold text-white">
                   — {item.author}
                 </span>
-                , <span className="text-white/70">{item.role}</span>
+                , <span className="text-[#86b5db]/90">{item.role}</span>
               </cite>
 
               {/* Carousel Dot Indicators */}
@@ -124,8 +138,8 @@ export function QuotesCarousel() {
                     aria-label={`Quote ${dotIdx + 1}`}
                     onClick={() => setActiveIndex(dotIdx)}
                     className={`h-1.5 rounded-full transition-all duration-500 ${dotIdx === activeIndex
-                        ? "w-8 bg-white"
-                        : "w-2.5 bg-white/40 hover:bg-white/70"
+                        ? "w-8 bg-[#86b5db]"
+                        : "w-2.5 bg-white/30 hover:bg-white/60"
                       }`}
                   />
                 ))}

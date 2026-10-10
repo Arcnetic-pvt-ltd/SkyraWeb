@@ -148,16 +148,16 @@ export function RainsinkInteractiveShowcase() {
       {/* Rainsink Cross-Section Diagram & Layer Explorer */}
       <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
         {/* SVG Diagram Column - Flat Dark Illustration Card */}
-        <div className="lg:col-span-6 bg-deep-aquifer p-5 sm:p-7 rounded-[4px] border border-muted-aquifer/20 relative overflow-hidden group">
+        <div className="lg:col-span-6 bg-linear-to-br from-[#0c1a2d] via-[#10243d] to-[#173050] p-5 sm:p-7 rounded-[4px] border border-[#22446d]/60 relative overflow-hidden group">
           {/* Card Header & Controls */}
-          <div className="flex items-center justify-between gap-4 mb-3 relative z-10 border-b border-white/10 pb-3">
+          <div className="flex items-center justify-between gap-4 mb-3 relative z-10 border-b border-[#22446d]/60 pb-3">
             <div className="flex items-center gap-2">
               <span className="size-2 rounded-full bg-moss inline-block" />
-              <span className="font-mono text-xs font-medium text-slate-300">
+              <span className="font-mono text-xs font-medium text-[#86b5db]">
                 Hydrological vector cutaway
               </span>
             </div>
-            <span className="font-mono text-xs text-slate-400">
+            <span className="font-mono text-xs text-[#bcd7e8]/70">
               5-Chamber engine
             </span>
           </div>
@@ -778,7 +778,7 @@ export function RainsinkInteractiveShowcase() {
                   onClick={() => setActiveLayer(layer.id)}
                   className={`p-4 rounded-[4px] transition-colors duration-200 cursor-pointer ${
                     isSelected
-                      ? "bg-deep-aquifer text-light-aquifer-canvas border-l-2 border-l-moss border-y border-r border-muted-aquifer/30"
+                      ? "bg-linear-to-r from-[#0c1a2d] to-[#132742] text-light-aquifer-canvas border-l-2 border-l-moss border-y border-r border-[#22446d]/60"
                       : "bg-white text-deep-aquifer border border-muted-aquifer/20 hover:border-moss/50 hover:bg-[#F8FCFE]"
                   }`}
                 >

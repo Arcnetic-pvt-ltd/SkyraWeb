@@ -47,13 +47,27 @@ export function HarvestingCalculator() {
   };
 
   return (
-    <section className="relative w-full bg-deep-aquifer py-16 sm:py-24 px-4 sm:px-6 lg:px-8 text-light-aquifer-canvas overflow-hidden" id="calculator">
+    <section className="relative w-full bg-linear-to-br from-[#0a1829] via-[#0f243c] to-[#152e4b] py-16 sm:py-24 px-4 sm:px-6 lg:px-8 text-light-aquifer-canvas overflow-hidden border-t border-[#22446d]/40" id="calculator">
+      {/* Subtle Rainfall Overlay Element */}
+      <div aria-hidden="true" className="absolute inset-0 z-[1] pointer-events-none overflow-hidden select-none opacity-20">
+        <svg className="w-full h-full" xmlns="http://www.w3.org/2000/svg">
+          <defs>
+            <pattern id="calcRainPattern" width="120" height="120" patternUnits="userSpaceOnUse">
+              <line x1="20" y1="0" x2="10" y2="35" stroke="#748D8C" strokeWidth="1" strokeOpacity="0.4" strokeDasharray="12 18" />
+              <line x1="70" y1="40" x2="60" y2="75" stroke="#7D9D3D" strokeWidth="1" strokeOpacity="0.3" strokeDasharray="10 20" />
+              <line x1="110" y1="20" x2="100" y2="55" stroke="#86b5db" strokeWidth="0.8" strokeOpacity="0.35" strokeDasharray="8 16" />
+            </pattern>
+          </defs>
+          <rect width="100%" height="100%" fill="url(#calcRainPattern)" className="animate-subtle-rain" />
+        </svg>
+      </div>
+
       <div className="max-w-7xl mx-auto relative z-10 flex flex-col gap-12 sm:gap-16">
         {/* Header */}
         <div className="flex flex-col gap-4 max-w-2xl">
           <div className="inline-flex items-center gap-2.5">
             <span className="inline-block w-2 h-2 rounded-full bg-moss"></span>
-            <span className="font-mono text-xs text-moss font-medium">
+            <span className="font-mono text-xs text-[#86b5db] font-medium">
               Interactive feasibility tool
             </span>
           </div>
@@ -68,7 +82,7 @@ export function HarvestingCalculator() {
         {/* Calculator Main Grid */}
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-stretch">
           {/* Controls Column (Left 7 Cols) */}
-          <div className="lg:col-span-7 flex flex-col justify-between gap-8 rounded-[4px] bg-white/5 p-6 sm:p-10 border border-white/10">
+          <div className="lg:col-span-7 flex flex-col justify-between gap-8 rounded-[4px] bg-[#132742]/85 p-6 sm:p-10 border border-[#22446d]/80">
             {/* Step 1: Area Input */}
             <div className="flex flex-col gap-4">
               <div className="flex items-center justify-between">
@@ -76,7 +90,7 @@ export function HarvestingCalculator() {
                   <span className="size-5 rounded-[2px] bg-moss/20 text-moss flex items-center justify-center font-mono text-xs font-bold">1</span>
                   Rooftop / catchment footprint
                 </label>
-                <div className="inline-flex rounded-[6px] bg-white/10 p-0.5 border border-white/10 text-xs font-medium">
+                <div className="inline-flex rounded-[6px] bg-[#0d1d33] p-0.5 border border-[#22446d] text-xs font-medium">
                   <button
                     type="button"
                     onClick={() => {
@@ -116,9 +130,9 @@ export function HarvestingCalculator() {
                   max={500000}
                   value={areaSqFt}
                   onChange={(e) => setAreaSqFt(Math.max(0, Number(e.target.value)))}
-                  className="w-36 bg-white/10 border border-white/20 rounded-[6px] px-4 py-2.5 text-white font-mono text-lg font-bold focus:outline-none focus:border-moss"
+                  className="w-36 bg-[#0d1d33] border border-[#22446d] rounded-[6px] px-4 py-2.5 text-white font-mono text-lg font-bold focus:outline-none focus:border-[#86b5db]"
                 />
-                <span className="font-mono text-xs text-light-aquifer-canvas/70">
+                <span className="font-mono text-xs text-[#86b5db]">
                   ≈ {areaInM2.toFixed(1)} m² catchment area
                 </span>
               </div>
@@ -149,12 +163,12 @@ export function HarvestingCalculator() {
                     onClick={() => handleCitySelect(city.name)}
                     className={`flex flex-col items-start p-3 rounded-[6px] border text-left transition-all ${
                       !isCustomRainfall && selectedCity === city.name
-                        ? "bg-moss/20 border-moss text-white shadow-none"
-                        : "bg-white/5 border-white/10 text-light-aquifer-canvas/70 hover:bg-white/10 hover:text-white"
+                        ? "bg-[#1c3c63] border-[#396fa8] text-white shadow-none"
+                        : "bg-[#0d1d33]/80 border-[#1e3c61]/80 text-light-aquifer-canvas/80 hover:bg-[#162f50] hover:text-white"
                     }`}
                   >
                     <span className="text-xs font-bold">{city.name}</span>
-                    <span className="text-[11px] opacity-75 font-mono">{city.rainfall} mm/yr</span>
+                    <span className="text-[11px] opacity-80 font-mono">{city.rainfall} mm/yr</span>
                   </button>
                 ))}
               </div>
@@ -181,20 +195,20 @@ export function HarvestingCalculator() {
             </div>
 
             {/* Coefficient Note */}
-            <div className="pt-2 border-t border-white/10 flex items-center justify-between font-mono text-xs text-light-aquifer-canvas/70">
+            <div className="pt-2 border-t border-[#22446d] flex items-center justify-between font-mono text-xs text-light-aquifer-canvas/70">
               <span>Runoff efficiency coefficient</span>
               <span className="font-semibold text-moss">0.85 (85% net retention)</span>
             </div>
           </div>
 
           {/* Results Output Column (Right 5 Cols) */}
-          <div className="lg:col-span-5 flex flex-col justify-between rounded-[4px] bg-white text-deep-aquifer p-6 sm:p-10 border border-muted-aquifer/20 relative overflow-hidden">
+          <div className="lg:col-span-5 flex flex-col justify-between rounded-[4px] bg-white text-deep-aquifer p-6 sm:p-10 border border-[#bcd7e8]/60 relative overflow-hidden shadow-[0_4px_20px_rgba(10,25,45,0.15)]">
             <div className="space-y-6 relative z-10">
               <div className="flex items-center justify-between">
                 <span className="font-mono text-xs text-deep-aquifer/70 font-medium">
                   Estimated annual yield
                 </span>
-                <span className="inline-flex items-center gap-1.5 rounded-[4px] border border-muted-aquifer/20 bg-light-aquifer-canvas px-2.5 py-0.5 font-mono text-xs font-medium text-forest-slate">
+                <span className="inline-flex items-center gap-1.5 rounded-[4px] border border-[#bcd7e8]/60 bg-[#edf6fa] px-2.5 py-0.5 font-mono text-xs font-medium text-forest-slate">
                   <span aria-hidden="true" className="size-1.5 rounded-full bg-moss" />
                   Calculated live
                 </span>
@@ -218,7 +232,7 @@ export function HarvestingCalculator() {
 
               {/* Secondary Impact Metrics */}
               <div className="grid grid-cols-2 gap-3 pt-4 border-t border-muted-aquifer/15">
-                <div className="flex flex-col gap-1 p-3.5 rounded-[4px] bg-light-aquifer-canvas border border-muted-aquifer/20">
+                <div className="flex flex-col gap-1 p-3.5 rounded-[4px] bg-[#edf6fa] border border-[#bcd7e8]/60">
                   <span className="font-mono text-xs font-medium text-moss">Skyra Rainsink units</span>
                   <span className="font-mono text-2xl font-bold text-deep-aquifer">
                     {Math.max(1, Math.ceil(annualLiters / 30000))} <span className="text-xs text-moss">Unit{Math.max(1, Math.ceil(annualLiters / 30000)) === 1 ? "" : "s"}</span>
@@ -226,7 +240,7 @@ export function HarvestingCalculator() {
                   <span className="font-mono text-[11px] text-deep-aquifer/70">Percolation capacity</span>
                 </div>
 
-                <div className="flex flex-col gap-1 p-3.5 rounded-[4px] bg-light-aquifer-canvas border border-muted-aquifer/20">
+                <div className="flex flex-col gap-1 p-3.5 rounded-[4px] bg-[#edf6fa] border border-[#bcd7e8]/60">
                   <span className="font-mono text-xs font-medium text-deep-aquifer/70">Estimated value</span>
                   <span className="font-mono text-2xl font-bold text-deep-aquifer">
                     ₹{(estimatedSavingsInRupees / 1000).toFixed(1)} <span className="text-xs text-moss">k/yr</span>

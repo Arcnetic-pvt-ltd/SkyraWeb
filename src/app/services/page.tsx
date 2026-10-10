@@ -126,12 +126,12 @@ export default function ServicesPage() {
       </section>
 
       {/* Service 2: Stormwater Management Solutions */}
-      <section className="w-full bg-surface-container-low py-16 sm:py-24 px-4 sm:px-6 lg:px-8 border-t border-muted-aquifer/15">
+      <section className="w-full bg-linear-to-b from-[#edf6fa] via-[#e5f1f7] to-[#edf6fa] py-16 sm:py-24 px-4 sm:px-6 lg:px-8 border-t border-[#c8e0ee]/60">
         <div className="max-w-7xl mx-auto">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
             {/* SVG Graphic */}
             <div className="lg:col-span-6 order-last lg:order-first">
-              <div className="w-full rounded-[4px] bg-white p-6 sm:p-8 border border-muted-aquifer/20 relative overflow-hidden">
+              <div className="w-full rounded-[4px] bg-white/95 p-6 sm:p-8 border border-[#bcd7e8]/60 shadow-[0_1px_3px_rgba(20,50,80,0.03)] relative overflow-hidden">
                 <svg className="w-full h-80 select-none" fill="none" viewBox="0 0 460 320" xmlns="http://www.w3.org/2000/svg">
                   <rect fill="#1D293B" height="24" opacity="0.12" rx="3" width="170" x="30" y="70" />
                   <text fill="#1D293B" fontFamily="Space Mono" fontSize="10" fontWeight="600" x="40" y="86">IMPERVIOUS RUNOFF</text>

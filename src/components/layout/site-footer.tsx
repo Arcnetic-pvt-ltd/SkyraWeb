@@ -4,8 +4,22 @@ import { SkyraLogo } from "@/components/layout/skyra-logo";
 
 export function SiteFooter() {
   return (
-    <footer className="w-full bg-deep-aquifer text-light-aquifer-canvas">
-      <div className="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-24">
+    <footer className="relative w-full bg-linear-to-b from-[#0a1727] via-[#0d1e33] to-[#07111d] text-light-aquifer-canvas overflow-hidden border-t border-[#1e3959]/40">
+      {/* Subtle Rainfall Overlay Element */}
+      <div aria-hidden="true" className="absolute inset-0 z-0 pointer-events-none overflow-hidden select-none opacity-15">
+        <svg className="w-full h-full" xmlns="http://www.w3.org/2000/svg">
+          <defs>
+            <pattern id="footerRainPattern" width="120" height="120" patternUnits="userSpaceOnUse">
+              <line x1="20" y1="0" x2="10" y2="35" stroke="#748D8C" strokeWidth="1" strokeOpacity="0.4" strokeDasharray="12 18" />
+              <line x1="70" y1="40" x2="60" y2="75" stroke="#7D9D3D" strokeWidth="1" strokeOpacity="0.3" strokeDasharray="10 20" />
+              <line x1="110" y1="20" x2="100" y2="55" stroke="#86b5db" strokeWidth="0.8" strokeOpacity="0.35" strokeDasharray="8 16" />
+            </pattern>
+          </defs>
+          <rect width="100%" height="100%" fill="url(#footerRainPattern)" className="animate-subtle-rain" />
+        </svg>
+      </div>
+
+      <div className="relative z-10 w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-24">
         <div className="grid grid-cols-1 md:grid-cols-12 gap-12 lg:gap-16 pb-16">
           <div className="md:col-span-5 flex flex-col gap-5">
             <SkyraLogo variant="light" iconClass="h-7 w-7" textClass="font-headline-h3 text-[18px] font-medium tracking-tight" />

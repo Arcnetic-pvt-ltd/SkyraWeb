@@ -134,7 +134,7 @@ export default function ContactPage() {
               <ConsultationIntakeForm />
 
               {/* Social Media Channels */}
-              <div className="rounded-[4px] bg-white p-4 sm:p-5 border border-muted-aquifer/20 flex items-center justify-center gap-3.5 sm:gap-4">
+              <div className="rounded-[4px] bg-white p-4 sm:p-5 border border-[#bcd7e8]/60 shadow-[0_2px_12px_rgba(15,35,60,0.03)] flex items-center justify-center gap-3.5 sm:gap-4">
                 <a
                   aria-label="YouTube"
                   className="h-10 w-10 rounded-[6px] bg-light-aquifer-canvas hover:bg-deep-aquifer hover:text-white text-deep-aquifer/75 transition-all duration-300 flex items-center justify-center border border-muted-aquifer/20 hover:border-deep-aquifer"
@@ -196,10 +196,10 @@ export default function ContactPage() {
       </section>
 
       {/* Contextual Photo Banner */}
-      <section className="w-full bg-surface-container/30 py-16 sm:py-24 px-4 sm:px-6 lg:px-8 border-t border-muted-aquifer/15">
+      <section className="w-full bg-linear-to-b from-[#edf6fa] via-[#e5f1f7] to-[#edf6fa] py-16 sm:py-24 px-4 sm:px-6 lg:px-8 border-y border-[#c8e0ee]/60">
         <div className="w-full max-w-7xl mx-auto">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            <div className="rounded-[4px] overflow-hidden bg-white border border-muted-aquifer/20 flex flex-col">
+            <div className="rounded-[4px] overflow-hidden bg-white/95 border border-[#bcd7e8]/60 shadow-[0_1px_3px_rgba(20,50,80,0.03)] flex flex-col">
               <div className="relative h-48 w-full overflow-hidden">
                 <img
                   alt="Passive Hydrology"
@@ -217,7 +217,7 @@ export default function ContactPage() {
               </div>
             </div>
 
-            <div className="rounded-[4px] overflow-hidden bg-white border border-muted-aquifer/20 flex flex-col">
+            <div className="rounded-[4px] overflow-hidden bg-white/95 border border-[#bcd7e8]/60 shadow-[0_1px_3px_rgba(20,50,80,0.03)] flex flex-col">
               <div className="relative h-48 w-full overflow-hidden">
                 <img
                   alt="Subterranean Infiltration"
@@ -235,7 +235,7 @@ export default function ContactPage() {
               </div>
             </div>
 
-            <div className="rounded-[4px] overflow-hidden bg-white border border-muted-aquifer/20 flex flex-col">
+            <div className="rounded-[4px] overflow-hidden bg-white/95 border border-[#bcd7e8]/60 shadow-[0_1px_3px_rgba(20,50,80,0.03)] flex flex-col">
               <div className="relative h-48 w-full overflow-hidden">
                 <img
                   alt="Kochi Research Hub"

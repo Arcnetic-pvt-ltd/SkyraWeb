@@ -26,6 +26,20 @@ export default function RainsinkProductPage() {
     <div className="flex flex-col w-full overflow-hidden">
       {/* Top Editorial Banner */}
       <section className="relative z-10 pt-28 pb-16 sm:pt-32 sm:pb-24 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto w-full">
+        {/* Subtle Atmospheric Rainfall Accent Overlay */}
+        <div aria-hidden="true" className="absolute top-0 right-0 w-full sm:w-1/2 h-full z-[-1] pointer-events-none overflow-hidden select-none opacity-20">
+          <svg className="w-full h-full" xmlns="http://www.w3.org/2000/svg">
+            <defs>
+              <pattern id="rainsinkHeroRainPattern" width="120" height="120" patternUnits="userSpaceOnUse">
+                <line x1="20" y1="0" x2="10" y2="35" stroke="#748D8C" strokeWidth="1" strokeOpacity="0.5" strokeDasharray="12 18" />
+                <line x1="70" y1="40" x2="60" y2="75" stroke="#7D9D3D" strokeWidth="1" strokeOpacity="0.4" strokeDasharray="10 20" />
+                <line x1="110" y1="20" x2="100" y2="55" stroke="#748D8C" strokeWidth="0.8" strokeOpacity="0.4" strokeDasharray="8 16" />
+              </pattern>
+            </defs>
+            <rect width="100%" height="100%" fill="url(#rainsinkHeroRainPattern)" className="animate-subtle-rain" />
+          </svg>
+        </div>
+
         <div className="flex flex-col gap-6 max-w-3xl">
           <div className="inline-flex items-center gap-2.5">
             <span className="w-2.5 h-2.5 rounded-full bg-moss"></span>
@@ -74,7 +88,7 @@ export default function RainsinkProductPage() {
       </section>
 
       {/* Technical Specifications Grid */}
-      <section id="technical-specs" className="relative w-full bg-light-aquifer-canvas py-16 sm:py-24 px-4 sm:px-6 lg:px-8 overflow-hidden border-t border-muted-aquifer/15">
+      <section id="technical-specs" className="relative w-full bg-linear-to-b from-[#edf6fa] via-[#e6f1f7] to-[#edf6fa] py-16 sm:py-24 px-4 sm:px-6 lg:px-8 overflow-hidden border-t border-[#c5def0]/60">
         <div className="max-w-7xl mx-auto relative z-10">
           <div className="flex flex-col gap-4 mb-12 max-w-2xl">
             <div className="inline-flex items-center gap-2.5">
@@ -216,7 +230,7 @@ export default function RainsinkProductPage() {
               </div>
             </div>
 
-            <div className="lg:col-span-6 bg-deep-aquifer text-white p-8 sm:p-10 rounded-[4px] border border-white/10 flex flex-col gap-6 relative overflow-hidden">
+            <div className="lg:col-span-6 bg-linear-to-br from-[#0c1a2d] via-[#10243d] to-[#173050] text-white p-8 sm:p-10 rounded-[4px] border border-[#22446d]/50 flex flex-col gap-6 relative overflow-hidden">
               <div className="flex items-center gap-3 relative z-10">
                 <span className="material-symbols-outlined text-moss text-3xl">warning</span>
                 <h3 className="font-headline-h3 text-[24px] font-medium leading-[1.3] text-white">Pre-installation safety rules</h3>
@@ -243,13 +257,13 @@ export default function RainsinkProductPage() {
       {/* Bottom CTA Card */}
       <section className="w-full bg-light-aquifer-canvas py-16 sm:py-24 px-4 sm:px-6 lg:px-8 border-t border-muted-aquifer/15">
         <div className="max-w-7xl mx-auto">
-          <div className="relative rounded-[4px] bg-deep-aquifer text-white p-7 sm:p-9 border border-white/10 overflow-hidden">
+          <div className="relative rounded-[4px] bg-linear-to-br from-[#0c1a2d] via-[#11243d] to-[#173050] text-white p-7 sm:p-9 border border-[#203f66]/50 overflow-hidden">
             <div className="relative z-10 flex flex-col md:flex-row items-start md:items-center justify-between gap-6 sm:gap-8">
               {/* Content Column */}
               <div className="flex flex-col gap-3 max-w-2xl text-left">
-                <div className="inline-flex items-center gap-2 px-3 py-1 rounded-[4px] bg-white/10 border border-white/15 w-fit">
+                <div className="inline-flex items-center gap-2 px-3 py-1 rounded-[4px] bg-[#132742]/80 border border-[#22446d] w-fit">
                   <span className="w-1.5 h-1.5 rounded-full bg-moss" />
-                  <span className="font-mono text-xs text-moss font-medium">
+                  <span className="font-mono text-xs text-[#86b5db] font-medium">
                     Fast-track site consultation
                   </span>
                 </div>
@@ -264,15 +278,15 @@ export default function RainsinkProductPage() {
 
                 {/* Inline Deliverables Pills */}
                 <div className="pt-1 flex flex-wrap items-center gap-2 font-mono text-xs font-medium text-light-aquifer-canvas/75">
-                  <span className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-[4px] bg-white/5 border border-white/10">
+                  <span className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-[4px] bg-[#132742]/70 border border-[#22446d]/70 text-[#bcd7e8]">
                     <span className="material-symbols-outlined text-moss text-[14px]">analytics</span>
                     Runoff modeling
                   </span>
-                  <span className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-[4px] bg-white/5 border border-white/10">
+                  <span className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-[4px] bg-[#132742]/70 border border-[#22446d]/70 text-[#bcd7e8]">
                     <span className="material-symbols-outlined text-moss text-[14px]">architecture</span>
                     CAD layout blueprint
                   </span>
-                  <span className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-[4px] bg-white/5 border border-white/10">
+                  <span className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-[4px] bg-[#132742]/70 border border-[#22446d]/70 text-[#bcd7e8]">
                     <span className="material-symbols-outlined text-moss text-[14px]">verified_user</span>
                     CGWA credits
                   </span>
@@ -293,7 +307,7 @@ export default function RainsinkProductPage() {
 
                 <a
                   href={`tel:${CONTACT.phone}`}
-                  className="inline-flex items-center justify-center gap-2 bg-white/10 hover:bg-white/15 text-white font-button-text font-semibold text-xs px-5 py-2.5 rounded-[6px] transition-colors border border-white/15 whitespace-nowrap"
+                  className="inline-flex items-center justify-center gap-2 bg-[#132742]/80 hover:bg-[#183457] text-white font-button-text font-semibold text-xs px-5 py-2.5 rounded-[6px] transition-colors border border-[#22446d]/70 whitespace-nowrap"
                 >
                   <span className="material-symbols-outlined text-[15px]">call</span>
                   <span>{CONTACT.phoneDisplay}</span>

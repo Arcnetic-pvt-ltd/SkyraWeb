@@ -4,6 +4,7 @@ import { SiteHeader } from "@/components/layout/site-header";
 import { SiteFooter } from "@/components/layout/site-footer";
 import { WhatsAppWidget } from "@/components/layout/whatsapp-widget";
 import { SmoothScrollProvider } from "@/components/providers/smooth-scroll";
+import { RainBackdrop } from "@/components/ui/rain-backdrop";
 
 export const metadata: Metadata = {
   title: "Skyra — Securing India's Water Future",
@@ -40,10 +41,11 @@ export default function RootLayout({
           rel="stylesheet"
         />
       </head>
-      <body className="min-h-full flex flex-col bg-light-aquifer-canvas font-sans text-deep-aquifer selection:bg-moss/20 selection:text-deep-aquifer text-base leading-relaxed text-left overflow-x-hidden">
+      <body className="min-h-full flex flex-col bg-light-aquifer-canvas font-sans text-deep-aquifer selection:bg-moss/20 selection:text-deep-aquifer text-base leading-relaxed text-left overflow-x-hidden relative">
+        <RainBackdrop />
         <SmoothScrollProvider>
           <SiteHeader />
-          <main className="flex-1 w-full bg-light-aquifer-canvas min-h-screen overflow-x-hidden">
+          <main className="flex-1 w-full bg-light-aquifer-canvas min-h-screen overflow-x-hidden relative z-[2]">
             {children}
           </main>
           <SiteFooter />

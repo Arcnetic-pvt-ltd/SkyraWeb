@@ -36,7 +36,7 @@ const PILLARS = [
 /** What Drives Us — three guiding-principle pillars. */
 export function WhatDrivesUs() {
   return (
-    <section className="bg-ink-elevated py-16 sm:py-24">
+    <section className="bg-linear-to-b from-[#0a1829] via-[#0f233b] to-[#142c48] py-16 sm:py-24 border-t border-[#22446d]/40">
       <Container>
         <div className="max-w-2xl text-left">
           <Eyebrow color="green">Core guiding principles</Eyebrow>
@@ -51,9 +51,9 @@ export function WhatDrivesUs() {
 
         <div className="mt-10 sm:mt-12 grid w-full grid-cols-1 gap-6 md:grid-cols-3">
           {PILLARS.map(({ Icon, tone, title, description, FooterIcon, footer }) => (
-            <div key={title} className="group flex flex-col justify-between rounded-[4px] bg-ink p-8 border border-white/10">
+            <div key={title} className="group flex flex-col justify-between rounded-[4px] bg-[#132742]/85 p-8 border border-[#22446d]/80 hover:border-[#386ba3]/60 transition-colors">
               <div>
-                <div className={`flex size-10 items-center justify-center rounded-[4px] border border-white/10 bg-white/5 ${tone}`}>
+                <div className={`flex size-10 items-center justify-center rounded-[4px] border border-[#22446d] bg-[#1a3459]/50 ${tone}`}>
                   <Icon className="size-5" />
                 </div>
                 <h3 className="mt-6 font-headline-h3 text-[24px] font-medium leading-[1.3] text-white">{title}</h3>

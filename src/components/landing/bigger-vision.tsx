@@ -9,8 +9,22 @@ import { ArrowRightIcon } from "@/components/icons/arrow-right-icon";
 /** The Bigger Vision Section (Dark Theme). Source: Figma node 1:460. */
 export function BiggerVision() {
   return (
-    <section className="relative overflow-hidden border-b border-white/10 bg-ink py-16 sm:py-24 text-white" id="vision">
-      <Container>
+    <section className="relative overflow-hidden border-b border-[#203e63]/40 bg-linear-to-b from-[#0a1727] via-[#0f2137] to-[#142944] py-16 sm:py-24 text-white" id="vision">
+      {/* Subtle Rainfall Overlay Element */}
+      <div aria-hidden="true" className="absolute inset-0 z-[1] pointer-events-none overflow-hidden select-none opacity-20">
+        <svg className="w-full h-full" xmlns="http://www.w3.org/2000/svg">
+          <defs>
+            <pattern id="visionRainPattern" width="120" height="120" patternUnits="userSpaceOnUse">
+              <line x1="20" y1="0" x2="10" y2="35" stroke="#748D8C" strokeWidth="1" strokeOpacity="0.4" strokeDasharray="12 18" />
+              <line x1="70" y1="40" x2="60" y2="75" stroke="#7D9D3D" strokeWidth="1" strokeOpacity="0.3" strokeDasharray="10 20" />
+              <line x1="110" y1="20" x2="100" y2="55" stroke="#86b5db" strokeWidth="0.8" strokeOpacity="0.35" strokeDasharray="8 16" />
+            </pattern>
+          </defs>
+          <rect width="100%" height="100%" fill="url(#visionRainPattern)" className="animate-subtle-rain" />
+        </svg>
+      </div>
+
+      <Container className="relative z-10">
         <div className="grid grid-cols-1 items-center gap-12 lg:grid-cols-12">
           <div className="space-y-6 lg:col-span-7">
             <Eyebrow color="green">The bigger vision</Eyebrow>

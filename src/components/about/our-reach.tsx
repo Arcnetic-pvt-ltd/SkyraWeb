@@ -59,7 +59,20 @@ export function OurReach() {
           {/* National Vision Blueprint Card */}
           <div className="lg:col-span-5">
             <div className="relative flex h-full flex-col justify-between overflow-hidden rounded-[4px] bg-deep-aquifer p-8 text-white border border-muted-aquifer/20">
-              <div>
+              {/* Subtle Rainfall Overlay Element */}
+              <div aria-hidden="true" className="absolute inset-0 z-0 pointer-events-none overflow-hidden select-none opacity-20">
+                <svg className="w-full h-full" xmlns="http://www.w3.org/2000/svg">
+                  <defs>
+                    <pattern id="reachRainPattern" width="100" height="100" patternUnits="userSpaceOnUse">
+                      <line x1="20" y1="0" x2="10" y2="30" stroke="#748D8C" strokeWidth="1" strokeOpacity="0.4" strokeDasharray="10 15" />
+                      <line x1="60" y1="35" x2="50" y2="65" stroke="#7D9D3D" strokeWidth="1" strokeOpacity="0.3" strokeDasharray="8 16" />
+                    </pattern>
+                  </defs>
+                  <rect width="100%" height="100%" fill="url(#reachRainPattern)" className="animate-subtle-rain" />
+                </svg>
+              </div>
+
+              <div className="relative z-10">
                 <div className="flex size-9 items-center justify-center rounded-[4px] border border-white/10 bg-white/10 text-muted-aquifer">
                   <GlobeIcon className="size-5" />
                 </div>

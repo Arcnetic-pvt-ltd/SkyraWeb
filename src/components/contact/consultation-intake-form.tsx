@@ -29,7 +29,7 @@ export function ConsultationIntakeForm() {
   };
 
   return (
-    <div className="relative bg-white rounded-[4px] p-6 sm:p-10 border border-muted-aquifer/20">
+    <div className="relative bg-white rounded-[4px] p-6 sm:p-10 border border-[#bcd7e8]/60 shadow-[0_4px_24px_rgba(15,35,60,0.04)]">
       {!submitted ? (
         <form className="flex flex-col gap-6" onSubmit={handleSubmit}>
           {/* Input: Full Name */}
@@ -41,7 +41,7 @@ export function ConsultationIntakeForm() {
               Full name
             </label>
             <input
-              className="w-full bg-[#F8FCFE] px-4 py-3.5 rounded-[6px] font-body-primary text-deep-aquifer placeholder:text-muted-aquifer/70 transition-all duration-200 outline-none border border-muted-aquifer/20 focus:bg-white focus:border-moss"
+              className="w-full bg-[#F8FCFE] px-4 py-3.5 rounded-[6px] font-body-primary text-deep-aquifer placeholder:text-muted-aquifer/70 transition-all duration-200 outline-none border border-[#bcd7e8]/50 focus:bg-white focus:border-moss"
               id="fullName"
               name="fullName"
               placeholder="e.g. Maya Menon"
@@ -65,7 +65,7 @@ export function ConsultationIntakeForm() {
                 Work email
               </label>
               <input
-                className="w-full bg-[#F8FCFE] px-4 py-3.5 rounded-[6px] font-body-primary text-deep-aquifer placeholder:text-muted-aquifer/70 transition-all duration-200 outline-none border border-muted-aquifer/20 focus:bg-white focus:border-moss"
+                className="w-full bg-[#F8FCFE] px-4 py-3.5 rounded-[6px] font-body-primary text-deep-aquifer placeholder:text-muted-aquifer/70 transition-all duration-200 outline-none border border-[#bcd7e8]/50 focus:bg-white focus:border-moss"
                 id="workEmail"
                 name="workEmail"
                 placeholder="maya@studio.in"
@@ -87,7 +87,7 @@ export function ConsultationIntakeForm() {
                 Phone / WhatsApp
               </label>
               <input
-                className="w-full bg-[#F8FCFE] px-4 py-3.5 rounded-[6px] font-body-primary text-deep-aquifer placeholder:text-muted-aquifer/70 transition-all duration-200 outline-none border border-muted-aquifer/20 focus:bg-white focus:border-moss"
+                className="w-full bg-[#F8FCFE] px-4 py-3.5 rounded-[6px] font-body-primary text-deep-aquifer placeholder:text-muted-aquifer/70 transition-all duration-200 outline-none border border-[#bcd7e8]/50 focus:bg-white focus:border-moss"
                 id="phoneNumber"
                 name="phoneNumber"
                 placeholder="+91 98470 00000"
@@ -109,7 +109,7 @@ export function ConsultationIntakeForm() {
               Property location / district
             </label>
             <input
-              className="w-full bg-[#F8FCFE] px-4 py-3.5 rounded-[6px] font-body-primary text-deep-aquifer placeholder:text-muted-aquifer/70 transition-all duration-200 outline-none border border-muted-aquifer/20 focus:bg-white focus:border-moss"
+              className="w-full bg-[#F8FCFE] px-4 py-3.5 rounded-[6px] font-body-primary text-deep-aquifer placeholder:text-muted-aquifer/70 transition-all duration-200 outline-none border border-[#bcd7e8]/50 focus:bg-white focus:border-moss"
               id="propertyLocation"
               name="propertyLocation"
               placeholder="e.g. Kakkanad, Ernakulam or Whitefield, Bengaluru"
@@ -135,7 +135,7 @@ export function ConsultationIntakeForm() {
               </span>
             </div>
             <textarea
-              className="w-full bg-[#F8FCFE] px-4 py-3.5 rounded-[6px] font-body-primary text-deep-aquifer placeholder:text-muted-aquifer/70 transition-all duration-200 outline-none resize-none border border-muted-aquifer/20 focus:bg-white focus:border-moss"
+              className="w-full bg-[#F8FCFE] px-4 py-3.5 rounded-[6px] font-body-primary text-deep-aquifer placeholder:text-muted-aquifer/70 transition-all duration-200 outline-none resize-none border border-[#bcd7e8]/50 focus:bg-white focus:border-moss"
               id="projectScope"
               name="projectScope"
               placeholder="Take your time — mention campus size, existing borewells, recharge targets, or simply the general goals for your site..."

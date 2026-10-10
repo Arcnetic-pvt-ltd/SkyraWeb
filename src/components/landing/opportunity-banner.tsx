@@ -20,7 +20,7 @@ const FLOW_STEPS = [
  */
 export function OpportunityBanner() {
   return (
-    <section className="relative overflow-hidden border-y border-white/10 bg-ink py-16 sm:py-24">
+    <section className="relative overflow-hidden border-y border-[#203f66]/40 bg-linear-to-r from-[#0c1a2d] via-[#11243d] to-[#0c1a2d] py-16 sm:py-24">
       <div className="absolute inset-0 z-0 opacity-25">
         <Image
           src="/images/dew-drops-leaves.jpg"
@@ -29,6 +29,20 @@ export function OpportunityBanner() {
           sizes="100vw"
           className="object-cover object-center"
         />
+      </div>
+
+      {/* Subtle Rainfall Overlay Element */}
+      <div aria-hidden="true" className="absolute inset-0 z-[1] pointer-events-none overflow-hidden select-none opacity-20">
+        <svg className="w-full h-full" xmlns="http://www.w3.org/2000/svg">
+          <defs>
+            <pattern id="opportunityRainPattern" width="120" height="120" patternUnits="userSpaceOnUse">
+              <line x1="20" y1="0" x2="10" y2="35" stroke="#748D8C" strokeWidth="1" strokeOpacity="0.4" strokeDasharray="12 18" />
+              <line x1="70" y1="40" x2="60" y2="75" stroke="#7D9D3D" strokeWidth="1" strokeOpacity="0.3" strokeDasharray="10 20" />
+              <line x1="110" y1="20" x2="100" y2="55" stroke="#86b5db" strokeWidth="0.8" strokeOpacity="0.35" strokeDasharray="8 16" />
+            </pattern>
+          </defs>
+          <rect width="100%" height="100%" fill="url(#opportunityRainPattern)" className="animate-subtle-rain" />
+        </svg>
       </div>
 
       <div className="relative z-10 mx-auto max-w-7xl space-y-8 px-4 sm:px-6 lg:px-8 text-left">
@@ -45,14 +59,14 @@ export function OpportunityBanner() {
         <div className="flex flex-wrap items-center justify-start gap-3 pt-8 font-mono text-xs font-medium sm:gap-4 md:gap-6">
           {FLOW_STEPS.map(({ step, label }, i) => (
             <div key={label} className="contents">
-              <div className="flex items-center gap-2 rounded-[4px] border border-white/15 bg-white/5 px-3.5 py-1.5 text-[#F1F5F9]">
+              <div className="flex items-center gap-2 rounded-[4px] border border-[#244670]/60 bg-[#132742]/70 px-3.5 py-1.5 text-[#F1F5F9]">
                 <span className="text-moss font-bold" aria-hidden="true">
                   {step}
                 </span>
                 {label}
               </div>
               {i < FLOW_STEPS.length - 1 && (
-                <span aria-hidden="true" className="text-slate-500">
+                <span aria-hidden="true" className="text-[#628eb5]">
                   →
                 </span>
               )}

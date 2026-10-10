@@ -213,41 +213,64 @@ export function HeroMissionAnimation() {
           />
 
           {/* 1. MONSOON RAIN ANIMATION (Stage 0 Focus) */}
-          <g opacity={activeStageIndex === 0 ? 1 : 0.45}>
+          <g opacity={activeStageIndex === 0 ? 1 : 0.6}>
             {/* Cloud */}
             <path
-              d="M 60 40 Q 70 25 90 30 Q 105 20 125 30 Q 140 25 150 40 Q 160 55 140 60 L 70 60 Q 50 55 60 40 Z"
+              d="M 55 40 Q 65 24 88 28 Q 105 18 125 28 Q 142 22 155 38 Q 166 52 148 60 L 65 60 Q 48 54 55 40 Z"
               fill="#1e293b"
-              stroke="#38bdf8"
-              strokeWidth="1.5"
+              stroke="#748D8C"
+              strokeWidth="1.2"
             />
-            <text x="75" y="48" fill="#93c5fd" fontSize="9" fontWeight="bold">
-              MONSOON CLOUD
+            <text x="72" y="47" fill="#748D8C" fontSize="8" fontFamily="monospace" fontWeight="bold" letterSpacing="0.5">
+              MONSOON INFLUX
             </text>
 
-            {/* Falling Raindrops */}
-            {[75, 95, 115, 135].map((x, i) => (
-              <motion.circle
-                key={`rain-${i}`}
-                cx={x}
-                cy={65}
-                r={2.5}
-                fill="#38bdf8"
-                animate={{
-                  cy: [65, 115],
-                  opacity: [0, 1, 0],
-                }}
-                transition={{
-                  repeat: Infinity,
-                  duration: 1.2,
-                  delay: i * 0.25,
-                  ease: "linear",
-                }}
-              />
+            {/* Falling Rain Streams & Droplets */}
+            {[65, 80, 95, 110, 125, 140, 155].map((x, i) => (
+              <g key={`rain-stream-${i}`}>
+                {/* Rain Stream Trail */}
+                <motion.line
+                  x1={x}
+                  y1={62}
+                  x2={x - 4}
+                  y2={76}
+                  stroke="#748D8C"
+                  strokeWidth="1"
+                  strokeOpacity="0.4"
+                  animate={{
+                    y1: [62, 105],
+                    y2: [76, 118],
+                    opacity: [0, 0.7, 0],
+                  }}
+                  transition={{
+                    repeat: Infinity,
+                    duration: 0.9 + (i % 3) * 0.2,
+                    delay: i * 0.14,
+                    ease: "linear",
+                  }}
+                />
+                {/* Leading Raindrop */}
+                <motion.circle
+                  cx={x - 4}
+                  cy={76}
+                  r={1.5}
+                  fill="#7D9D3D"
+                  animate={{
+                    cy: [76, 118],
+                    opacity: [0, 0.9, 0],
+                  }}
+                  transition={{
+                    repeat: Infinity,
+                    duration: 0.9 + (i % 3) * 0.2,
+                    delay: i * 0.14,
+                    ease: "linear",
+                  }}
+                />
+              </g>
             ))}
 
             {/* Rooftop / Apron Catchment */}
-            <path d="M 60 118 L 150 118 L 170 140" stroke="#00c896" strokeWidth="2.5" fill="none" />
+            <path d="M 50 118 L 155 118 L 175 140" stroke="#7D9D3D" strokeWidth="2" fill="none" />
           </g>
 
           {/* 2. HYDROSTATIC VORTEX FILTER (Stage 1 Focus) */}

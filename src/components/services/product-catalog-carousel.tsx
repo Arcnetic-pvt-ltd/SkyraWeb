@@ -219,7 +219,7 @@ export function ProductCatalogCarousel() {
                     onClick={() => setCurrentIndex(idx)}
                     className={`p-4 rounded-[4px] border transition-all duration-300 cursor-pointer flex items-center gap-4 group ${
                       isSelected
-                        ? "bg-deep-aquifer text-white border-moss/60 border-l-4 border-l-moss"
+                        ? "bg-linear-to-r from-[#0c1a2d] to-[#132742] text-white border-moss/60 border-l-4 border-l-moss"
                         : "bg-white text-deep-aquifer border-muted-aquifer/20 hover:border-moss/40 hover:bg-slate-50/50"
                     }`}
                   >
@@ -303,7 +303,7 @@ export function ProductCatalogCarousel() {
 
                     {/* Top Overlay Badges */}
                     <div className="absolute top-4 left-4 right-4 flex items-center justify-between pointer-events-none">
-                      <span className="font-mono text-[11px] text-white bg-deep-aquifer px-3 py-1 rounded-[4px] font-medium border border-white/10">
+                      <span className="font-mono text-[11px] text-white bg-[#0c1a2d] px-3 py-1 rounded-[4px] font-medium border border-[#22446d]">
                         {filteredProducts[currentIndex].series}
                       </span>
                       <span className="font-mono text-[11px] text-deep-aquifer bg-white px-3 py-1 rounded-[4px] font-medium border border-muted-aquifer/20">

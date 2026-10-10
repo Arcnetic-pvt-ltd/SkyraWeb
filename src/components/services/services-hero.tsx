@@ -27,10 +27,24 @@ const METRICS = [
  */
 export function ServicesHero() {
   return (
-    <section className="relative overflow-hidden bg-ink pt-28 sm:pt-32 pb-16 sm:pb-24">
+    <section className="relative overflow-hidden bg-linear-to-b from-[#0c1a2c] via-[#10233b] to-[#162c47] pt-28 sm:pt-32 pb-16 sm:pb-24">
+      {/* Subtle Rainfall Overlay Element */}
+      <div aria-hidden="true" className="absolute inset-0 z-[1] pointer-events-none overflow-hidden select-none opacity-25">
+        <svg className="w-full h-full" xmlns="http://www.w3.org/2000/svg">
+          <defs>
+            <pattern id="servicesHeroRainPattern" width="120" height="120" patternUnits="userSpaceOnUse">
+              <line x1="30" y1="0" x2="20" y2="35" stroke="#748D8C" strokeWidth="1" strokeOpacity="0.4" strokeDasharray="12 18" />
+              <line x1="80" y1="40" x2="70" y2="75" stroke="#7D9D3D" strokeWidth="1" strokeOpacity="0.3" strokeDasharray="10 20" />
+              <line x1="120" y1="20" x2="110" y2="55" stroke="#86b5db" strokeWidth="0.8" strokeOpacity="0.35" strokeDasharray="8 16" />
+            </pattern>
+          </defs>
+          <rect width="100%" height="100%" fill="url(#servicesHeroRainPattern)" className="animate-subtle-rain" />
+        </svg>
+      </div>
+
       <Container className="relative z-10">
         <div className="flex max-w-4xl flex-col items-start text-left">
-          <div className="mb-6 inline-flex items-center gap-2 rounded-[4px] bg-ink-elevated border border-white/10 px-3 py-1.5 text-muted-aquifer">
+          <div className="mb-6 inline-flex items-center gap-2 rounded-[4px] bg-[#132742] border border-[#22446d] px-3 py-1.5 text-[#86b5db]">
             <span aria-hidden="true" className="size-2 rounded-full bg-moss" />
             <span className="font-mono text-xs font-medium">Integrated water solutions</span>
           </div>
@@ -45,7 +59,7 @@ export function ServicesHero() {
 
           <div className="mb-10 flex flex-wrap items-center justify-start gap-2">
             {HIGHLIGHTS.map(({ label, Icon, tone }) => (
-              <div key={label} className="inline-flex items-center gap-2 rounded-[4px] bg-ink-elevated border border-white/10 px-3 py-1.5 font-mono text-xs font-medium text-white">
+              <div key={label} className="inline-flex items-center gap-2 rounded-[4px] bg-[#132742] border border-[#22446d]/80 px-3 py-1.5 font-mono text-xs font-medium text-white">
                 <Icon className={`size-4.5 ${tone}`} />
                 {label}
               </div>
@@ -64,10 +78,10 @@ export function ServicesHero() {
 
         <div className="grid grid-cols-1 gap-4 md:grid-cols-3 lg:gap-6">
           {METRICS.map(({ Icon, label, value, tone, description }) => (
-            <div key={label} className="flex flex-col gap-2 rounded-[4px] bg-ink-elevated border border-white/10 p-6">
+            <div key={label} className="flex flex-col gap-2 rounded-[4px] bg-[#132742]/90 border border-[#22446d]/80 p-6">
               <div className={`flex items-center gap-2 ${tone}`}>
                 <Icon className="size-5" />
-                <span className="font-mono text-xs font-medium text-white/80">{label}</span>
+                <span className="font-mono text-xs font-medium text-[#86b5db]">{label}</span>
               </div>
               <div className="font-metric-mono-lg text-4xl font-bold tracking-tight text-white">{value}</div>
               <p className="text-base font-normal font-body-primary text-slate-300 leading-relaxed">{description}</p>

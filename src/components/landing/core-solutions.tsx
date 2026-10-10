@@ -65,7 +65,7 @@ const SOLUTIONS = [
 /** Core Solutions Ecosystem. Source: Figma node 1:141. */
 export function CoreSolutions() {
   return (
-    <section className="bg-slate-50 py-16 sm:py-24" id="solutions">
+    <section className="bg-linear-to-b from-[#edf6fa] via-[#e5f1f7] to-[#edf6fa] py-16 sm:py-24 border-b border-[#c8e0ee]/60" id="solutions">
       <Container>
         {/* Section Header */}
         <div className="mb-16 max-w-2xl space-y-4">
@@ -86,8 +86,8 @@ export function CoreSolutions() {
         {/* Capability Feature Badges / Highlights */}
         <div className="mb-16 grid grid-cols-2 gap-4 sm:grid-cols-3 lg:grid-cols-6">
           {CAPABILITIES.map(({ label, Icon }) => (
-            <div key={label} className="flex flex-col items-start justify-center gap-2 rounded-[4px] border border-muted-aquifer/20 bg-white p-4 text-left">
-              <div className="flex size-8 items-center justify-center rounded-[4px] border border-muted-aquifer/20 text-forest-slate">
+            <div key={label} className="flex flex-col items-start justify-center gap-2 rounded-[4px] border border-[#bcd7e8]/60 bg-white/95 p-4 text-left shadow-[0_1px_3px_rgba(20,50,80,0.03)] hover:border-[#748D8C] transition-colors">
+              <div className="flex size-8 items-center justify-center rounded-[4px] border border-[#bcd7e8]/80 bg-[#e7f3f9] text-deep-aquifer">
                 <Icon className="size-5" />
               </div>
               <span className="font-mono text-xs font-medium text-deep-aquifer">{label}</span>
@@ -96,7 +96,7 @@ export function CoreSolutions() {
         </div>
 
         {/* Services Grid: Solutions for Every Space */}
-        <div className="border-t border-slate-200 pt-4" id="services-grid">
+        <div className="border-t border-[#bcd7e8]/70 pt-4" id="services-grid">
           <div className="mb-10 flex flex-col gap-4 md:flex-row md:items-end md:justify-between">
             <div>
               <span className="font-mono text-xs font-medium text-muted-aquifer">Our services</span>

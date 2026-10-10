@@ -215,29 +215,50 @@ export function HeroMissionEngine() {
               MONSOON RAIN
             </text>
 
-            {/* Raindrops */}
-            {[75, 95, 115, 135].map((x, i) => (
-              <motion.circle
-                key={`r-${i}`}
-                cx={x}
-                cy={60}
-                r={2}
-                fill="#0098a6"
-                animate={{
-                  cy: [60, 95],
-                  opacity: [0, 0.9, 0],
-                }}
-                transition={{
-                  repeat: Infinity,
-                  duration: 1.2,
-                  delay: i * 0.25,
-                  ease: "linear",
-                }}
-              />
+            {/* Raindrops & Streams */}
+            {[65, 80, 95, 110, 125, 140].map((x, i) => (
+              <g key={`r-stream-${i}`}>
+                <motion.line
+                  x1={x}
+                  y1={58}
+                  x2={x - 3}
+                  y2={70}
+                  stroke="#748D8C"
+                  strokeWidth="1"
+                  strokeOpacity="0.4"
+                  animate={{
+                    y1: [58, 88],
+                    y2: [70, 98],
+                    opacity: [0, 0.7, 0],
+                  }}
+                  transition={{
+                    repeat: Infinity,
+                    duration: 0.95 + (i % 3) * 0.2,
+                    delay: i * 0.16,
+                    ease: "linear",
+                  }}
+                />
+                <motion.circle
+                  cx={x - 3}
+                  cy={70}
+                  r={1.5}
+                  fill="#7D9D3D"
+                  animate={{
+                    cy: [70, 98],
+                    opacity: [0, 0.9, 0],
+                  }}
+                  transition={{
+                    repeat: Infinity,
+                    duration: 0.95 + (i % 3) * 0.2,
+                    delay: i * 0.16,
+                    ease: "linear",
+                  }}
+                />
+              </g>
             ))}
 
             {/* Apron Collector */}
-            <path d="M 60 98 L 150 98 L 170 125" stroke="#7D9D3D" strokeWidth="2.5" fill="none" />
+            <path d="M 55 98 L 150 98 L 170 125" stroke="#7D9D3D" strokeWidth="2" fill="none" />
           </g>
 
           {/* STAGE 2: HYDROSTATIC VORTEX FILTER */}

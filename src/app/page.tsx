@@ -81,12 +81,26 @@ export default function Home() {
 
       {/* SECTION 2: THE CORE PROBLEM */}
       <section
-        className="relative w-full bg-deep-aquifer text-light-aquifer-canvas py-16 sm:py-24 px-4 sm:px-6 lg:px-8"
+        className="relative w-full bg-linear-to-b from-[#0a1829] via-[#0f233b] to-[#152e4d] text-light-aquifer-canvas py-16 sm:py-24 px-4 sm:px-6 lg:px-8 overflow-hidden border-t border-[#22446d]/40"
         id="problem"
       >
-        <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-20 items-center">
+        {/* Subtle Rainfall Overlay Element */}
+        <div aria-hidden="true" className="absolute inset-0 z-0 pointer-events-none overflow-hidden select-none opacity-20">
+          <svg className="w-full h-full" xmlns="http://www.w3.org/2000/svg">
+            <defs>
+              <pattern id="homeProblemRainPattern" width="120" height="120" patternUnits="userSpaceOnUse">
+                <line x1="20" y1="0" x2="10" y2="35" stroke="#748D8C" strokeWidth="1" strokeOpacity="0.4" strokeDasharray="12 18" />
+                <line x1="70" y1="40" x2="60" y2="75" stroke="#7D9D3D" strokeWidth="1" strokeOpacity="0.3" strokeDasharray="10 20" />
+                <line x1="110" y1="20" x2="100" y2="55" stroke="#86b5db" strokeWidth="0.8" strokeOpacity="0.35" strokeDasharray="8 16" />
+              </pattern>
+            </defs>
+            <rect width="100%" height="100%" fill="url(#homeProblemRainPattern)" className="animate-subtle-rain" />
+          </svg>
+        </div>
+
+        <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-20 items-center relative z-10">
           <div className="lg:col-span-6 flex flex-col gap-6">
-            <span className="font-mono text-body-sm text-moss/90 font-medium">
+            <span className="font-mono text-body-sm text-[#86b5db] font-medium">
               The hydrological reality
             </span>
             <h2 className="font-headline-h2 text-headline-h2-mobile sm:text-headline-h2 text-white leading-tight">
@@ -102,7 +116,7 @@ export default function Home() {
 
           {/* Hydrology Graphic Visual */}
           <div className="lg:col-span-6 flex justify-center items-center">
-            <div className="w-full max-w-lg aspect-square rounded-[4px] bg-primary-container p-6 sm:p-10 flex flex-col justify-center items-center relative overflow-hidden border border-white/10">
+            <div className="w-full max-w-lg aspect-square rounded-[4px] bg-[#132742]/90 p-6 sm:p-10 flex flex-col justify-center items-center relative overflow-hidden border border-[#22446d]/80">
               <svg
                 className="w-full h-full select-none"
                 fill="none"
@@ -407,7 +421,7 @@ export default function Home() {
       <ImpactMetrics />
 
       {/* SECTION 5: CLOSING CTA */}
-      <section className="relative w-full py-16 sm:py-24 px-4 sm:px-6 lg:px-8 border-t border-muted-aquifer/15">
+      <section className="relative w-full bg-linear-to-b from-[#edf6fa] via-[#e5f1f7] to-[#edf6fa] py-16 sm:py-24 px-4 sm:px-6 lg:px-8 border-t border-[#c8e0ee]/60">
         <div className="max-w-7xl mx-auto w-full flex flex-col items-start relative z-10">
           <span className="font-mono text-xs text-secondary font-medium tracking-wide mb-6">
             Begin the recharge cycle
@@ -430,13 +444,13 @@ export default function Home() {
             </Link>
             <Link
               href="/services"
-              className="w-full sm:w-auto inline-flex items-center justify-center border border-muted-aquifer/30 bg-white text-deep-aquifer hover:bg-muted-aquifer/5 font-button-text text-button-text px-7 py-3 rounded-[6px] transition-colors"
+              className="w-full sm:w-auto inline-flex items-center justify-center border border-[#bcd7e8]/60 bg-white text-deep-aquifer hover:bg-[#e7f3f9] hover:border-[#748D8C] font-button-text text-button-text px-7 py-3 rounded-[6px] transition-colors"
             >
               Explore solutions
             </Link>
           </div>
 
-          <div className="mt-16 pt-8 flex items-center gap-3 text-secondary/60 text-sm border-t border-muted-aquifer/15 w-full">
+          <div className="mt-16 pt-8 flex items-center gap-3 text-secondary/60 text-sm border-t border-[#bcd7e8]/60 w-full">
             <span className="w-1.5 h-1.5 rounded-full bg-moss"></span>
             <span>
               Engineered for commercial campuses, industrial corridors, and residential communities.

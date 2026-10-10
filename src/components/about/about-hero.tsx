@@ -15,9 +15,23 @@ import { WHATSAPP_HREF } from "@/lib/nav";
  */
 export function AboutHero() {
   return (
-    <section className="relative overflow-hidden bg-ink pt-28 sm:pt-32 pb-16 sm:pb-24">
+    <section className="relative overflow-hidden bg-linear-to-b from-[#0c1a2c] via-[#10233b] to-[#162c47] pt-28 sm:pt-32 pb-16 sm:pb-24">
+      {/* Subtle Rainfall Overlay Element */}
+      <div aria-hidden="true" className="absolute inset-0 z-[1] pointer-events-none overflow-hidden select-none opacity-25">
+        <svg className="w-full h-full" xmlns="http://www.w3.org/2000/svg">
+          <defs>
+            <pattern id="aboutHeroRainPattern" width="120" height="120" patternUnits="userSpaceOnUse">
+              <line x1="25" y1="0" x2="15" y2="35" stroke="#748D8C" strokeWidth="1" strokeOpacity="0.4" strokeDasharray="12 18" />
+              <line x1="75" y1="40" x2="65" y2="75" stroke="#7D9D3D" strokeWidth="1" strokeOpacity="0.3" strokeDasharray="10 20" />
+              <line x1="115" y1="20" x2="105" y2="55" stroke="#86b5db" strokeWidth="0.8" strokeOpacity="0.35" strokeDasharray="8 16" />
+            </pattern>
+          </defs>
+          <rect width="100%" height="100%" fill="url(#aboutHeroRainPattern)" className="animate-subtle-rain" />
+        </svg>
+      </div>
+
       <Container className="relative z-10 flex flex-col items-start text-left">
-        <div className="inline-flex items-center gap-2 rounded-[4px] bg-ink-elevated border border-white/10 px-3 py-1 text-muted-aquifer">
+        <div className="inline-flex items-center gap-2 rounded-[4px] bg-[#132742] border border-[#22446d] px-3 py-1 text-[#86b5db]">
           <DropletIcon className="size-4" />
           <span className="font-mono text-xs font-medium">About Skyra • From sky, to life</span>
         </div>
@@ -42,10 +56,10 @@ export function AboutHero() {
           </CtaButton>
         </div>
 
-        <div className="mt-12 w-full max-w-4xl rounded-[4px] bg-ink-elevated border border-white/10 p-6">
+        <div className="mt-12 w-full max-w-4xl rounded-[4px] bg-[#132742]/90 border border-[#22446d]/80 p-6">
           <div className="flex flex-col items-center justify-between gap-4 text-left md:flex-row">
             <div className="flex items-center gap-4">
-              <div className="flex size-10 flex-shrink-0 items-center justify-center rounded-[4px] border border-white/10 bg-white/5 text-muted-aquifer">
+              <div className="flex size-10 flex-shrink-0 items-center justify-center rounded-[4px] border border-[#22446d] bg-[#1a3254]/50 text-[#86b5db]">
                 <StormIcon className="size-5" />
               </div>
               <div>

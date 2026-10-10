@@ -209,4 +209,56 @@ p {
   display: none;
 }
 
+@keyframes subtle-rain-fall {
+  0% {
+    transform: translateY(-50px) skewX(-8deg);
+    opacity: 0;
+  }
+  20% {
+    opacity: 0.5;
+  }
+  80% {
+    opacity: 0.5;
+  }
+  100% {
+    transform: translateY(105vh) skewX(-8deg);
+    opacity: 0;
+  }
+}
+
+.animate-subtle-rain {
+  animation-name: subtle-rain-fall;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  will-change: transform, opacity;
+}
+
+@keyframes rain-droplet-drip {
+  0% {
+    transform: translateY(0);
+    opacity: 0;
+  }
+  30% {
+    opacity: 0.8;
+  }
+  80% {
+    opacity: 0.8;
+  }
+  100% {
+    transform: translateY(12px);
+    opacity: 0;
+  }
+}
+
+.animate-rain-drip {
+  animation: rain-droplet-drip 2.4s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .animate-subtle-rain,
+  .animate-rain-drip {
+    animation: none !important;
+  }
+}
+
 

@@ -385,7 +385,7 @@ export default function AboutPage() {
       </section>
 
       {/* SECTION 4: CLOSING MANDATE */}
-      <section className="relative z-10 w-full bg-light-aquifer-canvas text-deep-aquifer py-16 sm:py-24 px-4 sm:px-6 lg:px-8 border-t border-muted-aquifer/15">
+      <section className="relative z-10 w-full bg-linear-to-b from-[#edf6fa] via-[#e5f1f7] to-[#edf6fa] text-deep-aquifer py-16 sm:py-24 px-4 sm:px-6 lg:px-8 border-t border-[#c8e0ee]/60">
         <div className="max-w-7xl mx-auto text-left flex flex-col items-start gap-6 sm:gap-8">
           <span className="font-mono text-xs text-moss font-medium">
             The mandate
@@ -405,7 +405,7 @@ export default function AboutPage() {
             </Link>
             <Link
               href="/services"
-              className="inline-flex items-center justify-center bg-white hover:bg-black/5 text-deep-aquifer border border-muted-aquifer/30 font-button-text font-semibold text-button-text px-8 py-3.5 rounded-[6px] transition-all duration-300"
+              className="inline-flex items-center justify-center bg-white hover:bg-[#e7f3f9] text-deep-aquifer border border-[#bcd7e8]/60 hover:border-[#748D8C] font-button-text font-semibold text-button-text px-8 py-3.5 rounded-[6px] transition-all duration-300"
             >
               Explore solutions
             </Link>

@@ -65,7 +65,7 @@ export function HowItWorks() {
           {STEPS.map(({ n, title, description, icon }) => (
             <div
               key={n}
-              className="group flex flex-col justify-between p-5 rounded-[4px] bg-white border border-muted-aquifer/20 relative"
+              className="group flex flex-col justify-between p-5 rounded-[4px] bg-white border border-[#bcd7e8]/50 hover:border-moss/40 hover:shadow-[0_2px_12px_rgba(15,35,60,0.03)] transition-all duration-300 relative"
             >
               <div>
                 <div className="flex items-center justify-between mb-4">
