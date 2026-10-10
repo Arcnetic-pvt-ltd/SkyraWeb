@@ -19,7 +19,7 @@ export function ContactHero() {
         className="pointer-events-none absolute right-10 top-1/3 size-72 rounded-full bg-brand-green/10 blur-3xl"
       />
 
-      <Container className="relative z-10 mx-auto max-w-4xl text-center">
+      <Container className="relative z-10 text-left">
         <div className="mb-6 inline-flex items-center gap-2 rounded-full border border-white/10 bg-ink-elevated px-4 py-1.5 font-mono text-xs font-medium text-slate-300 shadow-sm">
           <span
             aria-hidden="true"
@@ -28,14 +28,14 @@ export function ContactHero() {
           Contact Skyra • From sky, to life
         </div>
 
-        <h1 className="font-headline-hero text-[38px] sm:text-5xl lg:text-[56px] font-bold leading-tight tracking-tight text-white">
+        <h1 className="max-w-4xl font-headline-hero text-[38px] sm:text-5xl lg:text-[56px] font-bold leading-tight tracking-tight text-white">
           Your water problem has a solution.
           <br className="hidden sm:inline" />
           {" "}
           {"Let's find it together."}
         </h1>
 
-        <p className="mx-auto mt-6 max-w-2xl font-body-primary text-base font-normal leading-relaxed text-slate-300">
+        <p className="mt-6 max-w-2xl font-body-primary text-base font-normal leading-relaxed text-slate-300">
           We are ready to help you capture, conserve, and secure your{" "}
           {"property's"} water future. Reach out to our engineering team to
           schedule a site assessment or ask a question.

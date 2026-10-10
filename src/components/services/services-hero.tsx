@@ -32,7 +32,7 @@ export function ServicesHero() {
       <div aria-hidden="true" className="pointer-events-none absolute right-0 top-1/3 h-80 w-80 rounded-full bg-brand-green/10 blur-[110px]" />
 
       <Container className="relative z-10">
-        <div className="mx-auto flex max-w-4xl flex-col items-center text-center">
+        <div className="flex max-w-4xl flex-col items-start text-left">
           <div className="mb-6 inline-flex items-center gap-2 rounded-full bg-ink-elevated px-4 py-2 text-brand-teal">
             <span aria-hidden="true" className="size-2 animate-pulse rounded-full bg-brand-teal" />
             <span className="font-mono text-xs font-medium">Integrated water solutions</span>
@@ -46,7 +46,7 @@ export function ServicesHero() {
             {"Secure your property's future with end-to-end water management. We transform seasonal rainfall into a permanent, independent resource, reducing dependency on external supply and protecting your infrastructure."}
           </p>
 
-          <div className="mb-10 flex flex-wrap items-center justify-center gap-2">
+          <div className="mb-10 flex flex-wrap items-center justify-start gap-2">
             {HIGHLIGHTS.map(({ label, Icon, tone }) => (
               <div key={label} className="inline-flex items-center gap-2 rounded-full bg-ink-elevated px-4 py-2 font-mono text-xs font-medium text-white shadow-sm">
                 <Icon className={`size-4.5 ${tone}`} />
@@ -55,7 +55,7 @@ export function ServicesHero() {
             ))}
           </div>
 
-          <div className="mb-16 flex w-full flex-col items-center gap-4 sm:w-auto sm:flex-row">
+          <div className="mb-16 flex w-full flex-col items-start gap-4 sm:w-auto sm:flex-row">
             <CtaButton href="#contact" variant="primary" icon={<ArrowRightIcon className="size-4" />} className="w-full flex-row-reverse sm:w-auto">
               Request technical audit
             </CtaButton>

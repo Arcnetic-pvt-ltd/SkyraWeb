@@ -135,14 +135,7 @@ export function ProductCatalogCarousel() {
     setCurrentIndex(0);
   }, [activeCategory]);
 
-  // Auto-play loop
-  useEffect(() => {
-    if (isPaused || total <= 1) return;
-    const interval = setInterval(() => {
-      handleNext();
-    }, 6000);
-    return () => clearInterval(interval);
-  }, [isPaused, total, handleNext]);
+  // Product selection is user-driven via category tabs and list controls
 
   return (
     <div className="w-full flex flex-col gap-10">

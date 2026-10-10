@@ -64,7 +64,7 @@ const STAGES: StageInfo[] = [
 
 export function HeroMissionEngine() {
   const [activeStageIndex, setActiveStageIndex] = useState(0);
-  const [isPlaying, setIsPlaying] = useState(true);
+  const [isPlaying, setIsPlaying] = useState(false);
 
   const currentStage = STAGES[activeStageIndex];
 

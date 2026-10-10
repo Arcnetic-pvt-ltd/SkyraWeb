@@ -19,7 +19,7 @@ export function AboutHero() {
       <div aria-hidden="true" className="pointer-events-none absolute -top-48 left-1/2 h-[550px] w-[850px] -translate-x-1/2 rounded-full bg-brand-teal/10 blur-[140px]" />
       <div aria-hidden="true" className="pointer-events-none absolute right-0 top-1/3 h-[420px] w-[420px] rounded-full bg-brand-green/10 blur-[120px]" />
 
-      <Container className="relative z-10 flex flex-col items-center text-center">
+      <Container className="relative z-10 flex flex-col items-start text-left">
         <div className="inline-flex items-center gap-2 rounded-full bg-ink-elevated px-4 py-1.5 text-brand-teal shadow-md">
           <DropletIcon className="size-4" />
           <span className="font-mono text-xs font-medium">About Skyra • From sky, to life</span>
@@ -36,7 +36,7 @@ export function AboutHero() {
           to change how we interact with water today.
         </p>
 
-        <div className="mt-8 flex flex-wrap items-center justify-center gap-4">
+        <div className="mt-8 flex flex-wrap items-center justify-start gap-4">
           <CtaButton href="/services" variant="primary" icon={<ArrowRightIcon className="size-4" />} className="flex-row-reverse">
             Explore our solutions
           </CtaButton>

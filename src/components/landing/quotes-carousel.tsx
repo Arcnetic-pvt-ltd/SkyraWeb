@@ -42,12 +42,7 @@ export function QuotesCarousel() {
     });
   }, []);
 
-  useEffect(() => {
-    const timer = setInterval(() => {
-      setActiveIndex((prev) => (prev + 1) % QUOTES.length);
-    }, 8500);
-    return () => clearInterval(timer);
-  }, []);
+  // User controls active quote via dot indicators below
 
   return (
     <section className="w-full bg-forest-slate text-light-aquifer-canvas py-16 sm:py-24 px-4 sm:px-6 lg:px-8 relative overflow-hidden min-h-[543.5px] flex items-center">

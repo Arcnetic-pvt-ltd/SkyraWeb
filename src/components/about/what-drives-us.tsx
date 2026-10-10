@@ -40,9 +40,9 @@ const PILLARS = [
 export function WhatDrivesUs() {
   return (
     <section className="bg-ink-elevated py-16 sm:py-24">
-      <Container className="flex flex-col items-center">
-        <div className="max-w-2xl text-center">
-          <Eyebrow color="green" center>Core guiding principles</Eyebrow>
+      <Container>
+        <div className="max-w-2xl text-left">
+          <Eyebrow color="green">Core guiding principles</Eyebrow>
           <h2 className="mt-2 font-headline-h2 text-[28px] sm:text-[36px] font-semibold tracking-tight text-white">
             What drives us
           </h2>
@@ -52,7 +52,7 @@ export function WhatDrivesUs() {
           </p>
         </div>
 
-        <div className="mt-12 grid w-full grid-cols-1 gap-6 md:grid-cols-3">
+        <div className="mt-10 sm:mt-12 grid w-full grid-cols-1 gap-6 md:grid-cols-3">
           {PILLARS.map(({ Icon, tone, hoverBg, title, description, FooterIcon, footer }) => (
             <div key={title} className="group flex flex-col justify-between rounded-2xl bg-ink p-8 shadow-xl transition-transform duration-300 hover:-translate-y-1">
               <div>

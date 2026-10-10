@@ -16,7 +16,7 @@ export default function Home() {
       </div>
 
       {/* SECTION 1: HERO */}
-      <section className="relative z-10 min-h-screen flex flex-col justify-between px-4 sm:px-6 lg:px-8 pt-28 sm:pt-32 pb-8 max-w-7xl mx-auto w-full">
+      <section className="relative z-10 flex flex-col px-4 sm:px-6 lg:px-8 pt-28 sm:pt-32 pb-12 sm:pb-16 max-w-7xl mx-auto w-full gap-10">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center pt-1 sm:pt-2">
           {/* Left Column: Headline, Copy & CTAs */}
           <div className="lg:col-span-6 flex flex-col">

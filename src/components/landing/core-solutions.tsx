@@ -86,7 +86,7 @@ export function CoreSolutions() {
         {/* Capability Feature Badges / Highlights */}
         <div className="mb-16 grid grid-cols-2 gap-4 sm:grid-cols-3 lg:grid-cols-6">
           {CAPABILITIES.map(({ label, Icon, bg, tone }) => (
-            <div key={label} className="flex flex-col items-center justify-center gap-2 rounded-2xl border border-slate-200/80 bg-white p-4 text-center shadow-sm">
+            <div key={label} className="flex flex-col items-start justify-center gap-2 rounded-2xl border border-slate-200/80 bg-white p-4 text-left shadow-sm">
               <div className={`flex size-10 items-center justify-center rounded-full ${bg} ${tone}`}>
                 <Icon className="size-5" />
               </div>

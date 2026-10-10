@@ -49,7 +49,7 @@ export function ImplementationProcess() {
   return (
     <section className="border-y border-slate-200 bg-white py-16 sm:py-24">
       <Container>
-        <div className="mx-auto mb-12 max-w-3xl text-center">
+        <div className="mb-12 max-w-2xl text-left">
           <span className="inline-block rounded-full bg-brand-green/10 px-4 py-1.5 font-mono text-xs font-medium text-brand-green">
             Standardized execution
           </span>
@@ -89,9 +89,9 @@ export function ImplementationProcess() {
         </div>
 
         <div className="rounded-2xl border border-slate-300 bg-slate-100 p-6 shadow-sm lg:p-8">
-          <div className="grid grid-cols-2 gap-6 text-center md:grid-cols-4">
+          <div className="grid grid-cols-2 gap-6 text-left md:grid-cols-4">
             {TRUST_BADGES.map(({ Icon, tone, title, description }) => (
-              <div key={title} className="flex flex-col items-center gap-1">
+              <div key={title} className="flex flex-col items-start gap-1">
                 <Icon className={`size-6.5 ${tone}`} />
                 <span className="font-medium text-slate-900">{title}</span>
                 <span className="text-base font-normal font-body-primary text-slate-600 leading-relaxed">{description}</span>

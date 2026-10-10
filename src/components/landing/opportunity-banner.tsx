@@ -31,18 +31,18 @@ export function OpportunityBanner() {
         />
       </div>
 
-      <div className="relative z-10 mx-auto max-w-7xl space-y-8 px-4 sm:px-6 lg:px-8 text-center">
-        <Eyebrow color="green" dash="both" center>
+      <div className="relative z-10 mx-auto max-w-7xl space-y-8 px-4 sm:px-6 lg:px-8 text-left">
+        <Eyebrow color="green">
           The opportunity
         </Eyebrow>
 
-        <h2 className="mx-auto max-w-3xl font-headline-h2 text-headline-h2-mobile sm:text-headline-h2 text-white tracking-tight leading-[1.2]">
+        <h2 className="max-w-3xl font-headline-h2 text-headline-h2-mobile sm:text-headline-h2 text-white tracking-tight leading-[1.2]">
           <span className="block">What if the water running away</span>
           <span className="block">today could become the water we</span>
           <span className="block">depend on tomorrow?</span>
         </h2>
 
-        <div className="flex flex-wrap items-center justify-center gap-3 pt-8 font-mono text-xs font-medium sm:gap-4 md:gap-6">
+        <div className="flex flex-wrap items-center justify-start gap-3 pt-8 font-mono text-xs font-medium sm:gap-4 md:gap-6">
           {FLOW_STEPS.map(({ emoji, label, tone }, i) => (
             <div key={label} className="contents">
               <div className="flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-4 py-2 text-[#F1F5F9]">

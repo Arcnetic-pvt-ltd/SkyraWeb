@@ -34,9 +34,9 @@ export function ProblemSection() {
               groundwater faces increasing pressure from unchecked extraction.
             </p>
 
-            <div className="grid grid-cols-4 gap-2 border-t border-slate-100 pt-6 text-center sm:gap-4">
+            <div className="grid grid-cols-4 gap-2 border-t border-slate-100 pt-6 text-left sm:gap-4">
               {PIPELINE_STEPS.map(({ label, Icon, tone, labelTone }) => (
-                <div key={label} className="flex flex-col items-center">
+                <div key={label} className="flex flex-col items-start">
                   <div className={`mb-2 flex size-12 items-center justify-center rounded-xl border shadow-sm ${tone}`}>
                     <Icon className="size-6" />
                   </div>

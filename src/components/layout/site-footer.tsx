@@ -102,7 +102,7 @@ export function SiteFooter() {
 
       {/* Thin Sub-Footer Strip: Powered by Arcnetic */}
       <div className="w-full border-t border-white/10 bg-slate-950/40 py-4">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row items-center justify-between gap-2 text-center sm:text-left">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-2 text-left">
           <span className="font-mono text-xs font-medium tracking-wide text-light-aquifer-canvas/50">
             Technology partner
           </span>
