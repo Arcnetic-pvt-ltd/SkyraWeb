@@ -20,7 +20,7 @@ export const metadata: Metadata = {
 export default function ContactPage() {
   return (
     <div className="flex flex-col w-full">
-      <section className="relative w-full overflow-hidden bg-linear-to-b from-[#dceef8] via-[#e8f4fa] to-[#f2f8fc] pt-28 pb-16 sm:pt-32 sm:pb-24">
+      <section className="relative w-full overflow-hidden bg-linear-to-b from-[#dceef8] via-[#e8f4fa] to-[#f2f8fc] pt-24 pb-8 sm:pt-28 sm:pb-10">
         {/* Soft organic ripple ring graphic */}
         <div aria-hidden="true" className="pointer-events-none absolute inset-0 overflow-hidden">
           <svg className="absolute top-12 right-10 w-96 h-96 text-muted-aquifer/10" fill="none" viewBox="0 0 400 400">

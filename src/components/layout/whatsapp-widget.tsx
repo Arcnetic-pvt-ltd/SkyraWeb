@@ -13,7 +13,7 @@ export function WhatsAppWidget() {
       >
         <WhatsAppIcon className="size-4 text-moss transition-transform" />
         <span className="font-button-text text-[13px] text-deep-aquifer font-medium tracking-tight group-hover:text-forest-slate transition-colors">
-          WhatsApp
+          Contact on WhatsApp
         </span>
         <span className="material-symbols-outlined text-[17px] text-moss group-hover:translate-x-0.5 transition-transform">
           arrow_forward

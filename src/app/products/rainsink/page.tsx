@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { RainsinkInteractiveShowcase } from "@/components/products/rainsink-interactive-showcase";
+import { PercolationPondShowcase } from "@/components/products/percolation-pond-showcase";
 import { CONTACT } from "@/lib/nav";
 
 
@@ -59,7 +60,7 @@ export default function RainsinkProductPage() {
           <div className="pt-2 flex flex-wrap items-center gap-4">
             <Link
               href="/contact?product=rainsink"
-              className="inline-flex items-center gap-2.5 bg-deep-aquifer hover:bg-forest-slate text-white font-medium text-[15px] px-7 py-3.5 rounded-[6px] transition-colors group"
+              className="inline-flex items-center justify-center gap-2.5 bg-deep-aquifer hover:bg-forest-slate text-white font-medium text-[15px] px-7 py-3.5 min-h-[48px] rounded-[6px] border border-transparent transition-colors group cursor-pointer"
             >
               <span>Get site survey &amp; pricing</span>
               <span className="material-symbols-outlined text-[18px] group-hover:translate-x-1 transition-transform">
@@ -68,11 +69,20 @@ export default function RainsinkProductPage() {
             </Link>
             <a
               href="#technical-specs"
-              className="font-medium text-[15px] text-forest-slate hover:text-deep-aquifer transition-colors inline-flex items-center gap-2 py-3 px-4 rounded-[6px] border border-muted-aquifer/30 bg-white"
+              className="inline-flex items-center justify-center gap-2 bg-white hover:bg-slate-50 text-forest-slate hover:text-deep-aquifer font-medium text-[15px] px-6 py-3.5 min-h-[48px] rounded-[6px] border border-muted-aquifer/30 transition-colors cursor-pointer"
             >
               <span>Engineering specifications</span>
               <span className="material-symbols-outlined text-[18px]">
                 arrow_downward
+              </span>
+            </a>
+            <a
+              href="#percolation-pond"
+              className="inline-flex items-center justify-center gap-2 bg-white hover:bg-slate-50 text-forest-slate hover:text-deep-aquifer font-medium text-[15px] px-6 py-3.5 min-h-[48px] rounded-[6px] border border-muted-aquifer/30 transition-colors cursor-pointer"
+            >
+              <span>Percolation pond system</span>
+              <span className="material-symbols-outlined text-[18px]">
+                waves
               </span>
             </a>
           </div>
@@ -318,8 +328,15 @@ export default function RainsinkProductPage() {
         </div>
       </section>
 
+      {/* Macro-Catchment Percolation Pond Infrastructure */}
+      <section id="percolation-pond" className="relative w-full bg-light-aquifer-canvas py-16 sm:py-24 overflow-hidden border-t border-muted-aquifer/15">
+        <div className="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+          <PercolationPondShowcase />
+        </div>
+      </section>
+
       {/* Deployment & Installation Density Guidelines */}
-      <section className="relative w-full bg-light-aquifer-canvas py-20 md:py-28 overflow-hidden border-t border-muted-aquifer/15">
+      <section className="relative w-full bg-linear-to-b from-[#edf6fa] via-[#e6f1f7] to-[#edf6fa] py-20 md:py-28 overflow-hidden border-t border-muted-aquifer/15">
         <div className="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-stretch">
             <div className="lg:col-span-6 flex flex-col justify-between gap-6">
