@@ -31,9 +31,9 @@ export default function ContactPage() {
         </div>
 
         <div className="relative z-10 w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-start">
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-stretch">
             {/* Left Column */}
-            <div className="lg:col-span-5 flex flex-col justify-between pt-2 lg:pt-6">
+            <div className="lg:col-span-5 flex flex-col justify-between">
               <div className="flex flex-col">
                 <div className="inline-flex items-center gap-2 mb-4">
                   <span className="font-technical-label text-[13px] text-forest-slate uppercase tracking-wider font-semibold">
@@ -46,24 +46,10 @@ export default function ContactPage() {
                 <p className="mt-5 font-body-large text-body-large text-deep-aquifer/85 leading-relaxed font-normal">
                   Tell us a bit about your property, and we’ll show you what’s possible — no pressure, just a conversation.
                 </p>
-
-                <div className="mt-10 rounded-xl bg-white/80 p-6 border border-muted-aquifer/20 backdrop-blur-xs">
-                  <div className="flex items-center gap-3">
-                    <span className="material-symbols-outlined text-moss text-[22px]">
-                      water_drop
-                    </span>
-                    <span className="font-headline-h3 text-[24px] font-medium leading-[1.3] text-deep-aquifer">
-                      An easy, collaborative process
-                    </span>
-                  </div>
-                  <p className="mt-2 font-body-primary text-base font-normal text-deep-aquifer leading-relaxed">
-                    Whether you oversee a multi-acre campus or are securing water autonomy for a regional estate, our team listens first, models aquifer capacity second, and designs purely around your geography.
-                  </p>
-                </div>
               </div>
 
               {/* Studio & Direct Connect Details */}
-              <div className="mt-12 flex flex-col gap-6">
+              <div className="pt-8 lg:pt-0 flex flex-col gap-6">
                 <div className="flex items-start gap-4">
                   <div className="h-10 w-10 rounded-full bg-white flex items-center justify-center shrink-0 text-forest-slate border border-muted-aquifer/20 shadow-xs">
                     <span className="material-symbols-outlined text-[20px]">corporate_fare</span>
@@ -211,66 +197,6 @@ export default function ContactPage() {
         </div>
       </section>
 
-      {/* Contextual Photo Banner */}
-      <section className="w-full bg-linear-to-b from-[#edf6fa] via-[#e5f1f7] to-[#edf6fa] py-16 sm:py-24 border-y border-[#c8e0ee]/60">
-        <div className="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            <div className="rounded-xl overflow-hidden bg-white/95 border border-[#bcd7e8]/60 shadow-[0_1px_3px_rgba(20,50,80,0.03)] flex flex-col">
-              <div className="relative h-48 w-full overflow-hidden">
-                <img
-                  alt="Passive Hydrology"
-                  className="w-full h-full object-cover"
-                  src="https://lh3.googleusercontent.com/aida-public/AB6AXuC_gYGxOvSB1xUcnePzJOQ1xkSIQRH2EIRAX8-A1qZMobI01idGo4Qmwy1VulPUA6D7IRfmUdELa2MTVvAs_9Kr9kqJ0dVf9BEZRWjUgEET_n-FAWLGcwRNeezF86nKm7YgcRmisWf4WMrlc1ZcqnPevzWSmFgp27DfAJ-q7nBE-4hSnKdn3QQEAm4CbnMzx81oGUFvvUOqRc6VAeTPyfilhcTaY4js9ie5ren3J3bD"
-                />
-              </div>
-              <div className="p-5 flex flex-col justify-between flex-grow">
-                <span className="font-mono text-xs text-moss font-medium">
-                  Passive hydrology
-                </span>
-                <p className="mt-2 font-body-primary text-base font-normal text-deep-aquifer/80 leading-relaxed">
-                  Every drop guided into soil strata naturally, maintaining steady subsoil hydration.
-                </p>
-              </div>
-            </div>
-
-            <div className="rounded-xl overflow-hidden bg-white/95 border border-[#bcd7e8]/60 shadow-[0_1px_3px_rgba(20,50,80,0.03)] flex flex-col">
-              <div className="relative h-48 w-full overflow-hidden">
-                <img
-                  alt="Subterranean Infiltration"
-                  className="w-full h-full object-cover"
-                  src="https://lh3.googleusercontent.com/aida-public/AB6AXuAnJWw-UYy7RpoNvRlYwfQyENjCN9B4Kbl-4nTw03IH9OMMddfHAI4iHK7I98gMdDhIvz1zgnAU6T77URBqw9syC0agA6ocbso62gWwnfrRa0YUPR8YOIzIZ-N6zQnkGuBt1VDoNayCtsCTCfArSz3mWmyimPIdVaOHXBQ1P8pvMGxIWDxdY8-H3Q25Enqnw91RBPPsuHLeysu2RG89fkTQla1VUGRWZJYIw5-gEoOy"
-                />
-              </div>
-              <div className="p-5 flex flex-col justify-between flex-grow">
-                <span className="font-mono text-xs text-moss font-medium">
-                  Subterranean infiltration
-                </span>
-                <p className="mt-2 font-body-primary text-base font-normal text-deep-aquifer/80 leading-relaxed">
-                  Quiet modular recharge chambers designed to outlast concrete retention pits.
-                </p>
-              </div>
-            </div>
-
-            <div className="rounded-xl overflow-hidden bg-white/95 border border-[#bcd7e8]/60 shadow-[0_1px_3px_rgba(20,50,80,0.03)] flex flex-col">
-              <div className="relative h-48 w-full overflow-hidden">
-                <img
-                  alt="Kochi Research Hub"
-                  className="w-full h-full object-cover"
-                  src="https://lh3.googleusercontent.com/aida-public/AB6AXuDzts_ScykQaZoNLIAf96IPK1L0aF2UM9vjffPj2NbOqZZ6Ipv-BI6D5iHB5nb9qpy7zgsRMrHxAPoqgwqsyl_UX3oKS_GqdF9Klq2khjUaj-UelP6Q0TDadsATLzVkzplylWcGRUOCINxakZ0FXIuXhchnQbs7kQC93Eevl69RI-OHQW4rqC7ZtJtQCwlVuroP_cDKpcK7BdCYVdRgrwZiKgGtA2anacMRbaO769Sx"
-                />
-              </div>
-              <div className="p-5 flex flex-col justify-between flex-grow">
-                <span className="font-mono text-xs text-moss font-medium">
-                  Kochi research hub
-                </span>
-                <p className="mt-2 font-body-primary text-base font-normal text-deep-aquifer/80 leading-relaxed">
-                  Our engineering desk translates local precipitation records into reliable year-round yield.
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
     </div>
   );
 }
