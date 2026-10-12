@@ -167,6 +167,11 @@ body {
   overflow-x: hidden;
 }
 
+button,
+[role="button"] {
+  cursor: pointer;
+}
+
 ::-webkit-scrollbar {
   display: none;
 }

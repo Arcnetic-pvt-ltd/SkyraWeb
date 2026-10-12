@@ -361,10 +361,10 @@ export default function AboutPage() {
                 </div>
                 <div className="p-5 rounded-[4px] bg-white border border-muted-aquifer/20 shadow-xs">
                   <span className="block font-mono text-3xl sm:text-4xl font-bold text-deep-aquifer">
-                    420+
+                    95%+
                   </span>
                   <span className="block font-mono text-xs text-deep-aquifer/70 mt-1 font-medium">
-                    Engineered installations
+                    Groundwater percolation efficiency
                   </span>
                 </div>
                 <div className="p-5 rounded-[4px] bg-white border border-muted-aquifer/20 shadow-xs">

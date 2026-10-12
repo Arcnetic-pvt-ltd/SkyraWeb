@@ -58,7 +58,7 @@ export default function ServicesPage() {
               <div className="pt-4 flex flex-wrap items-center gap-4">
                 <Link
                   href="/contact?service=rainwater-harvesting"
-                  className="inline-flex items-center gap-2.5 bg-deep-aquifer hover:bg-forest-slate text-white font-button-text text-button-text px-6 py-3 rounded-[6px] transition-all duration-300 group"
+                  className="inline-flex items-center gap-2.5 bg-deep-aquifer hover:bg-forest-slate text-white font-button-text text-button-text px-6 py-3 rounded-[6px] transition-all duration-300 group cursor-pointer"
                 >
                   <span>Get quote &amp; estimate</span>
                   <span className="material-symbols-outlined text-[18px]">
@@ -178,7 +178,7 @@ export default function ServicesPage() {
               <div className="pt-4 flex flex-wrap items-center gap-4">
                 <Link
                   href="/contact?service=stormwater-management"
-                  className="inline-flex items-center gap-2.5 bg-deep-aquifer hover:bg-forest-slate text-white font-button-text text-button-text px-6 py-3 rounded-[6px] transition-all duration-300 group"
+                  className="inline-flex items-center gap-2.5 bg-deep-aquifer hover:bg-forest-slate text-white font-button-text text-button-text px-6 py-3 rounded-[6px] transition-all duration-300 group cursor-pointer"
                 >
                   <span>Get quote &amp; estimate</span>
                   <span className="material-symbols-outlined text-[18px]">
@@ -225,7 +225,7 @@ export default function ServicesPage() {
               <div className="pt-4 flex flex-wrap items-center gap-4">
                 <Link
                   href="/contact?service=afforestation"
-                  className="inline-flex items-center gap-2.5 bg-moss hover:bg-moss/90 text-deep-aquifer font-button-text text-button-text px-6 py-3 rounded-[6px] transition-all duration-300 font-semibold group"
+                  className="inline-flex items-center gap-2.5 bg-moss hover:bg-moss/90 text-deep-aquifer font-button-text text-button-text px-6 py-3 rounded-[6px] transition-all duration-300 font-semibold group cursor-pointer"
                 >
                   <span>Get quote &amp; estimate</span>
                   <span className="material-symbols-outlined text-[18px]">
@@ -283,17 +283,19 @@ export default function ServicesPage() {
       <HarvestingCalculator />
 
       {/* Section 4: Product Integrations Catalog */}
-      <section className="w-full bg-light-aquifer-canvas py-16 sm:py-24 border-t border-muted-aquifer/15">
+      <section id="product-integrations" className="w-full bg-light-aquifer-canvas py-6 sm:py-8 border-t border-muted-aquifer/15">
         <div className="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="max-w-2xl mb-10 sm:mb-14">
-            <span className="font-mono text-xs text-moss font-medium tracking-wide block mb-3">
-              Hardware &amp; infrastructure
-            </span>
-            <h2 className="font-headline-h2 text-headline-h2-mobile sm:text-headline-h2 text-deep-aquifer tracking-tight mb-4">
-              Dedicated product integrations
-            </h2>
-            <p className="font-body-primary text-base font-normal text-deep-aquifer leading-relaxed">
-              Some jobs call for a complete system. Others just need the right piece. Our product range works both ways — as standalone tools, or built into a larger Skyra Rainsink system.
+          <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-3 mb-4 sm:mb-5">
+            <div>
+              <span className="font-mono text-[11px] text-moss font-medium tracking-wide block mb-1">
+                Hardware &amp; infrastructure
+              </span>
+              <h2 className="font-headline-h2 text-[22px] sm:text-[26px] font-semibold text-deep-aquifer tracking-tight">
+                Dedicated product integrations
+              </h2>
+            </div>
+            <p className="font-body-primary text-xs sm:text-[13px] font-normal text-deep-aquifer/85 leading-relaxed max-w-xl sm:text-right">
+              Some jobs call for a complete system. Others just need the right piece. Our product range works both ways &mdash; as standalone tools, or built into a larger Skyra Rainsink system.
             </p>
           </div>
 
@@ -316,13 +318,13 @@ export default function ServicesPage() {
           <div className="pt-2 flex flex-col sm:flex-row items-center gap-4 w-full sm:w-auto">
             <Link
               href="/contact"
-              className="w-full sm:w-auto inline-flex items-center justify-center bg-deep-aquifer hover:bg-forest-slate text-white font-button-text text-button-text px-8 py-3.5 rounded-[6px] transition-all duration-300"
+              className="w-full sm:w-auto inline-flex items-center justify-center bg-deep-aquifer hover:bg-forest-slate text-white font-button-text text-button-text px-8 py-3.5 rounded-[6px] transition-all duration-300 cursor-pointer"
             >
               Request a hydrological study
             </Link>
             <Link
               href="/about"
-              className="w-full sm:w-auto inline-flex items-center justify-center font-button-text text-button-text text-deep-aquifer hover:text-moss px-6 py-3.5 transition-colors gap-1.5 rounded-[6px] border border-muted-aquifer/30 bg-white"
+              className="w-full sm:w-auto inline-flex items-center justify-center font-button-text text-button-text text-deep-aquifer hover:text-moss px-6 py-3.5 transition-colors gap-1.5 rounded-[6px] border border-muted-aquifer/30 bg-white cursor-pointer"
             >
               <span>Read our engineering manifesto</span>
               <span className="material-symbols-outlined text-[18px]">

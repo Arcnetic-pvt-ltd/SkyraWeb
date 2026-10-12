@@ -102,7 +102,7 @@ export function HarvestingCalculator() {
                         setUnit("sqft");
                       }
                     }}
-                    className={`px-3 py-1 rounded-[4px] transition-all ${
+                    className={`px-3 py-1 rounded-[4px] transition-all cursor-pointer ${
                       unit === "sqft" ? "bg-moss text-deep-aquifer font-bold" : "text-light-aquifer-canvas/70 hover:text-white"
                     }`}
                   >
@@ -116,7 +116,7 @@ export function HarvestingCalculator() {
                         setUnit("m2");
                       }
                     }}
-                    className={`px-3 py-1 rounded-[4px] transition-all ${
+                    className={`px-3 py-1 rounded-[4px] transition-all cursor-pointer ${
                       unit === "m2" ? "bg-moss text-deep-aquifer font-bold" : "text-light-aquifer-canvas/70 hover:text-white"
                     }`}
                   >
@@ -164,7 +164,7 @@ export function HarvestingCalculator() {
                     key={city.name}
                     type="button"
                     onClick={() => handleCitySelect(city.name)}
-                    className={`flex flex-col items-start p-3 rounded-[6px] border text-left transition-all ${
+                    className={`flex flex-col items-start p-3 rounded-[6px] border text-left transition-all cursor-pointer ${
                       !isCustomRainfall && selectedCity === city.name
                         ? "bg-[#1c3c63] border-[#396fa8] text-white shadow-none"
                         : "bg-[#0d1d33]/80 border-[#1e3c61]/80 text-light-aquifer-canvas/80 hover:bg-[#162f50] hover:text-white"
