@@ -68,7 +68,6 @@ export function QuotesCarousel() {
           </span>
         </div>
 
-        {/* Stable Grid Stacking for Smooth, Jump-Free Transitions */}
         <div className="w-full grid grid-cols-1 grid-rows-1 items-start min-h-[140px] sm:min-h-[120px]">
           {QUOTES.map((item, idx) => {
             const isActive = idx === activeIndex;
@@ -82,7 +81,7 @@ export function QuotesCarousel() {
                     : "opacity-0 pointer-events-none"
                 }`}
               >
-                <blockquote className="font-headline-h2 text-headline-h2-mobile sm:text-headline-h2 text-white font-normal leading-snug tracking-tight">
+                <blockquote className="font-headline-h2 text-headline-h2-mobile sm:text-headline-h2 text-white font-normal leading-snug tracking-tight min-h-[4.5rem] sm:min-h-[5.5rem]">
                   {item.quote}
                 </blockquote>
 
@@ -97,20 +96,24 @@ export function QuotesCarousel() {
           })}
         </div>
 
-        {/* Carousel Dot Indicators (Stationary, Non-jumping) */}
-        <div className="flex items-center gap-3 pt-2">
+        {/* Carousel Dot Indicators */}
+        <div className="flex items-center gap-1.5 pt-1">
           {QUOTES.map((_, dotIdx) => (
             <button
               key={dotIdx}
               type="button"
               aria-label={`Quote ${dotIdx + 1}`}
               onClick={() => setActiveIndex(dotIdx)}
-              className={`h-1.5 rounded-full transition-all duration-500 cursor-pointer ${
-                dotIdx === activeIndex
-                  ? "w-8 bg-[#86b5db]"
-                  : "w-2.5 bg-white/30 hover:bg-white/60"
-              }`}
-            />
+              className="py-2.5 px-1 cursor-pointer focus:outline-none"
+            >
+              <span
+                className={`block h-1.5 rounded-full transition-all duration-500 ${
+                  dotIdx === activeIndex
+                    ? "w-8 bg-[#86b5db]"
+                    : "w-2.5 bg-white/30 hover:bg-white/60"
+                }`}
+              />
+            </button>
           ))}
         </div>
       </div>
