@@ -65,15 +65,6 @@ export default function ServicesPage() {
                     request_quote
                   </span>
                 </Link>
-                <Link
-                  href="/contact?query=rainwater-harvesting"
-                  className="inline-flex items-center gap-1.5 font-button-text text-button-text text-deep-aquifer hover:text-moss transition-colors py-2 px-3 rounded-[6px] border border-muted-aquifer/30 bg-white"
-                >
-                  <span>Send query</span>
-                  <span className="material-symbols-outlined text-[18px]">
-                    help_outline
-                  </span>
-                </Link>
               </div>
             </div>
 
@@ -194,15 +185,6 @@ export default function ServicesPage() {
                     request_quote
                   </span>
                 </Link>
-                <Link
-                  href="/contact?query=stormwater-management"
-                  className="inline-flex items-center gap-1.5 font-button-text text-button-text text-deep-aquifer hover:text-moss transition-colors py-2 px-3 rounded-[6px] border border-muted-aquifer/30 bg-white"
-                >
-                  <span>Send query</span>
-                  <span className="material-symbols-outlined text-[18px]">
-                    help_outline
-                  </span>
-                </Link>
               </div>
             </div>
           </div>
@@ -248,15 +230,6 @@ export default function ServicesPage() {
                   <span>Get quote &amp; estimate</span>
                   <span className="material-symbols-outlined text-[18px]">
                     request_quote
-                  </span>
-                </Link>
-                <Link
-                  href="/contact?query=afforestation"
-                  className="inline-flex items-center gap-1.5 font-button-text text-button-text text-light-aquifer-canvas/80 hover:text-white transition-colors py-2 px-3 rounded-[6px] border border-white/20"
-                >
-                  <span>Send query</span>
-                  <span className="material-symbols-outlined text-[18px]">
-                    help_outline
                   </span>
                 </Link>
               </div>
