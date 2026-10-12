@@ -6,8 +6,6 @@ interface QuoteItem {
   quote: string;
   author: string;
   role: string;
-  image?: string;
-  position?: "left" | "right";
 }
 
 const QUOTES: QuoteItem[] = [
@@ -16,32 +14,18 @@ const QUOTES: QuoteItem[] = [
       "“We must adopt the mantra of ‘Reduce, Reuse, Recharge, and Recycle’ to secure the nation’s water future.”",
     author: "Shri Narendra Modi",
     role: "Prime Minister of India",
-    image: "/images/assets/nmod_cropped.png",
-    position: "right",
   },
   {
     quote:
       "“Water harvesting and water recycling should become mandatory for all the states.”",
     author: "Dr. A. P. J. Abdul Kalam",
     role: "Former President of India",
-    image: "/images/assets/kalam_no_bg.png",
-    position: "left",
   },
 ];
 
 export function QuotesCarousel() {
   const [activeIndex, setActiveIndex] = useState(0);
   const [isPaused, setIsPaused] = useState(false);
-
-  // Preload all carousel images into browser memory to eliminate image load lag
-  useEffect(() => {
-    QUOTES.forEach((item) => {
-      if (item.image) {
-        const img = new Image();
-        img.src = item.image;
-      }
-    });
-  }, []);
 
   // Automatic rotation between quotes (every 7 seconds) with hover-pause
   useEffect(() => {
@@ -56,7 +40,7 @@ export function QuotesCarousel() {
 
   return (
     <section
-      className="w-full bg-linear-to-br from-[#0c1a2d] via-[#10243d] to-[#173050] text-light-aquifer-canvas py-16 sm:py-24 relative overflow-hidden min-h-[543.5px] flex items-center border-y border-[#22446d]/40"
+      className="w-full bg-linear-to-br from-[#0c1a2d] via-[#10243d] to-[#173050] text-light-aquifer-canvas py-16 sm:py-24 relative overflow-hidden flex items-center border-y border-[#22446d]/40"
       onMouseEnter={() => setIsPaused(true)}
       onMouseLeave={() => setIsPaused(false)}
     >
@@ -74,96 +58,61 @@ export function QuotesCarousel() {
         </svg>
       </div>
 
-      {/* Background Images for Quotes (Synchronized with text transition) */}
-      {QUOTES.map((item, idx) => {
-        if (!item.image) return null;
-        const isActive = idx === activeIndex;
-        const isLeft = item.position === "left";
+      <div className="w-full max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 flex flex-col items-start gap-6">
+        <div className="inline-flex items-center gap-2.5 text-moss/90">
+          <span className="material-symbols-outlined text-[28px] text-moss">
+            water_drop
+          </span>
+          <span className="font-technical-label text-xs uppercase tracking-wider text-[#86b5db] font-semibold">
+            National vision
+          </span>
+        </div>
 
-        return (
-          <div
-            key={`img-${idx}`}
-            className={`absolute bottom-0 ${isLeft ? "left-0 justify-start" : "right-0 justify-end"
-              } h-full max-h-[95%] pointer-events-none transition-all duration-700 ease-in-out z-0 hidden md:flex items-end ${isActive
-                ? "opacity-100 translate-x-0"
-                : isLeft
-                  ? "opacity-0 -translate-x-8"
-                  : "opacity-0 translate-x-8"
-              }`}
-          >
-            <div className="relative h-full flex items-end">
-              <img
-                src={item.image}
-                alt={item.author}
-                style={
-                  !isLeft
-                    ? {
-                        WebkitMaskImage:
-                          "linear-gradient(to right, transparent 0%, black 12%, black 100%)",
-                        maskImage:
-                          "linear-gradient(to right, transparent 0%, black 12%, black 100%)",
-                      }
-                    : undefined
-                }
-                className="h-full w-auto object-contain object-bottom block max-w-none"
-              />
-            </div>
-          </div>
-        );
-      })}
+        {/* Stable Grid Stacking for Smooth, Jump-Free Transitions */}
+        <div className="w-full grid grid-cols-1 grid-rows-1 items-start min-h-[140px] sm:min-h-[120px]">
+          {QUOTES.map((item, idx) => {
+            const isActive = idx === activeIndex;
 
-      <div className="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 grid grid-cols-1 lg:grid-cols-12 gap-8 items-center min-h-[280px]">
-        {QUOTES.map((item, idx) => {
-          const isActive = idx === activeIndex;
-          const isLeft = item.position === "left";
-
-          return (
-            <div
-              key={`text-${idx}`}
-              className={`lg:col-span-8 xl:col-span-7 ${isLeft ? "lg:col-start-5 xl:col-start-6" : "lg:col-start-1"
-                } flex flex-col items-start text-left gap-6 transition-all duration-700 ease-in-out ${isActive
-                  ? "opacity-100 relative z-10 translate-y-0 pointer-events-auto"
-                  : "opacity-0 absolute inset-0 pointer-events-none translate-y-2"
+            return (
+              <div
+                key={`text-${idx}`}
+                className={`col-start-1 row-start-1 w-full flex flex-col items-start text-left gap-4 transition-opacity duration-500 ease-in-out ${
+                  isActive
+                    ? "opacity-100 pointer-events-auto"
+                    : "opacity-0 pointer-events-none"
                 }`}
-            >
-              <div className="inline-flex items-center gap-2.5 text-moss/90">
-                <span className="material-symbols-outlined text-[28px] text-moss">
-                  water_drop
-                </span>
-                <span className="font-mono text-xs text-[#86b5db] font-medium">
-                  National vision
-                </span>
+              >
+                <blockquote className="font-headline-h2 text-headline-h2-mobile sm:text-headline-h2 text-white font-normal leading-snug tracking-tight">
+                  {item.quote}
+                </blockquote>
+
+                <cite className="font-body-large text-body-large text-light-aquifer-canvas/90 not-italic block font-normal">
+                  <span className="font-semibold text-white">
+                    — {item.author}
+                  </span>
+                  , <span className="text-[#86b5db]/90">{item.role}</span>
+                </cite>
               </div>
+            );
+          })}
+        </div>
 
-              <blockquote className="font-headline-h2 text-headline-h2-mobile sm:text-headline-h2 text-white font-normal leading-snug tracking-tight">
-                {item.quote}
-              </blockquote>
-
-              <cite className="font-body-primary text-base text-light-aquifer-canvas/90 not-italic block font-normal">
-                <span className="font-semibold text-white">
-                  — {item.author}
-                </span>
-                , <span className="text-[#86b5db]/90">{item.role}</span>
-              </cite>
-
-              {/* Carousel Dot Indicators */}
-              <div className="flex items-center gap-3 pt-4">
-                {QUOTES.map((_, dotIdx) => (
-                  <button
-                    key={dotIdx}
-                    type="button"
-                    aria-label={`Quote ${dotIdx + 1}`}
-                    onClick={() => setActiveIndex(dotIdx)}
-                    className={`h-1.5 rounded-full transition-all duration-500 ${dotIdx === activeIndex
-                        ? "w-8 bg-[#86b5db]"
-                        : "w-2.5 bg-white/30 hover:bg-white/60"
-                      }`}
-                  />
-                ))}
-              </div>
-            </div>
-          );
-        })}
+        {/* Carousel Dot Indicators (Stationary, Non-jumping) */}
+        <div className="flex items-center gap-3 pt-2">
+          {QUOTES.map((_, dotIdx) => (
+            <button
+              key={dotIdx}
+              type="button"
+              aria-label={`Quote ${dotIdx + 1}`}
+              onClick={() => setActiveIndex(dotIdx)}
+              className={`h-1.5 rounded-full transition-all duration-500 cursor-pointer ${
+                dotIdx === activeIndex
+                  ? "w-8 bg-[#86b5db]"
+                  : "w-2.5 bg-white/30 hover:bg-white/60"
+              }`}
+            />
+          ))}
+        </div>
       </div>
     </section>
   );
