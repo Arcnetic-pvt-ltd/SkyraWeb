@@ -146,7 +146,7 @@ export function RainsinkInteractiveShowcase() {
 
 
       {/* Rainsink Cross-Section Diagram & Layer Explorer */}
-      <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+      <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
         {/* SVG Diagram Column - Flat Dark Illustration Card */}
         <div className="lg:col-span-6 bg-linear-to-br from-[#0c1a2d] via-[#10243d] to-[#173050] p-5 sm:p-7 rounded-[4px] border border-[#22446d]/60 relative overflow-hidden group">
           {/* Card Header & Controls */}
