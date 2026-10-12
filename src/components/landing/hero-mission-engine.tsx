@@ -82,8 +82,7 @@ export function HeroMissionEngine() {
       {/* Top Header Control Bar */}
       <div className="flex items-center justify-between gap-3 mb-4 pb-3 border-b border-muted-aquifer/15 relative z-10">
         <div className="flex items-center gap-2">
-          <span className="size-2 rounded-full bg-moss inline-block" />
-          <span className="font-mono text-xs font-medium text-deep-aquifer">
+          <span className="font-mono text-xs font-bold uppercase tracking-wider text-deep-aquifer">
             Closed-loop hydrological engine
           </span>
         </div>
@@ -94,7 +93,7 @@ export function HeroMissionEngine() {
           title={isPlaying ? "Pause auto-loop" : "Play auto-loop"}
         >
           <span className={`size-1.5 rounded-full ${isPlaying ? "bg-moss" : "bg-muted-aquifer"}`} />
-          {isPlaying ? "Pause" : "Play"}
+          {isPlaying ? "PAUSE" : "PLAY"}
         </button>
       </div>
 
@@ -402,22 +401,22 @@ export function HeroMissionEngine() {
           <div className="sm:col-span-8 space-y-1">
             <div className="flex items-center gap-2">
               <span
-                className="px-2 py-0.5 rounded-[2px] text-xs font-mono font-medium tracking-wide text-white"
+                className="px-2 py-0.5 rounded-[4px] text-[10px] font-mono font-bold uppercase tracking-wider text-white"
                 style={{ backgroundColor: currentStage.accentColor }}
               >
                 Phase {currentStage.number} • {currentStage.tagline}
               </span>
             </div>
-            <h4 className="text-base font-semibold text-deep-aquifer tracking-tight">
+            <h4 className="text-sm sm:text-base font-bold text-deep-aquifer tracking-tight">
               {currentStage.title}
             </h4>
-            <p className="text-base text-deep-aquifer leading-relaxed font-sans">
+            <p className="text-xs text-deep-aquifer/80 leading-relaxed font-sans">
               {currentStage.description}
             </p>
           </div>
 
           <div className="sm:col-span-4 flex flex-col items-start sm:items-end justify-center border-t sm:border-t-0 sm:border-l border-muted-aquifer/15 pt-2 sm:pt-0 sm:pl-3">
-            <span className="text-xs font-mono text-secondary">
+            <span className="text-[10px] font-mono uppercase text-secondary">
               {currentStage.metricLabel}
             </span>
             <span
@@ -428,7 +427,7 @@ export function HeroMissionEngine() {
             </span>
             <span className="text-[10px] text-moss font-mono mt-0.5 inline-flex items-center gap-1">
               <span className="size-1.5 rounded-full bg-moss" />
-              Engine active
+              Engine Active
             </span>
           </div>
         </motion.div>

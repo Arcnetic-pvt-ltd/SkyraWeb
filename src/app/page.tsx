@@ -15,9 +15,8 @@ export default function Home() {
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center pt-1 sm:pt-2">
           {/* Left Column: Headline, Copy & CTAs */}
           <div className="lg:col-span-6 flex flex-col">
-            <div className="inline-flex items-center gap-2.5 mb-4">
-              <span className="inline-block w-2 h-2 rounded-full bg-moss"></span>
-              <span className="font-mono text-body-sm text-secondary tracking-normal font-medium">
+            <div className="inline-flex items-center gap-2 mb-4">
+              <span className="font-technical-label text-[13px] text-forest-slate uppercase tracking-wider font-semibold">
                 Rainwater harvesting &amp; groundwater recharge &middot; South India
               </span>
             </div>
@@ -63,7 +62,7 @@ export default function Home() {
               <span className="font-metric-mono-lg text-metric-mono-lg text-deep-aquifer tracking-tight">
                 1.8B
               </span>
-              <span className="font-mono text-body-sm text-secondary font-medium">
+              <span className="font-body-sm text-body-sm text-secondary font-medium">
                 Liters harvested &amp; recharged
               </span>
             </div>
@@ -102,7 +101,7 @@ export default function Home() {
 
         <div className="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-20 items-center relative z-10">
           <div className="lg:col-span-6 flex flex-col gap-6">
-            <span className="font-mono text-body-sm text-[#86b5db] font-medium">
+            <span className="font-technical-label text-[12px] uppercase tracking-wider text-[#86b5db] font-semibold">
               The hydrological reality
             </span>
             <h2 className="font-headline-h2 text-headline-h2-mobile sm:text-headline-h2 text-white leading-tight">
@@ -340,7 +339,7 @@ export default function Home() {
             <div className="lg:col-span-7 flex flex-col gap-6">
               <div className="inline-flex items-center gap-2.5">
                 <span className="w-2 h-2 rounded-full bg-moss"></span>
-                <span className="font-mono text-xs text-secondary font-medium tracking-wide">
+                <span className="font-technical-label text-[13px] text-forest-slate uppercase tracking-wider font-semibold">
                   The subterranean thesis
                 </span>
               </div>
@@ -386,10 +385,10 @@ export default function Home() {
             <div className="lg:col-span-5 flex justify-center">
               <div className="w-full max-w-md p-6 rounded-[4px] bg-white flex flex-col items-center relative overflow-hidden border border-muted-aquifer/20">
                 <div className="w-full flex items-center justify-between mb-4">
-                  <span className="font-mono text-body-sm text-secondary font-medium">
+                  <span className="font-body-sm text-body-sm text-secondary font-medium">
                     Deployment network
                   </span>
-                  <span className="font-mono text-body-sm text-moss font-semibold">
+                  <span className="font-body-sm text-body-sm text-moss font-semibold">
                     Active in southern corridors
                   </span>
                 </div>
@@ -397,7 +396,7 @@ export default function Home() {
                 <IndiaMapGraphic />
 
                 <div className="w-full pt-4 mt-2 flex items-center justify-between text-deep-aquifer border-t border-muted-aquifer/15">
-                  <span className="font-mono text-body-sm">
+                  <span className="font-body-sm text-body-sm">
                     Deep infiltration modules
                   </span>
                   <span className="font-metric-mono-lg text-[15px] font-bold text-deep-aquifer">
@@ -425,7 +424,7 @@ export default function Home() {
       {/* SECTION 5: CLOSING CTA */}
       <section className="relative w-full bg-linear-to-b from-[#edf6fa] via-[#e5f1f7] to-[#edf6fa] py-16 sm:py-24 border-t border-[#c8e0ee]/60">
         <div className="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col items-start relative z-10">
-          <span className="font-mono text-xs text-secondary font-medium tracking-wide mb-6">
+          <span className="font-technical-label text-[13px] text-forest-slate uppercase tracking-wider font-semibold mb-6">
             Begin the recharge cycle
           </span>
 

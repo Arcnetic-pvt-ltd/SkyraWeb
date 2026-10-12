@@ -57,8 +57,8 @@ export function SiteHeader() {
                 aria-current={isActive ? "page" : undefined}
                 className={
                   isActive
-                    ? "transition-colors tracking-tight text-deep-aquifer font-medium"
-                    : "font-button-text text-body-sm text-deep-aquifer/65 hover:text-deep-aquifer transition-colors tracking-tight"
+                    ? "transition-colors text-deep-aquifer font-semibold text-[15px]"
+                    : "text-[15px] font-medium text-deep-aquifer/75 hover:text-deep-aquifer transition-colors"
                 }
               >
                 {link.label}
@@ -69,7 +69,7 @@ export function SiteHeader() {
 
         <div className="flex items-center gap-3">
           <Link
-            className="hidden sm:inline-flex items-center justify-center bg-deep-aquifer hover:bg-forest-slate text-white font-button-text text-[13px] px-4 py-2.5 rounded-[6px] transition-all duration-300 tracking-tight active:scale-[0.98]"
+            className="hidden sm:inline-flex items-center justify-center bg-deep-aquifer hover:bg-forest-slate text-white font-button-text font-medium text-[14px] px-4 py-2.5 rounded-[6px] transition-all duration-300 tracking-tight active:scale-[0.98]"
             href="/contact"
             onClick={scrollToTop}
           >
@@ -99,10 +99,10 @@ export function SiteHeader() {
                   key={link.href}
                   href={link.href}
                   onClick={scrollToTop}
-                  className={`text-base font-medium transition-colors ${
+                  className={`text-[15px] transition-colors ${
                     isActive
                       ? "text-deep-aquifer font-semibold"
-                      : "text-deep-aquifer/70 hover:text-deep-aquifer"
+                      : "text-deep-aquifer/75 hover:text-deep-aquifer"
                   }`}
                 >
                   {link.label}
@@ -112,7 +112,7 @@ export function SiteHeader() {
           </nav>
           <div className="pt-2 border-t border-muted-aquifer/15">
             <Link
-              className="w-full inline-flex items-center justify-center bg-deep-aquifer hover:bg-forest-slate text-white font-button-text text-[14px] py-3 rounded-[6px] transition-all"
+              className="w-full inline-flex items-center justify-center bg-deep-aquifer hover:bg-forest-slate text-white font-button-text font-medium text-[14px] py-3 rounded-[6px] transition-all"
               href="/contact"
               onClick={scrollToTop}
             >

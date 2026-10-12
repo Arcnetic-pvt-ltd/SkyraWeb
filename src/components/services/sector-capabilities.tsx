@@ -53,16 +53,15 @@ export function SectorCapabilities() {
       <div className="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col gap-12 sm:gap-16 relative z-10">
         {/* Header */}
         <div className="flex flex-col gap-3 max-w-2xl">
-          <div className="inline-flex items-center gap-2.5">
-            <span className="inline-block w-2 h-2 rounded-full bg-moss"></span>
-            <span className="font-mono text-xs font-medium text-moss">
+          <div className="inline-flex items-center gap-2 mb-4">
+            <span className="font-technical-label text-body-sm text-moss font-semibold uppercase tracking-wider">
               Tailored engineering
             </span>
           </div>
           <h2 className="font-headline-h2 text-headline-h2-mobile sm:text-headline-h2 text-deep-aquifer tracking-tight leading-tight">
             Sector capabilities &amp; built environments
           </h2>
-          <p className="font-body-primary text-base font-normal text-deep-aquifer leading-relaxed">
+          <p className="font-body-large text-body-large text-deep-aquifer/80 leading-relaxed">
             From private high-end residences to hyper-scale commercial hubs, Skyra customizes the hydraulic profile to match the exact physical and environmental demands of each sector.
           </p>
         </div>

@@ -42,25 +42,24 @@ export default function RainsinkProductPage() {
         </div>
 
         <div className="flex flex-col gap-6 max-w-3xl">
-          <div className="inline-flex items-center gap-2.5">
-            <span className="w-2.5 h-2.5 rounded-full bg-moss"></span>
-            <span className="font-mono text-xs text-moss font-medium">
+          <div className="inline-flex items-center gap-2 mb-4">
+            <span className="font-technical-label text-[13px] text-forest-slate uppercase tracking-wider font-semibold">
               Flagship hydrological engine &middot; Skyra Rainsink
             </span>
           </div>
 
-          <h1 className="font-headline-hero text-[38px] sm:text-5xl lg:text-[56px] font-bold text-deep-aquifer tracking-tight leading-tight">
+          <h1 className="font-headline-hero text-headline-hero-mobile sm:text-headline-hero text-deep-aquifer tracking-tight leading-tight">
             High-capacity rain percolator &amp; groundwater recharge unit
           </h1>
 
-          <p className="font-body-primary text-base font-normal text-deep-aquifer leading-relaxed">
+          <p className="font-body-large text-body-large text-deep-aquifer/85 leading-relaxed">
             Skyra Rainsink transforms intense monsoonal surface runoff into lasting groundwater reserves. Built from heavy-duty pre-cast RCC rings and multi-stage natural silica filter media, it intercepts high-volume stormwater, purifies suspended sediments, and actively recharges subterranean aquifers.
           </p>
 
           <div className="pt-2 flex flex-wrap items-center gap-4">
             <Link
               href="/contact?product=rainsink"
-              className="inline-flex items-center gap-2.5 bg-deep-aquifer hover:bg-forest-slate text-white font-button-text font-semibold text-button-text px-7 py-3.5 rounded-[6px] transition-all duration-300 group"
+              className="inline-flex items-center gap-2.5 bg-deep-aquifer hover:bg-forest-slate text-white font-medium text-[15px] px-7 py-3.5 rounded-[6px] transition-colors group"
             >
               <span>Get site survey &amp; pricing</span>
               <span className="material-symbols-outlined text-[18px] group-hover:translate-x-1 transition-transform">
@@ -69,7 +68,7 @@ export default function RainsinkProductPage() {
             </Link>
             <a
               href="#technical-specs"
-              className="font-button-text font-semibold text-button-text text-forest-slate hover:text-deep-aquifer transition-colors inline-flex items-center gap-2 py-3 px-4 rounded-[6px] border border-muted-aquifer/30 bg-white"
+              className="font-medium text-[15px] text-forest-slate hover:text-deep-aquifer transition-colors inline-flex items-center gap-2 py-3 px-4 rounded-[6px] border border-muted-aquifer/30 bg-white"
             >
               <span>Engineering specifications</span>
               <span className="material-symbols-outlined text-[18px]">

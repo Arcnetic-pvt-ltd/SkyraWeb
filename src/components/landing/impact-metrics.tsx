@@ -90,16 +90,15 @@ export function ImpactMetrics() {
     <section className="relative w-full bg-light-aquifer-canvas py-16 sm:py-24 border-t border-muted-aquifer/15" id="impact">
       <div className="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col gap-12 sm:gap-16 relative z-10">
         <div className="flex flex-col gap-3 max-w-2xl">
-          <div className="inline-flex items-center gap-2.5">
-            <span className="inline-block w-2 h-2 rounded-full bg-moss"></span>
-            <span className="font-mono text-xs font-medium text-moss">
+          <div className="inline-flex items-center gap-2 mb-4">
+            <span className="font-technical-label text-[13px] text-forest-slate uppercase tracking-wider font-semibold">
               Measurable restoration
             </span>
           </div>
           <h2 className="font-headline-h2 text-headline-h2-mobile sm:text-headline-h2 text-deep-aquifer tracking-tight leading-tight">
             Impact metrics
           </h2>
-          <p className="font-body-primary text-base font-normal text-deep-aquifer leading-relaxed">
+          <p className="font-body-large text-body-large text-deep-aquifer/80 leading-relaxed">
             Our interventions are designed to create rippling positive effects across the ecosystem. Data drives our design.
           </p>
         </div>

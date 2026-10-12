@@ -51,19 +51,18 @@ export default function AboutPage() {
       <section className="relative z-10 w-full pt-28 pb-16 sm:pt-32 sm:pb-24">
         <div className="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex flex-col gap-6 max-w-3xl">
-            <div className="inline-flex items-center gap-2.5">
-              <span className="inline-block w-2 h-2 rounded-full bg-moss"></span>
-              <span className="font-mono text-xs text-moss font-medium">
+            <div className="inline-flex items-center gap-2 mb-4">
+              <span className="font-technical-label text-[12px] text-forest-slate uppercase tracking-wider font-semibold">
                 Our foundation &amp; philosophy
               </span>
             </div>
-            <h1 className="font-headline-hero text-[38px] sm:text-5xl lg:text-[56px] font-bold text-deep-aquifer tracking-tight leading-tight">
+            <h1 className="font-headline-hero text-headline-hero-mobile sm:text-headline-hero text-deep-aquifer tracking-tight leading-tight">
               The Skyra mission
             </h1>
-            <p className="font-body-primary text-lg sm:text-xl font-normal text-deep-aquifer/80 leading-relaxed">
+            <p className="font-headline-h2 text-headline-h2-mobile sm:text-headline-h2 text-deep-aquifer/85 font-normal leading-tight">
               Reclaiming India’s seasonal downpours to build generational water independence.
             </p>
-            <p className="font-body-primary text-base font-normal text-deep-aquifer leading-relaxed">
+            <p className="font-body-large text-body-large text-deep-aquifer/80 leading-relaxed">
               Founded in Kalamassery, Kochi, Skyra re-engineers urban and commercial land into natural, high-yield subterranean water reservoirs — replacing temporary tanker reliance with lasting aquifer resilience.
             </p>
           </div>
@@ -76,10 +75,10 @@ export default function AboutPage() {
         <div className="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 md:grid-cols-12 gap-12 md:gap-16 items-start">
             <div className="md:col-span-7 space-y-6">
-              <span className="font-mono text-xs text-moss font-medium block">
+              <span className="font-technical-label text-[12px] uppercase tracking-wider font-semibold text-moss block">
                 01 • The problem we solve
               </span>
-              <h2 className="font-headline-h2 text-[28px] sm:text-[36px] font-semibold text-deep-aquifer tracking-tight">
+              <h2 className="font-headline-h2 text-headline-h2-mobile sm:text-headline-h2 text-deep-aquifer tracking-tight">
                 Architectural scarcity vs. atmospheric bounty
               </h2>
               <p className="font-body-primary text-base font-normal text-deep-aquifer leading-relaxed">
@@ -234,10 +233,10 @@ export default function AboutPage() {
             </div>
 
             <div className="md:col-span-7 order-1 md:order-2 space-y-6">
-              <span className="font-mono text-xs text-moss font-medium block">
+              <span className="font-technical-label text-[12px] uppercase tracking-wider font-semibold text-moss block">
                 02 • Our technical approach
               </span>
-              <h2 className="font-headline-h2 text-[28px] sm:text-[36px] font-semibold text-deep-aquifer tracking-tight">
+              <h2 className="font-headline-h2 text-headline-h2-mobile sm:text-headline-h2 text-deep-aquifer tracking-tight">
                 Passive infiltration &amp; soil hydrology
               </h2>
               <p className="font-body-primary text-base font-normal text-deep-aquifer leading-relaxed">
@@ -257,10 +256,10 @@ export default function AboutPage() {
         <div className="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="space-y-12">
             <div className="space-y-4 max-w-3xl">
-              <span className="font-mono text-xs text-moss font-medium block">
+              <span className="font-technical-label text-[12px] uppercase tracking-wider font-semibold text-moss block">
                 03 • Regional standards &amp; hydro-geological compliance
               </span>
-              <h2 className="font-headline-h2 text-[28px] sm:text-[36px] font-semibold text-deep-aquifer tracking-tight">
+              <h2 className="font-headline-h2 text-headline-h2-mobile sm:text-headline-h2 text-deep-aquifer tracking-tight">
                 Engineered for South India’s soil strata &amp; groundwater guidelines
               </h2>
               <p className="font-body-primary text-base font-normal text-deep-aquifer leading-relaxed">
@@ -454,19 +453,19 @@ export default function AboutPage() {
       {/* SECTION 4: CLOSING MANDATE */}
       <section className="relative z-10 w-full bg-linear-to-b from-[#edf6fa] via-[#e5f1f7] to-[#edf6fa] text-deep-aquifer py-16 sm:py-24 border-t border-[#c8e0ee]/60">
         <div className="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-left flex flex-col items-start gap-6 sm:gap-8">
-          <span className="font-mono text-xs text-moss font-medium">
+          <span className="font-technical-label text-[12px] uppercase tracking-wider font-semibold text-moss">
             The mandate
           </span>
-          <blockquote className="font-headline-h2 text-[28px] sm:text-[36px] font-semibold text-deep-aquifer max-w-2xl tracking-tight">
+          <blockquote className="font-headline-h2 text-headline-h2-mobile sm:text-headline-h2 font-semibold text-deep-aquifer max-w-2xl tracking-tight">
             “Water security is not an emergency response. It is engineered infrastructure.”
           </blockquote>
-          <p className="font-body-primary text-base font-normal text-deep-aquifer max-w-[48ch] leading-relaxed">
+          <p className="font-body-large text-body-large text-deep-aquifer max-w-[48ch] leading-relaxed">
             We partner with landowners, institutional leaders, and civil developers who plan half a century ahead.
           </p>
           <div className="flex flex-col sm:flex-row items-center gap-4 pt-2">
             <Link
               href="/contact"
-              className="inline-flex items-center justify-center bg-deep-aquifer hover:bg-forest-slate text-white font-button-text font-semibold text-button-text px-8 py-3.5 rounded-[6px] transition-all duration-300"
+              className="inline-flex items-center justify-center bg-deep-aquifer hover:bg-forest-slate text-white font-medium text-[15px] px-8 py-3.5 rounded-[6px] transition-colors"
             >
               Start a conversation
             </Link>

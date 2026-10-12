@@ -35,16 +35,15 @@ export default function ContactPage() {
             {/* Left Column */}
             <div className="lg:col-span-5 flex flex-col justify-between pt-2 lg:pt-6">
               <div className="flex flex-col">
-                <div className="inline-flex items-center gap-2.5 mb-5">
-                  <span className="inline-block h-2 w-2 rounded-full bg-moss"></span>
-                  <span className="font-mono text-xs font-medium text-forest-slate">
+                <div className="inline-flex items-center gap-2 mb-4">
+                  <span className="font-technical-label text-[13px] text-forest-slate uppercase tracking-wider font-semibold">
                     Direct hydrological consultation
                   </span>
                 </div>
-                <h1 className="font-headline-hero text-[38px] sm:text-5xl lg:text-[56px] font-bold text-deep-aquifer leading-[1.08] tracking-tight">
+                <h1 className="font-headline-hero text-headline-hero-mobile sm:text-headline-hero text-deep-aquifer leading-[1.08] tracking-tight">
                   Start your water resilience journey
                 </h1>
-                <p className="mt-6 font-body-primary text-base font-normal text-deep-aquifer leading-relaxed">
+                <p className="mt-5 font-body-large text-body-large text-deep-aquifer/85 leading-relaxed font-normal">
                   Tell us a bit about your property, and we’ll show you what’s possible — no pressure, just a conversation.
                 </p>
 

@@ -28,7 +28,7 @@ export function HowItWorks() {
           <div className="lg:col-span-7 flex flex-col gap-6">
             <div className="inline-flex items-center gap-2.5">
               <span className="w-2 h-2 rounded-full bg-moss"></span>
-              <span className="font-mono text-xs text-secondary font-medium tracking-wide uppercase">
+              <span className="font-technical-label text-[12px] text-forest-slate uppercase tracking-wider font-semibold">
                 How we work
               </span>
             </div>

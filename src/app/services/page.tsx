@@ -15,14 +15,13 @@ export default function ServicesPage() {
       {/* Top Section: Editorial Header */}
       <section className="w-full pt-28 pb-16 sm:pt-32 sm:pb-24">
         <div className="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col gap-6">
-          <span className="inline-flex items-center gap-2 font-mono text-xs tracking-wide text-moss font-medium">
-            <span className="w-2 h-2 rounded-full bg-moss"></span>
+          <span className="inline-flex items-center gap-2 font-technical-label text-[13px] uppercase tracking-wider text-forest-slate font-semibold">
             Systems &amp; architecture
           </span>
           <h1 className="font-headline-hero text-headline-hero-mobile sm:text-headline-hero text-deep-aquifer tracking-tight text-balance max-w-3xl">
             Core water management solutions
           </h1>
-          <p className="font-body-primary text-base font-normal text-deep-aquifer leading-relaxed max-w-2xl text-balance">
+          <p className="font-body-large text-body-large text-deep-aquifer/85 leading-relaxed max-w-2xl text-balance">
             Three natural, engineering-grade approaches to catching, filtering, and storing water where it falls.
           </p>
         </div>
@@ -42,7 +41,7 @@ export default function ServicesPage() {
               <h2 className="font-headline-h2 text-headline-h2-mobile sm:text-headline-h2 text-deep-aquifer tracking-tight">
                 Site-specific rainwater harvesting
               </h2>
-              <p className="font-body-primary text-base font-normal text-deep-aquifer leading-relaxed">
+              <p className="font-body-large text-body-large text-deep-aquifer/80 leading-relaxed">
                 We design your property to catch its own water &mdash; filtered, stored, and ready to use &mdash; so you rely a little less on the tanker or the municipal line, and the ground beneath you gets a little healthier every monsoon.
               </p>
               <div className="pt-2 flex flex-col gap-3 font-mono text-xs text-deep-aquifer">
@@ -171,7 +170,7 @@ export default function ServicesPage() {
               <h2 className="font-headline-h2 text-headline-h2-mobile sm:text-headline-h2 text-deep-aquifer tracking-tight">
                 Stormwater management solutions
               </h2>
-              <p className="font-body-primary text-base font-normal text-deep-aquifer leading-relaxed">
+              <p className="font-body-large text-body-large text-deep-aquifer/80 leading-relaxed">
                 When the rain comes hard and fast, we make sure it has somewhere good to go &mdash; routed safely away from your building, and guided toward the aquifers that need it, instead of flooding the street.
               </p>
               <div className="pt-2 flex flex-col gap-3 font-mono text-xs text-deep-aquifer">
@@ -227,7 +226,7 @@ export default function ServicesPage() {
               >
                 Afforestation &amp; Miyawaki forests
               </h2>
-              <p className="font-body-primary text-base font-normal text-light-aquifer-canvas/90 leading-relaxed">
+              <p className="font-body-large text-body-large text-light-aquifer-canvas/85 leading-relaxed">
                 On land that’s gone bare, we bring back dense, native forest &mdash; the kind that heals soil, holds water, and quietly pulls carbon from the air. It’s slow work that pays off for decades.
               </p>
               <div className="pt-2 flex flex-col gap-3 font-mono text-xs text-light-aquifer-canvas/70">
@@ -277,7 +276,7 @@ export default function ServicesPage() {
                   <path d="M 270 132 L 265 175" opacity="0.8" stroke="#F8FCFE" strokeLinecap="round" strokeWidth="2" />
 
                   <rect fill="#cbef85" height="4" opacity="0.6" width="380" x="40" y="174" />
-                  <text fill="#cbef85" fontFamily="Geist Mono, monospace" fontSize="10" letterSpacing="0.05em" x="45" y="167">ORGANIC SPONGE LAYER</text>
+                  <text fill="#cbef85" fontFamily="Space Mono, monospace" fontSize="10" letterSpacing="0.05em" x="45" y="167">ORGANIC SPONGE LAYER</text>
 
                   <g fill="none" stroke="#cbef85" strokeLinecap="round">
                     <path d="M 215 178 C 215 210 200 240 205 285" opacity="0.9" strokeWidth="2.5" />
@@ -299,7 +298,7 @@ export default function ServicesPage() {
                   <circle cx="130" cy="265" fill="#cbef85" r="3">
                     <animate attributeName="opacity" begin="1.2s" dur="3.5s" repeatCount="indefinite" values="0.2;0.8;0.2" />
                   </circle>
-                  <text fill="#F8FCFE" fontFamily="Geist Mono, monospace" fontSize="9" opacity="0.5" x="320" y="240">IN SITU CARBON SINK</text>
+                  <text fill="#F8FCFE" fontFamily="Space Mono, monospace" fontSize="9" opacity="0.5" x="320" y="240">IN SITU CARBON SINK</text>
                 </svg>
               </div>
             </div>
