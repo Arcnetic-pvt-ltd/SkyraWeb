@@ -90,36 +90,43 @@ export function SiteHeader() {
       </div>
 
       {open && (
-        <div className="md:hidden fixed inset-x-4 top-24 z-50 rounded-[4px] bg-white p-6 border border-muted-aquifer/20 flex flex-col gap-5">
-          <nav className="flex flex-col gap-4">
-            {NAV_LINKS.map((link) => {
-              const isActive = pathname === link.href;
-              return (
-                <Link
-                  key={link.href}
-                  href={link.href}
-                  onClick={scrollToTop}
-                  className={`text-[15px] transition-colors ${
-                    isActive
-                      ? "text-deep-aquifer font-semibold"
-                      : "text-deep-aquifer/75 hover:text-deep-aquifer"
-                  }`}
-                >
-                  {link.label}
-                </Link>
-              );
-            })}
-          </nav>
-          <div className="pt-2 border-t border-muted-aquifer/15">
-            <Link
-              className="w-full inline-flex items-center justify-center bg-deep-aquifer hover:bg-forest-slate text-white font-button-text font-medium text-[14px] py-3 rounded-[6px] transition-all"
-              href="/contact"
-              onClick={scrollToTop}
-            >
-              Start a conversation
-            </Link>
+        <>
+          <div
+            className="md:hidden fixed inset-0 bg-black/25 backdrop-blur-xs z-40"
+            onClick={() => setOpen(false)}
+            aria-hidden="true"
+          />
+          <div className="md:hidden fixed inset-x-4 top-24 z-50 rounded-[8px] bg-white p-6 border border-muted-aquifer/20 shadow-2xl flex flex-col gap-5 animate-in fade-in slide-in-from-top-2 duration-200">
+            <nav className="flex flex-col gap-4">
+              {NAV_LINKS.map((link) => {
+                const isActive = pathname === link.href;
+                return (
+                  <Link
+                    key={link.href}
+                    href={link.href}
+                    onClick={scrollToTop}
+                    className={`text-[15px] transition-colors py-1 ${
+                      isActive
+                        ? "text-deep-aquifer font-semibold"
+                        : "text-deep-aquifer/75 hover:text-deep-aquifer"
+                    }`}
+                  >
+                    {link.label}
+                  </Link>
+                );
+              })}
+            </nav>
+            <div className="pt-2 border-t border-muted-aquifer/15">
+              <Link
+                className="w-full inline-flex items-center justify-center bg-deep-aquifer hover:bg-forest-slate text-white font-button-text font-medium text-[14px] py-3 rounded-[6px] transition-all"
+                href="/contact"
+                onClick={scrollToTop}
+              >
+                Start a conversation
+              </Link>
+            </div>
           </div>
-        </div>
+        </>
       )}
     </header>
   );

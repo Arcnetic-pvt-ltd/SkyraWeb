@@ -204,8 +204,8 @@ export function ProductCatalogCarousel() {
       >
         {/* Desktop Grid Layout: Static Catalog Overview (5 Cols on Left) + Hero Spotlight Card (7 Cols on Right) */}
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-4 lg:gap-5 items-stretch">
-          {/* Static Side Stack of Other Products in Catalog (5 Cols - Left) */}
-          <div className="lg:col-span-5 flex flex-col gap-1.5">
+          {/* Static Side Stack of Other Products in Catalog (5 Cols - Left, stacked below on mobile) */}
+          <div className="lg:col-span-5 flex flex-col gap-1.5 order-last lg:order-first">
             <span className="font-mono text-[11px] text-muted-aquifer font-medium">
               Catalog overview ({total} models)
             </span>

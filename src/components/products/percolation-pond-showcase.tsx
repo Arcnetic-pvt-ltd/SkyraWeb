@@ -345,7 +345,7 @@ export function PercolationPondShowcase() {
                     key={item.id}
                     type="button"
                     onClick={() => setActiveAnatomy(item.id)}
-                    className={`p-2 rounded-[4px] text-left transition-all flex flex-col gap-0.5 border cursor-pointer ${
+                    className={`p-2 rounded-[4px] text-left transition-all flex flex-col justify-between gap-0.5 min-h-[50px] sm:min-h-[46px] border cursor-pointer ${
                       isSelected
                         ? "bg-deep-aquifer text-white border-deep-aquifer shadow-xs"
                         : "bg-[#F8FCFE] hover:bg-[#EFF6FA] text-deep-aquifer border-muted-aquifer/25"
@@ -354,7 +354,7 @@ export function PercolationPondShowcase() {
                     <span className={`text-[9.5px] ${isSelected ? "text-moss font-semibold" : "text-muted-aquifer"}`}>
                       {item.number}
                     </span>
-                    <span className="font-medium truncate text-[11.5px]">{item.title}</span>
+                    <span className="font-medium line-clamp-2 leading-tight text-[11px] sm:text-[11.5px]">{item.title}</span>
                   </button>
                 );
               })}

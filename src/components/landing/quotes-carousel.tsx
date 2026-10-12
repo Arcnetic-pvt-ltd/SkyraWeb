@@ -68,7 +68,7 @@ export function QuotesCarousel() {
           </span>
         </div>
 
-        <div className="w-full grid grid-cols-1 grid-rows-1 items-start min-h-[140px] sm:min-h-[120px]">
+        <div className="w-full grid grid-cols-1 grid-rows-1 items-start min-h-[160px] sm:min-h-[120px]">
           {QUOTES.map((item, idx) => {
             const isActive = idx === activeIndex;
 
@@ -81,7 +81,7 @@ export function QuotesCarousel() {
                     : "opacity-0 pointer-events-none"
                 }`}
               >
-                <blockquote className="font-headline-h2 text-headline-h2-mobile sm:text-headline-h2 text-white font-normal leading-snug tracking-tight min-h-[4.5rem] sm:min-h-[5.5rem]">
+                <blockquote className="font-headline-h2 text-headline-h2-mobile sm:text-headline-h2 text-white font-normal leading-snug tracking-tight min-h-[5.5rem] sm:min-h-[5.5rem]">
                   {item.quote}
                 </blockquote>
 

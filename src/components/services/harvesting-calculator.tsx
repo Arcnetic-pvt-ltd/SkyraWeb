@@ -125,7 +125,7 @@ export function HarvestingCalculator() {
                 </div>
               </div>
 
-              <div className="flex items-center gap-4">
+              <div className="flex flex-wrap sm:flex-nowrap items-center gap-2.5 sm:gap-4">
                 <input
                   id={areaInputId}
                   type="number"

@@ -29,16 +29,16 @@ export default function Home() {
               We catch the rain on your roof and grounds and return it to the earth where it lasts. Turn-key rainwater harvesting, groundwater recharge, and percolation systems for homes, apartments, industries, and campuses across Kerala, Karnataka, and Tamil Nadu.
             </p>
 
-            <div className="mt-6 flex flex-wrap items-center gap-3">
+            <div className="mt-6 flex flex-col sm:flex-row items-stretch sm:items-center gap-3 w-full sm:w-auto">
               <Link
                 href="/contact?query=site-survey"
-                className="inline-flex items-center justify-center bg-deep-aquifer hover:bg-forest-slate text-light-aquifer-canvas font-button-text text-button-text px-6 py-3 rounded-[6px] transition-colors"
+                className="w-full sm:w-auto inline-flex items-center justify-center bg-deep-aquifer hover:bg-forest-slate text-light-aquifer-canvas font-button-text text-button-text px-6 py-3 rounded-[6px] transition-colors"
               >
                 Book a site survey
               </Link>
               <Link
                 href="/services"
-                className="font-button-text text-button-text text-deep-aquifer hover:text-forest-slate transition-colors inline-flex items-center gap-2 py-3 px-5 border border-muted-aquifer/30 bg-white rounded-[6px]"
+                className="w-full sm:w-auto font-button-text text-button-text text-deep-aquifer hover:text-forest-slate transition-colors inline-flex items-center justify-center gap-2 py-3 px-5 border border-muted-aquifer/30 bg-white rounded-[6px]"
               >
                 <span>Explore solutions</span>
                 <span className="material-symbols-outlined text-[18px]">

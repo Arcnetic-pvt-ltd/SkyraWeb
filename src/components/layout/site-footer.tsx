@@ -59,7 +59,7 @@ export function SiteFooter() {
         </div>
 
         {/* Sub-Footer: Powered by Arcnetic */}
-        <div className="pt-6 flex flex-col sm:flex-row items-center justify-between gap-2 text-[13px] text-light-aquifer-canvas/50">
+        <div className="pt-6 flex flex-col sm:flex-row items-center justify-between gap-3 text-[13px] text-light-aquifer-canvas/50 text-center sm:text-left">
           <span>Rainwater harvesting and groundwater recharge across India</span>
           <span className="sm:pr-36 xl:pr-0">Powered by Arcnetic</span>
         </div>

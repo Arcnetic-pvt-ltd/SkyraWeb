@@ -57,10 +57,10 @@ export default function RainsinkProductPage() {
             Skyra Rainsink transforms intense monsoonal surface runoff into lasting groundwater reserves. Built from heavy-duty pre-cast RCC rings and multi-stage natural silica filter media, it intercepts high-volume stormwater, purifies suspended sediments, and actively recharges subterranean aquifers.
           </p>
 
-          <div className="pt-2 flex flex-wrap items-center gap-4">
+          <div className="pt-2 flex flex-col sm:flex-row items-stretch sm:items-center gap-3 sm:gap-4 w-full sm:w-auto">
             <Link
               href="/contact?product=rainsink"
-              className="inline-flex items-center justify-center gap-2.5 bg-deep-aquifer hover:bg-forest-slate text-white font-medium text-[15px] px-7 py-3.5 min-h-[48px] rounded-[6px] border border-transparent transition-colors group cursor-pointer"
+              className="w-full sm:w-auto inline-flex items-center justify-center gap-2.5 bg-deep-aquifer hover:bg-forest-slate text-white font-medium text-[15px] px-7 py-3.5 min-h-[48px] rounded-[6px] border border-transparent transition-colors group cursor-pointer"
             >
               <span>Get site survey &amp; pricing</span>
               <span className="material-symbols-outlined text-[18px] group-hover:translate-x-1 transition-transform">
@@ -69,7 +69,7 @@ export default function RainsinkProductPage() {
             </Link>
             <a
               href="#technical-specs"
-              className="inline-flex items-center justify-center gap-2 bg-white hover:bg-slate-50 text-forest-slate hover:text-deep-aquifer font-medium text-[15px] px-6 py-3.5 min-h-[48px] rounded-[6px] border border-muted-aquifer/30 transition-colors cursor-pointer"
+              className="w-full sm:w-auto inline-flex items-center justify-center gap-2 bg-white hover:bg-slate-50 text-forest-slate hover:text-deep-aquifer font-medium text-[15px] px-6 py-3.5 min-h-[48px] rounded-[6px] border border-muted-aquifer/30 transition-colors cursor-pointer"
             >
               <span>Engineering specifications</span>
               <span className="material-symbols-outlined text-[18px]">
