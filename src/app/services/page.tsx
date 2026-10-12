@@ -13,7 +13,7 @@ export default function ServicesPage() {
   return (
     <div className="flex flex-col w-full">
       {/* Top Section: Editorial Header */}
-      <section className="w-full pt-28 pb-16 sm:pt-32 sm:pb-24">
+      <section className="w-full pt-28 pb-16 sm:pt-32 sm:pb-24 bg-linear-to-b from-[#dceef8] via-[#e8f4fa] to-[#f2f8fc]">
         <div className="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col gap-6">
           <span className="inline-flex items-center gap-2 font-technical-label text-[13px] uppercase tracking-wider text-forest-slate font-semibold">
             Systems &amp; architecture

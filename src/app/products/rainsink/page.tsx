@@ -25,7 +25,7 @@ export default function RainsinkProductPage() {
   return (
     <div className="flex flex-col w-full overflow-hidden">
       {/* Top Editorial Banner */}
-      <section className="relative z-10 w-full pt-28 pb-16 sm:pt-32 sm:pb-24">
+      <section className="relative z-10 w-full pt-28 pb-16 sm:pt-32 sm:pb-24 bg-linear-to-b from-[#dceef8] via-[#e8f4fa] to-[#f2f8fc]">
         <div className="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
         {/* Subtle Atmospheric Rainfall Accent Overlay */}
         <div aria-hidden="true" className="absolute top-0 right-0 w-full sm:w-1/2 h-full z-[-1] pointer-events-none overflow-hidden select-none opacity-20">
