@@ -76,15 +76,6 @@ export default function RainsinkProductPage() {
                 arrow_downward
               </span>
             </a>
-            <a
-              href="#percolation-pond"
-              className="inline-flex items-center justify-center gap-2 bg-white hover:bg-slate-50 text-forest-slate hover:text-deep-aquifer font-medium text-[15px] px-6 py-3.5 min-h-[48px] rounded-[6px] border border-muted-aquifer/30 transition-colors cursor-pointer"
-            >
-              <span>Percolation pond system</span>
-              <span className="material-symbols-outlined text-[18px]">
-                waves
-              </span>
-            </a>
           </div>
         </div>
         </div>

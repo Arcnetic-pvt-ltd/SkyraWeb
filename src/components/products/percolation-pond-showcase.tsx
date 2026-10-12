@@ -120,6 +120,7 @@ export function PercolationPondShowcase() {
   const [activeAnatomy, setActiveAnatomy] = useState<string>("drm-walls");
   const [activeSector, setActiveSector] = useState<string>("industries");
   const [isModalOpen, setIsModalOpen] = useState(false);
+  const [isZoomed, setIsZoomed] = useState(false);
   const [mounted, setMounted] = useState(false);
 
   useEffect(() => {
@@ -137,6 +138,7 @@ export function PercolationPondShowcase() {
       window.addEventListener("keydown", handleKeyDown);
     } else {
       document.body.style.overflow = "";
+      setIsZoomed(false);
     }
     return () => {
       document.body.style.overflow = "";
@@ -152,37 +154,24 @@ export function PercolationPondShowcase() {
   return (
     <div className="flex flex-col gap-12 sm:gap-16">
       {/* Section Header */}
-      <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-6 pb-6 border-b border-muted-aquifer/20">
-        <div className="flex flex-col gap-3 max-w-3xl">
-          <div className="flex flex-wrap items-center gap-2">
-            <span className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-[4px] bg-[#eef7fb] border border-[#bcd7e8]/60 text-moss font-mono text-[11px] font-semibold tracking-wide">
-              <span className="size-1.5 rounded-full bg-moss inline-block" />
-              MACRO-CATCHMENT HYDROLOGY
-            </span>
-            <span className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-[4px] bg-white border border-[#bcd7e8]/60 text-forest-slate font-mono text-[11px] font-medium">
-              DRY RUBBLE MASONRY (DRM)
-            </span>
-          </div>
-
-          <h2 className="font-headline-h2 text-[28px] sm:text-[34px] lg:text-[38px] font-semibold text-deep-aquifer tracking-tight leading-tight">
-            Percolation Pond &middot; Capture &bull; Filter &bull; Recharge
-          </h2>
-
-          <p className="font-body-large text-base sm:text-[17px] text-deep-aquifer/85 leading-relaxed">
-            Turning monsoonal stormwater runoff into an engineered, sustainable source for groundwater. For large campuses and wide catchments, Skyra pairs modular Rainsink shafts with Dry Rubble Masonry (DRM) percolation ponds to handle massive flood surges and actively restore regional aquifers.
-          </p>
+      <div className="flex flex-col gap-3 max-w-3xl pb-6 border-b border-muted-aquifer/20">
+        <div className="flex flex-wrap items-center gap-2">
+          <span className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-[4px] bg-[#eef7fb] border border-[#bcd7e8]/60 text-moss font-mono text-[11px] font-semibold tracking-wide">
+            <span className="size-1.5 rounded-full bg-moss inline-block" />
+            MACRO-CATCHMENT HYDROLOGY
+          </span>
+          <span className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-[4px] bg-white border border-[#bcd7e8]/60 text-forest-slate font-mono text-[11px] font-medium">
+            DRY RUBBLE MASONRY (DRM)
+          </span>
         </div>
 
-        <div className="flex items-center gap-3 shrink-0">
-          <button
-            type="button"
-            onClick={() => setIsModalOpen(true)}
-            className="inline-flex items-center gap-2 px-4 py-2.5 rounded-[6px] bg-white hover:bg-[#F2F8FB] border border-muted-aquifer/30 text-deep-aquifer text-xs sm:text-[13px] font-medium font-mono transition-colors cursor-pointer shadow-xs"
-          >
-            <span className="material-symbols-outlined text-[17px] text-moss">zoom_in</span>
-            <span>View full diagram</span>
-          </button>
-        </div>
+        <h2 className="font-headline-h2 text-[28px] sm:text-[34px] lg:text-[38px] font-semibold text-deep-aquifer tracking-tight leading-tight">
+          Percolation Pond &middot; Capture &bull; Filter &bull; Recharge
+        </h2>
+
+        <p className="font-body-large text-base sm:text-[17px] text-deep-aquifer/85 leading-relaxed">
+          Turning monsoonal stormwater runoff into an engineered, sustainable source for groundwater. For large campuses and wide catchments, Skyra pairs modular Rainsink shafts with Dry Rubble Masonry (DRM) percolation ponds to handle massive flood surges and actively restore regional aquifers.
+        </p>
       </div>
 
       {/* 3 Core Benefit Pillars (Matching Top Infographic Badges) */}
@@ -274,7 +263,7 @@ export function PercolationPondShowcase() {
         {/* Left 7 Columns: Visual Diagram Container */}
         <div className="lg:col-span-7 flex flex-col gap-4">
           <div className="relative rounded-[6px] border border-muted-aquifer/30 bg-white p-3 sm:p-4 shadow-sm overflow-hidden flex flex-col group">
-            {/* Top Bar with Status and Quick Controls */}
+            {/* Top Bar with Status */}
             <div className="flex items-center justify-between pb-3 mb-2 border-b border-muted-aquifer/15 font-mono text-xs">
               <div className="flex items-center gap-2 text-deep-aquifer">
                 <span className="size-2 rounded-full bg-moss animate-pulse" />
@@ -282,21 +271,13 @@ export function PercolationPondShowcase() {
                   SYSTEM SCHEMATIC: DRY RUBBLE MASONRY PERCOLATION POND
                 </span>
               </div>
-              <button
-                type="button"
-                onClick={() => setIsModalOpen(true)}
-                className="text-forest-slate hover:text-deep-aquifer text-[11px] inline-flex items-center gap-1 font-mono transition-colors cursor-pointer"
-              >
-                <span>Click to enlarge</span>
-                <span className="material-symbols-outlined text-[15px]">open_in_full</span>
-              </button>
             </div>
 
             {/* Clickable Image View */}
             <div
               onClick={() => setIsModalOpen(true)}
-              className="relative w-full aspect-[1024/935] cursor-zoom-in rounded-[4px] overflow-hidden bg-slate-50 transition-transform duration-300 hover:scale-[1.01]"
-              title="Click to view full-size high-resolution diagram"
+              className="relative w-full aspect-[1024/935] cursor-pointer rounded-[4px] overflow-hidden bg-slate-50 transition-transform duration-300 hover:scale-[1.005]"
+              title="Click diagram to view enlarged"
             >
               <Image
                 src="/images/percolation-pond-infographic.jpg"
@@ -619,25 +600,35 @@ export function PercolationPondShowcase() {
           <div
             role="dialog"
             aria-modal="true"
-            className="fixed inset-0 z-[9999] flex items-center justify-center p-3 sm:p-6 bg-deep-aquifer/85 backdrop-blur-sm animate-fade-in"
+            className="fixed inset-0 z-[9999] flex items-center justify-center p-3 sm:p-5 bg-deep-aquifer/85 backdrop-blur-sm animate-fade-in"
             onClick={() => setIsModalOpen(false)}
           >
             <div
-              className="relative w-full max-w-4xl max-h-[92vh] bg-white rounded-[8px] p-4 sm:p-5 shadow-2xl flex flex-col overflow-hidden"
+              className="relative w-full max-w-5xl max-h-[94vh] bg-white rounded-[8px] p-4 sm:p-5 shadow-2xl flex flex-col overflow-hidden"
               onClick={(e) => e.stopPropagation()}
             >
               {/* Modal Header */}
-              <div className="flex items-center justify-between pb-3 mb-2 border-b border-muted-aquifer/20 shrink-0">
+              <div className="flex items-center justify-between pb-3 mb-2 border-b border-muted-aquifer/20 shrink-0 gap-3">
                 <div className="flex flex-col">
                   <div className="flex items-center gap-2">
-                    <span className="font-headline-h3 text-lg sm:text-xl font-semibold text-deep-aquifer">
+                    <span className="font-headline-h3 text-base sm:text-lg font-semibold text-deep-aquifer">
                       Percolation Pond &middot; Capture &bull; Filter &bull; Recharge
                     </span>
-                    <span className="hidden sm:inline-block px-2 py-0.5 rounded-[4px] bg-[#EAF7EE] text-moss text-[11px] font-mono font-medium">
-                      High Resolution
-                    </span>
+                    <button
+                      type="button"
+                      onClick={(e) => {
+                        e.stopPropagation();
+                        setIsZoomed(!isZoomed);
+                      }}
+                      className="hidden sm:inline-flex items-center gap-1 px-2 py-0.5 rounded-[4px] bg-[#EAF7EE] hover:bg-[#d8f0df] text-moss text-[11px] font-mono font-medium transition-colors cursor-pointer"
+                    >
+                      <span className="material-symbols-outlined text-[14px]">
+                        {isZoomed ? "zoom_out" : "zoom_in"}
+                      </span>
+                      <span>{isZoomed ? "Fit to window" : "100% zoom"}</span>
+                    </button>
                   </div>
-                  <p className="text-xs text-deep-aquifer/70 font-mono mt-0.5">
+                  <p className="text-[11px] sm:text-xs text-deep-aquifer/70 font-mono mt-0.5">
                     Turning stormwater runoff into a sustainable source for groundwater.
                   </p>
                 </div>
@@ -645,7 +636,7 @@ export function PercolationPondShowcase() {
                 <button
                   type="button"
                   onClick={() => setIsModalOpen(false)}
-                  className="size-9 rounded-[4px] bg-slate-100 hover:bg-slate-200 text-deep-aquifer flex items-center justify-center transition-colors cursor-pointer"
+                  className="size-9 rounded-[4px] bg-slate-100 hover:bg-slate-200 text-deep-aquifer flex items-center justify-center transition-colors cursor-pointer shrink-0"
                   aria-label="Close modal"
                 >
                   <span className="material-symbols-outlined text-[20px]">close</span>
@@ -653,31 +644,56 @@ export function PercolationPondShowcase() {
               </div>
 
               {/* Modal Image Display */}
-              <div className="relative w-full flex-1 min-h-[300px] max-h-[calc(90vh-130px)] overflow-auto rounded-[4px] bg-[#f8fbfe] flex items-center justify-center p-2">
-                <div className="relative w-full h-full min-h-[440px] aspect-[1024/935]">
-                  <Image
-                    src="/images/percolation-pond-infographic.jpg"
-                    alt="High-resolution Percolation Pond architectural and hydrological cross section"
-                    fill
-                    className="object-contain"
-                    priority
-                  />
-                </div>
+              <div
+                className={`relative w-full flex-1 min-h-0 bg-[#f8fbfe] rounded-[4px] border border-muted-aquifer/15 ${
+                  isZoomed
+                    ? "overflow-auto p-4 flex items-start justify-center cursor-zoom-out"
+                    : "overflow-hidden p-2 sm:p-3 flex items-center justify-center cursor-zoom-in"
+                }`}
+                onClick={() => setIsZoomed(!isZoomed)}
+                title={isZoomed ? "Click to fit diagram to window" : "Click to view full size (100%)"}
+              >
+                <Image
+                  src="/images/percolation-pond-infographic.jpg"
+                  alt="High-resolution Percolation Pond architectural and hydrological cross section"
+                  width={1024}
+                  height={935}
+                  className={`object-contain transition-all duration-200 select-none ${
+                    isZoomed
+                      ? "w-[1024px] max-w-none h-auto shrink-0"
+                      : "max-h-[calc(94vh-140px)] max-w-full w-auto h-auto mx-auto"
+                  }`}
+                  priority
+                />
               </div>
 
               {/* Modal Footer */}
               <div className="mt-2.5 pt-2.5 border-t border-muted-aquifer/20 flex flex-wrap items-center justify-between gap-3 text-xs font-mono text-deep-aquifer/80 shrink-0">
                 <div className="flex items-center gap-2">
                   <span className="material-symbols-outlined text-moss text-[16px]">info</span>
-                  <span>DR Masonry Construction &bull; Porous Walls &bull; Subsurface Soil Percolation &bull; Aquifer Recharge</span>
+                  <span className="text-[11px] sm:text-xs text-muted-aquifer">
+                    {isZoomed ? "Click image to fit window" : "Click image to zoom 100%"}
+                  </span>
                 </div>
-                <button
-                  type="button"
-                  onClick={() => setIsModalOpen(false)}
-                  className="px-4 py-1.5 rounded-[4px] bg-deep-aquifer text-white text-xs font-medium hover:bg-forest-slate transition-colors cursor-pointer"
-                >
-                  Done
-                </button>
+                <div className="flex items-center gap-2">
+                  <button
+                    type="button"
+                    onClick={(e) => {
+                      e.stopPropagation();
+                      setIsZoomed(!isZoomed);
+                    }}
+                    className="sm:hidden px-3 py-1 rounded-[4px] bg-slate-100 text-deep-aquifer text-xs font-mono font-medium"
+                  >
+                    {isZoomed ? "Fit" : "Zoom"}
+                  </button>
+                  <button
+                    type="button"
+                    onClick={() => setIsModalOpen(false)}
+                    className="px-4 py-1.5 rounded-[4px] bg-deep-aquifer text-white text-xs font-medium hover:bg-forest-slate transition-colors cursor-pointer"
+                  >
+                    Done
+                  </button>
+                </div>
               </div>
             </div>
           </div>,
