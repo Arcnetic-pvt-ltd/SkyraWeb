@@ -439,15 +439,17 @@ export default function Home() {
           <div className="mt-10 flex flex-col sm:flex-row items-center gap-3 w-full sm:w-auto">
             <Link
               href="/contact"
-              className="w-full sm:w-auto inline-flex items-center justify-center bg-deep-aquifer hover:bg-forest-slate text-light-aquifer-canvas font-button-text text-button-text px-7 py-3 rounded-[6px] transition-colors"
+              className="w-full sm:w-auto inline-flex items-center justify-center gap-2 bg-deep-aquifer hover:bg-forest-slate text-light-aquifer-canvas font-button-text text-button-text px-7 py-3 rounded-[6px] transition-colors"
             >
-              Start a conversation
+              <span>Start a conversation</span>
+              <span className="material-symbols-outlined text-[18px]">arrow_outward</span>
             </Link>
             <Link
               href="/services"
-              className="w-full sm:w-auto inline-flex items-center justify-center border border-[#bcd7e8]/60 bg-white text-deep-aquifer hover:bg-[#e7f3f9] hover:border-[#748D8C] font-button-text text-button-text px-7 py-3 rounded-[6px] transition-colors"
+              className="w-full sm:w-auto inline-flex items-center justify-center gap-2 border border-[#bcd7e8]/60 bg-white text-deep-aquifer hover:bg-[#e7f3f9] hover:border-[#748D8C] font-button-text text-button-text px-7 py-3 rounded-[6px] transition-colors"
             >
-              Explore solutions
+              <span>Explore solutions</span>
+              <span className="material-symbols-outlined text-[18px]">arrow_outward</span>
             </Link>
           </div>
 
