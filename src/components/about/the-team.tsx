@@ -15,56 +15,56 @@ const TEAM = [
   {
     initials: "JD",
     tag: "Executive Council",
-    tagTone: "bg-brand-teal",
+    tagTone: "bg-muted-aquifer",
     name: "Jane Doe",
     role: "Co-Founder & Chief Executive Officer",
-    bio: "With over a decade of experience in sustainable business scaling, Jane leads the strategic vision of SkyRa, ensuring our solutions reach the communities that need them most.",
+    bio: "With over a decade of experience in sustainable business scaling, Jane leads the strategic vision of Skyra, ensuring our solutions reach the communities that need them most.",
     FooterIcon: CheckCircleIcon,
-    footer: "Policy & Strategic Scalability",
+    footer: "Policy & strategic scalability",
   },
   {
     initials: "JS",
     tag: "Fluid Dynamics • R&D",
-    tagTone: "bg-brand-green",
+    tagTone: "bg-moss",
     name: "John Smith",
     role: "Co-Founder & Head of Engineering",
     bio: "John brings deep technical expertise in fluid dynamics and civil integration, designing robust rainwater harvesting systems tailored to complex geographical layouts.",
     FooterIcon: BuildingIcon,
-    footer: "Civil Infrastructure Systems",
+    footer: "Civil infrastructure systems",
   },
   {
     initials: "JS",
     tag: "Operations • Delivery",
-    tagTone: "bg-emerald-400",
+    tagTone: "bg-moss",
     name: "Jane Smith",
     role: "Co-Founder & Director of Operations",
     bio: "Focused on seamless execution, Jane oversees our end-to-end implementation process, ensuring every project is delivered on time, with total transparency.",
     FooterIcon: WrenchIcon,
-    footer: "Field Logistics & Quality Control",
+    footer: "Field logistics & quality control",
   },
   {
     initials: "JD",
     tag: "Aquifer Restoration",
-    tagTone: "bg-brand-green",
+    tagTone: "bg-moss",
     name: "John Doe",
     role: "Co-Founder & Sustainability Lead",
     bio: "Driving our environmental impact, John ensures that every system we build actively contributes to local groundwater restoration and ecological balance.",
     FooterIcon: LeafIcon,
-    footer: "Hydrologic Environmental Impact",
+    footer: "Hydrologic environmental impact",
   },
 ] as const;
 
 export function TheTeam() {
   return (
-    <section className="bg-ink py-16 lg:py-24">
+    <section className="bg-ink py-16 sm:py-24">
       <Container>
         <div className="max-w-3xl">
-          <span className="text-xs font-bold uppercase tracking-widest text-brand-teal">Leadership &amp; Expertise</span>
-          <h2 className="mt-2 text-3xl font-bold tracking-tight text-white sm:text-4xl">
-            The Team Behind the Vision
+          <span className="font-mono text-xs font-medium text-muted-aquifer">Leadership &amp; expertise</span>
+          <h2 className="mt-2 font-headline-h2 text-[28px] sm:text-[36px] font-semibold tracking-tight text-white">
+            The team behind the vision
           </h2>
-          <p className="mt-3 text-lg leading-relaxed text-slate-400">
-            SkyRa is led by a team of passionate engineers, sustainability
+          <p className="mt-3 font-body-primary text-base font-normal leading-relaxed text-slate-300">
+            Skyra is led by a team of passionate engineers, sustainability
             experts, and innovators dedicated to building a water-secure
             future.
           </p>
@@ -72,25 +72,25 @@ export function TheTeam() {
 
         <div className="mt-12 grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-4">
           {TEAM.map(({ initials, tag, tagTone, name, role, bio, FooterIcon, footer }) => (
-            <div key={`${name}-${role}`} className="flex flex-col justify-between rounded-2xl bg-ink-elevated p-6 shadow-lg transition-colors hover:bg-white/[0.07]">
+            <div key={`${name}-${role}`} className="flex flex-col justify-between rounded-[4px] bg-ink-elevated p-6 border border-white/10">
               <div>
-                <div className="flex aspect-square w-full flex-col items-center justify-center rounded-xl bg-white/5">
-                  <div className="flex size-20 items-center justify-center rounded-full bg-ink text-xl font-bold text-brand-teal shadow-inner">
+                <div className="flex aspect-square w-full flex-col items-center justify-center rounded-[4px] bg-white/5 border border-white/5">
+                  <div className="flex size-16 items-center justify-center rounded-[6px] bg-ink border border-white/10 text-xl font-bold text-muted-aquifer">
                     {initials}
                   </div>
-                  <div className="mt-2 flex items-center gap-1.5 text-[11px] font-bold uppercase tracking-widest text-slate-400">
+                  <div className="mt-2 flex items-center gap-1.5 font-mono text-xs font-medium text-slate-400">
                     <span aria-hidden="true" className={`size-2 rounded-full ${tagTone}`} />
                     {tag}
                   </div>
                 </div>
 
                 <div className="mt-6">
-                  <h3 className="text-lg font-semibold text-white">{name}</h3>
-                  <p className="mt-1 text-sm font-semibold text-brand-teal">{role}</p>
-                  <p className="mt-3 text-sm leading-relaxed text-slate-400">{bio}</p>
+                  <h3 className="font-headline-h3 text-[24px] font-medium leading-[1.3] text-white">{name}</h3>
+                  <p className="mt-1 font-mono text-xs font-medium text-muted-aquifer">{role}</p>
+                  <p className="mt-3 font-body-primary text-base font-normal leading-relaxed text-slate-300">{bio}</p>
                 </div>
               </div>
-              <div className="mt-6 flex items-center gap-2 border-t border-white/10 pt-4 text-xs text-slate-400">
+              <div className="mt-6 flex items-center gap-2 border-t border-white/10 pt-4 font-mono text-xs font-medium text-slate-400">
                 <FooterIcon className="size-4.5" />
                 {footer}
               </div>

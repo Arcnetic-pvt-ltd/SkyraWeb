@@ -64,39 +64,35 @@ export function MetricCard({
   return (
     <div
       ref={ref}
-      className="group relative flex flex-col justify-between overflow-hidden rounded-3xl border border-white/10 bg-white/5 p-8 shadow-xl backdrop-blur-md transition-colors hover:border-white/20"
+      className="group relative flex h-full flex-col justify-between overflow-hidden rounded-[4px] border border-muted-aquifer/20 bg-white p-6 sm:p-8"
     >
       <div className="absolute right-0 top-0 p-6 opacity-10 transition-opacity group-hover:opacity-20">
         {watermark}
       </div>
 
       <div className="relative z-10 space-y-4">
-        <div className={`inline-flex items-center gap-2 rounded-full border px-3 py-1 text-xs font-semibold ${pillTone}`}>
-          <span aria-hidden="true" className={`size-2 rounded-full ${dotColor} animate-pulse`} />
+        <div className={`inline-flex items-center gap-2 rounded-[4px] border px-2.5 py-1 text-xs font-mono font-medium ${pillTone}`}>
+          <span aria-hidden="true" className={`size-2 rounded-full ${dotColor}`} />
           {badgeLabel}
         </div>
         <div className="pt-2">
-          <div
-            className="bg-clip-text text-5xl font-extrabold tracking-tight text-transparent sm:text-6xl"
-            style={{ backgroundImage: `linear-gradient(to right, ${gradientFrom}, ${gradientTo})` }}
-          >
+          <div className="text-5xl font-bold font-metric-mono-lg tracking-tight text-deep-aquifer sm:text-6xl">
             {value}
             {suffix}
           </div>
-          <h3 className="mt-2 text-xl font-bold text-white">{title}</h3>
-          <p className="mt-1 text-xs leading-relaxed text-slate-400 sm:text-sm">{description}</p>
+          <h3 className="mt-2 text-[24px] font-medium font-headline-h3 text-deep-aquifer">{title}</h3>
+          <p className="mt-1 text-base leading-relaxed font-body-primary text-deep-aquifer">{description}</p>
         </div>
       </div>
 
       <div className="relative z-10 pt-8">
-        <div className="mb-2 flex justify-between font-mono text-xs text-slate-400">
+        <div className="mb-2 flex justify-between font-mono text-xs text-secondary">
           <span>{progressLabel}</span>
           <span className={`font-bold ${progressTone}`}>{progressPercent}%</span>
         </div>
-        <div className="h-2 w-full overflow-hidden rounded-full bg-white/10">
+        <div className="h-2 w-full overflow-hidden rounded-[2px] bg-muted-aquifer/15 border border-muted-aquifer/10">
           <motion.div
-            className="h-2 rounded-full"
-            style={{ backgroundImage: `linear-gradient(to right, ${gradientFrom}, ${gradientTo})` }}
+            className="h-full bg-deep-aquifer rounded-[2px]"
             initial={{ width: 0 }}
             animate={{ width: inView ? `${progressPercent}%` : 0 }}
             transition={{ duration: 1, ease: "easeOut" }}

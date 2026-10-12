@@ -13,12 +13,12 @@ import {
 } from "@/components/icons/solution-icons";
 
 const CAPABILITIES = [
-  { label: "Manage Water", Icon: ManageWaterIcon, bg: "bg-emerald-50", tone: "text-brand-green" },
-  { label: "Harvest Rainwater", Icon: HarvestRainwaterIcon, bg: "bg-cyan-50", tone: "text-brand-teal" },
-  { label: "Recharge Groundwater", Icon: RechargeGroundwaterIcon, bg: "bg-teal-50", tone: "text-teal-600" },
-  { label: "Conserve Water", Icon: ConserveWaterIcon, bg: "bg-blue-50", tone: "text-blue-600" },
-  { label: "Improve Water Security", Icon: WaterSecurityIcon, bg: "bg-emerald-50", tone: "text-brand-green" },
-  { label: "Use Water Effectively", Icon: UseWaterEffectivelyIcon, bg: "bg-cyan-50", tone: "text-brand-teal" },
+  { label: "Manage water", Icon: ManageWaterIcon },
+  { label: "Harvest rainwater", Icon: HarvestRainwaterIcon },
+  { label: "Recharge groundwater", Icon: RechargeGroundwaterIcon },
+  { label: "Conserve water", Icon: ConserveWaterIcon },
+  { label: "Improve water security", Icon: WaterSecurityIcon },
+  { label: "Use water effectively", Icon: UseWaterEffectivelyIcon },
 ] as const;
 
 const SECTORS = ["Residential", "Commercial", "Industrial", "Agricultural"] as const;
@@ -51,13 +51,13 @@ const SOLUTIONS = [
   {
     image: "/images/solution-filtration.jpg",
     badge: "Filtration",
-    title: "Water Filtration Systems",
+    title: "Water filtration systems",
     description: "Automatic backwash media filters, UV sterilizers, and carbon filters ensuring potable and kitchen-safe water.",
   },
   {
     image: "/images/solution-maintenance.jpg",
     badge: "Maintenance",
-    title: "Maintenance & Monitoring",
+    title: "Maintenance & monitoring",
     description: "System maintenance, filter inspections, and certified water quality lab testing.",
   },
 ] as const;
@@ -65,49 +65,49 @@ const SOLUTIONS = [
 /** Core Solutions Ecosystem. Source: Figma node 1:141. */
 export function CoreSolutions() {
   return (
-    <section className="bg-slate-50 py-24" id="solutions">
+    <section className="bg-linear-to-b from-[#edf6fa] via-[#e5f1f7] to-[#edf6fa] py-16 sm:py-24 border-b border-[#c8e0ee]/60" id="solutions">
       <Container>
         {/* Section Header */}
-        <div className="mb-16 max-w-3xl space-y-4">
-          <Eyebrow color="teal">The SkyRa Solution</Eyebrow>
-          <h2 className="text-3xl font-extrabold tracking-tight text-slate-950 sm:text-4xl lg:text-5xl">
+        <div className="mb-16 max-w-2xl space-y-4">
+          <Eyebrow color="teal">The Skyra solution</Eyebrow>
+          <h2 className="font-headline-h2 text-headline-h2-mobile sm:text-headline-h2 text-deep-aquifer tracking-tight leading-[1.2]">
             Integrated water solutions for a sustainable future.
           </h2>
-          <p className="text-base leading-relaxed text-slate-600 sm:text-lg">
-            SkyRa helps properties manage, harvest, recharge and use water more
+          <p className="text-base font-normal font-body-primary leading-relaxed text-deep-aquifer">
+            Skyra helps properties manage, harvest, recharge and use water more
             effectively — from rooftop to groundwater. Built on trust, engineering
             precision, and true long-term value.
           </p>
-          <CtaButton href="#services-grid" variant="dark" size="sm" icon={<ChevronDownIcon className="size-4 text-brand-green" />} className="flex-row-reverse">
-            Explore Services
+          <CtaButton href="#services-grid" variant="dark" size="sm" icon={<ChevronDownIcon className="size-4 text-moss" />} className="flex-row-reverse">
+            Explore services
           </CtaButton>
         </div>
 
         {/* Capability Feature Badges / Highlights */}
         <div className="mb-16 grid grid-cols-2 gap-4 sm:grid-cols-3 lg:grid-cols-6">
-          {CAPABILITIES.map(({ label, Icon, bg, tone }) => (
-            <div key={label} className="flex flex-col items-center justify-center gap-2 rounded-2xl border border-slate-200/80 bg-white p-4 text-center shadow-sm">
-              <div className={`flex size-10 items-center justify-center rounded-full ${bg} ${tone}`}>
+          {CAPABILITIES.map(({ label, Icon }) => (
+            <div key={label} className="flex flex-col items-start justify-center gap-2 rounded-[4px] border border-[#bcd7e8]/60 bg-white/95 p-4 text-left shadow-[0_1px_3px_rgba(20,50,80,0.03)] hover:border-[#748D8C] transition-colors">
+              <div className="flex size-8 items-center justify-center rounded-[4px] border border-[#bcd7e8]/80 bg-[#e7f3f9] text-deep-aquifer">
                 <Icon className="size-5" />
               </div>
-              <span className="text-xs font-bold text-slate-800">{label}</span>
+              <span className="font-mono text-xs font-medium text-deep-aquifer">{label}</span>
             </div>
           ))}
         </div>
 
         {/* Services Grid: Solutions for Every Space */}
-        <div className="border-t border-slate-200 pt-4" id="services-grid">
+        <div className="border-t border-[#bcd7e8]/70 pt-4" id="services-grid">
           <div className="mb-10 flex flex-col gap-4 md:flex-row md:items-end md:justify-between">
             <div>
-              <span className="text-xs font-bold uppercase tracking-widest text-brand-teal">Our Services</span>
-              <h3 className="mt-1 text-2xl font-extrabold text-slate-900 sm:text-3xl">
+              <span className="font-mono text-xs font-medium text-muted-aquifer">Our services</span>
+              <h3 className="mt-1 font-headline-h3 text-[24px] font-medium text-deep-aquifer leading-[1.3]">
                 Solutions for every space.
               </h3>
             </div>
-            <div className="flex flex-wrap gap-3 text-xs font-semibold text-slate-500">
+            <div className="flex flex-wrap gap-3 font-mono text-xs font-medium text-slate-500">
               {SECTORS.map((sector, i) => (
                 <span key={sector} className="contents">
-                  <span className="font-bold text-brand-teal">{sector}</span>
+                  <span className="font-bold text-deep-aquifer">{sector}</span>
                   {i < SECTORS.length - 1 && <span aria-hidden="true">•</span>}
                 </span>
               ))}
