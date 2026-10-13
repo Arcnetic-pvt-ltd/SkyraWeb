@@ -1,8 +1,11 @@
 import type { Metadata } from "next";
 import { CONTACT, SOCIAL_LINKS } from "@/lib/nav";
 
+const RAW_SITE_URL = process.env.NEXT_PUBLIC_SITE_URL ?? "https://example.com";
+
+// Tolerate a missing scheme (e.g. "www.skyra.com") so `new URL()` doesn't throw.
 export const SITE_URL = (
-  process.env.NEXT_PUBLIC_SITE_URL ?? "https://example.com"
+  /^https?:\/\//.test(RAW_SITE_URL) ? RAW_SITE_URL : `https://${RAW_SITE_URL}`
 ).replace(/\/$/, "");
 
 export const SITE_NAME = "Skyra";
