@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import { QuotesCarousel } from "@/components/landing/quotes-carousel";
 
 export const metadata: Metadata = {
   // title: "About Us & Founding Team | Skyra Water Solutions",
@@ -449,6 +450,8 @@ export default function AboutPage() {
         </div>
       </section>
       */}
+
+      <QuotesCarousel />
 
       {/* SECTION 4: CLOSING MANDATE */}
       <section className="relative z-10 w-full bg-linear-to-b from-[#edf6fa] via-[#e5f1f7] to-[#edf6fa] text-deep-aquifer py-16 sm:py-24 border-t border-[#c8e0ee]/60">
