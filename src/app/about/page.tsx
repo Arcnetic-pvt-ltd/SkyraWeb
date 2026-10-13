@@ -1,14 +1,15 @@
 import type { Metadata } from "next";
+import { buildMetadata, breadcrumbJsonLd } from "@/lib/site";
+import { JsonLd } from "@/components/seo/json-ld";
 import Link from "next/link";
 import { QuotesCarousel } from "@/components/landing/quotes-carousel";
 
-export const metadata: Metadata = {
-  // title: "About Us & Founding Team | Skyra Water Solutions",
+export const metadata: Metadata = buildMetadata({
   title: "The Skyra Mission | Hydrological Foundation & Philosophy",
-
   description:
     "Learn about Skyra's mission, closed-loop hydrological engineering, and our founding team of civil hydrologists, environmental scientists, and systems engineers.",
-};
+  path: "/about",
+});
 
 export const FOUNDERS = [
   {
@@ -48,6 +49,7 @@ export const FOUNDERS = [
 export default function AboutPage() {
   return (
     <div className="flex flex-col w-full overflow-hidden relative">
+      <JsonLd data={breadcrumbJsonLd([{ name: "Home", path: "/" }, { name: "Mission", path: "/about" }])} />
       {/* SECTION 1: HERO */}
       <section className="relative z-10 w-full pt-28 pb-16 sm:pt-32 sm:pb-24 bg-linear-to-b from-[#dceef8] via-[#e8f4fa] to-[#f2f8fc]">
         <div className="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -415,7 +417,7 @@ export default function AboutPage() {
                 <div>
                   <div className="relative w-full aspect-square rounded-[4px] overflow-hidden mb-5 bg-[#F8FCFE] border border-muted-aquifer/20">
                     <img
-                      alt={founder.name}
+                      alt={`Portrait of ${founder.name}, ${founder.role}`}
                       className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 ease-out"
                       src={founder.image}
                     />

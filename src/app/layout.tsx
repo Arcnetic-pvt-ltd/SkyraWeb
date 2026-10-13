@@ -1,5 +1,7 @@
 import type { Metadata } from "next";
 import "./globals.css";
+import { SITE_URL, SITE_NAME, ORGANIZATION_JSON_LD, WEBSITE_JSON_LD } from "@/lib/site";
+import { JsonLd } from "@/components/seo/json-ld";
 import { SiteHeader } from "@/components/layout/site-header";
 import { SiteFooter } from "@/components/layout/site-footer";
 import { WhatsAppWidget } from "@/components/layout/whatsapp-widget";
@@ -7,6 +9,8 @@ import { SmoothScrollProvider } from "@/components/providers/smooth-scroll";
 import { RainBackdrop } from "@/components/ui/rain-backdrop";
 
 export const metadata: Metadata = {
+  metadataBase: new URL(SITE_URL),
+  applicationName: SITE_NAME,
   title: "Skyra — Securing India's Water Future",
   description:
     "Closed-loop hydrological stewardship and ecological infrastructure technology. Skyra transforms rainfall into water resilience, Pan India.",
@@ -42,6 +46,8 @@ export default function RootLayout({
         />
       </head>
       <body className="min-h-full flex flex-col bg-light-aquifer-canvas font-body-primary text-deep-aquifer selection:bg-moss/20 selection:text-deep-aquifer text-base leading-relaxed text-left overflow-x-hidden relative">
+        <JsonLd data={ORGANIZATION_JSON_LD} />
+        <JsonLd data={WEBSITE_JSON_LD} />
         <RainBackdrop />
         <SmoothScrollProvider>
           <SiteHeader />

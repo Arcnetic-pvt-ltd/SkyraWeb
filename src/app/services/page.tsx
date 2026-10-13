@@ -1,17 +1,21 @@
 import type { Metadata } from "next";
+import { buildMetadata, breadcrumbJsonLd } from "@/lib/site";
+import { JsonLd } from "@/components/seo/json-ld";
 import Link from "next/link";
 import { HarvestingCalculator } from "@/components/services/harvesting-calculator";
 import { ProductCatalogCarousel } from "@/components/services/product-catalog-carousel";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = buildMetadata({
   title: "Core Water Management Solutions | Skyra",
   description:
     "Three natural, engineering-grade approaches to catching, filtering, and storing water where it falls: Rainwater Harvesting, Stormwater Management, and Afforestation.",
-};
+  path: "/services",
+});
 
 export default function ServicesPage() {
   return (
     <div className="flex flex-col w-full">
+      <JsonLd data={breadcrumbJsonLd([{ name: "Home", path: "/" }, { name: "Solutions", path: "/services" }])} />
       {/* Top Section: Editorial Header */}
       <section className="w-full pt-28 pb-16 sm:pt-32 sm:pb-24 bg-linear-to-b from-[#dceef8] via-[#e8f4fa] to-[#f2f8fc]">
         <div className="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col gap-6">

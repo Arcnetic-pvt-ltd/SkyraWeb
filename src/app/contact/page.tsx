@@ -1,4 +1,6 @@
 import type { Metadata } from "next";
+import { buildMetadata, breadcrumbJsonLd } from "@/lib/site";
+import { JsonLd } from "@/components/seo/json-ld";
 import { ConsultationIntakeForm } from "@/components/contact/consultation-intake-form";
 import { CONTACT, SOCIAL_LINKS } from "@/lib/nav";
 import {
@@ -10,15 +12,17 @@ import {
 } from "@/components/icons/social-icons";
 
 
-export const metadata: Metadata = {
+export const metadata: Metadata = buildMetadata({
   title: "Start Your Water Resilience Journey | Skyra Contact",
   description:
     "Schedule a direct hydrological consultation with Skyra's civil hydrologists. Kalamassery engineering labs, priority desk, and direct WhatsApp support.",
-};
+  path: "/contact",
+});
 
 export default function ContactPage() {
   return (
     <div className="flex flex-col w-full">
+      <JsonLd data={breadcrumbJsonLd([{ name: "Home", path: "/" }, { name: "Contact", path: "/contact" }])} />
       <section className="relative w-full overflow-hidden bg-linear-to-b from-[#dceef8] via-[#e8f4fa] to-[#f2f8fc] pt-24 pb-8 sm:pt-28 sm:pb-10">
         {/* Soft organic ripple ring graphic */}
         <div aria-hidden="true" className="pointer-events-none absolute inset-0 overflow-hidden">

@@ -1,14 +1,17 @@
 import type { Metadata } from "next";
+import { buildMetadata, breadcrumbJsonLd } from "@/lib/site";
+import { JsonLd } from "@/components/seo/json-ld";
 import Link from "next/link";
 import { RainsinkInteractiveShowcase } from "@/components/products/rainsink-interactive-showcase";
 import { PercolationPondShowcase } from "@/components/products/percolation-pond-showcase";
 import { CONTACT } from "@/lib/nav";
 
 
-export const metadata: Metadata = {
+export const metadata: Metadata = buildMetadata({
   title: "Skyra Rainsink | Modular Rain Percolator & Groundwater Recharge System",
   description:
     "Skyra Rainsink is our flagship modular rain percolator unit. Fabricated with heavy-duty concrete rings and multi-stage silica and activated carbon filter media, it mitigates industrial campus flooding, recharges subterranean aquifers, and earns CGWA NOC & LEED/IGBC water credits.",
+  path: "/products/rainsink",
   keywords: [
     "Skyra Rainsink",
     "Modular Rain Percolator Unit",
@@ -20,11 +23,12 @@ export const metadata: Metadata = {
     "Industrial Yard Flood Mitigation",
     "Subterranean Aquifer Replenishment",
   ],
-};
+});
 
 export default function RainsinkProductPage() {
   return (
     <div className="flex flex-col w-full overflow-hidden">
+      <JsonLd data={breadcrumbJsonLd([{ name: "Home", path: "/" }, { name: "Skyra Rainsink", path: "/products/rainsink" }])} />
       {/* Top Editorial Banner */}
       <section className="relative z-10 w-full pt-28 pb-16 sm:pt-32 sm:pb-24 bg-linear-to-b from-[#dceef8] via-[#e8f4fa] to-[#f2f8fc]">
         <div className="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">

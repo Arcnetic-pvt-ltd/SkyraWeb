@@ -1,10 +1,19 @@
+import type { Metadata } from "next";
 import Link from "next/link";
+import { buildMetadata } from "@/lib/site";
 import { QuotesCarousel } from "@/components/landing/quotes-carousel";
 import { HeroMissionEngine } from "@/components/landing/hero-mission-engine";
 import { IndiaMapGraphic } from "@/components/landing/india-map-graphic";
 import { HowItWorks } from "@/components/landing/how-it-works";
 import { ImpactMetrics } from "@/components/landing/impact-metrics";
 import { SectorCapabilities } from "@/components/services/sector-capabilities";
+
+export const metadata: Metadata = buildMetadata({
+  title: "Skyra — Rainwater Harvesting & Groundwater Recharge in South India",
+  description:
+    "Turn-key rainwater harvesting, groundwater recharge, and percolation systems for homes, apartments, industries, and campuses across Kerala, Karnataka, and Tamil Nadu.",
+  path: "/",
+});
 
 export default function Home() {
   return (

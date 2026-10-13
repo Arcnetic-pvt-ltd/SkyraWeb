@@ -24,7 +24,7 @@ export function SkyraLogo({
       >
         <img
           src="/images/skyra-logo.png"
-          alt="Skyra Logo"
+          alt="Skyra logo"
           className={`${iconClass} object-contain`}
         />
       </div>
