@@ -33,7 +33,12 @@ export const LANDING_QUOTES: QuoteItem[] = [
     role: "Musician",
     image: "/images/assets/paul_mccartney_aura.png",
   },
-  DEFAULT_QUOTES[1],
+  {
+    quote: "“The environment is not a luxury, but a necessity of life.”",
+    author: "Mahatma Gandhi",
+    role: "Father of the Nation",
+    image: "/images/assets/gandhi_aura.png",
+  },
 ];
 
 export function QuotesCarousel({
