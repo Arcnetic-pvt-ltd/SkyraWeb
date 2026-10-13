@@ -31,7 +31,7 @@ export const LANDING_QUOTES: QuoteItem[] = [
       "“There must be a better way to make the things we want, a way that doesn't spoil the sky, or the rain or the land.”",
     author: "Paul McCartney",
     role: "Musician",
-    image: "/images/assets/paul_mccartney.png",
+    image: "/images/assets/paul_mccartney_aura.png",
   },
   DEFAULT_QUOTES[1],
 ];
@@ -128,9 +128,9 @@ export function QuotesCarousel({
                   key={`img-${idx}`}
                   src={item.image}
                   alt=""
-                  width={443}
-                  height={577}
-                  className={`absolute bottom-0 right-4 sm:right-6 lg:right-8 h-[88%] w-auto max-w-none object-contain object-bottom transition-opacity duration-500 ease-in-out ${
+                  width={1043}
+                  height={877}
+                  className={`absolute bottom-0 right-4 sm:right-6 lg:right-8 h-[133%] translate-x-[28.8%] w-auto max-w-none object-contain object-bottom transition-opacity duration-500 ease-in-out ${
                     idx === activeIndex ? "opacity-90" : "opacity-0"
                   }`}
                 />
