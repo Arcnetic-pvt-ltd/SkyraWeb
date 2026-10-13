@@ -36,7 +36,7 @@ export const PRODUCTS_CATALOG: ProductItem[] = [
     metric1Unit: "L/MIN (>95%)",
     metric2Label: "Filter mesh & price",
     metric2Value: "400µm Polymer Screen | ₹3,250",
-    image: "/images/neerain-nru150-exact.jpg",
+    image: "/images/neerain-nru-150.jpg",
     contactProductSlug: "neerain-nru-150",
     specsHighlight: ["140 m² Roof Area", "120 L/Min Rate", "400µm Polymer Screen", "110mm ID Collar"],
   },
@@ -53,7 +53,7 @@ export const PRODUCTS_CATALOG: ProductItem[] = [
     metric1Unit: "L/MIN (>95%)",
     metric2Label: "Filter mesh & price",
     metric2Value: "SS 304 Curved + 200µm | ₹7,150",
-    image: "/images/neerain-exact-filter.jpg",
+    image: "/images/neerain-nrn-220.jpg",
     contactProductSlug: "neerain-nrn-220",
     specsHighlight: ["150 m² Roof Area", "150 L/Min Rate", "SS 304 Curved Screen", "200µm Polymer Mesh"],
   },
@@ -78,16 +78,16 @@ export const PRODUCTS_CATALOG: ProductItem[] = [
     id: "skyra-750-industrial",
     series: "MODEL RC-750",
     capacityTag: "750 M² CATCHMENT",
-    title: "Skyra RC-750 High-Volume Industrial RWH Filter",
+    title: "RC-750 High-Volume Industrial RWH Filter",
     category: "industrial",
     description:
-      "Heavy-duty 10 LPS industrial rainwater filter cabinet designed for 750 m² roof catchments. Features 140mm dual inlet/outlet flanges and quick-flush drain manifold.",
+      "RC Series industrial rainwater filters cover catchments from 750 m² up to 4,000 m² (RC-750 through RC-4000), with discharge rates ranging from 5 LPS to 70 LPS. All models feature SS-304 dual-screen gravity filtration, auto-flush open drain, and >90% filtration efficiency at 200 microns. Custom configurations available for catchments exceeding 6,000 m².",
     metric1Label: "Discharge rate",
     metric1Value: "10",
     metric1Unit: "LPS (140mm)",
     metric2Label: "Rainfall intensity",
     metric2Value: "50 mm/hr Peak",
-    image: "/images/skyra-rc-750-filter.jpg",
+    image: "/images/skyra-rc-skyra-rc-750-filter.png",
     contactProductSlug: "750-series-filter",
     specsHighlight: ["750 m² Catchment", "10 LPS Discharge", "140mm Inlet/Outlet"],
   },
@@ -154,11 +154,10 @@ export function ProductCatalogCarousel() {
                 key={tab.id}
                 type="button"
                 onClick={() => setActiveCategory(tab.id as any)}
-                className={`px-3 py-1 rounded-[4px] font-button-text text-xs transition-all duration-300 cursor-pointer ${
-                  isActive
-                    ? "bg-deep-aquifer text-white"
-                    : "bg-white border border-muted-aquifer/20 text-deep-aquifer/70 hover:text-deep-aquifer hover:bg-black/5"
-                }`}
+                className={`px-3 py-1 rounded-[4px] font-button-text text-xs transition-all duration-300 cursor-pointer ${isActive
+                  ? "bg-deep-aquifer text-white"
+                  : "bg-white border border-muted-aquifer/20 text-deep-aquifer/70 hover:text-deep-aquifer hover:bg-black/5"
+                  }`}
               >
                 {tab.label}
               </button>
@@ -217,11 +216,10 @@ export function ProductCatalogCarousel() {
                   <div
                     key={prod.id}
                     onClick={() => setCurrentIndex(idx)}
-                    className={`p-2 sm:p-2.5 rounded-[4px] border transition-all duration-300 cursor-pointer flex items-center gap-2.5 sm:gap-3 group ${
-                      isSelected
-                        ? "bg-linear-to-r from-[#0c1a2d] to-[#132742] text-white border-moss/60 border-l-4 border-l-moss shadow-xs"
-                        : "bg-white text-deep-aquifer border-muted-aquifer/20 hover:border-moss/40 hover:bg-slate-50/50"
-                    }`}
+                    className={`p-2 sm:p-2.5 rounded-[4px] border transition-all duration-300 cursor-pointer flex items-center gap-2.5 sm:gap-3 group ${isSelected
+                      ? "bg-linear-to-r from-[#0c1a2d] to-[#132742] text-white border-moss/60 border-l-4 border-l-moss shadow-xs"
+                      : "bg-white text-deep-aquifer border-muted-aquifer/20 hover:border-moss/40 hover:bg-slate-50/50"
+                      }`}
                   >
                     {/* Thumbnail Image */}
                     <div className="relative w-10 h-10 sm:w-11 sm:h-11 rounded-[4px] overflow-hidden shrink-0 bg-surface-container-low border border-muted-aquifer/15">
@@ -237,37 +235,33 @@ export function ProductCatalogCarousel() {
                     <div className="flex flex-col flex-1 min-w-0">
                       <div className="flex items-center gap-1.5">
                         <span
-                          className={`font-mono text-[9px] px-1.5 py-0.5 rounded-[3px] font-medium ${
-                            isSelected
-                              ? "bg-moss text-deep-aquifer"
-                              : "bg-moss/10 text-moss"
-                          }`}
+                          className={`font-mono text-[9px] px-1.5 py-0.5 rounded-[3px] font-medium ${isSelected
+                            ? "bg-moss text-deep-aquifer"
+                            : "bg-moss/10 text-moss"
+                            }`}
                         >
                           {prod.series}
                         </span>
                         <span
-                          className={`font-mono text-[9px] truncate ${
-                            isSelected ? "text-white/70" : "text-muted-aquifer"
-                          }`}
+                          className={`font-mono text-[9px] truncate ${isSelected ? "text-white/70" : "text-muted-aquifer"
+                            }`}
                         >
                           {prod.capacityTag}
                         </span>
                       </div>
                       <h4
-                        className={`font-medium text-xs sm:text-[13px] truncate mt-0.5 ${
-                          isSelected ? "text-white" : "text-deep-aquifer"
-                        }`}
+                        className={`font-medium text-xs sm:text-[13px] truncate mt-0.5 ${isSelected ? "text-white" : "text-deep-aquifer"
+                          }`}
                       >
                         {prod.title}
                       </h4>
                     </div>
 
                     <span
-                      className={`material-symbols-outlined text-sm sm:text-base transition-transform ${
-                        isSelected
-                          ? "text-moss translate-x-0.5"
-                          : "text-muted-aquifer/40 group-hover:text-deep-aquifer"
-                      }`}
+                      className={`material-symbols-outlined text-sm sm:text-base transition-transform ${isSelected
+                        ? "text-moss translate-x-0.5"
+                        : "text-muted-aquifer/40 group-hover:text-deep-aquifer"
+                        }`}
                     >
                       arrow_forward_ios
                     </span>
@@ -330,7 +324,7 @@ export function ProductCatalogCarousel() {
                       <h3 className="font-headline-h3 text-[17px] sm:text-[18px] font-medium leading-[1.3] text-deep-aquifer tracking-tight">
                         {filteredProducts[currentIndex].title}
                       </h3>
-                      <p className="font-body-primary text-xs sm:text-[12.5px] font-normal leading-relaxed text-deep-aquifer/85 line-clamp-3">
+                      <p className="font-body-primary text-xs sm:text-[12.5px] font-normal leading-relaxed text-deep-aquifer/85">
                         {filteredProducts[currentIndex].description}
                       </p>
                     </div>
@@ -474,9 +468,8 @@ export function ProductCatalogCarousel() {
             type="button"
             onClick={() => setCurrentIndex(i)}
             aria-label={`Go to slide ${i + 1}`}
-            className={`h-2 rounded-full transition-all duration-300 cursor-pointer ${
-              i === currentIndex ? "w-8 bg-moss" : "w-2 bg-muted-aquifer/30 hover:bg-muted-aquifer/60"
-            }`}
+            className={`h-2 rounded-full transition-all duration-300 cursor-pointer ${i === currentIndex ? "w-8 bg-moss" : "w-2 bg-muted-aquifer/30 hover:bg-muted-aquifer/60"
+              }`}
           />
         ))}
       </div>
