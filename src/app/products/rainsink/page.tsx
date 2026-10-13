@@ -73,8 +73,10 @@ export default function RainsinkProductPage() {
       </section>
 
       {/* Interactive Value Propositions & System Schematic Section */}
-      <section className="w-full bg-light-aquifer-canvas py-16 sm:py-24 border-t border-muted-aquifer/15">
-        <div className="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <section className="relative overflow-hidden w-full bg-water-flow py-16 sm:py-24 border-t border-muted-aquifer/15">
+        <div aria-hidden="true" className="water-ripple absolute -top-24 -left-24 w-96 h-96 rounded-full bg-white/40 blur-3xl pointer-events-none" />
+        <div aria-hidden="true" className="water-ripple absolute -bottom-32 -right-24 w-[28rem] h-[28rem] rounded-full bg-[#5fb0dc]/25 blur-3xl pointer-events-none [animation-delay:-7s]" />
+        <div className="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <RainsinkInteractiveShowcase />
         </div>
       </section>
@@ -87,7 +89,9 @@ export default function RainsinkProductPage() {
       </section>
 
       {/* Deployment & Installation Density Guidelines */}
-      <section className="relative w-full bg-linear-to-b from-[#edf6fa] via-[#e6f1f7] to-[#edf6fa] py-20 md:py-28 overflow-hidden border-t border-muted-aquifer/15">
+      <section className="relative w-full bg-water-flow py-20 md:py-28 overflow-hidden border-t border-muted-aquifer/15">
+        <div aria-hidden="true" className="water-ripple absolute -top-24 -left-24 w-96 h-96 rounded-full bg-white/40 blur-3xl pointer-events-none" />
+        <div aria-hidden="true" className="water-ripple absolute -bottom-32 -right-24 w-[28rem] h-[28rem] rounded-full bg-[#5fb0dc]/25 blur-3xl pointer-events-none [animation-delay:-7s]" />
         <div className="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-stretch">
             <div className="lg:col-span-6 flex flex-col justify-between gap-6">
