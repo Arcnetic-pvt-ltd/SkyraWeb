@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { buildMetadata } from "@/lib/site";
-import { QuotesCarousel } from "@/components/landing/quotes-carousel";
+import { QuotesCarousel, LANDING_QUOTES } from "@/components/landing/quotes-carousel";
 import { HeroMissionEngine } from "@/components/landing/hero-mission-engine";
 import { IndiaMapGraphic } from "@/components/landing/india-map-graphic";
 import { HowItWorks } from "@/components/landing/how-it-works";
@@ -419,7 +419,7 @@ export default function Home() {
       </section>
 
       {/* SECTION: VOICES OF AUTHORITY */}
-      <QuotesCarousel />
+      <QuotesCarousel quotes={LANDING_QUOTES} />
 
       {/* SECTION: HOW SKYRA WORKS */}
       <HowItWorks />
