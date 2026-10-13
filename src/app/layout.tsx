@@ -45,7 +45,7 @@ export default function RootLayout({
         <RainBackdrop />
         <SmoothScrollProvider>
           <SiteHeader />
-          <main className="flex-1 w-full bg-light-aquifer-canvas min-h-screen overflow-x-hidden relative z-[2]">
+          <main className="flex-1 w-full bg-light-aquifer-canvas overflow-x-hidden relative z-[2]">
             {children}
           </main>
           <SiteFooter />

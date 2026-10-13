@@ -320,7 +320,7 @@ export default function ServicesPage() {
               href="/contact"
               className="w-full sm:w-auto inline-flex items-center justify-center bg-deep-aquifer hover:bg-forest-slate text-white font-button-text text-button-text px-8 py-3.5 rounded-[6px] transition-all duration-300 cursor-pointer"
             >
-              Request a hydrological study
+              Request a site survey
             </Link>
             <Link
               href="/about"

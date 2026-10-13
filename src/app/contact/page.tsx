@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
 import { ConsultationIntakeForm } from "@/components/contact/consultation-intake-form";
-import { WHATSAPP_HREF, CONTACT, SOCIAL_LINKS } from "@/lib/nav";
-import { WhatsAppIcon } from "@/components/icons/whatsapp-icon";
+import { CONTACT, SOCIAL_LINKS } from "@/lib/nav";
 import {
   YouTubeIcon,
   InstagramIcon,
@@ -33,7 +32,7 @@ export default function ContactPage() {
         <div className="relative z-10 w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-stretch">
             {/* Left Column */}
-            <div className="lg:col-span-5 flex flex-col justify-between">
+            <div className="lg:col-span-5 flex flex-col">
               <div className="flex flex-col">
                 <div className="inline-flex items-center gap-2 mb-4">
                   <span className="font-technical-label text-[13px] text-forest-slate uppercase tracking-wider font-semibold">
@@ -49,74 +48,54 @@ export default function ContactPage() {
               </div>
 
               {/* Studio & Direct Connect Details */}
-              <div className="pt-8 lg:pt-0 flex flex-col gap-6">
+              <div className="pt-10 flex flex-col gap-8">
                 <div className="flex items-start gap-4">
-                  <div className="h-10 w-10 rounded-full bg-white flex items-center justify-center shrink-0 text-forest-slate border border-muted-aquifer/20 shadow-xs">
-                    <span className="material-symbols-outlined text-[20px]">corporate_fare</span>
+                  <div className="h-14 w-14 rounded-full bg-white flex items-center justify-center shrink-0 text-forest-slate border border-muted-aquifer/20 shadow-xs">
+                    <span className="material-symbols-outlined text-[26px]">corporate_fare</span>
                   </div>
                   <div>
-                    <span className="font-headline-h3 text-base font-medium text-deep-aquifer block">
+                    <span className="font-headline-h3 text-xl font-medium text-deep-aquifer block">
                       Kalamassery engineering labs
                     </span>
-                    <span className="font-mono text-xs text-deep-aquifer/65">
+                    <span className="font-mono text-sm text-deep-aquifer/65">
                       {CONTACT.address}
                     </span>
                   </div>
                 </div>
 
                 <div className="flex items-start gap-4">
-                  <div className="h-10 w-10 rounded-full bg-white flex items-center justify-center shrink-0 text-forest-slate border border-muted-aquifer/20 shadow-xs">
-                    <span className="material-symbols-outlined text-[20px]">call</span>
+                  <div className="h-14 w-14 rounded-full bg-white flex items-center justify-center shrink-0 text-forest-slate border border-muted-aquifer/20 shadow-xs">
+                    <span className="material-symbols-outlined text-[26px]">call</span>
                   </div>
                   <div>
-                    <span className="font-headline-h3 text-base font-medium text-deep-aquifer block">
+                    <span className="font-headline-h3 text-xl font-medium text-deep-aquifer block">
                       Priority desk
                     </span>
                     <a
-                      className="font-mono text-xs text-forest-slate hover:text-deep-aquifer transition-colors font-medium block"
+                      className="font-mono text-sm text-forest-slate hover:text-deep-aquifer transition-colors font-medium block"
                       href={`tel:${CONTACT.phone}`}
                     >
                       {CONTACT.phoneDisplay}
                     </a>
-                    <span className="font-mono text-xs text-deep-aquifer/50 block mt-0.5">
+                    <span className="font-mono text-sm text-deep-aquifer/50 block mt-0.5">
                       Mon – Fri, 9:00 AM – 6:00 PM IST
                     </span>
                   </div>
                 </div>
 
                 <div className="flex items-start gap-4">
-                  <div className="h-10 w-10 rounded-full bg-white flex items-center justify-center shrink-0 text-forest-slate border border-muted-aquifer/20 shadow-xs">
-                    <span className="material-symbols-outlined text-[20px]">mail</span>
+                  <div className="h-14 w-14 rounded-full bg-white flex items-center justify-center shrink-0 text-forest-slate border border-muted-aquifer/20 shadow-xs">
+                    <span className="material-symbols-outlined text-[26px]">mail</span>
                   </div>
                   <div>
-                    <span className="font-headline-h3 text-base font-medium text-deep-aquifer block">
+                    <span className="font-headline-h3 text-xl font-medium text-deep-aquifer block">
                       Email inquiries
                     </span>
                     <a
-                      className="font-mono text-xs text-forest-slate hover:text-deep-aquifer transition-colors font-medium block"
+                      className="font-mono text-sm text-forest-slate hover:text-deep-aquifer transition-colors font-medium block"
                       href={`mailto:${CONTACT.email}`}
                     >
                       {CONTACT.email}
-                    </a>
-                  </div>
-                </div>
-
-                <div className="flex items-start gap-4">
-                  <div className="h-10 w-10 rounded-full bg-white flex items-center justify-center shrink-0 text-moss border border-muted-aquifer/20 shadow-xs">
-                    <WhatsAppIcon className="size-[19px] text-moss" />
-                  </div>
-                  <div>
-                    <span className="font-headline-h3 text-base font-medium text-deep-aquifer block">
-                      Chat on WhatsApp
-                    </span>
-                    <a
-                      className="inline-flex items-center gap-1.5 font-button-text font-semibold text-xs text-moss hover:text-forest-slate transition-colors"
-                      href={WHATSAPP_HREF}
-                      rel="noopener noreferrer"
-                      target="_blank"
-                    >
-                      Connect directly on WhatsApp
-                      <span className="material-symbols-outlined text-[15px]">arrow_outward</span>
                     </a>
                   </div>
                 </div>
