@@ -63,14 +63,16 @@ export default function AboutPage() {
               The Skyra mission
             </h1>
             <p className="font-headline-h2 text-headline-h2-mobile sm:text-headline-h2 text-deep-aquifer/85 font-normal leading-tight">
-              Reclaiming India’s seasonal downpours to build generational water independence.
+              Reclaiming India&apos;s rain to build water security today and a more sustainable tomorrow.
             </p>
             <p className="font-body-large text-body-large text-deep-aquifer/80 leading-relaxed">
-              Founded in Kalamassery, Kochi, Skyra re-engineers urban and commercial land into natural, high-yield subterranean water reservoirs — replacing temporary tanker reliance with lasting aquifer resilience.
+              Born in Kalamassery, Kochi, Skyra designs practical, site-specific solutions that turn rainfall into lasting water security. We store it, recharge groundwater, manage stormwater and bring back green cover. We work alongside homes, institutions, industries and communities to make sustainability scientifically sound, reliable and financially accessible, and to leave every place we work in better than we found it.
             </p>
           </div>
         </div>
       </section>
+
+      <QuotesCarousel />
 
       {/* SECTION 2: PRODUCT CONTEXT & HYDROLOGICAL MONOGRAPH */}
       <section className="relative z-10 w-full py-16 sm:py-24 space-y-16 sm:space-y-24 border-t border-muted-aquifer/15">
@@ -453,7 +455,22 @@ export default function AboutPage() {
       </section>
       */}
 
-      <QuotesCarousel />
+      {/* VISION */}
+      <section className="relative z-10 w-full py-16 sm:py-24 bg-[#f2f8fc] border-t border-muted-aquifer/15">
+        <div className="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="flex flex-col gap-6 max-w-3xl">
+            <h2 className="font-headline-hero text-headline-hero-mobile sm:text-headline-hero text-deep-aquifer tracking-tight leading-tight">
+              The Skyra vision
+            </h2>
+            <p className="font-headline-h2 text-headline-h2-mobile sm:text-headline-h2 text-deep-aquifer/85 font-normal leading-tight">
+              A partner in every sustainability journey, across India.
+            </p>
+            <p className="font-body-large text-body-large text-deep-aquifer/80 leading-relaxed">
+              Skyra envisions an India where every home, institution and industry has a trusted partner for living in balance with nature. We begin with water and grow with the needs of the places we serve. We want to reach more people, solve more problems and extend into the areas of ecology and sustainability where we can make a difference. We are more than a business: we are a long-term partner in the health of the communities and land around us.
+            </p>
+          </div>
+        </div>
+      </section>
 
       {/* SECTION 4: CLOSING MANDATE */}
       <section className="relative z-10 w-full bg-linear-to-b from-[#edf6fa] via-[#e5f1f7] to-[#edf6fa] text-deep-aquifer py-16 sm:py-24 border-t border-[#c8e0ee]/60">
