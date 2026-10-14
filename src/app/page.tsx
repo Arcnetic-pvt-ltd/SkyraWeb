@@ -72,24 +72,17 @@ export default function Home() {
           </div>
 
           {/* Service Locations */}
-          <div className="mt-8 sm:mt-10 pt-4 flex items-center justify-center sm:justify-between flex-wrap gap-6 border-t border-muted-aquifer/15">
-            <div className="flex items-center gap-6 sm:gap-8 text-secondary/70">
-              <span className="font-body-sm text-body-sm font-medium">
-                Keralam
-              </span>
-              <span className="w-1 h-1 rounded-full bg-secondary/40"></span>
-              <span className="font-body-sm text-body-sm font-medium">
-                Tamil Nadu
-              </span>
-              <span className="w-1 h-1 rounded-full bg-secondary/40"></span>
-              <span className="font-body-sm text-body-sm font-medium">
-                Bengaluru
-              </span>
-              <span className="w-1 h-1 rounded-full bg-secondary/40"></span>
-              <span className="font-body-sm text-body-sm font-medium">
-                Hyderabad
-              </span>
-            </div>
+          <div className="mt-8 sm:mt-10 pt-4 border-t border-muted-aquifer/15">
+            <ul aria-label="Service locations" className="grid grid-cols-2 gap-x-4 gap-y-3 text-center sm:flex sm:items-center sm:gap-8 sm:text-left text-secondary/70">
+              {["Keralam", "Tamil Nadu", "Bengaluru", "Hyderabad"].map((location, index) => (
+                <li key={location} className="flex items-center justify-center gap-8 font-body-sm text-body-sm font-medium whitespace-nowrap">
+                  {index > 0 && (
+                    <span aria-hidden="true" className="hidden sm:block w-1 h-1 shrink-0 rounded-full bg-secondary/40" />
+                  )}
+                  {location}
+                </li>
+              ))}
+            </ul>
           </div>
         </div>
       </section>
