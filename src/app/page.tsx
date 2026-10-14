@@ -41,13 +41,13 @@ export default function Home() {
             <div className="mt-6 flex flex-col sm:flex-row items-stretch sm:items-center gap-3 w-full sm:w-auto">
               <Link
                 href="/contact?query=site-survey"
-                className="w-full sm:w-auto inline-flex items-center justify-center bg-deep-aquifer hover:bg-forest-slate text-light-aquifer-canvas font-button-text text-button-text px-6 py-3 rounded-[6px] transition-colors"
+                className="w-full sm:w-auto inline-flex items-center justify-center bg-deep-aquifer hover:bg-forest-slate text-light-aquifer-canvas font-button-text text-button-text px-6 h-14 rounded-[6px] transition-colors"
               >
                 Book a site survey
               </Link>
               <Link
                 href="/services"
-                className="w-full sm:w-auto font-button-text text-button-text text-deep-aquifer hover:text-forest-slate transition-colors inline-flex items-center justify-center gap-2 py-3 px-5 border border-muted-aquifer/30 bg-white rounded-[6px]"
+                className="w-full sm:w-auto font-button-text text-button-text text-deep-aquifer hover:text-forest-slate transition-colors inline-flex items-center justify-center gap-2 h-14 px-5 border border-muted-aquifer/30 bg-white rounded-[6px]"
               >
                 <span>Explore solutions</span>
                 <span className="material-symbols-outlined text-[18px]">
@@ -448,14 +448,14 @@ export default function Home() {
           <div className="mt-10 flex flex-col sm:flex-row items-center gap-3 w-full sm:w-auto">
             <Link
               href="/contact"
-              className="w-full sm:w-auto inline-flex items-center justify-center gap-2 bg-deep-aquifer hover:bg-forest-slate text-light-aquifer-canvas font-button-text text-button-text px-7 py-3 rounded-[6px] transition-colors"
+              className="w-full sm:w-auto inline-flex items-center justify-center gap-2 bg-deep-aquifer hover:bg-forest-slate text-light-aquifer-canvas font-button-text text-button-text px-7 h-14 rounded-[6px] transition-colors"
             >
               <span>Start a conversation</span>
               <span className="material-symbols-outlined text-[18px]">arrow_outward</span>
             </Link>
             <Link
               href="/services"
-              className="w-full sm:w-auto inline-flex items-center justify-center gap-2 border border-[#bcd7e8]/60 bg-white text-deep-aquifer hover:bg-[#e7f3f9] hover:border-[#748D8C] font-button-text text-button-text px-7 py-3 rounded-[6px] transition-colors"
+              className="w-full sm:w-auto inline-flex items-center justify-center gap-2 border border-[#bcd7e8]/60 bg-white text-deep-aquifer hover:bg-[#e7f3f9] hover:border-[#748D8C] font-button-text text-button-text px-7 h-14 rounded-[6px] transition-colors"
             >
               <span>Explore solutions</span>
               <span className="material-symbols-outlined text-[18px]">arrow_outward</span>

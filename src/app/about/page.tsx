@@ -470,13 +470,13 @@ export default function AboutPage() {
           <div className="flex flex-col sm:flex-row items-center gap-4 pt-2">
             <Link
               href="/contact"
-              className="inline-flex items-center justify-center bg-deep-aquifer hover:bg-forest-slate text-white font-medium text-[15px] px-8 py-3.5 rounded-[6px] transition-colors"
+              className="inline-flex items-center justify-center bg-deep-aquifer hover:bg-forest-slate text-white font-medium text-[15px] px-8 h-14 rounded-[6px] transition-colors"
             >
               Start a conversation
             </Link>
             <Link
               href="/services"
-              className="inline-flex items-center justify-center bg-white hover:bg-[#e7f3f9] text-deep-aquifer border border-[#bcd7e8]/60 hover:border-[#748D8C] font-button-text font-semibold text-button-text px-8 py-3.5 rounded-[6px] transition-all duration-300"
+              className="inline-flex items-center justify-center bg-white hover:bg-[#e7f3f9] text-deep-aquifer border border-[#bcd7e8]/60 hover:border-[#748D8C] font-button-text font-semibold text-button-text px-8 h-14 rounded-[6px] transition-all duration-300"
             >
               Explore solutions
             </Link>

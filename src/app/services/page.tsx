@@ -322,13 +322,13 @@ export default function ServicesPage() {
           <div className="pt-2 flex flex-col sm:flex-row items-center gap-4 w-full sm:w-auto">
             <Link
               href="/contact"
-              className="w-full sm:w-auto inline-flex items-center justify-center bg-deep-aquifer hover:bg-forest-slate text-white font-button-text text-button-text px-8 py-3.5 rounded-[6px] transition-all duration-300 cursor-pointer"
+              className="w-full sm:w-auto inline-flex items-center justify-center bg-deep-aquifer hover:bg-forest-slate text-white font-button-text text-button-text px-8 h-14 rounded-[6px] transition-all duration-300 cursor-pointer"
             >
               Request a site survey
             </Link>
             <Link
               href="/about"
-              className="w-full sm:w-auto inline-flex items-center justify-center font-button-text text-button-text text-deep-aquifer hover:text-moss px-6 py-3.5 transition-colors gap-1.5 rounded-[6px] border border-muted-aquifer/30 bg-white cursor-pointer"
+              className="w-full sm:w-auto inline-flex items-center justify-center font-button-text text-button-text text-deep-aquifer hover:text-moss px-6 h-14 transition-colors gap-1.5 rounded-[6px] border border-muted-aquifer/30 bg-white cursor-pointer"
             >
               <span>Read our engineering manifesto</span>
               <span className="material-symbols-outlined text-[18px]">

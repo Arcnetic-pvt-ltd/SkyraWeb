@@ -240,7 +240,7 @@ export default function RainsinkProductPage() {
           <div className="pt-2 flex flex-col sm:flex-row items-center gap-3 w-full sm:w-auto">
             <Link
               href="/contact?product=rainsink"
-              className="w-full sm:w-auto inline-flex items-center justify-center gap-2 bg-deep-aquifer hover:bg-forest-slate text-light-aquifer-canvas font-button-text font-semibold text-button-text px-8 py-3.5 rounded-[6px] transition-all duration-300 group cursor-pointer whitespace-nowrap"
+              className="w-full sm:w-auto inline-flex items-center justify-center gap-2 bg-deep-aquifer hover:bg-forest-slate text-light-aquifer-canvas font-button-text font-semibold text-button-text px-8 h-14 rounded-[6px] transition-all duration-300 group cursor-pointer whitespace-nowrap"
             >
               <span>Request site survey</span>
               <span className="material-symbols-outlined text-[18px] group-hover:translate-x-0.5 transition-transform">
@@ -250,7 +250,7 @@ export default function RainsinkProductPage() {
 
             <a
               href={`tel:${CONTACT.phone}`}
-              className="w-full sm:w-auto inline-flex items-center justify-center gap-2 border border-[#bcd7e8]/70 bg-white hover:bg-[#e7f3f9] hover:border-[#748D8C] text-deep-aquifer font-button-text font-semibold text-button-text px-7 py-3.5 rounded-[6px] transition-colors whitespace-nowrap"
+              className="w-full sm:w-auto inline-flex items-center justify-center gap-2 border border-[#bcd7e8]/70 bg-white hover:bg-[#e7f3f9] hover:border-[#748D8C] text-deep-aquifer font-button-text font-semibold text-button-text px-7 h-14 rounded-[6px] transition-colors whitespace-nowrap"
             >
               <span className="material-symbols-outlined text-[16px]">call</span>
               <span>{CONTACT.phoneDisplay}</span>
