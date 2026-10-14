@@ -228,7 +228,7 @@ export function ProductCatalogCarousel() {
                         alt={prod.title}
                         fill
                         sizes="48px"
-                        className="object-cover"
+                        className="object-contain p-1 md:object-cover md:p-0"
                       />
                     </div>
 
@@ -284,19 +284,21 @@ export function ProductCatalogCarousel() {
                   className="w-full bg-white rounded-[4px] border border-muted-aquifer/20 overflow-hidden flex flex-col md:flex-row group h-full shadow-none relative"
                 >
                   {/* High-Res Rendered Image Frame */}
-                  <div className="relative w-full md:w-5/12 h-44 md:h-auto min-h-[180px] bg-surface-container-low overflow-hidden border-b md:border-b-0 md:border-r border-muted-aquifer/15 shrink-0">
-                    <Image
-                      src={filteredProducts[currentIndex].image}
-                      alt={filteredProducts[currentIndex].title}
-                      fill
-                      sizes="(max-width: 768px) 100vw, 360px"
-                      className="object-cover group-hover:scale-105 transition-transform duration-700 ease-out"
-                      priority
-                    />
-                    <div className="absolute inset-0 bg-gradient-to-t from-deep-aquifer/50 via-transparent to-transparent pointer-events-none" />
+                  <div className="relative flex flex-col md:block w-full md:w-5/12 min-h-[180px] bg-white md:bg-surface-container-low overflow-hidden border-b md:border-b-0 md:border-r border-muted-aquifer/15 shrink-0">
+                    <div className="relative h-56 sm:h-64 md:absolute md:inset-0 md:h-auto">
+                      <Image
+                        src={filteredProducts[currentIndex].image}
+                        alt={filteredProducts[currentIndex].title}
+                        fill
+                        sizes="(max-width: 768px) 100vw, 360px"
+                        className="object-contain p-3 md:p-0 md:object-cover md:group-hover:scale-105 transition-transform duration-700 ease-out"
+                        priority
+                      />
+                    </div>
+                    <div className="hidden md:block absolute inset-0 bg-gradient-to-t from-deep-aquifer/50 via-transparent to-transparent pointer-events-none" />
 
-                    {/* Top Overlay Badges */}
-                    <div className="absolute top-2.5 left-2.5 right-2.5 flex items-center justify-between pointer-events-none">
+                    {/* Keep labels outside the product image on mobile. */}
+                    <div className="order-first p-2.5 md:p-0 md:absolute md:top-2.5 md:left-2.5 md:right-2.5 flex flex-wrap gap-2 items-center justify-between pointer-events-none">
                       <span className="font-mono text-[9px] sm:text-[10px] text-white bg-[#0c1a2d] px-2 py-0.5 rounded-[3px] font-medium border border-[#22446d]">
                         {filteredProducts[currentIndex].series}
                       </span>
@@ -306,7 +308,7 @@ export function ProductCatalogCarousel() {
                     </div>
 
                     {/* Specs Highlight Tags at bottom of Image */}
-                    <div className="absolute bottom-2 left-2 right-2 flex flex-wrap gap-1 pointer-events-none">
+                    <div className="p-2.5 md:p-0 md:absolute md:bottom-2 md:left-2 md:right-2 flex flex-wrap gap-1 pointer-events-none">
                       {filteredProducts[currentIndex].specsHighlight.slice(0, 3).map((spec, i) => (
                         <span
                           key={i}
