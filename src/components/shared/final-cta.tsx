@@ -3,18 +3,20 @@ import { CtaButton } from "@/components/ui/button";
 import { WhatsAppIcon } from "@/components/icons/whatsapp-icon";
 import { ArrowRightIcon } from "@/components/icons/arrow-right-icon";
 import { LocationPinIcon, MailIcon, InstagramIcon, LinkedInIcon, YouTubeIcon } from "@/components/icons/contact-icons";
-import { WHATSAPP_HREF, CONTACT } from "@/lib/nav";
+import { WHATSAPP_HREF, CONTACT, SOCIAL_LINKS } from "@/lib/nav";
 
-const SOCIAL_LINKS = [
-  { label: "Instagram", Icon: InstagramIcon, href: "#" },
-  { label: "LinkedIn", Icon: LinkedInIcon, href: "#" },
-  { label: "YouTube", Icon: YouTubeIcon, href: "#" },
-] as const;
+const CTA_SOCIAL_ICONS = {
+  instagram: InstagramIcon,
+  linkedin: LinkedInIcon,
+  youtube: YouTubeIcon,
+} as const;
 
-/**
- * Final Conversion Call To Action (Contact Box). Source: Figma node 1:508.
- * Social links have no real destinations in the design — "#" placeholders.
- */
+const CTA_SOCIAL_LINKS = SOCIAL_LINKS.flatMap((link) =>
+  link.icon in CTA_SOCIAL_ICONS
+    ? [{ ...link, Icon: CTA_SOCIAL_ICONS[link.icon as keyof typeof CTA_SOCIAL_ICONS] }]
+    : []
+);
+
 export function FinalCta() {
   return (
     <section className="bg-linear-to-b from-ink to-ink-elevated py-16 sm:py-24 text-white" id="contact">
@@ -74,8 +76,8 @@ export function FinalCta() {
 
               <div className="flex items-center gap-4 border-t border-white/10 pt-3 text-slate-400">
                 <span className="font-mono text-xs">Follow:</span>
-                {SOCIAL_LINKS.map(({ label, Icon, href }) => (
-                  <a key={label} aria-label={label} href={href} className="transition-colors hover:text-muted-aquifer">
+                {CTA_SOCIAL_LINKS.map(({ name, Icon, href }) => (
+                  <a key={name} aria-label={name} href={href} target="_blank" rel="noopener noreferrer" className="transition-colors hover:text-muted-aquifer">
                     <Icon className="size-4" />
                   </a>
                 ))}

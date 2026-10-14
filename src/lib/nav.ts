@@ -16,21 +16,30 @@ export const CONTACT = {
 } as const;
 
 export const SOCIAL_LINKS = [
-  { name: "YouTube", href: "https://youtube.com/@skyrawater", icon: "youtube" },
+  {
+    name: "YouTube",
+    href: process.env.NEXT_PUBLIC_YOUTUBE_URL || "https://youtube.com/",
+    icon: "youtube",
+  },
   {
     name: "Instagram",
-    href: "https://instagram.com/skyrawater",
+    href: process.env.NEXT_PUBLIC_INSTAGRAM_URL || "https://instagram.com/",
     icon: "instagram",
   },
   {
     name: "Facebook",
-    href: "https://facebook.com/skyrawater",
+    href: process.env.NEXT_PUBLIC_FACEBOOK_URL || "https://facebook.com/",
     icon: "facebook",
   },
   {
     name: "LinkedIn",
-    href: "https://linkedin.com/company/skyrawater",
+    href:
+      process.env.NEXT_PUBLIC_LINKEDIN_URL || "https://linkedin.com/company/",
     icon: "linkedin",
   },
-  { name: "X", href: "https://x.com/skyrawater", icon: "x" },
+  {
+    name: "X",
+    href: process.env.NEXT_PUBLIC_X_URL || "https://x.com/",
+    icon: "x",
+  },
 ] as const;

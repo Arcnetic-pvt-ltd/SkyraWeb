@@ -12,6 +12,8 @@ import {
 } from "@/components/icons/social-icons";
 
 
+const SOCIAL_ICONS = { youtube: YouTubeIcon, instagram: InstagramIcon, facebook: FacebookIcon, linkedin: LinkedInIcon, x: XIcon };
+
 export const metadata: Metadata = buildMetadata({
   title: "Rainwater Harvesting Consultation in Kochi | Contact SkyRa",
   description:
@@ -119,56 +121,22 @@ export default function ContactPage() {
                   </span>
                 </div>
                 <div className="flex items-center gap-2.5">
-                  <a
-                    aria-label="YouTube"
-                    className="h-9 w-9 rounded-lg bg-light-aquifer-canvas hover:bg-deep-aquifer hover:text-white text-deep-aquifer/75 transition-all duration-300 flex items-center justify-center border border-muted-aquifer/20 hover:border-deep-aquifer"
-                    href="https://youtube.com/@skyrawater"
-                    rel="noopener noreferrer"
-                    target="_blank"
-                    title="YouTube"
-                  >
-                    <YouTubeIcon className="h-4 w-4" />
-                  </a>
-                  <a
-                    aria-label="Instagram"
-                    className="h-9 w-9 rounded-lg bg-light-aquifer-canvas hover:bg-deep-aquifer hover:text-white text-deep-aquifer/75 transition-all duration-300 flex items-center justify-center border border-muted-aquifer/20 hover:border-deep-aquifer"
-                    href="https://instagram.com/skyrawater"
-                    rel="noopener noreferrer"
-                    target="_blank"
-                    title="Instagram"
-                  >
-                    <InstagramIcon className="h-4 w-4" />
-                  </a>
-                  <a
-                    aria-label="Facebook"
-                    className="h-9 w-9 rounded-lg bg-light-aquifer-canvas hover:bg-deep-aquifer hover:text-white text-deep-aquifer/75 transition-all duration-300 flex items-center justify-center border border-muted-aquifer/20 hover:border-deep-aquifer"
-                    href="https://facebook.com/skyrawater"
-                    rel="noopener noreferrer"
-                    target="_blank"
-                    title="Facebook"
-                  >
-                    <FacebookIcon className="h-4 w-4" />
-                  </a>
-                  <a
-                    aria-label="LinkedIn"
-                    className="h-9 w-9 rounded-lg bg-light-aquifer-canvas hover:bg-deep-aquifer hover:text-white text-deep-aquifer/75 transition-all duration-300 flex items-center justify-center border border-muted-aquifer/20 hover:border-deep-aquifer"
-                    href="https://linkedin.com/company/skyrawater"
-                    rel="noopener noreferrer"
-                    target="_blank"
-                    title="LinkedIn"
-                  >
-                    <LinkedInIcon className="h-4 w-4" />
-                  </a>
-                  <a
-                    aria-label="X (formerly Twitter)"
-                    className="h-9 w-9 rounded-lg bg-light-aquifer-canvas hover:bg-deep-aquifer hover:text-white text-deep-aquifer/75 transition-all duration-300 flex items-center justify-center border border-muted-aquifer/20 hover:border-deep-aquifer"
-                    href="https://x.com/skyrawater"
-                    rel="noopener noreferrer"
-                    target="_blank"
-                    title="X"
-                  >
-                    <XIcon className="h-4 w-4" />
-                  </a>
+                  {SOCIAL_LINKS.map(({ name, href, icon }) => {
+                    const Icon = SOCIAL_ICONS[icon];
+                    return (
+                      <a
+                        key={icon}
+                        aria-label={name}
+                        className="h-9 w-9 rounded-lg bg-light-aquifer-canvas hover:bg-deep-aquifer hover:text-white text-deep-aquifer/75 transition-all duration-300 flex items-center justify-center border border-muted-aquifer/20 hover:border-deep-aquifer"
+                        href={href}
+                        rel="noopener noreferrer"
+                        target="_blank"
+                        title={name}
+                      >
+                        <Icon className="h-4 w-4" />
+                      </a>
+                    );
+                  })}
                 </div>
               </div>
             </div>
