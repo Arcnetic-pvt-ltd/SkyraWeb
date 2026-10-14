@@ -8,9 +8,9 @@ import { CONTACT } from "@/lib/nav";
 
 
 export const metadata: Metadata = buildMetadata({
-  title: "Skyra Rainsink | Modular Rain Percolator & Groundwater Recharge System",
+  title: "Skyra Rainsink | Rain Percolator & Groundwater Recharge",
   description:
-    "Skyra Rainsink is our flagship modular rain percolator unit. Fabricated with heavy-duty concrete rings and multi-stage silica and activated carbon filter media, it mitigates industrial campus flooding, recharges subterranean aquifers, and earns CGWA NOC & LEED/IGBC water credits.",
+    "Explore Skyra Rainsink, a modular rain percolator for groundwater recharge and stormwater infiltration. Request a site survey for your campus or property.",
   path: "/products/rainsink",
   keywords: [
     "Skyra Rainsink",

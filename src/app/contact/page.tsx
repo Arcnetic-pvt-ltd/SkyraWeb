@@ -13,9 +13,9 @@ import {
 
 
 export const metadata: Metadata = buildMetadata({
-  title: "Start Your Water Resilience Journey | Skyra Contact",
+  title: "Rainwater Harvesting Consultation in Kochi | Contact Skyra",
   description:
-    "Schedule a direct hydrological consultation with Skyra's civil hydrologists. Kalamassery engineering labs, priority desk, and direct WhatsApp support.",
+    "Contact Skyra in Kalamassery, Kochi for a rainwater harvesting site survey, groundwater recharge consultation or stormwater management plan for your property.",
   path: "/contact",
 });
 
@@ -40,14 +40,14 @@ export default function ContactPage() {
               <div className="flex flex-col">
                 <div className="inline-flex items-center gap-2 mb-4">
                   <span className="font-technical-label text-[13px] text-forest-slate uppercase tracking-wider font-semibold">
-                    Direct hydrological consultation
+                    Rainwater harvesting consultation
                   </span>
                 </div>
                 <h1 className="font-headline-hero text-headline-hero-mobile sm:text-headline-hero text-deep-aquifer leading-[1.08] tracking-tight">
                   Start your water resilience journey
                 </h1>
                 <p className="mt-5 font-body-large text-body-large text-deep-aquifer/85 leading-relaxed font-normal">
-                  Tell us a bit about your property, and we’ll show you what’s possible — no pressure, just a conversation.
+                  Talk to our team in Kalamassery, Kochi about rainwater harvesting, groundwater recharge or stormwater management for your property. We’ll help you explore a site-specific solution.
                 </p>
               </div>
 

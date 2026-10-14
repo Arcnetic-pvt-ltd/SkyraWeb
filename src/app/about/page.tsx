@@ -6,9 +6,9 @@ import Image from "next/image";
 import { QuotesCarousel } from "@/components/landing/quotes-carousel";
 
 export const metadata: Metadata = buildMetadata({
-  title: "The Skyra Mission | Hydrological Foundation & Philosophy",
+  title: "About Skyra | Water Security & Sustainability in Kochi",
   description:
-    "Learn about Skyra's mission, closed-loop hydrological engineering, and our founding team of civil hydrologists, environmental scientists, and systems engineers.",
+    "Born in Kalamassery, Kochi, Skyra builds water security through rainwater harvesting, groundwater recharge, stormwater management and green cover.",
   path: "/about",
 });
 

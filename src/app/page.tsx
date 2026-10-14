@@ -9,9 +9,9 @@ import { ImpactMetrics } from "@/components/landing/impact-metrics";
 import { SectorCapabilities } from "@/components/services/sector-capabilities";
 
 export const metadata: Metadata = buildMetadata({
-  title: "Skyra — Rainwater Harvesting & Groundwater Recharge in South India",
+  title: "Rainwater Harvesting & Groundwater Recharge | Skyra",
   description:
-    "Turn-key rainwater harvesting, groundwater recharge, and percolation systems for homes, apartments, industries, and campuses across Kerala, Karnataka, and Tamil Nadu.",
+    "Skyra designs rainwater harvesting and groundwater recharge systems for homes, campuses and industries across Kerala, Karnataka and Tamil Nadu.",
   path: "/",
 });
 
@@ -35,7 +35,7 @@ export default function Home() {
             </h1>
 
             <p className="font-body-large text-body-large text-deep-aquifer mt-4 sm:mt-5 leading-relaxed">
-              We catch the rain on your roof and grounds and return it to the earth where it lasts. Turn-key rainwater harvesting, groundwater recharge, and percolation systems for homes, apartments, industries, and campuses across Kerala, Karnataka, and Tamil Nadu.
+              Based in Kalamassery, Kochi, we catch the rain on your roof and grounds and return it to the earth where it lasts. Turn-key rainwater harvesting, groundwater recharge, and percolation systems for homes, apartments, industries, and campuses across Kerala, Karnataka, and Tamil Nadu.
             </p>
 
             <div className="mt-6 flex flex-col sm:flex-row items-stretch sm:items-center gap-3 w-full sm:w-auto">
@@ -49,7 +49,7 @@ export default function Home() {
                 href="/services"
                 className="w-full sm:w-auto font-button-text text-button-text text-deep-aquifer hover:text-forest-slate transition-colors inline-flex items-center justify-center gap-2 h-14 px-5 border border-muted-aquifer/30 bg-white rounded-[6px]"
               >
-                <span>Explore solutions</span>
+                <span>Explore water management solutions</span>
                 <span className="material-symbols-outlined text-[18px]">
                   arrow_forward
                 </span>
@@ -457,7 +457,7 @@ export default function Home() {
               href="/services"
               className="w-full sm:w-auto inline-flex items-center justify-center gap-2 border border-[#bcd7e8]/60 bg-white text-deep-aquifer hover:bg-[#e7f3f9] hover:border-[#748D8C] font-button-text text-button-text px-7 h-14 rounded-[6px] transition-colors"
             >
-              <span>Explore solutions</span>
+              <span>Explore water management solutions</span>
               <span className="material-symbols-outlined text-[18px]">arrow_outward</span>
             </Link>
           </div>

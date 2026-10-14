@@ -6,9 +6,9 @@ import { HarvestingCalculator } from "@/components/services/harvesting-calculato
 import { ProductCatalogCarousel } from "@/components/services/product-catalog-carousel";
 
 export const metadata: Metadata = buildMetadata({
-  title: "Core Water Management Solutions | Skyra",
+  title: "Rainwater Harvesting & Stormwater Management Services | Skyra",
   description:
-    "Three natural, engineering-grade approaches to catching, filtering, and storing water where it falls: Rainwater Harvesting, Stormwater Management, and Afforestation.",
+    "Explore rainwater harvesting, groundwater recharge, stormwater management and afforestation services for homes and industries in Kerala and South India.",
   path: "/services",
 });
 
@@ -23,10 +23,10 @@ export default function ServicesPage() {
             Systems &amp; architecture
           </span>
           <h1 className="font-headline-hero text-headline-hero-mobile sm:text-headline-hero text-deep-aquifer tracking-tight text-balance max-w-3xl">
-            Core water management solutions
+            Rainwater harvesting &amp; water management solutions
           </h1>
           <p className="font-body-large text-body-large text-deep-aquifer/85 leading-relaxed max-w-2xl text-balance">
-            Three natural, engineering-grade approaches to catching, filtering, and storing water where it falls.
+            Site-specific rainwater harvesting, groundwater recharge, stormwater management and afforestation for homes, institutions and industries across Kerala, Karnataka and Tamil Nadu.
           </p>
         </div>
       </section>

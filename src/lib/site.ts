@@ -59,6 +59,7 @@ export const ORGANIZATION_JSON_LD = {
   address: {
     "@type": "PostalAddress",
     streetAddress: "Rajagiri Road, N. Kalamassery",
+    addressLocality: "Kochi",
     addressRegion: "Kerala",
     addressCountry: "IN",
   },

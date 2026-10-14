@@ -11,9 +11,9 @@ import { RainBackdrop } from "@/components/ui/rain-backdrop";
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
   applicationName: SITE_NAME,
-  title: "Skyra — Securing India's Water Future",
+  title: "Rainwater Harvesting & Groundwater Recharge | Skyra",
   description:
-    "Closed-loop hydrological stewardship and ecological infrastructure technology. Skyra transforms rainfall into water resilience, Pan India.",
+    "Skyra provides site-specific rainwater harvesting, groundwater recharge and stormwater management solutions from Kalamassery, Kochi, across South India.",
   icons: {
     icon: "/images/skyra-logo.png",
     shortcut: "/images/skyra-logo.png",
