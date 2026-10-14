@@ -74,8 +74,14 @@ export default function AboutPage() {
       </section>
 
       {/* VISION */}
-      <section className="relative z-10 w-full py-16 sm:py-24 bg-[#f2f8fc] border-t border-muted-aquifer/15">
-        <div className="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <section className="relative z-10 w-full overflow-hidden py-16 sm:py-24 bg-water-flow border-t border-muted-aquifer/15">
+        <div aria-hidden="true" className="pointer-events-none absolute inset-0 overflow-hidden">
+          <div className="water-ripple absolute -right-48 -top-48 h-[640px] w-[640px] rounded-full border border-white/40 bg-white/10" />
+          <div className="water-ripple absolute -right-24 -top-24 h-[448px] w-[448px] rounded-full border border-white/50 bg-white/10 [animation-delay:-5s]" />
+          <div className="water-ripple absolute right-0 top-0 h-64 w-64 rounded-full border border-white/60 bg-white/15 [animation-delay:-9s]" />
+          <div className="water-ripple absolute -bottom-56 -left-40 h-[480px] w-[480px] rounded-full border border-[#6faacb]/20 bg-white/10 [animation-delay:-7s]" />
+        </div>
+        <div className="relative z-10 w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex flex-col gap-6 max-w-3xl">
             <h2 className="font-headline-hero text-headline-hero-mobile sm:text-headline-hero text-deep-aquifer tracking-tight leading-tight">
               The Skyra vision
