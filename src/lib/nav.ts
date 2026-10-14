@@ -15,31 +15,30 @@ export const CONTACT = {
   phoneDisplay: "+91 9292292111",
 } as const;
 
-export const SOCIAL_LINKS = [
+export const SOCIAL_LINKS = ([
   {
     name: "YouTube",
-    href: process.env.NEXT_PUBLIC_YOUTUBE_URL || "https://youtube.com/",
+    href: process.env.NEXT_PUBLIC_YOUTUBE_URL?.trim() || "",
     icon: "youtube",
   },
   {
     name: "Instagram",
-    href: process.env.NEXT_PUBLIC_INSTAGRAM_URL || "https://instagram.com/",
+    href: process.env.NEXT_PUBLIC_INSTAGRAM_URL?.trim() || "",
     icon: "instagram",
   },
   {
     name: "Facebook",
-    href: process.env.NEXT_PUBLIC_FACEBOOK_URL || "https://facebook.com/",
+    href: process.env.NEXT_PUBLIC_FACEBOOK_URL?.trim() || "",
     icon: "facebook",
   },
   {
     name: "LinkedIn",
-    href:
-      process.env.NEXT_PUBLIC_LINKEDIN_URL || "https://linkedin.com/company/",
+    href: process.env.NEXT_PUBLIC_LINKEDIN_URL?.trim() || "",
     icon: "linkedin",
   },
   {
     name: "X",
-    href: process.env.NEXT_PUBLIC_X_URL || "https://x.com/",
+    href: process.env.NEXT_PUBLIC_X_URL?.trim() || "",
     icon: "x",
   },
-] as const;
+] as const).filter(({ href }) => href.length > 0);

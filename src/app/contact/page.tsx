@@ -113,6 +113,7 @@ export default function ContactPage() {
               <ConsultationIntakeForm />
 
               {/* Social Media Channels */}
+              {SOCIAL_LINKS.length > 0 && (
               <div className="rounded-xl bg-white/90 backdrop-blur-xl p-4 sm:p-5 border border-muted-aquifer/20 shadow-[0_8px_30px_rgba(29,41,59,0.03)] flex flex-col sm:flex-row items-center justify-between gap-4">
                 <div className="flex items-center gap-2">
                   <span className="w-1.5 h-1.5 rounded-full bg-moss shrink-0"></span>
@@ -139,6 +140,7 @@ export default function ContactPage() {
                   })}
                 </div>
               </div>
+              )}
             </div>
 
 

@@ -74,6 +74,7 @@ export function FinalCta() {
                 </div>
               </div>
 
+              {CTA_SOCIAL_LINKS.length > 0 && (
               <div className="flex items-center gap-4 border-t border-white/10 pt-3 text-slate-400">
                 <span className="font-mono text-xs">Follow:</span>
                 {CTA_SOCIAL_LINKS.map(({ name, Icon, href }) => (
@@ -82,6 +83,7 @@ export function FinalCta() {
                   </a>
                 ))}
               </div>
+              )}
             </div>
           </div>
         </div>
