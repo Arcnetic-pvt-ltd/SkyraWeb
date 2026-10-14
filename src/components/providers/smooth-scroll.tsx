@@ -1,12 +1,27 @@
 "use client";
 
-import { useEffect, useRef } from "react";
+import { createContext, useCallback, useContext, useEffect, useRef } from "react";
 import { usePathname } from "next/navigation";
 import Lenis from "lenis";
+
+const ScrollToTopContext = createContext<(() => void) | null>(null);
+
+export function useScrollToTop() {
+  return useContext(ScrollToTopContext);
+}
 
 export function SmoothScrollProvider({ children }: { children: React.ReactNode }) {
   const pathname = usePathname();
   const lenisRef = useRef<Lenis | null>(null);
+  const scrollToTop = useCallback(() => {
+    const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+    if (lenisRef.current) {
+      lenisRef.current.scrollTo(0, { immediate: reducedMotion });
+    } else {
+      window.scrollTo({ top: 0, behavior: reducedMotion ? "instant" : "smooth" });
+    }
+  }, []);
 
   useEffect(() => {
     const previousScrollRestoration = window.history.scrollRestoration;
@@ -52,5 +67,9 @@ export function SmoothScrollProvider({ children }: { children: React.ReactNode }
     window.scrollTo(0, 0);
   }, [pathname]);
 
-  return <>{children}</>;
+  return (
+    <ScrollToTopContext.Provider value={scrollToTop}>
+      {children}
+    </ScrollToTopContext.Provider>
+  );
 }

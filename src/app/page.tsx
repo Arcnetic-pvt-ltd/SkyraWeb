@@ -71,20 +71,8 @@ export default function Home() {
             </div>
           </div>
 
-          {/* Telemetry Metric Chip */}
+          {/* Service Locations */}
           <div className="mt-8 sm:mt-10 pt-4 flex items-center justify-center sm:justify-between flex-wrap gap-6 border-t border-muted-aquifer/15">
-            <div className="inline-flex items-center gap-4 py-2.5 px-4 rounded-[4px] bg-white border border-muted-aquifer/20">
-              <span className="inline-block w-2 h-2 rounded-full bg-moss"></span>
-              <div className="flex items-baseline gap-2">
-                <span className="font-metric-mono-lg text-metric-mono-lg text-deep-aquifer tracking-tight">
-                  1.8B
-                </span>
-                <span className="font-body-sm text-body-sm text-secondary font-medium">
-                  Liters harvested &amp; recharged
-                </span>
-              </div>
-            </div>
-
             <div className="flex items-center gap-6 sm:gap-8 text-secondary/70">
               <span className="font-body-sm text-body-sm font-medium">
                 Kochi

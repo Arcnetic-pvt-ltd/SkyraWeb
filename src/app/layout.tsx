@@ -5,6 +5,7 @@ import { JsonLd } from "@/components/seo/json-ld";
 import { SiteHeader } from "@/components/layout/site-header";
 import { SiteFooter } from "@/components/layout/site-footer";
 import { WhatsAppWidget } from "@/components/layout/whatsapp-widget";
+import { ScrollToTop } from "@/components/layout/scroll-to-top";
 import { SmoothScrollProvider } from "@/components/providers/smooth-scroll";
 import { RainBackdrop } from "@/components/ui/rain-backdrop";
 
@@ -56,6 +57,7 @@ export default function RootLayout({
           </main>
           <SiteFooter />
           <WhatsAppWidget />
+          <ScrollToTop />
         </SmoothScrollProvider>
       </body>
     </html>
