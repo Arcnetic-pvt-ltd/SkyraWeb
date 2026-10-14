@@ -9,18 +9,61 @@ import { ArrowRightIcon } from "@/components/icons/arrow-right-icon";
 /** The Bigger Vision Section (Dark Theme). Source: Figma node 1:460. */
 export function BiggerVision() {
   return (
-    <section className="relative overflow-hidden border-b border-[#203e63]/40 bg-linear-to-b from-[#0a1727] via-[#0f2137] to-[#142944] py-16 sm:py-24 text-white" id="vision">
+    <section
+      className="relative overflow-hidden border-b border-[#203e63]/40 bg-linear-to-b from-[#0a1727] via-[#0f2137] to-[#142944] py-16 sm:py-24 text-white"
+      id="vision"
+    >
       {/* Subtle Rainfall Overlay Element */}
-      <div aria-hidden="true" className="absolute inset-0 z-[1] pointer-events-none overflow-hidden select-none opacity-20">
+      <div
+        aria-hidden="true"
+        className="absolute inset-0 z-[1] pointer-events-none overflow-hidden select-none opacity-20"
+      >
         <svg className="w-full h-full" xmlns="http://www.w3.org/2000/svg">
           <defs>
-            <pattern id="visionRainPattern" width="120" height="120" patternUnits="userSpaceOnUse">
-              <line x1="20" y1="0" x2="10" y2="35" stroke="#748D8C" strokeWidth="1" strokeOpacity="0.4" strokeDasharray="12 18" />
-              <line x1="70" y1="40" x2="60" y2="75" stroke="#7D9D3D" strokeWidth="1" strokeOpacity="0.3" strokeDasharray="10 20" />
-              <line x1="110" y1="20" x2="100" y2="55" stroke="#86b5db" strokeWidth="0.8" strokeOpacity="0.35" strokeDasharray="8 16" />
+            <pattern
+              id="visionRainPattern"
+              width="120"
+              height="120"
+              patternUnits="userSpaceOnUse"
+            >
+              <line
+                x1="20"
+                y1="0"
+                x2="10"
+                y2="35"
+                stroke="#748D8C"
+                strokeWidth="1"
+                strokeOpacity="0.4"
+                strokeDasharray="12 18"
+              />
+              <line
+                x1="70"
+                y1="40"
+                x2="60"
+                y2="75"
+                stroke="#7D9D3D"
+                strokeWidth="1"
+                strokeOpacity="0.3"
+                strokeDasharray="10 20"
+              />
+              <line
+                x1="110"
+                y1="20"
+                x2="100"
+                y2="55"
+                stroke="#86b5db"
+                strokeWidth="0.8"
+                strokeOpacity="0.35"
+                strokeDasharray="8 16"
+              />
             </pattern>
           </defs>
-          <rect width="100%" height="100%" fill="url(#visionRainPattern)" className="animate-subtle-rain" />
+          <rect
+            width="100%"
+            height="100%"
+            fill="url(#visionRainPattern)"
+            className="animate-subtle-rain"
+          />
         </svg>
       </div>
 
@@ -32,12 +75,17 @@ export function BiggerVision() {
               A future where every drop has a purpose.
             </h2>
             <p className="max-w-xl text-base font-normal font-body-primary leading-relaxed text-slate-300">
-              Skyra starts in Kerala, and grows across India — helping homes,
+              Skyra starts in Keralam, and grows across India — helping homes,
               businesses and communities build water security and a healthier,
               drought-resilient planet.
             </p>
             <div className="pt-4">
-              <CtaButton href="#contact" icon={<ArrowRightIcon className="size-4" />} className="flex-row-reverse" size="sm">
+              <CtaButton
+                href="#contact"
+                icon={<ArrowRightIcon className="size-4" />}
+                className="flex-row-reverse"
+                size="sm"
+              >
                 Our Vision &amp; Mission
               </CtaButton>
             </div>

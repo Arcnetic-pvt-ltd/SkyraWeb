@@ -529,7 +529,7 @@ export function PercolationPondShowcase() {
                 <span className="px-2.5 py-1 rounded-[4px] bg-[#EBF5FB] font-mono text-[11px] font-semibold text-forest-slate">
                   TIER 1 &middot; MODULAR PERCOLATOR
                 </span>
-                <span className="font-mono text-xs text-moss font-semibold">Skyra Rainsink</span>
+                <span className="font-mono text-xs text-moss font-semibold">SkyRa Rainsink</span>
               </div>
               <h4 className="font-headline-h3 text-[18px] font-semibold text-deep-aquifer">
                 Localized Pre-Cast RCC Shafts

@@ -6,7 +6,7 @@ import Image from "next/image";
 import { QuotesCarousel } from "@/components/landing/quotes-carousel";
 
 export const metadata: Metadata = buildMetadata({
-  title: "About Skyra | Water Security & Sustainability in Kochi",
+  title: "About SkyRa | Water Security & Sustainability in Kochi",
   description:
     "Born in Kalamassery, Kochi, Skyra builds water security through rainwater harvesting, groundwater recharge, stormwater management and green cover.",
   path: "/about",
@@ -18,7 +18,8 @@ export const FOUNDERS = [
     role: "Co-Founder & Chief Hydrologist",
     credentials: "Ph.D. Hydrogeology (IIT Madras)",
     bio: "Pioneered subterranean aquifer recharge modeling and deep-borehole infiltration shafts across South India over a 22-year research career.",
-    expertise: "Lithological Stratification • Piezometric Telemetry • Bedrock Recharge",
+    expertise:
+      "Lithological Stratification • Piezometric Telemetry • Bedrock Recharge",
     image: "/images/founders/madhavan_nair.jpg",
   },
   {
@@ -26,7 +27,8 @@ export const FOUNDERS = [
     role: "Co-Founder & Chief Executive Officer",
     credentials: "M.S. Civil Engineering (IISc Bengaluru)",
     bio: "Former Lead Environmental Infrastructure Consultant, driving Skyra's vision to scale closed-loop water autonomy for commercial campuses and regional estates.",
-    expertise: "Campus Water Resilience • Municipal Compliance • Industrial Hydrology",
+    expertise:
+      "Campus Water Resilience • Municipal Compliance • Industrial Hydrology",
     image: "/images/founders/ananya_ramachandran.jpg",
   },
   {
@@ -34,7 +36,8 @@ export const FOUNDERS = [
     role: "Co-Founder & VP of Systems Engineering",
     credentials: "B.Tech Mechanical (NIT Calicut)",
     bio: "Hardware patent holder in passive fluid dynamics; designed Skyra's zero-energy Hydrostatic Vortex Sedimentation Chambers.",
-    expertise: "Centripetal Filtration • Geocellular Attenuation • Fluid Mechanics",
+    expertise:
+      "Centripetal Filtration • Geocellular Attenuation • Fluid Mechanics",
     image: "/images/founders/siddharth_menon.jpg",
   },
   {
@@ -42,7 +45,8 @@ export const FOUNDERS = [
     role: "Co-Founder & Head of Ecological Sciences",
     credentials: "Ph.D. Forest & Soil Ecology (KAU)",
     bio: "Specialist in Miyawaki high-density afforestation and natural bio-swales, turning depleted soil layers into living water sponges.",
-    expertise: "Bio-Hydrological Sponges • Miyawaki Forests • In-Situ Carbon Sinks",
+    expertise:
+      "Bio-Hydrological Sponges • Miyawaki Forests • In-Situ Carbon Sinks",
     image: "/images/founders/preeti_kurup.jpg",
   },
 ];
@@ -50,7 +54,12 @@ export const FOUNDERS = [
 export default function AboutPage() {
   return (
     <div className="flex flex-col w-full overflow-hidden relative">
-      <JsonLd data={breadcrumbJsonLd([{ name: "Home", path: "/" }, { name: "Mission", path: "/about" }])} />
+      <JsonLd
+        data={breadcrumbJsonLd([
+          { name: "Home", path: "/" },
+          { name: "Mission", path: "/about" },
+        ])}
+      />
       {/* SECTION 1: HERO */}
       <section className="relative z-10 w-full pt-28 pb-16 sm:pt-32 sm:pb-24 bg-linear-to-b from-[#dceef8] via-[#e8f4fa] to-[#f2f8fc]">
         <div className="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -61,13 +70,20 @@ export default function AboutPage() {
               </span>
             </div>
             <h1 className="font-headline-hero text-headline-hero-mobile sm:text-headline-hero text-deep-aquifer tracking-tight leading-tight">
-              The Skyra mission
+              The SkyRa mission
             </h1>
             <p className="font-headline-h2 text-headline-h2-mobile sm:text-headline-h2 text-deep-aquifer/85 font-normal leading-tight">
-              Reclaiming India&apos;s rain to build water security today and a more sustainable tomorrow.
+              Reclaiming India&apos;s rain to build water security today and a
+              more sustainable tomorrow.
             </p>
             <p className="font-body-large text-body-large text-deep-aquifer/80 leading-relaxed">
-              Born in Kalamassery, Kochi, Skyra designs practical, site-specific solutions that turn rainfall into lasting water security. We store it, recharge groundwater, manage stormwater and bring back green cover. We work alongside homes, institutions, industries and communities to make sustainability scientifically sound, reliable and financially accessible, and to leave every place we work in better than we found it.
+              Born in Kalamassery, Kochi, Skyra designs practical, site-specific
+              solutions that turn rainfall into lasting water security. We store
+              it, recharge groundwater, manage stormwater and bring back green
+              cover. We work alongside homes, institutions, industries and
+              communities to make sustainability scientifically sound, reliable
+              and financially accessible, and to leave every place we work in
+              better than we found it.
             </p>
           </div>
         </div>
@@ -75,7 +91,10 @@ export default function AboutPage() {
 
       {/* VISION */}
       <section className="relative z-10 w-full overflow-hidden py-16 sm:py-24 bg-water-flow border-t border-muted-aquifer/15">
-        <div aria-hidden="true" className="pointer-events-none absolute inset-0 overflow-hidden">
+        <div
+          aria-hidden="true"
+          className="pointer-events-none absolute inset-0 overflow-hidden"
+        >
           <div className="water-ripple absolute -right-48 -top-48 h-[640px] w-[640px] rounded-full border border-white/40 bg-white/10" />
           <div className="water-ripple absolute -right-24 -top-24 h-[448px] w-[448px] rounded-full border border-white/50 bg-white/10 [animation-delay:-5s]" />
           <div className="water-ripple absolute right-0 top-0 h-64 w-64 rounded-full border border-white/60 bg-white/15 [animation-delay:-9s]" />
@@ -84,13 +103,19 @@ export default function AboutPage() {
         <div className="relative z-10 w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex flex-col gap-6 max-w-3xl">
             <h2 className="font-headline-hero text-headline-hero-mobile sm:text-headline-hero text-deep-aquifer tracking-tight leading-tight">
-              The Skyra vision
+              The SkyRa vision
             </h2>
             <p className="font-headline-h2 text-headline-h2-mobile sm:text-headline-h2 text-deep-aquifer/85 font-normal leading-tight">
               A partner in every sustainability journey, across India.
             </p>
             <p className="font-body-large text-body-large text-deep-aquifer/80 leading-relaxed">
-              Skyra envisions an India where every home, institution and industry has a trusted partner for living in balance with nature. We begin with water and grow with the needs of the places we serve. We want to reach more people, solve more problems and extend into the areas of ecology and sustainability where we can make a difference. We are more than a business: we are a long-term partner in the health of the communities and land around us.
+              Skyra envisions an India where every home, institution and
+              industry has a trusted partner for living in balance with nature.
+              We begin with water and grow with the needs of the places we
+              serve. We want to reach more people, solve more problems and
+              extend into the areas of ecology and sustainability where we can
+              make a difference. We are more than a business: we are a long-term
+              partner in the health of the communities and land around us.
             </p>
           </div>
         </div>
@@ -109,13 +134,21 @@ export default function AboutPage() {
                 Architectural scarcity vs. atmospheric bounty
               </h2>
               <p className="font-body-primary text-base font-normal text-deep-aquifer leading-relaxed">
-                Skyra started with a simple, frustrating fact: India isn’t short on rain — it’s short on places to keep it.
+                Skyra started with a simple, frustrating fact: India isn’t short
+                on rain — it’s short on places to keep it.
               </p>
               <p className="font-body-primary text-base font-normal text-deep-aquifer leading-relaxed">
-                Every monsoon season, trillions of litres of pristine rainwater cascade across rooftops, parking aprons, and industrial parks, only to wash into overburdened storm drains and vanish into the sea within 48 hours. Meanwhile, borehole pumps drill 500+ feet deeper every summer to pull brackish brine from exhausted bedrock.
+                Every monsoon season, trillions of litres of pristine rainwater
+                cascade across rooftops, parking aprons, and industrial parks,
+                only to wash into overburdened storm drains and vanish into the
+                sea within 48 hours. Meanwhile, borehole pumps drill 500+ feet
+                deeper every summer to pull brackish brine from exhausted
+                bedrock.
               </p>
               <p className="font-body-primary text-base font-normal text-deep-aquifer leading-relaxed">
-                The scarcity we experience is rarely atmospheric. It is architectural. We built our cities to repel moisture rather than receive it.
+                The scarcity we experience is rarely atmospheric. It is
+                architectural. We built our cities to repel moisture rather than
+                receive it.
               </p>
             </div>
 
@@ -177,7 +210,8 @@ export default function AboutPage() {
                     Atmospheric capture delta
                   </span>
                   <p className="font-body-primary text-base font-normal text-deep-aquifer/85">
-                    Average urban run-off velocity yields 78% net loss without intentional subterranean retention barriers.
+                    Average urban run-off velocity yields 78% net loss without
+                    intentional subterranean retention barriers.
                   </p>
                 </div>
               </div>
@@ -253,7 +287,8 @@ export default function AboutPage() {
                     Subsoil equilibrium
                   </span>
                   <p className="font-body-primary text-base font-normal text-deep-aquifer/85">
-                    Passive gravity infiltration restores native perched water tables without chemical intervention.
+                    Passive gravity infiltration restores native perched water
+                    tables without chemical intervention.
                   </p>
                 </div>
               </div>
@@ -267,13 +302,19 @@ export default function AboutPage() {
                 Passive infiltration &amp; soil hydrology
               </h2>
               <p className="font-body-primary text-base font-normal text-deep-aquifer leading-relaxed">
-                Rather than relying on oversized concrete holding tanks that silt up after three seasons, we study lithology, rainfall cadence, and soil percolation.
+                Rather than relying on oversized concrete holding tanks that
+                silt up after three seasons, we study lithology, rainfall
+                cadence, and soil percolation.
               </p>
               <p className="font-body-primary text-base font-normal text-deep-aquifer leading-relaxed">
-                We design zero-loss gravity infiltration shafts, modular bio-filtration chambers, and naturalized aquifers that recharge subsoil horizons automatically.
+                We design zero-loss gravity infiltration shafts, modular
+                bio-filtration chambers, and naturalized aquifers that recharge
+                subsoil horizons automatically.
               </p>
               <p className="font-body-primary text-base font-normal text-deep-aquifer leading-relaxed">
-                When an institutional campus or residential community catches water properly, the earth beneath becomes their reservoir — clean, silent, and self-replenishing for generations.
+                When an institutional campus or residential community catches
+                water properly, the earth beneath becomes their reservoir —
+                clean, silent, and self-replenishing for generations.
               </p>
             </div>
           </div>
@@ -287,10 +328,15 @@ export default function AboutPage() {
                 03 • Regional standards &amp; hydro-geological compliance
               </span>
               <h2 className="font-headline-h2 text-headline-h2-mobile sm:text-headline-h2 text-deep-aquifer tracking-tight">
-                Engineered for South India’s soil strata &amp; groundwater guidelines
+                Engineered for South India’s soil strata &amp; groundwater
+                guidelines
               </h2>
               <p className="font-body-primary text-base font-normal text-deep-aquifer leading-relaxed">
-                Every Skyra rainwater harvesting and aquifer replenishment system is built to rigorous national hydrological standards. Rather than generic catchment pits, our civil engineers design zone-calibrated infiltration solutions tailored to the diverse lithological profiles of Kerala, Karnataka, and Tamil Nadu.
+                Every Skyra rainwater harvesting and aquifer replenishment
+                system is built to rigorous national hydrological standards.
+                Rather than generic catchment pits, our civil engineers design
+                zone-calibrated infiltration solutions tailored to the diverse
+                lithological profiles of Keralam, Karnataka, and Tamil Nadu.
               </p>
             </div>
 
@@ -308,7 +354,8 @@ export default function AboutPage() {
                 <div className="absolute bottom-4 left-4 right-4 sm:bottom-6 sm:left-6 sm:right-6 flex flex-col sm:flex-row sm:items-end justify-between gap-2 text-white">
                   <div className="flex flex-col gap-1">
                     <span className="font-mono text-xs text-white/95 font-medium">
-                      On-site hydro-geological survey &amp; percolation rate profiling
+                      On-site hydro-geological survey &amp; percolation rate
+                      profiling
                     </span>
                     <span className="font-mono text-[11px] text-white/75">
                       Commercial campus aquifer recharge • Regional validation
@@ -326,14 +373,21 @@ export default function AboutPage() {
                 <div className="p-6 rounded-[4px] bg-white border border-muted-aquifer/20 flex flex-col justify-between gap-3 shadow-xs">
                   <div className="space-y-2">
                     <div className="flex items-center gap-2 text-moss font-mono text-xs font-medium">
-                      <span className="material-symbols-outlined text-[18px]">verified</span>
+                      <span className="material-symbols-outlined text-[18px]">
+                        verified
+                      </span>
                       <span>BIS &amp; CGWA compliance</span>
                     </div>
                     <h3 className="font-headline-h3 text-lg font-semibold text-deep-aquifer">
-                      IS 15797:2008 &amp; Central Ground Water Authority guidelines
+                      IS 15797:2008 &amp; Central Ground Water Authority
+                      guidelines
                     </h3>
                     <p className="font-body-primary text-sm font-normal text-deep-aquifer/80 leading-relaxed">
-                      All infiltration shafts and percolation units adhere strictly to Bureau of Indian Standards (BIS) specifications for artificial groundwater recharge, mitigating surface runoff while preventing deep-aquifer contamination.
+                      All infiltration shafts and percolation units adhere
+                      strictly to Bureau of Indian Standards (BIS)
+                      specifications for artificial groundwater recharge,
+                      mitigating surface runoff while preventing deep-aquifer
+                      contamination.
                     </p>
                   </div>
                   <span className="font-mono text-xs text-secondary/70 pt-2 border-t border-muted-aquifer/15">
@@ -344,14 +398,19 @@ export default function AboutPage() {
                 <div className="p-6 rounded-[4px] bg-white border border-muted-aquifer/20 flex flex-col justify-between gap-3 shadow-xs">
                   <div className="space-y-2">
                     <div className="flex items-center gap-2 text-moss font-mono text-xs font-medium">
-                      <span className="material-symbols-outlined text-[18px]">layers</span>
+                      <span className="material-symbols-outlined text-[18px]">
+                        layers
+                      </span>
                       <span>Lithological adaptation</span>
                     </div>
                     <h3 className="font-headline-h3 text-lg font-semibold text-deep-aquifer">
                       Subsurface soil strata &amp; percolation rate profiling
                     </h3>
                     <p className="font-body-primary text-sm font-normal text-deep-aquifer/80 leading-relaxed">
-                      Custom-engineered for regional South Indian geology: high-drainage coastal laterites in Kerala, fractured granite crystalline bedrock across Bengaluru, and alluvial basins in Tamil Nadu.
+                      Custom-engineered for regional South Indian geology:
+                      high-drainage coastal laterites in Keralam, fractured
+                      granite crystalline bedrock across Bengaluru, and alluvial
+                      basins in Tamil Nadu.
                     </p>
                   </div>
                   <span className="font-mono text-xs text-secondary/70 pt-2 border-t border-muted-aquifer/15">
@@ -362,14 +421,18 @@ export default function AboutPage() {
                 <div className="p-6 rounded-[4px] bg-white border border-muted-aquifer/20 flex flex-col justify-between gap-3 shadow-xs">
                   <div className="space-y-2">
                     <div className="flex items-center gap-2 text-moss font-mono text-xs font-medium">
-                      <span className="material-symbols-outlined text-[18px]">eco</span>
+                      <span className="material-symbols-outlined text-[18px]">
+                        eco
+                      </span>
                       <span>ESG &amp; Green Building</span>
                     </div>
                     <h3 className="font-headline-h3 text-lg font-semibold text-deep-aquifer">
                       IGBC, GRIHA &amp; LEED water credits
                     </h3>
                     <p className="font-body-primary text-sm font-normal text-deep-aquifer/80 leading-relaxed">
-                      Equips industrial corridors and commercial IT parks to achieve complete water neutrality and qualify for maximum points under national green building rating frameworks.
+                      Equips industrial corridors and commercial IT parks to
+                      achieve complete water neutrality and qualify for maximum
+                      points under national green building rating frameworks.
                     </p>
                   </div>
                   <span className="font-mono text-xs text-secondary/70 pt-2 border-t border-muted-aquifer/15">
@@ -488,10 +551,12 @@ export default function AboutPage() {
             The mandate
           </span>
           <blockquote className="font-headline-h2 text-headline-h2-mobile sm:text-headline-h2 font-semibold text-deep-aquifer max-w-2xl tracking-tight">
-            “Water security is not an emergency response. It is engineered infrastructure.”
+            “Water security is not an emergency response. It is engineered
+            infrastructure.”
           </blockquote>
           <p className="font-body-large text-body-large text-deep-aquifer max-w-[48ch] leading-relaxed">
-            We partner with landowners, institutional leaders, and civil developers who plan half a century ahead.
+            We partner with landowners, institutional leaders, and civil
+            developers who plan half a century ahead.
           </p>
           <div className="flex flex-col sm:flex-row items-center gap-4 pt-2">
             <Link
@@ -512,5 +577,3 @@ export default function AboutPage() {
     </div>
   );
 }
-
-

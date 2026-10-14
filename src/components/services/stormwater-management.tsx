@@ -100,7 +100,7 @@ export function StormwaterManagement() {
               Hydrological engineering comparison
             </span>
             <h3 className="mt-1 font-headline-h3 text-[24px] font-medium text-white leading-[1.3]">
-              Conventional runoff vs. Skyra managed infrastructure
+              Conventional runoff vs. SkyRa managed infrastructure
             </h3>
           </div>
 
@@ -126,7 +126,7 @@ export function StormwaterManagement() {
             <div className="flex flex-col gap-4 rounded-[4px] bg-[#142c4c] p-6 border border-[#2a5382]">
               <div className="flex items-center justify-between">
                 <span className="rounded-[4px] bg-moss/10 border border-moss/20 px-2.5 py-1 font-mono text-xs font-medium text-moss">
-                  Skyra engineered system
+                  SkyRa engineered system
                 </span>
                 <CheckCircleIcon className="size-5 text-moss" />
               </div>

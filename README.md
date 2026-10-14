@@ -22,6 +22,15 @@ npm run lint
 
 Header, footer, and the floating WhatsApp widget are shared layout, rendered once in `src/app/layout.tsx` around every page.
 
+## Social links
+
+Set `NEXT_PUBLIC_YOUTUBE_URL`, `NEXT_PUBLIC_INSTAGRAM_URL`,
+`NEXT_PUBLIC_FACEBOOK_URL`, `NEXT_PUBLIC_LINKEDIN_URL`, and `NEXT_PUBLIC_X_URL`
+in `.env.local` (see `.env.example`). These settings control the contact page,
+shared social links, and organization metadata. Missing or empty values use the
+existing Skyra profile URLs. Restart the development server after editing; for
+production, set the variables before building and redeploy to apply changes.
+
 ## Contact submission limit
 
 The contact server action allows five validated submission attempts per browser per
@@ -133,7 +142,6 @@ The Figma file has desktop frames only (1280/1417/1294/1280px). Everything below
 - **`src/components/about/the-team.tsx`**: all four profiles are placeholder content *in the source itself* (generic names, initials-only avatars, explicitly commented "Skeleton Avatar Placeholder" in the reference HTML). Needs real founder names/photos/bios.
 - **Source photography** is 512×279px natively across every page (confirmed the same asset at that resolution in both the Figma export and the HTML reference — not a fetch issue on this end). Soft when stretched to full width/card size; worth commissioning real photography.
 - **Footer legal links** (`Privacy Policy`, `Terms of Service`, `KSPCB Compliance`) point to `#` — no destination pages exist in the four-page scope.
-- Social links (Instagram/LinkedIn/YouTube on Landing/About/Contact, Facebook added on Contact) point to `#` — no real profile URLs were in any source.
 - `npm audit` reports 3 high-severity advisories in Next.js itself; the fix requires bumping past the pinned `16.2.10` to `16.3.4`. Left pinned as requested — bump on request.
 
 ## Verification performed

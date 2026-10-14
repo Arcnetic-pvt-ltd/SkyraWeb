@@ -5,7 +5,7 @@ import Link from "next/link";
 import { motion } from "framer-motion";
 
 const CITY_PRESETS = [
-  { name: "Kochi", rainfall: 3000, state: "Kerala" },
+  { name: "Kochi", rainfall: 3000, state: "Keralam" },
   { name: "Mumbai", rainfall: 2400, state: "Maharashtra" },
   { name: "Chennai", rainfall: 1400, state: "Tamil Nadu" },
   { name: "Bengaluru", rainfall: 950, state: "Karnataka" },
@@ -30,7 +30,9 @@ export function HarvestingCalculator() {
     ? customRainfall
     : CITY_PRESETS.find((c) => c.name === selectedCity)?.rainfall || 950;
 
-  const annualLiters = Math.round(areaInM2 * activeRainfall * RUNOFF_COEFFICIENT);
+  const annualLiters = Math.round(
+    areaInM2 * activeRainfall * RUNOFF_COEFFICIENT,
+  );
 
   const handleCitySelect = (cityName: string) => {
     setSelectedCity(cityName);
@@ -45,16 +47,56 @@ export function HarvestingCalculator() {
       id="calculator"
     >
       {/* Subtle Rainfall Overlay */}
-      <div aria-hidden="true" className="absolute inset-0 z-[1] pointer-events-none overflow-hidden select-none opacity-20">
+      <div
+        aria-hidden="true"
+        className="absolute inset-0 z-[1] pointer-events-none overflow-hidden select-none opacity-20"
+      >
         <svg className="w-full h-full" xmlns="http://www.w3.org/2000/svg">
           <defs>
-            <pattern id="calcRainPattern" width="120" height="120" patternUnits="userSpaceOnUse">
-              <line x1="20" y1="0" x2="10" y2="35" stroke="#748D8C" strokeWidth="1" strokeOpacity="0.4" strokeDasharray="12 18" />
-              <line x1="70" y1="40" x2="60" y2="75" stroke="#7D9D3D" strokeWidth="1" strokeOpacity="0.3" strokeDasharray="10 20" />
-              <line x1="110" y1="20" x2="100" y2="55" stroke="#86b5db" strokeWidth="0.8" strokeOpacity="0.35" strokeDasharray="8 16" />
+            <pattern
+              id="calcRainPattern"
+              width="120"
+              height="120"
+              patternUnits="userSpaceOnUse"
+            >
+              <line
+                x1="20"
+                y1="0"
+                x2="10"
+                y2="35"
+                stroke="#748D8C"
+                strokeWidth="1"
+                strokeOpacity="0.4"
+                strokeDasharray="12 18"
+              />
+              <line
+                x1="70"
+                y1="40"
+                x2="60"
+                y2="75"
+                stroke="#7D9D3D"
+                strokeWidth="1"
+                strokeOpacity="0.3"
+                strokeDasharray="10 20"
+              />
+              <line
+                x1="110"
+                y1="20"
+                x2="100"
+                y2="55"
+                stroke="#86b5db"
+                strokeWidth="0.8"
+                strokeOpacity="0.35"
+                strokeDasharray="8 16"
+              />
             </pattern>
           </defs>
-          <rect width="100%" height="100%" fill="url(#calcRainPattern)" className="animate-subtle-rain" />
+          <rect
+            width="100%"
+            height="100%"
+            fill="url(#calcRainPattern)"
+            className="animate-subtle-rain"
+          />
         </svg>
       </div>
 
@@ -76,34 +118,42 @@ export function HarvestingCalculator() {
             </h2>
           </div>
           <p className="font-mono text-xs text-[#bcd7e8]/70 leading-relaxed max-w-xs sm:text-right">
-            Estimate annual water yield based on catchment footprint and localized rainfall data.
+            Estimate annual water yield based on catchment footprint and
+            localized rainfall data.
           </p>
         </div>
 
         {/* Two-column panel — both dark */}
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-0 rounded-[6px] border border-[#22446d]/80 overflow-hidden">
-
           {/* Controls — Left */}
           <div className="lg:col-span-7 flex flex-col gap-6 bg-[#132742]/85 p-6 sm:p-8 border-b lg:border-b-0 lg:border-r border-[#22446d]/60">
-
             {/* Step 1 */}
             <div className="flex flex-col gap-3">
               <div className="flex items-center justify-between">
-                <label htmlFor={areaInputId} className="font-body-primary text-sm font-semibold text-white flex items-center gap-2">
-                  <span className="size-5 rounded-[2px] bg-moss/20 text-moss flex items-center justify-center font-mono text-xs font-bold">1</span>
+                <label
+                  htmlFor={areaInputId}
+                  className="font-body-primary text-sm font-semibold text-white flex items-center gap-2"
+                >
+                  <span className="size-5 rounded-[2px] bg-moss/20 text-moss flex items-center justify-center font-mono text-xs font-bold">
+                    1
+                  </span>
                   Rooftop / catchment footprint
                 </label>
                 <div className="inline-flex rounded-[6px] bg-[#0d1d33] p-0.5 border border-[#22446d] text-xs font-medium">
                   <button
                     type="button"
-                    onClick={() => { setUnit("sqft"); }}
+                    onClick={() => {
+                      setUnit("sqft");
+                    }}
                     className={`px-3 py-1 rounded-[4px] transition-all cursor-pointer ${unit === "sqft" ? "bg-moss text-deep-aquifer font-bold" : "text-light-aquifer-canvas/70 hover:text-white"}`}
                   >
                     sq. ft.
                   </button>
                   <button
                     type="button"
-                    onClick={() => { setUnit("m2"); }}
+                    onClick={() => {
+                      setUnit("m2");
+                    }}
                     className={`px-3 py-1 rounded-[4px] transition-all cursor-pointer ${unit === "m2" ? "bg-moss text-deep-aquifer font-bold" : "text-light-aquifer-canvas/70 hover:text-white"}`}
                   >
                     m²
@@ -118,14 +168,16 @@ export function HarvestingCalculator() {
                   min={10}
                   max={500000}
                   value={areaSqFt}
-                  onChange={(e) => setAreaSqFt(Math.max(0, Number(e.target.value)))}
+                  onChange={(e) =>
+                    setAreaSqFt(Math.max(0, Number(e.target.value)))
+                  }
                   className="w-32 bg-[#0d1d33] border border-[#22446d] rounded-[6px] px-3 py-2 text-white font-mono text-base font-bold focus:outline-none focus:border-[#86b5db]"
                 />
                 <span className="font-mono text-xs text-[#86b5db]">
-                  ≈ {unit === "sqft"
+                  ≈{" "}
+                  {unit === "sqft"
                     ? `${areaInM2.toFixed(1)} m² catchment area`
-                    : `${Math.round(areaSqFt * 10.7639).toLocaleString()} sq. ft. catchment area`
-                  }
+                    : `${Math.round(areaSqFt * 10.7639).toLocaleString()} sq. ft. catchment area`}
                 </span>
               </div>
 
@@ -142,8 +194,13 @@ export function HarvestingCalculator() {
 
             {/* Step 2 */}
             <div className="flex flex-col gap-3">
-              <label htmlFor={rainfallInputId} className="font-body-primary text-sm font-semibold text-white flex items-center gap-2">
-                <span className="size-5 rounded-[2px] bg-moss/20 text-moss flex items-center justify-center font-mono text-xs font-bold">2</span>
+              <label
+                htmlFor={rainfallInputId}
+                className="font-body-primary text-sm font-semibold text-white flex items-center gap-2"
+              >
+                <span className="size-5 rounded-[2px] bg-moss/20 text-moss flex items-center justify-center font-mono text-xs font-bold">
+                  2
+                </span>
                 Average annual rainfall
               </label>
 
@@ -160,7 +217,9 @@ export function HarvestingCalculator() {
                     }`}
                   >
                     <span className="text-xs font-bold">{city.name}</span>
-                    <span className="text-[10px] opacity-80 font-mono">{city.rainfall} mm/yr</span>
+                    <span className="text-[10px] opacity-80 font-mono">
+                      {city.rainfall} mm/yr
+                    </span>
                   </button>
                 ))}
               </div>
@@ -168,7 +227,9 @@ export function HarvestingCalculator() {
               <div className="flex flex-col gap-1.5">
                 <div className="flex items-center justify-between text-xs text-light-aquifer-canvas/70">
                   <span>Custom rainfall intensity</span>
-                  <span className="font-mono font-bold text-moss">{activeRainfall} mm</span>
+                  <span className="font-mono font-bold text-moss">
+                    {activeRainfall} mm
+                  </span>
                 </div>
                 <input
                   id={rainfallInputId}
@@ -177,7 +238,10 @@ export function HarvestingCalculator() {
                   max={5000}
                   step={50}
                   value={activeRainfall}
-                  onChange={(e) => { setCustomRainfall(Number(e.target.value)); setIsCustomRainfall(true); }}
+                  onChange={(e) => {
+                    setCustomRainfall(Number(e.target.value));
+                    setIsCustomRainfall(true);
+                  }}
                   className="w-full accent-moss cursor-pointer"
                 />
               </div>
@@ -186,7 +250,9 @@ export function HarvestingCalculator() {
             {/* Coefficient Note */}
             <div className="border-t border-[#22446d] pt-3 flex items-center justify-between font-mono text-xs text-light-aquifer-canvas/60">
               <span>Runoff efficiency coefficient</span>
-              <span className="font-semibold text-moss">0.85 (85% net retention)</span>
+              <span className="font-semibold text-moss">
+                0.85 (85% net retention)
+              </span>
             </div>
           </div>
 
@@ -195,9 +261,14 @@ export function HarvestingCalculator() {
             <div className="flex flex-col gap-6">
               {/* Live badge + label */}
               <div className="flex items-center justify-between">
-                <span className="font-mono text-xs text-[#86b5db]/80 font-medium">Estimated annual yield</span>
+                <span className="font-mono text-xs text-[#86b5db]/80 font-medium">
+                  Estimated annual yield
+                </span>
                 <span className="inline-flex items-center gap-1.5 rounded-[4px] border border-[#22446d] bg-[#0d1d33] px-2.5 py-0.5 font-mono text-[10px] font-medium text-[#86b5db]">
-                  <span aria-hidden="true" className="size-1.5 rounded-full bg-moss animate-pulse" />
+                  <span
+                    aria-hidden="true"
+                    className="size-1.5 rounded-full bg-moss animate-pulse"
+                  />
                   Calculated live
                 </span>
               </div>
@@ -224,7 +295,9 @@ export function HarvestingCalculator() {
 
               {/* Context note */}
               <p className="font-body-primary text-xs text-[#86b5db]/60 leading-relaxed">
-                Based on standard impervious surface runoff coefficient (0.85). Actual yield may vary with roof material, slope, and local weather patterns. Contact us for a detailed site assessment.
+                Based on standard impervious surface runoff coefficient (0.85).
+                Actual yield may vary with roof material, slope, and local
+                weather patterns. Contact us for a detailed site assessment.
               </p>
             </div>
 
@@ -241,7 +314,6 @@ export function HarvestingCalculator() {
               </Link>
             </div>
           </div>
-
         </div>
       </div>
     </section>

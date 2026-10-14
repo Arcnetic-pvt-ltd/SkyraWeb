@@ -8,7 +8,7 @@ import { CONTACT } from "@/lib/nav";
 
 
 export const metadata: Metadata = buildMetadata({
-  title: "Skyra Rainsink | Rain Percolator & Groundwater Recharge",
+  title: "SkyRa Rainsink | Rain Percolator & Groundwater Recharge",
   description:
     "Explore Skyra Rainsink, a modular rain percolator for groundwater recharge and stormwater infiltration. Request a Site Survey for your campus or property.",
   path: "/products/rainsink",
@@ -28,7 +28,7 @@ export const metadata: Metadata = buildMetadata({
 export default function RainsinkProductPage() {
   return (
     <div className="flex flex-col w-full overflow-hidden">
-      <JsonLd data={breadcrumbJsonLd([{ name: "Home", path: "/" }, { name: "Skyra Rainsink", path: "/products/rainsink" }])} />
+      <JsonLd data={breadcrumbJsonLd([{ name: "Home", path: "/" }, { name: "SkyRa Rainsink", path: "/products/rainsink" }])} />
       {/* Top Editorial Banner */}
       <section className="relative z-10 w-full pt-28 pb-16 sm:pt-32 sm:pb-24 bg-linear-to-b from-[#dceef8] via-[#e8f4fa] to-[#f2f8fc]">
         <div className="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
@@ -49,7 +49,7 @@ export default function RainsinkProductPage() {
         <div className="flex flex-col gap-6 max-w-3xl">
           <div className="inline-flex items-center gap-2 mb-4">
             <span className="font-technical-label text-[13px] text-forest-slate uppercase tracking-wider font-semibold">
-              Flagship hydrological engine &middot; Skyra Rainsink
+              Flagship hydrological engine &middot; SkyRa Rainsink
             </span>
           </div>
 
@@ -107,7 +107,7 @@ export default function RainsinkProductPage() {
                   </span>
                 </div>
                 <h2 className="font-headline-h2 text-[28px] sm:text-[36px] font-semibold text-deep-aquifer tracking-tight">
-                  Where &amp; how to deploy Skyra Rainsink
+                  Where &amp; how to deploy SkyRa Rainsink
                 </h2>
               </div>
 
@@ -214,7 +214,7 @@ export default function RainsinkProductPage() {
           </div>
 
           <h2 className="font-headline-h2 text-headline-h2-mobile sm:text-headline-h2 text-deep-aquifer max-w-3xl leading-tight font-semibold tracking-tight">
-            Ready to equip your campus with Skyra Rainsink?
+            Ready to equip your campus with SkyRa Rainsink?
           </h2>
 
           <p className="font-body-large text-body-large text-deep-aquifer max-w-2xl leading-relaxed text-left">

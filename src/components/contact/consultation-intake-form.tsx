@@ -183,7 +183,7 @@ export function ConsultationIntakeForm() {
             type="text"
           />
 
-          {/* Action button & response time notice */}
+          {/* Action button */}
           <div className="pt-2 flex flex-col gap-3">
             {submitError && (
               <p className="text-sm text-red-600 font-medium" role="alert">
@@ -197,9 +197,6 @@ export function ConsultationIntakeForm() {
             >
               {sending ? "Sending…" : "Book a Site Survey"}
             </button>
-            <p className="font-body-sm text-[13px] text-deep-aquifer/70 text-center">
-              Maximum 5 submissions per browser each day. Resets at midnight IST.
-            </p>
           </div>
         </form>
       ) : (

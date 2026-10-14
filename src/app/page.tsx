@@ -12,9 +12,9 @@ import { ImpactMetrics } from "@/components/landing/impact-metrics";
 import { SectorCapabilities } from "@/components/services/sector-capabilities";
 
 export const metadata: Metadata = buildMetadata({
-  title: "Rainwater Harvesting & Groundwater Recharge | Skyra",
+  title: "Rainwater Harvesting & Groundwater Recharge | SkyRa",
   description:
-    "Skyra designs rainwater harvesting and groundwater recharge systems for homes, campuses and industries across Kerala, Karnataka and Tamil Nadu.",
+    "Skyra designs rainwater harvesting and groundwater recharge systems for homes, campuses and industries across Keralam, Karnataka and Tamil Nadu.",
   path: "/",
 });
 
@@ -43,7 +43,7 @@ export default function Home() {
                 grounds and return it to the earth where it lasts. Turn-key
                 rainwater harvesting, groundwater recharge, and percolation
                 systems for homes, apartments, industries, and campuses across
-                Kerala, Karnataka, and Tamil Nadu.
+                Keralam, Karnataka, and Tamil Nadu.
               </p>
 
               <div className="mt-6 flex flex-col sm:flex-row items-stretch sm:items-center gap-3 w-full sm:w-auto">
@@ -71,23 +71,15 @@ export default function Home() {
             </div>
           </div>
 
-          {/* Telemetry Metric Chip */}
+          {/* Service Locations */}
           <div className="mt-8 sm:mt-10 pt-4 flex items-center justify-center sm:justify-between flex-wrap gap-6 border-t border-muted-aquifer/15">
-            <div className="inline-flex items-center gap-4 py-2.5 px-4 rounded-[4px] bg-white border border-muted-aquifer/20">
-              <span className="inline-block w-2 h-2 rounded-full bg-moss"></span>
-              <div className="flex items-baseline gap-2">
-                <span className="font-metric-mono-lg text-metric-mono-lg text-deep-aquifer tracking-tight">
-                  1.8B
-                </span>
-                <span className="font-body-sm text-body-sm text-secondary font-medium">
-                  Liters harvested &amp; recharged
-                </span>
-              </div>
-            </div>
-
             <div className="flex items-center gap-6 sm:gap-8 text-secondary/70">
               <span className="font-body-sm text-body-sm font-medium">
-                Kochi
+                Keralam
+              </span>
+              <span className="w-1 h-1 rounded-full bg-secondary/40"></span>
+              <span className="font-body-sm text-body-sm font-medium">
+                Tamil Nadu
               </span>
               <span className="w-1 h-1 rounded-full bg-secondary/40"></span>
               <span className="font-body-sm text-body-sm font-medium">
