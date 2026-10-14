@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState, useEffect, useCallback } from "react";
+import React, { useState, useCallback } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { motion, AnimatePresence } from "framer-motion";
@@ -36,7 +36,7 @@ export const PRODUCTS_CATALOG: ProductItem[] = [
     metric1Unit: "L/MIN (>95%)",
     metric2Label: "Filter mesh & price",
     metric2Value: "400µm Polymer Screen | ₹3,250",
-    image: "/images/neerain-nru150-exact.jpg",
+    image: "/images/neerain-nru-150.jpg",
     contactProductSlug: "neerain-nru-150",
     specsHighlight: ["140 m² Roof Area", "120 L/Min Rate", "400µm Polymer Screen", "110mm ID Collar"],
   },
@@ -53,7 +53,7 @@ export const PRODUCTS_CATALOG: ProductItem[] = [
     metric1Unit: "L/MIN (>95%)",
     metric2Label: "Filter mesh & price",
     metric2Value: "SS 304 Curved + 200µm | ₹7,150",
-    image: "/images/neerain-exact-filter.jpg",
+    image: "/images/neerain-nrn-220.jpg",
     contactProductSlug: "neerain-nrn-220",
     specsHighlight: ["150 m² Roof Area", "150 L/Min Rate", "SS 304 Curved Screen", "200µm Polymer Mesh"],
   },
@@ -78,16 +78,16 @@ export const PRODUCTS_CATALOG: ProductItem[] = [
     id: "skyra-750-industrial",
     series: "MODEL RC-750",
     capacityTag: "750 M² CATCHMENT",
-    title: "Skyra RC-750 High-Volume Industrial RWH Filter",
+    title: "RC-750 High-Volume Industrial RWH Filter",
     category: "industrial",
     description:
-      "Heavy-duty 10 LPS industrial rainwater filter cabinet designed for 750 m² roof catchments. Features 140mm dual inlet/outlet flanges and quick-flush drain manifold.",
+      "RC Series industrial rainwater filters cover catchments from 750 m² up to 4,000 m² (RC-750 through RC-4000), with discharge rates ranging from 5 LPS to 70 LPS. All models feature SS-304 dual-screen gravity filtration, auto-flush open drain, and >90% filtration efficiency at 200 microns. Custom configurations available for catchments exceeding 6,000 m².",
     metric1Label: "Discharge rate",
     metric1Value: "10",
     metric1Unit: "LPS (140mm)",
     metric2Label: "Rainfall intensity",
     metric2Value: "50 mm/hr Peak",
-    image: "/images/skyra-rc-750-filter.jpg",
+    image: "/images/skyra-rc-skyra-rc-750-filter.png",
     contactProductSlug: "750-series-filter",
     specsHighlight: ["750 m² Catchment", "10 LPS Discharge", "140mm Inlet/Outlet"],
   },
@@ -113,7 +113,6 @@ export const PRODUCTS_CATALOG: ProductItem[] = [
 export function ProductCatalogCarousel() {
   const [activeCategory, setActiveCategory] = useState<"all" | "rooftop" | "industrial" | "infrastructure">("all");
   const [currentIndex, setCurrentIndex] = useState(0);
-  const [isPaused, setIsPaused] = useState(false);
   const [showSpecTable, setShowSpecTable] = useState(false);
 
   const filteredProducts = PRODUCTS_CATALOG.filter(
@@ -130,11 +129,6 @@ export function ProductCatalogCarousel() {
     setCurrentIndex((prev) => (prev - 1 + total) % total);
   }, [total]);
 
-  // Reset index on category change
-  useEffect(() => {
-    setCurrentIndex(0);
-  }, [activeCategory]);
-
   // Product selection is user-driven via category tabs and list controls
 
   return (
@@ -142,23 +136,25 @@ export function ProductCatalogCarousel() {
       {/* Category Tabs & Navigation Controls Header */}
       <div className="flex flex-wrap items-center justify-between gap-3 pb-2.5 border-b border-muted-aquifer/15">
         <div className="flex flex-wrap items-center gap-1.5">
-          {[
-            { id: "all", label: "All products" },
-            { id: "rooftop", label: "Rooftop filters" },
-            { id: "industrial", label: "Industrial systems" },
-            { id: "infrastructure", label: "Percolation ponds" },
-          ].map((tab) => {
+          {([
+            { id: "all", label: "All Products" },
+            { id: "rooftop", label: "Rooftop Filters" },
+            { id: "industrial", label: "Industrial Systems" },
+            { id: "infrastructure", label: "Percolation Ponds" },
+          ] as const).map((tab) => {
             const isActive = activeCategory === tab.id;
             return (
               <button
                 key={tab.id}
                 type="button"
-                onClick={() => setActiveCategory(tab.id as any)}
-                className={`px-3 py-1 rounded-[4px] font-button-text text-xs transition-all duration-300 cursor-pointer ${
-                  isActive
-                    ? "bg-deep-aquifer text-white"
-                    : "bg-white border border-muted-aquifer/20 text-deep-aquifer/70 hover:text-deep-aquifer hover:bg-black/5"
-                }`}
+                onClick={() => {
+                  setActiveCategory(tab.id);
+                  setCurrentIndex(0);
+                }}
+                className={`px-3 py-1 rounded-[4px] font-button-text text-xs transition-all duration-300 cursor-pointer ${isActive
+                  ? "bg-deep-aquifer text-white"
+                  : "bg-white border border-muted-aquifer/20 text-deep-aquifer/70 hover:text-deep-aquifer hover:bg-black/5"
+                  }`}
               >
                 {tab.label}
               </button>
@@ -179,7 +175,7 @@ export function ProductCatalogCarousel() {
             <button
               type="button"
               onClick={handlePrev}
-              aria-label="Previous product"
+              aria-label="Previous Product"
               className="w-7 h-7 sm:w-8 sm:h-8 rounded-[4px] border border-muted-aquifer/25 bg-white flex items-center justify-center text-deep-aquifer hover:bg-deep-aquifer hover:text-white transition-all duration-200 cursor-pointer disabled:opacity-40"
             >
               <span className="material-symbols-outlined text-[17px]">arrow_back</span>
@@ -187,7 +183,7 @@ export function ProductCatalogCarousel() {
             <button
               type="button"
               onClick={handleNext}
-              aria-label="Next product"
+              aria-label="Next Product"
               className="w-7 h-7 sm:w-8 sm:h-8 rounded-[4px] border border-muted-aquifer/25 bg-white flex items-center justify-center text-deep-aquifer hover:bg-deep-aquifer hover:text-white transition-all duration-200 cursor-pointer disabled:opacity-40"
             >
               <span className="material-symbols-outlined text-[17px]">arrow_forward</span>
@@ -199,8 +195,6 @@ export function ProductCatalogCarousel() {
       {/* Main Interactive Carousel Slide Container */}
       <div
         className="relative w-full"
-        onMouseEnter={() => setIsPaused(true)}
-        onMouseLeave={() => setIsPaused(false)}
       >
         {/* Desktop Grid Layout: Static Catalog Overview (5 Cols on Left) + Hero Spotlight Card (7 Cols on Right) */}
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-4 lg:gap-5 items-stretch">
@@ -217,11 +211,10 @@ export function ProductCatalogCarousel() {
                   <div
                     key={prod.id}
                     onClick={() => setCurrentIndex(idx)}
-                    className={`p-2 sm:p-2.5 rounded-[4px] border transition-all duration-300 cursor-pointer flex items-center gap-2.5 sm:gap-3 group ${
-                      isSelected
-                        ? "bg-linear-to-r from-[#0c1a2d] to-[#132742] text-white border-moss/60 border-l-4 border-l-moss shadow-xs"
-                        : "bg-white text-deep-aquifer border-muted-aquifer/20 hover:border-moss/40 hover:bg-slate-50/50"
-                    }`}
+                    className={`p-2 sm:p-2.5 rounded-[4px] border transition-all duration-300 cursor-pointer flex items-center gap-2.5 sm:gap-3 group ${isSelected
+                      ? "bg-linear-to-r from-[#0c1a2d] to-[#132742] text-white border-moss/60 border-l-4 border-l-moss shadow-xs"
+                      : "bg-white text-deep-aquifer border-muted-aquifer/20 hover:border-moss/40 hover:bg-slate-50/50"
+                      }`}
                   >
                     {/* Thumbnail Image */}
                     <div className="relative w-10 h-10 sm:w-11 sm:h-11 rounded-[4px] overflow-hidden shrink-0 bg-surface-container-low border border-muted-aquifer/15">
@@ -230,44 +223,40 @@ export function ProductCatalogCarousel() {
                         alt={prod.title}
                         fill
                         sizes="48px"
-                        className="object-cover"
+                        className="object-contain p-1 md:object-cover md:p-0"
                       />
                     </div>
 
                     <div className="flex flex-col flex-1 min-w-0">
                       <div className="flex items-center gap-1.5">
                         <span
-                          className={`font-mono text-[9px] px-1.5 py-0.5 rounded-[3px] font-medium ${
-                            isSelected
-                              ? "bg-moss text-deep-aquifer"
-                              : "bg-moss/10 text-moss"
-                          }`}
+                          className={`font-mono text-[9px] px-1.5 py-0.5 rounded-[3px] font-medium ${isSelected
+                            ? "bg-moss text-deep-aquifer"
+                            : "bg-moss/10 text-moss"
+                            }`}
                         >
                           {prod.series}
                         </span>
                         <span
-                          className={`font-mono text-[9px] truncate ${
-                            isSelected ? "text-white/70" : "text-muted-aquifer"
-                          }`}
+                          className={`font-mono text-[9px] truncate ${isSelected ? "text-white/70" : "text-muted-aquifer"
+                            }`}
                         >
                           {prod.capacityTag}
                         </span>
                       </div>
                       <h4
-                        className={`font-medium text-xs sm:text-[13px] truncate mt-0.5 ${
-                          isSelected ? "text-white" : "text-deep-aquifer"
-                        }`}
+                        className={`font-medium text-xs sm:text-[13px] truncate mt-0.5 ${isSelected ? "text-white" : "text-deep-aquifer"
+                          }`}
                       >
                         {prod.title}
                       </h4>
                     </div>
 
                     <span
-                      className={`material-symbols-outlined text-sm sm:text-base transition-transform ${
-                        isSelected
-                          ? "text-moss translate-x-0.5"
-                          : "text-muted-aquifer/40 group-hover:text-deep-aquifer"
-                      }`}
+                      className={`material-symbols-outlined text-sm sm:text-base transition-transform ${isSelected
+                        ? "text-moss translate-x-0.5"
+                        : "text-muted-aquifer/40 group-hover:text-deep-aquifer"
+                        }`}
                     >
                       arrow_forward_ios
                     </span>
@@ -290,19 +279,21 @@ export function ProductCatalogCarousel() {
                   className="w-full bg-white rounded-[4px] border border-muted-aquifer/20 overflow-hidden flex flex-col md:flex-row group h-full shadow-none relative"
                 >
                   {/* High-Res Rendered Image Frame */}
-                  <div className="relative w-full md:w-5/12 h-44 md:h-auto min-h-[180px] bg-surface-container-low overflow-hidden border-b md:border-b-0 md:border-r border-muted-aquifer/15 shrink-0">
-                    <Image
-                      src={filteredProducts[currentIndex].image}
-                      alt={filteredProducts[currentIndex].title}
-                      fill
-                      sizes="(max-width: 768px) 100vw, 360px"
-                      className="object-cover group-hover:scale-105 transition-transform duration-700 ease-out"
-                      priority
-                    />
-                    <div className="absolute inset-0 bg-gradient-to-t from-deep-aquifer/50 via-transparent to-transparent pointer-events-none" />
+                  <div className="relative flex flex-col md:block w-full md:w-5/12 min-h-[180px] bg-white md:bg-surface-container-low overflow-hidden border-b md:border-b-0 md:border-r border-muted-aquifer/15 shrink-0">
+                    <div className="relative h-56 sm:h-64 md:absolute md:inset-0 md:h-auto">
+                      <Image
+                        src={filteredProducts[currentIndex].image}
+                        alt={filteredProducts[currentIndex].title}
+                        fill
+                        sizes="(max-width: 768px) 100vw, 360px"
+                        className="object-contain p-3 md:p-0 md:object-cover md:group-hover:scale-105 transition-transform duration-700 ease-out"
+                        priority
+                      />
+                    </div>
+                    <div className="hidden md:block absolute inset-0 bg-gradient-to-t from-deep-aquifer/50 via-transparent to-transparent pointer-events-none" />
 
-                    {/* Top Overlay Badges */}
-                    <div className="absolute top-2.5 left-2.5 right-2.5 flex items-center justify-between pointer-events-none">
+                    {/* Keep labels outside the product image on mobile. */}
+                    <div className="order-first p-2.5 md:p-0 md:absolute md:top-2.5 md:left-2.5 md:right-2.5 flex flex-wrap gap-2 items-center justify-between pointer-events-none">
                       <span className="font-mono text-[9px] sm:text-[10px] text-white bg-[#0c1a2d] px-2 py-0.5 rounded-[3px] font-medium border border-[#22446d]">
                         {filteredProducts[currentIndex].series}
                       </span>
@@ -312,7 +303,7 @@ export function ProductCatalogCarousel() {
                     </div>
 
                     {/* Specs Highlight Tags at bottom of Image */}
-                    <div className="absolute bottom-2 left-2 right-2 flex flex-wrap gap-1 pointer-events-none">
+                    <div className="p-2.5 md:p-0 md:absolute md:bottom-2 md:left-2 md:right-2 flex flex-wrap gap-1 pointer-events-none">
                       {filteredProducts[currentIndex].specsHighlight.slice(0, 3).map((spec, i) => (
                         <span
                           key={i}
@@ -330,7 +321,7 @@ export function ProductCatalogCarousel() {
                       <h3 className="font-headline-h3 text-[17px] sm:text-[18px] font-medium leading-[1.3] text-deep-aquifer tracking-tight">
                         {filteredProducts[currentIndex].title}
                       </h3>
-                      <p className="font-body-primary text-xs sm:text-[12.5px] font-normal leading-relaxed text-deep-aquifer/85 line-clamp-3">
+                      <p className="font-body-primary text-xs sm:text-[12.5px] font-normal leading-relaxed text-deep-aquifer/85">
                         {filteredProducts[currentIndex].description}
                       </p>
                     </div>
@@ -368,7 +359,7 @@ export function ProductCatalogCarousel() {
                           >
                             <span className="flex items-center gap-1.5">
                               <span className="material-symbols-outlined text-moss text-sm">table_chart</span>
-                              <span>Compare NRU 150 vs NRN 220 datasheet</span>
+                              <span>Compare NRU 150 vs NRN 220 Datasheet</span>
                             </span>
                             <span className="material-symbols-outlined text-xs">
                               {showSpecTable ? "expand_less" : "expand_more"}
@@ -380,9 +371,9 @@ export function ProductCatalogCarousel() {
                       <div className="pt-0.5 flex items-center gap-3">
                         <Link
                           href={`/contact?product=${filteredProducts[currentIndex].contactProductSlug}`}
-                          className="w-full sm:w-auto inline-flex items-center justify-center gap-2 bg-deep-aquifer hover:bg-forest-slate text-white font-button-text font-semibold text-xs px-5 py-2.5 rounded-[6px] transition-all duration-300 group/btn cursor-pointer"
+                          className="w-full sm:w-auto inline-flex items-center justify-center gap-2 bg-deep-aquifer bg-clip-padding border border-transparent hover:bg-forest-slate text-white font-button-text font-semibold text-xs px-5 py-2.5 rounded-[6px] transition-all duration-300 group/btn cursor-pointer"
                         >
-                          <span>Get quote &amp; specs</span>
+                          <span>Get Quote &amp; Specs</span>
                           <span className="material-symbols-outlined text-[16px] group-hover/btn:translate-x-1 transition-transform">
                             arrow_forward
                           </span>
@@ -473,10 +464,9 @@ export function ProductCatalogCarousel() {
             key={i}
             type="button"
             onClick={() => setCurrentIndex(i)}
-            aria-label={`Go to slide ${i + 1}`}
-            className={`h-2 rounded-full transition-all duration-300 cursor-pointer ${
-              i === currentIndex ? "w-8 bg-moss" : "w-2 bg-muted-aquifer/30 hover:bg-muted-aquifer/60"
-            }`}
+            aria-label={`Go to Slide ${i + 1}`}
+            className={`h-2 rounded-full transition-all duration-300 cursor-pointer ${i === currentIndex ? "w-8 bg-moss" : "w-2 bg-muted-aquifer/30 hover:bg-muted-aquifer/60"
+              }`}
           />
         ))}
       </div>

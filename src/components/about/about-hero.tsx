@@ -49,7 +49,7 @@ export function AboutHero() {
 
         <div className="mt-8 flex flex-wrap items-center justify-start gap-4">
           <CtaButton href="/services" variant="primary" icon={<ArrowRightIcon className="size-4" />} className="flex-row-reverse">
-            Explore our solutions
+            Explore Our Solutions
           </CtaButton>
           <CtaButton href={WHATSAPP_HREF} external variant="dark" icon={<WhatsAppIcon className="size-4 text-moss" />}>
             Connect on WhatsApp

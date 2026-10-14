@@ -5,7 +5,7 @@ type Variant = "primary" | "secondary" | "secondary-teal" | "dark";
 const VARIANT_CLASSES: Record<Variant, string> = {
   // Flat Deep Aquifer solid button — matches DO THIS guide.
   primary:
-    "bg-deep-aquifer text-white hover:bg-forest-slate focus-visible:outline-deep-aquifer border border-transparent",
+    "bg-deep-aquifer bg-clip-padding text-white hover:bg-forest-slate focus-visible:outline-deep-aquifer border border-transparent",
   // Flat outline on light surfaces — matches DO THIS guide.
   secondary:
     "border border-muted-aquifer/30 bg-white text-deep-aquifer hover:bg-muted-aquifer/5 focus-visible:outline-deep-aquifer",
@@ -14,7 +14,7 @@ const VARIANT_CLASSES: Record<Variant, string> = {
     "border border-muted-aquifer/30 bg-white text-deep-aquifer hover:bg-muted-aquifer/5 focus-visible:outline-deep-aquifer",
   // Solid dark button.
   dark:
-    "bg-deep-aquifer text-white hover:bg-forest-slate focus-visible:outline-deep-aquifer border border-transparent",
+    "bg-deep-aquifer bg-clip-padding text-white hover:bg-forest-slate focus-visible:outline-deep-aquifer border border-transparent",
 };
 
 export function CtaButton({

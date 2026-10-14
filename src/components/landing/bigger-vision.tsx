@@ -38,7 +38,7 @@ export function BiggerVision() {
             </p>
             <div className="pt-4">
               <CtaButton href="#contact" icon={<ArrowRightIcon className="size-4" />} className="flex-row-reverse" size="sm">
-                Our vision &amp; mission
+                Our Vision &amp; Mission
               </CtaButton>
             </div>
           </div>

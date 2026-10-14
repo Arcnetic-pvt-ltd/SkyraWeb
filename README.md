@@ -22,6 +22,20 @@ npm run lint
 
 Header, footer, and the floating WhatsApp widget are shared layout, rendered once in `src/app/layout.tsx` around every page.
 
+## Contact submission limit
+
+The contact server action allows five validated submission attempts per browser per
+calendar day, resetting at midnight Asia/Kolkata. Invalid forms and honeypot hits
+do not use the allowance; email delivery failures do. The HTTP-only cookie is
+signed using the Resend API key and survives refreshes and server restarts.
+Changing that key resets existing allowances. The form displays a limit message
+when the sixth submission is rejected, before any email is sent.
+
+This is a browser-based device limit: clearing cookies, blocking cookies, or using
+another browser bypasses it. An in-process ledger handles concurrent requests for
+an established cookie on one server. Strict enforcement across multiple server
+instances or replayed cookies requires a shared durable rate-limit store.
+
 ## Design sources
 
 Built primarily from the Figma file `KFZImPx5Perim8H0rMtcFp` via the Figma MCP server. Figma's Starter-plan monthly tool-call quota (20 calls/month) was exhausted partway through the Landing page's build, before Services/About/Contact could be pulled from Figma at all. For everything after that point, the project's own HTML reference build (`stitch_skyra_water_solutions_platform/`, a Google Stitch export, one `code.html` + `screen.png` per screen) was used instead for copy, structure, and real asset URLs.

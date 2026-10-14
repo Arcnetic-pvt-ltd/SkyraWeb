@@ -1,17 +1,21 @@
 import type { Metadata } from "next";
+import { buildMetadata, breadcrumbJsonLd } from "@/lib/site";
+import { JsonLd } from "@/components/seo/json-ld";
 import Link from "next/link";
 import { HarvestingCalculator } from "@/components/services/harvesting-calculator";
 import { ProductCatalogCarousel } from "@/components/services/product-catalog-carousel";
 
-export const metadata: Metadata = {
-  title: "Core Water Management Solutions | Skyra",
+export const metadata: Metadata = buildMetadata({
+  title: "Rainwater Harvesting & Stormwater Management Services | Skyra",
   description:
-    "Three natural, engineering-grade approaches to catching, filtering, and storing water where it falls: Rainwater Harvesting, Stormwater Management, and Afforestation.",
-};
+    "Explore rainwater harvesting, groundwater recharge, stormwater management and afforestation services for homes and industries in Kerala and South India.",
+  path: "/services",
+});
 
 export default function ServicesPage() {
   return (
     <div className="flex flex-col w-full">
+      <JsonLd data={breadcrumbJsonLd([{ name: "Home", path: "/" }, { name: "Solutions", path: "/services" }])} />
       {/* Top Section: Editorial Header */}
       <section className="w-full pt-28 pb-16 sm:pt-32 sm:pb-24 bg-linear-to-b from-[#dceef8] via-[#e8f4fa] to-[#f2f8fc]">
         <div className="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col gap-6">
@@ -19,10 +23,10 @@ export default function ServicesPage() {
             Systems &amp; architecture
           </span>
           <h1 className="font-headline-hero text-headline-hero-mobile sm:text-headline-hero text-deep-aquifer tracking-tight text-balance max-w-3xl">
-            Core water management solutions
+            Rainwater harvesting &amp; water management solutions
           </h1>
           <p className="font-body-large text-body-large text-deep-aquifer/85 leading-relaxed max-w-2xl text-balance">
-            Three natural, engineering-grade approaches to catching, filtering, and storing water where it falls.
+            Site-specific rainwater harvesting, groundwater recharge, stormwater management and afforestation for homes, institutions and industries across Kerala, Karnataka and Tamil Nadu.
           </p>
         </div>
       </section>
@@ -58,9 +62,9 @@ export default function ServicesPage() {
               <div className="pt-4 flex flex-wrap items-center gap-4">
                 <Link
                   href="/contact?service=rainwater-harvesting"
-                  className="inline-flex items-center gap-2.5 bg-deep-aquifer hover:bg-forest-slate text-white font-button-text text-button-text px-6 py-3 rounded-[6px] transition-all duration-300 group cursor-pointer"
+                  className="inline-flex items-center gap-2.5 bg-deep-aquifer bg-clip-padding border border-transparent hover:bg-forest-slate text-white font-button-text text-button-text px-6 py-3 rounded-[6px] transition-all duration-300 group cursor-pointer"
                 >
-                  <span>Get quote &amp; estimate</span>
+                  <span>Get Quote &amp; Estimate</span>
                   <span className="material-symbols-outlined text-[18px]">
                     request_quote
                   </span>
@@ -178,9 +182,9 @@ export default function ServicesPage() {
               <div className="pt-4 flex flex-wrap items-center gap-4">
                 <Link
                   href="/contact?service=stormwater-management"
-                  className="inline-flex items-center gap-2.5 bg-deep-aquifer hover:bg-forest-slate text-white font-button-text text-button-text px-6 py-3 rounded-[6px] transition-all duration-300 group cursor-pointer"
+                  className="inline-flex items-center gap-2.5 bg-deep-aquifer bg-clip-padding border border-transparent hover:bg-forest-slate text-white font-button-text text-button-text px-6 py-3 rounded-[6px] transition-all duration-300 group cursor-pointer"
                 >
-                  <span>Get quote &amp; estimate</span>
+                  <span>Get Quote &amp; Estimate</span>
                   <span className="material-symbols-outlined text-[18px]">
                     request_quote
                   </span>
@@ -227,7 +231,7 @@ export default function ServicesPage() {
                   href="/contact?service=afforestation"
                   className="inline-flex items-center gap-2.5 bg-moss hover:bg-moss/90 text-deep-aquifer font-button-text text-button-text px-6 py-3 rounded-[6px] transition-all duration-300 font-semibold group cursor-pointer"
                 >
-                  <span>Get quote &amp; estimate</span>
+                  <span>Get Quote &amp; Estimate</span>
                   <span className="material-symbols-outlined text-[18px]">
                     request_quote
                   </span>
@@ -318,15 +322,15 @@ export default function ServicesPage() {
           <div className="pt-2 flex flex-col sm:flex-row items-center gap-4 w-full sm:w-auto">
             <Link
               href="/contact"
-              className="w-full sm:w-auto inline-flex items-center justify-center bg-deep-aquifer hover:bg-forest-slate text-white font-button-text text-button-text px-8 py-3.5 rounded-[6px] transition-all duration-300 cursor-pointer"
+              className="w-full sm:w-auto inline-flex items-center justify-center bg-deep-aquifer bg-clip-padding border border-transparent hover:bg-forest-slate text-white font-button-text text-button-text px-8 h-14 rounded-[6px] transition-all duration-300 cursor-pointer"
             >
-              Request a hydrological study
+              Request a Site Survey
             </Link>
             <Link
               href="/about"
-              className="w-full sm:w-auto inline-flex items-center justify-center font-button-text text-button-text text-deep-aquifer hover:text-moss px-6 py-3.5 transition-colors gap-1.5 rounded-[6px] border border-muted-aquifer/30 bg-white cursor-pointer"
+              className="w-full sm:w-auto inline-flex items-center justify-center font-button-text text-button-text text-deep-aquifer hover:text-moss px-6 h-14 transition-colors gap-1.5 rounded-[6px] border border-muted-aquifer/30 bg-white cursor-pointer"
             >
-              <span>Read our engineering manifesto</span>
+              <span>Read Our Engineering Manifesto</span>
               <span className="material-symbols-outlined text-[18px]">
                 arrow_forward
               </span>

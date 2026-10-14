@@ -267,7 +267,7 @@ export function HeroMissionBackground() {
         <button
           onClick={() => setIsPlaying(!isPlaying)}
           className="p-1.5 rounded-[4px] text-deep-aquifer hover:bg-black/5 transition-colors cursor-pointer"
-          title={isPlaying ? "Pause auto-loop" : "Play auto-loop"}
+          title={isPlaying ? "Pause Auto-Loop" : "Play Auto-Loop"}
         >
           <span className={`block size-2 rounded-full ${isPlaying ? "bg-moss" : "bg-amber-500"}`} />
         </button>

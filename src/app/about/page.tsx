@@ -1,13 +1,16 @@
 import type { Metadata } from "next";
+import { buildMetadata, breadcrumbJsonLd } from "@/lib/site";
+import { JsonLd } from "@/components/seo/json-ld";
 import Link from "next/link";
+import Image from "next/image";
+import { QuotesCarousel } from "@/components/landing/quotes-carousel";
 
-export const metadata: Metadata = {
-  // title: "About Us & Founding Team | Skyra Water Solutions",
-  title: "The Skyra Mission | Hydrological Foundation & Philosophy",
-
+export const metadata: Metadata = buildMetadata({
+  title: "About Skyra | Water Security & Sustainability in Kochi",
   description:
-    "Learn about Skyra's mission, closed-loop hydrological engineering, and our founding team of civil hydrologists, environmental scientists, and systems engineers.",
-};
+    "Born in Kalamassery, Kochi, Skyra builds water security through rainwater harvesting, groundwater recharge, stormwater management and green cover.",
+  path: "/about",
+});
 
 export const FOUNDERS = [
   {
@@ -47,6 +50,7 @@ export const FOUNDERS = [
 export default function AboutPage() {
   return (
     <div className="flex flex-col w-full overflow-hidden relative">
+      <JsonLd data={breadcrumbJsonLd([{ name: "Home", path: "/" }, { name: "Mission", path: "/about" }])} />
       {/* SECTION 1: HERO */}
       <section className="relative z-10 w-full pt-28 pb-16 sm:pt-32 sm:pb-24 bg-linear-to-b from-[#dceef8] via-[#e8f4fa] to-[#f2f8fc]">
         <div className="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -60,10 +64,33 @@ export default function AboutPage() {
               The Skyra mission
             </h1>
             <p className="font-headline-h2 text-headline-h2-mobile sm:text-headline-h2 text-deep-aquifer/85 font-normal leading-tight">
-              Reclaiming India’s seasonal downpours to build generational water independence.
+              Reclaiming India&apos;s rain to build water security today and a more sustainable tomorrow.
             </p>
             <p className="font-body-large text-body-large text-deep-aquifer/80 leading-relaxed">
-              Founded in Kalamassery, Kochi, Skyra re-engineers urban and commercial land into natural, high-yield subterranean water reservoirs — replacing temporary tanker reliance with lasting aquifer resilience.
+              Born in Kalamassery, Kochi, Skyra designs practical, site-specific solutions that turn rainfall into lasting water security. We store it, recharge groundwater, manage stormwater and bring back green cover. We work alongside homes, institutions, industries and communities to make sustainability scientifically sound, reliable and financially accessible, and to leave every place we work in better than we found it.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      {/* VISION */}
+      <section className="relative z-10 w-full overflow-hidden py-16 sm:py-24 bg-water-flow border-t border-muted-aquifer/15">
+        <div aria-hidden="true" className="pointer-events-none absolute inset-0 overflow-hidden">
+          <div className="water-ripple absolute -right-48 -top-48 h-[640px] w-[640px] rounded-full border border-white/40 bg-white/10" />
+          <div className="water-ripple absolute -right-24 -top-24 h-[448px] w-[448px] rounded-full border border-white/50 bg-white/10 [animation-delay:-5s]" />
+          <div className="water-ripple absolute right-0 top-0 h-64 w-64 rounded-full border border-white/60 bg-white/15 [animation-delay:-9s]" />
+          <div className="water-ripple absolute -bottom-56 -left-40 h-[480px] w-[480px] rounded-full border border-[#6faacb]/20 bg-white/10 [animation-delay:-7s]" />
+        </div>
+        <div className="relative z-10 w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="flex flex-col gap-6 max-w-3xl">
+            <h2 className="font-headline-hero text-headline-hero-mobile sm:text-headline-hero text-deep-aquifer tracking-tight leading-tight">
+              The Skyra vision
+            </h2>
+            <p className="font-headline-h2 text-headline-h2-mobile sm:text-headline-h2 text-deep-aquifer/85 font-normal leading-tight">
+              A partner in every sustainability journey, across India.
+            </p>
+            <p className="font-body-large text-body-large text-deep-aquifer/80 leading-relaxed">
+              Skyra envisions an India where every home, institution and industry has a trusted partner for living in balance with nature. We begin with water and grow with the needs of the places we serve. We want to reach more people, solve more problems and extend into the areas of ecology and sustainability where we can make a difference. We are more than a business: we are a long-term partner in the health of the communities and land around us.
             </p>
           </div>
         </div>
@@ -270,8 +297,10 @@ export default function AboutPage() {
             <div className="space-y-8">
               {/* Documentary Field Photo */}
               <div className="relative w-full rounded-[4px] overflow-hidden aspect-[16/9] sm:aspect-[1.79/1] bg-surface-container border border-muted-aquifer/20 shadow-xs">
-                <img
+                <Image
                   alt="Civil hydrologists conducting on-site soil percolation and groundwater recharge survey"
+                  fill
+                  sizes="(min-width: 1280px) 1216px, (min-width: 1024px) calc(100vw - 64px), (min-width: 640px) calc(100vw - 48px), calc(100vw - 32px)"
                   className="w-full h-full object-cover"
                   src="/images/groundwater-recharge-survey.jpg"
                 />
@@ -414,7 +443,7 @@ export default function AboutPage() {
                 <div>
                   <div className="relative w-full aspect-square rounded-[4px] overflow-hidden mb-5 bg-[#F8FCFE] border border-muted-aquifer/20">
                     <img
-                      alt={founder.name}
+                      alt={`Portrait of ${founder.name}, ${founder.role}`}
                       className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 ease-out"
                       src={founder.image}
                     />
@@ -450,6 +479,8 @@ export default function AboutPage() {
       </section>
       */}
 
+      <QuotesCarousel />
+
       {/* SECTION 4: CLOSING MANDATE */}
       <section className="relative z-10 w-full bg-linear-to-b from-[#edf6fa] via-[#e5f1f7] to-[#edf6fa] text-deep-aquifer py-16 sm:py-24 border-t border-[#c8e0ee]/60">
         <div className="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-left flex flex-col items-start gap-6 sm:gap-8">
@@ -465,15 +496,15 @@ export default function AboutPage() {
           <div className="flex flex-col sm:flex-row items-center gap-4 pt-2">
             <Link
               href="/contact"
-              className="inline-flex items-center justify-center bg-deep-aquifer hover:bg-forest-slate text-white font-medium text-[15px] px-8 py-3.5 rounded-[6px] transition-colors"
+              className="inline-flex items-center justify-center bg-deep-aquifer bg-clip-padding border border-transparent hover:bg-forest-slate text-white font-medium text-[15px] px-8 h-14 rounded-[6px] transition-colors"
             >
-              Start a conversation
+              Start a Conversation
             </Link>
             <Link
               href="/services"
-              className="inline-flex items-center justify-center bg-white hover:bg-[#e7f3f9] text-deep-aquifer border border-[#bcd7e8]/60 hover:border-[#748D8C] font-button-text font-semibold text-button-text px-8 py-3.5 rounded-[6px] transition-all duration-300"
+              className="inline-flex items-center justify-center bg-white hover:bg-[#e7f3f9] text-deep-aquifer border border-[#bcd7e8]/60 hover:border-[#748D8C] font-button-text font-semibold text-button-text px-8 h-14 rounded-[6px] transition-all duration-300"
             >
-              Explore solutions
+              Explore Solutions
             </Link>
           </div>
         </div>

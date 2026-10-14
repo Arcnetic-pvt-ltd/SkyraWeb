@@ -62,7 +62,7 @@ export function ConsultationForm() {
                 Site assessment • 24h turnaround
               </div>
               <h2 className="mb-4 font-headline-h2 text-[28px] sm:text-[36px] font-semibold leading-tight tracking-tight text-slate-950">
-                Request a consultation
+                Request a Consultation
               </h2>
               <p className="font-body-primary text-base font-normal leading-relaxed text-slate-600">
                 Drop us a message and our civil hydrological engineers will
@@ -139,7 +139,7 @@ export function ConsultationForm() {
                   }}
                   className="mt-6 font-button-text font-semibold text-sm text-moss hover:text-forest-slate"
                 >
-                  Submit another request
+                  Submit Another Request
                 </button>
               </div>
             ) : (
@@ -239,9 +239,9 @@ export function ConsultationForm() {
                   <div className="flex flex-col items-center justify-between gap-4 pt-4 sm:flex-row">
                     <button
                       type="submit"
-                      className="inline-flex w-full items-center justify-center gap-2 rounded-[6px] bg-deep-aquifer hover:bg-forest-slate px-9 py-4 font-button-text font-semibold text-sm text-white transition-all sm:w-auto"
+                      className="inline-flex w-full items-center justify-center gap-2 rounded-[6px] bg-deep-aquifer bg-clip-padding border border-transparent hover:bg-forest-slate px-9 py-4 font-button-text font-semibold text-sm text-white transition-all sm:w-auto"
                     >
-                      Submit request
+                      Submit Request
                       <ArrowRightIcon className="size-4" />
                     </button>
                     <div className="flex items-center gap-2 font-mono text-xs text-slate-500">

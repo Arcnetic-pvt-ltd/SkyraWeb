@@ -93,10 +93,10 @@ export function HeroMissionAnimation() {
           <button
             onClick={() => setIsPlaying(!isPlaying)}
             className="inline-flex items-center gap-1.5 rounded-[6px] border border-white/15 bg-white/5 px-2.5 py-1 text-[11px] font-mono text-slate-300 hover:bg-white/15 transition-colors cursor-pointer"
-            title={isPlaying ? "Pause auto-loop" : "Play auto-loop"}
+            title={isPlaying ? "Pause Auto-Loop" : "Play Auto-Loop"}
           >
             <span className="size-1.5 rounded-full bg-moss" />
-            {isPlaying ? "PAUSE LOOP" : "PLAY LOOP"}
+            {isPlaying ? "Pause Loop" : "Play Loop"}
           </button>
         </div>
       </div>

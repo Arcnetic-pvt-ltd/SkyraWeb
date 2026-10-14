@@ -1,5 +1,7 @@
 import type { Metadata } from "next";
 import "./globals.css";
+import { SITE_URL, SITE_NAME, ORGANIZATION_JSON_LD, WEBSITE_JSON_LD } from "@/lib/site";
+import { JsonLd } from "@/components/seo/json-ld";
 import { SiteHeader } from "@/components/layout/site-header";
 import { SiteFooter } from "@/components/layout/site-footer";
 import { WhatsAppWidget } from "@/components/layout/whatsapp-widget";
@@ -7,9 +9,11 @@ import { SmoothScrollProvider } from "@/components/providers/smooth-scroll";
 import { RainBackdrop } from "@/components/ui/rain-backdrop";
 
 export const metadata: Metadata = {
-  title: "Skyra — Securing India's Water Future",
+  metadataBase: new URL(SITE_URL),
+  applicationName: SITE_NAME,
+  title: "Rainwater Harvesting & Groundwater Recharge | Skyra",
   description:
-    "Closed-loop hydrological stewardship and ecological infrastructure technology. Skyra transforms rainfall into water resilience, Pan India.",
+    "Skyra provides site-specific rainwater harvesting, groundwater recharge and stormwater management solutions from Kalamassery, Kochi, across South India.",
   icons: {
     icon: "/images/skyra-logo.png",
     shortcut: "/images/skyra-logo.png",
@@ -42,10 +46,12 @@ export default function RootLayout({
         />
       </head>
       <body className="min-h-full flex flex-col bg-light-aquifer-canvas font-body-primary text-deep-aquifer selection:bg-moss/20 selection:text-deep-aquifer text-base leading-relaxed text-left overflow-x-hidden relative">
+        <JsonLd data={ORGANIZATION_JSON_LD} />
+        <JsonLd data={WEBSITE_JSON_LD} />
         <RainBackdrop />
         <SmoothScrollProvider>
           <SiteHeader />
-          <main className="flex-1 w-full bg-light-aquifer-canvas min-h-screen overflow-x-hidden relative z-[2]">
+          <main className="flex-1 w-full bg-light-aquifer-canvas overflow-x-hidden relative z-[2]">
             {children}
           </main>
           <SiteFooter />

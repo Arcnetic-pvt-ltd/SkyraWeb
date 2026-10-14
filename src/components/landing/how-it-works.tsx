@@ -120,9 +120,9 @@ export function HowItWorks() {
           <div className="mt-12 sm:mt-14 flex flex-wrap items-center gap-4">
             <Link
               href="/contact?query=site-survey"
-              className="inline-flex items-center justify-center bg-deep-aquifer hover:bg-forest-slate text-light-aquifer-canvas font-button-text text-button-text px-7 py-3.5 rounded-[6px] transition-colors"
+              className="inline-flex items-center justify-center bg-deep-aquifer bg-clip-padding border border-transparent hover:bg-forest-slate text-light-aquifer-canvas font-button-text text-button-text px-7 py-3.5 rounded-[6px] transition-colors"
             >
-              Book a site survey
+              Book a Site Survey
             </Link>
           </div>
         </div>

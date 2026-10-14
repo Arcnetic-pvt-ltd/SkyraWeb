@@ -16,12 +16,15 @@ export function SiteFooter() {
                 textClass="font-headline-h3 text-[17px] font-semibold tracking-tight"
               />
             </Link>
+            <p className="max-w-lg font-body-sm text-[13px] font-medium text-light-aquifer-canvas/90 leading-relaxed">
+              SKYRA RAINWATER HARVESTING AND SUSTAINABILITY SOLUTIONS LLP
+            </p>
             <p className="font-body-sm text-[15px] text-light-aquifer-canvas/80 leading-snug">
               {CONTACT.address}
             </p>
           </div>
 
-          {/* Right Column: Contact options, Privacy policy, Current year */}
+          {/* Right Column: Contact options, Privacy Policy, Current year */}
           <div className="flex flex-col md:items-end gap-3 text-[15px]">
             <div className="flex flex-wrap items-center gap-2 text-light-aquifer-canvas/90">
               <a
@@ -49,8 +52,11 @@ export function SiteFooter() {
             </div>
 
             <div className="flex items-center gap-2 text-light-aquifer-canvas/70 text-[14px]">
-              <Link href="/contact" className="hover:text-white transition-colors">
-                Privacy policy
+              <Link
+                href="/contact"
+                className="hover:text-white transition-colors"
+              >
+                Privacy Policy
               </Link>
               <span className="text-light-aquifer-canvas/40">·</span>
               <span>© 2026 Skyra</span>
@@ -60,7 +66,9 @@ export function SiteFooter() {
 
         {/* Sub-Footer: Powered by Arcnetic */}
         <div className="pt-6 flex flex-col sm:flex-row items-center justify-between gap-3 text-[13px] text-light-aquifer-canvas/50 text-center sm:text-left">
-          <span>Rainwater harvesting and groundwater recharge across India</span>
+          <span>
+            Rainwater harvesting and groundwater recharge across India
+          </span>
           <span className="sm:pr-36 xl:pr-0">Powered by Arcnetic</span>
         </div>
       </div>
