@@ -8,12 +8,13 @@ import { NAV_LINKS } from "@/lib/nav";
 import { SkyraLogo } from "@/components/layout/skyra-logo";
 
 export function SiteHeader() {
-  const [open, setOpen] = useState(false);
   const pathname = usePathname();
 
-  useEffect(() => {
-    setOpen(false);
-  }, [pathname]);
+  return <HeaderContent key={pathname} pathname={pathname} />;
+}
+
+function HeaderContent({ pathname }: { pathname: string }) {
+  const [open, setOpen] = useState(false);
 
   useEffect(() => {
     if (!open) return;

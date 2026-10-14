@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState, useEffect, useCallback } from "react";
+import React, { useState, useCallback } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { motion, AnimatePresence } from "framer-motion";
@@ -113,7 +113,6 @@ export const PRODUCTS_CATALOG: ProductItem[] = [
 export function ProductCatalogCarousel() {
   const [activeCategory, setActiveCategory] = useState<"all" | "rooftop" | "industrial" | "infrastructure">("all");
   const [currentIndex, setCurrentIndex] = useState(0);
-  const [isPaused, setIsPaused] = useState(false);
   const [showSpecTable, setShowSpecTable] = useState(false);
 
   const filteredProducts = PRODUCTS_CATALOG.filter(
@@ -130,11 +129,6 @@ export function ProductCatalogCarousel() {
     setCurrentIndex((prev) => (prev - 1 + total) % total);
   }, [total]);
 
-  // Reset index on category change
-  useEffect(() => {
-    setCurrentIndex(0);
-  }, [activeCategory]);
-
   // Product selection is user-driven via category tabs and list controls
 
   return (
@@ -142,18 +136,21 @@ export function ProductCatalogCarousel() {
       {/* Category Tabs & Navigation Controls Header */}
       <div className="flex flex-wrap items-center justify-between gap-3 pb-2.5 border-b border-muted-aquifer/15">
         <div className="flex flex-wrap items-center gap-1.5">
-          {[
+          {([
             { id: "all", label: "All products" },
             { id: "rooftop", label: "Rooftop filters" },
             { id: "industrial", label: "Industrial systems" },
             { id: "infrastructure", label: "Percolation ponds" },
-          ].map((tab) => {
+          ] as const).map((tab) => {
             const isActive = activeCategory === tab.id;
             return (
               <button
                 key={tab.id}
                 type="button"
-                onClick={() => setActiveCategory(tab.id as any)}
+                onClick={() => {
+                  setActiveCategory(tab.id);
+                  setCurrentIndex(0);
+                }}
                 className={`px-3 py-1 rounded-[4px] font-button-text text-xs transition-all duration-300 cursor-pointer ${isActive
                   ? "bg-deep-aquifer text-white"
                   : "bg-white border border-muted-aquifer/20 text-deep-aquifer/70 hover:text-deep-aquifer hover:bg-black/5"
@@ -198,8 +195,6 @@ export function ProductCatalogCarousel() {
       {/* Main Interactive Carousel Slide Container */}
       <div
         className="relative w-full"
-        onMouseEnter={() => setIsPaused(true)}
-        onMouseLeave={() => setIsPaused(false)}
       >
         {/* Desktop Grid Layout: Static Catalog Overview (5 Cols on Left) + Hero Spotlight Card (7 Cols on Right) */}
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-4 lg:gap-5 items-stretch">

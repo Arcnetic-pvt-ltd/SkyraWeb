@@ -1,7 +1,3 @@
-"use client";
-
-import { useSyncExternalStore } from "react";
-
 interface RainDrop {
   id: number;
   left: number;
@@ -32,17 +28,7 @@ const RAIN_DROPS: RainDrop[] = [
   { id: 18, left: 97, height: 30, duration: 4.5, delay: -2.6, opacity: 0.16 },
 ];
 
-const emptySubscribe = () => () => {};
-
 export function RainBackdrop() {
-  const isClient = useSyncExternalStore(
-    emptySubscribe,
-    () => true,
-    () => false
-  );
-
-  if (!isClient) return null;
-
   return (
     <div
       aria-hidden="true"

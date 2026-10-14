@@ -1,7 +1,7 @@
 "use client";
 
 import Image from "next/image";
-import { useEffect, useState } from "react";
+import { useEffect, useId, useState } from "react";
 
 interface QuoteItem {
   quote: string;
@@ -48,17 +48,22 @@ export function QuotesCarousel({
 }) {
   const [activeIndex, setActiveIndex] = useState(0);
   const [isPaused, setIsPaused] = useState(false);
+  const patternId = useId();
+  const quoteCount = quotes.length;
+  const visibleIndex = quoteCount > 0 ? activeIndex % quoteCount : 0;
 
   // Automatic rotation between quotes (every 7 seconds) with hover-pause
   useEffect(() => {
-    if (isPaused) return;
+    if (isPaused || quoteCount < 2) return;
 
     const timer = setInterval(() => {
-      setActiveIndex((prev) => (prev + 1) % quotes.length);
+      setActiveIndex((prev) => (prev + 1) % quoteCount);
     }, 7000);
 
     return () => clearInterval(timer);
-  }, [isPaused, activeIndex]);
+  }, [isPaused, quoteCount]);
+
+  if (quoteCount === 0) return null;
 
   return (
     <section
@@ -74,7 +79,7 @@ export function QuotesCarousel({
         <svg className="w-full h-full" xmlns="http://www.w3.org/2000/svg">
           <defs>
             <pattern
-              id="quotesRainPattern"
+              id={patternId}
               width="120"
               height="120"
               patternUnits="userSpaceOnUse"
@@ -114,7 +119,7 @@ export function QuotesCarousel({
           <rect
             width="100%"
             height="100%"
-            fill="url(#quotesRainPattern)"
+            fill={`url(#${patternId})`}
             className="animate-subtle-rain"
           />
         </svg>
@@ -136,7 +141,7 @@ export function QuotesCarousel({
                   width={1043}
                   height={877}
                   className={`absolute bottom-0 right-4 sm:right-6 lg:right-8 h-[133%] translate-x-[28.8%] w-auto max-w-none object-contain object-bottom transition-opacity duration-500 ease-in-out ${
-                    idx === activeIndex ? "opacity-90" : "opacity-0"
+                    idx === visibleIndex ? "opacity-90" : "opacity-0"
                   }`}
                 />
               ),
@@ -156,11 +161,12 @@ export function QuotesCarousel({
 
         <div className="w-full grid grid-cols-1 grid-rows-1 items-start min-h-[160px] sm:min-h-[120px]">
           {quotes.map((item, idx) => {
-            const isActive = idx === activeIndex;
+            const isActive = idx === visibleIndex;
 
             return (
               <div
                 key={`text-${idx}`}
+                aria-hidden={!isActive}
                 className={`col-start-1 row-start-1 w-full flex flex-col items-start text-left gap-4 transition-opacity duration-500 ease-in-out ${
                   isActive
                     ? "opacity-100 pointer-events-auto"
@@ -195,12 +201,13 @@ export function QuotesCarousel({
               key={dotIdx}
               type="button"
               aria-label={`Quote ${dotIdx + 1}`}
+              aria-pressed={dotIdx === visibleIndex}
               onClick={() => setActiveIndex(dotIdx)}
               className="py-2.5 px-1 cursor-pointer focus:outline-none"
             >
               <span
                 className={`block h-1.5 rounded-full transition-all duration-500 ${
-                  dotIdx === activeIndex
+                  dotIdx === visibleIndex
                     ? "w-8 bg-[#86b5db]"
                     : "w-2.5 bg-white/30 hover:bg-white/60"
                 }`}

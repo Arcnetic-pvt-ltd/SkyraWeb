@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { buildMetadata, breadcrumbJsonLd } from "@/lib/site";
 import { JsonLd } from "@/components/seo/json-ld";
 import Link from "next/link";
+import Image from "next/image";
 import { QuotesCarousel } from "@/components/landing/quotes-carousel";
 
 export const metadata: Metadata = buildMetadata({
@@ -275,8 +276,10 @@ export default function AboutPage() {
             <div className="space-y-8">
               {/* Documentary Field Photo */}
               <div className="relative w-full rounded-[4px] overflow-hidden aspect-[16/9] sm:aspect-[1.79/1] bg-surface-container border border-muted-aquifer/20 shadow-xs">
-                <img
+                <Image
                   alt="Civil hydrologists conducting on-site soil percolation and groundwater recharge survey"
+                  fill
+                  sizes="(min-width: 1280px) 1216px, (min-width: 1024px) calc(100vw - 64px), (min-width: 640px) calc(100vw - 48px), calc(100vw - 32px)"
                   className="w-full h-full object-cover"
                   src="/images/groundwater-recharge-survey.jpg"
                 />

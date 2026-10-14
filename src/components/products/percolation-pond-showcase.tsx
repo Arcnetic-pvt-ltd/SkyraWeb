@@ -121,27 +121,19 @@ export function PercolationPondShowcase() {
   const [activeSector, setActiveSector] = useState<string>("industries");
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [isZoomed, setIsZoomed] = useState(false);
-  const [mounted, setMounted] = useState(false);
 
   useEffect(() => {
-    setMounted(true);
-  }, []);
-
-  useEffect(() => {
+    if (!isModalOpen) return;
+    const previousOverflow = document.body.style.overflow;
     const handleKeyDown = (e: KeyboardEvent) => {
       if (e.key === "Escape") {
         setIsModalOpen(false);
       }
     };
-    if (isModalOpen) {
-      document.body.style.overflow = "hidden";
-      window.addEventListener("keydown", handleKeyDown);
-    } else {
-      document.body.style.overflow = "";
-      setIsZoomed(false);
-    }
+    document.body.style.overflow = "hidden";
+    window.addEventListener("keydown", handleKeyDown);
     return () => {
-      document.body.style.overflow = "";
+      document.body.style.overflow = previousOverflow;
       window.removeEventListener("keydown", handleKeyDown);
     };
   }, [isModalOpen]);
@@ -275,7 +267,10 @@ export function PercolationPondShowcase() {
 
             {/* Clickable Image View */}
             <div
-              onClick={() => setIsModalOpen(true)}
+              onClick={() => {
+                setIsZoomed(false);
+                setIsModalOpen(true);
+              }}
               className="relative w-full aspect-[1024/935] cursor-pointer rounded-[4px] overflow-hidden bg-slate-50 transition-transform duration-300 hover:scale-[1.005]"
               title="Click diagram to view enlarged"
             >
@@ -594,8 +589,7 @@ export function PercolationPondShowcase() {
       </div>
 
       {/* Lightbox Modal for High-Resolution Diagram Inspection */}
-      {mounted &&
-        isModalOpen &&
+      {isModalOpen &&
         createPortal(
           <div
             role="dialog"
