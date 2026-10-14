@@ -1,6 +1,12 @@
 "use server";
 
 import { Resend } from "resend";
+import { cookies } from "next/headers";
+import {
+  CONTACT_LIMIT_COOKIE,
+  CONTACT_LIMIT_MESSAGE,
+  reserveContactSubmission,
+} from "@/lib/contact-rate-limit";
 import {
   normalizePhone,
   validateConsultation,
@@ -57,6 +63,21 @@ export async function submitConsultation(
     console.error("Contact form: missing RESEND_API_KEY / CONTACT_TO_EMAIL / CONTACT_FROM_EMAIL");
     return { ok: false, error: "Something went wrong. Please try again later." };
   }
+
+  const cookieStore = await cookies();
+  const allowance = reserveContactSubmission(
+    cookieStore.get(CONTACT_LIMIT_COOKIE)?.value,
+    apiKey,
+  );
+  // Reserve before sending so concurrent requests cannot exceed the allowance.
+  cookieStore.set(CONTACT_LIMIT_COOKIE, allowance.cookie, {
+    httpOnly: true,
+    secure: process.env.NODE_ENV === "production",
+    sameSite: "lax",
+    path: "/",
+    maxAge: 60 * 60 * 24 * 2,
+  });
+  if (!allowance.allowed) return { ok: false, error: CONTACT_LIMIT_MESSAGE };
 
   const waLink = `https://wa.me/${phone.slice(1)}`;
   const { error } = await new Resend(apiKey).emails.send({

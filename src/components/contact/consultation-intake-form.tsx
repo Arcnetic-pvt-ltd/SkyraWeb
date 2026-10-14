@@ -198,7 +198,7 @@ export function ConsultationIntakeForm() {
               {sending ? "Sending…" : "Book a site survey"}
             </button>
             <p className="font-body-sm text-[13px] text-deep-aquifer/70 text-center">
-              We&apos;ll reply on WhatsApp within one working day.
+              Maximum 5 submissions per browser each day. Resets at midnight IST.
             </p>
           </div>
         </form>
