@@ -24,7 +24,7 @@ export function SkyraLogo({
       >
         <img
           src="/images/skyra-logo.png"
-          alt="Skyra logo"
+          alt="SkyRa logo"
           className={`${iconClass} object-contain`}
         />
       </div>
@@ -34,7 +34,7 @@ export function SkyraLogo({
             variant === "light" ? "text-white" : "text-deep-aquifer"
           }`}
         >
-          Skyra
+          SkyRa
         </span>
       )}
     </div>

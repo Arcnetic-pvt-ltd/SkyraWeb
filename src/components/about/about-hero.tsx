@@ -33,7 +33,7 @@ export function AboutHero() {
       <Container className="relative z-10 flex flex-col items-start text-left">
         <div className="inline-flex items-center gap-2 rounded-[4px] bg-[#132742] border border-[#22446d] px-3 py-1 text-[#86b5db]">
           <DropletIcon className="size-4" />
-          <span className="font-mono text-xs font-medium">About Skyra • From sky, to life</span>
+          <span className="font-mono text-xs font-medium">About SkyRa • From sky, to life</span>
         </div>
 
         <h1 className="mt-6 max-w-4xl font-headline-hero text-[38px] sm:text-5xl lg:text-[56px] font-bold text-white tracking-tight leading-tight">
@@ -63,7 +63,7 @@ export function AboutHero() {
                 <StormIcon className="size-5" />
               </div>
               <div>
-                <p className="font-mono text-xs font-medium text-moss">The Skyra paradigm</p>
+                <p className="font-mono text-xs font-medium text-moss">The SkyRa paradigm</p>
                 <p className="mt-1 font-body-primary text-base font-normal text-white/90">
                   Transforming rainwater from lost surface runoff into a
                   permanent, secure resource for homes, businesses, and

@@ -12,9 +12,9 @@ import { ImpactMetrics } from "@/components/landing/impact-metrics";
 import { SectorCapabilities } from "@/components/services/sector-capabilities";
 
 export const metadata: Metadata = buildMetadata({
-  title: "Rainwater Harvesting & Groundwater Recharge | Skyra",
+  title: "Rainwater Harvesting & Groundwater Recharge | SkyRa",
   description:
-    "Skyra designs rainwater harvesting and groundwater recharge systems for homes, campuses and industries across Kerala, Karnataka and Tamil Nadu.",
+    "Skyra designs rainwater harvesting and groundwater recharge systems for homes, campuses and industries across Keralam, Karnataka and Tamil Nadu.",
   path: "/",
 });
 
@@ -43,7 +43,7 @@ export default function Home() {
                 grounds and return it to the earth where it lasts. Turn-key
                 rainwater harvesting, groundwater recharge, and percolation
                 systems for homes, apartments, industries, and campuses across
-                Kerala, Karnataka, and Tamil Nadu.
+                Keralam, Karnataka, and Tamil Nadu.
               </p>
 
               <div className="mt-6 flex flex-col sm:flex-row items-stretch sm:items-center gap-3 w-full sm:w-auto">

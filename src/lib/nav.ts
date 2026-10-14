@@ -1,6 +1,6 @@
 export const NAV_LINKS = [
   { label: "Home", href: "/" },
-  { label: "Skyra Rainsink", href: "/products/rainsink" },
+  { label: "SkyRa Rainsink", href: "/products/rainsink" },
   { label: "Solutions", href: "/services" },
   { label: "Mission", href: "/about" },
   { label: "Contact", href: "/contact" },
@@ -9,7 +9,7 @@ export const NAV_LINKS = [
 export const WHATSAPP_HREF = "https://wa.me/message/Z7BLOOAB2OFPM1";
 
 export const CONTACT = {
-  address: "Rajagiri Road, N. Kalamassery, Kochi, Kerala",
+  address: "Rajagiri Road, N. Kalamassery, Kochi, Keralam",
   email: "sustainablesykra@gmail.com",
   phone: "+919292292111",
   phoneDisplay: "+91 9292292111",

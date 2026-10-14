@@ -55,7 +55,7 @@ export function FinalCta() {
                   <LocationPinIcon className="size-4" />
                 </div>
                 <div className="text-base text-slate-300">
-                  <p className="font-medium text-white">Skyra headquarters</p>
+                  <p className="font-medium text-white">SkyRa headquarters</p>
                   <p className="mt-0.5 leading-relaxed">{CONTACT.address}</p>
                 </div>
               </div>

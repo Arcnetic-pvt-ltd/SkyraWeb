@@ -11,7 +11,7 @@ export function Logo({ variant = "header" }: { variant?: "header" | "footer" }) 
   return (
     <Link
       href="/"
-      aria-label="Skyra homepage"
+      aria-label="SkyRa homepage"
       className={`relative inline-flex items-center font-extrabold tracking-tight ${isHeader ? "text-[30px] leading-9" : "text-2xl leading-8"
         }`}
     >

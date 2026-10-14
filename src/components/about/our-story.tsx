@@ -18,11 +18,11 @@ export function OurStory() {
 
             <div className="mt-6 space-y-4 font-body-primary text-base font-normal leading-relaxed text-deep-aquifer/85">
               <p>
-                We are a modern sustainability company dedicated to
-                transforming rainwater from a lost surface runoff into a
-                permanent, secure resource. We design, build, and maintain
-                integrated water management systems that empower properties
-                to become water-independent.
+                We are a modern sustainability company dedicated to transforming
+                rainwater from a lost surface runoff into a permanent, secure
+                resource. We design, build, and maintain integrated water
+                management systems that empower properties to become
+                water-independent.
               </p>
               <p>
                 Instead of letting torrential monsoon rains wash away into
@@ -44,7 +44,7 @@ export function OurStory() {
                   3,100<span className="text-2xl text-muted-aquifer">mm</span>
                 </span>
                 <span className="mt-1 block font-mono text-xs font-medium text-deep-aquifer/70">
-                  Average Kerala annual precipitation
+                  Average Keralam annual precipitation
                 </span>
               </div>
               <div className="rounded-[4px] bg-[#F8FCFE] p-4 border border-muted-aquifer/20">
@@ -63,7 +63,7 @@ export function OurStory() {
             <div className="relative h-[420px] overflow-hidden rounded-[4px] border border-muted-aquifer/20 sm:h-[480px]">
               <Image
                 src="/images/about-monsoon-catchment.jpg"
-                alt="Heavy tropical monsoon raindrops cascading off an architectural roof gutter system in Kerala into a pristine filtration flume"
+                alt="Heavy tropical monsoon raindrops cascading off an architectural roof gutter system in Keralam into a pristine filtration flume"
                 fill
                 sizes="(min-width: 1024px) 50vw, 100vw"
                 className="object-cover"
@@ -71,7 +71,10 @@ export function OurStory() {
               <div className="absolute inset-0 bg-linear-to-t from-slate-950/90 via-slate-950/30 to-transparent" />
 
               <div className="absolute left-4 top-4 flex items-center gap-2 rounded-[4px] bg-white px-3 py-1 border border-muted-aquifer/20">
-                <span aria-hidden="true" className="size-2 rounded-full bg-moss" />
+                <span
+                  aria-hidden="true"
+                  className="size-2 rounded-full bg-moss"
+                />
                 <span className="font-mono text-xs font-medium text-deep-aquifer">
                   The South Indian hydrology paradox
                 </span>
@@ -83,14 +86,18 @@ export function OurStory() {
                     Monsoon surge
                   </span>
                   <p className="mt-1 font-mono text-lg font-bold">3000mm+</p>
-                  <p className="font-mono text-xs text-slate-300">Annual rainfall influx</p>
+                  <p className="font-mono text-xs text-slate-300">
+                    Annual rainfall influx
+                  </p>
                 </div>
                 <div className="rounded-[4px] bg-deep-aquifer/90 p-4 text-white border border-white/10">
                   <span className="font-mono text-xs font-medium text-moss">
-                    Skyra mandate
+                    SkyRa mandate
                   </span>
                   <p className="mt-1 font-mono text-lg font-bold">Zero</p>
-                  <p className="font-mono text-xs text-slate-300">Summer tanker dependency</p>
+                  <p className="font-mono text-xs text-slate-300">
+                    Summer tanker dependency
+                  </p>
                 </div>
               </div>
             </div>

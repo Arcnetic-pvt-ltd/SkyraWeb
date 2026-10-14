@@ -13,7 +13,7 @@ import {
 
 
 export const metadata: Metadata = buildMetadata({
-  title: "Rainwater Harvesting Consultation in Kochi | Contact Skyra",
+  title: "Rainwater Harvesting Consultation in Kochi | Contact SkyRa",
   description:
     "Contact Skyra in Kalamassery, Kochi for a rainwater harvesting site survey, groundwater recharge consultation or stormwater management plan for your property.",
   path: "/contact",

@@ -8,7 +8,7 @@ export const SITE_URL = (
   /^https?:\/\//.test(RAW_SITE_URL) ? RAW_SITE_URL : `https://${RAW_SITE_URL}`
 ).replace(/\/$/, "");
 
-export const SITE_NAME = "Skyra";
+export const SITE_NAME = "SkyRa";
 export const DEFAULT_OG_IMAGE = "/images/hero-rainfall.jpg";
 
 /** Indexable public routes, shared by sitemap.ts. */
@@ -20,10 +20,20 @@ export const PUBLIC_ROUTES = [
   { path: "/contact", changeFrequency: "yearly", priority: 0.7 },
 ] as const;
 
-type PageMeta = { title: string; description: string; path: string; keywords?: string[] };
+type PageMeta = {
+  title: string;
+  description: string;
+  path: string;
+  keywords?: string[];
+};
 
 /** Per-page metadata with canonical, Open Graph and Twitter Card fields. */
-export function buildMetadata({ title, description, path, keywords }: PageMeta): Metadata {
+export function buildMetadata({
+  title,
+  description,
+  path,
+  keywords,
+}: PageMeta): Metadata {
   return {
     title,
     description,
@@ -36,7 +46,12 @@ export function buildMetadata({ title, description, path, keywords }: PageMeta):
       url: path,
       title,
       description,
-      images: [{ url: DEFAULT_OG_IMAGE, alt: "Rainfall over a modern building and water reservoir" }],
+      images: [
+        {
+          url: DEFAULT_OG_IMAGE,
+          alt: "Rainfall over a modern building and water reservoir",
+        },
+      ],
     },
     twitter: {
       card: "summary_large_image",
@@ -60,10 +75,10 @@ export const ORGANIZATION_JSON_LD = {
     "@type": "PostalAddress",
     streetAddress: "Rajagiri Road, N. Kalamassery",
     addressLocality: "Kochi",
-    addressRegion: "Kerala",
+    addressRegion: "Keralam",
     addressCountry: "IN",
   },
-  areaServed: ["Kerala", "Karnataka", "Tamil Nadu"],
+  areaServed: ["Keralam", "Karnataka", "Tamil Nadu"],
   sameAs: SOCIAL_LINKS.map((s) => s.href),
 };
 

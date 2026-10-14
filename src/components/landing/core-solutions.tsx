@@ -69,7 +69,7 @@ export function CoreSolutions() {
       <Container>
         {/* Section Header */}
         <div className="mb-16 max-w-2xl space-y-4">
-          <Eyebrow color="teal">The Skyra solution</Eyebrow>
+          <Eyebrow color="teal">The SkyRa solution</Eyebrow>
           <h2 className="font-headline-h2 text-headline-h2-mobile sm:text-headline-h2 text-deep-aquifer tracking-tight leading-[1.2]">
             Integrated water solutions for a sustainable future.
           </h2>
