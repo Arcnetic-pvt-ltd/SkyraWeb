@@ -79,7 +79,7 @@ export function CoreSolutions() {
             precision, and true long-term value.
           </p>
           <CtaButton href="#services-grid" variant="dark" size="sm" icon={<ChevronDownIcon className="size-4 text-moss" />} className="flex-row-reverse">
-            Explore services
+            Explore Services
           </CtaButton>
         </div>
 

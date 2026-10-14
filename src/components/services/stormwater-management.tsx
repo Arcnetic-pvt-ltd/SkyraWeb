@@ -149,7 +149,7 @@ export function StormwaterManagement() {
           title="Secure your property ahead of the monsoon season."
           description="Click to request a consultation and safeguard your foundation against unmanaged heavy storm runoff."
           href="#contact"
-          buttonLabel="Request a consultation"
+          buttonLabel="Request a Consultation"
           buttonIcon={<ArrowRightIcon className="size-4" />}
           tone="dark"
         />

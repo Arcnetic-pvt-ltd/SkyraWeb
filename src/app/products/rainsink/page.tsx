@@ -10,7 +10,7 @@ import { CONTACT } from "@/lib/nav";
 export const metadata: Metadata = buildMetadata({
   title: "Skyra Rainsink | Rain Percolator & Groundwater Recharge",
   description:
-    "Explore Skyra Rainsink, a modular rain percolator for groundwater recharge and stormwater infiltration. Request a site survey for your campus or property.",
+    "Explore Skyra Rainsink, a modular rain percolator for groundwater recharge and stormwater infiltration. Request a Site Survey for your campus or property.",
   path: "/products/rainsink",
   keywords: [
     "Skyra Rainsink",
@@ -64,9 +64,9 @@ export default function RainsinkProductPage() {
           <div className="pt-2 flex flex-col sm:flex-row items-stretch sm:items-center gap-3 sm:gap-4 w-full sm:w-auto">
             <Link
               href="/contact?product=rainsink"
-              className="w-full sm:w-auto inline-flex items-center justify-center gap-2.5 bg-deep-aquifer hover:bg-forest-slate text-white font-medium text-[15px] px-7 py-3.5 min-h-[48px] rounded-[6px] border border-transparent transition-colors group cursor-pointer"
+              className="w-full sm:w-auto inline-flex items-center justify-center gap-2.5 bg-deep-aquifer bg-clip-padding hover:bg-forest-slate text-white font-medium text-[15px] px-7 py-3.5 min-h-[48px] rounded-[6px] border border-transparent transition-colors group cursor-pointer"
             >
-              <span>Get site survey &amp; pricing</span>
+              <span>Get Site Survey &amp; Pricing</span>
               <span className="material-symbols-outlined text-[18px] group-hover:translate-x-1 transition-transform">
                 arrow_forward
               </span>
@@ -240,9 +240,9 @@ export default function RainsinkProductPage() {
           <div className="pt-2 flex flex-col sm:flex-row items-center gap-3 w-full sm:w-auto">
             <Link
               href="/contact?product=rainsink"
-              className="w-full sm:w-auto inline-flex items-center justify-center gap-2 bg-deep-aquifer hover:bg-forest-slate text-light-aquifer-canvas font-button-text font-semibold text-button-text px-8 h-14 rounded-[6px] transition-all duration-300 group cursor-pointer whitespace-nowrap"
+              className="w-full sm:w-auto inline-flex items-center justify-center gap-2 bg-deep-aquifer bg-clip-padding border border-transparent hover:bg-forest-slate text-light-aquifer-canvas font-button-text font-semibold text-button-text px-8 h-14 rounded-[6px] transition-all duration-300 group cursor-pointer whitespace-nowrap"
             >
-              <span>Request site survey</span>
+              <span>Request Site Survey</span>
               <span className="material-symbols-outlined text-[18px] group-hover:translate-x-0.5 transition-transform">
                 arrow_forward
               </span>

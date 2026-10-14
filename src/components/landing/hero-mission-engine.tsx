@@ -19,7 +19,7 @@ const STAGES: StageInfo[] = [
   {
     id: "capture",
     number: "01",
-    title: "Monsoon rain capture",
+    title: "Monsoon Rain Capture",
     tagline: "Rooftop & apron interception",
     description: "Capturing pristine monsoon rainwater from rooftops and aprons before it reaches polluted storm drains.",
     metricLabel: "Capture rate",
@@ -30,7 +30,7 @@ const STAGES: StageInfo[] = [
   {
     id: "filter",
     number: "02",
-    title: "Hydrostatic vortex filter",
+    title: "Hydrostatic Vortex Filter",
     tagline: "Zero-power silt removal",
     description: "Passive centripetal fluid mechanics separate silt, sand, and organic debris without electricity.",
     metricLabel: "Filtration purity",
@@ -41,7 +41,7 @@ const STAGES: StageInfo[] = [
   {
     id: "recharge",
     number: "03",
-    title: "Deep aquifer recharge",
+    title: "Deep Aquifer Recharge",
     tagline: "150ft subterranean injection",
     description: "Injecting purified water directly into subterranean bedrock aquifers and piezometric water tables.",
     metricLabel: "Aquifer restored",
@@ -52,7 +52,7 @@ const STAGES: StageInfo[] = [
   {
     id: "secure",
     number: "04",
-    title: "Generational water security",
+    title: "Generational Water Security",
     tagline: "Permanent water autonomy",
     description: "Creating continuous, self-sustaining water security for commercial campuses, estates, and homes.",
     metricLabel: "Tanker reliance",
@@ -90,10 +90,10 @@ export function HeroMissionEngine() {
         <button
           onClick={() => setIsPlaying(!isPlaying)}
           className="inline-flex items-center gap-1.5 rounded-[6px] border border-muted-aquifer/20 bg-black/5 px-2.5 py-1 text-[11px] font-mono text-deep-aquifer/80 hover:bg-black/10 transition-colors cursor-pointer"
-          title={isPlaying ? "Pause auto-loop" : "Play auto-loop"}
+          title={isPlaying ? "Pause Auto-Loop" : "Play Auto-Loop"}
         >
           <span className={`size-1.5 rounded-full ${isPlaying ? "bg-moss" : "bg-muted-aquifer"}`} />
-          {isPlaying ? "PAUSE" : "PLAY"}
+          {isPlaying ? "Pause" : "Play"}
         </button>
       </div>
 

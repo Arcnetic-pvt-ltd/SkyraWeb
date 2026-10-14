@@ -70,17 +70,17 @@ function HeaderContent({ pathname }: { pathname: string }) {
 
         <div className="flex items-center gap-3">
           <Link
-            className="hidden sm:inline-flex items-center justify-center bg-deep-aquifer hover:bg-forest-slate text-white font-button-text font-medium text-[14px] px-4 py-2.5 rounded-[6px] transition-all duration-300 tracking-tight active:scale-[0.98]"
+            className="hidden sm:inline-flex items-center justify-center bg-deep-aquifer bg-clip-padding border border-transparent hover:bg-forest-slate text-white font-button-text font-medium text-[14px] px-4 py-2.5 rounded-[6px] transition-all duration-300 tracking-tight active:scale-[0.98]"
             href="/contact"
             onClick={scrollToTop}
           >
-            Start a conversation
+            Start a Conversation
           </Link>
 
           <button
             type="button"
             onClick={() => setOpen((v) => !v)}
-            aria-label={open ? "Close menu" : "Open menu"}
+            aria-label={open ? "Close Menu" : "Open Menu"}
             className="md:hidden inline-flex items-center justify-center p-2 rounded-[6px] text-deep-aquifer hover:bg-surface-container/50 transition-colors"
           >
             <span className="material-symbols-outlined text-[24px]">
@@ -119,11 +119,11 @@ function HeaderContent({ pathname }: { pathname: string }) {
             </nav>
             <div className="pt-2 border-t border-muted-aquifer/15">
               <Link
-                className="w-full inline-flex items-center justify-center bg-deep-aquifer hover:bg-forest-slate text-white font-button-text font-medium text-[14px] py-3 rounded-[6px] transition-all"
+                className="w-full inline-flex items-center justify-center bg-deep-aquifer bg-clip-padding border border-transparent hover:bg-forest-slate text-white font-button-text font-medium text-[14px] py-3 rounded-[6px] transition-all"
                 href="/contact"
                 onClick={scrollToTop}
               >
-                Start a conversation
+                Start a Conversation
               </Link>
             </div>
           </div>
@@ -132,4 +132,3 @@ function HeaderContent({ pathname }: { pathname: string }) {
     </header>
   );
 }
-

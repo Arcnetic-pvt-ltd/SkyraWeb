@@ -191,11 +191,11 @@ export function ConsultationIntakeForm() {
               </p>
             )}
             <button
-              className="w-full py-3.5 px-6 rounded-[6px] bg-deep-aquifer hover:bg-forest-slate text-white font-medium text-[15px] min-h-[44px] transition-colors cursor-pointer shadow-xs disabled:opacity-60 disabled:cursor-not-allowed"
+              className="w-full py-3.5 px-6 rounded-[6px] bg-deep-aquifer bg-clip-padding border border-transparent hover:bg-forest-slate text-white font-medium text-[15px] min-h-[44px] transition-colors cursor-pointer shadow-xs disabled:opacity-60 disabled:cursor-not-allowed"
               disabled={sending}
               type="submit"
             >
-              {sending ? "Sending…" : "Book a site survey"}
+              {sending ? "Sending…" : "Book a Site Survey"}
             </button>
             <p className="font-body-sm text-[13px] text-deep-aquifer/70 text-center">
               Maximum 5 submissions per browser each day. Resets at midnight IST.
@@ -218,7 +218,7 @@ export function ConsultationIntakeForm() {
             className="mt-6 text-[14px] text-moss hover:text-forest-slate font-medium underline underline-offset-4 cursor-pointer"
             onClick={handleReset}
           >
-            Submit another property
+            Submit Another Property
           </button>
         </div>
       )}

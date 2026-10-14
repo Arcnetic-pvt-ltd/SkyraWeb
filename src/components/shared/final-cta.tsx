@@ -43,7 +43,7 @@ export function FinalCta() {
                   icon={<ArrowRightIcon className="size-4" />}
                   className="flex-row-reverse font-semibold"
                 >
-                  Request a consultation
+                  Request a Consultation
                 </CtaButton>
               </div>
             </div>

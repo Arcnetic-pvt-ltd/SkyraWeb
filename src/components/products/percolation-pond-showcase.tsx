@@ -19,7 +19,7 @@ const ANATOMY_ITEMS: AnatomyItem[] = [
   {
     id: "runoff",
     number: "01",
-    title: "Stormwater runoff inlet",
+    title: "Stormwater Runoff Inlet",
     tagline: "Catchment area flume & channeling",
     description:
       "Engineered concrete or stone flumes intercept high-velocity monsoonal sheet runoff from rooftops, paved yards, and natural terrain, safely routing surging water into the retention basin without bank erosion.",
@@ -29,7 +29,7 @@ const ANATOMY_ITEMS: AnatomyItem[] = [
   {
     id: "basin",
     number: "02",
-    title: "Percolation pond basin",
+    title: "Percolation Pond Basin",
     tagline: "DR masonry retention construction",
     description:
       "A high-volume open excavation structured with Dry Rubble Masonry. Sized to buffer peak 24-hour rainfall surges, dissipating water energy and allowing sediments to settle before downward infiltration.",
@@ -39,7 +39,7 @@ const ANATOMY_ITEMS: AnatomyItem[] = [
   {
     id: "fence",
     number: "03",
-    title: "Safety perimeter fence",
+    title: "Safety Perimeter Fence",
     tagline: "Site-specific compliance enclosure",
     description:
       "Heavy-duty protective perimeter railing installed as per campus and factory statutory safety norms. Ensures zero fall hazards while maintaining unobstructed visual inspection access.",
@@ -49,7 +49,7 @@ const ANATOMY_ITEMS: AnatomyItem[] = [
   {
     id: "drm-walls",
     number: "04",
-    title: "DR masonry walls",
+    title: "DR Masonry Walls",
     tagline: "Durable & porous stone matrix",
     description:
       "Dry Rubble Masonry walls built from interlocking natural stone boulders without impervious mortar bonding. Provides structural retaining strength while allowing water to seep laterally into surrounding soil horizons.",
@@ -59,7 +59,7 @@ const ANATOMY_ITEMS: AnatomyItem[] = [
   {
     id: "soil-layers",
     number: "05",
-    title: "Multi-tier soil filtration",
+    title: "Multi-Tier Soil Filtration",
     tagline: "Water percolates through soil strata",
     description:
       "Water filters by gravity through a natural geological bed: graded gravel, pebble layers, and porous native soil. This natural filtration purifies suspended particulate matter before water reaches the aquifer.",
@@ -69,7 +69,7 @@ const ANATOMY_ITEMS: AnatomyItem[] = [
   {
     id: "aquifer",
     number: "06",
-    title: "Subterranean aquifer recharge",
+    title: "Subterranean Aquifer Recharge",
     tagline: "Direct groundwater table replenishment",
     description:
       "Purified rainwater feeds continuously into unconfined and semi-confined subterranean aquifers, building localized freshwater lenses, reviving dry borewells, and elevating static water tables across the region.",
@@ -409,7 +409,7 @@ export function PercolationPondShowcase() {
               href="/contact?product=rainsink-pond"
               className="inline-flex items-center gap-1.5 px-4 py-2 rounded-[4px] bg-moss hover:bg-[#68852e] text-white text-xs font-medium font-mono whitespace-nowrap transition-colors cursor-pointer shrink-0"
             >
-              <span>Get pond sizing</span>
+              <span>Get Pond Sizing</span>
               <span className="material-symbols-outlined text-[15px]">arrow_forward</span>
             </Link>
           </div>
@@ -476,7 +476,7 @@ export function PercolationPondShowcase() {
                 </div>
 
                 <div className="pt-2 border-t border-muted-aquifer/15 font-mono text-[10px] text-forest-slate font-medium">
-                  Click to inspect impact &rarr;
+                  Click to Inspect Impact &rarr;
                 </div>
               </button>
             );
@@ -619,7 +619,7 @@ export function PercolationPondShowcase() {
                       <span className="material-symbols-outlined text-[14px]">
                         {isZoomed ? "zoom_out" : "zoom_in"}
                       </span>
-                      <span>{isZoomed ? "Fit to window" : "100% zoom"}</span>
+                      <span>{isZoomed ? "Fit to Window" : "100% Zoom"}</span>
                     </button>
                   </div>
                   <p className="text-[11px] sm:text-xs text-deep-aquifer/70 font-mono mt-0.5">
@@ -631,7 +631,7 @@ export function PercolationPondShowcase() {
                   type="button"
                   onClick={() => setIsModalOpen(false)}
                   className="size-9 rounded-[4px] bg-slate-100 hover:bg-slate-200 text-deep-aquifer flex items-center justify-center transition-colors cursor-pointer shrink-0"
-                  aria-label="Close modal"
+                  aria-label="Close Modal"
                 >
                   <span className="material-symbols-outlined text-[20px]">close</span>
                 </button>
@@ -683,7 +683,7 @@ export function PercolationPondShowcase() {
                   <button
                     type="button"
                     onClick={() => setIsModalOpen(false)}
-                    className="px-4 py-1.5 rounded-[4px] bg-deep-aquifer text-white text-xs font-medium hover:bg-forest-slate transition-colors cursor-pointer"
+                    className="px-4 py-1.5 rounded-[4px] bg-deep-aquifer bg-clip-padding border border-transparent text-white text-xs font-medium hover:bg-forest-slate transition-colors cursor-pointer"
                   >
                     Done
                   </button>

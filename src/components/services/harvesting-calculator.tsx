@@ -234,7 +234,7 @@ export function HarvestingCalculator() {
                 href={`/contact?area=${areaSqFt}${unit}&rainfall=${activeRainfall}&yield=${annualLiters}`}
                 className="w-full inline-flex items-center justify-center gap-2 bg-moss hover:bg-[#6ca832] text-deep-aquifer font-button-text font-bold text-sm px-5 py-3.5 rounded-[6px] transition-all duration-300 group"
               >
-                <span>Request feasibility assessment</span>
+                <span>Request Feasibility Assessment</span>
                 <span className="material-symbols-outlined text-[16px] group-hover:translate-x-1 transition-transform">
                   arrow_forward
                 </span>

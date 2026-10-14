@@ -68,7 +68,7 @@ export function ServicesHero() {
 
           <div className="mb-16 flex w-full flex-col items-start gap-4 sm:w-auto sm:flex-row">
             <CtaButton href="#contact" variant="primary" icon={<ArrowRightIcon className="size-4" />} className="w-full flex-row-reverse sm:w-auto">
-              Request technical audit
+              Request Technical Audit
             </CtaButton>
             <CtaButton href={WHATSAPP_HREF} external variant="dark" icon={<WhatsAppIcon className="size-4 text-moss" />} className="w-full sm:w-auto">
               Chat on WhatsApp

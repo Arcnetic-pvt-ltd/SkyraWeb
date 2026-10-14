@@ -137,10 +137,10 @@ export function ProductCatalogCarousel() {
       <div className="flex flex-wrap items-center justify-between gap-3 pb-2.5 border-b border-muted-aquifer/15">
         <div className="flex flex-wrap items-center gap-1.5">
           {([
-            { id: "all", label: "All products" },
-            { id: "rooftop", label: "Rooftop filters" },
-            { id: "industrial", label: "Industrial systems" },
-            { id: "infrastructure", label: "Percolation ponds" },
+            { id: "all", label: "All Products" },
+            { id: "rooftop", label: "Rooftop Filters" },
+            { id: "industrial", label: "Industrial Systems" },
+            { id: "infrastructure", label: "Percolation Ponds" },
           ] as const).map((tab) => {
             const isActive = activeCategory === tab.id;
             return (
@@ -175,7 +175,7 @@ export function ProductCatalogCarousel() {
             <button
               type="button"
               onClick={handlePrev}
-              aria-label="Previous product"
+              aria-label="Previous Product"
               className="w-7 h-7 sm:w-8 sm:h-8 rounded-[4px] border border-muted-aquifer/25 bg-white flex items-center justify-center text-deep-aquifer hover:bg-deep-aquifer hover:text-white transition-all duration-200 cursor-pointer disabled:opacity-40"
             >
               <span className="material-symbols-outlined text-[17px]">arrow_back</span>
@@ -183,7 +183,7 @@ export function ProductCatalogCarousel() {
             <button
               type="button"
               onClick={handleNext}
-              aria-label="Next product"
+              aria-label="Next Product"
               className="w-7 h-7 sm:w-8 sm:h-8 rounded-[4px] border border-muted-aquifer/25 bg-white flex items-center justify-center text-deep-aquifer hover:bg-deep-aquifer hover:text-white transition-all duration-200 cursor-pointer disabled:opacity-40"
             >
               <span className="material-symbols-outlined text-[17px]">arrow_forward</span>
@@ -359,7 +359,7 @@ export function ProductCatalogCarousel() {
                           >
                             <span className="flex items-center gap-1.5">
                               <span className="material-symbols-outlined text-moss text-sm">table_chart</span>
-                              <span>Compare NRU 150 vs NRN 220 datasheet</span>
+                              <span>Compare NRU 150 vs NRN 220 Datasheet</span>
                             </span>
                             <span className="material-symbols-outlined text-xs">
                               {showSpecTable ? "expand_less" : "expand_more"}
@@ -371,9 +371,9 @@ export function ProductCatalogCarousel() {
                       <div className="pt-0.5 flex items-center gap-3">
                         <Link
                           href={`/contact?product=${filteredProducts[currentIndex].contactProductSlug}`}
-                          className="w-full sm:w-auto inline-flex items-center justify-center gap-2 bg-deep-aquifer hover:bg-forest-slate text-white font-button-text font-semibold text-xs px-5 py-2.5 rounded-[6px] transition-all duration-300 group/btn cursor-pointer"
+                          className="w-full sm:w-auto inline-flex items-center justify-center gap-2 bg-deep-aquifer bg-clip-padding border border-transparent hover:bg-forest-slate text-white font-button-text font-semibold text-xs px-5 py-2.5 rounded-[6px] transition-all duration-300 group/btn cursor-pointer"
                         >
-                          <span>Get quote &amp; specs</span>
+                          <span>Get Quote &amp; Specs</span>
                           <span className="material-symbols-outlined text-[16px] group-hover/btn:translate-x-1 transition-transform">
                             arrow_forward
                           </span>
@@ -464,7 +464,7 @@ export function ProductCatalogCarousel() {
             key={i}
             type="button"
             onClick={() => setCurrentIndex(i)}
-            aria-label={`Go to slide ${i + 1}`}
+            aria-label={`Go to Slide ${i + 1}`}
             className={`h-2 rounded-full transition-all duration-300 cursor-pointer ${i === currentIndex ? "w-8 bg-moss" : "w-2 bg-muted-aquifer/30 hover:bg-muted-aquifer/60"
               }`}
           />

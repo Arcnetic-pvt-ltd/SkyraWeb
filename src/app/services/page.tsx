@@ -62,9 +62,9 @@ export default function ServicesPage() {
               <div className="pt-4 flex flex-wrap items-center gap-4">
                 <Link
                   href="/contact?service=rainwater-harvesting"
-                  className="inline-flex items-center gap-2.5 bg-deep-aquifer hover:bg-forest-slate text-white font-button-text text-button-text px-6 py-3 rounded-[6px] transition-all duration-300 group cursor-pointer"
+                  className="inline-flex items-center gap-2.5 bg-deep-aquifer bg-clip-padding border border-transparent hover:bg-forest-slate text-white font-button-text text-button-text px-6 py-3 rounded-[6px] transition-all duration-300 group cursor-pointer"
                 >
-                  <span>Get quote &amp; estimate</span>
+                  <span>Get Quote &amp; Estimate</span>
                   <span className="material-symbols-outlined text-[18px]">
                     request_quote
                   </span>
@@ -182,9 +182,9 @@ export default function ServicesPage() {
               <div className="pt-4 flex flex-wrap items-center gap-4">
                 <Link
                   href="/contact?service=stormwater-management"
-                  className="inline-flex items-center gap-2.5 bg-deep-aquifer hover:bg-forest-slate text-white font-button-text text-button-text px-6 py-3 rounded-[6px] transition-all duration-300 group cursor-pointer"
+                  className="inline-flex items-center gap-2.5 bg-deep-aquifer bg-clip-padding border border-transparent hover:bg-forest-slate text-white font-button-text text-button-text px-6 py-3 rounded-[6px] transition-all duration-300 group cursor-pointer"
                 >
-                  <span>Get quote &amp; estimate</span>
+                  <span>Get Quote &amp; Estimate</span>
                   <span className="material-symbols-outlined text-[18px]">
                     request_quote
                   </span>
@@ -231,7 +231,7 @@ export default function ServicesPage() {
                   href="/contact?service=afforestation"
                   className="inline-flex items-center gap-2.5 bg-moss hover:bg-moss/90 text-deep-aquifer font-button-text text-button-text px-6 py-3 rounded-[6px] transition-all duration-300 font-semibold group cursor-pointer"
                 >
-                  <span>Get quote &amp; estimate</span>
+                  <span>Get Quote &amp; Estimate</span>
                   <span className="material-symbols-outlined text-[18px]">
                     request_quote
                   </span>
@@ -322,15 +322,15 @@ export default function ServicesPage() {
           <div className="pt-2 flex flex-col sm:flex-row items-center gap-4 w-full sm:w-auto">
             <Link
               href="/contact"
-              className="w-full sm:w-auto inline-flex items-center justify-center bg-deep-aquifer hover:bg-forest-slate text-white font-button-text text-button-text px-8 h-14 rounded-[6px] transition-all duration-300 cursor-pointer"
+              className="w-full sm:w-auto inline-flex items-center justify-center bg-deep-aquifer bg-clip-padding border border-transparent hover:bg-forest-slate text-white font-button-text text-button-text px-8 h-14 rounded-[6px] transition-all duration-300 cursor-pointer"
             >
-              Request a site survey
+              Request a Site Survey
             </Link>
             <Link
               href="/about"
               className="w-full sm:w-auto inline-flex items-center justify-center font-button-text text-button-text text-deep-aquifer hover:text-moss px-6 h-14 transition-colors gap-1.5 rounded-[6px] border border-muted-aquifer/30 bg-white cursor-pointer"
             >
-              <span>Read our engineering manifesto</span>
+              <span>Read Our Engineering Manifesto</span>
               <span className="material-symbols-outlined text-[18px]">
                 arrow_forward
               </span>

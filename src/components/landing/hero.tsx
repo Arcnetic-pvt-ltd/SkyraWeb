@@ -71,7 +71,7 @@ export function Hero() {
                 Chat on WhatsApp
               </CtaButton>
               <CtaButton href="#contact" variant="secondary" icon={<ArrowRightIcon className="size-4 text-muted-aquifer" />} className="flex-row-reverse">
-                Request a consultation
+                Request a Consultation
               </CtaButton>
             </div>
           </div>

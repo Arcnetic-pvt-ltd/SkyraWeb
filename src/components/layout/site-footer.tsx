@@ -21,7 +21,7 @@ export function SiteFooter() {
             </p>
           </div>
 
-          {/* Right Column: Contact options, Privacy policy, Current year */}
+          {/* Right Column: Contact options, Privacy Policy, Current year */}
           <div className="flex flex-col md:items-end gap-3 text-[15px]">
             <div className="flex flex-wrap items-center gap-2 text-light-aquifer-canvas/90">
               <a
@@ -50,7 +50,7 @@ export function SiteFooter() {
 
             <div className="flex items-center gap-2 text-light-aquifer-canvas/70 text-[14px]">
               <Link href="/contact" className="hover:text-white transition-colors">
-                Privacy policy
+                Privacy Policy
               </Link>
               <span className="text-light-aquifer-canvas/40">·</span>
               <span>© 2026 Skyra</span>
