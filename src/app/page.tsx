@@ -75,7 +75,11 @@ export default function Home() {
           <div className="mt-8 sm:mt-10 pt-4 flex items-center justify-center sm:justify-between flex-wrap gap-6 border-t border-muted-aquifer/15">
             <div className="flex items-center gap-6 sm:gap-8 text-secondary/70">
               <span className="font-body-sm text-body-sm font-medium">
-                Kochi
+                Keralam
+              </span>
+              <span className="w-1 h-1 rounded-full bg-secondary/40"></span>
+              <span className="font-body-sm text-body-sm font-medium">
+                Tamil Nadu
               </span>
               <span className="w-1 h-1 rounded-full bg-secondary/40"></span>
               <span className="font-body-sm text-body-sm font-medium">
