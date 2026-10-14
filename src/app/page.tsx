@@ -64,7 +64,7 @@ export default function Home() {
         </div>
 
         {/* Telemetry Metric Chip */}
-        <div className="mt-8 sm:mt-10 pt-4 flex items-center justify-between flex-wrap gap-6 border-t border-muted-aquifer/15">
+        <div className="mt-8 sm:mt-10 pt-4 flex items-center justify-center sm:justify-between flex-wrap gap-6 border-t border-muted-aquifer/15">
           <div className="inline-flex items-center gap-4 py-2.5 px-4 rounded-[4px] bg-white border border-muted-aquifer/20">
             <span className="inline-block w-2 h-2 rounded-full bg-moss"></span>
             <div className="flex items-baseline gap-2">
